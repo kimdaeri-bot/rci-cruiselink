@@ -234,9 +234,22 @@ body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #f
 <div class="app">
   <!-- ========== 왼쪽: 입력 폼 ========== -->
   <div class="form-panel">
-    <div class="form-header">
-      🚢 인보이스 생성기
-      <span>입력 후 실시간 프리뷰 → 인쇄(PDF 저장)</span>
+    <div class="form-header" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+      <div>
+        🚢 인보이스 생성기
+        <span>입력 후 실시간 프리뷰 → 인쇄(PDF 저장)</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0">
+        <label style="font-size:10px;opacity:0.75;letter-spacing:0.5px">선사 선택</label>
+        <select id="f_cruiseline_type" onchange="render()" style="padding:6px 10px;border-radius:6px;border:none;font-size:13px;font-weight:700;color:#1a237e;cursor:pointer;min-width:160px">
+          <option value="MSC">🔵 MSC Cruises</option>
+          <option value="NCL">🟢 Norwegian (NCL)</option>
+          <option value="Celebrity">🟣 Celebrity Cruises</option>
+          <option value="Carnival">🟠 Carnival</option>
+          <option value="Royal">🔴 Royal Caribbean</option>
+          <option value="Custom">⚙️ 직접 입력</option>
+        </select>
+      </div>
     </div>
     <div class="form-body">
 
@@ -394,6 +407,75 @@ body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #f
 </div>
 
 <script>
+// ============= 선사별 취소 규정 =============
+const CANCEL_POLICIES = {
+  MSC: {
+    name: 'MSC Cruises',
+    color: '#b71c1c',
+    note: '* 환율은 인보이스 발행일 하나은행 1회차 현금 매도율 기준의 환율이 적용됩니다.\n* 취소 기준일은 승선일 기준으로 자동 계산됩니다.',
+    rows: (embark) => [
+      { period: '예약 확정 이후',    cutoff: null,           fee: '1인 $70' },
+      { period: '승선 76일 전까지',  cutoff: addDays(embark,-76), fee: '1인 $250' },
+      { period: '승선 75~61일 전',   cutoff: addDays(embark,-75), fee: '크루즈 요금의 25%' },
+      { period: '승선 60~51일 전',   cutoff: addDays(embark,-60), fee: '크루즈 요금의 50%' },
+      { period: '승선 50~31일 전',   cutoff: addDays(embark,-50), fee: '크루즈 요금의 75%' },
+      { period: '승선 30일 이내',    cutoff: addDays(embark,-30), fee: '크루즈 요금의 100%' },
+    ],
+  },
+  NCL: {
+    name: 'Norwegian Cruise Line',
+    color: '#1565c0',
+    note: '* NCL 취소 정책은 예약 시점 및 프로모션에 따라 다를 수 있습니다.\n* 취소 기준일은 승선일 기준으로 자동 계산됩니다.',
+    rows: (embark) => [
+      { period: '승선 121일 전까지', cutoff: addDays(embark,-121), fee: '예약금만 취소' },
+      { period: '승선 120~90일 전',  cutoff: addDays(embark,-120), fee: '크루즈 요금의 10%' },
+      { period: '승선 89~60일 전',   cutoff: addDays(embark,-89),  fee: '크루즈 요금의 25%' },
+      { period: '승선 59~30일 전',   cutoff: addDays(embark,-59),  fee: '크루즈 요금의 50%' },
+      { period: '승선 29~15일 전',   cutoff: addDays(embark,-29),  fee: '크루즈 요금의 75%' },
+      { period: '승선 14일 이내',    cutoff: addDays(embark,-14),  fee: '크루즈 요금의 100%' },
+    ],
+  },
+  Celebrity: {
+    name: 'Celebrity Cruises',
+    color: '#4a148c',
+    note: '* Celebrity Cruises 취소 정책은 예약 유형에 따라 다를 수 있습니다.\n* 취소 기준일은 승선일 기준으로 자동 계산됩니다.',
+    rows: (embark) => [
+      { period: '승선 75일 전까지',  cutoff: addDays(embark,-75), fee: '보증금만 취소 수수료' },
+      { period: '승선 74~56일 전',   cutoff: addDays(embark,-74), fee: '크루즈 요금의 50%' },
+      { period: '승선 55~30일 전',   cutoff: addDays(embark,-55), fee: '크루즈 요금의 75%' },
+      { period: '승선 29일 이내',    cutoff: addDays(embark,-29), fee: '크루즈 요금의 100%' },
+    ],
+  },
+  Carnival: {
+    name: 'Carnival Cruise Line',
+    color: '#e65100',
+    note: '* Carnival 취소 정책은 객실 유형 및 프로모션에 따라 다를 수 있습니다.\n* 취소 기준일은 승선일 기준으로 자동 계산됩니다.',
+    rows: (embark) => [
+      { period: '승선 121일 전까지', cutoff: addDays(embark,-121), fee: '보증금만 취소' },
+      { period: '승선 120~56일 전',  cutoff: addDays(embark,-120), fee: '크루즈 요금의 50%' },
+      { period: '승선 55~30일 전',   cutoff: addDays(embark,-55),  fee: '크루즈 요금의 75%' },
+      { period: '승선 29일 이내',    cutoff: addDays(embark,-29),  fee: '크루즈 요금의 100%' },
+    ],
+  },
+  Royal: {
+    name: 'Royal Caribbean',
+    color: '#0d47a1',
+    note: '* Royal Caribbean 취소 정책은 예약 유형 및 선박에 따라 다를 수 있습니다.\n* 취소 기준일은 승선일 기준으로 자동 계산됩니다.',
+    rows: (embark) => [
+      { period: '승선 91일 전까지',  cutoff: addDays(embark,-91), fee: '보증금만 취소' },
+      { period: '승선 90~57일 전',   cutoff: addDays(embark,-90), fee: '크루즈 요금의 50%' },
+      { period: '승선 56~30일 전',   cutoff: addDays(embark,-56), fee: '크루즈 요금의 75%' },
+      { period: '승선 29일 이내',    cutoff: addDays(embark,-29), fee: '크루즈 요금의 100%' },
+    ],
+  },
+  Custom: {
+    name: '선사 직접 입력',
+    color: '#455a64',
+    note: '* 해당 선사의 취소 규정을 직접 확인 후 고객에게 안내해 주세요.',
+    rows: () => [],
+  },
+};
+
 // ============= 이미지 슬롯 관리 =============
 const invoiceImages = [null, null]; // [지도, 일정표]
 let activeSlot = 0; // 마지막 클릭된 슬롯
@@ -542,6 +624,8 @@ function renderInvoice() {
   const embark = document.getElementById('f_embark').value;
   const embarkPort = document.getElementById('f_embarkport').value || '';
   const disembarkPort = document.getElementById('f_disembarkport').value || '';
+  const cruiseLineKey = document.getElementById('f_cruiseline_type').value || 'MSC';
+  const cruiseLinePolicy = CANCEL_POLICIES[cruiseLineKey] || CANCEL_POLICIES.MSC;
   const rate = parseFloat(document.getElementById('f_rate').value) || 0;
   const deposit = parseFloat(document.getElementById('f_deposit').value) || 0;
   const depositDL = document.getElementById('f_deposit_dl').value;
@@ -557,11 +641,7 @@ function renderInvoice() {
   const grandTotal = totalCruise + totalTip + totalTax;
   const balance = grandTotal - deposit;
 
-  // 취소 규정 날짜 자동 계산 (승선일 기준)
-  const c1 = addDays(embark, -75); // 승선 75일 전
-  const c2 = addDays(embark, -60); // 승선 60일 전
-  const c3 = addDays(embark, -50); // 승선 50일 전
-  const c4 = addDays(embark, -30); // 승선 30일 전
+  // 취소 규정 날짜는 CANCEL_POLICIES 내부에서 선사별로 자동 계산
 
   // 승객 테이블 행 생성
   const paxRowsHTML = paxRows.map((p, i) => `
@@ -730,31 +810,24 @@ function renderInvoice() {
       </div>
     </div>
 
-    <!-- MSC 취소료 규정 -->
+    <!-- 취소료 규정 (선사 동적) -->
     <div class="inv-cancel" style="margin-top:10px">
-      <div class="ch">⚠️ MSC 취소료 규정</div>
+      <div class="ch" style="background:${cruiseLinePolicy.color}">⚠️ ${cruiseLinePolicy.name} 취소료 규정</div>
       <div class="cb">
+        ${cruiseLineKey === 'Custom' ? `
+          <div style="font-size:11px;color:#777;padding:8px 0;">취소 규정을 직접 입력하거나 별도 안내 자료를 첨부해 주세요.</div>
+        ` : `
         <table>
           <thead>
-            <tr>
-              <th>취소 시점</th>
-              <th>취소 기준일</th>
-              <th>취소 수수료</th>
-            </tr>
+            <tr><th>취소 시점</th><th>취소 기준일</th><th>취소 수수료</th></tr>
           </thead>
           <tbody>
-            <tr><td>예약 확정 이후</td><td>—</td><td>1인 $70</td></tr>
-            <tr><td>승선 76일 전까지</td><td>${c1 ? addDays(embark, -76) : '—'}</td><td>1인 $250</td></tr>
-            <tr><td>승선 75~61일 전</td><td>${c1 || '—'}</td><td>크루즈 요금의 25%</td></tr>
-            <tr><td>승선 60~51일 전</td><td>${c2 || '—'}</td><td>크루즈 요금의 50%</td></tr>
-            <tr><td>승선 50~31일 전</td><td>${c3 || '—'}</td><td>크루즈 요금의 75%</td></tr>
-            <tr><td>승선 30일 이내</td><td>${c4 || '—'}</td><td>크루즈 요금의 100%</td></tr>
+            ${cruiseLinePolicy.rows(embark).map(r =>
+              `<tr><td>${r.period}</td><td>${r.cutoff || '—'}</td><td>${r.fee}</td></tr>`
+            ).join('')}
           </tbody>
-        </table>
-        <div class="inv-cancel-note">
-          * 환율은 인보이스 발행일 하나은행 1회차 현금 매도율 기준의 환율이 적용됩니다.<br>
-          * 취소 기준일은 승선일 기준으로 자동 계산됩니다.
-        </div>
+        </table>`}
+        <div class="inv-cancel-note">${cruiseLinePolicy.note.replace(/\n/g,'<br>')}</div>
       </div>
     </div>
 
