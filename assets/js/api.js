@@ -97,6 +97,21 @@ const API = {
       .filter(c => c && c.dateFrom >= twoMonths);
   },
 
+  async getRecommendedCruises2(count = 12) {
+    const FEATURED_REFS_1 = [
+      'MSCBE20260510TYOTYO','NCLENC-20260503-07-SEA-SEA','MSCEU20260417BCNBCN',
+      'MSCAM20260418MIAMIA','MSCER20260502KELKEL','MSCEU20261128DXBDXB',
+      'NCLAME-20260502-07-HNL-HNL','NCLJOY-20260425-18-MIA-SEA','NCLSPR-20261212-11-SYD-SYD',
+    ];
+    const cruises = await this.loadLocalCruises();
+    const now = new Date().toISOString().slice(0, 10);
+    const excluded = new Set(FEATURED_REFS_1);
+    return cruises
+      .filter(c => c.dateFrom >= now && !excluded.has(c.ref))
+      .sort((a, b) => a.dateFrom.localeCompare(b.dateFrom))
+      .slice(0, count);
+  },
+
   // Get local ship by slug
   async getLocalShip(slug) {
     const ships = await this.loadLocalShips();
