@@ -103,9 +103,9 @@ body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #f
 
 /* 하단 버튼 */
 .form-footer {
-  padding: 16px 28px; border-top: 1px solid #eee;
+  padding: 14px 28px 16px; border-top: 1px solid #eee;
   background: #fafafa; position: sticky; bottom: 0;
-  display: flex; gap: 10px;
+  display: flex; flex-direction: column; gap: 0;
 }
 .btn-print {
   flex: 3; background: #ff6f00; color: #fff; border: none;
@@ -115,7 +115,7 @@ body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #f
 .btn-print:hover { background: #e65100; }
 .btn-reset {
   flex: 1; background: #f5f5f5; color: #555; border: 1px solid #ddd;
-  padding: 13px; border-radius: 6px; font-size: 13px; font-weight: 600;
+  padding: 11px; border-radius: 6px; font-size: 13px; font-weight: 600;
   cursor: pointer;
 }
 
@@ -209,10 +209,23 @@ body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #f
 @media print {
   body { background: #fff; }
   .form-panel { display: none !important; }
-  .preview-panel { background: #fff; padding: 0; }
+  .preview-panel { background: #fff; padding: 0; display: block; }
   .preview-label { display: none; }
-  .invoice-doc { box-shadow: none; width: 100%; padding: 20px 24px; }
-  @page { size: A4; margin: 10mm; }
+  .invoice-doc {
+    box-shadow: none;
+    width: 100% !important;
+    padding: 14px 18px !important;
+    transform-origin: top left;
+  }
+  /* 인쇄 시 간격 최소화 */
+  .inv-header { margin-bottom: 14px !important; }
+  .inv-meta { margin-bottom: 10px !important; }
+  .inv-table { margin-bottom: 10px !important; }
+  .inv-payment-grid { margin-bottom: 10px !important; }
+  .inv-account { margin-bottom: 10px !important; }
+  .inv-img-section { margin-bottom: 10px !important; }
+  .form-section { margin-bottom: 12px !important; }
+  @page { size: A4 portrait; margin: 8mm; }
 }
 </style>
 </head>
@@ -350,8 +363,23 @@ body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #f
 
     </div><!-- /form-body -->
     <div class="form-footer">
-      <button class="btn-print" onclick="window.print()">🖨️ 인쇄 / PDF 저장</button>
-      <button class="btn-reset" onclick="resetForm()">초기화</button>
+      <div style="width:100%;margin-bottom:10px;background:#f0f4ff;border-radius:8px;padding:10px 14px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+          <label style="font-size:12px;font-weight:700;color:#1a237e;">🖨️ 인쇄 배율</label>
+          <span id="scaleLabel" style="font-size:12px;font-weight:700;color:#ff6f00;">자동</span>
+        </div>
+        <input type="range" id="scaleSlider" min="60" max="100" value="100" step="1"
+          oninput="applyScale(this.value)"
+          style="width:100%;accent-color:#1a237e;">
+        <div style="display:flex;justify-content:space-between;font-size:10px;color:#aaa;margin-top:2px">
+          <span>60%</span><span>70%</span><span>80%</span><span>90%</span><span>100%</span>
+        </div>
+        <div style="font-size:11px;color:#888;margin-top:6px;">💡 내용이 많으면 줄여보세요. 인쇄 버튼 클릭 시 자동 1페이지 맞춤도 적용됩니다.</div>
+      </div>
+      <div style="display:flex;gap:10px;width:100%">
+        <button class="btn-print" onclick="doPrint()">🖨️ 인쇄 / PDF 저장</button>
+        <button class="btn-reset" onclick="resetForm()">초기화</button>
+      </div>
     </div>
   </div>
 
@@ -759,6 +787,55 @@ function resetForm() {
   ];
   renderPaxTable();
   renderInvoice();
+}
+
+// ============= 배율 조절 =============
+let manualScale = null; // null = 자동
+
+function applyScale(val) {
+  const pct = parseInt(val);
+  if (pct >= 99) {
+    manualScale = null;
+    document.getElementById('scaleLabel').textContent = '자동';
+  } else {
+    manualScale = pct / 100;
+    document.getElementById('scaleLabel').textContent = pct + '%';
+  }
+  updatePreviewScale();
+}
+
+function updatePreviewScale() {
+  const doc = document.getElementById('invoiceDoc');
+  const scale = manualScale !== null ? manualScale : 1;
+  doc.style.transform = `scale(${scale})`;
+  doc.style.transformOrigin = 'top left';
+  // 컨테이너 높이 보정 (scale 후 빈 공간 방지)
+  doc.style.marginBottom = scale < 1 ? `${-(doc.offsetHeight * (1 - scale))}px` : '';
+  doc.closest('.preview-panel').style.alignItems = 'flex-start';
+}
+
+function doPrint() {
+  const doc = document.getElementById('invoiceDoc');
+  // 자동 배율: A4 usable height (8mm 마진 기준) = 약 1105px
+  const A4_H = 1105;
+  const docH = doc.scrollHeight;
+  let printZoom = manualScale !== null ? manualScale : 1;
+
+  if (manualScale === null && docH > A4_H) {
+    printZoom = Math.max(0.55, A4_H / docH);
+  }
+
+  // zoom 방식 적용 (Chrome 인쇄 레이아웃 반영)
+  doc.style.zoom = printZoom < 0.995 ? printZoom : '';
+  doc.style.transform = '';
+
+  setTimeout(() => {
+    window.print();
+    setTimeout(() => {
+      doc.style.zoom = '';
+      updatePreviewScale(); // 프리뷰 배율 복원
+    }, 500);
+  }, 100);
 }
 
 // ===== 초기 실행 =====
