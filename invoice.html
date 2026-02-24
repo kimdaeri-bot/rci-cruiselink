@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>크루즈링크 인보이스 생성기</title>
+<title>INVOICE</title>
 <style>
 /* =========== 전체 레이아웃 =========== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -375,6 +375,7 @@ body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #f
           <span>60%</span><span>70%</span><span>80%</span><span>90%</span><span>100%</span>
         </div>
         <div style="font-size:11px;color:#888;margin-top:6px;">💡 내용이 많으면 줄여보세요. 인쇄 버튼 클릭 시 자동 1페이지 맞춤도 적용됩니다.</div>
+        <div style="font-size:11px;color:#c0392b;margin-top:6px;line-height:1.6;">📌 <b>날짜/시간 제거:</b> 인쇄 대화상자 → 자세히 보기 → <b>"머리글 및 바닥글" 체크 해제</b></div>
       </div>
       <div style="display:flex;gap:10px;width:100%">
         <button class="btn-print" onclick="doPrint()">🖨️ 인쇄 / PDF 저장</button>
@@ -816,11 +817,11 @@ function updatePreviewScale() {
 
 function doPrint() {
   const doc = document.getElementById('invoiceDoc');
+
   // 자동 배율: A4 usable height (8mm 마진 기준) = 약 1105px
   const A4_H = 1105;
   const docH = doc.scrollHeight;
   let printZoom = manualScale !== null ? manualScale : 1;
-
   if (manualScale === null && docH > A4_H) {
     printZoom = Math.max(0.55, A4_H / docH);
   }
@@ -829,12 +830,20 @@ function doPrint() {
   doc.style.zoom = printZoom < 0.995 ? printZoom : '';
   doc.style.transform = '';
 
+  // document.title → 인쇄 헤더에 표시될 텍스트 제거
+  const customer = document.getElementById('f_customer').value || '';
+  const ship = document.getElementById('f_ship').value || '';
+  const issueDate = document.getElementById('f_issuedate').value || '';
+  const prevTitle = document.title;
+  document.title = [customer, ship, issueDate].filter(Boolean).join('_') || ' ';
+
   setTimeout(() => {
     window.print();
     setTimeout(() => {
+      document.title = prevTitle;
       doc.style.zoom = '';
-      updatePreviewScale(); // 프리뷰 배율 복원
-    }, 500);
+      updatePreviewScale();
+    }, 800);
   }, 100);
 }
 
