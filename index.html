@@ -156,6 +156,68 @@
     </div>
   </section>
 
+  <!-- CRUISE TABS -->
+  <section class="section" style="padding-bottom:0">
+    <div class="container">
+      <style>
+        .cruise-tabs-nav {
+          display: flex; gap: 0;
+          border-bottom: 2px solid var(--gray-300);
+          margin-bottom: 24px;
+          overflow-x: auto; scrollbar-width: none;
+        }
+        .cruise-tabs-nav::-webkit-scrollbar { display: none; }
+        .cruise-tab-btn {
+          padding: 12px 22px; font-size: 0.9rem; font-weight: 600;
+          color: var(--gray-700); border: none; background: none;
+          cursor: pointer; white-space: nowrap;
+          border-bottom: 3px solid transparent; margin-bottom: -2px;
+          transition: all 0.2s; font-family: inherit;
+        }
+        .cruise-tab-btn.active { color: var(--navy); border-bottom-color: var(--navy); font-weight: 700; }
+        .cruise-tab-btn:hover:not(.active) { color: var(--navy); }
+        .tab-cruise-grid {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 16px;
+        }
+        .tab-card {
+          border: 1px solid var(--gray-300); border-radius: 10px;
+          overflow: hidden; background: #fff;
+          display: flex; flex-direction: column;
+          transition: box-shadow 0.2s, transform 0.2s;
+          cursor: pointer; text-decoration: none; color: inherit;
+        }
+        .tab-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.12); transform: translateY(-2px); }
+        .tab-card-img { height: 150px; overflow: hidden; }
+        .tab-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; display: block; }
+        .tab-card:hover .tab-card-img img { transform: scale(1.05); }
+        .tab-card-body { padding: 12px 14px; flex: 1; display: flex; flex-direction: column; }
+        .tab-card-title { font-size: 0.88rem; font-weight: 700; color: var(--gray-900); line-height: 1.4; margin-bottom: 6px; }
+        .tab-card-from { font-size: 0.68rem; color: var(--gray-500); letter-spacing: 0.5px; }
+        .tab-card-price { font-size: 1.15rem; font-weight: 900; color: var(--gray-900); margin-bottom: 2px; }
+        .tab-card-price-note { font-size: 0.7rem; color: var(--gray-500); margin-bottom: 10px; }
+        .tab-card-meta { margin-top: auto; border-top: 1px solid var(--gray-200); padding-top: 8px; }
+        .tab-card-dates { display: block; color: var(--navy); font-size: 0.82rem; font-weight: 700; margin-top: 6px; }
+        .tab-card-dates:hover { text-decoration: underline; }
+        .tabs-loading { grid-column: 1/-1; text-align: center; padding: 40px; color: var(--gray-500); }
+        @media (max-width: 1024px) { .tab-cruise-grid { grid-template-columns: repeat(3,1fr); } }
+        @media (max-width: 640px) { .tab-cruise-grid { grid-template-columns: repeat(2,1fr); } }
+      </style>
+      <nav class="cruise-tabs-nav" id="cruiseTabsNav">
+        <button class="cruise-tab-btn active" onclick="switchTab(this,'mediterranean')">지중해</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'alaska')">알래스카</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'caribbean')">카리브해</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'korea')">한국·일본</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'northern-europe')">북유럽</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'asia')">아시아·중동</button>
+      </nav>
+      <div class="tab-cruise-grid" id="tabCruiseGrid">
+        <div class="tabs-loading">불러오는 중...</div>
+      </div>
+    </div>
+  </section>
+
   <!-- RECOMMENDED CRUISES -->
   <section class="section">
     <div class="container">
@@ -444,6 +506,105 @@
       destPos = Math.max(0, Math.min(getMaxPos(), Math.round(-px / cw)));
       applySlide(true);
     });
+
+    // ── 탭 목적지 이미지 ──
+    const TAB_DEST_IMAGES = {
+      mediterranean: [
+        'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80',
+        'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=600&q=80',
+        'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&q=80',
+        'https://images.unsplash.com/photo-1529963183134-61a90db47eaf?w=600&q=80',
+        'https://images.unsplash.com/photo-1520645521318-f03a712f0e67?w=600&q=80',
+      ],
+      alaska: [
+        'https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=600&q=80',
+        'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&q=80',
+        'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
+        'https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=600&q=80',
+        'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80',
+      ],
+      caribbean: [
+        'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80',
+        'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80',
+        'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80',
+        'https://images.unsplash.com/photo-1530053969600-caed2596d242?w=600&q=80',
+        'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=600&q=80',
+      ],
+      korea: [
+        'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80',
+        'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80',
+        'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
+        'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=600&q=80',
+        'https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&q=80',
+      ],
+      'northern-europe': [
+        'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+        'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=600&q=80',
+        'https://images.unsplash.com/photo-1471922694854-ff1b63b20054?w=600&q=80',
+        'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80',
+        'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&q=80',
+      ],
+      asia: [
+        'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80',
+        'https://images.unsplash.com/photo-1538230506809-1e3c5bed6a80?w=600&q=80',
+        'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80',
+        'https://images.unsplash.com/photo-1534008757030-27299c4371b6?w=600&q=80',
+        'https://images.unsplash.com/photo-1522083165195-3424ed129620?w=600&q=80',
+      ],
+    };
+
+    let tabCacheV2 = {};
+    async function switchTab(btn, dest) {
+      document.querySelectorAll('.cruise-tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      if (tabCacheV2[dest]) {
+        document.getElementById('tabCruiseGrid').innerHTML = tabCacheV2[dest];
+        return;
+      }
+      document.getElementById('tabCruiseGrid').innerHTML = '<div class="tabs-loading">불러오는 중...</div>';
+      try {
+        const cruises = await API.filterCruises({ dest, limit: 5 });
+        const imgs = TAB_DEST_IMAGES[dest] || TAB_DEST_IMAGES['mediterranean'];
+        if (!cruises || cruises.length === 0) {
+          document.getElementById('tabCruiseGrid').innerHTML = '<div class="tabs-loading">해당 목적지 크루즈가 없습니다</div>';
+          return;
+        }
+        const html = cruises.slice(0, 5).map((c, i) => {
+          const img = imgs[i % imgs.length];
+          const nights = c.nights || c.duration || '?';
+          const dateRaw = c.dateFrom || c.departure_date || '';
+          const dateStr = dateRaw ? dateRaw.substring(0, 10) : '';
+          const priceRaw = c.price || c.priceFrom || c.lowest_price;
+          const currency = c.currency || 'USD';
+          const priceStr = priceRaw
+            ? (currency === 'EUR' ? '€' : '$') + Number(priceRaw).toLocaleString()
+            : '문의';
+          const title = c.name || c.title || `${nights}박 크루즈`;
+          const ref = c.ref || c.id || '';
+          return `
+            <a href="cruise-view.html?ref=${encodeURIComponent(ref)}" class="tab-card">
+              <div class="tab-card-img"><img src="${img}" alt="${title}" loading="lazy"></div>
+              <div class="tab-card-body">
+                <div class="tab-card-title">${title}</div>
+                <div class="tab-card-from">최저가 (1인 기준)</div>
+                <div class="tab-card-price">${priceStr}</div>
+                <div class="tab-card-price-note">세금 · 제반 비용 별도</div>
+                <div class="tab-card-meta">
+                  ${dateStr ? `<span class="tab-card-dates">${dateStr} 출발 · ${nights}박 ›</span>` : ''}
+                </div>
+              </div>
+            </a>`;
+        }).join('');
+        tabCacheV2[dest] = html;
+        document.getElementById('tabCruiseGrid').innerHTML = html;
+      } catch(e) {
+        console.error(e);
+        document.getElementById('tabCruiseGrid').innerHTML = '<div class="tabs-loading">데이터를 불러올 수 없습니다</div>';
+      }
+    }
+
+    // 첫 탭 자동 로드
+    switchTab(document.querySelector('.cruise-tab-btn'), 'mediterranean');
 
     loadRecommended();
     loadRecommended2();
