@@ -296,39 +296,31 @@
 
     // Featured slider logic
     let featuredPos = 0;
-    function getFeaturedCardWidth() {
-      const track = document.getElementById('featuredTrack');
-      const card = track.querySelector('.cruise-card');
-      if (!card) return 0;
-      return card.offsetWidth + 24;
+    function getSlideUnit(sliderId) {
+      const slider = document.getElementById(sliderId);
+      if (!slider) return 0;
+      return (slider.offsetWidth + 24) / 3;
     }
     function getFeaturedMax() {
       const track = document.getElementById('featuredTrack');
-      const total = track.querySelectorAll('.cruise-card').length;
-      return Math.max(0, total - 3);
+      return Math.max(0, track.querySelectorAll('.cruise-card').length - 3);
     }
     function slideFeatured(dir) {
       featuredPos = Math.max(0, Math.min(getFeaturedMax(), featuredPos + dir));
       const track = document.getElementById('featuredTrack');
-      track.style.transform = 'translateX(-' + (featuredPos * getFeaturedCardWidth()) + 'px)';
+      track.style.transition = 'transform 0.4s ease';
+      track.style.transform = 'translateX(-' + (featuredPos * getSlideUnit('featuredSlider')) + 'px)';
       updateFeaturedArrows();
     }
     function updateFeaturedArrows() {
       const max = getFeaturedMax();
-      document.querySelectorAll('#featuredSlider').forEach(s => {
-        s.closest('.featured-slider-wrap').querySelector('.featured-arrow-left').style.opacity = featuredPos <= 0 ? '0.3' : '1';
-        s.closest('.featured-slider-wrap').querySelector('.featured-arrow-right').style.opacity = featuredPos >= max ? '0.3' : '1';
-      });
+      const wrap = document.getElementById('featuredSlider').closest('.featured-slider-wrap');
+      wrap.querySelector('.featured-arrow-left').style.opacity = featuredPos <= 0 ? '0.3' : '1';
+      wrap.querySelector('.featured-arrow-right').style.opacity = featuredPos >= max ? '0.3' : '1';
     }
 
     // Second featured slider
     let featuredPos2 = 0;
-    function getFeaturedCardWidth2() {
-      const track = document.getElementById('featuredTrack2');
-      const card = track.querySelector('.cruise-card');
-      if (!card) return 0;
-      return card.offsetWidth + 24;
-    }
     function getFeaturedMax2() {
       const track = document.getElementById('featuredTrack2');
       return Math.max(0, track.querySelectorAll('.cruise-card').length - 3);
@@ -336,7 +328,8 @@
     function slideFeatured2(dir) {
       featuredPos2 = Math.max(0, Math.min(getFeaturedMax2(), featuredPos2 + dir));
       const track = document.getElementById('featuredTrack2');
-      track.style.transform = 'translateX(-' + (featuredPos2 * getFeaturedCardWidth2()) + 'px)';
+      track.style.transition = 'transform 0.4s ease';
+      track.style.transform = 'translateX(-' + (featuredPos2 * getSlideUnit('featuredSlider2')) + 'px)';
       const wrap = document.getElementById('featuredSlider2').closest('.featured-slider-wrap');
       wrap.querySelector('.featured-arrow-left').style.opacity = featuredPos2 <= 0 ? '0.3' : '1';
       wrap.querySelector('.featured-arrow-right').style.opacity = featuredPos2 >= getFeaturedMax2() ? '0.3' : '1';
