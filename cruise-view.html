@@ -816,12 +816,11 @@
     <div class="mib-handle" id="mibHandle" onclick="toggleMIB()">
       <div class="mib-peek">
         <span class="mib-peek-icon">🚢</span>
-        <span class="mib-peek-title" id="mibPeekTitle">이 크루즈 문의하기</span>
+        <span class="mib-peek-title" id="mibPeekTitle">이 크루즈 상품 문의하기</span>
         <span class="mib-peek-arrow" id="mibArrow">▲</span>
       </div>
     </div>
     <div class="mib-panel" id="mibPanel">
-      <div class="mib-cruise-name" id="mibCruiseName"></div>
       <div class="mib-btns">
         <a href="https://pf.kakao.com/_xgYbJG" target="_blank" class="mib-btn mib-kakao">
           💬 카카오톡 상담
@@ -913,16 +912,7 @@
       }
 
       .mib.open .mib-panel {
-        max-height: 160px;
-      }
-
-      .mib-cruise-name {
-        font-size: 0.82rem;
-        color: #6b7280;
-        padding: 0 18px 6px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        max-height: 110px;
       }
 
       .mib-btns {
@@ -962,7 +952,7 @@
 
       /* 바 열렸을 때 뒤 콘텐츠 밀기 방지 — body padding */
       body.mib-open {
-        padding-bottom: 170px;
+        padding-bottom: 130px;
       }
     }
   </style>
@@ -980,29 +970,7 @@
       document.body.classList.remove('mib-open');
     }
 
-    // 크루즈 제목이 로드되면 바에 반영
-    function updateMIBTitle() {
-      const d = window._cruiseData;
-      if (!d) return;
-      const title = d.title || '이 크루즈 문의하기';
-      const peek = document.getElementById('mibPeekTitle');
-      const detail = document.getElementById('mibCruiseName');
-      if (peek) peek.textContent = title.length > 22 ? title.slice(0, 22) + '…' : title;
-      if (detail) {
-        const op = d.operator ? `${d.operator} · ` : '';
-        const nights = d.nights ? `${d.nights}박` : '';
-        detail.textContent = op + nights;
-      }
-    }
-
-    // renderPage / renderFromAPI 이후 호출되도록 MutationObserver 감시
-    const _mibObserver = new MutationObserver(() => {
-      if (window._cruiseData) {
-        updateMIBTitle();
-        _mibObserver.disconnect();
-      }
-    });
-    _mibObserver.observe(document.getElementById('content'), { childList: true, subtree: true });
+    // 제목 고정값 — 동적 업데이트 불필요
   </script>
 
   <!-- Lightbox -->
