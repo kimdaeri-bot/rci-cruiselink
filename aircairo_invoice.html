@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Air Cairo 인보이스 생성기</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; background: #f0f2f5; font-size: 13px; }
+
+/* ===== 레이아웃 ===== */
+.app { display: grid; grid-template-columns: 420px 1fr; min-height: 100vh; gap: 0; }
+.form-panel { background: #1a1a2e; color: #e0e0e0; padding: 20px; overflow-y: auto; }
+.preview-panel { background: #e8e8e8; padding: 24px; overflow-y: auto; }
+.preview-label { text-align: center; color: #888; font-size: 11px; margin-bottom: 12px; letter-spacing: 1px; }
+
+/* ===== 폼 ===== */
+.form-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #333; }
+.form-header-title { font-size: 14px; font-weight: 700; color: #fff; }
+.form-header-sub { font-size: 10px; color: #888; margin-top: 2px; }
+.form-section { margin-bottom: 20px; }
+.form-section-title { font-size: 11px; font-weight: 700; color: #f90; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px solid #333; }
+.form-row { margin-bottom: 8px; }
+.form-row label { display: block; font-size: 11px; color: #aaa; margin-bottom: 3px; font-weight: 600; }
+.form-row input, .form-row textarea, .form-row select { width: 100%; background: #252540; border: 1px solid #444; color: #fff; padding: 7px 10px; border-radius: 4px; font-size: 12px; font-family: inherit; }
+.form-row textarea { resize: vertical; min-height: 80px; }
+.form-row input:focus, .form-row textarea:focus { outline: none; border-color: #f90; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 8px; }
+.form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+
+/* 버튼 */
+.btn { padding: 8px 14px; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 700; }
+.btn-orange { background: #f90; color: #000; }
+.btn-gray { background: #444; color: #fff; }
+.btn-red { background: #c33; color: #fff; }
+.btn-green { background: #2a7; color: #fff; }
+.btn-blue { background: #357; color: #fff; }
+.btn:hover { opacity: 0.85; }
+.btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+
+/* 추가 항목 */
+.extra-row { display: grid; grid-template-columns: 1fr auto 1fr auto; gap: 6px; align-items: center; margin-bottom: 6px; }
+.extra-row input { background: #252540; border: 1px solid #444; color: #fff; padding: 6px 8px; border-radius: 4px; font-size: 12px; }
+.extra-row select { background: #252540; border: 1px solid #444; color: #fff; padding: 6px 4px; border-radius: 4px; font-size: 11px; }
+.extra-del { background: #c33; color: #fff; border: none; border-radius: 4px; padding: 4px 8px; cursor: pointer; font-size: 11px; }
+
+/* PNR 파싱 결과 */
+.parse-result { background: #1e2e1e; border: 1px solid #2a4; border-radius: 4px; padding: 8px 10px; font-size: 11px; color: #8f8; margin-top: 6px; display: none; }
+
+/* 배율 슬라이더 */
+.scale-row { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+.scale-row label { font-size: 11px; color: #aaa; white-space: nowrap; }
+.scale-row input[type=range] { flex: 1; }
+.scale-val { font-size: 11px; color: #f90; min-width: 36px; text-align: right; }
+
+/* ===== 인보이스 문서 ===== */
+.invoice-doc {
+  background: #fff;
+  width: 794px;
+  min-height: 1123px;
+  margin: 0 auto;
+  padding: 28px 32px 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transform-origin: top center;
+}
+
+/* 상단 헤더 */
+.inv-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 18px; }
+.inv-logo-area { display: flex; align-items: center; gap: 12px; }
+.inv-logo-img { width: 80px; height: 50px; object-fit: contain; display: none; }
+.inv-logo-text { font-size: 22px; font-weight: 900; color: #005baa; letter-spacing: 3px; }
+.inv-gsa-text { font-size: 9px; color: #888; letter-spacing: 1px; margin-top: 2px; }
+.inv-date-area { text-align: right; font-size: 11px; color: #666; }
+.inv-date-area strong { display: block; font-size: 13px; color: #333; }
+
+/* 타이틀 */
+.inv-title { text-align: center; font-size: 24px; font-weight: 900; color: #005baa; letter-spacing: 8px; margin: 10px 0 16px; border-top: 2px solid #005baa; border-bottom: 2px solid #005baa; padding: 6px 0; }
+
+/* ATTN 섹션 */
+.inv-attn { display: grid; grid-template-columns: 90px 1fr 90px 1fr; border: 1px solid #ccc; margin-bottom: 14px; }
+.inv-attn-cell { padding: 6px 10px; border-right: 1px solid #ccc; font-size: 12px; }
+.inv-attn-cell:nth-child(4n) { border-right: none; }
+.inv-attn-cell:nth-child(n+5) { border-top: 1px solid #ccc; }
+.inv-attn-label { background: #f5f5f5; font-weight: 700; color: #333; font-size: 11px; }
+
+/* 항공편 정보 */
+.inv-flight { background: #f0f4ff; border: 1px solid #c0d0ee; border-radius: 4px; padding: 10px 14px; margin-bottom: 12px; }
+.inv-flight-title { font-size: 10px; font-weight: 700; color: #005baa; letter-spacing: 1px; margin-bottom: 6px; text-transform: uppercase; }
+.inv-flight-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.inv-flight-item { font-size: 11px; }
+.inv-flight-item span { display: block; font-size: 10px; color: #888; }
+.inv-flight-item strong { font-size: 12px; color: #222; }
+
+/* PNR 박스 */
+.inv-pnr { background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px; padding: 10px 12px; margin-bottom: 14px; font-family: 'Courier New', monospace; font-size: 10.5px; white-space: pre-wrap; word-break: break-all; line-height: 1.5; color: #333; max-height: 200px; overflow-y: auto; display: none; }
+
+/* 요금 테이블 */
+.inv-table { width: 100%; border-collapse: collapse; margin-bottom: 14px; font-size: 12px; }
+.inv-table th { background: #005baa; color: #fff; padding: 7px 10px; text-align: center; font-weight: 700; font-size: 11px; }
+.inv-table td { padding: 6px 10px; border-bottom: 1px solid #eee; }
+.inv-table .label-col { color: #555; font-weight: 600; }
+.inv-table .num-col { text-align: right; color: #333; }
+.inv-table .total-row td { background: #fff8e8; font-weight: 700; border-top: 2px solid #f90; }
+.inv-table .deposit-row td { background: #ffe8e8; color: #900; }
+.inv-table .extra-row-inv td { background: #f0fff0; color: #060; }
+.inv-table .req-row td { background: #005baa; color: #fff; font-size: 14px; font-weight: 900; }
+.inv-table .req-row td.num-col { font-size: 16px; color: #fff; }
+
+/* 승객 명단 */
+.inv-pax-section { margin-bottom: 14px; }
+.inv-pax-title { font-size: 10px; font-weight: 700; color: #555; letter-spacing: 1px; margin-bottom: 6px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 4px; }
+.inv-pax-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px 8px; font-size: 10.5px; color: #444; }
+.inv-pax-item { padding: 1px 0; }
+
+/* 계좌 정보 */
+.inv-account { border: 1px solid #ccc; border-radius: 4px; overflow: hidden; margin-bottom: 14px; }
+.inv-account-header { background: #005baa; color: #fff; padding: 6px 12px; font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+.inv-account-body { padding: 10px 14px; }
+.inv-account-row { display: flex; justify-content: space-between; font-size: 12px; padding: 3px 0; border-bottom: 1px dotted #eee; }
+.inv-account-row:last-child { border-bottom: none; }
+.inv-account-row .acc-label { color: #666; font-size: 11px; }
+.inv-account-row .acc-val { font-weight: 700; color: #222; }
+.inv-account-note { font-size: 10px; color: #c00; margin-top: 6px; line-height: 1.5; }
+
+/* 직인/서명 */
+.inv-stamp-area { display: flex; justify-content: flex-end; align-items: flex-end; gap: 16px; margin-bottom: 10px; }
+.inv-stamp-img { width: 80px; height: 80px; object-fit: contain; }
+
+/* 푸터 */
+.inv-footer { text-align: center; border-top: 1px solid #005baa; padding-top: 8px; font-size: 10px; color: #888; line-height: 1.7; }
+
+/* 인쇄 */
+@media print {
+  body { background: #fff; }
+  .form-panel { display: none !important; }
+  .preview-panel { background: #fff; padding: 0; display: block; }
+  .preview-label { display: none; }
+  .invoice-doc { box-shadow: none; width: 100% !important; padding: 12px 16px !important; transform-origin: top left; }
+  .inv-title { letter-spacing: 6px; }
+  .inv-pnr { max-height: none; overflow-y: visible; }
+  @page { size: A4 portrait; margin: 0; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+<!-- ====== 입력 폼 ====== -->
+<div class="form-panel">
+  <div class="form-header">
+    <div>
+      <div class="form-header-title">✈ Air Cairo 인보이스 생성기</div>
+      <div class="form-header-sub">APG Korea | 에어카이로 한국 GSA</div>
+    </div>
+    <div style="display:flex;gap:6px">
+      <button class="btn btn-orange" onclick="doPrint()">🖨 인쇄/PDF</button>
+      <button class="btn btn-gray" onclick="resetForm()">↺</button>
+    </div>
+  </div>
+
+  <!-- 발행 정보 -->
+  <div class="form-section">
+    <div class="form-section-title">발행 정보</div>
+    <div class="form-row-2">
+      <div class="form-row" style="margin:0">
+        <label>발행일</label>
+        <input type="text" id="issueDate" value="">
+      </div>
+      <div class="form-row" style="margin:0">
+        <label>담당자</label>
+        <input type="text" id="handler" value="이유진">
+      </div>
+    </div>
+    <div class="form-row-2" style="margin-top:8px">
+      <div class="form-row" style="margin:0">
+        <label>담당자 연락처</label>
+        <input type="text" id="handlerTel" value="02-3788-9119">
+      </div>
+      <div class="form-row" style="margin:0">
+        <label>이메일</label>
+        <input type="text" id="handlerEmail" value="info@londonshow.co.kr">
+      </div>
+    </div>
+  </div>
+
+  <!-- 수신 여행사 -->
+  <div class="form-section">
+    <div class="form-section-title">수신 여행사</div>
+    <div class="form-row">
+      <label>ATTN (여행사명)</label>
+      <input type="text" id="attnName" placeholder="예: 크리에이티브 투어">
+    </div>
+    <div class="form-row-2">
+      <div class="form-row" style="margin:0">
+        <label>E-MAIL</label>
+        <input type="text" id="attnEmail" placeholder="example@agency.com">
+      </div>
+      <div class="form-row" style="margin:0">
+        <label>TEL NO</label>
+        <input type="text" id="attnTel" placeholder="02-XXX-XXXX">
+      </div>
+    </div>
+  </div>
+
+  <!-- PNR 입력 -->
+  <div class="form-section">
+    <div class="form-section-title">PNR 데이터</div>
+    <div class="form-row">
+      <label>PNR 텍스트 붙여넣기 (자동 파싱)</label>
+      <textarea id="pnrText" rows="5" placeholder="GDS에서 복사한 PNR 전체 붙여넣기&#10;→ 편명/인원/승객명단 자동 파싱"></textarea>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-green" onclick="parsePNR()">⚡ PNR 파싱</button>
+      <button class="btn btn-gray" onclick="togglePnrPreview()">📋 PNR 표시/숨김</button>
+    </div>
+    <div class="parse-result" id="parseResult"></div>
+  </div>
+
+  <!-- 항공편 정보 -->
+  <div class="form-section">
+    <div class="form-section-title">항공편 정보</div>
+    <div class="form-row-3">
+      <div class="form-row" style="margin:0">
+        <label>편명 (가는편)</label>
+        <input type="text" id="flt1" placeholder="SM 100 Y">
+      </div>
+      <div class="form-row" style="margin:0">
+        <label>구간</label>
+        <input type="text" id="flt1seg" placeholder="ICN-CAI">
+      </div>
+      <div class="form-row" style="margin:0">
+        <label>출발일</label>
+        <input type="text" id="flt1date" placeholder="12NOV25">
+      </div>
+    </div>
+    <div class="form-row-3" style="margin-top:6px">
+      <div class="form-row" style="margin:0">
+        <label>편명 (오는편)</label>
+        <input type="text" id="flt2" placeholder="SM 057 Y">
+      </div>
+      <div class="form-row" style="margin:0">
+        <label>구간</label>
+        <input type="text" id="flt2seg" placeholder="CAI-ICN">
+      </div>
+      <div class="form-row" style="margin:0">
+        <label>출발일</label>
+        <input type="text" id="flt2date" placeholder="28NOV25">
+      </div>
+    </div>
+    <div class="form-row" style="margin-top:6px">
+      <label>PNR 번호 (Record Locator)</label>
+      <input type="text" id="pnrRef" placeholder="예: 8K5ZYL">
+    </div>
+  </div>
+
+  <!-- 요금 -->
+  <div class="form-section">
+    <div class="form-section-title">요금 계산</div>
+    <div class="form-row-3">
+      <div class="form-row" style="margin:0">
+        <label>그룹 인원</label>
+        <input type="number" id="paxCount" value="1" min="1" oninput="calcTotal()">
+      </div>
+      <div class="form-row" style="margin:0">
+        <label>항공요금/인 (₩)</label>
+        <input type="number" id="farePerPax" value="0" oninput="calcTotal()">
+      </div>
+      <div class="form-row" style="margin:0">
+        <label>택스/인 (₩)</label>
+        <input type="number" id="taxPerPax" value="0" oninput="calcTotal()">
+      </div>
+    </div>
+  </div>
+
+  <!-- Deposit -->
+  <div class="form-section">
+    <div class="form-section-title">Deposit (입금 이력)</div>
+    <div class="form-row">
+      <label>1차 Deposit 금액 (₩)</label>
+      <input type="number" id="dep1Amt" value="0" oninput="calcTotal()">
+    </div>
+    <div class="form-row-2">
+      <div class="form-row" style="margin:0">
+        <label>1차 Deposit 날짜/메모</label>
+        <input type="text" id="dep1Note" placeholder="9/16 크리에이티브">
+      </div>
+      <div class="form-row" style="margin:0">
+        <label>EMD 번호</label>
+        <input type="text" id="dep1Emd" placeholder="381-4550586687">
+      </div>
+    </div>
+    <div class="form-row" style="margin-top:6px">
+      <label>2차 Deposit 금액 (₩, 없으면 0)</label>
+      <input type="number" id="dep2Amt" value="0" oninput="calcTotal()">
+    </div>
+    <div class="form-row-2">
+      <div class="form-row" style="margin:0">
+        <label>2차 Deposit 날짜/메모</label>
+        <input type="text" id="dep2Note" placeholder="">
+      </div>
+      <div class="form-row" style="margin:0">
+        <label>2차 EMD 번호</label>
+        <input type="text" id="dep2Emd" placeholder="">
+      </div>
+    </div>
+  </div>
+
+  <!-- 추가 항목 -->
+  <div class="form-section">
+    <div class="form-section-title">추가 항목 (취소패널티 등)</div>
+    <div id="extraItems"></div>
+    <button class="btn btn-blue" onclick="addExtra()" style="margin-top:6px;font-size:11px">+ 항목 추가</button>
+  </div>
+
+  <!-- 비고 -->
+  <div class="form-section">
+    <div class="form-section-title">비고</div>
+    <div class="form-row">
+      <textarea id="remarks" rows="2" placeholder="특이사항 입력"></textarea>
+    </div>
+  </div>
+
+  <!-- 승객 명단 -->
+  <div class="form-section">
+    <div class="form-section-title">승객 명단</div>
+    <div class="form-row">
+      <label>표시 여부</label>
+      <select id="paxListShow">
+        <option value="show">표시</option>
+        <option value="hide">숨김</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <textarea id="paxListText" rows="4" placeholder="PNR 파싱 후 자동 입력됩니다&#10;또는 직접 입력 (줄바꿈으로 구분)"></textarea>
+    </div>
+  </div>
+
+  <!-- 배율 조정 -->
+  <div class="form-section">
+    <div class="form-section-title">인쇄 배율</div>
+    <div class="scale-row">
+      <label>배율</label>
+      <input type="range" id="scaleSlider" min="60" max="100" value="100" oninput="applyScale(this.value/100)">
+      <span class="scale-val" id="scaleLabel">100%</span>
+    </div>
+    <div style="font-size:10px;color:#777;margin-top:4px">인쇄 시 자동 조정 / 수동으로 1페이지 맞춤</div>
+  </div>
+</div>
+
+<!-- ====== 프리뷰 ====== -->
+<div class="preview-panel">
+  <div class="preview-label">▼ 실시간 프리뷰 — 인쇄(PDF 저장)</div>
+  <div class="invoice-doc" id="invoiceDoc">
+
+    <!-- 상단 헤더 -->
+    <div class="inv-top">
+      <div class="inv-logo-area">
+        <img class="inv-logo-img" id="logoImg" src="" alt="">
+        <div>
+          <div class="inv-logo-text">AIR CAIRO</div>
+          <div class="inv-gsa-text">GSA KOREA — APG Korea (아남항공㈜)</div>
+        </div>
+      </div>
+      <div class="inv-date-area">
+        <strong id="pv-issue-date"></strong>
+        <span id="pv-handler"></span>
+      </div>
+    </div>
+
+    <!-- 타이틀 -->
+    <div class="inv-title">I N V O I C E</div>
+
+    <!-- ATTN -->
+    <div class="inv-attn">
+      <div class="inv-attn-cell inv-attn-label">ATTN</div>
+      <div class="inv-attn-cell" id="pv-attn-name"></div>
+      <div class="inv-attn-cell inv-attn-label">E-MAIL</div>
+      <div class="inv-attn-cell" id="pv-attn-email"></div>
+      <div class="inv-attn-cell inv-attn-label">TEL NO</div>
+      <div class="inv-attn-cell" id="pv-attn-tel"></div>
+      <div class="inv-attn-cell inv-attn-label">FROM</div>
+      <div class="inv-attn-cell" style="color:#005baa;font-weight:700">에어카이로 (Air Cairo)</div>
+    </div>
+
+    <!-- 항공편 정보 -->
+    <div class="inv-flight">
+      <div class="inv-flight-title">✈ Flight Information</div>
+      <div class="inv-flight-grid">
+        <div class="inv-flight-item"><span>가는편</span><strong id="pv-flt1"></strong></div>
+        <div class="inv-flight-item"><span>구간</span><strong id="pv-flt1seg"></strong></div>
+        <div class="inv-flight-item"><span>출발일</span><strong id="pv-flt1date"></strong></div>
+        <div class="inv-flight-item"><span>PNR Ref</span><strong id="pv-pnr-ref"></strong></div>
+        <div class="inv-flight-item"><span>오는편</span><strong id="pv-flt2"></strong></div>
+        <div class="inv-flight-item"><span>구간</span><strong id="pv-flt2seg"></strong></div>
+        <div class="inv-flight-item"><span>출발일</span><strong id="pv-flt2date"></strong></div>
+        <div class="inv-flight-item"><span>그룹인원</span><strong id="pv-pax-count" style="color:#c00"></strong></div>
+      </div>
+    </div>
+
+    <!-- PNR 원문 (선택) -->
+    <div class="inv-pnr" id="pv-pnr-text"></div>
+
+    <!-- 요금 테이블 -->
+    <table class="inv-table">
+      <thead>
+        <tr>
+          <th style="width:40%">항목</th>
+          <th style="width:20%">단가/인 (₩)</th>
+          <th style="width:15%">인원</th>
+          <th style="width:25%">금액 (₩)</th>
+        </tr>
+      </thead>
+      <tbody id="fareTableBody">
+        <!-- JS로 생성 -->
+      </tbody>
+    </table>
+
+    <!-- 승객 명단 -->
+    <div class="inv-pax-section" id="paxSection">
+      <div class="inv-pax-title">Passenger List</div>
+      <div class="inv-pax-grid" id="pv-pax-list"></div>
+    </div>
+
+    <!-- 계좌 정보 -->
+    <div class="inv-account">
+      <div class="inv-account-header">💳 입금 계좌 정보</div>
+      <div class="inv-account-body">
+        <div class="inv-account-row">
+          <span class="acc-label">은행/계좌번호</span>
+          <span class="acc-val">하나은행 109-910017-21104</span>
+        </div>
+        <div class="inv-account-row">
+          <span class="acc-label">예금주</span>
+          <span class="acc-val">아남항공 주식회사</span>
+        </div>
+        <div class="inv-account-row">
+          <span class="acc-label">사업자등록번호</span>
+          <span class="acc-val">104-81-84918</span>
+        </div>
+        <div class="inv-account-row">
+          <span class="acc-label">대표자</span>
+          <span class="acc-val">김 영 성</span>
+        </div>
+        <div class="inv-account-note" id="pv-remarks"></div>
+      </div>
+    </div>
+
+    <!-- 직인 -->
+    <div class="inv-stamp-area">
+      <img class="inv-stamp-img" id="stampImg" src="assets/images/company-stamp.png" alt="직인" onerror="this.style.display='none'">
+    </div>
+
+    <!-- 푸터 -->
+    <div class="inv-footer">
+      아남항공 주식회사 (Air Cairo Korea GSA) | 서울 강서구 마곡서로 152 두산 더 랜드타워 5층<br>
+      대표: 김영성 | 사업자: 104-81-84918 | <span id="pv-footer-contact"></span>
+    </div>
+  </div><!-- /invoice-doc -->
+</div><!-- /preview-panel -->
+</div><!-- /app -->
+
+<script>
+// ===== 상태 =====
+let extraItems = [];
+let parsedPaxList = [];
+let manualScale = null;
+let showPnrInDoc = false;
+
+// ===== 초기화 =====
+window.onload = () => {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth()+1).padStart(2,'0');
+  const dd = String(today.getDate()).padStart(2,'0');
+  document.getElementById('issueDate').value = `${yyyy}-${mm}-${dd}`;
+  bindAll();
+  updatePreview();
+};
+
+function bindAll() {
+  const ids = ['issueDate','handler','handlerTel','handlerEmail',
+    'attnName','attnEmail','attnTel','pnrText','pnrRef',
+    'flt1','flt1seg','flt1date','flt2','flt2seg','flt2date',
+    'paxCount','farePerPax','taxPerPax',
+    'dep1Amt','dep1Note','dep1Emd','dep2Amt','dep2Note','dep2Emd',
+    'remarks','paxListText','paxListShow'];
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', updatePreview);
+    if (el && el.tagName === 'SELECT') el.addEventListener('change', updatePreview);
+  });
+}
+
+// ===== PNR 파싱 =====
+function parsePNR() {
+  const raw = document.getElementById('pnrText').value;
+  if (!raw.trim()) return;
+  let msg = [];
+
+  // PNR 번호
+  const pnrM = raw.match(/\b([A-Z0-9]{6})\s*$/m);
+  if (pnrM) { document.getElementById('pnrRef').value = pnrM[1]; msg.push('✓ PNR: '+pnrM[1]); }
+
+  // 그룹 인원 (NM:xx 또는 BKD:xx)
+  const nmM = raw.match(/NM:(\d+)/);
+  const bkdM = raw.match(/BKD:(\d+)/);
+  const nm = nmM ? parseInt(nmM[1]) : (bkdM ? parseInt(bkdM[1]) : 0);
+  if (nm > 0) { document.getElementById('paxCount').value = nm; msg.push('✓ 인원: '+nm+'명'); }
+
+  // 항공편 (SM xxx Y xxNOV xxX)
+  const fltMatches = [...raw.matchAll(/SM\s+(\d+)\s+([A-Z]+)\s+(\d+[A-Z]+\d*)\s+\d+\s+([A-Z]+)([A-Z]{3})/g)];
+  if (fltMatches.length >= 1) {
+    const f1 = fltMatches[0];
+    document.getElementById('flt1').value = `SM ${f1[1]} ${f1[2]}`;
+    document.getElementById('flt1date').value = f1[3];
+    document.getElementById('flt1seg').value = `${f1[4]}-${f1[5]}`;
+    msg.push(`✓ 가는편: SM ${f1[1]} / ${f1[4]}→${f1[5]} / ${f1[3]}`);
+  }
+  if (fltMatches.length >= 2) {
+    const f2 = fltMatches[1];
+    document.getElementById('flt2').value = `SM ${f2[1]} ${f2[2]}`;
+    document.getElementById('flt2date').value = f2[3];
+    document.getElementById('flt2seg').value = `${f2[4]}-${f2[5]}`;
+    msg.push(`✓ 오는편: SM ${f2[1]} / ${f2[4]}→${f2[5]} / ${f2[3]}`);
+  }
+
+  // 승객 목록 (1.LASTNAME/FIRSTNAME MS 패턴)
+  const paxM = [...raw.matchAll(/\d+\.([A-Z]+\/[A-Z\s]+(?:MR|MS|MSTR|INF))/g)];
+  if (paxM.length > 0) {
+    parsedPaxList = paxM.map(m => m[1].trim());
+    document.getElementById('paxListText').value = parsedPaxList.join('\n');
+    msg.push(`✓ 승객: ${parsedPaxList.length}명 파싱 완료`);
+  }
+
+  // 결과 표시
+  const res = document.getElementById('parseResult');
+  res.style.display = 'block';
+  res.innerHTML = msg.join('<br>') || '⚠ 파싱 가능한 데이터가 없습니다.';
+  updatePreview();
+}
+
+function togglePnrPreview() {
+  showPnrInDoc = !showPnrInDoc;
+  updatePreview();
+}
+
+// ===== 추가 항목 =====
+function addExtra() {
+  const id = Date.now();
+  extraItems.push({id, label:'', type:'add', amount:0});
+  renderExtraItems();
+}
+function removeExtra(id) {
+  extraItems = extraItems.filter(e => e.id !== id);
+  renderExtraItems();
+  updatePreview();
+}
+function renderExtraItems() {
+  const cont = document.getElementById('extraItems');
+  cont.innerHTML = extraItems.map(e => `
+    <div class="extra-row" data-id="${e.id}">
+      <input type="text" value="${e.label}" placeholder="항목명 (예: 취소패널티)" oninput="updateExtra(${e.id},'label',this.value)">
+      <select onchange="updateExtra(${e.id},'type',this.value)">
+        <option value="add" ${e.type==='add'?'selected':''}>+추가</option>
+        <option value="sub" ${e.type==='sub'?'selected':''}>-차감</option>
+      </select>
+      <input type="number" value="${e.amount}" placeholder="금액" oninput="updateExtra(${e.id},'amount',parseFloat(this.value)||0)">
+      <button class="extra-del" onclick="removeExtra(${e.id})">✕</button>
+    </div>
+  `).join('');
+}
+function updateExtra(id, field, val) {
+  const item = extraItems.find(e => e.id === id);
+  if (item) { item[field] = val; updatePreview(); }
+}
+
+// ===== 숫자 포맷 =====
+function fmt(n) { return Math.round(n).toLocaleString('ko-KR'); }
+function val(id) { return parseFloat(document.getElementById(id).value) || 0; }
+function str(id) { return document.getElementById(id).value.trim(); }
+
+// ===== 합계 계산 =====
+function calcTotal() { updatePreview(); }
+
+// ===== 프리뷰 업데이트 =====
+function updatePreview() {
+  // 발행 정보
+  document.getElementById('pv-issue-date').textContent = str('issueDate');
+  document.getElementById('pv-handler').textContent = str('handler') + ' / ' + str('handlerTel');
+  document.getElementById('pv-footer-contact').textContent = str('handlerEmail') + ' / ' + str('handlerTel');
+
+  // ATTN
+  document.getElementById('pv-attn-name').textContent = str('attnName');
+  document.getElementById('pv-attn-email').textContent = str('attnEmail');
+  document.getElementById('pv-attn-tel').textContent = str('attnTel');
+
+  // 항공편
+  document.getElementById('pv-flt1').textContent = str('flt1');
+  document.getElementById('pv-flt1seg').textContent = str('flt1seg');
+  document.getElementById('pv-flt1date').textContent = str('flt1date');
+  document.getElementById('pv-flt2').textContent = str('flt2');
+  document.getElementById('pv-flt2seg').textContent = str('flt2seg');
+  document.getElementById('pv-flt2date').textContent = str('flt2date');
+  document.getElementById('pv-pnr-ref').textContent = str('pnrRef');
+  const paxCnt = val('paxCount');
+  document.getElementById('pv-pax-count').textContent = paxCnt + '명';
+
+  // PNR 원문
+  const pnrBox = document.getElementById('pv-pnr-text');
+  if (showPnrInDoc && str('pnrText')) {
+    pnrBox.textContent = str('pnrText');
+    pnrBox.style.display = 'block';
+  } else {
+    pnrBox.style.display = 'none';
+  }
+
+  // 요금 테이블
+  const fare = val('farePerPax');
+  const tax = val('taxPerPax');
+  const fareTotal = fare * paxCnt;
+  const taxTotal = tax * paxCnt;
+  const subtotal = fareTotal + taxTotal;
+  const dep1 = val('dep1Amt');
+  const dep2 = val('dep2Amt');
+  let extraTotal = 0;
+  extraItems.forEach(e => { extraTotal += (e.type==='add' ? 1 : -1) * (parseFloat(e.amount)||0); });
+  const reqAmt = subtotal - dep1 - dep2 + extraTotal;
+
+  let rows = `
+    <tr>
+      <td class="label-col">항공요금</td>
+      <td class="num-col">${fmt(fare)}</td>
+      <td class="num-col">${paxCnt}명</td>
+      <td class="num-col">${fmt(fareTotal)}</td>
+    </tr>
+    <tr>
+      <td class="label-col">TAX (제세금)</td>
+      <td class="num-col">${fmt(tax)}</td>
+      <td class="num-col">${paxCnt}명</td>
+      <td class="num-col">${fmt(taxTotal)}</td>
+    </tr>
+    <tr class="total-row">
+      <td class="label-col" colspan="3">소계 SUBTOTAL</td>
+      <td class="num-col">${fmt(subtotal)}</td>
+    </tr>`;
+
+  if (dep1 > 0) {
+    rows += `<tr class="deposit-row">
+      <td class="label-col">(-) 1차 Deposit ${str('dep1Note') ? '— '+str('dep1Note') : ''}</td>
+      <td class="num-col" colspan="2" style="font-size:10px;color:#888">${str('dep1Emd') || ''}</td>
+      <td class="num-col" style="color:#c00">- ${fmt(dep1)}</td>
+    </tr>`;
+  }
+  if (dep2 > 0) {
+    rows += `<tr class="deposit-row">
+      <td class="label-col">(-) 2차 Deposit ${str('dep2Note') ? '— '+str('dep2Note') : ''}</td>
+      <td class="num-col" colspan="2" style="font-size:10px;color:#888">${str('dep2Emd') || ''}</td>
+      <td class="num-col" style="color:#c00">- ${fmt(dep2)}</td>
+    </tr>`;
+  }
+  extraItems.forEach(e => {
+    if (!e.label && !e.amount) return;
+    const sign = e.type === 'add' ? '+' : '-';
+    rows += `<tr class="extra-row-inv">
+      <td class="label-col" colspan="3">(${sign}) ${e.label || '기타'}</td>
+      <td class="num-col" style="${e.type==='sub'?'color:#c00':'color:#060'}">${sign} ${fmt(Math.abs(e.amount))}</td>
+    </tr>`;
+  });
+  rows += `<tr class="req-row">
+    <td class="label-col" colspan="3" style="color:#fff;font-size:13px;font-weight:900">★ 입금 요청액</td>
+    <td class="num-col" style="font-size:16px;color:#fff;font-weight:900">₩ ${fmt(reqAmt)}</td>
+  </tr>`;
+  document.getElementById('fareTableBody').innerHTML = rows;
+
+  // 승객 명단
+  const paxSection = document.getElementById('paxSection');
+  const paxShow = document.getElementById('paxListShow').value;
+  const paxText = str('paxListText');
+  if (paxShow === 'hide' || !paxText) {
+    paxSection.style.display = 'none';
+  } else {
+    paxSection.style.display = 'block';
+    const paxItems = paxText.split('\n').filter(p => p.trim());
+    document.getElementById('pv-pax-list').innerHTML = paxItems.map((p,i) =>
+      `<div class="inv-pax-item">${i+1}. ${p}</div>`
+    ).join('');
+  }
+
+  // 비고
+  const rem = str('remarks');
+  const remDiv = document.getElementById('pv-remarks');
+  remDiv.textContent = rem ? '※ ' + rem : '';
+  remDiv.style.display = rem ? 'block' : 'none';
+
+  // 배율
+  if (manualScale !== null) {
+    applyScaleUI(manualScale);
+  }
+}
+
+// ===== 배율 =====
+function applyScale(val) {
+  manualScale = val;
+  document.getElementById('scaleLabel').textContent = Math.round(val*100) + '%';
+  applyScaleUI(val);
+}
+function applyScaleUI(scale) {
+  const doc = document.getElementById('invoiceDoc');
+  doc.style.transform = `scale(${scale})`;
+  const h = doc.offsetHeight * scale;
+  doc.parentElement.style.minHeight = h + 'px';
+}
+
+// ===== 인쇄 =====
+function doPrint() {
+  const doc = document.getElementById('invoiceDoc');
+  doc.style.transform = '';
+  const A4_H = 1100;
+  const docH = doc.scrollHeight;
+  if (docH > A4_H) {
+    const zoom = Math.max(0.55, A4_H / docH);
+    doc.style.zoom = zoom;
+    setTimeout(() => { window.print(); doc.style.zoom = ''; if (manualScale) applyScaleUI(manualScale); }, 100);
+  } else {
+    doc.style.zoom = '';
+    setTimeout(() => { window.print(); if (manualScale) applyScaleUI(manualScale); }, 50);
+  }
+}
+
+function resetForm() {
+  if (!confirm('입력 내용을 초기화할까요?')) return;
+  ['attnName','attnEmail','attnTel','pnrText','pnrRef',
+   'flt1','flt1seg','flt1date','flt2','flt2seg','flt2date',
+   'remarks','paxListText'].forEach(id => document.getElementById(id).value = '');
+  ['paxCount','dep1Amt','dep2Amt'].forEach(id => document.getElementById(id).value = '0');
+  ['farePerPax','taxPerPax'].forEach(id => document.getElementById(id).value = '0');
+  extraItems = [];
+  renderExtraItems();
+  document.getElementById('parseResult').style.display = 'none';
+  manualScale = null;
+  document.getElementById('scaleSlider').value = 100;
+  document.getElementById('scaleLabel').textContent = '100%';
+  const doc = document.getElementById('invoiceDoc');
+  doc.style.transform = '';
+  doc.style.zoom = '';
+  updatePreview();
+}
+</script>
+</body>
+</html>
