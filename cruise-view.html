@@ -461,9 +461,9 @@
       let html = `
       <div class="container">
         <h2 class="section-title">💰 객실 & 요금</h2>
-        <p class="section-subtitle">1인 기준 요금 (2인 1실 기준, 세금/항만료 별도)</p>
+        <p class="section-subtitle">2인 1실 기준 요금 (세금/항만료 별도)</p>
         <table class="price-table">
-          <thead><tr><th>객실 타입</th><th>2인 1실</th><th>1인 1실</th><th>3인 1실</th></tr></thead>
+          <thead><tr><th>객실 타입</th><th>2인 1실</th></tr></thead>
           <tbody>`;
 
       const types = [
@@ -474,10 +474,8 @@
       ];
       types.forEach(t => {
         const dp = double?.['from_' + t.key];
-        const sp = single?.['from_' + t.key];
-        const tp = triple?.['from_' + t.key];
-        if (dp || sp || tp) {
-          html += `<tr><td class="room-type">${t.label}</td><td style="color:var(--orange);font-weight:700">${fmtPrice(dp)}</td><td>${fmtPrice(sp)}</td><td>${fmtPrice(tp)}</td></tr>`;
+        if (dp) {
+          html += `<tr><td class="room-type">${t.label}</td><td style="color:var(--orange);font-weight:700">${fmtPrice(dp)}</td></tr>`;
         }
       });
 
