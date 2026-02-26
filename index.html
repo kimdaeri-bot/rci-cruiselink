@@ -554,7 +554,7 @@
     });
 
     // ── 탭 목적지 이미지 ──
-    const TAB_DEST_IMAGES = {
+    window.TAB_DEST_IMAGES = {
       mediterranean: [
         'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80',
         'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=600&q=80',
@@ -599,7 +599,7 @@
       ],
     };
 
-    let tabCacheV2 = {};
+    window.tabCacheV2 = {};
     async function switchTab(btn, dest) {
       document.querySelectorAll('.cruise-tab-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
