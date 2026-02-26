@@ -111,7 +111,8 @@
       {
         short: 'Princess', name: 'Princess Cruises', nameKo: '프린세스 크루즈',
         logo: 'assets/images/logos/princess.png',
-        desc: '프린세스 크루즈는 TV 드라마 "러브보트"의 배경으로 유명한 프리미엄 크루즈 선사입니다. 17척의 선박으로 알래스카, 북유럽, 지중해, 아시아 등을 운항하며, 세련된 서비스와 다양한 항로 선택이 강점입니다.',
+        desc: '프린세스 크루즈는 TV 드라마 "러브보트"의 배경으로 유명한 프리미엄 크루즈 선사입니다. 17척의 선박으로 알래스카, 북유럽, 지중해, 아시아 등을 운항하며, 세련된 서비스와 다양한 항로 선택이 강점입니다.<br><span style="color:#f59e0b;font-size:0.82rem">⚠️ 크루즈 검색은 준비 중입니다 — 곧 서비스 예정</span>',
+        soon: true,
       },
       {
         short: 'Celebrity', name: 'Celebrity Cruises', nameKo: '셀러브리티 크루즈',
@@ -207,7 +208,9 @@
               <div class="spec">데크 <strong>${s.deckCount || '-'}개</strong></div>
               <div class="spec">톤수 <strong>${s.grossTonnage ? (s.grossTonnage/1000).toFixed(0) + 'K' : '-'}</strong></div>
             </div>
-            <div style="margin-top:8px;font-size:0.85rem;color:var(--orange)">🚢 ${s.cruiseCount || 0}개 크루즈</div>
+            ${s.operatorShort === 'Princess'
+              ? '<div style="margin-top:8px;font-size:0.82rem;color:#f59e0b;font-weight:600">⏳ 크루즈 검색 준비중</div>'
+              : `<div style="margin-top:8px;font-size:0.85rem;color:var(--orange)">🚢 ${s.cruiseCount || 0}개 크루즈</div>`}
           </div>
         </div>`).join('');
 
