@@ -72,6 +72,7 @@
     const dateFrom = params.get('dateFrom') || '';
     const dateTo = params.get('dateTo') || '';
     const duration = params.get('duration') || '';
+    const ship = params.get('ship') || '';
 
     // Show search tags
     const tagsEl = document.getElementById('searchTags');
@@ -82,6 +83,7 @@
     operators.forEach(o => tagsEl.innerHTML += `<span class="search-tag">⚓ ${Translations.operatorName(o==='MSC'?'MSC Cruises':'Norwegian Cruise Line')}</span>`);
     if (month) tagsEl.innerHTML += `<span class="search-tag">📅 ${month.replace('-','년 ')}월</span>`;
     if (dateFrom || dateTo) tagsEl.innerHTML += `<span class="search-tag">📅 ${dateFrom||'~'} ~ ${dateTo||'~'}</span>`;
+    if (ship) tagsEl.innerHTML += `<span class="search-tag">🛳️ ${ship}</span>`;
     if (duration) tagsEl.innerHTML += `<span class="search-tag">⏱️ ${durNames[duration]||duration}</span>`;
 
     // Animated loading
@@ -106,7 +108,15 @@
         await new Promise(r => setTimeout(r, 400));
       }
 
-      const results = await API.filterCruises({ dest, operators, ports, month, duration, limit: 9999, minDate: dateFrom || undefined, maxDate: dateTo || undefined });
+      let results = await API.filterCruises({ dest, operators, ports, month, duration, limit: 9999, minDate: dateFrom || undefined, maxDate: dateTo || undefined });
+      if (ship) {
+        const sq = ship.toLowerCase();
+        results = results.filter(c =>
+          c.shipSlug === ship ||
+          (c.shipTitle && c.shipTitle.toLowerCase().includes(sq)) ||
+          (c.shipSlug && c.shipSlug.toLowerCase().includes(sq))
+        );
+      }
       allResults = results;
 
       bar.style.width = '100%';

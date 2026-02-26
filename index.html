@@ -106,14 +106,14 @@
           </div>
         </div>
       </div>
-      <div class="filter-group">
-        <label>기간</label>
-        <select id="filterDuration">
-          <option value="">전체</option>
-          <option value="short">1~5박</option>
-          <option value="medium">6~10박</option>
-          <option value="long">11박 이상</option>
-        </select>
+      <div class="filter-group" style="position:relative">
+        <label>선박명</label>
+        <div style="position:relative">
+          <input id="filterShip" type="text" placeholder="선박 검색..." autocomplete="off"
+            style="width:100%;box-sizing:border-box;padding:9px 12px;border:1px solid var(--gray-300);border-radius:var(--radius);font-size:0.88rem;font-family:inherit"
+            oninput="filterShipOptions(this.value)" onfocus="filterShipOptions(this.value)" onclick="event.stopPropagation()">
+          <div id="shipDropdown" style="display:none;position:absolute;top:calc(100%+2px);left:0;right:0;z-index:9999;background:#fff;border:1px solid var(--gray-300);border-radius:var(--radius);box-shadow:0 4px 16px rgba(0,0,0,.12);max-height:220px;overflow-y:auto"></div>
+        </div>
       </div>
       <button class="btn btn-orange" onclick="doSearch()">🔍 검색</button>
     </div>
@@ -324,6 +324,48 @@
     fetch('assets/data/ports.json').then(r=>r.json()).then(data=>{
       window._allPorts = data; // [{ko, en, dests, count}]
     }).catch(()=>{});
+
+    // === 선박명 자동완성 (ships.json 로드) ===
+    window._allShips = [];
+    window._selectedShipSlug = '';
+    fetch('assets/data/ships.json').then(r=>r.json()).then(data=>{
+      window._allShips = data;
+    }).catch(()=>{});
+
+    function filterShipOptions(query) {
+      const dd = document.getElementById('shipDropdown');
+      const q = query.trim().toLowerCase();
+      if (!q) { dd.style.display = 'none'; window._selectedShipSlug = ''; return; }
+      const matched = window._allShips.filter(s =>
+        s.title.toLowerCase().includes(q) ||
+        (s.operatorKo && s.operatorKo.toLowerCase().includes(q)) ||
+        (s.operatorShort && s.operatorShort.toLowerCase().includes(q))
+      ).slice(0, 20);
+      if (!matched.length) {
+        dd.innerHTML = '<div style="padding:8px 12px;color:#aaa;font-size:.85rem">검색 결과 없음</div>';
+        dd.style.display = 'block'; return;
+      }
+      dd.innerHTML = matched.map(s =>
+        `<div class="ms-option" style="display:flex;justify-content:space-between;align-items:center"
+          onclick="selectShip('${s.slug}','${s.title.replace(/'/g,'&#39;')}')">
+          <span>${s.title}</span>
+          <span style="color:#aaa;font-size:.75rem;margin-left:8px;white-space:nowrap">${s.operatorKo||s.operator||''}</span>
+        </div>`
+      ).join('');
+      dd.style.display = 'block';
+    }
+
+    function selectShip(slug, title) {
+      window._selectedShipSlug = slug;
+      document.getElementById('filterShip').value = title;
+      document.getElementById('shipDropdown').style.display = 'none';
+    }
+
+    document.addEventListener('click', e => {
+      if (!e.target.closest('#filterShip') && !e.target.closest('#shipDropdown')) {
+        document.getElementById('shipDropdown').style.display = 'none';
+      }
+    });
 
     // === Multi-select functions ===
     function toggleMulti(el) {
@@ -659,16 +701,16 @@
       const dest = document.getElementById('filterDest').value;
       const operators = getMultiValues(document.getElementById('msOperator'));
       const ports = getMultiValues(document.getElementById('msPort'));
+      const ship = window._selectedShipSlug || document.getElementById('filterShip').value.trim();
       const dateFrom = drFrom ? dateStr(drFrom) : '';
       const dateTo = drTo ? dateStr(drTo) : '';
-      const dur = document.getElementById('filterDuration').value;
       const params = new URLSearchParams();
       if (dest) params.set('dest', dest);
       if (operators.length) params.set('operators', operators.join(','));
       if (ports.length) params.set('ports', ports.join(','));
+      if (ship) params.set('ship', ship);
       if (dateFrom) params.set('dateFrom', dateFrom);
       if (dateTo) params.set('dateTo', dateTo);
-      if (dur) params.set('duration', dur);
       location.href = `search.html?${params.toString()}`;
     }
 
