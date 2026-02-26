@@ -82,12 +82,15 @@
           </div>
         </div>
       </div>
-      <div class="filter-group" style="flex:1.5;min-width:200px">
+      <div class="filter-group" style="flex:1.5;min-width:180px;position:relative">
         <label>출발 기간</label>
-        <div style="display:flex;gap:4px;align-items:center">
-          <input type="date" id="filterDateFrom" style="flex:1;padding:9px 6px;border:1px solid var(--gray-300);border-radius:var(--radius);font-size:0.88rem;min-width:0">
-          <span style="color:#999;font-size:0.8rem;flex-shrink:0">~</span>
-          <input type="date" id="filterDateTo" style="flex:1;padding:9px 6px;border:1px solid var(--gray-300);border-radius:var(--radius);font-size:0.88rem;min-width:0">
+        <button class="dr-display" id="drDisplay" onclick="toggleDR(event)" type="button">전체 기간</button>
+        <div class="dr-popup" id="drPopup">
+          <div class="dr-months" id="drMonths"></div>
+          <div class="dr-footer">
+            <button class="dr-btn-clear" onclick="clearDR()" type="button">초기화</button>
+            <button class="dr-btn-ok" onclick="closeDR()" type="button">확인</button>
+          </div>
         </div>
       </div>
       <div class="filter-group">
@@ -363,9 +366,114 @@
 
 
 
-    // 날짜 기본값 설정 (오늘~6개월 후)
-    const now = new Date();
-    document.getElementById('filterDateFrom').value = now.toISOString().slice(0,10);
+    // ── Date Range Picker ──
+    var drFrom = null, drTo = null, drSelecting = false;
+    var drViewYear, drViewMonth;
+    (function() { var d=new Date(); drViewYear=d.getFullYear(); drViewMonth=d.getMonth(); })();
+
+    function toggleDR(e) {
+      e && e.stopPropagation();
+      var popup = document.getElementById('drPopup');
+      if (popup.classList.contains('open')) { popup.classList.remove('open'); return; }
+      renderDR();
+      popup.classList.add('open');
+    }
+    function closeDR() { document.getElementById('drPopup').classList.remove('open'); updateDRDisplay(); }
+    function clearDR() { drFrom=null; drTo=null; drSelecting=false; renderDR(); updateDRDisplay(); }
+
+    function updateDRDisplay() {
+      var btn = document.getElementById('drDisplay');
+      if (drFrom && drTo) {
+        btn.textContent = fmtDR(drFrom) + ' ~ ' + fmtDR(drTo);
+        btn.classList.add('has-range');
+      } else if (drFrom) {
+        btn.textContent = fmtDR(drFrom) + ' ~';
+        btn.classList.add('has-range');
+      } else {
+        btn.textContent = '전체 기간';
+        btn.classList.remove('has-range');
+      }
+    }
+    function fmtDR(d) { return d.getFullYear() + '.' + String(d.getMonth()+1).padStart(2,'0') + '.' + String(d.getDate()).padStart(2,'0'); }
+    function dateStr(d) { return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+
+    function renderDR() {
+      var container = document.getElementById('drMonths');
+      var html = '';
+      for (var mi = 0; mi < 2; mi++) {
+        var yr = drViewYear, mo = drViewMonth + mi;
+        if (mo >= 12) { yr += Math.floor(mo/12); mo = mo % 12; }
+        html += renderDRMonth(yr, mo, mi);
+      }
+      container.innerHTML = html;
+    }
+
+    function renderDRMonth(yr, mo, idx) {
+      var today = new Date(); today.setHours(0,0,0,0);
+      var monthNames = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+      var firstDay = new Date(yr, mo, 1).getDay();
+      var daysInMonth = new Date(yr, mo+1, 0).getDate();
+      var html = '<div class="dr-month">';
+      html += '<div class="dr-month-header">';
+      if (idx === 0) html += '<button class="dr-nav" onclick="drNav(-1)" type="button">‹</button>';
+      else html += '<span></span>';
+      html += '<span class="dr-month-title">' + yr + '년 ' + monthNames[mo] + '</span>';
+      if (idx === 1) html += '<button class="dr-nav" onclick="drNav(1)" type="button">›</button>';
+      else html += '<span></span>';
+      html += '</div>';
+      html += '<div class="dr-weekdays"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>';
+      html += '<div class="dr-days">';
+      for (var i=0; i<firstDay; i++) html += '<div class="dr-day dr-empty"></div>';
+      for (var d=1; d<=daysInMonth; d++) {
+        var dt = new Date(yr, mo, d); dt.setHours(0,0,0,0);
+        var cls = 'dr-day';
+        var isPast = dt < today;
+        if (isPast) cls += ' dr-past';
+        var dtStr = dateStr(dt);
+        if (dt.getTime() === today.getTime()) cls += ' dr-today';
+        var isStart = drFrom && dt.getTime() === drFrom.getTime();
+        var isEnd = drTo && dt.getTime() === drTo.getTime();
+        var inRange = drFrom && drTo && dt > drFrom && dt < drTo;
+        if (isStart) cls += ' dr-start';
+        if (isEnd) cls += ' dr-end';
+        if (inRange) cls += ' dr-in-range';
+        if (isStart && drTo) cls += ' dr-in-range-right';
+        if (isEnd && drFrom) cls += ' dr-in-range-left';
+        var onclick = isPast ? '' : ' onclick="pickDR(\'' + dtStr + '\')"';
+        html += '<div class="' + cls + '"' + onclick + '>' + d + '</div>';
+      }
+      html += '</div></div>';
+      return html;
+    }
+
+    function drNav(dir) {
+      drViewMonth += dir;
+      if (drViewMonth < 0) { drViewMonth = 11; drViewYear--; }
+      if (drViewMonth > 11) { drViewMonth = 0; drViewYear++; }
+      renderDR();
+    }
+
+    function pickDR(dtStr) {
+      var dt = new Date(dtStr); dt.setHours(0,0,0,0);
+      if (!drFrom || (drFrom && drTo)) {
+        drFrom = dt; drTo = null; drSelecting = true;
+      } else if (drSelecting) {
+        if (dt < drFrom) { drTo = drFrom; drFrom = dt; }
+        else if (dt.getTime() === drFrom.getTime()) { drFrom = null; drTo = null; }
+        else { drTo = dt; }
+        drSelecting = false;
+      }
+      renderDR();
+      updateDRDisplay();
+    }
+
+    document.addEventListener('click', function(e) {
+      var popup = document.getElementById('drPopup');
+      if (popup && popup.classList.contains('open') && !e.target.closest('#drPopup') && !e.target.closest('#drDisplay')) {
+        popup.classList.remove('open');
+        updateDRDisplay();
+      }
+    });
 
     // Promo slider
     let promoIdx = 0;
@@ -462,8 +570,8 @@
       const dest = document.getElementById('filterDest').value;
       const operators = getMultiValues(document.getElementById('msOperator'));
       const ports = getMultiValues(document.getElementById('msPort'));
-      const dateFrom = document.getElementById('filterDateFrom').value;
-      const dateTo = document.getElementById('filterDateTo').value;
+      const dateFrom = drFrom ? dateStr(drFrom) : '';
+      const dateTo = drTo ? dateStr(drTo) : '';
       const dur = document.getElementById('filterDuration').value;
       const params = new URLSearchParams();
       if (dest) params.set('dest', dest);
