@@ -504,54 +504,52 @@
 
     // Drag to scroll (mouse)
     let isDrag = false, startX = 0, scrollStart = 0, dragDist = 0;
-    destSlider.addEventListener('mousedown', function(e) {
-      e.preventDefault(); // prevent <a> drag
-      isDrag = true; startX = e.pageX; dragDist = 0;
-      scrollStart = destPos * getCardWidth();
-      applySlide(false);
-    });
-    document.addEventListener('mousemove', function(e) {
-      if (!isDrag) return;
-      var dx = e.pageX - startX;
-      dragDist = Math.abs(dx);
-      destTrack.style.transition = 'none';
-      destTrack.style.transform = 'translateX(' + (-(scrollStart - dx)) + 'px)';
-    });
-    document.addEventListener('mouseup', function() {
-      if (!isDrag) return;
-      isDrag = false;
-      var cw = getCardWidth();
-      var currentOffset = scrollStart - (0); // need actual offset
-      // Parse current transform
-      var m = destTrack.style.transform.match(/translateX\((.+?)px\)/);
-      var px = m ? parseFloat(m[1]) : 0;
-      destPos = Math.max(0, Math.min(getMaxPos(), Math.round(-px / cw)));
-      applySlide(true);
-    });
-    destSlider.addEventListener('click', function(e) { if (dragDist > 5) e.preventDefault(); }, true);
-
-    // Touch support
-    destSlider.addEventListener('touchstart', function(e) {
-      isDrag = true; startX = e.touches[0].pageX; dragDist = 0;
-      scrollStart = destPos * getCardWidth();
-      applySlide(false);
-    }, {passive: true});
-    destSlider.addEventListener('touchmove', function(e) {
-      if (!isDrag) return;
-      var dx = e.touches[0].pageX - startX;
-      dragDist = Math.abs(dx);
-      destTrack.style.transition = 'none';
-      destTrack.style.transform = 'translateX(' + (-(scrollStart - dx)) + 'px)';
-    }, {passive: true});
-    destSlider.addEventListener('touchend', function() {
-      if (!isDrag) return;
-      isDrag = false;
-      var cw = getCardWidth();
-      var m = destTrack.style.transform.match(/translateX\((.+?)px\)/);
-      var px = m ? parseFloat(m[1]) : 0;
-      destPos = Math.max(0, Math.min(getMaxPos(), Math.round(-px / cw)));
-      applySlide(true);
-    });
+    if (destSlider) {
+      destSlider.addEventListener('mousedown', function(e) {
+        e.preventDefault();
+        isDrag = true; startX = e.pageX; dragDist = 0;
+        scrollStart = destPos * getCardWidth();
+        applySlide(false);
+      });
+      document.addEventListener('mousemove', function(e) {
+        if (!isDrag) return;
+        var dx = e.pageX - startX;
+        dragDist = Math.abs(dx);
+        destTrack.style.transition = 'none';
+        destTrack.style.transform = 'translateX(' + (-(scrollStart - dx)) + 'px)';
+      });
+      document.addEventListener('mouseup', function() {
+        if (!isDrag) return;
+        isDrag = false;
+        var cw = getCardWidth();
+        var m = destTrack.style.transform.match(/translateX\((.+?)px\)/);
+        var px = m ? parseFloat(m[1]) : 0;
+        destPos = Math.max(0, Math.min(getMaxPos(), Math.round(-px / cw)));
+        applySlide(true);
+      });
+      destSlider.addEventListener('click', function(e) { if (dragDist > 5) e.preventDefault(); }, true);
+      destSlider.addEventListener('touchstart', function(e) {
+        isDrag = true; startX = e.touches[0].pageX; dragDist = 0;
+        scrollStart = destPos * getCardWidth();
+        applySlide(false);
+      }, {passive: true});
+      destSlider.addEventListener('touchmove', function(e) {
+        if (!isDrag) return;
+        var dx = e.touches[0].pageX - startX;
+        dragDist = Math.abs(dx);
+        destTrack.style.transition = 'none';
+        destTrack.style.transform = 'translateX(' + (-(scrollStart - dx)) + 'px)';
+      }, {passive: true});
+      destSlider.addEventListener('touchend', function() {
+        if (!isDrag) return;
+        isDrag = false;
+        var cw = getCardWidth();
+        var m = destTrack.style.transform.match(/translateX\((.+?)px\)/);
+        var px = m ? parseFloat(m[1]) : 0;
+        destPos = Math.max(0, Math.min(getMaxPos(), Math.round(-px / cw)));
+        applySlide(true);
+      });
+    }
 
     // ── 탭 목적지 이미지 ──
     window.TAB_DEST_IMAGES = {
