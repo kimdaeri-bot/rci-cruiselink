@@ -409,6 +409,37 @@ img { max-width: 100%; height: auto; }
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
+/* 페이지 진입 로딩 */
+.page-loading .loading-spinner {
+  width: 48px; height: 48px; border-width: 3px;
+  border-color: #e8eaf0; border-top-color: var(--navy);
+  margin-bottom: 20px;
+}
+.page-loading .loading-main-text {
+  font-size: 1rem; font-weight: 600; color: var(--navy);
+  margin: 0 0 18px; letter-spacing: -0.3px;
+}
+.loading-progress-wrap {
+  width: 200px; height: 4px; background: #e8eaf0;
+  border-radius: 2px; margin: 0 auto 12px; overflow: hidden;
+}
+.loading-progress-bar {
+  height: 100%; background: var(--orange);
+  border-radius: 2px; width: 0%;
+  animation: progress-fill 3s ease-out forwards;
+}
+@keyframes progress-fill {
+  0%   { width: 0%; }
+  60%  { width: 75%; }
+  85%  { width: 90%; }
+  100% { width: 95%; }
+}
+.loading-done-text {
+  font-size: 0.85rem; color: var(--gray-400); margin: 0;
+  opacity: 0; animation: done-appear 0.4s ease 2.8s forwards;
+}
+@keyframes done-appear { to { opacity: 1; } }
+
 /* ===== HERO (detail pages) ===== */
 .detail-hero {
   background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-light) 100%);
