@@ -173,13 +173,13 @@
           <div class="meta">
             <span>📅 ${API.formatDateKo(c.dateFrom)} ~ ${API.formatDateKo(c.dateTo)}</span>
             <span>🌙 ${nights}박 ${nights+1}일</span>
-            <span>🚢 ${c.shipTitleKo || c.shipTitle}</span>
+            <span>🚢 ${c.shipTitleKo || Translations.shipName(c.shipTitle)}</span>
             <span>🌏 ${countries}</span>
           </div>
           <div class="detail-hero-tags">
             ${(c.hashtags||[]).slice(0,6).map(t => `<span class="hero-tag">${t}</span>`).join('')}
           </div>
-          <div class="price-big">${priceStr} <small>/1인 2인기준</small></div>
+          <div class="price-big">${priceStr} <small>/1인</small></div>
           <div class="hero-ctas cta-two-center">
             <a href="https://pf.kakao.com/_xgYbJG" target="_blank" class="btn btn-orange">💬 카카오톡 상담</a>
             <button class="btn btn-white-solid" onclick="openInquiry()">📋 온라인 문의</button>
@@ -196,10 +196,10 @@
       html += `
       <div class="container">
         <div class="info-bar">
-          <div class="info-bar-item"><div class="label">🚢 선박</div><div class="value">${c.shipTitleKo || c.shipTitle}</div></div>
+          <div class="info-bar-item"><div class="label">🚢 선박</div><div class="value">${c.shipTitleKo || Translations.shipName(c.shipTitle)}</div></div>
           <div class="info-bar-item"><div class="label">🌙 기간</div><div class="value">${nights}박 ${nights+1}일</div></div>
-          <div class="info-bar-item"><div class="label">🚪 출발/도착</div><div class="value">${c.startsAt?.nameKo || c.startsAt?.name || ''} → ${c.endsAt?.nameKo || c.endsAt?.name || ''}</div></div>
-          <div class="info-bar-item"><div class="label">💰 2인1실 기준</div><div class="value" style="color:var(--orange)">${priceStr}</div></div>
+          <div class="info-bar-item"><div class="label">🚪 출발/도착</div><div class="value">${Translations.portName(c.startsAt?.nameKo || c.startsAt?.name || '')} → ${Translations.portName(c.endsAt?.nameKo || c.endsAt?.name || '')}</div></div>
+          <div class="info-bar-item"><div class="label">💰 요금</div><div class="value" style="color:var(--orange)">${priceStr} <small style="font-size:.75em;font-weight:400;color:#888">/1인</small></div></div>
         </div>
       </div>`;
 
@@ -208,7 +208,7 @@
       <section class="section" id="itinerary-section">
         <div class="container">
           <h2 class="section-title">🗓️ 상세 일정</h2>
-          <p class="section-subtitle">${c.portRoute || ''}</p>
+          <p class="section-subtitle">${Translations.portRoute(c.portRouteKo || c.portRoute || '')}</p>
           <div id="day-cards-container">
             <div class="loading"><div class="loading-spinner"></div><p>일정 데이터를 불러오는 중...</p></div>
           </div>
@@ -461,21 +461,21 @@
       let html = `
       <div class="container">
         <h2 class="section-title">💰 객실 & 요금</h2>
-        <p class="section-subtitle">2인 1실 기준 요금 (세금/항만료 별도)</p>
+        <p class="section-subtitle">1인 기준 요금 (2인 1실, 세금/항만료 별도)</p>
         <table class="price-table">
-          <thead><tr><th>객실 타입</th><th>2인 1실</th></tr></thead>
+          <thead><tr><th>객실 타입</th><th>요금 /1인</th></tr></thead>
           <tbody>`;
 
       const types = [
-        {key:'inside', label:'🚪 내측 (Inside)'},
-        {key:'outside', label:'🪟 오션뷰 (Outside)'},
-        {key:'balcony', label:'🌅 발코니 (Balcony)'},
-        {key:'suite', label:'👑 스위트 (Suite)'},
+        {key:'inside', label:'🚪 내측 캐빈'},
+        {key:'outside', label:'🪟 오션뷰 캐빈'},
+        {key:'balcony', label:'🌅 발코니 캐빈'},
+        {key:'suite', label:'👑 스위트 캐빈'},
       ];
       types.forEach(t => {
         const dp = double?.['from_' + t.key];
         if (dp) {
-          html += `<tr><td class="room-type">${t.label}</td><td style="color:var(--orange);font-weight:700">${fmtPrice(dp)}</td></tr>`;
+          html += `<tr><td class="room-type">${t.label}</td><td style="color:var(--orange);font-weight:700">${fmtPrice(dp)} <small style="font-weight:400;font-size:.85em;color:#888">/1인</small></td></tr>`;
         }
       });
 
@@ -522,7 +522,7 @@
             <span>🚢 ${shipName}</span>
             <span>🌏 ${countries}</span>
           </div>
-          <div class="price-big">${priceStr} <small>/1인 2인기준</small></div>
+          <div class="price-big">${priceStr} <small>/1인</small></div>
           <div class="hero-ctas cta-two-center">
             <a href="https://pf.kakao.com/_xgYbJG" target="_blank" class="btn btn-orange">💬 카카오톡 상담</a>
             <button class="btn btn-white-solid" onclick="openInquiry()">📋 온라인 문의</button>
@@ -542,7 +542,7 @@
           <div class="info-bar-item"><div class="label">🚢 선박</div><div class="value">${shipName}</div></div>
           <div class="info-bar-item"><div class="label">🌙 기간</div><div class="value">${nights}박 ${parseInt(nights)+1}일</div></div>
           <div class="info-bar-item"><div class="label">🚪 출발/도착</div><div class="value">${Translations.portName(holiday.starts_at?.name||'')} → ${Translations.portName(holiday.ends_at?.name||'')}</div></div>
-          <div class="info-bar-item"><div class="label">💰 2인1실 기준</div><div class="value" style="color:var(--orange)">${priceStr}</div></div>
+          <div class="info-bar-item"><div class="label">💰 요금</div><div class="value" style="color:var(--orange)">${priceStr} <small style="font-size:.75em;font-weight:400;color:#888">/1인</small></div></div>
         </div>
       </div>`;
 
@@ -687,7 +687,7 @@
         const ship = c.shipTitleKo || Translations.shipName(c.shipTitle || '');
         const op = Translations.operatorName(c.operator || '');
         const price = c.priceBalcony || c.priceOutside || c.priceInside;
-        const route = c.portRouteKo || c.portRoute || '';
+        const route = Translations.portRoute(c.portRouteKo || c.portRoute || '');
         document.getElementById('modalProductName').textContent = title;
         document.getElementById('modalProductDetail').innerHTML =
           `${op} · ${ship}<br>출발: ${c.dateFrom || c.departureDate || ''} / ${c.nights || ''}박${price ? ' / $'+price+'~' : ''}`;

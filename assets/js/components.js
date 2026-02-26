@@ -109,12 +109,12 @@ const Components = {
       <div class="cruise-item-body">
         <div class="cruise-item-operator">${Translations.operatorName(c.operator)} · ${c.shipTitleKo || Translations.shipName(c.shipTitle)}</div>
         <div class="cruise-item-title">${c.title}</div>
-        <div class="cruise-item-route">🚢 ${c.portRouteKo || c.portRoute}</div>
-        <div class="cruise-item-hashtags">${(c.hashtags||[]).map(t => `<span>${t}</span>`).join('')}</div>
+        <div class="cruise-item-route">🚢 ${Translations.portRoute(c.portRouteKo || c.portRoute)}</div>
+        <div class="cruise-item-hashtags">${(c.hashtags||[]).map(t => `<span>${t.startsWith('#') && !/[\uAC00-\uD7A3]/.test(t) ? '#' + Translations.shipName(t.slice(1)) : t}</span>`).join('')}</div>
         <div class="cruise-item-footer">
           <div>
             <div class="cruise-item-date">📅 ${API.formatDate(c.dateFrom)} ~ ${API.formatDate(c.dateTo)} · ${c.nights}박</div>
-            <div class="cruise-item-price">${API.formatPrice(fromPrice, c.currency)} <small style="font-weight:400;font-size:0.8rem;color:#616161">/1인 2인기준</small></div>
+            <div class="cruise-item-price">${API.formatPrice(fromPrice, c.currency)} <small style="font-weight:400;font-size:0.8rem;color:#888">/1인</small></div>
           </div>
           <div class="cruise-item-actions">
             <a href="cruise-view.html?ref=${c.ref}" class="btn btn-navy btn-sm">상세보기</a>
@@ -139,12 +139,12 @@ const Components = {
         ${region ? `<span class="cruise-card-tag">${Translations.regionName(region)}</span>` : ''}
       </div>
       <div class="cruise-card-body">
-        <div class="cruise-card-operator">${holiday.operator_title || shipInfo?.operator || ''} · ${holiday.ship_title || ''}</div>
+        <div class="cruise-card-operator">${Translations.operatorName(holiday.operator_title || shipInfo?.operator || '')} · ${Translations.shipName(holiday.ship_title || '')}</div>
         <div class="cruise-card-title">${Translations.portName(holiday.starts_at?.name || '')} 출발 ${holiday.cruise_nights || holiday.duration_days || ''}박 크루즈</div>
         <div class="cruise-card-route">${route}</div>
         <div class="cruise-card-meta">
           <span class="cruise-card-date">📅 ${API.formatDate(holiday.date_from)} · ${holiday.cruise_nights || holiday.duration_days || ''}박</span>
-          <span class="cruise-card-price">${API.formatPrice(fromPrice)}</span>
+          <span class="cruise-card-price">${API.formatPrice(fromPrice)} <small style="font-weight:normal;font-size:.8em;opacity:.8">/1인</small></span>
         </div>
         <a href="cruise-view.html?ref=${holiday.date_ref}" class="cruise-card-btn">자세히 보기</a>
       </div>
@@ -165,14 +165,14 @@ const Components = {
         ${region ? `<span class="cruise-item-tag">${Translations.regionName(region)}</span>` : ''}
       </div>
       <div class="cruise-item-body">
-        <div class="cruise-item-operator">${holiday.operator_title || ''} · ${holiday.ship_title || ''}</div>
+        <div class="cruise-item-operator">${Translations.operatorName(holiday.operator_title || '')} · ${Translations.shipName(holiday.ship_title || '')}</div>
         <div class="cruise-item-title">${Translations.portName(holiday.starts_at?.name || '')} 출발 ${holiday.cruise_nights || holiday.duration_days || ''}박 크루즈</div>
         <div class="cruise-item-route">🚢 ${route}</div>
         <div class="cruise-item-hashtags">${tags.map(t => `<span>${t}</span>`).join('')}</div>
         <div class="cruise-item-footer">
           <div>
             <div class="cruise-item-date">📅 ${API.formatDate(holiday.date_from)} ~ ${API.formatDate(holiday.date_to)} · ${holiday.cruise_nights || holiday.duration_days || ''}박</div>
-            <div class="cruise-item-price">${API.formatPrice(fromPrice)} <small style="font-weight:400;font-size:0.8rem;color:#616161">/1인 2인기준</small></div>
+            <div class="cruise-item-price">${API.formatPrice(fromPrice)} <small style="font-weight:400;font-size:0.8rem;color:#888">/1인</small></div>
           </div>
           <div class="cruise-item-actions">
             <a href="cruise-view.html?ref=${holiday.date_ref}" class="btn btn-navy btn-sm">상세보기</a>
