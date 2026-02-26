@@ -495,7 +495,9 @@ img { max-width: 100%; height: auto; }
   .hero-badge { font-size: 0.85rem; padding: 6px 16px; }
   .hero-sub { font-size: 1rem; }
   .filter-bar { flex-direction: column; padding: 20px; margin-top: -30px; }
-  .filter-group { min-width: 100%; }
+  .filter-group { min-width: 100% !important; flex: 1 1 100% !important; }
+  .filter-bar .btn { width: 100%; box-sizing: border-box; }
+  .dr-display { width: 100%; box-sizing: border-box; }
   .dest-card { min-width: calc(50% - 8px); height: 140px; }
   .cruise-grid { grid-template-columns: 1fr; }
   .featured-track .cruise-card { flex: 0 0 calc(100% - 8px); }
