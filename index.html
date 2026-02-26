@@ -251,11 +251,12 @@
         @media(max-width:700px){.dr-popup{width:calc(100vw - 32px);left:0}.dr-months{flex-direction:column}}
       </style>
       <nav class="cruise-tabs-nav" id="cruiseTabsNav">
-        <button class="cruise-tab-btn active" onclick="switchTab(this,'04')">4월</button>
-        <button class="cruise-tab-btn" onclick="switchTab(this,'05')">5월</button>
-        <button class="cruise-tab-btn" onclick="switchTab(this,'06')">6월</button>
-        <button class="cruise-tab-btn" onclick="switchTab(this,'07')">7월</button>
-        <button class="cruise-tab-btn" onclick="switchTab(this,'08')">8월</button>
+        <button class="cruise-tab-btn active" onclick="switchTab(this,'mediterranean')">지중해</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'alaska')">알래스카</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'caribbean')">카리브해</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'korea')">한국·일본</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'northern-europe')">북유럽</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'asia')">아시아·중동</button>
       </nav>
       <div class="tab-cruise-grid" id="tabCruiseGrid">
         <div class="tabs-loading">불러오는 중...</div>
@@ -962,26 +963,25 @@
     };
 
     window.tabCacheV2 = {};
-    async function switchTab(btn, month) {
+    async function switchTab(btn, dest) {
       document.querySelectorAll('.cruise-tab-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      if (tabCacheV2[month]) {
-        document.getElementById('tabCruiseGrid').innerHTML = tabCacheV2[month];
+      if (tabCacheV2[dest]) {
+        document.getElementById('tabCruiseGrid').innerHTML = tabCacheV2[dest];
         return;
       }
       document.getElementById('tabCruiseGrid').innerHTML = '<div class="tabs-loading">불러오는 중...</div>';
       try {
-        const cruises = await API.getMiniCruisesByMonth(month, 5);
+        const cruises = await API.getMiniCruises(dest, 5);
+        const imgs = TAB_DEST_IMAGES[dest] || TAB_DEST_IMAGES['mediterranean'];
         if (!cruises || cruises.length === 0) {
-          document.getElementById('tabCruiseGrid').innerHTML = '<div class="tabs-loading">해당 월 크루즈가 없습니다</div>';
+          document.getElementById('tabCruiseGrid').innerHTML = '<div class="tabs-loading">해당 목적지 크루즈가 없습니다</div>';
           return;
         }
-        const html = cruises.slice(0, 5).map((c) => {
-          const dest = c.destination || 'mediterranean';
-          const destImgs = TAB_DEST_IMAGES[dest] || TAB_DEST_IMAGES['mediterranean'];
-          const img = destImgs[Math.floor(Math.random() * destImgs.length)];
+        const html = cruises.slice(0, 5).map((c, i) => {
+          const img = imgs[i % imgs.length];
           const nights = c.nights || c.duration || '?';
-          const dateRaw = c.dateFrom || '';
+          const dateRaw = c.dateFrom || c.departure_date || '';
           const dateStr = dateRaw ? dateRaw.substring(0, 10) : '';
           const priceRaw = c.priceBalcony || c.priceOutside || c.priceInside || c.price || c.priceFrom;
           const currency = c.currency || 'USD';
@@ -1004,7 +1004,7 @@
               </div>
             </a>`;
         }).join('');
-        tabCacheV2[month] = html;
+        tabCacheV2[dest] = html;
         document.getElementById('tabCruiseGrid').innerHTML = html;
       } catch(e) {
         console.error(e);
@@ -1013,7 +1013,7 @@
     }
 
     // 첫 탭 자동 로드
-    switchTab(document.querySelector('.cruise-tab-btn'), '04');
+    switchTab(document.querySelector('.cruise-tab-btn'), 'mediterranean');
 
     loadRecommended();
     loadRecommended2();

@@ -42,25 +42,16 @@ const API = {
   // 목적지별 파일 로드 (없으면 전체 파일 폴백)
   // 탭 전용 미니 캐시 (58KB — 목적지별 top6)
   _miniCache: null,
-  async _loadMiniCache() {
+  async getMiniCruises(dest, limit = 5) {
     if (!this._miniCache) {
       try {
         const res = await fetch('assets/data/cruises-mini.json');
         this._miniCache = res.ok ? await res.json() : [];
       } catch { this._miniCache = []; }
     }
-  },
-  async getMiniCruises(dest, limit = 5) {
-    await this._loadMiniCache();
     const cutoff = (() => { const d = new Date(); d.setMonth(d.getMonth() + 2); return d.toISOString().slice(0, 10); })();
     return this._miniCache
       .filter(c => (!dest || c.destination === dest) && c.dateFrom >= cutoff)
-      .slice(0, limit);
-  },
-  async getMiniCruisesByMonth(month, limit = 5) {
-    await this._loadMiniCache();
-    return this._miniCache
-      .filter(c => c.month === month || (c.dateFrom || '').startsWith(`2026-${month}`))
       .slice(0, limit);
   },
 
