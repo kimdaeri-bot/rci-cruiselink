@@ -6,6 +6,46 @@
   <title>선박 목록 - 크루즈링크</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚢</text></svg>">
+  <style>
+    .operator-tabs {
+      display: flex; gap: 8px; margin-bottom: 28px;
+      flex-wrap: wrap; align-items: center;
+    }
+    .op-tab {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 16px; border: 2px solid var(--gray-300);
+      border-radius: 24px; background: #fff; cursor: pointer;
+      font-size: 0.88rem; font-weight: 600; color: var(--gray-700);
+      transition: all 0.18s; white-space: nowrap;
+    }
+    .op-tab img { height: 20px; width: auto; object-fit: contain; }
+    .op-tab .op-count { font-size: 0.78rem; color: #999; font-weight: 400; }
+    .op-tab:hover { border-color: var(--navy); color: var(--navy); }
+    .op-tab.active { border-color: var(--navy); background: var(--navy); color: #fff; }
+    .op-tab.active .op-count { color: rgba(255,255,255,0.7); }
+    .op-tab.active img { filter: brightness(0) invert(1); }
+
+    /* 선사 소개 배너 */
+    .operator-banner {
+      background: linear-gradient(135deg, #0a1628 0%, #1a3a6b 100%);
+      border-radius: 12px; padding: 28px 32px; margin-bottom: 28px;
+      display: flex; align-items: center; gap: 28px; color: #fff;
+    }
+    .operator-banner img { height: 48px; width: auto; object-fit: contain; filter: brightness(0) invert(1); flex-shrink: 0; }
+    .operator-banner-text h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 6px; }
+    .operator-banner-text p { font-size: 0.88rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin: 0; }
+    .operator-banner-stats { margin-left: auto; display: flex; gap: 24px; flex-shrink: 0; text-align: center; }
+    .operator-banner-stats div { }
+    .operator-banner-stats strong { display: block; font-size: 1.5rem; font-weight: 900; }
+    .operator-banner-stats span { font-size: 0.75rem; color: rgba(255,255,255,0.65); }
+
+    @media (max-width: 640px) {
+      .operator-banner { flex-wrap: wrap; padding: 20px; gap: 16px; }
+      .operator-banner-stats { margin-left: 0; gap: 16px; }
+      .operator-tabs { gap: 6px; }
+      .op-tab { padding: 6px 12px; font-size: 0.82rem; }
+    }
+  </style>
 </head>
 <body>
   <div id="header"></div>
@@ -13,17 +53,22 @@
   <section class="hero" style="padding: 48px 0 60px;">
     <div class="container">
       <h1>크루즈 선박</h1>
-      <p>MSC Cruises & Norwegian Cruise Line — 총 47척의 선박을 만나보세요</p>
+      <p id="heroSub">9개 선사 · 총 167척의 선박을 만나보세요</p>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" style="padding-top:32px">
     <div class="container">
-      <div style="display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap">
-        <button class="btn btn-navy btn-sm" onclick="filterShips('')" id="btn-all">전체</button>
-        <button class="btn btn-outline btn-sm" style="color:var(--navy);border-color:var(--gray-300)" onclick="filterShips('MSC')" id="btn-msc">MSC Cruises</button>
-        <button class="btn btn-outline btn-sm" style="color:var(--navy);border-color:var(--gray-300)" onclick="filterShips('NCL')" id="btn-ncl">Norwegian Cruise Line</button>
+
+      <!-- 선사 탭 -->
+      <div class="operator-tabs" id="operatorTabs">
+        <!-- JS로 렌더 -->
       </div>
+
+      <!-- 선사 소개 배너 -->
+      <div class="operator-banner" id="operatorBanner"></div>
+
+      <!-- 선박 그리드 -->
       <div id="shipGrid" class="ship-grid">
         <div class="loading"><div class="loading-spinner"></div><p>선박 정보를 불러오는 중...</p></div>
       </div>
@@ -41,50 +86,138 @@
     document.getElementById('footer').innerHTML = Components.footer();
     document.getElementById('ctaSection').innerHTML = Components.ctaSection();
 
+    // ── 선사 메타데이터 ──
+    const OPERATORS = [
+      {
+        short: 'MSC', name: 'MSC Cruises', nameKo: 'MSC 크루즈',
+        logo: 'assets/images/logos/msc.png',
+        desc: 'MSC 크루즈는 세계 최대의 개인 소유 크루즈 선사로, 총 25척의 선박을 보유하고 있습니다. 지중해, 아시아, 카리브해 등 전 세계 150개 이상의 항구를 운항하며, 이탈리아 장인 정신과 현대적인 럭셔리를 결합한 독특한 크루즈 경험을 제공합니다.',
+      },
+      {
+        short: 'RCI', name: 'Royal Caribbean International', nameKo: '로얄 캐리비안',
+        logo: 'assets/images/logos/royal-caribbean.svg',
+        desc: '로얄 캐리비안 인터내셔널은 세계 최대의 크루즈 선사 중 하나로, 아이콘 오브 더 시즈 등 세계 최대 크루즈를 포함한 30척의 혁신적인 선박을 운영합니다. 워터파크, 암벽등반, 아이스링크 등 선박 위의 리조트 경험을 제공합니다.',
+      },
+      {
+        short: 'Carnival', name: 'Carnival Cruise Line', nameKo: '카니발 크루즈',
+        logo: 'assets/images/logos/carnival.svg',
+        desc: '카니발 크루즈는 미국 최대의 크루즈 브랜드로 "Fun Ship"이라는 슬로건 아래 31척의 선박을 운영합니다. 활기차고 즐거운 분위기, 합리적인 가격, 다양한 엔터테인먼트로 가족 여행객과 젊은 층에게 인기 있습니다.',
+      },
+      {
+        short: 'NCL', name: 'Norwegian Cruise Line', nameKo: '노르웨이전 크루즈',
+        logo: 'assets/images/logos/ncl.jpg',
+        desc: '노르웨이전 크루즈는 "Freestyle Cruising"의 선구자로, 정해진 식사 시간 없이 자유롭게 즐기는 크루즈 문화를 만들었습니다. 22척의 선박으로 카리브해, 알래스카, 유럽, 아시아 등을 운항하며 개성 있는 레스토랑과 엔터테인먼트를 자랑합니다.',
+      },
+      {
+        short: 'Princess', name: 'Princess Cruises', nameKo: '프린세스 크루즈',
+        logo: 'assets/images/logos/princess.png',
+        desc: '프린세스 크루즈는 TV 드라마 "러브보트"의 배경으로 유명한 프리미엄 크루즈 선사입니다. 17척의 선박으로 알래스카, 북유럽, 지중해, 아시아 등을 운항하며, 세련된 서비스와 다양한 항로 선택이 강점입니다.',
+      },
+      {
+        short: 'Celebrity', name: 'Celebrity Cruises', nameKo: '셀러브리티 크루즈',
+        logo: 'assets/images/logos/celebrity.svg',
+        desc: '셀러브리티 크루즈는 로얄 캐리비안 그룹의 프리미엄 브랜드로, 현대적인 럭셔리를 추구합니다. Edge 클래스 신조선을 포함한 선박들은 현대 미술 컬렉션, 세계 각국의 정통 레스토랑, 스파 등을 갖춘 떠다니는 예술 작품이라 불립니다.',
+      },
+      {
+        short: 'Oceania', name: 'Oceania Cruises', nameKo: '오세아니아 크루즈',
+        logo: 'assets/images/logos/oceania.svg',
+        desc: '오세아니아 크루즈는 프리미엄 세그먼트의 선사로 "세계 최고의 요리"를 핵심 가치로 내세웁니다. 9척의 중형 선박으로 독특한 기항지와 미식 여행을 제공하며, 요리 전문가 자크 페팽이 메뉴를 감수합니다.',
+      },
+      {
+        short: 'RSSC', name: 'Regent Seven Seas Cruises', nameKo: '리젠트 세븐 시즈',
+        logo: 'assets/images/logos/regent.png',
+        desc: '리젠트 세븐 시즈는 "All-Inclusive Luxury"를 표방하는 최고급 크루즈 선사입니다. 7척의 소형 럭셔리 선박으로 전 세계 희귀 기항지를 방문하며, 비즈니스석 항공, 육상 투어, 주류 등 모든 것이 포함된 올인클루시브 패키지를 제공합니다.',
+      },
+      {
+        short: 'Explora', name: 'Explora Journeys', nameKo: '엑스플로라 저니스',
+        logo: '',
+        desc: '엑스플로라 저니스는 MSC 그룹의 럭셔리 크루즈 브랜드로 2023년 출범했습니다. 5척의 소형 럭셔리 선박을 통해 세계 각지의 독보적인 여행 경험을 제공하며, 개방형 갑판, 고급 레스토랑, 프라이빗 풀을 갖춘 현대적인 디자인이 특징입니다.',
+      },
+    ];
+
     let allShips = [];
+    let currentFilter = 'MSC';
 
     async function loadShips() {
       const grid = document.getElementById('shipGrid');
       try {
         allShips = await API.loadLocalShips();
-        renderShips('');
+        renderTabs();
+        renderShips('MSC');
       } catch (e) {
         grid.innerHTML = '<div class="empty-state"><span class="emoji">⚠️</span><p>선박 정보를 불러올 수 없습니다</p></div>';
       }
     }
 
+    function renderTabs() {
+      // 선사별 선박 수 집계
+      const counts = {};
+      allShips.forEach(s => { counts[s.operatorShort] = (counts[s.operatorShort] || 0) + 1; });
+
+      const tabs = document.getElementById('operatorTabs');
+      tabs.innerHTML = OPERATORS.map(op => {
+        const cnt = counts[op.short] || 0;
+        if (!cnt) return '';
+        return `<button class="op-tab${op.short === currentFilter ? ' active' : ''}"
+          onclick="filterShips('${op.short}')" id="tab-${op.short}">
+          ${op.logo ? `<img src="${op.logo}" alt="${op.nameKo}" onerror="this.style.display='none'">` : ''}
+          <span>${op.nameKo}</span>
+          <span class="op-count">${cnt}척</span>
+        </button>`;
+      }).join('');
+    }
+
+    function renderBanner(filter) {
+      const op = OPERATORS.find(o => o.short === filter);
+      if (!op) return;
+      const counts = {};
+      allShips.forEach(s => { counts[s.operatorShort] = (counts[s.operatorShort] || 0) + 1; });
+      const cnt = counts[filter] || 0;
+      const cruiseCount = allShips.filter(s => s.operatorShort === filter).reduce((sum, s) => sum + (s.cruiseCount || 0), 0);
+
+      document.getElementById('operatorBanner').innerHTML = `
+        ${op.logo ? `<img src="${op.logo}" alt="${op.nameKo}" onerror="this.style.display='none'">` : `<div style="font-size:2rem">🚢</div>`}
+        <div class="operator-banner-text">
+          <h2>${op.nameKo} <span style="font-size:0.85rem;font-weight:400;opacity:.7">${op.name}</span></h2>
+          <p>${op.desc}</p>
+        </div>
+        <div class="operator-banner-stats">
+          <div><strong>${cnt}</strong><span>척 보유</span></div>
+          <div><strong>${cruiseCount.toLocaleString()}</strong><span>개 크루즈</span></div>
+        </div>`;
+    }
+
     function renderShips(filter) {
+      currentFilter = filter;
       const grid = document.getElementById('shipGrid');
       const filtered = filter ? allShips.filter(s => s.operatorShort === filter) : allShips;
 
       grid.innerHTML = filtered.map(s => `
         <div class="ship-card" onclick="location.href='ship-detail.html?slug=${s.slug}'">
           <div class="ship-card-img">
-            <img src="${s.coverImage}" alt="${s.title}" loading="lazy" onerror="this.parentElement.innerHTML='<div style=\\'height:180px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:var(--gray-100)\\'>🚢</div>'">
+            <img src="${s.coverImage}" alt="${s.title}" loading="lazy"
+              onerror="this.parentElement.innerHTML='<div style=\\'height:180px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:var(--gray-100)\\'>🚢</div>'">
           </div>
           <div class="ship-card-body">
             <h3>${s.title}</h3>
-            <div class="ship-class">${s.operator} · ${s.shipClass}</div>
+            <div class="ship-class">${Translations.operatorName(s.operator)} · ${s.shipClass || '-'}</div>
             <div class="ship-card-specs">
               <div class="spec">취항 <strong>${s.launchYear || '-'}</strong></div>
               <div class="spec">정원 <strong>${s.capacity ? s.capacity.toLocaleString() : '-'}</strong></div>
               <div class="spec">데크 <strong>${s.deckCount || '-'}개</strong></div>
               <div class="spec">톤수 <strong>${s.grossTonnage ? (s.grossTonnage/1000).toFixed(0) + 'K' : '-'}</strong></div>
             </div>
-            <div style="margin-top:8px;font-size:0.85rem;color:var(--orange)">🚢 ${s.cruiseCount}개 크루즈</div>
+            <div style="margin-top:8px;font-size:0.85rem;color:var(--orange)">🚢 ${s.cruiseCount || 0}개 크루즈</div>
           </div>
         </div>`).join('');
 
-      document.querySelectorAll('[id^="btn-"]').forEach(b => {
-        b.className = 'btn btn-sm ' + (
-          (filter === '' && b.id === 'btn-all') ||
-          (filter === 'MSC' && b.id === 'btn-msc') ||
-          (filter === 'NCL' && b.id === 'btn-ncl')
-            ? 'btn-navy' : 'btn-outline'
-        );
-        if (!b.classList.contains('btn-navy')) b.style.cssText = 'color:var(--navy);border-color:var(--gray-300)';
-        else b.style.cssText = '';
+      // 탭 active 상태 업데이트
+      document.querySelectorAll('.op-tab').forEach(b => {
+        const isActive = b.id === `tab-${filter}`;
+        b.classList.toggle('active', isActive);
       });
+
+      renderBanner(filter);
     }
 
     function filterShips(filter) { renderShips(filter); }
