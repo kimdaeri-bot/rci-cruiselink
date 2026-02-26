@@ -947,9 +947,14 @@ function parsePNR() {
   let msg = [];
   const pnrM = raw.match(/\b([A-Z0-9]{6})\s*$/m);
   if (pnrM) { document.getElementById('pnrRef').value = pnrM[1]; msg.push('✓ PNR: '+pnrM[1]); }
-  const nmM = raw.match(/NM:(\d+)/);
-  const bkdM = raw.match(/BKD:(\d+)/);
-  const nm = nmM ? parseInt(nmM[1]) : (bkdM ? parseInt(bkdM[1]) : 0);
+  // 인원수 파싱 — NM30 / NM:30 / BKD:30 / BKD30 / HK30 순으로 시도
+  const nmM   = raw.match(/\bNM:?\s*(\d+)/i);
+  const bkdM  = raw.match(/\bBKD:?\s*(\d+)/i);
+  const hkM   = raw.match(/\bHK(\d+)\b/);
+  const nm = nmM ? parseInt(nmM[1])
+           : bkdM ? parseInt(bkdM[1])
+           : hkM  ? parseInt(hkM[1])
+           : 0;
   if (nm > 0) { document.getElementById('paxCount').value = nm; msg.push('✓ 인원: '+nm+'명'); }
   const fltMatches = [...raw.matchAll(/SM\s+(\d+)\s+([A-Z]+)\s+(\d+[A-Z]+\d*)\s+\d+\s+([A-Z]+)([A-Z]{3})/g)];
   if (fltMatches.length >= 1) {
@@ -980,6 +985,11 @@ function parsePNR() {
       document.getElementById('paxListText').value = parsedPaxList.join('\n');
       msg.push(`✓ 승객: ${parsedPaxList.length}명 파싱 완료 (폴백 패턴)`);
     }
+  }
+  // 인원수 미파싱 시 → 실제 명단 수로 보정
+  if (nm === 0 && parsedPaxList.length > 0) {
+    document.getElementById('paxCount').value = parsedPaxList.length;
+    msg.push(`✓ 인원 자동보정: ${parsedPaxList.length}명 (명단 기준)`);
   }
   const res = document.getElementById('parseResult');
   res.style.display = 'block';
