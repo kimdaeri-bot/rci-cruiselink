@@ -1,1 +1,2440 @@
-[{"ref":"REGENTEXP260228","shipSlug":"seven-seas-explorer","shipTitle":"Seven Seas Explorer","operator":"Regent Seven Seas Cruises","operatorShort":"RSSC","dateFrom":"2026-02-28","nights":14,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Tokyo","nameKo":"도쿄"},"portRoute":"홍콩 → Cruising the South China Sea → 지룽 → 이시가키 → 상하이 → Cruising the East China Sea → 부산 → 나가사키 → Cruising the Pacific Ocean → 오사카 → Nagoya → 도쿄","countriesKo":["Hong Kong","대만","일본","중국","한국"],"priceInside":0,"priceOutside":0,"priceBalcony":0,"priceSuite":0,"currency":"USD","image":"https://assets.widgety.co.uk/2025/10/29/13/35/00/2aa74293-ec5f-4974-9d5d-c5c58e76722b/Regent Seven Seas Cruises Seven Seas Explorer Exterior.jpg","title":"일본 14박 크루즈","hashtags":["#일본크루즈","#리젠트세븐시즈","#SevenSeasExplorer","#홍콩","#Cruising the South China Sea"]},{"ref":"OCEANIAREG260307","shipSlug":"regatta","shipTitle":"Oceania Regatta","operator":"Oceania Cruises","operatorShort":"Oceania","dateFrom":"2026-03-07","nights":15,"destination":"japan","startsAt":{"name":"Shanghai","nameKo":"상하이"},"endsAt":{"name":"Tokyo","nameKo":"도쿄"},"portRoute":"상하이 → 제주도 → At Sea → 지룽 → 이시가키 → Naha, Okinawa → 나가사키 → 부산 → Hakata → 고치 → 고베 → 시미즈 → 도쿄","countriesKo":["중국","한국","대만","일본"],"priceInside":3879,"priceOutside":4299,"priceBalcony":6009,"priceSuite":9659,"currency":"USD","image":"https://assets.widgety.co.uk/2024/11/07/08/47/56/a96490be-7759-4251-b209-d6df3849ce6b/Oceania Cruises, R-Class, Regatta Exterior.jpg","title":"일본 15박 크루즈","hashtags":["#일본크루즈","#오세아니아크루즈","#OceaniaRegatta","#상하이","#제주도"]},{"ref":"RCISC07I191-210326","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-03-21","nights":7,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 오사카 → 요코하마","countriesKo":["중국","일본"],"priceInside":0,"priceOutside":0,"priceBalcony":1791,"priceSuite":2814,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 7박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#오사카"]},{"ref":"MSCBE20260328KEETYO","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2026-03-28","nights":5,"destination":"japan","startsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"endsAt":{"name":"Tokyo","nameKo":"도쿄"},"portRoute":"지룽 → 도쿄","countriesKo":["대만","일본"],"priceInside":0,"priceOutside":319,"priceBalcony":395,"priceSuite":1025,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"대만·일본 5박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#지룽","#도쿄"]},{"ref":"RCISC05I963-280326","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-03-28","nights":5,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → Kumamoto → 가고시마","countriesKo":["중국","일본"],"priceInside":588,"priceOutside":665,"priceBalcony":666,"priceSuite":1065,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#Kumamoto"]},{"ref":"RCISC04I823-020426","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-04-02","nights":4,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 나가사키","countriesKo":["중국","일본"],"priceInside":400,"priceOutside":527,"priceBalcony":583,"priceSuite":872,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 4박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#나가사키"]},{"ref":"RCISC08I086-180426","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-04-18","nights":8,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → Seogwipo → 마이즈루 → Niigata → 하코다테","countriesKo":["중국","한국","일본"],"priceInside":1350,"priceOutside":1530,"priceBalcony":1584,"priceSuite":2435,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·한국·일본 8박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#Seogwipo"]},{"ref":"RCISC05I951-260426","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-04-26","nights":5,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 후쿠오카 → Kumamoto","countriesKo":["중국","일본"],"priceInside":652,"priceOutside":723,"priceBalcony":731,"priceSuite":1141,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#후쿠오카"]},{"ref":"RCISC08I088-220526","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-05-22","nights":8,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 도쿄 → 시미즈 → 오사카","countriesKo":["중국","일본"],"priceInside":1131,"priceOutside":1266,"priceBalcony":1313,"priceSuite":2762,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 8박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#도쿄"]},{"ref":"RCISC08I090-080826","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-08-08","nights":8,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 오사카 → Nagoya → 도쿄","countriesKo":["중국","일본"],"priceInside":1273,"priceOutside":1444,"priceBalcony":1533,"priceSuite":2781,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 8박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#오사카"]},{"ref":"RCISC05J028-160826","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-08-16","nights":5,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 후쿠오카 → 부산","countriesKo":["중국","일본","한국"],"priceInside":786,"priceOutside":873,"priceBalcony":925,"priceSuite":1262,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본·한국 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#후쿠오카"]},{"ref":"RCISC08I091-110926","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-09-11","nights":8,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 사카이미나토 → 마이즈루 → Niigata → 하코다테","countriesKo":["중국","일본"],"priceInside":848,"priceOutside":1028,"priceBalcony":1114,"priceSuite":1729,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 8박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#사카이미나토"]},{"ref":"REGENTEXP260930","shipSlug":"seven-seas-explorer","shipTitle":"Seven Seas Explorer","operator":"Regent Seven Seas Cruises","operatorShort":"RSSC","dateFrom":"2026-09-30","nights":20,"destination":"japan","startsAt":{"name":"Seattle, Washington","nameKo":"Seattle, Washington"},"endsAt":{"name":"Tokyo","nameKo":"도쿄"},"portRoute":"Seattle, Washington → Cruising Inside Passage, U.S.A → Ketchikan, Alaska → Juneau, Alaska → Cruising by Hubbard Glacier, Alaska → Whittier → Cruising the Pacific Ocean → Crossing the International Date Line → Kushiro → 하코다테 → Muroran → Miyako, Iwate → Hitachinaka → 도쿄","countriesKo":["미국","일본"],"priceInside":0,"priceOutside":0,"priceBalcony":0,"priceSuite":8037,"currency":"USD","image":"https://assets.widgety.co.uk/2025/10/29/13/35/00/2aa74293-ec5f-4974-9d5d-c5c58e76722b/Regent Seven Seas Cruises Seven Seas Explorer Exterior.jpg","title":"미국·일본 20박 크루즈","hashtags":["#일본크루즈","#리젠트세븐시즈","#SevenSeasExplorer","#Seattle, Washington","#Cruising Inside Passage, U.S.A"]},{"ref":"MSCBE20261004SHATYO","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2026-10-04","nights":3,"destination":"japan","startsAt":{"name":"Shanghai","nameKo":"상하이"},"endsAt":{"name":"Tokyo","nameKo":"도쿄"},"portRoute":"상하이 → 도쿄","countriesKo":["중국","일본"],"priceInside":229,"priceOutside":279,"priceBalcony":319,"priceSuite":699,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"중국·일본 3박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#상하이","#도쿄"]},{"ref":"RCISC04I857-201026","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-10-20","nights":4,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → Okinawa","countriesKo":["중국","일본"],"priceInside":479,"priceOutside":574,"priceBalcony":615,"priceSuite":845,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 4박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#Okinawa"]},{"ref":"RCISC08I092-241026","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-10-24","nights":8,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 사카이미나토 → 마이즈루 → Niigata → 하코다테","countriesKo":["중국","일본"],"priceInside":953,"priceOutside":1074,"priceBalcony":1196,"priceSuite":2866,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 8박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#사카이미나토"]},{"ref":"RCISC05J011-061126","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-11-06","nights":5,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Hong Kong","nameKo":"홍콩"},"portRoute":"홍콩 → Okinawa","countriesKo":["Hong Kong","일본"],"priceInside":509,"priceOutside":622,"priceBalcony":674,"priceSuite":1045,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"Hong Kong·일본 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#홍콩","#Okinawa"]},{"ref":"RCISC05J012-111126","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-11-11","nights":5,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Hong Kong","nameKo":"홍콩"},"portRoute":"홍콩 → Okinawa → 이시가키","countriesKo":["Hong Kong","일본"],"priceInside":478,"priceOutside":575,"priceBalcony":657,"priceSuite":995,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"Hong Kong·일본 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#홍콩","#Okinawa"]},{"ref":"RCISC09I921-221126","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-11-22","nights":9,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Hong Kong","nameKo":"홍콩"},"portRoute":"홍콩 → 가고시마 → 나가사키 → 후쿠오카 → 부산","countriesKo":["Hong Kong","일본","한국"],"priceInside":1195,"priceOutside":1416,"priceBalcony":1417,"priceSuite":2377,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"Hong Kong·일본·한국 9박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#홍콩","#가고시마"]},{"ref":"MSCBE20261124KEEKEE","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2026-11-24","nights":5,"destination":"japan","startsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"endsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"portRoute":"지룽 → 이시가키 → 미야코지마 → Naha, Okinawa","countriesKo":["대만","일본"],"priceInside":499,"priceOutside":579,"priceBalcony":0,"priceSuite":1179,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"대만·일본 5박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#지룽","#이시가키"]},{"ref":"MSCBE20261129KEEKEE","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2026-11-29","nights":5,"destination":"japan","startsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"endsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"portRoute":"지룽 → 미야코지마 → Naha, Okinawa → 이시가키","countriesKo":["대만","일본"],"priceInside":619,"priceOutside":679,"priceBalcony":0,"priceSuite":1649,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"대만·일본 5박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#지룽","#미야코지마"]},{"ref":"RCISC05J013-011226","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-12-01","nights":5,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Hong Kong","nameKo":"홍콩"},"portRoute":"홍콩 → Okinawa → 이시가키","countriesKo":["Hong Kong","일본"],"priceInside":509,"priceOutside":622,"priceBalcony":674,"priceSuite":968,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"Hong Kong·일본 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#홍콩","#Okinawa"]},{"ref":"MSCBE20261204KEEKEE","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2026-12-04","nights":4,"destination":"japan","startsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"endsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"portRoute":"지룽 → 미야코지마 → Naha, Okinawa → 이시가키","countriesKo":["대만","일본"],"priceInside":529,"priceOutside":589,"priceBalcony":0,"priceSuite":1369,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"대만·일본 4박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#지룽","#미야코지마"]},{"ref":"RCISC05J014-061226","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-12-06","nights":5,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Hong Kong","nameKo":"홍콩"},"portRoute":"홍콩 → Okinawa → 지룽","countriesKo":["Hong Kong","일본","대만"],"priceInside":509,"priceOutside":622,"priceBalcony":674,"priceSuite":968,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"Hong Kong·일본·대만 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#홍콩","#Okinawa"]},{"ref":"MSCBE20261208KEEKEE","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2026-12-08","nights":4,"destination":"japan","startsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"endsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"portRoute":"지룽 → 미야코지마 → Naha, Okinawa → 이시가키","countriesKo":["대만","일본"],"priceInside":499,"priceOutside":549,"priceBalcony":0,"priceSuite":1339,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"대만·일본 4박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#지룽","#미야코지마"]},{"ref":"MSCBE20261212KEEKEE","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2026-12-12","nights":4,"destination":"japan","startsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"endsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"portRoute":"지룽 → 미야코지마 → Naha, Okinawa → 이시가키","countriesKo":["대만","일본"],"priceInside":539,"priceOutside":589,"priceBalcony":0,"priceSuite":1369,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"대만·일본 4박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#지룽","#미야코지마"]},{"ref":"RCISC05J015-131226","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-12-13","nights":5,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Hong Kong","nameKo":"홍콩"},"portRoute":"홍콩 → Okinawa → 이시가키","countriesKo":["Hong Kong","일본"],"priceInside":604,"priceOutside":717,"priceBalcony":768,"priceSuite":1067,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"Hong Kong·일본 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#홍콩","#Okinawa"]},{"ref":"MSCBE20261216KEEKEE","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2026-12-16","nights":4,"destination":"japan","startsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"endsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"portRoute":"지룽 → 미야코지마 → Naha, Okinawa → 이시가키","countriesKo":["대만","일본"],"priceInside":529,"priceOutside":579,"priceBalcony":0,"priceSuite":1339,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"대만·일본 4박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#지룽","#미야코지마"]},{"ref":"MSCBE20261220KEEKEE","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2026-12-20","nights":4,"destination":"japan","startsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"endsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"portRoute":"지룽 → 미야코지마 → Naha, Okinawa → 이시가키","countriesKo":["대만","일본"],"priceInside":569,"priceOutside":619,"priceBalcony":0,"priceSuite":1369,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"대만·일본 4박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#지룽","#미야코지마"]},{"ref":"RCISC09I922-201226","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-12-20","nights":9,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Hong Kong","nameKo":"홍콩"},"portRoute":"홍콩 → 후쿠오카 → 나가사키 → 가고시마 → Kumamoto","countriesKo":["Hong Kong","일본"],"priceInside":1471,"priceOutside":1635,"priceBalcony":1761,"priceSuite":3671,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"Hong Kong·일본 9박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#홍콩","#후쿠오카"]},{"ref":"MSCBE20261224KEEKEE","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2026-12-24","nights":4,"destination":"japan","startsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"endsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"portRoute":"지룽 → 미야코지마 → Naha, Okinawa → 이시가키","countriesKo":["대만","일본"],"priceInside":0,"priceOutside":0,"priceBalcony":0,"priceSuite":1419,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"대만·일본 4박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#지룽","#미야코지마"]},{"ref":"MSCBE20261228KEEKEE","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2026-12-28","nights":4,"destination":"japan","startsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"endsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"portRoute":"지룽 → 미야코지마 → Naha, Okinawa → 이시가키","countriesKo":["대만","일본"],"priceInside":679,"priceOutside":729,"priceBalcony":0,"priceSuite":1519,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"대만·일본 4박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#지룽","#미야코지마"]},{"ref":"RCISC05J016-291226","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2026-12-29","nights":5,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Hong Kong","nameKo":"홍콩"},"portRoute":"홍콩 → Okinawa","countriesKo":["Hong Kong","일본"],"priceInside":698,"priceOutside":811,"priceBalcony":862,"priceSuite":1166,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"Hong Kong·일본 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#홍콩","#Okinawa"]},{"ref":"MSCBE20270101KEEKEE","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2027-01-01","nights":4,"destination":"japan","startsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"endsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"portRoute":"지룽 → 미야코지마 → Naha, Okinawa → 이시가키","countriesKo":["대만","일본"],"priceInside":829,"priceOutside":879,"priceBalcony":0,"priceSuite":1639,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"대만·일본 4박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#지룽","#미야코지마"]},{"ref":"RCISC08I096-030127","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-01-03","nights":8,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Yokohama","nameKo":"요코하마"},"portRoute":"홍콩 → 부산 → 나가사키 → 고베 → 요코하마","countriesKo":["Hong Kong","한국","일본"],"priceInside":920,"priceOutside":1073,"priceBalcony":1195,"priceSuite":1991,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"Hong Kong·한국·일본 8박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#홍콩","#부산"]},{"ref":"MSCBE20270105KEEKEE","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2027-01-05","nights":4,"destination":"japan","startsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"endsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"portRoute":"지룽 → 미야코지마 → Naha, Okinawa → 이시가키","countriesKo":["대만","일본"],"priceInside":579,"priceOutside":629,"priceBalcony":0,"priceSuite":1339,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"대만·일본 4박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#지룽","#미야코지마"]},{"ref":"RCISC05J031-190127","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-01-19","nights":5,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Hong Kong","nameKo":"홍콩"},"portRoute":"홍콩 → Okinawa","countriesKo":["Hong Kong","일본"],"priceInside":547,"priceOutside":633,"priceBalcony":715,"priceSuite":1110,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"Hong Kong·일본 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#홍콩","#Okinawa"]},{"ref":"RCISC04I876-240127","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-01-24","nights":4,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"홍콩 → 이시가키 → Baoshan Pt","countriesKo":["Hong Kong","일본","중국"],"priceInside":361,"priceOutside":430,"priceBalcony":501,"priceSuite":824,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"Hong Kong·일본·중국 4박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#홍콩","#이시가키"]},{"ref":"RCISC05J019-280127","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-01-28","nights":5,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 후쿠오카 → Kumamoto","countriesKo":["중국","일본"],"priceInside":663,"priceOutside":749,"priceBalcony":832,"priceSuite":1232,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#후쿠오카"]},{"ref":"RCISC04I866-020227","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-02-02","nights":4,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 가고시마","countriesKo":["중국","일본"],"priceInside":728,"priceOutside":814,"priceBalcony":897,"priceSuite":1301,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 4박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#가고시마"]},{"ref":"RCISC04I867-100227","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-02-10","nights":4,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 가고시마","countriesKo":["중국","일본"],"priceInside":905,"priceOutside":974,"priceBalcony":1045,"priceSuite":1397,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 4박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#가고시마"]},{"ref":"RCINV12I202-130227","shipSlug":"navigator-of-the-seas","shipTitle":"Navigator of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-02-13","nights":12,"destination":"japan","startsAt":{"name":"Singapore","nameKo":"싱가포르"},"endsAt":{"name":"Yokohama","nameKo":"요코하마"},"portRoute":"싱가포르 → 홍콩 → 지룽 → 나가사키 → Kumamoto → 가고시마 → 요코하마","countriesKo":["싱가포르","Hong Kong","대만","일본"],"priceInside":1417,"priceOutside":1731,"priceBalcony":1911,"priceSuite":3020,"currency":"USD","image":"https://assets.widgety.co.uk/2024/07/03/06/27/48/ce0f263a-765f-48da-ac2e-35fcbb55c418/RCI Navigator of the Seas, Exterior.jpg","title":"일본 12박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#NavigatoroftheSeas","#싱가포르","#홍콩"]},{"ref":"RCISC05J023-140227","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-02-14","nights":5,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 후쿠오카 → Kumamoto","countriesKo":["중국","일본"],"priceInside":522,"priceOutside":608,"priceBalcony":690,"priceSuite":1083,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#후쿠오카"]},{"ref":"RCISC08I093-190227","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-02-19","nights":8,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 오사카 → 도쿄","countriesKo":["중국","일본"],"priceInside":882,"priceOutside":1028,"priceBalcony":1147,"priceSuite":2027,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 8박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#오사카"]},{"ref":"NCLJAD-20270222-11-HKG-TOK","shipSlug":"norwegian-jade-ship","shipTitle":"Norwegian Jade","operator":"Norwegian Cruise Line","operatorShort":"NCL","dateFrom":"2027-02-22","nights":11,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Tokyo","nameKo":"도쿄"},"portRoute":"홍콩 → Kaohsiung → 지룽 → 미야코지마 → 나가사키 → 가고시마 → 히로시마 → 고치 → Kyoto → 시미즈 → 도쿄","countriesKo":["Hong Kong","대만","일본"],"priceInside":1895,"priceOutside":2375,"priceBalcony":3280,"priceSuite":3475,"currency":"USD","image":"https://assets.widgety.co.uk/2025/12/05/15/14/57/63c00f94-4bb5-4613-bb65-40346384484f/Norwegian Jade - Exterior 1, ©Danny Lehman.jpg","title":"Hong Kong·대만·일본 11박 크루즈","hashtags":["#일본크루즈","#노르웨이전크루즈","#NorwegianJade","#홍콩","#Kaohsiung"]},{"ref":"OCEANIANAU270225","shipSlug":"nautica","shipTitle":"Oceania Nautica","operator":"Oceania Cruises","operatorShort":"Oceania","dateFrom":"2027-02-25","nights":14,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Tokyo","nameKo":"도쿄"},"portRoute":"홍콩 → At Sea → 지룽 → 이시가키 → Naha, Okinawa → 제주도 → 부산 → 나가사키 → 가고시마 → 고치 → Tokushima → 고베 → 도쿄","countriesKo":["Hong Kong","대만","일본","한국"],"priceInside":2984,"priceOutside":3248,"priceBalcony":4264,"priceSuite":5848,"currency":"USD","image":"https://assets.widgety.co.uk/2024/11/06/10/56/04/15bf814a-7f88-46aa-951c-8aa18dbb5b91/Oceania Cruises, R-Class, Nautica Exterior.jpg","title":"일본 14박 크루즈","hashtags":["#일본크루즈","#오세아니아크루즈","#OceaniaNautica","#홍콩","#At Sea"]},{"ref":"RCISC04I863-160327","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-03-16","nights":4,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 가고시마","countriesKo":["중국","일본"],"priceInside":460,"priceOutside":529,"priceBalcony":600,"priceSuite":928,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 4박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#가고시마"]},{"ref":"MSCBE20270323SHATYO","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2027-03-23","nights":4,"destination":"japan","startsAt":{"name":"Shanghai","nameKo":"상하이"},"endsAt":{"name":"Tokyo","nameKo":"도쿄"},"portRoute":"상하이 → 가고시마 → 도쿄","countriesKo":["중국","일본"],"priceInside":299,"priceOutside":319,"priceBalcony":449,"priceSuite":749,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"중국·일본 4박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#상하이","#가고시마"]},{"ref":"RCISC05J020-240327","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-03-24","nights":5,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 나가사키 → 가고시마","countriesKo":["중국","일본"],"priceInside":568,"priceOutside":655,"priceBalcony":737,"priceSuite":1184,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#나가사키"]},{"ref":"RCISC08I095-290327","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-03-29","nights":8,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 고베 → 도쿄","countriesKo":["중국","일본"],"priceInside":869,"priceOutside":1008,"priceBalcony":1138,"priceSuite":2170,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 8박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#고베"]},{"ref":"OCEANIAVIS270329","shipSlug":"vista","shipTitle":"Oceania Vista","operator":"Oceania Cruises","operatorShort":"Oceania","dateFrom":"2027-03-29","nights":13,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Yokohama","nameKo":"요코하마"},"portRoute":"홍콩 → At Sea → 상하이 → 인천 → 나가사키 → 히로시마 → 고치 → 고베 → 시미즈 → 요코하마","countriesKo":["Hong Kong","중국","한국","일본"],"priceInside":0,"priceOutside":0,"priceBalcony":4729,"priceSuite":7319,"currency":"USD","image":"https://assets.widgety.co.uk/2023/08/22/08/14/10/e9e89b49-4a23-42da-900f-60e373d4469d/Oceania Cruises Vista Exterior.jpg","title":"일본 13박 크루즈","hashtags":["#일본크루즈","#오세아니아크루즈","#OceaniaVista","#홍콩","#At Sea"]},{"ref":"RCISC04I857-060427","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-04-06","nights":4,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → Okinawa","countriesKo":["중국","일본"],"priceInside":505,"priceOutside":575,"priceBalcony":645,"priceSuite":975,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 4박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#Okinawa"]},{"ref":"OCEANIARVA270416","shipSlug":"riviera","shipTitle":"Oceania Riviera","operator":"Oceania Cruises","operatorShort":"Oceania","dateFrom":"2027-04-16","nights":11,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Yokohama","nameKo":"요코하마"},"portRoute":"홍콩 → At Sea → 지룽 → 부산 → 나가사키 → Beppu, Kyushu Island, Oita → 오사카 → Nagoya → 요코하마","countriesKo":["Hong Kong","대만","한국","일본"],"priceInside":2969,"priceOutside":3559,"priceBalcony":3969,"priceSuite":6039,"currency":"USD","image":"https://assets.widgety.co.uk/2022/06/17/11/40/56/22a53757-86e1-42ed-997e-d4406e7a2733/Oceania Cruises Riviera Resized.jpg","title":"일본 11박 크루즈","hashtags":["#일본크루즈","#오세아니아크루즈","#OceaniaRiviera","#홍콩","#At Sea"]},{"ref":"REGENTNAV270418","shipSlug":"seven-seas-navigator","shipTitle":"Seven Seas Navigator","operator":"Regent Seven Seas Cruises","operatorShort":"RSSC","dateFrom":"2027-04-18","nights":11,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Tokyo","nameKo":"도쿄"},"portRoute":"홍콩 → Cruising the South China Sea → Kaohsiung → Cruising the Philippine Sea → 이시가키 → Naha, Okinawa → Cruising the East China Sea → 가고시마 → 시미즈 → 도쿄","countriesKo":["Hong Kong","대만","일본"],"priceInside":0,"priceOutside":0,"priceBalcony":0,"priceSuite":3919,"currency":"USD","image":"https://assets.widgety.co.uk/2025/03/18/15/20/28/2880e378-d3dc-44ed-b5db-071acc67ad97/RSSC, Seven Seas Navigator, Exterior.jpg","title":"Hong Kong·대만·일본 11박 크루즈","hashtags":["#일본크루즈","#리젠트세븐시즈","#SevenSeasNavigator","#홍콩","#Cruising the South China Sea"]},{"ref":"RCISC05J021-180427","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-04-18","nights":5,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 나가사키 → 가고시마","countriesKo":["중국","일본"],"priceInside":568,"priceOutside":655,"priceBalcony":737,"priceSuite":1174,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 5박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#나가사키"]},{"ref":"RCISC08I094-230427","shipSlug":"spectrum-of-the-seas","shipTitle":"Spectrum of the Seas","operator":"Royal Caribbean International","operatorShort":"RCI","dateFrom":"2027-04-23","nights":8,"destination":"japan","startsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"endsAt":{"name":"Baoshan Pt","nameKo":"Baoshan Pt"},"portRoute":"Baoshan Pt → 오사카 → 도쿄","countriesKo":["중국","일본"],"priceInside":869,"priceOutside":1042,"priceBalcony":1148,"priceSuite":2170,"currency":"USD","image":"https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI Spectrum of the Seas.jpg","title":"중국·일본 8박 크루즈","hashtags":["#일본크루즈","#로얄캐리비안","#SpectrumoftheSeas","#Baoshan Pt","#오사카"]},{"ref":"MSCBE20271008SHATYO","shipSlug":"msc-bellissima","shipTitle":"MSC Bellissima","operator":"MSC Cruises","operatorShort":"MSC","dateFrom":"2027-10-08","nights":6,"destination":"japan","startsAt":{"name":"Shanghai","nameKo":"상하이"},"endsAt":{"name":"Tokyo","nameKo":"도쿄"},"portRoute":"상하이 → 가고시마 → 고치 → 도쿄","countriesKo":["중국","일본"],"priceInside":419,"priceOutside":439,"priceBalcony":629,"priceSuite":1079,"currency":"USD","image":"https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg","title":"중국·일본 6박 크루즈","hashtags":["#일본크루즈","#MSC크루즈","#MSCBellissima","#상하이","#가고시마"]},{"ref":"EXPLORAEL20280116HKGSGH","shipSlug":"explora-iii","shipTitle":"EXPLORA III","operator":"Explora Journeys","operatorShort":"Explora","dateFrom":"2028-01-16","nights":9,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Shanghai","nameKo":"상하이"},"portRoute":"홍콩 → At Sea → 이시가키 → Naha, Okinawa → Naze, Amani Oshima → 가고시마 → 나가사키 → 부산 → 상하이","countriesKo":["Hong Kong","일본","한국","중국"],"priceInside":0,"priceOutside":0,"priceBalcony":0,"priceSuite":5165,"currency":"USD","image":"https://assets.widgety.co.uk/2025/01/02/12/22/07/974008bc-6388-4ee4-82b3-04349e2e13e4/Explora Journeys EXPLORA III Exterior.jpg","title":"일본 9박 크루즈","hashtags":["#일본크루즈","#Explora크루즈","#EXPLORAIII","#홍콩","#At Sea"]},{"ref":"EXPLORAEL20280125SGHTYO","shipSlug":"explora-iii","shipTitle":"EXPLORA III","operator":"Explora Journeys","operatorShort":"Explora","dateFrom":"2028-01-25","nights":8,"destination":"japan","startsAt":{"name":"Shanghai","nameKo":"상하이"},"endsAt":{"name":"Tokyo","nameKo":"도쿄"},"portRoute":"상하이 → At Sea → 미야코지마 → Naha, Okinawa → Naze, Amani Oshima → Nagoya → 도쿄","countriesKo":["중국","일본"],"priceInside":0,"priceOutside":0,"priceBalcony":0,"priceSuite":4595,"currency":"USD","image":"https://assets.widgety.co.uk/2025/01/02/12/22/07/974008bc-6388-4ee4-82b3-04349e2e13e4/Explora Journeys EXPLORA III Exterior.jpg","title":"중국·일본 8박 크루즈","hashtags":["#일본크루즈","#Explora크루즈","#EXPLORAIII","#상하이","#At Sea"]},{"ref":"REGENTEXP280211","shipSlug":"seven-seas-explorer","shipTitle":"Seven Seas Explorer","operator":"Regent Seven Seas Cruises","operatorShort":"RSSC","dateFrom":"2028-02-11","nights":10,"destination":"japan","startsAt":{"name":"Keelung (Chilung)","nameKo":"지룽"},"endsAt":{"name":"Incheon","nameKo":"인천"},"portRoute":"지룽 → 이시가키 → 미야코지마 → Cruising the East China Sea → 상하이 → 가고시마 → 나가사키 → Cruising the Yellow Sea → 인천","countriesKo":["대만","일본","중국","한국"],"priceInside":0,"priceOutside":0,"priceBalcony":0,"priceSuite":6699,"currency":"USD","image":"https://assets.widgety.co.uk/2025/10/29/13/35/00/2aa74293-ec5f-4974-9d5d-c5c58e76722b/Regent Seven Seas Cruises Seven Seas Explorer Exterior.jpg","title":"일본 10박 크루즈","hashtags":["#일본크루즈","#리젠트세븐시즈","#SevenSeasExplorer","#지룽","#이시가키"]},{"ref":"CELEBSL13I044-190228","shipSlug":"celebrity-solstice","shipTitle":"Celebrity Solstice","operator":"Celebrity Cruises","operatorShort":"Celebrity","dateFrom":"2028-02-19","nights":13,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Yokohama","nameKo":"요코하마"},"portRoute":"홍콩 → 지룽 → Seogwipo → 나가사키 → 후쿠오카 → 오사카 → 고치 → 시미즈 → 요코하마","countriesKo":["Hong Kong","대만","한국","일본"],"priceInside":1374,"priceOutside":1838,"priceBalcony":2082,"priceSuite":3763,"currency":"USD","image":"https://assets.widgety.co.uk/2025/09/11/17/38/19/8d9b2ef2-456b-4c4e-9478-4b445314f541/Celebrity Solstice - Exterior 1, ©CEL.jpg","title":"일본 13박 크루즈","hashtags":["#일본크루즈","#셀러브리티크루즈","#CelebritySolstice","#홍콩","#지룽"]},{"ref":"OCEANIARVA280219","shipSlug":"riviera","shipTitle":"Oceania Riviera","operator":"Oceania Cruises","operatorShort":"Oceania","dateFrom":"2028-02-19","nights":12,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Yokohama","nameKo":"요코하마"},"portRoute":"홍콩 → At Sea → 지룽 → 이시가키 → Hirara → 가고시마 → Beppu, Kyushu Island, Oita → 히로시마 → 고치 → 고베 → 시미즈 → 요코하마","countriesKo":["Hong Kong","대만","일본"],"priceInside":3279,"priceOutside":4109,"priceBalcony":4799,"priceSuite":7689,"currency":"USD","image":"https://assets.widgety.co.uk/2022/06/17/11/40/56/22a53757-86e1-42ed-997e-d4406e7a2733/Oceania Cruises Riviera Resized.jpg","title":"Hong Kong·대만·일본 12박 크루즈","hashtags":["#일본크루즈","#오세아니아크루즈","#OceaniaRiviera","#홍콩","#At Sea"]},{"ref":"NCLJAD-20280222-11-HKG-TOK","shipSlug":"norwegian-jade-ship","shipTitle":"Norwegian Jade","operator":"Norwegian Cruise Line","operatorShort":"NCL","dateFrom":"2028-02-22","nights":11,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Tokyo","nameKo":"도쿄"},"portRoute":"홍콩 → Kaohsiung → 지룽 → 미야코지마 → 나가사키 → Hakata → 히로시마 → 고치 → Kyoto → 시미즈 → 도쿄","countriesKo":["Hong Kong","대만","일본"],"priceInside":1560,"priceOutside":1865,"priceBalcony":3020,"priceSuite":3405,"currency":"USD","image":"https://assets.widgety.co.uk/2025/12/05/15/14/57/63c00f94-4bb5-4613-bb65-40346384484f/Norwegian Jade - Exterior 1, ©Danny Lehman.jpg","title":"Hong Kong·대만·일본 11박 크루즈","hashtags":["#일본크루즈","#노르웨이전크루즈","#NorwegianJade","#홍콩","#Kaohsiung"]},{"ref":"EXPLORAEL20280312HKGTYO","shipSlug":"explora-iii","shipTitle":"EXPLORA III","operator":"Explora Journeys","operatorShort":"Explora","dateFrom":"2028-03-12","nights":9,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Tokyo","nameKo":"도쿄"},"portRoute":"홍콩 → At Sea → 상하이 → Shimonoseki → 고치 → 오사카 → Toba → 도쿄","countriesKo":["Hong Kong","중국","일본"],"priceInside":0,"priceOutside":0,"priceBalcony":0,"priceSuite":5375,"currency":"USD","image":"https://assets.widgety.co.uk/2025/01/02/12/22/07/974008bc-6388-4ee4-82b3-04349e2e13e4/Explora Journeys EXPLORA III Exterior.jpg","title":"Hong Kong·중국·일본 9박 크루즈","hashtags":["#일본크루즈","#Explora크루즈","#EXPLORAIII","#홍콩","#At Sea"]},{"ref":"REGENTSPL280406","shipSlug":"seven-seas-splendor","shipTitle":"Seven Seas Splendor","operator":"Regent Seven Seas Cruises","operatorShort":"RSSC","dateFrom":"2028-04-06","nights":10,"destination":"japan","startsAt":{"name":"Hong Kong","nameKo":"홍콩"},"endsAt":{"name":"Incheon","nameKo":"인천"},"portRoute":"홍콩 → Cruising the Taiwan Strait → 지룽 → 이시가키 → 미야코지마 → Cruising the East China Sea → 상하이 → Cruising the Yellow Sea → 인천","countriesKo":["Hong Kong","대만","일본","중국","한국"],"priceInside":0,"priceOutside":0,"priceBalcony":0,"priceSuite":5749,"currency":"USD","image":"https://assets.widgety.co.uk/2025/03/19/11/37/13/7ce193c0-ac82-4826-b83a-6cc47f77c901/RSSC, Seven Seas Splendor, Exterior.jpg","title":"일본 10박 크루즈","hashtags":["#일본크루즈","#리젠트세븐시즈","#SevenSeasSplendor","#홍콩","#Cruising the Taiwan Strait"]}]
+[
+  {
+    "ref": "REGENTEXP260228",
+    "shipSlug": "seven-seas-explorer",
+    "shipTitle": "Seven Seas Explorer",
+    "operator": "Regent Seven Seas Cruises",
+    "operatorShort": "RSSC",
+    "dateFrom": "2026-02-28",
+    "nights": 14,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Tokyo",
+      "nameKo": "도쿄"
+    },
+    "portRoute": "홍콩 → Cruising the South China Sea → 지룽 → 이시가키 → 상하이 → Cruising the East China Sea → 부산 → 나가사키 → Cruising the Pacific Ocean → 오사카 → Nagoya → 도쿄",
+    "countriesKo": [
+      "Hong Kong",
+      "대만",
+      "일본",
+      "중국",
+      "한국"
+    ],
+    "priceInside": 0,
+    "priceOutside": 0,
+    "priceBalcony": 0,
+    "priceSuite": 0,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/10/29/13/35/00/2aa74293-ec5f-4974-9d5d-c5c58e76722b/Regent%20Seven%20Seas%20Cruises%20Seven%20Seas%20Explorer%20Exterior.jpg",
+    "title": "일본 14박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#리젠트세븐시즈",
+      "#SevenSeasExplorer",
+      "#홍콩",
+      "#Cruising the South China Sea"
+    ]
+  },
+  {
+    "ref": "OCEANIAREG260307",
+    "shipSlug": "regatta",
+    "shipTitle": "Oceania Regatta",
+    "operator": "Oceania Cruises",
+    "operatorShort": "Oceania",
+    "dateFrom": "2026-03-07",
+    "nights": 15,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Shanghai",
+      "nameKo": "상하이"
+    },
+    "endsAt": {
+      "name": "Tokyo",
+      "nameKo": "도쿄"
+    },
+    "portRoute": "상하이 → 제주도 → At Sea → 지룽 → 이시가키 → Naha, Okinawa → 나가사키 → 부산 → Hakata → 고치 → 고베 → 시미즈 → 도쿄",
+    "countriesKo": [
+      "중국",
+      "한국",
+      "대만",
+      "일본"
+    ],
+    "priceInside": 3879,
+    "priceOutside": 4299,
+    "priceBalcony": 6009,
+    "priceSuite": 9659,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/11/07/08/47/56/a96490be-7759-4251-b209-d6df3849ce6b/Oceania%20Cruises%2C%20R-Class%2C%20Regatta%20Exterior.jpg",
+    "title": "일본 15박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#오세아니아크루즈",
+      "#OceaniaRegatta",
+      "#상하이",
+      "#제주도"
+    ]
+  },
+  {
+    "ref": "RCISC07I191-210326",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-03-21",
+    "nights": 7,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 오사카 → 요코하마",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 0,
+    "priceOutside": 0,
+    "priceBalcony": 1791,
+    "priceSuite": 2814,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 7박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#오사카"
+    ]
+  },
+  {
+    "ref": "MSCBE20260328KEETYO",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2026-03-28",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "endsAt": {
+      "name": "Tokyo",
+      "nameKo": "도쿄"
+    },
+    "portRoute": "지룽 → 도쿄",
+    "countriesKo": [
+      "대만",
+      "일본"
+    ],
+    "priceInside": 0,
+    "priceOutside": 319,
+    "priceBalcony": 395,
+    "priceSuite": 1025,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "대만·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#지룽",
+      "#도쿄"
+    ]
+  },
+  {
+    "ref": "RCISC05I963-280326",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-03-28",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → Kumamoto → 가고시마",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 588,
+    "priceOutside": 665,
+    "priceBalcony": 666,
+    "priceSuite": 1065,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#Kumamoto"
+    ]
+  },
+  {
+    "ref": "RCISC04I823-020426",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-04-02",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 나가사키",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 400,
+    "priceOutside": 527,
+    "priceBalcony": 583,
+    "priceSuite": 872,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#나가사키"
+    ]
+  },
+  {
+    "ref": "RCISC08I086-180426",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-04-18",
+    "nights": 8,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → Seogwipo → 마이즈루 → Niigata → 하코다테",
+    "countriesKo": [
+      "중국",
+      "한국",
+      "일본"
+    ],
+    "priceInside": 1350,
+    "priceOutside": 1530,
+    "priceBalcony": 1584,
+    "priceSuite": 2435,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·한국·일본 8박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#Seogwipo"
+    ]
+  },
+  {
+    "ref": "RCISC05I951-260426",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-04-26",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 후쿠오카 → Kumamoto",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 652,
+    "priceOutside": 723,
+    "priceBalcony": 731,
+    "priceSuite": 1141,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#후쿠오카"
+    ]
+  },
+  {
+    "ref": "RCISC08I088-220526",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-05-22",
+    "nights": 8,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 도쿄 → 시미즈 → 오사카",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 1131,
+    "priceOutside": 1266,
+    "priceBalcony": 1313,
+    "priceSuite": 2762,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 8박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#도쿄"
+    ]
+  },
+  {
+    "ref": "RCISC08I090-080826",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-08-08",
+    "nights": 8,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 오사카 → Nagoya → 도쿄",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 1273,
+    "priceOutside": 1444,
+    "priceBalcony": 1533,
+    "priceSuite": 2781,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 8박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#오사카"
+    ]
+  },
+  {
+    "ref": "RCISC05J028-160826",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-08-16",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 후쿠오카 → 부산",
+    "countriesKo": [
+      "중국",
+      "일본",
+      "한국"
+    ],
+    "priceInside": 786,
+    "priceOutside": 873,
+    "priceBalcony": 925,
+    "priceSuite": 1262,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본·한국 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#후쿠오카"
+    ]
+  },
+  {
+    "ref": "RCISC08I091-110926",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-09-11",
+    "nights": 8,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 사카이미나토 → 마이즈루 → Niigata → 하코다테",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 848,
+    "priceOutside": 1028,
+    "priceBalcony": 1114,
+    "priceSuite": 1729,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 8박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#사카이미나토"
+    ]
+  },
+  {
+    "ref": "REGENTEXP260930",
+    "shipSlug": "seven-seas-explorer",
+    "shipTitle": "Seven Seas Explorer",
+    "operator": "Regent Seven Seas Cruises",
+    "operatorShort": "RSSC",
+    "dateFrom": "2026-09-30",
+    "nights": 20,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Seattle, Washington",
+      "nameKo": "Seattle, Washington"
+    },
+    "endsAt": {
+      "name": "Tokyo",
+      "nameKo": "도쿄"
+    },
+    "portRoute": "Seattle, Washington → Cruising Inside Passage, U.S.A → Ketchikan, Alaska → Juneau, Alaska → Cruising by Hubbard Glacier, Alaska → Whittier → Cruising the Pacific Ocean → Crossing the International Date Line → Kushiro → 하코다테 → Muroran → Miyako, Iwate → Hitachinaka → 도쿄",
+    "countriesKo": [
+      "미국",
+      "일본"
+    ],
+    "priceInside": 0,
+    "priceOutside": 0,
+    "priceBalcony": 0,
+    "priceSuite": 8037,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/10/29/13/35/00/2aa74293-ec5f-4974-9d5d-c5c58e76722b/Regent%20Seven%20Seas%20Cruises%20Seven%20Seas%20Explorer%20Exterior.jpg",
+    "title": "미국·일본 20박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#리젠트세븐시즈",
+      "#SevenSeasExplorer",
+      "#Seattle, Washington",
+      "#Cruising Inside Passage, U.S.A"
+    ]
+  },
+  {
+    "ref": "MSCBE20261004SHATYO",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2026-10-04",
+    "nights": 3,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Shanghai",
+      "nameKo": "상하이"
+    },
+    "endsAt": {
+      "name": "Tokyo",
+      "nameKo": "도쿄"
+    },
+    "portRoute": "상하이 → 도쿄",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 229,
+    "priceOutside": 279,
+    "priceBalcony": 319,
+    "priceSuite": 699,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "중국·일본 3박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#상하이",
+      "#도쿄"
+    ]
+  },
+  {
+    "ref": "RCISC04I857-201026",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-10-20",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → Okinawa",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 479,
+    "priceOutside": 574,
+    "priceBalcony": 615,
+    "priceSuite": 845,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#Okinawa"
+    ]
+  },
+  {
+    "ref": "RCISC08I092-241026",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-10-24",
+    "nights": 8,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 사카이미나토 → 마이즈루 → Niigata → 하코다테",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 953,
+    "priceOutside": 1074,
+    "priceBalcony": 1196,
+    "priceSuite": 2866,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 8박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#사카이미나토"
+    ]
+  },
+  {
+    "ref": "RCISC05J011-061126",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-11-06",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "portRoute": "홍콩 → Okinawa",
+    "countriesKo": [
+      "Hong Kong",
+      "일본"
+    ],
+    "priceInside": 509,
+    "priceOutside": 622,
+    "priceBalcony": 674,
+    "priceSuite": 1045,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "Hong Kong·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#홍콩",
+      "#Okinawa"
+    ]
+  },
+  {
+    "ref": "RCISC05J012-111126",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-11-11",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "portRoute": "홍콩 → Okinawa → 이시가키",
+    "countriesKo": [
+      "Hong Kong",
+      "일본"
+    ],
+    "priceInside": 478,
+    "priceOutside": 575,
+    "priceBalcony": 657,
+    "priceSuite": 995,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "Hong Kong·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#홍콩",
+      "#Okinawa"
+    ]
+  },
+  {
+    "ref": "RCISC09I921-221126",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-11-22",
+    "nights": 9,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "portRoute": "홍콩 → 가고시마 → 나가사키 → 후쿠오카 → 부산",
+    "countriesKo": [
+      "Hong Kong",
+      "일본",
+      "한국"
+    ],
+    "priceInside": 1195,
+    "priceOutside": 1416,
+    "priceBalcony": 1417,
+    "priceSuite": 2377,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "Hong Kong·일본·한국 9박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#홍콩",
+      "#가고시마"
+    ]
+  },
+  {
+    "ref": "MSCBE20261124KEEKEE",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2026-11-24",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "endsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "portRoute": "지룽 → 이시가키 → 미야코지마 → Naha, Okinawa",
+    "countriesKo": [
+      "대만",
+      "일본"
+    ],
+    "priceInside": 499,
+    "priceOutside": 579,
+    "priceBalcony": 0,
+    "priceSuite": 1179,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "대만·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#지룽",
+      "#이시가키"
+    ]
+  },
+  {
+    "ref": "MSCBE20261129KEEKEE",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2026-11-29",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "endsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "portRoute": "지룽 → 미야코지마 → Naha, Okinawa → 이시가키",
+    "countriesKo": [
+      "대만",
+      "일본"
+    ],
+    "priceInside": 619,
+    "priceOutside": 679,
+    "priceBalcony": 0,
+    "priceSuite": 1649,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "대만·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#지룽",
+      "#미야코지마"
+    ]
+  },
+  {
+    "ref": "RCISC05J013-011226",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-12-01",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "portRoute": "홍콩 → Okinawa → 이시가키",
+    "countriesKo": [
+      "Hong Kong",
+      "일본"
+    ],
+    "priceInside": 509,
+    "priceOutside": 622,
+    "priceBalcony": 674,
+    "priceSuite": 968,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "Hong Kong·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#홍콩",
+      "#Okinawa"
+    ]
+  },
+  {
+    "ref": "MSCBE20261204KEEKEE",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2026-12-04",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "endsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "portRoute": "지룽 → 미야코지마 → Naha, Okinawa → 이시가키",
+    "countriesKo": [
+      "대만",
+      "일본"
+    ],
+    "priceInside": 529,
+    "priceOutside": 589,
+    "priceBalcony": 0,
+    "priceSuite": 1369,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "대만·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#지룽",
+      "#미야코지마"
+    ]
+  },
+  {
+    "ref": "RCISC05J014-061226",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-12-06",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "portRoute": "홍콩 → Okinawa → 지룽",
+    "countriesKo": [
+      "Hong Kong",
+      "일본",
+      "대만"
+    ],
+    "priceInside": 509,
+    "priceOutside": 622,
+    "priceBalcony": 674,
+    "priceSuite": 968,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "Hong Kong·일본·대만 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#홍콩",
+      "#Okinawa"
+    ]
+  },
+  {
+    "ref": "MSCBE20261208KEEKEE",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2026-12-08",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "endsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "portRoute": "지룽 → 미야코지마 → Naha, Okinawa → 이시가키",
+    "countriesKo": [
+      "대만",
+      "일본"
+    ],
+    "priceInside": 499,
+    "priceOutside": 549,
+    "priceBalcony": 0,
+    "priceSuite": 1339,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "대만·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#지룽",
+      "#미야코지마"
+    ]
+  },
+  {
+    "ref": "MSCBE20261212KEEKEE",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2026-12-12",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "endsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "portRoute": "지룽 → 미야코지마 → Naha, Okinawa → 이시가키",
+    "countriesKo": [
+      "대만",
+      "일본"
+    ],
+    "priceInside": 539,
+    "priceOutside": 589,
+    "priceBalcony": 0,
+    "priceSuite": 1369,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "대만·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#지룽",
+      "#미야코지마"
+    ]
+  },
+  {
+    "ref": "RCISC05J015-131226",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-12-13",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "portRoute": "홍콩 → Okinawa → 이시가키",
+    "countriesKo": [
+      "Hong Kong",
+      "일본"
+    ],
+    "priceInside": 604,
+    "priceOutside": 717,
+    "priceBalcony": 768,
+    "priceSuite": 1067,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "Hong Kong·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#홍콩",
+      "#Okinawa"
+    ]
+  },
+  {
+    "ref": "MSCBE20261216KEEKEE",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2026-12-16",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "endsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "portRoute": "지룽 → 미야코지마 → Naha, Okinawa → 이시가키",
+    "countriesKo": [
+      "대만",
+      "일본"
+    ],
+    "priceInside": 529,
+    "priceOutside": 579,
+    "priceBalcony": 0,
+    "priceSuite": 1339,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "대만·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#지룽",
+      "#미야코지마"
+    ]
+  },
+  {
+    "ref": "MSCBE20261220KEEKEE",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2026-12-20",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "endsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "portRoute": "지룽 → 미야코지마 → Naha, Okinawa → 이시가키",
+    "countriesKo": [
+      "대만",
+      "일본"
+    ],
+    "priceInside": 569,
+    "priceOutside": 619,
+    "priceBalcony": 0,
+    "priceSuite": 1369,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "대만·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#지룽",
+      "#미야코지마"
+    ]
+  },
+  {
+    "ref": "RCISC09I922-201226",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-12-20",
+    "nights": 9,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "portRoute": "홍콩 → 후쿠오카 → 나가사키 → 가고시마 → Kumamoto",
+    "countriesKo": [
+      "Hong Kong",
+      "일본"
+    ],
+    "priceInside": 1471,
+    "priceOutside": 1635,
+    "priceBalcony": 1761,
+    "priceSuite": 3671,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "Hong Kong·일본 9박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#홍콩",
+      "#후쿠오카"
+    ]
+  },
+  {
+    "ref": "MSCBE20261224KEEKEE",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2026-12-24",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "endsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "portRoute": "지룽 → 미야코지마 → Naha, Okinawa → 이시가키",
+    "countriesKo": [
+      "대만",
+      "일본"
+    ],
+    "priceInside": 0,
+    "priceOutside": 0,
+    "priceBalcony": 0,
+    "priceSuite": 1419,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "대만·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#지룽",
+      "#미야코지마"
+    ]
+  },
+  {
+    "ref": "MSCBE20261228KEEKEE",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2026-12-28",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "endsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "portRoute": "지룽 → 미야코지마 → Naha, Okinawa → 이시가키",
+    "countriesKo": [
+      "대만",
+      "일본"
+    ],
+    "priceInside": 679,
+    "priceOutside": 729,
+    "priceBalcony": 0,
+    "priceSuite": 1519,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "대만·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#지룽",
+      "#미야코지마"
+    ]
+  },
+  {
+    "ref": "RCISC05J016-291226",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-12-29",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "portRoute": "홍콩 → Okinawa",
+    "countriesKo": [
+      "Hong Kong",
+      "일본"
+    ],
+    "priceInside": 698,
+    "priceOutside": 811,
+    "priceBalcony": 862,
+    "priceSuite": 1166,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "Hong Kong·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#홍콩",
+      "#Okinawa"
+    ]
+  },
+  {
+    "ref": "MSCBE20270101KEEKEE",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2027-01-01",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "endsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "portRoute": "지룽 → 미야코지마 → Naha, Okinawa → 이시가키",
+    "countriesKo": [
+      "대만",
+      "일본"
+    ],
+    "priceInside": 829,
+    "priceOutside": 879,
+    "priceBalcony": 0,
+    "priceSuite": 1639,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "대만·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#지룽",
+      "#미야코지마"
+    ]
+  },
+  {
+    "ref": "RCISC08I096-030127",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-01-03",
+    "nights": 8,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Yokohama",
+      "nameKo": "요코하마"
+    },
+    "portRoute": "홍콩 → 부산 → 나가사키 → 고베 → 요코하마",
+    "countriesKo": [
+      "Hong Kong",
+      "한국",
+      "일본"
+    ],
+    "priceInside": 920,
+    "priceOutside": 1073,
+    "priceBalcony": 1195,
+    "priceSuite": 1991,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "Hong Kong·한국·일본 8박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#홍콩",
+      "#부산"
+    ]
+  },
+  {
+    "ref": "MSCBE20270105KEEKEE",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2027-01-05",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "endsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "portRoute": "지룽 → 미야코지마 → Naha, Okinawa → 이시가키",
+    "countriesKo": [
+      "대만",
+      "일본"
+    ],
+    "priceInside": 579,
+    "priceOutside": 629,
+    "priceBalcony": 0,
+    "priceSuite": 1339,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "대만·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#지룽",
+      "#미야코지마"
+    ]
+  },
+  {
+    "ref": "RCISC05J031-190127",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-01-19",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "portRoute": "홍콩 → Okinawa",
+    "countriesKo": [
+      "Hong Kong",
+      "일본"
+    ],
+    "priceInside": 547,
+    "priceOutside": 633,
+    "priceBalcony": 715,
+    "priceSuite": 1110,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "Hong Kong·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#홍콩",
+      "#Okinawa"
+    ]
+  },
+  {
+    "ref": "RCISC04I876-240127",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-01-24",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "홍콩 → 이시가키 → Baoshan Pt",
+    "countriesKo": [
+      "Hong Kong",
+      "일본",
+      "중국"
+    ],
+    "priceInside": 361,
+    "priceOutside": 430,
+    "priceBalcony": 501,
+    "priceSuite": 824,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "Hong Kong·일본·중국 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#홍콩",
+      "#이시가키"
+    ]
+  },
+  {
+    "ref": "RCISC05J019-280127",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-01-28",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 후쿠오카 → Kumamoto",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 663,
+    "priceOutside": 749,
+    "priceBalcony": 832,
+    "priceSuite": 1232,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#후쿠오카"
+    ]
+  },
+  {
+    "ref": "RCISC04I866-020227",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-02-02",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 가고시마",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 728,
+    "priceOutside": 814,
+    "priceBalcony": 897,
+    "priceSuite": 1301,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#가고시마"
+    ]
+  },
+  {
+    "ref": "RCISC04I867-100227",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-02-10",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 가고시마",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 905,
+    "priceOutside": 974,
+    "priceBalcony": 1045,
+    "priceSuite": 1397,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#가고시마"
+    ]
+  },
+  {
+    "ref": "RCINV12I202-130227",
+    "shipSlug": "navigator-of-the-seas",
+    "shipTitle": "Navigator of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-02-13",
+    "nights": 12,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Singapore",
+      "nameKo": "싱가포르"
+    },
+    "endsAt": {
+      "name": "Yokohama",
+      "nameKo": "요코하마"
+    },
+    "portRoute": "싱가포르 → 홍콩 → 지룽 → 나가사키 → Kumamoto → 가고시마 → 요코하마",
+    "countriesKo": [
+      "싱가포르",
+      "Hong Kong",
+      "대만",
+      "일본"
+    ],
+    "priceInside": 1417,
+    "priceOutside": 1731,
+    "priceBalcony": 1911,
+    "priceSuite": 3020,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/07/03/06/27/48/ce0f263a-765f-48da-ac2e-35fcbb55c418/RCI%20Navigator%20of%20the%20Seas%2C%20Exterior.jpg",
+    "title": "일본 12박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#NavigatoroftheSeas",
+      "#싱가포르",
+      "#홍콩"
+    ]
+  },
+  {
+    "ref": "RCISC05J023-140227",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-02-14",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 후쿠오카 → Kumamoto",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 522,
+    "priceOutside": 608,
+    "priceBalcony": 690,
+    "priceSuite": 1083,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#후쿠오카"
+    ]
+  },
+  {
+    "ref": "RCISC08I093-190227",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-02-19",
+    "nights": 8,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 오사카 → 도쿄",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 882,
+    "priceOutside": 1028,
+    "priceBalcony": 1147,
+    "priceSuite": 2027,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 8박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#오사카"
+    ]
+  },
+  {
+    "ref": "NCLJAD-20270222-11-HKG-TOK",
+    "shipSlug": "norwegian-jade-ship",
+    "shipTitle": "Norwegian Jade",
+    "operator": "Norwegian Cruise Line",
+    "operatorShort": "NCL",
+    "dateFrom": "2027-02-22",
+    "nights": 11,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Tokyo",
+      "nameKo": "도쿄"
+    },
+    "portRoute": "홍콩 → Kaohsiung → 지룽 → 미야코지마 → 나가사키 → 가고시마 → 히로시마 → 고치 → Kyoto → 시미즈 → 도쿄",
+    "countriesKo": [
+      "Hong Kong",
+      "대만",
+      "일본"
+    ],
+    "priceInside": 1895,
+    "priceOutside": 2375,
+    "priceBalcony": 3280,
+    "priceSuite": 3475,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/12/05/15/14/57/63c00f94-4bb5-4613-bb65-40346384484f/Norwegian%20Jade%20-%20Exterior%201%2C%20%C2%A9Danny%20Lehman.jpg",
+    "title": "Hong Kong·대만·일본 11박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#노르웨이전크루즈",
+      "#NorwegianJade",
+      "#홍콩",
+      "#Kaohsiung"
+    ]
+  },
+  {
+    "ref": "OCEANIANAU270225",
+    "shipSlug": "nautica",
+    "shipTitle": "Oceania Nautica",
+    "operator": "Oceania Cruises",
+    "operatorShort": "Oceania",
+    "dateFrom": "2027-02-25",
+    "nights": 14,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Tokyo",
+      "nameKo": "도쿄"
+    },
+    "portRoute": "홍콩 → At Sea → 지룽 → 이시가키 → Naha, Okinawa → 제주도 → 부산 → 나가사키 → 가고시마 → 고치 → Tokushima → 고베 → 도쿄",
+    "countriesKo": [
+      "Hong Kong",
+      "대만",
+      "일본",
+      "한국"
+    ],
+    "priceInside": 2984,
+    "priceOutside": 3248,
+    "priceBalcony": 4264,
+    "priceSuite": 5848,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/11/06/10/56/04/15bf814a-7f88-46aa-951c-8aa18dbb5b91/Oceania%20Cruises%2C%20R-Class%2C%20Nautica%20Exterior.jpg",
+    "title": "일본 14박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#오세아니아크루즈",
+      "#OceaniaNautica",
+      "#홍콩",
+      "#At Sea"
+    ]
+  },
+  {
+    "ref": "RCISC04I863-160327",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-03-16",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 가고시마",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 460,
+    "priceOutside": 529,
+    "priceBalcony": 600,
+    "priceSuite": 928,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#가고시마"
+    ]
+  },
+  {
+    "ref": "MSCBE20270323SHATYO",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2027-03-23",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Shanghai",
+      "nameKo": "상하이"
+    },
+    "endsAt": {
+      "name": "Tokyo",
+      "nameKo": "도쿄"
+    },
+    "portRoute": "상하이 → 가고시마 → 도쿄",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 299,
+    "priceOutside": 319,
+    "priceBalcony": 449,
+    "priceSuite": 749,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "중국·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#상하이",
+      "#가고시마"
+    ]
+  },
+  {
+    "ref": "RCISC05J020-240327",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-03-24",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 나가사키 → 가고시마",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 568,
+    "priceOutside": 655,
+    "priceBalcony": 737,
+    "priceSuite": 1184,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#나가사키"
+    ]
+  },
+  {
+    "ref": "RCISC08I095-290327",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-03-29",
+    "nights": 8,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 고베 → 도쿄",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 869,
+    "priceOutside": 1008,
+    "priceBalcony": 1138,
+    "priceSuite": 2170,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 8박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#고베"
+    ]
+  },
+  {
+    "ref": "OCEANIAVIS270329",
+    "shipSlug": "vista",
+    "shipTitle": "Oceania Vista",
+    "operator": "Oceania Cruises",
+    "operatorShort": "Oceania",
+    "dateFrom": "2027-03-29",
+    "nights": 13,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Yokohama",
+      "nameKo": "요코하마"
+    },
+    "portRoute": "홍콩 → At Sea → 상하이 → 인천 → 나가사키 → 히로시마 → 고치 → 고베 → 시미즈 → 요코하마",
+    "countriesKo": [
+      "Hong Kong",
+      "중국",
+      "한국",
+      "일본"
+    ],
+    "priceInside": 0,
+    "priceOutside": 0,
+    "priceBalcony": 4729,
+    "priceSuite": 7319,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2023/08/22/08/14/10/e9e89b49-4a23-42da-900f-60e373d4469d/Oceania%20Cruises%20Vista%20Exterior.jpg",
+    "title": "일본 13박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#오세아니아크루즈",
+      "#OceaniaVista",
+      "#홍콩",
+      "#At Sea"
+    ]
+  },
+  {
+    "ref": "RCISC04I857-060427",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-04-06",
+    "nights": 4,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → Okinawa",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 505,
+    "priceOutside": 575,
+    "priceBalcony": 645,
+    "priceSuite": 975,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 4박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#Okinawa"
+    ]
+  },
+  {
+    "ref": "OCEANIARVA270416",
+    "shipSlug": "riviera",
+    "shipTitle": "Oceania Riviera",
+    "operator": "Oceania Cruises",
+    "operatorShort": "Oceania",
+    "dateFrom": "2027-04-16",
+    "nights": 11,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Yokohama",
+      "nameKo": "요코하마"
+    },
+    "portRoute": "홍콩 → At Sea → 지룽 → 부산 → 나가사키 → Beppu, Kyushu Island, Oita → 오사카 → Nagoya → 요코하마",
+    "countriesKo": [
+      "Hong Kong",
+      "대만",
+      "한국",
+      "일본"
+    ],
+    "priceInside": 2969,
+    "priceOutside": 3559,
+    "priceBalcony": 3969,
+    "priceSuite": 6039,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2022/06/17/11/40/56/22a53757-86e1-42ed-997e-d4406e7a2733/Oceania%20Cruises%20Riviera%20Resized.jpg",
+    "title": "일본 11박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#오세아니아크루즈",
+      "#OceaniaRiviera",
+      "#홍콩",
+      "#At Sea"
+    ]
+  },
+  {
+    "ref": "REGENTNAV270418",
+    "shipSlug": "seven-seas-navigator",
+    "shipTitle": "Seven Seas Navigator",
+    "operator": "Regent Seven Seas Cruises",
+    "operatorShort": "RSSC",
+    "dateFrom": "2027-04-18",
+    "nights": 11,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Tokyo",
+      "nameKo": "도쿄"
+    },
+    "portRoute": "홍콩 → Cruising the South China Sea → Kaohsiung → Cruising the Philippine Sea → 이시가키 → Naha, Okinawa → Cruising the East China Sea → 가고시마 → 시미즈 → 도쿄",
+    "countriesKo": [
+      "Hong Kong",
+      "대만",
+      "일본"
+    ],
+    "priceInside": 0,
+    "priceOutside": 0,
+    "priceBalcony": 0,
+    "priceSuite": 3919,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/03/18/15/20/28/2880e378-d3dc-44ed-b5db-071acc67ad97/RSSC%2C%20Seven%20Seas%20Navigator%2C%20Exterior.jpg",
+    "title": "Hong Kong·대만·일본 11박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#리젠트세븐시즈",
+      "#SevenSeasNavigator",
+      "#홍콩",
+      "#Cruising the South China Sea"
+    ]
+  },
+  {
+    "ref": "RCISC05J021-180427",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-04-18",
+    "nights": 5,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 나가사키 → 가고시마",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 568,
+    "priceOutside": 655,
+    "priceBalcony": 737,
+    "priceSuite": 1174,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 5박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#나가사키"
+    ]
+  },
+  {
+    "ref": "RCISC08I094-230427",
+    "shipSlug": "spectrum-of-the-seas",
+    "shipTitle": "Spectrum of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2027-04-23",
+    "nights": 8,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "endsAt": {
+      "name": "Baoshan Pt",
+      "nameKo": "Baoshan Pt"
+    },
+    "portRoute": "Baoshan Pt → 오사카 → 도쿄",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 869,
+    "priceOutside": 1042,
+    "priceBalcony": 1148,
+    "priceSuite": 2170,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "title": "중국·일본 8박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#오사카"
+    ]
+  },
+  {
+    "ref": "MSCBE20271008SHATYO",
+    "shipSlug": "msc-bellissima",
+    "shipTitle": "MSC Bellissima",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2027-10-08",
+    "nights": 6,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Shanghai",
+      "nameKo": "상하이"
+    },
+    "endsAt": {
+      "name": "Tokyo",
+      "nameKo": "도쿄"
+    },
+    "portRoute": "상하이 → 가고시마 → 고치 → 도쿄",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 419,
+    "priceOutside": 439,
+    "priceBalcony": 629,
+    "priceSuite": 1079,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "title": "중국·일본 6박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#MSC크루즈",
+      "#MSCBellissima",
+      "#상하이",
+      "#가고시마"
+    ]
+  },
+  {
+    "ref": "EXPLORAEL20280116HKGSGH",
+    "shipSlug": "explora-iii",
+    "shipTitle": "EXPLORA III",
+    "operator": "Explora Journeys",
+    "operatorShort": "Explora",
+    "dateFrom": "2028-01-16",
+    "nights": 9,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Shanghai",
+      "nameKo": "상하이"
+    },
+    "portRoute": "홍콩 → At Sea → 이시가키 → Naha, Okinawa → Naze, Amani Oshima → 가고시마 → 나가사키 → 부산 → 상하이",
+    "countriesKo": [
+      "Hong Kong",
+      "일본",
+      "한국",
+      "중국"
+    ],
+    "priceInside": 0,
+    "priceOutside": 0,
+    "priceBalcony": 0,
+    "priceSuite": 5165,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/01/02/12/22/07/974008bc-6388-4ee4-82b3-04349e2e13e4/Explora%20Journeys%20EXPLORA%20III%20Exterior.jpg",
+    "title": "일본 9박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#Explora크루즈",
+      "#EXPLORAIII",
+      "#홍콩",
+      "#At Sea"
+    ]
+  },
+  {
+    "ref": "EXPLORAEL20280125SGHTYO",
+    "shipSlug": "explora-iii",
+    "shipTitle": "EXPLORA III",
+    "operator": "Explora Journeys",
+    "operatorShort": "Explora",
+    "dateFrom": "2028-01-25",
+    "nights": 8,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Shanghai",
+      "nameKo": "상하이"
+    },
+    "endsAt": {
+      "name": "Tokyo",
+      "nameKo": "도쿄"
+    },
+    "portRoute": "상하이 → At Sea → 미야코지마 → Naha, Okinawa → Naze, Amani Oshima → Nagoya → 도쿄",
+    "countriesKo": [
+      "중국",
+      "일본"
+    ],
+    "priceInside": 0,
+    "priceOutside": 0,
+    "priceBalcony": 0,
+    "priceSuite": 4595,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/01/02/12/22/07/974008bc-6388-4ee4-82b3-04349e2e13e4/Explora%20Journeys%20EXPLORA%20III%20Exterior.jpg",
+    "title": "중국·일본 8박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#Explora크루즈",
+      "#EXPLORAIII",
+      "#상하이",
+      "#At Sea"
+    ]
+  },
+  {
+    "ref": "REGENTEXP280211",
+    "shipSlug": "seven-seas-explorer",
+    "shipTitle": "Seven Seas Explorer",
+    "operator": "Regent Seven Seas Cruises",
+    "operatorShort": "RSSC",
+    "dateFrom": "2028-02-11",
+    "nights": 10,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Keelung (Chilung)",
+      "nameKo": "지룽"
+    },
+    "endsAt": {
+      "name": "Incheon",
+      "nameKo": "인천"
+    },
+    "portRoute": "지룽 → 이시가키 → 미야코지마 → Cruising the East China Sea → 상하이 → 가고시마 → 나가사키 → Cruising the Yellow Sea → 인천",
+    "countriesKo": [
+      "대만",
+      "일본",
+      "중국",
+      "한국"
+    ],
+    "priceInside": 0,
+    "priceOutside": 0,
+    "priceBalcony": 0,
+    "priceSuite": 6699,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/10/29/13/35/00/2aa74293-ec5f-4974-9d5d-c5c58e76722b/Regent%20Seven%20Seas%20Cruises%20Seven%20Seas%20Explorer%20Exterior.jpg",
+    "title": "일본 10박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#리젠트세븐시즈",
+      "#SevenSeasExplorer",
+      "#지룽",
+      "#이시가키"
+    ]
+  },
+  {
+    "ref": "CELEBSL13I044-190228",
+    "shipSlug": "celebrity-solstice",
+    "shipTitle": "Celebrity Solstice",
+    "operator": "Celebrity Cruises",
+    "operatorShort": "Celebrity",
+    "dateFrom": "2028-02-19",
+    "nights": 13,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Yokohama",
+      "nameKo": "요코하마"
+    },
+    "portRoute": "홍콩 → 지룽 → Seogwipo → 나가사키 → 후쿠오카 → 오사카 → 고치 → 시미즈 → 요코하마",
+    "countriesKo": [
+      "Hong Kong",
+      "대만",
+      "한국",
+      "일본"
+    ],
+    "priceInside": 1374,
+    "priceOutside": 1838,
+    "priceBalcony": 2082,
+    "priceSuite": 3763,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/09/11/17/38/19/8d9b2ef2-456b-4c4e-9478-4b445314f541/Celebrity%20Solstice%20-%20Exterior%201%2C%20%C2%A9CEL.jpg",
+    "title": "일본 13박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#셀러브리티크루즈",
+      "#CelebritySolstice",
+      "#홍콩",
+      "#지룽"
+    ]
+  },
+  {
+    "ref": "OCEANIARVA280219",
+    "shipSlug": "riviera",
+    "shipTitle": "Oceania Riviera",
+    "operator": "Oceania Cruises",
+    "operatorShort": "Oceania",
+    "dateFrom": "2028-02-19",
+    "nights": 12,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Yokohama",
+      "nameKo": "요코하마"
+    },
+    "portRoute": "홍콩 → At Sea → 지룽 → 이시가키 → Hirara → 가고시마 → Beppu, Kyushu Island, Oita → 히로시마 → 고치 → 고베 → 시미즈 → 요코하마",
+    "countriesKo": [
+      "Hong Kong",
+      "대만",
+      "일본"
+    ],
+    "priceInside": 3279,
+    "priceOutside": 4109,
+    "priceBalcony": 4799,
+    "priceSuite": 7689,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2022/06/17/11/40/56/22a53757-86e1-42ed-997e-d4406e7a2733/Oceania%20Cruises%20Riviera%20Resized.jpg",
+    "title": "Hong Kong·대만·일본 12박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#오세아니아크루즈",
+      "#OceaniaRiviera",
+      "#홍콩",
+      "#At Sea"
+    ]
+  },
+  {
+    "ref": "NCLJAD-20280222-11-HKG-TOK",
+    "shipSlug": "norwegian-jade-ship",
+    "shipTitle": "Norwegian Jade",
+    "operator": "Norwegian Cruise Line",
+    "operatorShort": "NCL",
+    "dateFrom": "2028-02-22",
+    "nights": 11,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Tokyo",
+      "nameKo": "도쿄"
+    },
+    "portRoute": "홍콩 → Kaohsiung → 지룽 → 미야코지마 → 나가사키 → Hakata → 히로시마 → 고치 → Kyoto → 시미즈 → 도쿄",
+    "countriesKo": [
+      "Hong Kong",
+      "대만",
+      "일본"
+    ],
+    "priceInside": 1560,
+    "priceOutside": 1865,
+    "priceBalcony": 3020,
+    "priceSuite": 3405,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/12/05/15/14/57/63c00f94-4bb5-4613-bb65-40346384484f/Norwegian%20Jade%20-%20Exterior%201%2C%20%C2%A9Danny%20Lehman.jpg",
+    "title": "Hong Kong·대만·일본 11박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#노르웨이전크루즈",
+      "#NorwegianJade",
+      "#홍콩",
+      "#Kaohsiung"
+    ]
+  },
+  {
+    "ref": "EXPLORAEL20280312HKGTYO",
+    "shipSlug": "explora-iii",
+    "shipTitle": "EXPLORA III",
+    "operator": "Explora Journeys",
+    "operatorShort": "Explora",
+    "dateFrom": "2028-03-12",
+    "nights": 9,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Tokyo",
+      "nameKo": "도쿄"
+    },
+    "portRoute": "홍콩 → At Sea → 상하이 → Shimonoseki → 고치 → 오사카 → Toba → 도쿄",
+    "countriesKo": [
+      "Hong Kong",
+      "중국",
+      "일본"
+    ],
+    "priceInside": 0,
+    "priceOutside": 0,
+    "priceBalcony": 0,
+    "priceSuite": 5375,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/01/02/12/22/07/974008bc-6388-4ee4-82b3-04349e2e13e4/Explora%20Journeys%20EXPLORA%20III%20Exterior.jpg",
+    "title": "Hong Kong·중국·일본 9박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#Explora크루즈",
+      "#EXPLORAIII",
+      "#홍콩",
+      "#At Sea"
+    ]
+  },
+  {
+    "ref": "REGENTSPL280406",
+    "shipSlug": "seven-seas-splendor",
+    "shipTitle": "Seven Seas Splendor",
+    "operator": "Regent Seven Seas Cruises",
+    "operatorShort": "RSSC",
+    "dateFrom": "2028-04-06",
+    "nights": 10,
+    "destination": "japan",
+    "startsAt": {
+      "name": "Hong Kong",
+      "nameKo": "홍콩"
+    },
+    "endsAt": {
+      "name": "Incheon",
+      "nameKo": "인천"
+    },
+    "portRoute": "홍콩 → Cruising the Taiwan Strait → 지룽 → 이시가키 → 미야코지마 → Cruising the East China Sea → 상하이 → Cruising the Yellow Sea → 인천",
+    "countriesKo": [
+      "Hong Kong",
+      "대만",
+      "일본",
+      "중국",
+      "한국"
+    ],
+    "priceInside": 0,
+    "priceOutside": 0,
+    "priceBalcony": 0,
+    "priceSuite": 5749,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/03/19/11/37/13/7ce193c0-ac82-4826-b83a-6cc47f77c901/RSSC%2C%20Seven%20Seas%20Splendor%2C%20Exterior.jpg",
+    "title": "일본 10박 크루즈",
+    "hashtags": [
+      "#일본크루즈",
+      "#리젠트세븐시즈",
+      "#SevenSeasSplendor",
+      "#홍콩",
+      "#Cruising the Taiwan Strait"
+    ]
+  }
+]

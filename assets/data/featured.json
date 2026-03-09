@@ -8,9 +8,17 @@
     "dateFrom": "2026-08-14",
     "dateTo": "2026-08-18",
     "nights": 4,
-    "regions": ["Asia"],
-    "countries": ["China", "South Korea"],
-    "countriesKo": ["중국", "한국"],
+    "regions": [
+      "Asia"
+    ],
+    "countries": [
+      "China",
+      "South Korea"
+    ],
+    "countriesKo": [
+      "중국",
+      "한국"
+    ],
     "destination": "korea",
     "startsAt": {
       "name": "Shanghai",
@@ -25,9 +33,18 @@
       "countryKo": "중국"
     },
     "ports": [
-      { "name": "Shanghai", "nameKo": "상하이" },
-      { "name": "Jeju", "nameKo": "제주" },
-      { "name": "Busan", "nameKo": "부산" }
+      {
+        "name": "Shanghai",
+        "nameKo": "상하이"
+      },
+      {
+        "name": "Jeju",
+        "nameKo": "제주"
+      },
+      {
+        "name": "Busan",
+        "nameKo": "부산"
+      }
     ],
     "portRoute": "상하이 → 제주 → 부산 → 상하이",
     "priceInside": 299,
@@ -36,7 +53,7 @@
     "priceSuite": 899,
     "currency": "USD",
     "availability": "available",
-    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
     "title": "중국·한국 4박 크루즈",
     "hashtags": [
       "#한국크루즈",
@@ -63,7 +80,7 @@
     "priceOutside": 765,
     "priceBalcony": 825,
     "currency": "USD",
-    "image": "https://assets.widgety.co.uk/2021/11/30/08/39/15/ab35a659-53a2-4da4-b933-d54575271524/MSC Cruises MSC Musica 1.jpg",
+    "image": "https://assets.widgety.co.uk/2021/11/30/08/39/15/ab35a659-53a2-4da4-b933-d54575271524/MSC%20Cruises%20MSC%20Musica%201.jpg",
     "hashtags": [
       "#지중해크루즈",
       "#MSC크루즈",
@@ -88,7 +105,7 @@
     "priceOutside": 0,
     "priceBalcony": 935,
     "currency": "USD",
-    "image": "https://assets.widgety.co.uk/2021/11/30/08/39/15/ab35a659-53a2-4da4-b933-d54575271524/MSC Cruises MSC Musica 1.jpg",
+    "image": "https://assets.widgety.co.uk/2021/11/30/08/39/15/ab35a659-53a2-4da4-b933-d54575271524/MSC%20Cruises%20MSC%20Musica%201.jpg",
     "hashtags": [
       "#지중해크루즈",
       "#MSC크루즈",
@@ -113,7 +130,7 @@
     "priceOutside": 575,
     "priceBalcony": 710,
     "currency": "USD",
-    "image": "https://assets.widgety.co.uk/2024/11/18/17/03/56/0f123dcf-c5b3-4699-ba46-c84be720c0d1/NCL Breakaway - Exterior 4.jpg",
+    "image": "https://assets.widgety.co.uk/2024/11/18/17/03/56/0f123dcf-c5b3-4699-ba46-c84be720c0d1/NCL%20Breakaway%20-%20Exterior%204.jpg",
     "hashtags": [
       "#카리브해크루즈",
       "#NCL크루즈",
@@ -138,7 +155,7 @@
     "priceOutside": 803,
     "priceBalcony": 1179,
     "currency": "USD",
-    "image": "https://assets.widgety.co.uk/2021/01/25/14/50/37/08a70583-2437-4027-81e0-1034cb12dd87/Princess Cruises Ruby Princess.jpg",
+    "image": "https://assets.widgety.co.uk/2021/01/25/14/50/37/08a70583-2437-4027-81e0-1034cb12dd87/Princess%20Cruises%20Ruby%20Princess.jpg",
     "hashtags": [
       "#알래스카크루즈",
       "#프린세스크루즈",
@@ -210,7 +227,7 @@
     "priceSuite": 1909,
     "currency": "USD",
     "availability": "available",
-    "image": "https://assets.widgety.co.uk/2025/10/01/09/09/24/54ec9abe-1505-43e4-b761-b0251d1dc2ac/MSC Cruises MSC EURIBIA Exterior ©MSC Rights 1.jpg",
+    "image": "https://assets.widgety.co.uk/2025/10/01/09/09/24/54ec9abe-1505-43e4-b761-b0251d1dc2ac/MSC%20Cruises%20MSC%20EURIBIA%20Exterior%20%C2%A9MSC%20Rights%201.jpg",
     "title": "독일·덴마크·노르웨이 7박 크루즈",
     "hashtags": [
       "#북유럽크루즈",
@@ -278,7 +295,7 @@
     "priceSuite": 2029,
     "currency": "USD",
     "availability": "available",
-    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC Cruises, MSC Bellissima, Exterior, Copyrights - MSC Rights.jpg",
+    "image": "https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
     "title": "일본·한국 7박 크루즈",
     "hashtags": [
       "#한국/일본크루즈",
