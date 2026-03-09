@@ -49,20 +49,26 @@
       return '$' + parseFloat(v).toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:0});
     }
 
+    // 로컬 JSON에서 ref로 크루즈 찾기 (한국어 타이틀 우선 사용)
+    async function findLocalCruise(ref) {
+      try {
+        const all = await API.loadAllCruises();
+        return all.find(c => c.ref === ref) || null;
+      } catch { return null; }
+    }
+
     async function load() {
       if (!ref) return;
       const content = document.getElementById('content');
 
       try {
-        // ① URL 파라미터에서 ship slug 미리 읽기 (index.html이 넘겨주면 병렬 가능)
+        // ① 로컬 JSON + Widgety API 병렬 로드
         const urlShip = new URLSearchParams(location.search).get('ship');
-
-        // holiday + shipLive 동시 시작 (urlShip 있으면 완전 병렬)
-        const holidayPromise = API.getHoliday(ref);
+        const [localCruise, holiday] = await Promise.all([
+          findLocalCruise(ref),
+          API.getHoliday(ref),
+        ]);
         const shipLivePromise = urlShip ? API.getShipLive(urlShip) : null;
-
-        // ② holiday 완료 즉시 렌더링 (shipLive 기다리지 않음)
-        const holiday = await holidayPromise;
         if (!holiday) {
           content.innerHTML = '<div class="empty-state"><span class="emoji">⚠️</span><p>크루즈 정보를 찾을 수 없습니다</p></div>';
           return;
@@ -72,7 +78,9 @@
           ? holiday.ship.split('/ships/')[1]?.replace('.json', '')
           : null);
 
-        // ③ 즉시 렌더 (shipLive 없이 — 선박 시설 섹션은 빈 상태로 먼저 표시)
+        // ③ 즉시 렌더 — 로컬 한국어 타이틀 우선 적용
+        if (localCruise?.title) holiday._koreanTitle = localCruise.title;
+        if (localCruise?.portRoute) holiday._portRouteKo = localCruise.portRoute;
         renderFromAPI(holiday, null, null);
         renderItinerary(holiday);
         renderPricing(holiday, null);
@@ -600,10 +608,16 @@
       const fromPrice = price?.from_balcony || price?.from_outside || price?.from_inside;
       const priceStr = fromPrice ? API.formatPrice(fromPrice) : '문의';
       const countries = (holiday.countries || []).map(c => Translations.countryName(c)).join(', ');
-      const route = API.routeString(holiday.itinerary);
+      const route = holiday._portRouteKo || API.routeString(holiday.itinerary);
       const coverImg = shipLive?.cover_image_href || '';
       const facts = shipLive?.ship_facts || {};
-      const cruiseTitle = holiday.name || `${Translations.portName(holiday.starts_at?.name||'')} 출발 ${nights}박 크루즈`;
+      // 로컬 JSON 한국어 타이틀 우선, 없으면 국가명 기반 생성, 최후엔 API name
+      const cruiseTitle = holiday._koreanTitle
+        || (() => {
+             const ctries = (holiday.countries||[]).map(c => Translations.countryName(c)).filter(Boolean);
+             return ctries.length ? `${ctries.slice(0,2).join('·')} ${nights}박 크루즈` : null;
+           })()
+        || `${Translations.portName(holiday.starts_at?.name||'')} 출발 ${nights}박 크루즈`;
 
       window._cruiseData = {
         title: cruiseTitle,
