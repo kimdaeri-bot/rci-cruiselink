@@ -1,15 +1,16 @@
 // Shared components - Hybrid version
 const Components = {
-  header(active = 'home') {
+  // active: 'home'|'dest'|'ships'|'guide' / base: '' (root) or '../../' (2depth subdir)
+  header(active = 'home', base = '') {
     return `
     <header class="header">
       <div class="container">
-        <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="크루즈링크" style="height:36px"></a>
+        <a href="${base}index.html" class="logo"><img src="${base}assets/images/logo.png" alt="크루즈링크" style="height:36px"></a>
         <nav class="nav" id="mainNav">
-          <a href="index.html" class="${active === 'home' ? 'active' : ''}">홈</a>
-          <a href="destinations.html" class="${active === 'dest' ? 'active' : ''}">목적지</a>
-          <a href="ships.html" class="${active === 'ships' ? 'active' : ''}">선사소개</a>
-
+          <a href="${base}index.html" class="${active === 'home' ? 'active' : ''}">홈</a>
+          <a href="${base}destinations.html" class="${active === 'dest' ? 'active' : ''}">목적지</a>
+          <a href="${base}ships.html" class="${active === 'ships' ? 'active' : ''}">선사소개</a>
+          <a href="${base}guide/" class="${active === 'guide' ? 'active' : ''}">크루즈 가이드</a>
           <a href="https://pf.kakao.com/_xgYbJG" target="_blank" class="${active === 'contact' ? 'active' : ''}">문의</a>
         </nav>
         <a href="tel:02-3788-9119" class="header-phone">
@@ -21,7 +22,7 @@ const Components = {
     </header>`;
   },
 
-  footer() {
+  footer(base = '') {
     return `
     <footer class="footer">
       <div class="container">
@@ -29,8 +30,8 @@ const Components = {
           <div class="footer-col">
             <h4>크루즈링크는?</h4>
             <p><a href="#">회사소개</a></p>
-            <p><a href="privacy.html">개인정보 처리방침</a></p>
-            <p><a href="terms.html">이용약관</a></p>
+            <p><a href="${base}privacy.html">개인정보 처리방침</a></p>
+            <p><a href="${base}terms.html">이용약관</a></p>
           </div>
           <div class="footer-col">
             <h4>연락처 정보</h4>
@@ -39,12 +40,20 @@ const Components = {
             <p>✉️ <a href="mailto:info@cruiselink.co.kr">info@cruiselink.co.kr</a></p>
           </div>
           <div class="footer-col">
+            <h4>크루즈 가이드</h4>
+            <p><a href="${base}guide/">가이드 홈</a></p>
+            <p><a href="${base}guide/cruise-lines/msc-cruises.html">MSC 크루즈</a></p>
+            <p><a href="${base}guide/ports/barcelona.html">바르셀로나</a></p>
+            <p><a href="${base}guide/ports/tokyo.html">도쿄</a></p>
+            <p><a href="${base}guide/news/">크루즈 뉴스</a></p>
+          </div>
+          <div class="footer-col">
             <h4>목적지</h4>
-            <p><a href="destinations.html">목적지 가이드</a></p>
-            <p><a href="destination.html?dest=korea">한국/일본</a></p>
-            <p><a href="destination.html?dest=mediterranean">지중해</a></p>
-            <p><a href="destination.html?dest=alaska">알래스카</a></p>
-            <p><a href="destination.html?dest=caribbean">카리브해</a></p>
+            <p><a href="${base}destinations.html">목적지 가이드</a></p>
+            <p><a href="${base}destination.html?dest=korea">한국/일본</a></p>
+            <p><a href="${base}destination.html?dest=mediterranean">지중해</a></p>
+            <p><a href="${base}destination.html?dest=alaska">알래스카</a></p>
+            <p><a href="${base}destination.html?dest=caribbean">카리브해</a></p>
           </div>
         </div>
         <div class="footer-bottom" style="font-size:0.8rem;line-height:1.6;color:var(--gray-500)">
