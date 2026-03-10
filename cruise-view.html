@@ -1242,28 +1242,36 @@
        공유 버튼 & 모달
   ============================= -->
   <style>
-    /* ── 공유 플로팅 버튼 (PC) ── */
+    /* ── 공유 플로팅 버튼 (PC + 모바일) ── */
     .share-fab {
       position: fixed;
-      right: 28px;
+      right: 20px;
       bottom: 100px;
       z-index: 7000;
-      width: 48px;
-      height: 48px;
       background: #0077cc;
       color: #fff;
       border: none;
-      border-radius: 50%;
-      font-size: 20px;
+      border-radius: 24px;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 11px 18px;
       cursor: pointer;
       box-shadow: 0 4px 16px rgba(0,119,204,.45);
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 6px;
       transition: background .2s, transform .2s;
+      letter-spacing: -.3px;
     }
-    .share-fab:hover { background: #005fa3; transform: scale(1.08); }
-    @media (max-width: 768px) { .share-fab { display: none; } }
+    .share-fab:hover { background: #005fa3; transform: scale(1.04); }
+    @media (max-width: 768px) {
+      .share-fab {
+        bottom: 140px;
+        right: 14px;
+        font-size: 13px;
+        padding: 10px 16px;
+      }
+    }
 
     /* ── 모바일 MIB 공유 버튼 ── */
     .mib-share-row {
@@ -1419,8 +1427,8 @@
     }
   </style>
 
-  <!-- 공유 플로팅 버튼 (PC) -->
-  <button class="share-fab" onclick="openShareModal()" title="공유하기">📤</button>
+  <!-- 공유 플로팅 버튼 (PC + 모바일) -->
+  <button class="share-fab" onclick="openShareModal()">📤 공유하기</button>
 
   <!-- 모바일 MIB 공유 버튼 (MIB 패널 안에 동적 삽입) -->
 
