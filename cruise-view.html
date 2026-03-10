@@ -1237,5 +1237,365 @@
       if (Math.abs(dx) > 50) lbNav(dx < 0 ? 1 : -1);
     });
   </script>
+
+  <!-- ============================
+       공유 버튼 & 모달
+  ============================= -->
+  <style>
+    /* ── 공유 플로팅 버튼 (PC) ── */
+    .share-fab {
+      position: fixed;
+      right: 28px;
+      bottom: 100px;
+      z-index: 7000;
+      width: 48px;
+      height: 48px;
+      background: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0,119,204,.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s, transform .2s;
+    }
+    .share-fab:hover { background: #005fa3; transform: scale(1.08); }
+    @media (max-width: 768px) { .share-fab { display: none; } }
+
+    /* ── 모바일 MIB 공유 버튼 ── */
+    .mib-share-row {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .mib-share-row {
+        display: flex;
+        justify-content: center;
+        padding: 6px 16px 10px;
+        gap: 10px;
+      }
+      .mib-share-btn {
+        flex: 1;
+        background: #f0f7ff;
+        color: #0077cc;
+        border: 1px solid #cce0f5;
+        border-radius: 10px;
+        padding: 9px 0;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+      }
+      .mib-share-btn:active { background: #ddeeff; }
+    }
+
+    /* ── 공유 모달 ── */
+    .share-modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9100;
+      background: rgba(0,0,0,.55);
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .share-modal-backdrop.open { display: flex; }
+
+    .share-modal {
+      background: #fff;
+      border-radius: 20px 20px 0 0;
+      width: 100%;
+      max-width: 480px;
+      padding: 24px 20px 32px;
+      animation: slideUp .25s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+
+    .share-modal-handle {
+      width: 36px; height: 4px;
+      background: #ddd; border-radius: 2px;
+      margin: 0 auto 18px;
+    }
+    .share-modal h3 {
+      font-size: 16px; font-weight: 800;
+      color: #1a2540; text-align: center;
+      margin-bottom: 6px;
+    }
+    .share-modal .share-title-preview {
+      font-size: 12px; color: #888;
+      text-align: center; margin-bottom: 20px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      padding: 0 12px;
+    }
+
+    .share-btns {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .share-btn-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 0;
+    }
+    .share-btn-item .icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+    }
+    .share-btn-item .lbl {
+      font-size: 11px; font-weight: 700; color: #444;
+    }
+    .share-btn-item:active .icon { opacity: .75; }
+
+    .icon-kakao  { background: #FEE500; }
+    .icon-copy   { background: #f0f0f0; }
+    .icon-sms    { background: #4caf50; color: #fff; }
+    .icon-more   { background: #e8f0fe; }
+
+    .share-url-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f5f7fa;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: #555;
+      word-break: break-all;
+      margin-bottom: 16px;
+    }
+    .share-url-box span { flex: 1; }
+    .share-url-copy-btn {
+      background: #0077cc; color: #fff;
+      border: none; border-radius: 7px;
+      padding: 5px 12px; font-size: 12px; font-weight: 700;
+      cursor: pointer; white-space: nowrap; flex-shrink: 0;
+    }
+
+    .share-close-btn {
+      width: 100%;
+      background: #f5f5f5;
+      border: none;
+      border-radius: 12px;
+      padding: 13px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #555;
+      cursor: pointer;
+    }
+    .share-close-btn:hover { background: #eee; }
+
+    /* 복사 완료 토스트 */
+    #shareToast {
+      position: fixed;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1a2540;
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      z-index: 9999;
+      display: none;
+      white-space: nowrap;
+    }
+  </style>
+
+  <!-- 공유 플로팅 버튼 (PC) -->
+  <button class="share-fab" onclick="openShareModal()" title="공유하기">📤</button>
+
+  <!-- 모바일 MIB 공유 버튼 (MIB 패널 안에 동적 삽입) -->
+
+  <!-- 공유 모달 -->
+  <div class="share-modal-backdrop" id="shareModalBackdrop" onclick="if(event.target===this) closeShareModal()">
+    <div class="share-modal">
+      <div class="share-modal-handle"></div>
+      <h3>📤 공유하기</h3>
+      <p class="share-title-preview" id="shareTitlePreview">크루즈 상품</p>
+
+      <div class="share-btns">
+        <!-- 카카오톡 -->
+        <button class="share-btn-item" onclick="shareKakao()">
+          <div class="icon icon-kakao">
+            <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium_iosandroid.png"
+                 style="width:32px;height:32px;border-radius:6px" alt="카카오톡"
+                 onerror="this.parentElement.textContent='💬'">
+          </div>
+          <span class="lbl">카카오톡</span>
+        </button>
+        <!-- URL 복사 -->
+        <button class="share-btn-item" onclick="copyShareUrl()">
+          <div class="icon icon-copy">🔗</div>
+          <span class="lbl">링크 복사</span>
+        </button>
+        <!-- SMS -->
+        <button class="share-btn-item" onclick="shareSMS()">
+          <div class="icon icon-sms">✉️</div>
+          <span class="lbl">문자 전송</span>
+        </button>
+        <!-- 기타 (Web Share API) -->
+        <button class="share-btn-item" id="shareMoreBtn" onclick="shareNative()">
+          <div class="icon icon-more">⋯</div>
+          <span class="lbl">더보기</span>
+        </button>
+      </div>
+
+      <div class="share-url-box">
+        <span id="shareUrlText"></span>
+        <button class="share-url-copy-btn" onclick="copyShareUrl()">복사</button>
+      </div>
+
+      <button class="share-close-btn" onclick="closeShareModal()">닫기</button>
+    </div>
+  </div>
+
+  <div id="shareToast">✅ 링크가 복사됐습니다!</div>
+
+  <script>
+    // ── Kakao SDK 동적 로드 ──
+    (function() {
+      const s = document.createElement('script');
+      s.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js';
+      s.crossOrigin = 'anonymous';
+      s.onload = function() {
+        if (window.Kakao && !Kakao.isInitialized()) {
+          Kakao.init('7ecb5adf22dc2cffb0aedb35f9f1ca7e'); // 크루즈링크 앱키 (JavaScript)
+        }
+      };
+      document.head.appendChild(s);
+    })();
+
+    // ── 공유 데이터 ──
+    function getShareData() {
+      const url = location.href;
+      const titleEl = document.querySelector('.detail-hero h1');
+      const title = titleEl ? titleEl.innerText.replace('🚢 ','') : document.title;
+      const imgEl = document.querySelector('.main-ship-image img');
+      const img = imgEl ? imgEl.src : 'https://www.cruiselink.co.kr/assets/images/og-image.jpg';
+      return { url, title, img };
+    }
+
+    // ── 모달 열기/닫기 ──
+    function openShareModal() {
+      const { url, title } = getShareData();
+      document.getElementById('shareTitlePreview').textContent = title;
+      document.getElementById('shareUrlText').textContent = url;
+      // Web Share API 미지원 시 "더보기" 숨기기
+      if (!navigator.share) {
+        document.getElementById('shareMoreBtn').style.display = 'none';
+      }
+      document.getElementById('shareModalBackdrop').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeShareModal() {
+      document.getElementById('shareModalBackdrop').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // ── 카카오톡 공유 ──
+    function shareKakao() {
+      const { url, title, img } = getShareData();
+      if (window.Kakao && Kakao.isInitialized()) {
+        Kakao.Share.sendDefault({
+          objectType: 'feed',
+          content: {
+            title: '🚢 ' + title,
+            description: '크루즈링크에서 확인해보세요!',
+            imageUrl: img,
+            link: { mobileWebUrl: url, webUrl: url }
+          },
+          buttons: [{
+            title: '상품 보러가기',
+            link: { mobileWebUrl: url, webUrl: url }
+          }]
+        });
+      } else {
+        // SDK 미로드 시 카카오 채널로 fallback
+        window.open('https://pf.kakao.com/_xgYbJG', '_blank');
+      }
+      closeShareModal();
+    }
+
+    // ── URL 복사 ──
+    function copyShareUrl() {
+      const url = getShareData().url;
+      navigator.clipboard.writeText(url).then(() => {
+        showShareToast('✅ 링크가 복사됐습니다!');
+      }).catch(() => {
+        const ta = document.createElement('textarea');
+        ta.value = url;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showShareToast('✅ 링크가 복사됐습니다!');
+      });
+      closeShareModal();
+    }
+
+    // ── 문자 전송 ──
+    function shareSMS() {
+      const { url, title } = getShareData();
+      window.location.href = `sms:?body=${encodeURIComponent('🚢 ' + title + '\n' + url)}`;
+      closeShareModal();
+    }
+
+    // ── 네이티브 공유 (Web Share API) ──
+    function shareNative() {
+      const { url, title } = getShareData();
+      if (navigator.share) {
+        navigator.share({ title: '🚢 ' + title, url }).catch(() => {});
+      }
+      closeShareModal();
+    }
+
+    // ── 토스트 ──
+    function showShareToast(msg) {
+      const t = document.getElementById('shareToast');
+      t.textContent = msg;
+      t.style.display = 'block';
+      setTimeout(() => t.style.display = 'none', 2200);
+    }
+
+    // ── MIB 패널에 공유 버튼 동적 삽입 (모바일) ──
+    document.addEventListener('DOMContentLoaded', function() {
+      const mibPanel = document.getElementById('mibPanel');
+      if (mibPanel) {
+        const row = document.createElement('div');
+        row.className = 'mib-share-row';
+        row.innerHTML = `
+          <button class="mib-share-btn" onclick="copyShareUrl()">🔗 링크 복사</button>
+          <button class="mib-share-btn" onclick="shareKakao()">💬 카카오 공유</button>
+          <button class="mib-share-btn" onclick="shareNative()" id="mibShareMore">📤 더 보내기</button>
+        `;
+        mibPanel.appendChild(row);
+        if (!navigator.share) document.getElementById('mibShareMore').style.display = 'none';
+      }
+    });
+
+    // ESC 키로 닫기
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeShareModal();
+    });
+  </script>
 </body>
 </html>
