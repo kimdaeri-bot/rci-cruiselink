@@ -242,6 +242,15 @@
         </div>
       </div>`;
 
+      // === BLOG POSTING BUTTON (포스팅 있는 상품만) ===
+      const BLOG_REFS = ["MSCOR20260226CVVCVV","MSCEU20260227BCNBCN","MSCLX20260228BRIBRI","MSCSP20260228BCNBCN","MSCSX20260404BRIBRI","MSCAX20260405VCEVCE","MSCFA20260411BCNBCN","MSCVI20260420SOUSOU","MSCPR20260426HAMHAM","MSCER20260502KELKEL","MSCGR20260228CPVCPV","MSCVI20260228FDFFDF","MSCMU20260901GOAGOA","NCLBLS-20260425-07-SEA-SEA","NCLENC-20260503-07-SEA-SEA","NCLJAD-20260504-07-VAN-WQF","NCLJOY-20260513-09-SEA-SEA","NCLSPR-20260715-16-HNL-VAN","NCLENC-20260228-07-MIA-MIA","NCLVIV-20260228-07-GAL-GAL","NCLDWN-20260301-07-TPA-TPA","NCLSKY-20260510-07-CPH-SOU","RCIAL08E145-280226","RCIEN05W630-280226","RCIGR07W634-280226","RCIVY07A426-080526","RCISR07A431-100526","CARNIVALSP28022026","CARNIVALPR01032026","CARNIVALMI01032026","CARNIVALLM2704202610"];
+      if (BLOG_REFS.includes(ref)) {
+        const blogFile = ref === 'MSCMU20260901GOAGOA' ? 'msc-musica-mediterranean-2026' : ref;
+        html += `<div class="container" style="padding-top:0;padding-bottom:0">
+          <button class="blog-post-btn" onclick="openBlogPopup('${blogFile}')">📝 크루즈 포스팅 보기</button>
+        </div>`;
+      }
+
       // === ITINERARY PLACEHOLDER ===
       html += `
       <section class="section" id="itinerary-section">
@@ -1138,6 +1147,20 @@
 
     // 제목 고정값 — 동적 업데이트 불필요
 
+    // ── 블로그 포스팅 팝업 ──
+    function openBlogPopup(fileKey) {
+      const url = `/blog-draft/${fileKey}.html`;
+      document.getElementById('blogPopupFrame').src = url;
+      document.getElementById('blogPopupBackdrop').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeBlogPopup() {
+      document.getElementById('blogPopupBackdrop').classList.remove('open');
+      document.getElementById('blogPopupFrame').src = '';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBlogPopup(); });
+
     // ── MIB 공유하기 ──
     function mibShareUrl() {
       const url = location.href;
@@ -1287,6 +1310,41 @@
 
       openLightbox(img.src, img.alt || '', allImgs, Math.max(0, idx));
     });
+
+  <!-- 블로그 포스팅 팝업 -->
+  <div id="blogPopupBackdrop" style="display:none;position:fixed;inset:0;z-index:9200;background:rgba(0,0,0,.65);align-items:center;justify-content:center;padding:16px" onclick="if(event.target===this)closeBlogPopup()">
+    <div style="background:#fff;border-radius:14px;width:100%;max-width:860px;height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4)">
+      <div style="display:flex;align-items:center;padding:14px 18px;border-bottom:1px solid #eee;background:#0a2540;border-radius:14px 14px 0 0">
+        <span style="color:#ffd700;font-size:15px;font-weight:800">📝 크루즈 포스팅</span>
+        <span style="color:rgba(255,255,255,.5);font-size:12px;margin-left:10px">네이버 블로그 복붙용 초안</span>
+        <button onclick="closeBlogPopup()" style="margin-left:auto;background:rgba(255,255,255,.15);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;line-height:1">×</button>
+      </div>
+      <iframe id="blogPopupFrame" src="" style="flex:1;border:none;width:100%" loading="lazy"></iframe>
+    </div>
+  </div>
+  <style>
+    #blogPopupBackdrop.open { display:flex !important; }
+    .blog-post-btn {
+      display: block;
+      margin: 16px auto;
+      background: linear-gradient(135deg, #0077cc, #0055a5);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 13px 28px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 3px 12px rgba(0,119,204,.35);
+      transition: transform .2s, box-shadow .2s;
+      letter-spacing: -.2px;
+    }
+    .blog-post-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,119,204,.45); }
+    .blog-post-btn:active { transform: translateY(0); }
+    @media (max-width: 768px) {
+      .blog-post-btn { width: calc(100% - 32px); margin: 12px 16px; font-size: 14px; }
+    }
+  </style>
 
     // 스와이프 (모바일)
     let _tsX = 0;

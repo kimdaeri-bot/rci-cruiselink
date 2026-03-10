@@ -1,0 +1,272 @@
+[
+  {
+    "ref": "MSCOR20260226CVVCVV",
+    "file": "MSCOR20260226CVVCVV.html",
+    "operator": "MSC Cruises",
+    "dest": "mediterranean",
+    "ship": "MSC Orchestra",
+    "nights": 7,
+    "dateFrom": "2026-02-26"
+  },
+  {
+    "ref": "MSCEU20260227BCNBCN",
+    "file": "MSCEU20260227BCNBCN.html",
+    "operator": "MSC Cruises",
+    "dest": "mediterranean",
+    "ship": "MSC World Europa",
+    "nights": 7,
+    "dateFrom": "2026-02-27"
+  },
+  {
+    "ref": "MSCLX20260228BRIBRI",
+    "file": "MSCLX20260228BRIBRI.html",
+    "operator": "MSC Cruises",
+    "dest": "mediterranean",
+    "ship": "MSC Lirica",
+    "nights": 7,
+    "dateFrom": "2026-02-28"
+  },
+  {
+    "ref": "MSCSP20260228BCNBCN",
+    "file": "MSCSP20260228BCNBCN.html",
+    "operator": "MSC Cruises",
+    "dest": "mediterranean",
+    "ship": "MSC Splendida",
+    "nights": 7,
+    "dateFrom": "2026-02-28"
+  },
+  {
+    "ref": "MSCSX20260404BRIBRI",
+    "file": "MSCSX20260404BRIBRI.html",
+    "operator": "MSC Cruises",
+    "dest": "mediterranean",
+    "ship": "MSC Sinfonia",
+    "nights": 7,
+    "dateFrom": "2026-04-04"
+  },
+  {
+    "ref": "MSCAX20260405VCEVCE",
+    "file": "MSCAX20260405VCEVCE.html",
+    "operator": "MSC Cruises",
+    "dest": "mediterranean",
+    "ship": "MSC Armonia",
+    "nights": 7,
+    "dateFrom": "2026-04-05"
+  },
+  {
+    "ref": "MSCFA20260411BCNBCN",
+    "file": "MSCFA20260411BCNBCN.html",
+    "operator": "MSC Cruises",
+    "dest": "mediterranean",
+    "ship": "MSC Fantasia",
+    "nights": 5,
+    "dateFrom": "2026-04-11"
+  },
+  {
+    "ref": "MSCVI20260420SOUSOU",
+    "file": "MSCVI20260420SOUSOU.html",
+    "operator": "MSC Cruises",
+    "dest": "northern-europe",
+    "ship": "MSC Virtuosa",
+    "nights": 12,
+    "dateFrom": "2026-04-20"
+  },
+  {
+    "ref": "MSCPR20260426HAMHAM",
+    "file": "MSCPR20260426HAMHAM.html",
+    "operator": "MSC Cruises",
+    "dest": "northern-europe",
+    "ship": "MSC Preziosa",
+    "nights": 7,
+    "dateFrom": "2026-04-26"
+  },
+  {
+    "ref": "MSCER20260502KELKEL",
+    "file": "MSCER20260502KELKEL.html",
+    "operator": "MSC Cruises",
+    "dest": "northern-europe",
+    "ship": "MSC Euribia",
+    "nights": 7,
+    "dateFrom": "2026-05-02"
+  },
+  {
+    "ref": "MSCGR20260228CPVCPV",
+    "file": "MSCGR20260228CPVCPV.html",
+    "operator": "MSC Cruises",
+    "dest": "caribbean",
+    "ship": "MSC Grandiosa",
+    "nights": 7,
+    "dateFrom": "2026-02-28"
+  },
+  {
+    "ref": "MSCVI20260228FDFFDF",
+    "file": "MSCVI20260228FDFFDF.html",
+    "operator": "MSC Cruises",
+    "dest": "caribbean",
+    "ship": "MSC Virtuosa",
+    "nights": 7,
+    "dateFrom": "2026-02-28"
+  },
+  {
+    "ref": "NCLBLS-20260425-07-SEA-SEA",
+    "file": "NCLBLS-20260425-07-SEA-SEA.html",
+    "operator": "Norwegian Cruise Line",
+    "dest": "alaska",
+    "ship": "Norwegian Bliss",
+    "nights": 7,
+    "dateFrom": "2026-04-25"
+  },
+  {
+    "ref": "NCLENC-20260503-07-SEA-SEA",
+    "file": "NCLENC-20260503-07-SEA-SEA.html",
+    "operator": "Norwegian Cruise Line",
+    "dest": "alaska",
+    "ship": "Norwegian Encore",
+    "nights": 7,
+    "dateFrom": "2026-05-03"
+  },
+  {
+    "ref": "NCLJAD-20260504-07-VAN-WQF",
+    "file": "NCLJAD-20260504-07-VAN-WQF.html",
+    "operator": "Norwegian Cruise Line",
+    "dest": "alaska",
+    "ship": "Norwegian Jade",
+    "nights": 7,
+    "dateFrom": "2026-05-04"
+  },
+  {
+    "ref": "NCLJOY-20260513-09-SEA-SEA",
+    "file": "NCLJOY-20260513-09-SEA-SEA.html",
+    "operator": "Norwegian Cruise Line",
+    "dest": "alaska",
+    "ship": "Norwegian Joy",
+    "nights": 9,
+    "dateFrom": "2026-05-13"
+  },
+  {
+    "ref": "NCLSPR-20260715-16-HNL-VAN",
+    "file": "NCLSPR-20260715-16-HNL-VAN.html",
+    "operator": "Norwegian Cruise Line",
+    "dest": "alaska",
+    "ship": "Norwegian Spirit",
+    "nights": 16,
+    "dateFrom": "2026-07-15"
+  },
+  {
+    "ref": "NCLENC-20260228-07-MIA-MIA",
+    "file": "NCLENC-20260228-07-MIA-MIA.html",
+    "operator": "Norwegian Cruise Line",
+    "dest": "caribbean",
+    "ship": "Norwegian Encore",
+    "nights": 7,
+    "dateFrom": "2026-02-28"
+  },
+  {
+    "ref": "NCLVIV-20260228-07-GAL-GAL",
+    "file": "NCLVIV-20260228-07-GAL-GAL.html",
+    "operator": "Norwegian Cruise Line",
+    "dest": "caribbean",
+    "ship": "Norwegian Viva",
+    "nights": 7,
+    "dateFrom": "2026-02-28"
+  },
+  {
+    "ref": "NCLDWN-20260301-07-TPA-TPA",
+    "file": "NCLDWN-20260301-07-TPA-TPA.html",
+    "operator": "Norwegian Cruise Line",
+    "dest": "caribbean",
+    "ship": "Norwegian Dawn",
+    "nights": 7,
+    "dateFrom": "2026-03-01"
+  },
+  {
+    "ref": "NCLSKY-20260510-07-CPH-SOU",
+    "file": "NCLSKY-20260510-07-CPH-SOU.html",
+    "operator": "Norwegian Cruise Line",
+    "dest": "northern-europe",
+    "ship": "Norwegian Sky",
+    "nights": 7,
+    "dateFrom": "2026-05-10"
+  },
+  {
+    "ref": "RCIAL08E145-280226",
+    "file": "RCIAL08E145-280226.html",
+    "operator": "Royal Caribbean International",
+    "dest": "caribbean",
+    "ship": "Allure of the Seas",
+    "nights": 8,
+    "dateFrom": "2026-02-28"
+  },
+  {
+    "ref": "RCIEN05W630-280226",
+    "file": "RCIEN05W630-280226.html",
+    "operator": "Royal Caribbean International",
+    "dest": "caribbean",
+    "ship": "Enchantment of the Seas",
+    "nights": 5,
+    "dateFrom": "2026-02-28"
+  },
+  {
+    "ref": "RCIGR07W634-280226",
+    "file": "RCIGR07W634-280226.html",
+    "operator": "Royal Caribbean International",
+    "dest": "caribbean",
+    "ship": "Grandeur of the Seas",
+    "nights": 7,
+    "dateFrom": "2026-02-28"
+  },
+  {
+    "ref": "RCIVY07A426-080526",
+    "file": "RCIVY07A426-080526.html",
+    "operator": "Royal Caribbean International",
+    "dest": "alaska",
+    "ship": "Voyager of the Seas",
+    "nights": 7,
+    "dateFrom": "2026-05-08"
+  },
+  {
+    "ref": "RCISR07A431-100526",
+    "file": "RCISR07A431-100526.html",
+    "operator": "Royal Caribbean International",
+    "dest": "alaska",
+    "ship": "Serenade of the Seas",
+    "nights": 7,
+    "dateFrom": "2026-05-10"
+  },
+  {
+    "ref": "CARNIVALSP28022026",
+    "file": "CARNIVALSP28022026.html",
+    "operator": "Carnival Cruise Line",
+    "dest": "caribbean",
+    "ship": "Carnival Spirit",
+    "nights": 8,
+    "dateFrom": "2026-02-28"
+  },
+  {
+    "ref": "CARNIVALPR01032026",
+    "file": "CARNIVALPR01032026.html",
+    "operator": "Carnival Cruise Line",
+    "dest": "caribbean",
+    "ship": "Carnival Pride",
+    "nights": 7,
+    "dateFrom": "2026-03-01"
+  },
+  {
+    "ref": "CARNIVALMI01032026",
+    "file": "CARNIVALMI01032026.html",
+    "operator": "Carnival Cruise Line",
+    "dest": "caribbean",
+    "ship": "Carnival Miracle",
+    "nights": 7,
+    "dateFrom": "2026-03-01"
+  },
+  {
+    "ref": "CARNIVALLM2704202610",
+    "file": "CARNIVALLM2704202610.html",
+    "operator": "Carnival Cruise Line",
+    "dest": "alaska",
+    "ship": "Carnival Luminosa",
+    "nights": 10,
+    "dateFrom": "2026-04-27"
+  }
+]

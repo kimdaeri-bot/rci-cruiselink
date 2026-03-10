@@ -6,208 +6,635 @@
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
   <title>크루즈링크 블로그 초안 목록 (내부용)</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Noto Sans KR', sans-serif; background: #0f1623; color: #e0e6f0; min-height: 100vh; }
-
-    header {
-      background: linear-gradient(135deg, #0a2540, #0077cc);
-      padding: 36px 40px 28px;
-      border-bottom: 2px solid #1a4a7a;
-    }
-    header h1 { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 6px; }
-    header p { font-size: 14px; color: rgba(255,255,255,.65); }
-    .lock-badge {
-      display: inline-block; background: #cc3300; color: #fff;
-      font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 12px;
-      margin-bottom: 12px; letter-spacing: .5px;
-    }
-
-    .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
-
-    /* ── 필터 탭 ── */
-    .filter-bar { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
-    .filter-btn {
-      background: #1a2a3a; color: #aac; border: 1px solid #2a3a4a;
-      padding: 7px 18px; border-radius: 20px; cursor: pointer; font-size: 13px; font-weight: 600;
-      transition: all .2s;
-    }
-    .filter-btn:hover, .filter-btn.active { background: #0077cc; color: #fff; border-color: #0077cc; }
-
-    /* ── 날짜 그룹 ── */
-    .month-group { margin-bottom: 48px; }
-    .month-label {
-      font-size: 13px; font-weight: 800; color: #0077cc; letter-spacing: 1px;
-      text-transform: uppercase; margin-bottom: 16px;
-      padding-bottom: 8px; border-bottom: 1px solid #1a2a3a;
-    }
-
-    /* ── 카드 그리드 ── */
-    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-
-    .card {
-      background: #1a2536; border: 1px solid #243040; border-radius: 10px;
-      overflow: hidden; transition: transform .2s, box-shadow .2s;
-      text-decoration: none; color: inherit; display: block;
-    }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,119,204,.25); border-color: #0077cc; }
-
-    .card-thumb {
-      width: 100%; height: 160px; object-fit: cover; display: block;
-      background: #0a1520;
-    }
-    .card-thumb-placeholder {
-      width: 100%; height: 160px; background: linear-gradient(135deg, #0a1e35, #0d2d4a);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 40px;
-    }
-
-    .card-body { padding: 16px 18px 18px; }
-    .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
-    .card-tag {
-      font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 10px;
-    }
-    .tag-msc { background: #0d3a5a; color: #5bc8f5; }
-    .tag-ncl { background: #1a2a0d; color: #8bc34a; }
-    .tag-rci { background: #2a1a0d; color: #ff9800; }
-    .tag-med { background: #1a0d2a; color: #ce93d8; }
-    .tag-asia { background: #0d2a1a; color: #80cbc4; }
-    .tag-ship { background: #1a1a2a; color: #90caf9; }
-
-    .card h3 { font-size: 15px; font-weight: 800; color: #e8f0fe; line-height: 1.45; margin-bottom: 8px; }
-    .card-meta { font-size: 12px; color: #6a8aaa; display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
-    .card-meta span { display: flex; align-items: center; gap: 4px; }
-    .card-desc { font-size: 13px; color: #8aa0b8; line-height: 1.6; }
-
-    .card-footer {
-      padding: 10px 18px; background: rgba(0,119,204,.08);
-      border-top: 1px solid #1e3050;
-      display: flex; justify-content: space-between; align-items: center;
-      font-size: 12px; color: #5a80a0;
-    }
-    .open-btn {
-      background: #0077cc; color: #fff; border: none;
-      padding: 5px 14px; border-radius: 14px; font-size: 12px; font-weight: 700; cursor: pointer;
-    }
-    .open-btn:hover { background: #005fa3; }
-
-    /* ── 빈 상태 ── */
-    .empty { text-align: center; padding: 60px 20px; color: #4a6a8a; }
-
-    /* ── 통계 바 ── */
-    .stats-bar {
-      display: flex; gap: 24px; background: #141f2e; border-radius: 8px;
-      padding: 16px 24px; margin-bottom: 32px; flex-wrap: wrap;
-    }
-    .stat { text-align: center; }
-    .stat .num { font-size: 24px; font-weight: 900; color: #0077cc; }
-    .stat .lbl { font-size: 12px; color: #5a80a0; margin-top: 2px; }
-
-    /* ── 신규 추가 버튼 안내 ── */
-    .guide-box {
-      background: #141f2e; border: 1px dashed #2a3a4a; border-radius: 8px;
-      padding: 16px 20px; margin-bottom: 28px; font-size: 13px; color: #6a8aaa; line-height: 1.8;
-    }
-    .guide-box strong { color: #90caf9; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Noto Sans KR',sans-serif;background:#0f1623;color:#e0e6f0;min-height:100vh}
+    header{background:linear-gradient(135deg,#0a2540,#0077cc);padding:36px 40px 28px;border-bottom:2px solid #1a4a7a}
+    header h1{font-size:26px;font-weight:900;color:#fff;margin-bottom:6px}
+    header p{font-size:14px;color:rgba(255,255,255,.65)}
+    .lock-badge{display:inline-block;background:#cc3300;color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border-radius:12px;margin-bottom:12px}
+    .container{max-width:1100px;margin:0 auto;padding:40px 24px}
+    .filter-bar{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap}
+    .filter-btn{background:#1a2a3a;color:#aac;border:1px solid #2a3a4a;padding:7px 18px;border-radius:20px;cursor:pointer;font-size:13px;font-weight:600;transition:all .2s}
+    .filter-btn:hover,.filter-btn.active{background:#0077cc;color:#fff;border-color:#0077cc}
+    .stats-bar{display:flex;gap:24px;background:#141f2e;border-radius:8px;padding:16px 24px;margin-bottom:32px;flex-wrap:wrap}
+    .stat .num{font-size:24px;font-weight:900;color:#0077cc}
+    .stat .lbl{font-size:12px;color:#5a80a0;margin-top:2px}
+    .guide-box{background:#141f2e;border:1px dashed #2a3a4a;border-radius:8px;padding:16px 20px;margin-bottom:28px;font-size:13px;color:#6a8aaa;line-height:1.8}
+    .guide-box strong{color:#90caf9}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+    .card{background:#1a2536;border:1px solid #243040;border-radius:10px;overflow:hidden;transition:transform .2s,box-shadow .2s;text-decoration:none;color:inherit;display:block}
+    .card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,119,204,.25);border-color:#0077cc}
+    .card-thumb-placeholder{width:100%;height:140px;background:linear-gradient(135deg,#0a1e35,#0d2d4a);display:flex;align-items:center;justify-content:center;font-size:36px}
+    .card-body{padding:14px 16px 16px}
+    .card-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:9px}
+    .card-tag{font-size:11px;font-weight:700;padding:3px 8px;border-radius:10px}
+    .tag-msc{background:#0d3a5a;color:#5bc8f5}
+    .tag-ncl{background:#1a2a0d;color:#8bc34a}
+    .tag-rci{background:#2a1a0d;color:#ff9800}
+    .tag-carnival{background:#2a0d0d;color:#f48fb1}
+    .tag-ship{background:#1a1a2a;color:#90caf9}
+    .card h3{font-size:14px;font-weight:800;color:#e8f0fe;line-height:1.45;margin-bottom:7px}
+    .card-meta{font-size:12px;color:#6a8aaa;display:flex;gap:10px;flex-wrap:wrap}
+    .card-footer{padding:9px 16px;background:rgba(0,119,204,.08);border-top:1px solid #1e3050;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#5a80a0}
+    .open-btn{background:#0077cc;color:#fff;border:none;padding:5px 13px;border-radius:14px;font-size:12px;font-weight:700;cursor:pointer}
+    .month-group{margin-bottom:48px}
+    .month-label{font-size:13px;font-weight:800;color:#0077cc;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1a2a3a}
   </style>
 </head>
 <body>
-
 <header>
   <div class="lock-badge">🔒 내부용 — 검색엔진 차단</div>
   <h1>📝 크루즈링크 블로그 초안 목록</h1>
   <p>네이버 블로그 포스팅 초안 보관함 · 복붙용 내부 페이지 · 외부 비공개</p>
 </header>
-
 <div class="container">
-
-  <!-- 통계 -->
   <div class="stats-bar">
-    <div class="stat"><div class="num" id="stat-total">1</div><div class="lbl">전체 초안</div></div>
-    <div class="stat"><div class="num" id="stat-msc">1</div><div class="lbl">MSC 크루즈</div></div>
-    <div class="stat"><div class="num" id="stat-ncl">0</div><div class="lbl">NCL</div></div>
-    <div class="stat"><div class="num" id="stat-rci">0</div><div class="lbl">로얄 캐리비안</div></div>
-    <div class="stat"><div class="num" id="stat-other">0</div><div class="lbl">기타 선사</div></div>
+    <div class="stat"><div class="num">31</div><div class="lbl">전체 초안</div></div>
+    <div class="stat"><div class="num">12</div><div class="lbl">MSC 크루즈</div></div>
+    <div class="stat"><div class="num">9</div><div class="lbl">NCL</div></div>
+    <div class="stat"><div class="num">5</div><div class="lbl">로얄 캐리비안</div></div>
+    <div class="stat"><div class="num">4</div><div class="lbl">카니발</div></div>
   </div>
-
-  <!-- 안내 -->
   <div class="guide-box">
-    💡 <strong>사용 방법:</strong> 카드 클릭 → 초안 페이지 열기 → 섹션별 "복사" 버튼 또는 상단 "전체 텍스트 복사" → 네이버 블로그 에디터에 붙여넣기<br>
-    📌 <strong>새 초안 추가 시:</strong> 김대리에게 요청하면 이 목록에 자동 추가됩니다.
+    💡 <strong>사용 방법:</strong> 카드 클릭 → 초안 열기 → 섹션별 "복사" 또는 상단 "전체 복사" → 네이버 블로그 붙여넣기<br>
+    📌 <strong>새 초안 추가:</strong> 김대리에게 요청하면 이 목록에 자동 추가됩니다.
   </div>
-
-  <!-- 필터 -->
   <div class="filter-bar">
-    <button class="filter-btn active" onclick="filterCards('all', this)">전체</button>
-    <button class="filter-btn" onclick="filterCards('msc', this)">MSC 크루즈</button>
-    <button class="filter-btn" onclick="filterCards('ncl', this)">NCL</button>
-    <button class="filter-btn" onclick="filterCards('rci', this)">로얄 캐리비안</button>
-    <button class="filter-btn" onclick="filterCards('med', this)">지중해</button>
-    <button class="filter-btn" onclick="filterCards('asia', this)">아시아</button>
-    <button class="filter-btn" onclick="filterCards('ship', this)">선사소개</button>
+    <button class="filter-btn active" onclick="filterCards('all',this)">전체</button>
+    <button class="filter-btn" onclick="filterCards('msc',this)">MSC 크루즈</button>
+    <button class="filter-btn" onclick="filterCards('ncl',this)">NCL</button>
+    <button class="filter-btn" onclick="filterCards('rci',this)">로얄 캐리비안</button>
+    <button class="filter-btn" onclick="filterCards('carnival',this)">카니발</button>
+    <button class="filter-btn" onclick="filterCards('mediterranean',this)">지중해</button>
+    <button class="filter-btn" onclick="filterCards('alaska',this)">알래스카</button>
+    <button class="filter-btn" onclick="filterCards('caribbean',this)">카리브해</button>
+    <button class="filter-btn" onclick="filterCards('northern-europe',this)">북유럽</button>
   </div>
-
-  <!-- ===== 2026년 3월 ===== -->
   <div class="month-group">
     <div class="month-label">📅 2026년 3월 작성</div>
-    <div class="card-grid" id="grid-2026-03">
-
-      <!-- 카드 1 -->
-      <a class="card" href="msc-musica-mediterranean-2026.html" data-tags="msc med">
-        <img class="card-thumb"
-          src="https://assets.widgety.co.uk/2021/11/30/08/39/15/ab35a659-53a2-4da4-b933-d54575271524/MSC%20Cruises%20MSC%20Musica%201.jpg"
-          alt="MSC 무지카" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-        <div class="card-thumb-placeholder" style="display:none">🚢</div>
+    <div class="card-grid" id="main-grid">
+      <a class="card" href="msc-musica-mediterranean-2026.html" data-tags="msc mediterranean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags"><span class="card-tag tag-msc">MSC 크루즈</span><span class="card-tag tag-ship">지중해</span></div>
+          <h3>🚢 MSC 무지카 — 지중해 7박 (제노바·마르세유·이비자·로마)</h3>
+          <div class="card-meta"><span>📅 2026-09-01</span><span>🌙 7박</span></div>
+        </div>
+        <div class="card-footer"><span>2026-03-10 (상세편)</span><button class="open-btn" onclick="event.preventDefault();window.open('msc-musica-mediterranean-2026.html')">열기 →</button></div>
+      </a>
+      
+      <a class="card" href="MSCOR20260226CVVCVV.html" data-tags="msc mediterranean">
+        <div class="card-thumb-placeholder">🚢</div>
         <div class="card-body">
           <div class="card-tags">
             <span class="card-tag tag-msc">MSC 크루즈</span>
-            <span class="card-tag tag-med">지중해</span>
-            <span class="card-tag tag-ship">MSC 무지카</span>
+            <span class="card-tag tag-ship">지중해</span>
           </div>
-          <h3>🚢 MSC 무지카로 떠나는 지중해 7박 크루즈!<br>제노바·마르세유·이비자·로마 한번에</h3>
+          <h3>🚢 MSC Orchestra — 지중해 7박</h3>
           <div class="card-meta">
-            <span>📅 2026.09.01 ~ 09.08</span>
-            <span>🌙 7박 8일</span>
-            <span>🏁 제노바 출발</span>
+            <span>📅 2026-02-26</span>
+            <span>🌙 7박</span>
           </div>
-          <p class="card-desc">이탈리아·프랑스·스페인 3개국, 6개 기항지. 이비자 올드타운, 로마 당일 투어 포함 코스 완전 정리.</p>
         </div>
         <div class="card-footer">
-          <span>작성일: 2026-03-10</span>
+          <span>2026-03-10</span>
           <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
         </div>
       </a>
-
-      <!-- 새 카드는 여기에 추가 -->
-
+      <a class="card" href="MSCEU20260227BCNBCN.html" data-tags="msc mediterranean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-msc">MSC 크루즈</span>
+            <span class="card-tag tag-ship">지중해</span>
+          </div>
+          <h3>🚢 MSC World Europa — 지중해 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-02-27</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="MSCLX20260228BRIBRI.html" data-tags="msc mediterranean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-msc">MSC 크루즈</span>
+            <span class="card-tag tag-ship">지중해</span>
+          </div>
+          <h3>🚢 MSC Lirica — 지중해 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-02-28</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="MSCSP20260228BCNBCN.html" data-tags="msc mediterranean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-msc">MSC 크루즈</span>
+            <span class="card-tag tag-ship">지중해</span>
+          </div>
+          <h3>🚢 MSC Splendida — 지중해 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-02-28</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="MSCSX20260404BRIBRI.html" data-tags="msc mediterranean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-msc">MSC 크루즈</span>
+            <span class="card-tag tag-ship">지중해</span>
+          </div>
+          <h3>🚢 MSC Sinfonia — 지중해 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-04-04</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="MSCAX20260405VCEVCE.html" data-tags="msc mediterranean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-msc">MSC 크루즈</span>
+            <span class="card-tag tag-ship">지중해</span>
+          </div>
+          <h3>🚢 MSC Armonia — 지중해 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-04-05</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="MSCFA20260411BCNBCN.html" data-tags="msc mediterranean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-msc">MSC 크루즈</span>
+            <span class="card-tag tag-ship">지중해</span>
+          </div>
+          <h3>🚢 MSC Fantasia — 지중해 5박</h3>
+          <div class="card-meta">
+            <span>📅 2026-04-11</span>
+            <span>🌙 5박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="MSCVI20260420SOUSOU.html" data-tags="msc northern-europe">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-msc">MSC 크루즈</span>
+            <span class="card-tag tag-ship">북유럽</span>
+          </div>
+          <h3>🚢 MSC Virtuosa — 북유럽 12박</h3>
+          <div class="card-meta">
+            <span>📅 2026-04-20</span>
+            <span>🌙 12박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="MSCPR20260426HAMHAM.html" data-tags="msc northern-europe">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-msc">MSC 크루즈</span>
+            <span class="card-tag tag-ship">북유럽</span>
+          </div>
+          <h3>🚢 MSC Preziosa — 북유럽 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-04-26</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="MSCER20260502KELKEL.html" data-tags="msc northern-europe">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-msc">MSC 크루즈</span>
+            <span class="card-tag tag-ship">북유럽</span>
+          </div>
+          <h3>🚢 MSC Euribia — 북유럽 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-05-02</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="MSCGR20260228CPVCPV.html" data-tags="msc caribbean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-msc">MSC 크루즈</span>
+            <span class="card-tag tag-ship">카리브해</span>
+          </div>
+          <h3>🚢 MSC Grandiosa — 카리브해 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-02-28</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="MSCVI20260228FDFFDF.html" data-tags="msc caribbean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-msc">MSC 크루즈</span>
+            <span class="card-tag tag-ship">카리브해</span>
+          </div>
+          <h3>🚢 MSC Virtuosa — 카리브해 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-02-28</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="NCLBLS-20260425-07-SEA-SEA.html" data-tags="ncl alaska">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-ncl">NCL</span>
+            <span class="card-tag tag-ship">알래스카</span>
+          </div>
+          <h3>🚢 Norwegian Bliss — 알래스카 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-04-25</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="NCLENC-20260503-07-SEA-SEA.html" data-tags="ncl alaska">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-ncl">NCL</span>
+            <span class="card-tag tag-ship">알래스카</span>
+          </div>
+          <h3>🚢 Norwegian Encore — 알래스카 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-05-03</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="NCLJAD-20260504-07-VAN-WQF.html" data-tags="ncl alaska">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-ncl">NCL</span>
+            <span class="card-tag tag-ship">알래스카</span>
+          </div>
+          <h3>🚢 Norwegian Jade — 알래스카 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-05-04</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="NCLJOY-20260513-09-SEA-SEA.html" data-tags="ncl alaska">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-ncl">NCL</span>
+            <span class="card-tag tag-ship">알래스카</span>
+          </div>
+          <h3>🚢 Norwegian Joy — 알래스카 9박</h3>
+          <div class="card-meta">
+            <span>📅 2026-05-13</span>
+            <span>🌙 9박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="NCLSPR-20260715-16-HNL-VAN.html" data-tags="ncl alaska">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-ncl">NCL</span>
+            <span class="card-tag tag-ship">알래스카</span>
+          </div>
+          <h3>🚢 Norwegian Spirit — 알래스카 16박</h3>
+          <div class="card-meta">
+            <span>📅 2026-07-15</span>
+            <span>🌙 16박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="NCLENC-20260228-07-MIA-MIA.html" data-tags="ncl caribbean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-ncl">NCL</span>
+            <span class="card-tag tag-ship">카리브해</span>
+          </div>
+          <h3>🚢 Norwegian Encore — 카리브해 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-02-28</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="NCLVIV-20260228-07-GAL-GAL.html" data-tags="ncl caribbean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-ncl">NCL</span>
+            <span class="card-tag tag-ship">카리브해</span>
+          </div>
+          <h3>🚢 Norwegian Viva — 카리브해 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-02-28</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="NCLDWN-20260301-07-TPA-TPA.html" data-tags="ncl caribbean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-ncl">NCL</span>
+            <span class="card-tag tag-ship">카리브해</span>
+          </div>
+          <h3>🚢 Norwegian Dawn — 카리브해 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-03-01</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="NCLSKY-20260510-07-CPH-SOU.html" data-tags="ncl northern-europe">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-ncl">NCL</span>
+            <span class="card-tag tag-ship">북유럽</span>
+          </div>
+          <h3>🚢 Norwegian Sky — 북유럽 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-05-10</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="RCIAL08E145-280226.html" data-tags="rci caribbean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-rci">로얄 캐리비안</span>
+            <span class="card-tag tag-ship">카리브해</span>
+          </div>
+          <h3>🚢 Allure of the Seas — 카리브해 8박</h3>
+          <div class="card-meta">
+            <span>📅 2026-02-28</span>
+            <span>🌙 8박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="RCIEN05W630-280226.html" data-tags="rci caribbean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-rci">로얄 캐리비안</span>
+            <span class="card-tag tag-ship">카리브해</span>
+          </div>
+          <h3>🚢 Enchantment of the Seas — 카리브해 5박</h3>
+          <div class="card-meta">
+            <span>📅 2026-02-28</span>
+            <span>🌙 5박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="RCIGR07W634-280226.html" data-tags="rci caribbean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-rci">로얄 캐리비안</span>
+            <span class="card-tag tag-ship">카리브해</span>
+          </div>
+          <h3>🚢 Grandeur of the Seas — 카리브해 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-02-28</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="RCIVY07A426-080526.html" data-tags="rci alaska">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-rci">로얄 캐리비안</span>
+            <span class="card-tag tag-ship">알래스카</span>
+          </div>
+          <h3>🚢 Voyager of the Seas — 알래스카 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-05-08</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="RCISR07A431-100526.html" data-tags="rci alaska">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-rci">로얄 캐리비안</span>
+            <span class="card-tag tag-ship">알래스카</span>
+          </div>
+          <h3>🚢 Serenade of the Seas — 알래스카 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-05-10</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="CARNIVALSP28022026.html" data-tags="carnival caribbean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-carnival">카니발</span>
+            <span class="card-tag tag-ship">카리브해</span>
+          </div>
+          <h3>🚢 Carnival Spirit — 카리브해 8박</h3>
+          <div class="card-meta">
+            <span>📅 2026-02-28</span>
+            <span>🌙 8박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="CARNIVALPR01032026.html" data-tags="carnival caribbean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-carnival">카니발</span>
+            <span class="card-tag tag-ship">카리브해</span>
+          </div>
+          <h3>🚢 Carnival Pride — 카리브해 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-03-01</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="CARNIVALMI01032026.html" data-tags="carnival caribbean">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-carnival">카니발</span>
+            <span class="card-tag tag-ship">카리브해</span>
+          </div>
+          <h3>🚢 Carnival Miracle — 카리브해 7박</h3>
+          <div class="card-meta">
+            <span>📅 2026-03-01</span>
+            <span>🌙 7박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
+      <a class="card" href="CARNIVALLM2704202610.html" data-tags="carnival alaska">
+        <div class="card-thumb-placeholder">🚢</div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-carnival">카니발</span>
+            <span class="card-tag tag-ship">알래스카</span>
+          </div>
+          <h3>🚢 Carnival Luminosa — 알래스카 10박</h3>
+          <div class="card-meta">
+            <span>📅 2026-04-27</span>
+            <span>🌙 10박</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>2026-03-10</span>
+          <button class="open-btn" onclick="event.preventDefault(); window.open(this.closest('a').href)">열기 →</button>
+        </div>
+      </a>
     </div>
   </div>
-
-  <!-- 향후 월 그룹은 여기에 추가 예정 -->
-  <!-- MONTH_PLACEHOLDER -->
-
 </div>
-
 <script>
-function filterCards(tag, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+function filterCards(tag,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-
-  document.querySelectorAll('.card').forEach(card => {
-    const tags = card.dataset.tags || '';
-    if (tag === 'all' || tags.includes(tag)) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-
-  // 빈 그룹 숨기기
-  document.querySelectorAll('.month-group').forEach(group => {
-    const visible = [...group.querySelectorAll('.card')].some(c => c.style.display !== 'none');
-    group.style.display = visible ? 'block' : 'none';
+  document.querySelectorAll('.card').forEach(card=>{
+    const tags=card.dataset.tags||'';
+    card.style.display=(tag==='all'||tags.includes(tag))?'block':'none';
   });
 }
 </script>
-
 </body>
 </html>
