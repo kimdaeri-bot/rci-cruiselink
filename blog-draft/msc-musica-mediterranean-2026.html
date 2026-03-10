@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 검색 엔진 차단 -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <title>블로그 초안 | MSC 무지카 지중해 7박 (2026.09.01)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', sans-serif; background: #f5f5f5; color: #333; }
+
+    .admin-bar {
+      position: sticky; top: 0; z-index: 999;
+      background: #1a1a2e; color: #fff;
+      padding: 10px 20px; display: flex; align-items: center; gap: 12px;
+      font-size: 13px;
+    }
+    .admin-bar strong { color: #ffd700; }
+    .copy-all-btn {
+      margin-left: auto;
+      background: #4caf50; color: #fff; border: none;
+      padding: 7px 18px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: 700;
+    }
+    .copy-all-btn:hover { background: #388e3c; }
+
+    .wrapper { max-width: 800px; margin: 30px auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,.1); }
+
+    /* ── 각 섹션 복사 버튼 ── */
+    .section-wrap { position: relative; }
+    .section-wrap:hover .copy-section-btn { opacity: 1; }
+    .copy-section-btn {
+      position: absolute; top: 10px; right: 10px;
+      opacity: 0; transition: opacity .2s;
+      background: #0077cc; color: #fff; border: none;
+      padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 12px;
+    }
+
+    /* ── 타이포 ── */
+    .post-title {
+      font-size: 26px; font-weight: 900; line-height: 1.4;
+      padding: 32px 32px 8px; color: #0a2540;
+    }
+    .post-meta { padding: 0 32px 24px; font-size: 13px; color: #888; }
+    .post-meta span { margin-right: 12px; }
+
+    .hero-img { width: 100%; height: 380px; object-fit: cover; display: block; }
+
+    .section { padding: 28px 32px; border-bottom: 1px solid #eee; }
+    .section:last-child { border-bottom: none; }
+
+    h2 { font-size: 20px; font-weight: 800; color: #0077cc; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e8f4fd; }
+    h3 { font-size: 16px; font-weight: 700; color: #1a1a2e; margin: 18px 0 8px; }
+
+    p { font-size: 15px; line-height: 1.9; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 15px; line-height: 2; }
+
+    .img-row { display: flex; gap: 8px; margin: 16px 0; }
+    .img-row img { flex: 1; height: 200px; object-fit: cover; border-radius: 6px; }
+    .img-single { width: 100%; border-radius: 6px; margin: 16px 0; object-fit: cover; max-height: 340px; display: block; }
+
+    .info-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    .info-table th { background: #0077cc; color: #fff; padding: 10px 14px; text-align: left; }
+    .info-table td { padding: 10px 14px; border-bottom: 1px solid #eee; }
+    .info-table tr:nth-child(even) td { background: #f8fbff; }
+
+    .price-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    .price-table th { background: #0a2540; color: #fff; padding: 12px 16px; text-align: center; font-size: 14px; }
+    .price-table td { padding: 12px 16px; text-align: center; border-bottom: 1px solid #eee; font-size: 15px; }
+    .price-table tr.best td { background: #fff9e6; font-weight: 700; }
+    .price-table .price { color: #cc2200; font-weight: 800; font-size: 17px; }
+    .badge { background: #ffd700; color: #333; font-size: 11px; font-weight: 800; padding: 2px 6px; border-radius: 3px; margin-left: 6px; }
+
+    .tip-box { background: #fffbea; border-left: 4px solid #ffc107; padding: 14px 18px; border-radius: 0 6px 6px 0; margin: 16px 0; font-size: 14px; line-height: 1.8; }
+    .tip-box strong { color: #e65100; }
+
+    .route-box { background: #f0f7ff; border-radius: 8px; padding: 20px 24px; margin: 16px 0; }
+    .route-step { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 15px; }
+    .route-step .day-badge { background: #0077cc; color: #fff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 12px; white-space: nowrap; }
+    .route-step .arrow { color: #0077cc; font-weight: 700; }
+
+    .cta-box { background: linear-gradient(135deg, #0077cc, #0a2540); color: #fff; padding: 28px 32px; text-align: center; border-radius: 8px; margin: 20px 0; }
+    .cta-box h3 { color: #ffd700; font-size: 20px; margin-bottom: 10px; }
+    .cta-box p { font-size: 15px; opacity: .9; margin-bottom: 16px; }
+    .cta-contacts { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .cta-contacts a { color: #fff; text-decoration: none; background: rgba(255,255,255,.15); padding: 8px 18px; border-radius: 20px; font-size: 14px; font-weight: 700; }
+
+    .tags { padding: 16px 32px 28px; }
+    .tags span { display: inline-block; background: #e8f4fd; color: #0077cc; font-size: 13px; padding: 4px 10px; border-radius: 12px; margin: 3px; }
+
+    /* 복사 완료 토스트 */
+    #toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 10px 24px; border-radius: 20px; font-size: 14px; display: none; z-index: 9999; }
+  </style>
+</head>
+<body>
+
+<div class="admin-bar">
+  <strong>🔒 내부용 블로그 초안</strong>
+  <span>검색엔진 차단(noindex) — 외부 비공개</span>
+  <span>|</span>
+  <span>MSC 무지카 지중해 7박 · 2026.09.01</span>
+  <button class="copy-all-btn" onclick="copyAll()">📋 전체 텍스트 복사</button>
+</div>
+
+<div class="wrapper" id="blog-content">
+
+  <!-- ===== 제목 ===== -->
+  <div class="section-wrap">
+    <button class="copy-section-btn" onclick="copySection(this)">복사</button>
+    <h1 class="post-title">🚢 MSC 무지카로 떠나는 지중해 7박 크루즈 완전 정복!<br>제노바·마르세유·이비자·로마 한번에 🇮🇹🇫🇷🇪🇸</h1>
+    <p class="post-meta">
+      <span>📅 2026.09.01(화) ~ 09.08(화)</span>
+      <span>🌙 7박 8일</span>
+      <span>🚢 MSC 무지카(Musica)</span>
+      <span>🏁 출발·도착: 제노바(이탈리아)</span>
+    </p>
+  </div>
+
+  <!-- ===== 히어로 이미지 ===== -->
+  <img class="hero-img"
+    src="https://assets.widgety.co.uk/2021/11/30/08/39/15/ab35a659-53a2-4da4-b933-d54575271524/MSC%20Cruises%20MSC%20Musica%201.jpg"
+    alt="MSC 무지카 선박 외관">
+
+  <!-- ===== 도입부 ===== -->
+  <div class="section section-wrap">
+    <button class="copy-section-btn" onclick="copySection(this)">복사</button>
+    <h2>✈️ 이 여름, 지중해 크루즈 어때요?</h2>
+    <p>안녕하세요! 크루즈 전문 여행사 <strong>크루즈링크</strong>입니다 🙋‍♀️</p>
+    <p>
+      혹시 "유럽 여행은 가고 싶은데, 나라마다 호텔 옮겨 다니는 게 너무 번거롭다"고 느끼신 분 계신가요?<br>
+      그렇다면 <strong>지중해 크루즈</strong>가 딱입니다!
+    </p>
+    <p>
+      짐은 한 번만 풀고, 매일 아침 새로운 항구에서 눈을 뜨고, 저녁엔 배 위에서 석양을 보며 와인 한 잔 —<br>
+      이탈리아, 프랑스, 스페인 <strong>3개국을 7박 8일에 한꺼번에!</strong>
+    </p>
+    <p>
+      오늘 소개해 드릴 일정은 <strong>2026년 9월 1일 출발 MSC 무지카 지중해 7박 크루즈</strong>입니다.<br>
+      9월은 지중해 최성수기 직후라 날씨 완벽하고, 인파도 살짝 줄어 여행하기 가장 좋은 시즌이에요 🌞
+    </p>
+
+    <div class="tip-box">
+      <strong>💡 크루즈링크 Pick!</strong><br>
+      MSC 무지카는 2006년 취항한 클래식 지중해 특화 선박입니다. 우아한 유럽 감성의 인테리어와 검증된 서비스로 지중해 베테랑들이 반복 탑승하는 선박이에요.
+    </div>
+  </div>
+
+  <!-- ===== 기항지 일정 ===== -->
+  <div class="section section-wrap">
+    <button class="copy-section-btn" onclick="copySection(this)">복사</button>
+    <h2>🗺️ 7박 8일 기항지 완전 정리</h2>
+
+    <div class="route-box">
+      <div class="route-step"><span class="day-badge">DAY 1</span><span>제노바(이탈리아) 출항 🛳️</span></div>
+      <div class="route-step"><span class="arrow">↓</span></div>
+      <div class="route-step"><span class="day-badge">DAY 2</span><span>마르세유(프랑스) 🇫🇷 — 노트르담 드 라 가르드 대성당, 구 항구</span></div>
+      <div class="route-step"><span class="arrow">↓</span></div>
+      <div class="route-step"><span class="day-badge">DAY 3</span><span>발렌시아(스페인) 🇪🇸 — 예술 과학 도시, 파에야 본고장</span></div>
+      <div class="route-step"><span class="arrow">↓</span></div>
+      <div class="route-step"><span class="day-badge">DAY 4</span><span>이비자(스페인) 🏝️ — 세계 최고의 파티 섬, 이비자 올드타운(유네스코)</span></div>
+      <div class="route-step"><span class="arrow">↓</span></div>
+      <div class="route-step"><span class="day-badge">DAY 5</span><span>칼리아리(사르데냐, 이탈리아) 🇮🇹 — 에메랄드빛 해변, 고대 요새</span></div>
+      <div class="route-step"><span class="arrow">↓</span></div>
+      <div class="route-step"><span class="day-badge">DAY 6</span><span>치비타베키아(로마 관문, 이탈리아) 🏛️ — 바티칸, 콜로세움 당일 투어 가능!</span></div>
+      <div class="route-step"><span class="arrow">↓</span></div>
+      <div class="route-step"><span class="day-badge">DAY 7</span><span>항해일 — 선내 시설 만끽 🍾</span></div>
+      <div class="route-step"><span class="arrow">↓</span></div>
+      <div class="route-step"><span class="day-badge">DAY 8</span><span>제노바(이탈리아) 귀항 🏁</span></div>
+    </div>
+
+    <p>
+      이 일정의 하이라이트는 단연 <strong>치비타베키아(로마)</strong>입니다!<br>
+      로마는 단독 여행 시 최소 2~3일은 필요한 도시인데, 크루즈 기항지 투어로 바티칸+콜로세움+트레비 분수를 당일치기로 돌 수 있어요. 물론 시간이 촉박하니 사전 예약은 필수! 🎫
+    </p>
+
+    <div class="tip-box">
+      <strong>💡 이비자 기항지 TIP</strong><br>
+      이비자 하면 클럽 파티를 떠올리시는 분이 많은데, 낮의 이비자는 전혀 달라요! 유네스코 세계문화유산인 이비자 올드타운(Dalt Vila)은 고즈넉한 중세 성벽 마을이에요. 크루즈 기항 시간에 딱 맞는 코스입니다.
+    </div>
+  </div>
+
+  <!-- ===== 선박 소개 ===== -->
+  <div class="section section-wrap">
+    <button class="copy-section-btn" onclick="copySection(this)">복사</button>
+    <h2>🛳️ MSC 무지카(Musica) 선박 소개</h2>
+
+    <table class="info-table">
+      <tr><th>선박명</th><td>MSC Musica (무지카)</td></tr>
+      <tr><th>취항</th><td>2006년</td></tr>
+      <tr><th>총 톤수</th><td>89,600 GT</td></tr>
+      <tr><th>승객 정원</th><td>약 3,013명</td></tr>
+      <tr><th>전체 갑판</th><td>13개 덱</td></tr>
+      <tr><th>특징</th><td>유럽 클래식 인테리어, 지중해 전문 노선, MSC 뮤지카 클래스 1번 선박</td></tr>
+    </table>
+
+    <p>
+      MSC 무지카는 '음악(Musica)'을 테마로 설계된 선박입니다.<br>
+      선내 공연장 이름이 <strong>테아트로 라 스칼라(Teatro La Scala)</strong> — 이탈리아 밀라노의 전설적인 오페라 하우스에서 따온 이름이에요.
+    </p>
+    <p>
+      초대형 신조선은 아니지만, 그만큼 <strong>아담하고 아늑한 분위기</strong>가 매력입니다. 복잡하지 않고 선내를 쉽게 파악할 수 있어서 크루즈 입문자분들께도 추천해 드려요 😊
+    </p>
+  </div>
+
+  <!-- ===== 선내 시설 — 다이닝 ===== -->
+  <div class="section section-wrap">
+    <button class="copy-section-btn" onclick="copySection(this)">복사</button>
+    <h2>🍽️ 선내 레스토랑 &amp; 다이닝</h2>
+
+    <div class="img-row">
+      <img src="https://assets.widgety.co.uk/2015/09/03/11/07/37/631/MSC_Musica_Class_maxims_restaurant_2.jpg" alt="Belle Époque 레스토랑">
+      <img src="https://assets.widgety.co.uk/2015/09/03/11/07/34/972/MSC_Musica_Class_main_restaurant.jpg" alt="L'Oleandro 메인 레스토랑">
+    </div>
+
+    <h3>🥂 Belle Époque (벨 에포크)</h3>
+    <p>19세기 유럽의 황금시대를 모티프로 한 <strong>특별 레스토랑</strong>입니다. 정통 프렌치 요리와 와인 페어링, 로맨틱한 분위기로 커플 여행자들에게 특히 사랑받는 곳이에요. (별도 요금)</p>
+
+    <h3>🍝 L'Oleandro (올리안드로)</h3>
+    <p>크루즈 요금에 포함된 <strong>메인 레스토랑</strong>입니다. 매일 저녁 코스 디너가 제공되며, 이탈리안 기반의 유럽식 메뉴가 주를 이룹니다. 드레스 코드가 있는 포멀 나이트도 있어요!</p>
+
+    <h3>🍕 Gli Archi (글리 아르키)</h3>
+    <p>뷔페 스타일의 <strong>올데이 레스토랑</strong>. 아침부터 저녁까지 다양한 요리를 자유롭게 즐길 수 있습니다. 피자, 파스타, 아시아 요리, 디저트 코너까지 다채롭게 운영됩니다.</p>
+
+    <div class="tip-box">
+      <strong>💡 다이닝 TIP</strong><br>
+      기본 식사는 모두 크루즈 요금에 포함! 특별 레스토랑(스테이크하우스, 스시 바 등)은 1인당 $30~50 추가 요금이 있지만 일반 레스토랑만으로도 충분히 훌륭합니다.
+    </div>
+  </div>
+
+  <!-- ===== 선내 시설 — 엔터테인먼트 ===== -->
+  <div class="section section-wrap">
+    <button class="copy-section-btn" onclick="copySection(this)">복사</button>
+    <h2>🎭 엔터테인먼트 &amp; 선내 즐길거리</h2>
+
+    <div class="img-row">
+      <img src="https://assets.widgety.co.uk/2021/11/30/12/18/31/bc9fc4f2-72c8-41e3-be62-bcc374988f0d/MSC%20Cruises%20MSC%20Musica%20Theatre%203.jpg" alt="테아트로 라 스칼라 공연장">
+      <img src="https://assets.widgety.co.uk/2015/09/03/11/07/40/247/MSC_Musica_Class_Nightclub2.jpg" alt="Q32 디스코 나이트클럽">
+    </div>
+
+    <h3>🎪 테아트로 라 스칼라 (공연장)</h3>
+    <p>밀라노 스칼라 극장에서 이름을 딴 <strong>메인 극장</strong>입니다. 매일 저녁 뮤지컬 퍼포먼스, 마술쇼, 코미디 공연이 펼쳐집니다. 입장료 무료, 좌석은 선착순이니 30분 전에 도착하는 게 좋아요!</p>
+
+    <h3>🎰 산레모 카지노</h3>
+    <p>이탈리아 산레모 카지노 스타일로 디자인된 선내 카지노. 슬롯 머신부터 블랙잭, 룰렛까지 다양합니다. (항구 입항 시 운영 중단)</p>
+
+    <h3>🕺 Q32 디스코</h3>
+    <p>밤 늦게까지 운영되는 선내 나이트클럽. DJ와 함께하는 라틴 나이트, 80s 파티 등 테마 이벤트도 즐길 수 있어요.</p>
+  </div>
+
+  <!-- ===== 스파 &amp; 웰니스 ===== -->
+  <div class="section section-wrap">
+    <button class="copy-section-btn" onclick="copySection(this)">복사</button>
+    <h2>💆 MSC Aurea 스파 &amp; 피트니스</h2>
+
+    <div class="img-row">
+      <img src="https://assets.widgety.co.uk/2015/09/03/11/07/57/985/MSC_Musica_Class_Spa_relax_area.jpg" alt="MSC Aurea 스파">
+      <img src="https://assets.widgety.co.uk/2015/09/03/11/07/16/828/MSC_Musica_Class_golf_green.jpg" alt="스포츠 시설">
+    </div>
+
+    <p>
+      <strong>MSC Aurea 스파</strong>는 발리네즈 마사지, 터키식 증기탕, 사우나, 하이드로테라피로 구성된 선내 웰니스 공간입니다.<br>
+      Aurea 등급 객실을 선택하시면 스파 무제한 이용이 포함돼요!
+    </p>
+    <ul>
+      <li>🏋️ Technogym® 장비 갖춘 피트니스 센터 (바다 전망)</li>
+      <li>⛳ 미니 골프 코스</li>
+      <li>🏀 야외 스포츠 코트 (농구, 미식축구)</li>
+      <li>🚶 파워 워킹 트랙 (선박 외부 갑판 순환)</li>
+    </ul>
+  </div>
+
+  <!-- ===== 객실 안내 ===== -->
+  <div class="section section-wrap">
+    <button class="copy-section-btn" onclick="copySection(this)">복사</button>
+    <h2>🛏️ 객실 타입 안내</h2>
+
+    <div class="img-row">
+      <img src="https://assets.widgety.co.uk/2025/10/17/11/40/54/5d7da298-72a7-46cb-8b35-4491c40c827b/MSC%20Cruises%20MSC%20Musica%20Premium%20Suite%20Aurea%201%20%C2%A9MSC%20Rights%20-%20Ivan%20Sarfatti.jpg" alt="프리미엄 스위트 Aurea">
+      <img src="https://assets.widgety.co.uk/2025/10/17/11/58/46/990ecd40-bbe6-407a-8f59-1a8e4cb701ed/MSC%20Cruises%20MSC%20Musica%20Deluxe%20Balcony%20Aurea%20%C2%A9MSC%20Rights%20-%20Ivan%20Sarfatti.jpg" alt="디럭스 발코니 Aurea">
+    </div>
+
+    <div class="img-row">
+      <img src="https://assets.widgety.co.uk/2025/10/17/12/17/43/4bb8548c-9c94-43bd-978f-2c88d9a18c19/MSC%20Cruises%20MSC%20Musica%20Premium%20Balcony%20with%20Ocean%20View%201%20%C2%A9MSC%20Rights%20-%20Ivan%20Sarfatti.jpg" alt="프리미엄 발코니 오션뷰">
+      <img src="https://assets.widgety.co.uk/2025/10/17/12/25/30/2d3679c6-474f-46a2-9a10-a8b16a9e6e05/MSC%20Cruises%20MSC%20Musica%20Deluxe%20Balcony%201%20%C2%A9MSC%20Rights%20-%20Ivan%20Sarfatti.jpg" alt="디럭스 발코니">
+    </div>
+
+    <p>MSC 무지카의 객실은 총 4가지 등급으로 나뉩니다.</p>
+    <ul>
+      <li>🔵 <strong>인사이드(창문 없음)</strong> — 가성비 최고, 잠만 잘 분께 추천</li>
+      <li>🟢 <strong>오션뷰(창문)</strong> — 바다가 보이는 고정 창문</li>
+      <li>🟡 <strong>발코니</strong> ⭐ — 개인 테라스에서 지중해 석양 감상! 가장 인기</li>
+      <li>🔴 <strong>스위트 Aurea</strong> — 스파 무제한 포함, 프리미엄 공간</li>
+    </ul>
+  </div>
+
+  <!-- ===== 요금 ===== -->
+  <div class="section section-wrap">
+    <button class="copy-section-btn" onclick="copySection(this)">복사</button>
+    <h2>💰 2026년 9월 출발 요금 안내</h2>
+
+    <table class="price-table">
+      <thead>
+        <tr><th>객실 타입</th><th>1인 요금</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>인사이드 (창문 없음)</td>
+          <td class="price">$903~</td>
+          <td>약 130만원~</td>
+        </tr>
+        <tr>
+          <td>오션뷰 (창문)</td>
+          <td class="price">$963~</td>
+          <td>약 140만원~</td>
+        </tr>
+        <tr class="best">
+          <td>발코니 <span class="badge">인기</span></td>
+          <td class="price">$1,083~</td>
+          <td>약 157만원~ ⭐</td>
+        </tr>
+        <tr>
+          <td>스위트 Aurea</td>
+          <td class="price">$1,653~</td>
+          <td>약 240만원~</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>※ 위 요금은 1인 기준 / 항공료 별도 / 환율 약 1,450원 기준 환산<br>
+    ※ 조기 예약 시 얼리버드 할인 적용 가능 — 크루즈링크로 문의해 주세요!</p>
+
+    <div class="tip-box">
+      <strong>💡 포함 사항</strong> — 객실 + 기본 식사(메인 레스토랑, 뷔페) + 대부분의 선내 엔터테인먼트 + 항구세 포함<br><br>
+      <strong>💡 불포함 사항</strong> — 항공권 + 기항지 투어 + 음료 패키지 + 스파 이용료 (Aurea 제외) + 팁(1인 1일 약 $16)
+    </div>
+  </div>
+
+  <!-- ===== 키즈 ===== -->
+  <div class="section section-wrap">
+    <button class="copy-section-btn" onclick="copySection(this)">복사</button>
+    <h2>👨‍👩‍👧‍👦 가족 여행도 OK! 키즈 클럽</h2>
+
+    <div class="img-row">
+      <img src="https://assets.widgety.co.uk/2019/06/17/14/52/29/28856b2b-a70c-40bf-b6b6-3eb31e40080a/MSC%20Cruises%20MSC%20Armonia%20Baby%20Club.jpg" alt="베이비 클럽">
+      <img src="https://assets.widgety.co.uk/2019/06/17/14/07/01/d53dee21-bceb-4af3-8995-9a05265829d3/MSC%20Cruises%20MSC%20Armonia%20Mini%20Club.jpg" alt="미니 클럽">
+    </div>
+
+    <p>
+      MSC 무지카는 아이와 함께하는 가족 여행에도 최적화되어 있습니다!<br>
+      <strong>MSC Doremi Club</strong>은 연령별로 세분화된 키즈 프로그램을 운영합니다.
+    </p>
+    <ul>
+      <li>👶 베이비 클럽 (0~3세) — 치코(Chicco) 브랜드 협업, 전문 보육 스태프</li>
+      <li>🧒 미니 클럽 (3~6세) — LEGO® 파트너십, 창의 활동</li>
+      <li>🧑 주니어 클럽 (7~11세) — 스포츠 토너먼트, 요리 체험</li>
+      <li>👦 틴 클럽 (12~17세) — 소셜 이벤트, 게임 토너먼트</li>
+    </ul>
+    <p>부모님은 스파에서 여유를 즐기는 동안 아이들은 전문 케어 아래 즐거운 시간을 보낼 수 있어요 😊</p>
+  </div>
+
+  <!-- ===== 이런 분께 추천 ===== -->
+  <div class="section section-wrap">
+    <button class="copy-section-btn" onclick="copySection(this)">복사</button>
+    <h2>✅ 이런 분께 강력 추천합니다!</h2>
+    <ul>
+      <li>✅ 유럽 여행을 처음 계획 중이신 분</li>
+      <li>✅ 이탈리아·프랑스·스페인 3개국을 한 번에 보고 싶은 분</li>
+      <li>✅ 짐 끌고 호텔 매일 옮기는 게 싫은 분</li>
+      <li>✅ 크루즈 입문작으로 클래식하고 아늑한 선박 원하는 분</li>
+      <li>✅ 9월 지중해 황금 시즌을 최대한 즐기고 싶은 분</li>
+      <li>✅ 아이와 함께 안전하고 편하게 유럽 여행 원하는 가족</li>
+    </ul>
+  </div>
+
+  <!-- ===== CTA ===== -->
+  <div class="section">
+    <div class="cta-box">
+      <h3>📞 지금 바로 문의해 보세요!</h3>
+      <p>크루즈링크 전문 상담사가 항공권 연결부터 기항지 투어까지<br>처음부터 끝까지 함께 설계해 드립니다 🙋</p>
+      <div class="cta-contacts">
+        <a href="tel:02-3788-9119">📞 02-3788-9119</a>
+        <a href="https://pf.kakao.com/_xgYbJG">💬 카카오톡 상담</a>
+        <a href="https://www.cruiselink.co.kr/cruise-view.html?ref=MSCMU20260901GOAGOA&ship=msc-musica">🌐 예약 페이지</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 태그 ===== -->
+  <div class="tags section-wrap">
+    <button class="copy-section-btn" onclick="copySection(this)">복사</button>
+    <span>#MSC무지카</span>
+    <span>#지중해크루즈</span>
+    <span>#크루즈여행</span>
+    <span>#MSC크루즈</span>
+    <span>#이비자여행</span>
+    <span>#로마여행</span>
+    <span>#마르세유</span>
+    <span>#발렌시아</span>
+    <span>#칼리아리</span>
+    <span>#사르데냐</span>
+    <span>#크루즈패키지</span>
+    <span>#유럽크루즈</span>
+    <span>#지중해여행</span>
+    <span>#크루즈링크</span>
+    <span>#2026크루즈</span>
+  </div>
+
+</div><!-- .wrapper -->
+
+<div id="toast">✅ 복사 완료!</div>
+
+<script>
+function showToast() {
+  const t = document.getElementById('toast');
+  t.style.display = 'block';
+  setTimeout(() => t.style.display = 'none', 2000);
+}
+
+function copyAll() {
+  const el = document.getElementById('blog-content');
+  // 텍스트만 추출
+  let text = '';
+  const sections = el.querySelectorAll('h1, h2, h3, p, li, .route-step, .tags');
+  sections.forEach(s => {
+    if (s.classList.contains('copy-section-btn')) return;
+    const txt = s.innerText.trim();
+    if (txt) text += txt + '\n\n';
+  });
+  navigator.clipboard.writeText(text).then(() => showToast()).catch(() => {
+    // fallback
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast();
+  });
+}
+
+function copySection(btn) {
+  const section = btn.parentElement;
+  let text = '';
+  section.querySelectorAll('h1,h2,h3,p,li,.route-step').forEach(el => {
+    if (el.classList.contains('copy-section-btn')) return;
+    const txt = el.innerText.trim();
+    if (txt) text += txt + '\n\n';
+  });
+  navigator.clipboard.writeText(text).then(() => showToast());
+}
+</script>
+</body>
+</html>
