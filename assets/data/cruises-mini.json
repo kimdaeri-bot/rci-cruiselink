@@ -2183,5 +2183,107 @@
     ],
     "portImage": "https://assets.widgety.co.uk/2024/10/23/18/21/29/818cc52a-35c3-4288-a750-f57d71c8c011/sung-jin-cho-yza5kpBVcUI-unsplash.jpg",
     "portImagePort": "Seogwipo"
+  },
+  {
+    "ref": "CELEBSL07A436-100526",
+    "destination": "alaska",
+    "shipSlug": "celebrity-solstice",
+    "operator": "Celebrity Cruises",
+    "dateFrom": "2026-05-10",
+    "nights": 7,
+    "title": "캐나다·미국 7박 크루즈",
+    "countriesKo": [
+      "캐나다",
+      "미국"
+    ],
+    "priceInside": 0,
+    "priceOutside": 914,
+    "priceBalcony": 983,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/09/11/17/38/19/8d9b2ef2-456b-4c4e-9478-4b445314f541/Celebrity%20Solstice%20-%20Exterior%201%2C%20%C2%A9CEL.jpg",
+    "hashtags": [
+      "#알래스카크루즈",
+      "#셀러브리티크루즈",
+      "#CelebritySolstice",
+      "#Vancouver, British Columbia",
+      "#Cruising Inside Passage, U.S.A"
+    ]
+  },
+  {
+    "ref": "RCISC04I850-180526",
+    "destination": "asia",
+    "shipSlug": "spectrum-of-the-seas",
+    "operator": "Royal Caribbean International",
+    "dateFrom": "2026-05-18",
+    "nights": 4,
+    "title": "중국·한국 4박 크루즈",
+    "countriesKo": [
+      "중국",
+      "한국"
+    ],
+    "priceInside": 438,
+    "priceOutside": 503,
+    "priceBalcony": 542,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/24/09/34/14/5200f781-5ac2-4c0c-8b5c-acf5da11df88/RCI%20Spectrum%20of%20the%20Seas.jpg",
+    "hashtags": [
+      "#아시아크루즈",
+      "#로얄캐리비안",
+      "#SpectrumoftheSeas",
+      "#Baoshan Pt",
+      "#인천"
+    ]
+  },
+  {
+    "ref": "RCIEN07W689-090526",
+    "destination": "caribbean",
+    "shipSlug": "enchantment-of-the-seas",
+    "operator": "Royal Caribbean International",
+    "dateFrom": "2026-05-09",
+    "nights": 7,
+    "title": "카리브해 7박 크루즈",
+    "countriesKo": [
+      "미국",
+      "멕시코",
+      "벨리즈",
+      "온두라스"
+    ],
+    "priceInside": 488,
+    "priceOutside": 554,
+    "priceBalcony": 938,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/09/11/16/09/2295fbbd-f726-45a1-a6a9-32dabad328ec/RCI%2C%20Enchantment%20of%20the%20Seas%2C%20Exterior.jpg",
+    "hashtags": [
+      "#카리브해크루즈",
+      "#로얄캐리비안",
+      "#EnchantmentoftheSeas",
+      "#Tampa, Florida",
+      "#Costa Maya"
+    ]
+  },
+  {
+    "ref": "CELEBML12I175-070626",
+    "destination": "korea",
+    "shipSlug": "celebrity-millennium",
+    "operator": "Celebrity Cruises",
+    "dateFrom": "2026-06-07",
+    "nights": 12,
+    "title": "일본·한국 12박 크루즈",
+    "countriesKo": [
+      "일본",
+      "한국"
+    ],
+    "priceInside": 1613,
+    "priceOutside": 2062,
+    "priceBalcony": 0,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/02/05/10/02/21/762e4e18-c89e-4ccd-ac4c-59d143cbb87b/Celebrity%20Cruises%2C%20Celebrity%20Millenium%2C%20Exterior.jpg",
+    "hashtags": [
+      "#한국/일본크루즈",
+      "#셀러브리티크루즈",
+      "#CelebrityMillennium",
+      "#도쿄",
+      "#오사카"
+    ]
   }
 ]
