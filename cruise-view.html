@@ -1147,6 +1147,32 @@
 
     // 제목 고정값 — 동적 업데이트 불필요
 
+    // ── MIB 스와이프 제스처 ──
+    (function() {
+      let startY = 0;
+      const handle = document.getElementById('mibHandle');
+      if (!handle) return;
+
+      handle.addEventListener('touchstart', function(e) {
+        startY = e.touches[0].clientY;
+      }, { passive: true });
+
+      handle.addEventListener('touchend', function(e) {
+        const endY = e.changedTouches[0].clientY;
+        const diff = startY - endY; // 양수 = 위로 스와이프, 음수 = 아래로 스와이프
+        const mib = document.getElementById('mib');
+        if (diff > 30) {
+          // 위로 스와이프 → 열기
+          mib.classList.add('open');
+          document.body.classList.add('mib-open');
+        } else if (diff < -30) {
+          // 아래로 스와이프 → 닫기
+          mib.classList.remove('open');
+          document.body.classList.remove('mib-open');
+        }
+      }, { passive: true });
+    })();
+
     // ── 블로그 포스팅 팝업 ──
     function openBlogPopup(fileKey) {
       const url = `/blog-draft/${fileKey}.html`;
