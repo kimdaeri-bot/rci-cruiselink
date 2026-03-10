@@ -64,11 +64,52 @@
       try {
         // ① 로컬 JSON + Widgety API 병렬 로드
         const urlShip = new URLSearchParams(location.search).get('ship');
-        const [localCruise, holiday] = await Promise.all([
+        const [localCruise, holidayRaw] = await Promise.all([
           findLocalCruise(ref),
-          API.getHoliday(ref),
+          API.getHoliday(ref).catch(() => null),   // Widgety 404 → null (폴백)
         ]);
         const shipLivePromise = urlShip ? API.getShipLive(urlShip) : null;
+
+        // ② Widgety 실패 시 로컬 데이터로 최소 holiday 객체 생성
+        let holiday = holidayRaw;
+        if (!holiday && localCruise) {
+          const lc = localCruise;
+          const toPort = n => ({ name: n?.nameKo || n?.name || n || '' });
+          holiday = {
+            _fromLocal: true,
+            _koreanTitle: lc.title || lc.shipTitleKo || lc.shipTitle || '',
+            _portRouteKo: lc.portRoute || '',
+            ship_title: lc.shipTitle || '',
+            operator_title: lc.operator || '',
+            start_date: lc.dateFrom || '',
+            end_date: lc.dateTo || '',
+            duration: lc.nights || 7,
+            start_port: toPort(lc.startsAt),
+            end_port: toPort(lc.endsAt),
+            headline_prices: {
+              cruise: {
+                inside:  lc.priceInside  ? { amount: lc.priceInside  } : null,
+                outside: lc.priceOutside ? { amount: lc.priceOutside } : null,
+                balcony: lc.priceBalcony ? { amount: lc.priceBalcony } : null,
+                suite:   lc.priceSuite   ? { amount: lc.priceSuite   } : null,
+              }
+            },
+            itinerary: {
+              days: (lc.ports || []).map((p, i) => ({
+                day: i + 1,
+                day_name: p.nameKo || p.name || '',
+                locations: [{
+                  name: p.name || '',
+                  country: p.country || '',
+                  arrival_time: '',
+                  departure_time: '',
+                  widgety_data: { images: [], description: '' }
+                }]
+              }))
+            }
+          };
+        }
+
         if (!holiday) {
           content.innerHTML = '<div class="empty-state"><span class="emoji">⚠️</span><p>크루즈 정보를 찾을 수 없습니다</p></div>';
           return;
