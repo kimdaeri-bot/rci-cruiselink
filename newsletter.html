@@ -202,7 +202,7 @@
       </div>
 
       <!-- 폼 -->
-      <form id="nlForm" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
+      <form id="nlForm">
         <div class="form-row">
           <div class="form-group">
             <label>성함 <span class="req">*</span></label>
@@ -228,9 +228,7 @@
           <div class="interest-chip"><input type="checkbox" id="i6" name="interest" value="항공+크루즈 패키지"><label for="i6">✈️ 항공 패키지</label></div>
         </div>
 
-        <!-- 숨김 필드: 수신 경로 -->
-        <input type="hidden" name="_subject" value="[크루즈링크] 뉴스레터 구독 신청">
-        <input type="hidden" name="_next" value="">
+
 
         <div class="consent-box">
           <div class="consent-item">
@@ -269,6 +267,7 @@ const form = document.getElementById('nlForm');
 const btn = document.getElementById('submitBtn');
 const successBox = document.getElementById('successBox');
 const errorMsg = document.getElementById('errorMsg');
+const API_URL = 'https://enttix-omega.vercel.app/api/newsletter';
 
 form.addEventListener('submit', async function(e) {
   e.preventDefault();
@@ -276,11 +275,21 @@ form.addEventListener('submit', async function(e) {
   btn.textContent = '전송 중...';
   errorMsg.style.display = 'none';
 
+  const interests = [...document.querySelectorAll('input[name="interest"]:checked')].map(el => el.value);
+
+  const payload = {
+    name: form.querySelector('[name="name"]').value.trim(),
+    email: form.querySelector('[name="email"]').value.trim(),
+    phone: form.querySelector('[name="phone"]').value.trim(),
+    interests,
+    marketing: document.getElementById('c2').checked,
+  };
+
   try {
-    const res = await fetch(form.action, {
+    const res = await fetch(API_URL, {
       method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
     });
     if (res.ok) {
       form.style.display = 'none';
