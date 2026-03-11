@@ -827,10 +827,29 @@
     return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
-  function showInquiryDetail(inq) {
+  async function showInquiryDetail(inq) {
     if (!inq) return;
     currentInquiry = inq;
     const pax = inq.pax || 1;
+
+    // ports 없으면 Ref로 상품 데이터에서 자동 조회
+    if (!inq.ports && inq.ref) {
+      try {
+        const srcs = [
+          'https://www.cruiselink.co.kr/assets/data/featured.json',
+          'https://www.cruiselink.co.kr/assets/data/cruises-mini.json',
+        ];
+        for (const src of srcs) {
+          const r = await fetch(src);
+          const list = await r.json();
+          const found = list.find(c => c.ref === inq.ref);
+          if (found && (found.portRoute || found.ports)) {
+            inq.ports = found.portRoute || found.ports;
+            break;
+          }
+        }
+      } catch {}
+    }
 
     document.getElementById('detailBody').innerHTML = `
       <div class="detail-section">
