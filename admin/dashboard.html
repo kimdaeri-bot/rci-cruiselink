@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>크루즈링크 관리자 대시보드</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+    background: #f4f6fb;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar {
+    width: 220px;
+    min-height: 100vh;
+    background: #1a237e;
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+  }
+  .sidebar-header {
+    padding: 24px 20px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .sidebar-header .logo-icon { font-size: 28px; }
+  .sidebar-header h2 {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+  .sidebar-header p {
+    color: rgba(255,255,255,0.55);
+    font-size: 11px;
+    margin-top: 2px;
+  }
+  .sidebar-menu {
+    flex: 1;
+    padding: 16px 0;
+  }
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    color: rgba(255,255,255,0.75);
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.15s, color 0.15s;
+    border-left: 3px solid transparent;
+  }
+  .menu-item:hover {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+  }
+  .menu-item.active {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-left-color: #90caf9;
+  }
+  .sidebar-footer {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .btn-logout {
+    width: 100%;
+    padding: 9px 12px;
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.8);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: inherit;
+    transition: background 0.15s;
+  }
+  .btn-logout:hover {
+    background: rgba(255,255,255,0.22);
+    color: #fff;
+  }
+
+  /* ===== MAIN ===== */
+  .main {
+    margin-left: 220px;
+    flex: 1;
+    padding: 32px;
+    min-height: 100vh;
+  }
+  .panel {
+    display: none;
+  }
+  .panel.active {
+    display: block;
+  }
+  .panel-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 24px;
+  }
+
+  /* ===== PANEL 1: INQUIRY ===== */
+  .inquiry-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .btn-refresh {
+    padding: 8px 16px;
+    background: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: inherit;
+  }
+  .btn-refresh:hover { background: #283593; }
+  .inquiry-table-wrap {
+    background: #fff;
+    border-radius: 12px;
+    overflow: auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  table.inquiry-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table.inquiry-table th {
+    background: #1a237e;
+    color: white;
+    padding: 12px 14px;
+    font-size: 13px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  table.inquiry-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  table.inquiry-table tr:hover td {
+    background: #f5f7ff;
+    cursor: pointer;
+  }
+  .badge {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .badge-new { background: #e3f2fd; color: #1565c0; }
+  .badge-processing { background: #fff3e0; color: #e65100; }
+  .badge-done { background: #e8f5e9; color: #2e7d32; }
+  .empty-row td {
+    text-align: center;
+    padding: 40px;
+    color: #aaa;
+  }
+
+  /* ===== INQUIRY DETAIL MODAL ===== */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 40px 20px;
+  }
+  .overlay.show { display: flex; justify-content: center; align-items: flex-start; }
+  .detail-card {
+    background: #fff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 700px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.2);
+  }
+  .detail-header {
+    background: #1a237e;
+    color: white;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .detail-header h3 { font-size: 16px; }
+  .btn-close-detail {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 4px;
+  }
+  .detail-body { padding: 24px; }
+  .detail-section {
+    margin-bottom: 24px;
+  }
+  .detail-section h4 {
+    font-size: 13px;
+    color: #1a237e;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e8eaf6;
+  }
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .detail-field { font-size: 13px; }
+  .detail-field label {
+    color: #888;
+    display: block;
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+  .detail-field span {
+    color: #222;
+    font-weight: 500;
+  }
+  .detail-field.full { grid-column: 1 / -1; }
+  .fare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .fare-input-group { display: flex; flex-direction: column; gap: 4px; }
+  .fare-input-group label { font-size: 12px; color: #666; }
+  .fare-input-group input, .fare-input-group textarea {
+    padding: 8px 10px;
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .fare-input-group input:focus, .fare-input-group textarea:focus { border-color: #1a237e; }
+  .fare-input-group textarea { resize: vertical; min-height: 64px; }
+  .detail-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+    margin-top: 8px;
+  }
+  .btn-action {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 600;
+    transition: opacity 0.15s;
+  }
+  .btn-action:hover { opacity: 0.85; }
+  .btn-fare { background: #1a237e; color: white; }
+  .btn-invoice { background: #37474f; color: white; }
+  .status-change {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+  .status-select {
+    padding: 8px 10px;
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    outline: none;
+  }
+  .btn-save-status {
+    padding: 8px 14px;
+    background: #43a047;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 600;
+  }
+  .btn-save-status:hover { background: #388e3c; }
+
+  /* ===== PANEL 2: PARTNER ===== */
+  .partner-form-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 24px;
+  }
+  .partner-form-card h3 {
+    font-size: 15px;
+    color: #1a237e;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .partner-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .form-group label {
+    font-size: 12px;
+    color: #666;
+    font-weight: 600;
+  }
+  .form-group input, .form-group textarea, .form-group select {
+    padding: 9px 10px;
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: #1a237e;
+  }
+  .form-group textarea { resize: vertical; min-height: 72px; }
+  .form-group.full { grid-column: 1 / -1; }
+  .btn-add-partner {
+    margin-top: 16px;
+    padding: 10px 24px;
+    background: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 600;
+  }
+  .btn-add-partner:hover { background: #283593; }
+  .partner-note {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .partner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .partner-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .partner-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    background: #eee;
+  }
+  .partner-card-body {
+    padding: 12px;
+  }
+  .partner-card-body h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #222;
+  }
+  .partner-card-body p {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .partner-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px 12px;
+  }
+  .cat-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    background: #e8eaf6;
+    color: #3949ab;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .partner-card-actions { display: flex; gap: 6px; }
+  .btn-sm {
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+  .btn-edit-p { background: #e3f2fd; color: #1565c0; }
+  .btn-del-p { background: #ffebee; color: #c62828; }
+  .partner-empty {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 40px;
+    color: #aaa;
+    font-size: 14px;
+  }
+
+  /* ===== PANEL 3: CHAT ===== */
+  .chat-wrap {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 160px);
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+  .chat-header {
+    padding: 14px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8f9ff;
+  }
+  .chat-header h3 { font-size: 15px; color: #1a237e; font-weight: 700; }
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .status-badge .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+  .status-badge.green { background: #e8f5e9; color: #2e7d32; }
+  .status-badge.red { background: #ffebee; color: #c62828; }
+  .chat-note {
+    margin-left: auto;
+    font-size: 11px;
+    color: #aaa;
+  }
+  #chatMessages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .msg { display: flex; }
+  .msg-user { align-self: flex-end; }
+  .msg-user .bubble {
+    background: #1a237e;
+    color: white;
+    border-radius: 12px 12px 2px 12px;
+    padding: 10px 14px;
+    font-size: 14px;
+    max-width: 65%;
+    word-break: break-word;
+    line-height: 1.5;
+  }
+  .msg-assistant { align-self: flex-start; }
+  .msg-assistant .bubble {
+    background: #f0f0f0;
+    color: #222;
+    border-radius: 12px 12px 12px 2px;
+    padding: 10px 14px;
+    font-size: 14px;
+    max-width: 65%;
+    word-break: break-word;
+    line-height: 1.5;
+  }
+  .msg-system { align-self: center; }
+  .msg-system .bubble {
+    background: #fff3cd;
+    color: #856404;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 10px;
+  }
+  .chat-input-area {
+    padding: 14px 16px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    background: #f8f9ff;
+  }
+  #chatInput {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: none;
+    outline: none;
+    line-height: 1.4;
+    max-height: 120px;
+    transition: border-color 0.2s;
+  }
+  #chatInput:focus { border-color: #1a237e; }
+  .btn-send {
+    padding: 10px 18px;
+    background: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .btn-send:hover { background: #283593; }
+
+  /* ===== MISC ===== */
+  .loading {
+    text-align: center;
+    padding: 40px;
+    color: #aaa;
+  }
+  .toast {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background: #323232;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="logo-icon">🚢</div>
+    <h2>크루즈링크<br>관리자</h2>
+    <p>CruiseLink Admin</p>
+  </div>
+  <nav class="sidebar-menu">
+    <div class="menu-item active" id="menuInquiry" onclick="showPanel('inquiry')">
+      <span>📋</span> 문의 목록
+    </div>
+    <div class="menu-item" id="menuPartner" onclick="showPanel('partner')">
+      <span>🔗</span> 파트너 링크
+    </div>
+    <div class="menu-item" id="menuChat" onclick="showPanel('chat')">
+      <span>💬</span> 김대리 채팅
+    </div>
+  </nav>
+  <div class="sidebar-footer">
+    <button class="btn-logout" onclick="doLogout()">🚪 로그아웃</button>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+  <!-- PANEL 1: 문의 목록 -->
+  <div class="panel active" id="panelInquiry">
+    <div class="inquiry-toolbar">
+      <h2 class="panel-title" style="margin-bottom:0">📋 문의 목록</h2>
+      <button class="btn-refresh" onclick="loadInquiries()">🔄 새로고침</button>
+    </div>
+    <div class="inquiry-table-wrap">
+      <table class="inquiry-table">
+        <thead>
+          <tr>
+            <th>접수일</th>
+            <th>고객명</th>
+            <th>연락처</th>
+            <th>상품명</th>
+            <th>출발일</th>
+            <th>인원</th>
+            <th>상태</th>
+          </tr>
+        </thead>
+        <tbody id="inquiryTableBody">
+          <tr><td colspan="7" style="text-align:center;padding:40px;color:#aaa">로딩 중...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- PANEL 2: 파트너 링크 -->
+  <div class="panel" id="panelPartner">
+    <h2 class="panel-title">🔗 파트너 링크 관리</h2>
+    <div class="partner-note">
+      💡 저장 후 메인페이지 파트너 섹션에 자동 반영됩니다 (약 2분 소요)
+    </div>
+    <div class="partner-form-card">
+      <h3>➕ 파트너 카드 추가</h3>
+      <div class="partner-form-grid">
+        <div class="form-group">
+          <label>카드 제목</label>
+          <input type="text" id="pTitle" placeholder="예: 지중해 크루즈 특가">
+        </div>
+        <div class="form-group">
+          <label>카테고리</label>
+          <select id="pCategory">
+            <option value="지중해">지중해</option>
+            <option value="알래스카">알래스카</option>
+            <option value="카리브해">카리브해</option>
+            <option value="한국일본">한국일본</option>
+            <option value="북유럽">북유럽</option>
+            <option value="아시아중동">아시아중동</option>
+            <option value="기타">기타</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>이미지 URL</label>
+          <input type="url" id="pImage" placeholder="https://...">
+        </div>
+        <div class="form-group">
+          <label>외부 링크 URL</label>
+          <input type="url" id="pLink" placeholder="https://...">
+        </div>
+        <div class="form-group full">
+          <label>설명 (최대 100자)</label>
+          <textarea id="pDesc" placeholder="파트너 상품 설명을 입력하세요" maxlength="100"></textarea>
+        </div>
+      </div>
+      <button class="btn-add-partner" onclick="addPartner()">➕ 추가</button>
+    </div>
+    <div class="partner-grid" id="partnerGrid">
+      <div class="partner-empty">로딩 중...</div>
+    </div>
+  </div>
+
+  <!-- PANEL 3: 채팅 -->
+  <div class="panel" id="panelChat">
+    <h2 class="panel-title">💬 김대리 채팅</h2>
+    <div class="chat-wrap">
+      <div class="chat-header">
+        <h3>김대리 AI</h3>
+        <span class="status-badge red" id="wsStatusBadge">
+          <span class="dot"></span>
+          <span id="wsStatusText">연결 안됨</span>
+        </span>
+        <span class="chat-note">OpenClaw Gateway — 로컬 Mac 전용</span>
+      </div>
+      <div id="chatMessages"></div>
+      <div class="chat-input-area">
+        <textarea id="chatInput" rows="1" placeholder="메시지를 입력하세요... (Enter로 전송, Shift+Enter 줄바꿈)"></textarea>
+        <button class="btn-send" onclick="sendMessage()">전송</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- INQUIRY DETAIL OVERLAY -->
+<div class="overlay" id="inquiryOverlay">
+  <div class="detail-card">
+    <div class="detail-header">
+      <h3>📋 문의 상세</h3>
+      <button class="btn-close-detail" onclick="closeDetail()">✕</button>
+    </div>
+    <div class="detail-body" id="detailBody"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+  // ===== AUTH GUARD =====
+  if (!sessionStorage.getItem('cl_admin')) {
+    location.href = 'index.html';
+  }
+
+  const GH_TOKEN = "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";
+  const GH_REPO = "kimdaeri-bot/cruiselink-v2";
+
+  let currentInquiries = [];
+  let currentPartners = [];
+  let currentInquiry = null;
+
+  // ===== PANEL SWITCHING =====
+  function showPanel(name) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.menu-item').forEach(m => m.classList.remove('active'));
+
+    document.getElementById('panel' + capitalize(name)).classList.add('active');
+    document.getElementById('menu' + capitalize(name)).classList.add('active');
+
+    if (name === 'chat' && (!ws || ws.readyState !== WebSocket.OPEN)) {
+      connectWS();
+    }
+  }
+
+  function capitalize(s) {
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
+  function doLogout() {
+    sessionStorage.removeItem('cl_admin');
+    location.href = 'index.html';
+  }
+
+  // ===== TOAST =====
+  function showToast(msg, duration = 2500) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), duration);
+  }
+
+  // ===== GITHUB UTILS =====
+  async function saveToGitHub(path, data) {
+    const getRes = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${path}`, {
+      headers: { Authorization: `Bearer ${GH_TOKEN}`, Accept: "application/vnd.github.v3+json" }
+    });
+    const file = await getRes.json();
+    const sha = file.sha;
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
+    const putRes = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${path}`, {
+      method: "PUT",
+      headers: { Authorization: `Bearer ${GH_TOKEN}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ message: "admin: update " + path, content, sha })
+    });
+    if (!putRes.ok) {
+      const err = await putRes.json();
+      throw new Error(err.message || 'GitHub API 오류');
+    }
+  }
+
+  // =============================================
+  // PANEL 1: 문의 목록
+  // =============================================
+  async function loadInquiries() {
+    const tbody = document.getElementById('inquiryTableBody');
+    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:32px;color:#aaa">로딩 중...</td></tr>';
+    try {
+      const res = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/admin/inquiries.json`, {
+        headers: { Authorization: `Bearer ${GH_TOKEN}`, Accept: "application/vnd.github.v3+json" }
+      });
+      const file = await res.json();
+      const data = JSON.parse(atob(file.content.replace(/\n/g, "")));
+      currentInquiries = data;
+      renderInquiries(data);
+    } catch (e) {
+      tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:32px;color:#e53935">오류: ${e.message}</td></tr>`;
+    }
+  }
+
+  function renderInquiries(data) {
+    const tbody = document.getElementById('inquiryTableBody');
+    if (!data || data.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:40px;color:#aaa">문의 내역이 없습니다</td></tr>';
+      return;
+    }
+    const sorted = [...data].sort((a, b) => new Date(b.timestamp || 0) - new Date(a.timestamp || 0));
+    tbody.innerHTML = sorted.map((inq, i) => {
+      const badgeClass = inq.status === '신규' ? 'badge-new' : inq.status === '처리중' ? 'badge-processing' : 'badge-done';
+      const date = inq.timestamp ? new Date(inq.timestamp).toLocaleDateString('ko-KR') : '-';
+      return `<tr onclick="showInquiryDetail(currentInquiries.find(x => x.id === '${inq.id}'))">
+        <td>${date}</td>
+        <td>${esc(inq.name || '-')}</td>
+        <td>${esc(inq.phone || '-')}</td>
+        <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis">${esc(inq.product || '-')}</td>
+        <td>${esc(inq.dateFrom || '-')}</td>
+        <td>${esc(inq.pax || '-')}명</td>
+        <td><span class="badge ${badgeClass}">${esc(inq.status || '신규')}</span></td>
+      </tr>`;
+    }).join('');
+  }
+
+  function esc(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function showInquiryDetail(inq) {
+    if (!inq) return;
+    currentInquiry = inq;
+    const pax = inq.pax || 1;
+
+    document.getElementById('detailBody').innerHTML = `
+      <div class="detail-section">
+        <h4>고객 정보</h4>
+        <div class="detail-grid">
+          <div class="detail-field"><label>이름</label><span>${esc(inq.name||'-')}</span></div>
+          <div class="detail-field"><label>이메일</label><span>${esc(inq.email||'-')}</span></div>
+          <div class="detail-field"><label>연락처</label><span>${esc(inq.phone||'-')}</span></div>
+          <div class="detail-field"><label>인원</label><span>${esc(inq.pax||'-')}명</span></div>
+          <div class="detail-field"><label>희망 객실</label><span>${esc(inq.cabin||'-')}</span></div>
+          <div class="detail-field full"><label>요청사항</label><span>${esc(inq.message||'-')}</span></div>
+        </div>
+      </div>
+      <div class="detail-section">
+        <h4>크루즈 정보</h4>
+        <div class="detail-grid">
+          <div class="detail-field full"><label>상품명</label><span>${esc(inq.product||'-')}</span></div>
+          <div class="detail-field"><label>선사</label><span>${esc(inq.cruiseline||'-')}</span></div>
+          <div class="detail-field"><label>선박</label><span>${esc(inq.ship||'-')}</span></div>
+          <div class="detail-field"><label>출발일</label><span>${esc(inq.dateFrom||'-')}</span></div>
+          <div class="detail-field"><label>일정</label><span>${esc(inq.ports||'-')}</span></div>
+          <div class="detail-field"><label>참고가격</label><span>${esc(inq.price||'-')}</span></div>
+          <div class="detail-field"><label>Ref</label><span>${esc(inq.ref||'-')}</span></div>
+        </div>
+      </div>
+      <div class="detail-section">
+        <h4>요금 입력</h4>
+        <div class="fare-grid">
+          <div class="fare-input-group">
+            <label>인사이드 (USD/1인)</label>
+            <input type="number" id="fareInside" placeholder="0" min="0" step="1">
+          </div>
+          <div class="fare-input-group">
+            <label>아웃사이드 (USD/1인)</label>
+            <input type="number" id="fareOutside" placeholder="0" min="0" step="1">
+          </div>
+          <div class="fare-input-group">
+            <label>발코니 (USD/1인)</label>
+            <input type="number" id="fareBalcony" placeholder="0" min="0" step="1">
+          </div>
+          <div class="fare-input-group">
+            <label>스위트 (USD/1인)</label>
+            <input type="number" id="fareSuite" placeholder="0" min="0" step="1">
+          </div>
+          <div class="fare-input-group">
+            <label>세금/항만세 (USD/1인)</label>
+            <input type="number" id="fareTax" placeholder="0" min="0" step="1">
+          </div>
+          <div class="fare-input-group">
+            <label>한국 출발 항공료 (KRW/1인)</label>
+            <input type="number" id="fareAir" placeholder="0" min="0" step="10000">
+          </div>
+          <div class="fare-input-group">
+            <label>기타비용 (KRW)</label>
+            <input type="number" id="fareEtc" placeholder="0" min="0" step="10000">
+          </div>
+          <div class="fare-input-group">
+            <label>비고</label>
+            <textarea id="fareRemarks" placeholder="특이사항 입력"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="detail-actions">
+        <button class="btn-action btn-fare" onclick="generateFareQuote(currentInquiry)">📄 요금안내 생성</button>
+        <button class="btn-action btn-invoice" onclick="window.open('../invoice.html')">📋 인보이스 열기</button>
+        <div class="status-change">
+          <select class="status-select" id="statusSelect">
+            <option value="신규" ${inq.status==='신규'?'selected':''}>신규</option>
+            <option value="처리중" ${inq.status==='처리중'?'selected':''}>처리중</option>
+            <option value="완료" ${inq.status==='완료'?'selected':''}>완료</option>
+          </select>
+          <button class="btn-save-status" onclick="saveStatus()">저장</button>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('inquiryOverlay').classList.add('show');
+  }
+
+  function closeDetail() {
+    document.getElementById('inquiryOverlay').classList.remove('show');
+    currentInquiry = null;
+  }
+
+  async function saveStatus() {
+    if (!currentInquiry) return;
+    const newStatus = document.getElementById('statusSelect').value;
+    const idx = currentInquiries.findIndex(x => x.id === currentInquiry.id);
+    if (idx === -1) return;
+    currentInquiries[idx].status = newStatus;
+    currentInquiry.status = newStatus;
+    try {
+      await saveToGitHub('admin/inquiries.json', currentInquiries);
+      renderInquiries(currentInquiries);
+      showToast('✅ 상태가 저장되었습니다');
+    } catch(e) {
+      showToast('❌ 저장 실패: ' + e.message);
+    }
+  }
+
+  function generateFareQuote(inq) {
+    const pax = parseInt(inq.pax) || 1;
+    const inside = parseFloat(document.getElementById('fareInside').value) || 0;
+    const outside = parseFloat(document.getElementById('fareOutside').value) || 0;
+    const balcony = parseFloat(document.getElementById('fareBalcony').value) || 0;
+    const suite = parseFloat(document.getElementById('fareSuite').value) || 0;
+    const tax = parseFloat(document.getElementById('fareTax').value) || 0;
+    const air = parseFloat(document.getElementById('fareAir').value) || 0;
+    const etc = parseFloat(document.getElementById('fareEtc').value) || 0;
+    const remarks = document.getElementById('fareRemarks').value || '';
+
+    const today = new Date().toLocaleDateString('ko-KR');
+
+    let fareRows = '';
+    const types = [
+      { name: '인사이드', val: inside },
+      { name: '아웃사이드', val: outside },
+      { name: '발코니', val: balcony },
+      { name: '스위트', val: suite },
+    ];
+    types.forEach(t => {
+      if (t.val > 0) {
+        fareRows += `<tr><td>${t.name}</td><td>${t.val.toLocaleString()} USD</td><td>${(t.val * pax).toLocaleString()} USD</td></tr>`;
+      }
+    });
+
+    let airfareRow = '';
+    if (air > 0) {
+      airfareRow = `<table>
+        <tr><th colspan="2">항공료 안내</th></tr>
+        <tr><td>한국 출발 항공료 (1인)</td><td>${air.toLocaleString()} KRW</td></tr>
+        <tr class="total-row"><td>${pax}인 합계</td><td>${(air * pax).toLocaleString()} KRW</td></tr>
+      </table>`;
+      if (etc > 0) {
+        airfareRow += `<table>
+          <tr><th colspan="2">기타 비용</th></tr>
+          <tr><td>기타비용</td><td>${etc.toLocaleString()} KRW</td></tr>
+        </table>`;
+      }
+    }
+
+    let remarksHtml = '';
+    if (remarks) {
+      remarksHtml = `<div style="background:#f5f7ff;padding:14px;border-radius:8px;margin-top:16px;font-size:13px">
+        <strong>비고</strong><br><span style="color:#555;line-height:1.6">${remarks.replace(/\n/g,'<br>')}</span>
+      </div>`;
+    }
+
+    const html = `<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>요금안내 - ${esc(inq.name||'고객')}</title>
+<style>
+body { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; padding: 40px; max-width: 700px; margin: 0 auto; }
+.header { border-bottom: 3px solid #1a237e; padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; }
+.company { color: #1a237e; font-size: 14px; }
+.company strong { font-size: 18px; display: block; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+th { background: #1a237e; color: white; padding: 10px; font-size: 13px; text-align: left; }
+td { padding: 9px 10px; border: 1px solid #ddd; font-size: 13px; }
+tr:nth-child(even) td { background: #f5f7ff; }
+.total-row td { font-weight: 700; background: #e8eaf6; font-size: 14px; }
+.print-btn { background: #1a237e; color: white; border: none; padding: 10px 24px; border-radius: 6px; cursor: pointer; font-size: 14px; margin: 20px 0; }
+@media print { .print-btn { display: none; } }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="company"><strong>🚢 크루즈링크</strong>아남항공 주식회사 | info@cruiselink.co.kr</div>
+  <div style="text-align:right;font-size:13px;color:#666">견적 작성일: ${today}<br>문의번호: ${esc(inq.id||'-')}</div>
+</div>
+<h2 style="color:#1a237e;margin-bottom:16px">크루즈 요금 안내</h2>
+<table>
+  <tr><th colspan="2">고객 정보</th></tr>
+  <tr><td>고객명</td><td>${esc(inq.name||'-')}</td></tr>
+  <tr><td>연락처</td><td>${esc(inq.phone||'-')}</td></tr>
+  <tr><td>인원</td><td>${pax}명</td></tr>
+</table>
+<table>
+  <tr><th colspan="2">크루즈 상품 정보</th></tr>
+  <tr><td>상품명</td><td>${esc(inq.product||'-')}</td></tr>
+  <tr><td>선사/선박</td><td>${esc(inq.cruiseline||'-')} / ${esc(inq.ship||'-')}</td></tr>
+  <tr><td>출발일</td><td>${esc(inq.dateFrom||'-')}</td></tr>
+  <tr><td>일정</td><td>${esc(inq.ports||'-')}</td></tr>
+</table>
+<table>
+  <tr><th>객실 타입</th><th>1인 기준 (USD)</th><th>${pax}인 합계 (USD)</th></tr>
+  ${fareRows}
+  <tr><td>세금/항만세 (1인)</td><td>${tax.toLocaleString()} USD</td><td>${(tax * pax).toLocaleString()} USD</td></tr>
+</table>
+${airfareRow}
+<p style="font-size:12px;color:#666;margin-top:16px">※ 상기 요금은 1인 기준이며, 실제 예약 시 요금이 변동될 수 있습니다.<br>※ 항공료는 별도이며 실제 발권 시 확정됩니다.</p>
+${remarksHtml}
+<button class="print-btn" onclick="window.print()">🖨️ 인쇄 / PDF 저장</button>
+</body>
+</html>`;
+
+    const w = window.open('', '_blank', 'width=760,height=900');
+    w.document.write(html);
+    w.document.close();
+    setTimeout(() => { try { w.print(); } catch(e) {} }, 500);
+  }
+
+  // =============================================
+  // PANEL 2: 파트너 링크
+  // =============================================
+  async function loadPartners() {
+    try {
+      const res = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/admin/partners.json`, {
+        headers: { Authorization: `Bearer ${GH_TOKEN}`, Accept: "application/vnd.github.v3+json" }
+      });
+      const file = await res.json();
+      currentPartners = JSON.parse(atob(file.content.replace(/\n/g, "")));
+    } catch (e) {
+      currentPartners = [];
+    }
+    renderPartners();
+  }
+
+  function renderPartners() {
+    const grid = document.getElementById('partnerGrid');
+    if (!currentPartners || currentPartners.length === 0) {
+      grid.innerHTML = '<div class="partner-empty">등록된 파트너가 없습니다</div>';
+      return;
+    }
+    grid.innerHTML = currentPartners.map((p, i) => `
+      <div class="partner-card">
+        <img src="${esc(p.image||'')}" alt="${esc(p.title||'')}" onerror="this.style.background='#e0e0e0';this.src=''">
+        <div class="partner-card-body">
+          <h4>${esc(p.title||'')}</h4>
+          <p>${esc(p.desc||'')}</p>
+        </div>
+        <div class="partner-card-footer">
+          <span class="cat-badge">${esc(p.category||'기타')}</span>
+          <div class="partner-card-actions">
+            <button class="btn-sm btn-edit-p" onclick="editPartner(${i})">수정</button>
+            <button class="btn-sm btn-del-p" onclick="deletePartner(${i})">삭제</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  async function addPartner() {
+    const title = document.getElementById('pTitle').value.trim();
+    const desc = document.getElementById('pDesc').value.trim();
+    const image = document.getElementById('pImage').value.trim();
+    const link = document.getElementById('pLink').value.trim();
+    const category = document.getElementById('pCategory').value;
+
+    if (!title) { showToast('❌ 카드 제목을 입력하세요'); return; }
+
+    const newPartner = { id: Date.now().toString(), title, desc, image, link, category };
+    currentPartners.push(newPartner);
+    try {
+      await saveToGitHub('admin/partners.json', currentPartners);
+      renderPartners();
+      // clear form
+      document.getElementById('pTitle').value = '';
+      document.getElementById('pDesc').value = '';
+      document.getElementById('pImage').value = '';
+      document.getElementById('pLink').value = '';
+      showToast('✅ 파트너 카드가 추가되었습니다');
+    } catch(e) {
+      currentPartners.pop();
+      showToast('❌ 저장 실패: ' + e.message);
+    }
+  }
+
+  function editPartner(i) {
+    const p = currentPartners[i];
+    if (!p) return;
+    document.getElementById('pTitle').value = p.title || '';
+    document.getElementById('pDesc').value = p.desc || '';
+    document.getElementById('pImage').value = p.image || '';
+    document.getElementById('pLink').value = p.link || '';
+    document.getElementById('pCategory').value = p.category || '기타';
+    // Remove old entry
+    currentPartners.splice(i, 1);
+    renderPartners();
+    showToast('📝 수정 후 추가 버튼을 눌러 저장하세요');
+  }
+
+  async function deletePartner(i) {
+    if (!confirm('이 파트너 카드를 삭제하시겠습니까?')) return;
+    currentPartners.splice(i, 1);
+    try {
+      await saveToGitHub('admin/partners.json', currentPartners);
+      renderPartners();
+      showToast('🗑️ 삭제되었습니다');
+    } catch(e) {
+      showToast('❌ 삭제 실패: ' + e.message);
+    }
+  }
+
+  // =============================================
+  // PANEL 3: 채팅
+  // =============================================
+  let ws = null;
+  let reconnectTimer = null;
+
+  function connectWS() {
+    if (ws && ws.readyState === WebSocket.CONNECTING) return;
+    try {
+      ws = new WebSocket("ws://127.0.0.1:18789");
+      ws.onopen = () => {
+        setWSStatus("연결됨", "green");
+        clearInterval(reconnectTimer);
+        reconnectTimer = null;
+      };
+      ws.onmessage = (e) => {
+        let text = e.data;
+        try {
+          const j = JSON.parse(e.data);
+          text = j.text || j.content || j.message || e.data;
+        } catch {}
+        appendMessage("assistant", text);
+      };
+      ws.onclose = () => {
+        setWSStatus("연결 안됨", "red");
+        if (!reconnectTimer) {
+          reconnectTimer = setInterval(connectWS, 5000);
+        }
+      };
+      ws.onerror = () => ws.close();
+    } catch(e) {
+      setWSStatus("연결 안됨", "red");
+    }
+  }
+
+  function setWSStatus(text, color) {
+    const badge = document.getElementById('wsStatusBadge');
+    const label = document.getElementById('wsStatusText');
+    badge.className = 'status-badge ' + color;
+    label.textContent = text;
+  }
+
+  function sendMessage() {
+    const input = document.getElementById("chatInput");
+    const text = input.value.trim();
+    if (!text) return;
+    appendMessage("user", text);
+    input.value = "";
+    input.style.height = 'auto';
+    if (ws && ws.readyState === WebSocket.OPEN) {
+      ws.send(JSON.stringify({ text }));
+    } else {
+      appendMessage("system", "❌ 연결이 끊어졌습니다. 재연결 중...");
+      connectWS();
+    }
+  }
+
+  function appendMessage(role, text) {
+    const div = document.createElement("div");
+    div.className = "msg msg-" + role;
+    div.innerHTML = `<div class="bubble">${String(text).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>')}</div>`;
+    const container = document.getElementById("chatMessages");
+    container.appendChild(div);
+    container.scrollTop = container.scrollHeight;
+  }
+
+  // Auto-resize textarea
+  document.addEventListener('DOMContentLoaded', () => {
+    const chatInput = document.getElementById('chatInput');
+    chatInput.addEventListener('input', () => {
+      chatInput.style.height = 'auto';
+      chatInput.style.height = Math.min(chatInput.scrollHeight, 120) + 'px';
+    });
+    chatInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage();
+      }
+    });
+  });
+
+  // =============================================
+  // INIT
+  // =============================================
+  loadInquiries();
+  loadPartners();
+</script>
+</body>
+</html>

@@ -992,6 +992,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         document.getElementById('inquiryForm').style.display = 'none';
         btn.style.display = 'none';
       });
+
+      // 백오피스 저장
+      const inquiryPayload = {
+        product: fd["크루즈 상품"],
+        cruiseline: fd["선사"],
+        ship: fd["선박"],
+        dateFrom: fd["출발일"],
+        ports: fd["일정"],
+        price: fd["참고가격"],
+        ref: fd["Ref"],
+        name: fd["고객 이름"],
+        email: fd["고객 이메일"],
+        phone: fd["고객 연락처"],
+        pax: fd["인원"],
+        cabin: fd["희망 객실"],
+        message: fd["요청사항"],
+      };
+      fetch("https://cruiselink-v2.vercel.app/api/inquiry", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(inquiryPayload)
+      }).catch(() => {});
     }
   </script>
 
