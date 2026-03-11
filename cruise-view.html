@@ -62,11 +62,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       return '$' + parseFloat(v).toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:0});
     }
 
-    // 로컬 JSON에서 ref로 크루즈 찾기 (한국어 타이틀 우선 사용)
+    // 로컬 JSON에서 ref로 크루즈 찾기 (cruises.json + featured.json + cruises-mini.json 순차 검색)
     async function findLocalCruise(ref) {
       try {
         const all = await API.loadAllCruises();
-        return all.find(c => c.ref === ref) || null;
+        const found = all.find(c => c.ref === ref);
+        if (found) return found;
+        // featured.json 에서도 검색
+        try {
+          const fr = await fetch('assets/data/featured.json');
+          const featured = await fr.json();
+          const ff = featured.find(c => c.ref === ref);
+          if (ff) return ff;
+        } catch {}
+        // cruises-mini.json 에서도 검색
+        try {
+          const mr = await fetch('assets/data/cruises-mini.json');
+          const mini = await mr.json();
+          const mf = mini.find(c => c.ref === ref);
+          if (mf) return mf;
+        } catch {}
+        return null;
       } catch { return null; }
     }
 
