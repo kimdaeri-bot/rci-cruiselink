@@ -7,5 +7,23 @@
     "status": "신규",
     "id": "1773212087341",
     "timestamp": "2026-03-11T06:54:47.341Z"
+  },
+  {
+    "product": "지중해 7박 크루즈",
+    "cruiseline": "Norwegian Cruise Line",
+    "ship": "노르웨이전 에픽",
+    "dateFrom": "2026-08-30",
+    "ports": "",
+    "price": "문의",
+    "ref": "NCLEPC-20260830-07-CIV-BCN",
+    "name": "Jeong June",
+    "email": "june.jeong@diplat.co.kr",
+    "phone": "12312312312",
+    "pax": "2",
+    "cabin": "내측",
+    "message": "test",
+    "id": "1773212159424",
+    "timestamp": "2026-03-11T06:55:59.424Z",
+    "status": "신규"
   }
 ]
