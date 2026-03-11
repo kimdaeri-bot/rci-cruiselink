@@ -877,6 +877,14 @@
         </div>
       </div>
       <div class="detail-section">
+        <h4 onclick="const b=document.getElementById('fareHistoryList');b.style.display=b.style.display==='none'?'block':'none';this.querySelector('.fh-toggle').textContent=b.style.display==='none'?'▶':'▼'" style="cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+          요금안내 히스토리 <span class="fh-toggle" style="font-size:12px;color:#1a237e;">▶</span>
+        </h4>
+        <div id="fareHistoryList" style="display:none;margin-top:8px;">
+          <p style="color:#aaa;font-size:13px;padding:8px 0">저장된 견적 없음</p>
+        </div>
+      </div>
+      <div class="detail-section">
         <h4>요금 입력</h4>
         <div class="fare-grid">
           <div class="fare-input-group">
@@ -930,6 +938,8 @@
     `;
 
     document.getElementById('inquiryOverlay').classList.add('show');
+    // 히스토리 렌더링
+    setTimeout(() => renderFareHistory(inq), 50);
   }
 
   function closeDetail() {
@@ -951,6 +961,56 @@
     } catch(e) {
       showToast('❌ 저장 실패: ' + e.message);
     }
+  }
+
+  // ===== 견적 히스토리 저장 =====
+  async function saveFareHistory(fareData) {
+    if (!currentInquiry || !fareData) return;
+    if (!currentInquiry.fareHistory) currentInquiry.fareHistory = [];
+    currentInquiry.fareHistory.push(fareData);
+    // currentInquiries 배열에서 해당 문의 업데이트
+    const idx = currentInquiries.findIndex(x => x.id === currentInquiry.id);
+    if (idx !== -1) currentInquiries[idx] = currentInquiry;
+    try {
+      await saveToGitHub('admin/inquiries.json', currentInquiries);
+      renderFareHistory(currentInquiry);
+      showToast('견적이 히스토리에 저장됐습니다');
+    } catch(e) {
+      showToast('저장 실패: ' + e.message, true);
+    }
+  }
+
+  function renderFareHistory(inq) {
+    const container = document.getElementById('fareHistoryList');
+    if (!container) return;
+    const history = inq.fareHistory || [];
+    if (history.length === 0) {
+      container.innerHTML = '<p style="color:#aaa;font-size:13px;padding:8px 0">저장된 견적 없음</p>';
+      return;
+    }
+    container.innerHTML = history.slice().reverse().map((h, i) => {
+      const id = 'fh_' + i;
+      const typesSummary = h.types.map(t => `${t.name} $${t.val}`).join(' / ');
+      const rows = h.types.map(t =>
+        `<tr><td>${t.name}</td><td>$${t.val.toLocaleString()} USD</td><td>$${(t.val * h.pax).toLocaleString()} USD</td></tr>`
+      ).join('');
+      const taxRow = h.tax > 0 ? `<tr><td>세금/항만세</td><td>$${h.tax.toLocaleString()} USD</td><td>$${(h.tax * h.pax).toLocaleString()} USD</td></tr>` : '';
+      return `
+        <div style="border:1px solid #e0e0e0;border-radius:6px;margin-bottom:6px;overflow:hidden;">
+          <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none';this.querySelector('.fh-arrow').textContent=this.nextElementSibling.style.display==='none'?'▶':'▼'"
+               style="padding:10px 14px;background:#f5f7ff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+            <span><strong>${h.date}</strong> &nbsp; ${h.pax}인 &nbsp;·&nbsp; ${typesSummary}</span>
+            <span class="fh-arrow" style="color:#1a237e;font-size:11px;">▶</span>
+          </div>
+          <div style="display:none;padding:12px;">
+            <table style="width:100%;border-collapse:collapse;font-size:12px;">
+              <tr style="background:#1a237e;color:white;"><th style="padding:6px 8px;text-align:left;">객실 타입</th><th style="padding:6px 8px;">1인 기준</th><th style="padding:6px 8px;">${h.pax}인 합계</th></tr>
+              ${rows}${taxRow}
+            </table>
+            ${h.remarks ? `<p style="font-size:12px;color:#555;margin-top:8px">비고: ${h.remarks}</p>` : ''}
+          </div>
+        </div>`;
+    }).join('');
   }
 
   async function generateFareQuote(inq) {
@@ -1085,16 +1145,38 @@ ${(() => {
   return `<table><tr><th colspan="3">최종 금액</th></tr>${totalRows}</table>`;
 })()}
 ${airfareRow}
-<p style="font-size:12px;color:#666;margin-top:16px">※ 상기 요금은 1인 기준이며, 실제 예약 시 요금이 변동될 수 있습니다.<br>※ 해당 문서는 예약확정이 아니며, 예약확정 요청을 하시면 예약확정 후 인보이스를 전달드립니다.</p>
+<p style="font-size:12px;color:#666;margin-top:16px">※ 상기 요금은 1인 기준이며, 실제 예약 시 요금이 변동될 수 있습니다.<br><span style="color:#e53935;font-weight:600;">※ 해당 문서는 예약확정이 아니며, 예약확정 요청을 하시면 예약확정 후 인보이스를 전달드립니다.</span></p>
 ${remarksHtml}
-<button class="print-btn" onclick="window.print()">🖨️ 인쇄 / PDF 저장</button>
+<div style="display:flex;gap:12px;align-items:center;margin:20px 0;">
+  <button class="print-btn" onclick="window.print()">🖨️ 인쇄 / PDF 저장</button>
+  <button class="print-btn" style="background:#2e7d32;" onclick="
+    if(window.opener && window.opener.saveFareHistory) {
+      window.opener.saveFareHistory(window._fareData);
+      this.textContent='✅ 저장됨';
+      this.disabled=true;
+    }
+  ">💾 견적 저장하기</button>
+</div>
 </body>
 </html>`;
 
     const w = window.open('', '_blank', 'width=760,height=900');
     w.document.write(html);
     w.document.close();
-    // 자동 프린트 제거 - 사용자가 직접 버튼 클릭
+    // fareData 주입 (견적 저장하기 버튼용)
+    const fareData = {
+      date: today,
+      pax,
+      types: [
+        { name: document.getElementById('fareInsideLabel').value || '인사이드', val: inside },
+        { name: document.getElementById('fareOutsideLabel').value || '오션뷰', val: outside },
+        { name: document.getElementById('fareBalconyLabel').value || '발코니', val: balcony },
+        { name: document.getElementById('fareSuiteLabel').value || '스위트', val: suite },
+      ].filter(t => t.val > 0),
+      tax, air, etc,
+      remarks,
+    };
+    try { w._fareData = fareData; } catch(e) {}
   }
 
   // =============================================
