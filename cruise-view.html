@@ -929,11 +929,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         const route = Translations.portRoute(c.portRouteKo || c.portRoute || '');
         document.getElementById('modalProductName').textContent = title;
         document.getElementById('modalProductDetail').innerHTML =
-          `${op} · ${ship}<br>출발: ${c.dateFrom || c.departureDate || ''} / ${c.nights || ''}박${price ? ' / $'+price+'~' : ''}`;
+          `${op} · ${ship}<br>출발: ${(c.dateFrom || c.departureDate || '').substring(0,10)} / ${c.nights || ''}박${price ? ' / $'+price+'~' : ''}`;
         document.getElementById('f_product').value = title;
         document.getElementById('f_cruiseline').value = c.operator || '';
         document.getElementById('f_ship').value = ship;
-        document.getElementById('f_date').value = c.dateFrom || c.departureDate || '';
+        document.getElementById('f_date').value = (c.dateFrom || c.departureDate || '').substring(0,10);
         document.getElementById('f_ports').value = route;
         document.getElementById('f_price').value = price ? '$'+price+'~' : '문의';
         document.getElementById('f_ref').value = c.ref || '';
