@@ -1092,7 +1092,7 @@ ${remarksHtml}
     const w = window.open('', '_blank', 'width=760,height=900');
     w.document.write(html);
     w.document.close();
-    setTimeout(() => { try { w.print(); } catch(e) {} }, 500);
+    // 자동 프린트 제거 - 사용자가 직접 버튼 클릭
   }
 
   // =============================================
