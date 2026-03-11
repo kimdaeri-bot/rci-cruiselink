@@ -1325,7 +1325,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     // ── MIB 공유하기 ──
     function mibShareUrl() {
-      const url = location.href;
+      // OG 태그가 있는 정적 파일 URL 생성 (카카오톡 프리뷰용)
+      const params = new URLSearchParams(location.search);
+      const ref = params.get('ref');
+      const url = ref
+        ? 'https://www.cruiselink.co.kr/c/' + ref + '.html'
+        : location.href;
       const titleEl = document.querySelector('.detail-hero h1');
       const title = titleEl ? titleEl.innerText.replace('🚢 ','') : document.title;
 
