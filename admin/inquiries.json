@@ -42,6 +42,22 @@
     "message": "test",
     "id": "1773212989451",
     "timestamp": "2026-03-11T07:09:49.451Z",
-    "status": "신규"
+    "status": "신규",
+    "fareHistory": [
+      {
+        "date": "2026. 3. 11.",
+        "pax": 1,
+        "types": [
+          {
+            "name": "인사이드 개런티",
+            "val": 300
+          }
+        ],
+        "tax": 80,
+        "air": 0,
+        "etc": 0,
+        "remarks": ""
+      }
+    ]
   }
 ]
