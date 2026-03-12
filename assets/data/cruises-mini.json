@@ -3888,5 +3888,29 @@
       "#영국크루즈",
       "#서유럽크루즈"
     ]
+  },
+  {
+    "ref": "MSCER20260228DXBDXB",
+    "shipSlug": "msc-euribia",
+    "shipTitle": "MSC Euribia",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2026-02-28",
+    "dateTo": "2026-03-07",
+    "nights": 7,
+    "destination": "asia",
+    "title": "중동 두바이·카타르·바레인 7박 크루즈",
+    "portRoute": "두바이 → 도하(카타르) → 마나마(바레인) → 아부다비 → Sir Bani Yas Island",
+    "priceInside": 421,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2025/10/01/09/09/24/54ec9abe-1505-43e4-b761-b0251d1dc2ac/MSC%20Cruises%20MSC%20EURIBIA%20Exterior%20%C2%A9MSC%20Rights%201.jpg",
+    "portImage": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&q=80",
+    "hashtags": [
+      "#중동크루즈",
+      "#두바이크루즈",
+      "#MSC크루즈",
+      "#아부다비",
+      "#카타르"
+    ]
   }
 ]
