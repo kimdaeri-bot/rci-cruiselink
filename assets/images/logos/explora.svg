@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="200" height="100">
+  <!-- Floral mandala icon -->
+  <g transform="translate(100, 28)">
+    <!-- Outer petals -->
+    <g fill="#8B6F4E">
+      <ellipse cx="0" cy="-14" rx="3.5" ry="7" transform="rotate(0)"/>
+      <ellipse cx="0" cy="-14" rx="3.5" ry="7" transform="rotate(45)"/>
+      <ellipse cx="0" cy="-14" rx="3.5" ry="7" transform="rotate(90)"/>
+      <ellipse cx="0" cy="-14" rx="3.5" ry="7" transform="rotate(135)"/>
+      <ellipse cx="0" cy="-14" rx="3.5" ry="7" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-14" rx="3.5" ry="7" transform="rotate(225)"/>
+      <ellipse cx="0" cy="-14" rx="3.5" ry="7" transform="rotate(270)"/>
+      <ellipse cx="0" cy="-14" rx="3.5" ry="7" transform="rotate(315)"/>
+    </g>
+    <!-- Inner petals -->
+    <g fill="#8B6F4E" opacity="0.75">
+      <ellipse cx="0" cy="-9" rx="2.5" ry="5" transform="rotate(22.5)"/>
+      <ellipse cx="0" cy="-9" rx="2.5" ry="5" transform="rotate(67.5)"/>
+      <ellipse cx="0" cy="-9" rx="2.5" ry="5" transform="rotate(112.5)"/>
+      <ellipse cx="0" cy="-9" rx="2.5" ry="5" transform="rotate(157.5)"/>
+      <ellipse cx="0" cy="-9" rx="2.5" ry="5" transform="rotate(202.5)"/>
+      <ellipse cx="0" cy="-9" rx="2.5" ry="5" transform="rotate(247.5)"/>
+      <ellipse cx="0" cy="-9" rx="2.5" ry="5" transform="rotate(292.5)"/>
+      <ellipse cx="0" cy="-9" rx="2.5" ry="5" transform="rotate(337.5)"/>
+    </g>
+    <!-- Center circle -->
+    <circle cx="0" cy="0" r="4.5" fill="#8B6F4E"/>
+    <circle cx="0" cy="0" r="2.5" fill="white"/>
+    <!-- MSC symbol style inner -->
+    <text x="0" y="1.2" text-anchor="middle" font-size="3" fill="#8B6F4E" font-family="serif" font-weight="bold">E</text>
+  </g>
+  <!-- Explora text -->
+  <text x="100" y="62" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#8B6F4E" letter-spacing="1">Explora</text>
+  <!-- JOURNEYS text -->
+  <text x="100" y="76" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="8.5" fill="#8B6F4E" letter-spacing="4">JOURNEYS</text>
+</svg>
