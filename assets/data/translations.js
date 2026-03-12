@@ -799,7 +799,7 @@ const Translations = {
     'Carnival Cruise Line': '카니발 크루즈 라인',
     'Oceania Cruises': '오세아니아 크루즈',
     'Regent Seven Seas Cruises': '리젠트 세븐시즈 크루즈',
-    'Explora Journeys': '엑스플로라 저니스',
+    'Explora Journeys': '익스플로라 저니',
     'Celebrity River Cruises': '셀러브리티 리버 크루즈'
   },
 
