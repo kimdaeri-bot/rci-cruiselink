@@ -77,5 +77,23 @@
     "id": "1773232940786",
     "timestamp": "2026-03-11T12:42:20.786Z",
     "status": "신규"
+  },
+  {
+    "product": "지중해 11박 크루즈",
+    "cruiseline": "Explora Journeys",
+    "ship": "익스플로라 II",
+    "dateFrom": "2026-05-28",
+    "ports": "",
+    "price": "문의",
+    "ref": "EXPLORAEP20260528ISTFSA",
+    "name": "송기정",
+    "email": "keejoung@gmail.com",
+    "phone": "3177724586",
+    "pax": "2",
+    "cabin": "오션뷰",
+    "message": "Keejoung Song",
+    "id": "1773353977418",
+    "timestamp": "2026-03-12T22:19:37.418Z",
+    "status": "신규"
   }
 ]
