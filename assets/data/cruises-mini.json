@@ -3840,5 +3840,53 @@
       "#열대크루즈",
       "#아일랜드크루즈"
     ]
+  },
+  {
+    "ref": "RCILB07U251-031026",
+    "shipSlug": "liberty-of-the-seas",
+    "shipTitle": "Liberty of the Seas",
+    "operator": "Royal Caribbean International",
+    "operatorShort": "RCI",
+    "dateFrom": "2026-10-03",
+    "dateTo": "2026-10-10",
+    "nights": 7,
+    "destination": "northern-europe",
+    "title": "England·스페인·프랑스 7박 크루즈",
+    "portRoute": "사우샘프턴 → 셰르부르 → 빌바오 → 라 코루냐 → 르아브르",
+    "priceInside": 674,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/10/17/09/55/17/f29a99da-58aa-418b-92ac-90177f1aa4be/Royal%20Caribbean%20International%2C%20Liberty%20of%20the%20Seas%2C%20Exterior%201.jpg",
+    "portImage": "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=600&q=80",
+    "hashtags": [
+      "#북유럽크루즈",
+      "#유럽크루즈",
+      "#RCI크루즈",
+      "#영국크루즈",
+      "#서유럽크루즈"
+    ]
+  },
+  {
+    "ref": "MSCPR20261101HAMHAM",
+    "shipSlug": "msc-preziosa-ship",
+    "shipTitle": "MSC Preziosa",
+    "operator": "MSC Cruises",
+    "operatorShort": "MSC",
+    "dateFrom": "2026-11-01",
+    "dateTo": "2026-11-08",
+    "nights": 7,
+    "destination": "northern-europe",
+    "title": "함부르크·암스테르담·벨기에 7박 크루즈",
+    "portRoute": "함부르크 → 암스테르담 → Zeebrugge → 르아브르 → 사우샘프턴",
+    "priceInside": 620,
+    "currency": "USD",
+    "image": "https://assets.widgety.co.uk/2024/09/05/13/37/24/d3179689-b8d9-48dd-95a8-36a3abe2970a/MSC%20Cruises%2C%20MSC%20Preziosa%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg",
+    "portImage": "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=600&q=80",
+    "hashtags": [
+      "#북유럽크루즈",
+      "#유럽크루즈",
+      "#MSC크루즈",
+      "#영국크루즈",
+      "#서유럽크루즈"
+    ]
   }
 ]
