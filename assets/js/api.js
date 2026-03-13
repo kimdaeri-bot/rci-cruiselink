@@ -121,7 +121,7 @@ const API = {
       if (duration === 'medium' && (c.nights < 6 || c.nights > 10)) return false;
       if (duration === 'long' && c.nights < 11) return false;
       return true;
-    }).slice(0, limit || 9999);
+    }); // limit 없으면 전체 반환
   },
 
   // 추천 크루즈 — featured.json (극소용량) 로드
