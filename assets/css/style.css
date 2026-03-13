@@ -704,6 +704,7 @@ img { max-width: 100%; height: auto; }
   .dr-popup { min-width:calc(100vw - 32px); left:0; }
   .dr-months { flex-direction:column; gap:16px; }
 }
+.tab-card-depart { font-size: 11px; color: #1565C0; font-weight: 600; margin-bottom: 6px; }
 /* ── czn-card 공통 디자인 ── */
 .czn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 @media(max-width:900px){.czn-grid{grid-template-columns:repeat(2,1fr);}}
