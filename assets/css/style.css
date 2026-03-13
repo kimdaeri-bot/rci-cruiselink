@@ -186,9 +186,16 @@ img { max-width: 100%; height: auto; }
   gap: 24px;
   transition: transform 0.4s ease;
 }
-.featured-track .cruise-card {
+.featured-track .cruise-card,
+.featured-track .czn-card {
   flex: 0 0 calc((100% - 48px) / 3);
   min-width: 0;
+}
+@media (max-width: 768px) {
+  .featured-track .cruise-card,
+  .featured-track .czn-card {
+    flex: 0 0 calc(100% - 8px);
+  }
 }
 .featured-arrow {
   flex-shrink: 0;
