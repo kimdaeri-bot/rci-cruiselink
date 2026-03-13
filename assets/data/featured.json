@@ -21,7 +21,9 @@
       "#봄크루즈",
       "#피렌체",
       "#바르셀로나"
-    ]
+    ],
+    "badge": "출발임박",
+    "badgeColor": "#d32f2f"
   },
   {
     "ref": "NCLBLS-20260425-07-SEA-SEA",
@@ -39,7 +41,15 @@
     "priceBalcony": 899,
     "currency": "USD",
     "image": "https://assets.widgety.co.uk/2025/12/04/09/00/56/b6d5a91f-0e8c-4bd8-a738-f468297baeb2/NCL%20Norwegian%20Bliss%20Aerial%20Ketchikan%20Alaska%20Exterior%201%20%C2%A9Danny%20Lehman.jpg",
-    "hashtags": ["#알래스카크루즈", "#NCL크루즈", "#빙하크루즈", "#시애틀", "#봄크루즈"]
+    "hashtags": [
+      "#알래스카크루즈",
+      "#NCL크루즈",
+      "#빙하크루즈",
+      "#시애틀",
+      "#봄크루즈"
+    ],
+    "badge": "출발임박",
+    "badgeColor": "#d32f2f"
   },
   {
     "ref": "MSCBE20260510TYOTYO",
@@ -65,7 +75,9 @@
       "#MSCBellissima",
       "#도쿄",
       "#부산"
-    ]
+    ],
+    "badge": "출발임박",
+    "badgeColor": "#d32f2f"
   },
   {
     "ref": "MSCER20260502KELKEL",
@@ -83,7 +95,15 @@
     "priceBalcony": 1399,
     "currency": "USD",
     "image": "https://assets.widgety.co.uk/2025/10/01/09/09/24/54ec9abe-1505-43e4-b761-b0251d1dc2ac/MSC%20Cruises%20MSC%20EURIBIA%20Exterior%20%C2%A9MSC%20Rights%201.jpg",
-    "hashtags": ["#북유럽크루즈", "#MSC크루즈", "#MSCEuribia", "#코펜하겐", "#피요르드"]
+    "hashtags": [
+      "#북유럽크루즈",
+      "#MSC크루즈",
+      "#MSCEuribia",
+      "#코펜하겐",
+      "#피요르드"
+    ],
+    "badge": "출발임박",
+    "badgeColor": "#d32f2f"
   },
   {
     "ref": "NCLPRI20260628HAMHAM",
@@ -97,13 +117,27 @@
     "destination": "northern-europe",
     "title": "노르웨이 피요르드 7박 크루즈",
     "portRoute": "함부르크 → 올레순 → Flåm → 베르겐 → 스타방에르 → 함부르크",
-    "startsAt": { "name": "Hamburg", "nameKo": "함부르크" },
-    "endsAt": { "name": "Hamburg", "nameKo": "함부르크" },
+    "startsAt": {
+      "name": "Hamburg",
+      "nameKo": "함부르크"
+    },
+    "endsAt": {
+      "name": "Hamburg",
+      "nameKo": "함부르크"
+    },
     "priceInside": 1089,
     "priceBalcony": 1549,
     "currency": "USD",
     "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&q=80",
-    "hashtags": ["#북유럽크루즈","#NCL크루즈","#노르웨이피요르드","#NorwegianPrima","#함부르크"]
+    "hashtags": [
+      "#북유럽크루즈",
+      "#NCL크루즈",
+      "#노르웨이피요르드",
+      "#NorwegianPrima",
+      "#함부르크"
+    ],
+    "badge": "출발임박",
+    "badgeColor": "#d32f2f"
   },
   {
     "ref": "MSCGR20261106BUABUA",
@@ -117,13 +151,27 @@
     "destination": "south-america",
     "title": "남미 대서양 14박 크루즈",
     "portRoute": "부에노스아이레스 → 몬테비데오 → 이타하이 → 산투스 → 살바도르 → 리우데자네이루",
-    "startsAt": { "name": "Buenos Aires", "nameKo": "부에노스아이레스" },
-    "endsAt": { "name": "Rio de Janeiro", "nameKo": "리우데자네이루" },
+    "startsAt": {
+      "name": "Buenos Aires",
+      "nameKo": "부에노스아이레스"
+    },
+    "endsAt": {
+      "name": "Rio de Janeiro",
+      "nameKo": "리우데자네이루"
+    },
     "priceInside": 1199,
     "priceBalcony": 1689,
     "currency": "USD",
     "image": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=600&q=80",
-    "hashtags": ["#남미크루즈","#MSC크루즈","#리우데자네이루","#부에노스아이레스","#남미여행"]
+    "hashtags": [
+      "#남미크루즈",
+      "#MSC크루즈",
+      "#리우데자네이루",
+      "#부에노스아이레스",
+      "#남미여행"
+    ],
+    "badge": "출발임박",
+    "badgeColor": "#d32f2f"
   },
   {
     "ref": "MSCMU20260601CVVCVV",
@@ -147,6 +195,8 @@
       "#여름크루즈",
       "#제노바",
       "#이비자"
-    ]
+    ],
+    "badge": "출발임박",
+    "badgeColor": "#d32f2f"
   }
 ]
