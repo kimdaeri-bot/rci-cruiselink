@@ -28,6 +28,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .result-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
     .result-count { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
     .result-count span { color: var(--orange); }
+/* ── 새 카드 디자인 ── */
+#resultList { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+@media(max-width:900px){#resultList{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){#resultList{grid-template-columns:1fr;}}
+.czn-card{background:#fff;border-radius:14px;overflow:hidden;border:1px solid #e8eaed;transition:box-shadow .2s,transform .2s;cursor:pointer;}
+.czn-card:hover{box-shadow:0 8px 28px rgba(0,0,0,.13);transform:translateY(-3px);}
+.czn-card-img-wrap{position:relative;height:200px;overflow:hidden;background:#e0e0e0;}
+.czn-card-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s;display:block;}
+.czn-card:hover .czn-card-img-wrap img{transform:scale(1.05);}
+.czn-badge{position:absolute;top:12px;left:12px;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:800;color:#fff;}
+.czn-wish{position:absolute;top:10px;right:12px;background:rgba(255,255,255,.85);border:none;border-radius:50%;width:32px;height:32px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.czn-body{padding:16px;}
+.czn-operator{font-size:11px;font-weight:700;color:#1565C0;letter-spacing:.5px;margin-bottom:6px;}
+.czn-title{font-size:15px;font-weight:800;color:#0a1628;line-height:1.4;margin-bottom:10px;}
+.czn-meta{font-size:13px;color:#555;line-height:1.9;margin-bottom:10px;}
+.czn-tags{margin-bottom:12px;}
+.czn-footer{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid #f0f0f0;}
+.czn-price-wrap{display:flex;align-items:baseline;gap:2px;}
+.czn-from{font-size:11px;color:#888;margin-right:2px;}
+.czn-price{font-size:24px;font-weight:900;color:#0a1628;}
+.czn-unit{font-size:11px;color:#888;}
+.czn-btn{background:#00338D;color:#fff;border:none;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;white-space:nowrap;transition:background .2s;}
+.czn-btn:hover{background:#001f6b;}
+/* ── 사이드바 레이아웃 ── */
+.search-layout{display:flex;gap:24px;align-items:flex-start;}
+.filter-sidebar{width:240px;flex-shrink:0;background:#fff;border-radius:12px;border:1px solid #e0e0e0;overflow:hidden;position:sticky;top:80px;}
+.filter-panel-header{background:#1565C0;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:14px;}
+.filter-panel-header button{background:rgba(255,255,255,.2);border:none;color:#fff;padding:4px 10px;border-radius:6px;cursor:pointer;font-size:12px;}
+.filter-accordion{border-bottom:1px solid #f0f0f0;}
+.filter-acc-head{display:flex;justify-content:space-between;align-items:center;padding:13px 16px;cursor:pointer;font-size:13px;font-weight:600;color:#333;user-select:none;}
+.filter-acc-head:hover{background:#f8f9fa;}
+.filter-acc-body{padding:4px 16px 12px;}
+.filter-acc-body label{display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#444;cursor:pointer;}
+.filter-acc-body label:hover{color:#1565C0;}
+.filter-acc-body input[type=checkbox]{accent-color:#1565C0;width:15px;height:15px;}
+.price-range-labels{display:flex;justify-content:space-between;font-size:12px;color:#666;margin-bottom:8px;font-weight:600;}
+.filter-acc-body input[type=range]{width:100%;accent-color:#1565C0;margin:4px 0;}
+.results-area{flex:1;min-width:0;}
+@media(max-width:768px){.search-layout{flex-direction:column;}.filter-sidebar{width:100%;position:static;}}
   </style>
 </head>
 <body>
@@ -65,8 +104,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               oninput="applyKeywordFilter()" onfocus="this.style.borderColor='var(--navy)'" onblur="this.style.borderColor='#ddd'">
           </div>
         </div>
-        <div id="resultList" class="cruise-list"></div>
-        <div id="pagination" class="pagination"></div>
+        <div class="search-layout">
+          <div class="filter-sidebar">
+            <div class="filter-panel-header">
+              <span>🔽 결과 내 필터</span>
+              <button onclick="resetSideFilters()">초기화</button>
+            </div>
+            <div class="filter-accordion open">
+              <div class="filter-acc-head" onclick="toggleAcc(this)"><span>💲 요금 (1인당/USD)</span><span class="acc-arrow">▾</span></div>
+              <div class="filter-acc-body">
+                <div class="price-range-labels"><span id="priceMin">$0</span><span id="priceMax">$5,000+</span></div>
+                <input type="range" id="sfPriceMin" min="0" max="5000" step="100" value="0">
+                <input type="range" id="sfPriceMax" min="0" max="5000" step="100" value="5000">
+              </div>
+            </div>
+            <div class="filter-accordion">
+              <div class="filter-acc-head" onclick="toggleAcc(this)"><span>🌙 크루즈 기간</span><span class="acc-arrow">▾</span></div>
+              <div class="filter-acc-body" style="display:none">
+                <label><input type="checkbox" value="1-4"> 1~4박</label>
+                <label><input type="checkbox" value="5-8"> 5~8박</label>
+                <label><input type="checkbox" value="9-12"> 9~12박</label>
+                <label><input type="checkbox" value="13-"> 13박 이상</label>
+              </div>
+            </div>
+            <div class="filter-accordion">
+              <div class="filter-acc-head" onclick="toggleAcc(this)"><span>🌍 목적지</span><span class="acc-arrow">▾</span></div>
+              <div class="filter-acc-body" style="display:none" id="sfDestList"></div>
+            </div>
+            <div class="filter-accordion">
+              <div class="filter-acc-head" onclick="toggleAcc(this)"><span>🚢 출발항구</span><span class="acc-arrow">▾</span></div>
+              <div class="filter-acc-body" style="display:none" id="sfDepartPortList"></div>
+            </div>
+            <div class="filter-accordion">
+              <div class="filter-acc-head" onclick="toggleAcc(this)"><span>⚓ 선사</span><span class="acc-arrow">▾</span></div>
+              <div class="filter-acc-body" style="display:none" id="sfOperatorList"></div>
+            </div>
+            <div class="filter-accordion">
+              <div class="filter-acc-head" onclick="toggleAcc(this)"><span>🛳️ 크루즈선</span><span class="acc-arrow">▾</span></div>
+              <div class="filter-acc-body" style="display:none" id="sfShipList"></div>
+            </div>
+            <div class="filter-accordion">
+              <div class="filter-acc-head" onclick="toggleAcc(this)"><span>🏁 도착항구</span><span class="acc-arrow">▾</span></div>
+              <div class="filter-acc-body" style="display:none" id="sfArrivePortList"></div>
+            </div>
+          </div>
+          <div class="results-area">
+            <div id="resultList" class="czn-grid"></div>
+            <div id="pagination" class="pagination"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -159,6 +245,136 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       renderPage();
     }
 
+    // ── 새 카드 렌더 함수 ──
+    function renderCruiseCard(c) {
+      const T = typeof Translations !== 'undefined' ? Translations : null;
+      const fromPrice = c.priceInside || c.priceOutside || c.priceBalcony;
+      const opName = ((T ? T.operatorName(c.operator) : c.operator) || c.operator || '').toUpperCase();
+      const destName = c.destination || '';
+      const dateStr = c.dateFrom ? c.dateFrom.substring(0,10).replace(/-/g,'. ') : '';
+      const nights = c.nights || c.duration || '';
+      const port = c.startsAt?.nameKo || (T ? T.portName(c.startsAt?.name||'') : '') || c.startsAt?.name || '';
+      const today = new Date().toISOString().slice(0,10);
+      const daysLeft = c.dateFrom ? Math.round((new Date(c.dateFrom) - new Date(today)) / 86400000) : 999;
+      let badge = '', badgeColor = '';
+      if (c.operator === 'Explora' || c.operator === 'Regent' || (fromPrice && fromPrice >= 3000)) { badge = '럭셔리'; badgeColor = '#C9A84C'; }
+      else if (daysLeft <= 30) { badge = '출발 임박'; badgeColor = '#d32f2f'; }
+      else if (daysLeft <= 60) { badge = '얼리버드'; badgeColor = '#2e7d32'; }
+      else if (fromPrice && fromPrice < 500) { badge = '특가'; badgeColor = '#c62828'; }
+      else { badge = '인기'; badgeColor = '#1565C0'; }
+      const priceStr = fromPrice ? '$' + parseFloat(fromPrice).toLocaleString('en-US', {maximumFractionDigits:0}) : '문의';
+      const img = c.image || '';
+      const ref = c.ref || '';
+      return `<div class="czn-card" onclick="location.href='cruise-view.html?ref=${ref}'">
+        <div class="czn-card-img-wrap">
+          <img src="${img}" alt="${c.title||''}" loading="lazy" onerror="this.parentElement.style.background='#cfe8fc'">
+          <span class="czn-badge" style="background:${badgeColor}">${badge}</span>
+          <button class="czn-wish" onclick="event.stopPropagation();this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button>
+        </div>
+        <div class="czn-body">
+          <div class="czn-operator">${opName}${destName?' · '+destName:''}</div>
+          <div class="czn-title">🚢 ${c.title||''}</div>
+          <div class="czn-meta">
+            ${port?`<div>📍 ${port} 출발</div>`:''}
+            ${dateStr?`<div>📅 ${dateStr}</div>`:''}
+            ${nights?`<div>🌙 ${nights}박 ${Number(nights)+1}일</div>`:''}
+          </div>
+          <div class="czn-footer">
+            <div class="czn-price-wrap">
+              <span class="czn-from">부터</span>
+              <span class="czn-price">${priceStr}</span>
+              <span class="czn-unit">/ 1인</span>
+            </div>
+            <a href="cruise-view.html?ref=${ref}" class="czn-btn" onclick="event.stopPropagation()">예약하기</a>
+          </div>
+        </div>
+      </div>`;
+    }
+
+    // ── 사이드바 필터 함수 ──
+    function toggleAcc(head) {
+      const body = head.nextElementSibling;
+      const arrow = head.querySelector('.acc-arrow');
+      const isOpen = body.style.display !== 'none';
+      body.style.display = isOpen ? 'none' : 'block';
+      if (arrow) arrow.textContent = isOpen ? '▾' : '▴';
+    }
+    function updatePriceLabel() {
+      const min = document.getElementById('sfPriceMin')?.value || 0;
+      const max = document.getElementById('sfPriceMax')?.value || 5000;
+      const el1 = document.getElementById('priceMin');
+      const el2 = document.getElementById('priceMax');
+      if (el1) el1.textContent = '$' + parseInt(min).toLocaleString();
+      if (el2) el2.textContent = parseInt(max) >= 5000 ? '$5,000+' : '$' + parseInt(max).toLocaleString();
+    }
+    function applySideFilters() {
+      const priceMin = parseInt(document.getElementById('sfPriceMin')?.value || 0);
+      const priceMax = parseInt(document.getElementById('sfPriceMax')?.value || 99999);
+      const checkedDuration = [...document.querySelectorAll('.filter-accordion .filter-acc-body input[type=checkbox]:checked')].map(e=>e.value).filter(v=>['1-4','5-8','9-12','13-'].includes(v));
+      const checkedDest = [...document.querySelectorAll('#sfDestList input:checked')].map(e=>e.value);
+      const checkedDepart = [...document.querySelectorAll('#sfDepartPortList input:checked')].map(e=>e.value);
+      const checkedOp = [...document.querySelectorAll('#sfOperatorList input:checked')].map(e=>e.value);
+      const checkedShip = [...document.querySelectorAll('#sfShipList input:checked')].map(e=>e.value);
+      const checkedArrive = [...document.querySelectorAll('#sfArrivePortList input:checked')].map(e=>e.value);
+      const T = typeof Translations !== 'undefined' ? Translations : null;
+      filteredResults = allResults.filter(c => {
+        const price = c.priceInside || c.priceOutside || c.priceBalcony || 0;
+        if (price && priceMax < 5000 && price > priceMax) return false;
+        if (price && price < priceMin) return false;
+        if (checkedDuration.length) {
+          const n = Number(c.nights||0);
+          if (!checkedDuration.some(d=>(d==='1-4'&&n>=1&&n<=4)||(d==='5-8'&&n>=5&&n<=8)||(d==='9-12'&&n>=9&&n<=12)||(d==='13-'&&n>=13))) return false;
+        }
+        if (checkedDest.length && !checkedDest.includes(c.destination)) return false;
+        const dp = c.startsAt?.nameKo||(T?T.portName(c.startsAt?.name||''):'')||c.startsAt?.name||'';
+        if (checkedDepart.length && !checkedDepart.some(p=>dp.includes(p))) return false;
+        if (checkedOp.length && !checkedOp.includes(c.operator)) return false;
+        const ship = c.shipTitleKo||(T?T.shipName(c.shipTitle||''):'')||c.shipTitle||'';
+        if (checkedShip.length && !checkedShip.some(s=>ship.includes(s))) return false;
+        const ap = c.endsAt?.nameKo||(T?T.portName(c.endsAt?.name||''):'')||c.endsAt?.name||'';
+        if (checkedArrive.length && !checkedArrive.some(p=>ap.includes(p))) return false;
+        return true;
+      });
+      currentPage = 1;
+      document.getElementById('resultCount').innerHTML = `총 <span>${filteredResults.length}</span>개의 크루즈를 찾았습니다`;
+      renderPage();
+    }
+    function resetSideFilters() {
+      document.querySelectorAll('.filter-sidebar input[type=checkbox]').forEach(e=>e.checked=false);
+      const mn=document.getElementById('sfPriceMin'); if(mn) mn.value=0;
+      const mx=document.getElementById('sfPriceMax'); if(mx) mx.value=5000;
+      updatePriceLabel();
+      filteredResults=[...allResults];
+      currentPage=1;
+      document.getElementById('resultCount').innerHTML=`총 <span>${filteredResults.length}</span>개의 크루즈를 찾았습니다`;
+      renderPage();
+    }
+    function buildSideFilterOptions(results) {
+      const T = typeof Translations !== 'undefined' ? Translations : null;
+      const mk = (list, containerId) => {
+        const el = document.getElementById(containerId);
+        if (!el) return;
+        el.innerHTML = list.map(v=>`<label><input type="checkbox" value="${v}" onchange="applySideFilters()"> ${v}</label>`).join('');
+      };
+      mk([...new Set(results.map(c=>c.destination).filter(Boolean))].sort(), 'sfDestList');
+      mk([...new Set(results.map(c=>c.startsAt?.nameKo||(T?T.portName(c.startsAt?.name||''):'')||c.startsAt?.name).filter(Boolean))].sort(), 'sfDepartPortList');
+      const ops = [...new Set(results.map(c=>c.operator).filter(Boolean))].sort();
+      const opEl = document.getElementById('sfOperatorList');
+      if (opEl) opEl.innerHTML = ops.map(o=>`<label><input type="checkbox" value="${o}" onchange="applySideFilters()"> ${T?T.operatorName(o):o}</label>`).join('');
+      const ships = [...new Set(results.map(c=>c.shipTitleKo||(T?T.shipName(c.shipTitle||''):'')||c.shipTitle).filter(Boolean))].sort();
+      const shipEl = document.getElementById('sfShipList');
+      if (shipEl) shipEl.innerHTML = ships.map(s=>`<label><input type="checkbox" value="${s}" onchange="applySideFilters()"> ${s}</label>`).join('');
+      mk([...new Set(results.map(c=>c.endsAt?.nameKo||(T?T.portName(c.endsAt?.name||''):'')||c.endsAt?.name).filter(Boolean))].sort(), 'sfArrivePortList');
+      const prices = results.map(c=>c.priceInside||c.priceOutside||c.priceBalcony||0).filter(Boolean);
+      if (prices.length) {
+        const maxP = Math.min(Math.ceil(Math.max(...prices)/500)*500, 10000);
+        ['sfPriceMin','sfPriceMax'].forEach(id=>{const e=document.getElementById(id);if(e){e.max=maxP;if(id==='sfPriceMax')e.value=maxP;}});
+        updatePriceLabel();
+      }
+      ['sfPriceMin','sfPriceMax'].forEach(id=>{const e=document.getElementById(id);if(e)e.oninput=()=>{updatePriceLabel();applySideFilters();};});
+      document.querySelectorAll('.filter-accordion .filter-acc-body input[type=checkbox]').forEach(e=>{if(!e.onchange)e.onchange=()=>applySideFilters();});
+    }
+
     async function doSearch() {
       // Animate progress
       for (const [pct, text] of steps) {
@@ -167,7 +383,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         await new Promise(r => setTimeout(r, 400));
       }
 
-      let results = await API.filterCruises({ dest, operators, ports, month, duration, limit: 9999, minDate: dateFrom || undefined, maxDate: dateTo || undefined });
+      let results = await API.filterCruises({ dest, operators, ports, month, duration, minDate: dateFrom || undefined, maxDate: dateTo || undefined });
       if (ship) {
         const sq = ship.toLowerCase();
         results = results.filter(c =>
@@ -201,6 +417,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       document.title = `검색 결과 (${results.length}건) - 크루즈링크`;
 
       renderPage();
+      buildSideFilterOptions(allResults);
     }
 
     function renderPage() {
@@ -217,7 +434,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const start = (currentPage - 1) * PER_PAGE;
       const pageItems = filteredResults.slice(start, start + PER_PAGE);
 
-      container.innerHTML = pageItems.map(c => Components.localCruiseItem(c)).join('');
+      container.innerHTML = pageItems.map(c => renderCruiseCard(c)).join('');
 
       if (totalPages > 1) {
         let html = '';
