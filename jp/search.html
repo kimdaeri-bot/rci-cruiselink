@@ -109,11 +109,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="search-layout">
           <div class="filter-sidebar">
             <div class="filter-panel-header">
-              <span>🔽 결과 내 필터</span>
+              <span>🔽 絞り込み</span>
               <button onclick="resetSideFilters()">リセット</button>
             </div>
             <div class="filter-accordion open">
-              <div class="filter-acc-head" onclick="toggleAcc(this)"><span>💲 料金 (1名/USD)</span><span class="acc-arrow">▾</span></div>
+              <div class="filter-acc-head" onclick="toggleAcc(this)"><span>💲 料金（1名様/USD）</span><span class="acc-arrow">▾</span></div>
               <div class="filter-acc-body">
                 <div class="price-range-labels"><span id="priceMin">$0</span><span id="priceMax">$5,000+</span></div>
                 <input type="range" id="sfPriceMin" min="0" max="5000" step="100" value="0">
@@ -146,13 +146,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="filter-acc-body" style="display:none" id="sfShipList"></div>
             </div>
             <div class="filter-accordion">
-              <div class="filter-acc-head" onclick="toggleAcc(this)"><span>🏁 到着港</span><span class="acc-arrow">▾</span></div>
+              <div class="filter-acc-head" onclick="toggleAcc(this)"><span>🏁 寄港地</span><span class="acc-arrow">▾</span></div>
               <div class="filter-acc-body" style="display:none" id="sfArrivePortList"></div>
             </div>
             <div style="padding:12px 16px 16px;">
               <div style="position:relative;">
                 <span style="position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:14px;">🔍</span>
-                <input id="kwInput" type="text" placeholder="結果内検索 (キーワード / 船名)" autocomplete="off"
+                <input id="kwInput" type="text" placeholder="キーワード・客船名で絞り込み" autocomplete="off"
                   style="width:100%;box-sizing:border-box;padding:9px 12px 9px 32px;border:1.5px solid #ddd;border-radius:8px;font-size:12px;font-family:inherit;outline:none;"
                   oninput="applyKeywordFilter()" onfocus="this.style.borderColor='#1565C0'" onblur="this.style.borderColor='#ddd'">
               </div>
@@ -290,9 +290,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const daysLeft = c.dateFrom ? Math.round((new Date(c.dateFrom) - new Date(today)) / 86400000) : 999;
       let badge = '', badgeColor = '';
       if (c.operator === 'Explora' || c.operator === 'Regent' || (fromPrice && fromPrice >= 3000)) { badge = 'ラグジュアリー'; badgeColor = '#C9A84C'; }
-      else if (daysLeft <= 30) { badge = '出発迫る'; badgeColor = '#d32f2f'; }
+      else if (daysLeft <= 30) { badge = '出発間近'; badgeColor = '#d32f2f'; }
       else if (daysLeft <= 60) { badge = 'アーリーバード'; badgeColor = '#2e7d32'; }
-      else if (fromPrice && fromPrice < 500) { badge = '特価'; badgeColor = '#c62828'; }
+      else if (fromPrice && fromPrice < 500) { badge = '特別プラン'; badgeColor = '#c62828'; }
       else { badge = '人気'; badgeColor = '#1565C0'; }
       const priceStr = fromPrice ? '$' + parseFloat(fromPrice).toLocaleString('en-US', {maximumFractionDigits:0}) : 'お問い合わせ';
       const img = c.image || '';
@@ -315,9 +315,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="czn-footer">
             <div class="czn-price-wrap">
               <span class="czn-price" style="color:#E65100">${priceStr} ~</span>
-              <span class="czn-unit">/ 1인</span>
+              <span class="czn-unit">/ お一人様</span>
             </div>
-            <a href="../cruise-view.html?ref=${ref}" class="czn-btn" onclick="event.stopPropagation()">詳しく見る</a>
+            <a href="../cruise-view.html?ref=${ref}" class="czn-btn" onclick="event.stopPropagation()">詳細を見る</a>
           </div>
         </div>
       </div>`;
