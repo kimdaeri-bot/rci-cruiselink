@@ -254,7 +254,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const destName = c.destination || '';
       const dateStr = c.dateFrom ? c.dateFrom.substring(0,10).replace(/-/g,'. ') : '';
       const nights = c.nights || c.duration || '';
+      const dateToStr = (() => {
+        if (c.dateTo) return c.dateTo.substring(0,10).replace(/-/g,'. ');
+        if (c.dateFrom && nights) {
+          const d = new Date(c.dateFrom); d.setDate(d.getDate() + Number(nights));
+          return d.toISOString().substring(0,10).replace(/-/g,'. ');
+        }
+        return '';
+      })();
       const port = c.startsAt?.nameKo || (T ? T.portName(c.startsAt?.name||'') : '') || c.startsAt?.name || '';
+      const arrPort = c.endsAt?.nameKo || (T ? T.portName(c.endsAt?.name||'') : '') || c.endsAt?.name || '';
       const today = new Date().toISOString().slice(0,10);
       const daysLeft = c.dateFrom ? Math.round((new Date(c.dateFrom) - new Date(today)) / 86400000) : 999;
       let badge = '', badgeColor = '';
@@ -276,8 +285,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="czn-operator">${opName}${destName?' · '+destName:''}</div>
           <div class="czn-title">🚢 ${c.title||''}</div>
           <div class="czn-meta">
-            ${port?`<div>📍 ${port} 출발</div>`:''}
-            ${dateStr?`<div>📅 ${dateStr}</div>`:''}
+            ${port?`<div>📍 ${port}${arrPort&&arrPort!==port?' → '+arrPort:''}</div>`:''}
+            ${dateStr?`<div>✈️ 출발 ${dateStr}${dateToStr?' ~ '+dateToStr+' 도착':''}</div>`:''}
             ${nights?`<div>🌙 ${nights}박 ${Number(nights)+1}일</div>`:''}
           </div>
           <div class="czn-footer">
