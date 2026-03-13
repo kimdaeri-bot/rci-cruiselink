@@ -895,14 +895,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const slider = document.getElementById(sliderId);
       if (!slider) return 0;
       if (isMobile()) {
-        const card = slider.querySelector('.cruise-card');
+        const card = slider.querySelector('.cruise-card, .czn-card');
         return card ? card.offsetWidth + 24 : slider.offsetWidth;
       }
       return (slider.offsetWidth + 24) / 3;
     }
     function getFeaturedMax() {
       const track = document.getElementById('featuredTrack');
-      const count = track.querySelectorAll('.cruise-card').length;
+      const count = track.querySelectorAll('.cruise-card, .czn-card').length;
       return Math.max(0, count - (isMobile() ? 1 : 3));
     }
     function slideFeatured(dir) {
@@ -923,7 +923,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     let featuredPos2 = 0;
     function getFeaturedMax2() {
       const track = document.getElementById('featuredTrack2');
-      const count = track.querySelectorAll('.cruise-card').length;
+      const count = track.querySelectorAll('.cruise-card, .czn-card').length;
       return Math.max(0, count - (isMobile() ? 1 : 3));
     }
     function slideFeatured2(dir) {
