@@ -711,6 +711,18 @@ img { max-width: 100%; height: auto; }
   .dr-popup { min-width:calc(100vw - 32px); left:0; }
   .dr-months { flex-direction:column; gap:16px; }
 }
+/* ── 헤더 찜목록 버튼 ── */
+.header-right { display: flex; align-items: center; gap: 8px; }
+.wish-header-btn { background: none; border: 1.5px solid rgba(0,51,141,0.2); border-radius: 20px; padding: 6px 14px; cursor: pointer; font-size: 13px; font-weight: 700; color: var(--navy); display: flex; align-items: center; gap: 5px; transition: all .2s; position: relative; }
+.wish-header-btn:hover { background: var(--navy); color: #fff; }
+.wish-header-count { background: #e53935; color: #fff; border-radius: 10px; font-size: 11px; font-weight: 800; min-width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; padding: 0 4px; }
+.mobile-header-right { display: none; align-items: center; gap: 4px; }
+.wish-mobile-btn { background: none; border: none; font-size: 20px; cursor: pointer; color: var(--navy); position: relative; padding: 4px 8px; display: flex; align-items: center; }
+.wish-mobile-count { position: absolute; top: 0; right: 0; background: #e53935; color: #fff; border-radius: 8px; font-size: 10px; font-weight: 800; min-width: 16px; height: 16px; display: inline-flex; align-items: center; justify-content: center; }
+@media (max-width: 768px) {
+  .header-right { display: none; }
+  .mobile-header-right { display: flex; }
+}
 .tab-card-depart { font-size: 11px; color: #1565C0; font-weight: 600; margin-bottom: 6px; }
 /* ── czn-card 공통 디자인 ── */
 .czn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
