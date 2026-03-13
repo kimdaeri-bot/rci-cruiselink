@@ -83,7 +83,7 @@
     "cruiseline": "Explora Journeys",
     "ship": "익스플로라 II",
     "dateFrom": "2026-05-28",
-    "ports": "",
+    "ports": "이스탄불 → 보드룸 → Pátmos → 피레우스 → Páros → 로도스 → At Sea → 코르푸 → Hvar Island → Rijeka → Fusina",
     "price": "문의",
     "ref": "EXPLORAEP20260528ISTFSA",
     "name": "송기정",
@@ -94,7 +94,7 @@
     "message": "Keejoung Song",
     "id": "1773353977418",
     "timestamp": "2026-03-12T22:19:37.418Z",
-    "status": "신규"
+    "status": "상담완료"
   },
   {
     "product": "지중해 7박 크루즈",
