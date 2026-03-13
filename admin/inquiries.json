@@ -155,5 +155,23 @@
         "remarks": ""
       }
     ]
+  },
+  {
+    "product": "일본·한국·Hong Kong 11박 크루즈",
+    "cruiseline": "Royal Caribbean International",
+    "ship": "내비게이터 오브 더 시즈",
+    "dateFrom": "2026-10-18",
+    "ports": "",
+    "price": "문의",
+    "ref": "RCINV11I018-181026",
+    "name": "김연정",
+    "email": "klove4868@gmail.com",
+    "phone": "01092762155",
+    "pax": "2",
+    "cabin": "발코니",
+    "message": "발코니타입 금액은 안보이는데 객실예약 불가한가요?",
+    "id": "1773363926185",
+    "timestamp": "2026-03-13T01:05:26.185Z",
+    "status": "신규"
   }
 ]
