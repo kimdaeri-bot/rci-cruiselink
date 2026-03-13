@@ -161,7 +161,7 @@
     "cruiseline": "Royal Caribbean International",
     "ship": "내비게이터 오브 더 시즈",
     "dateFrom": "2026-10-18",
-    "ports": "",
+    "ports": "요코하마 → 나가사키 → Seogwipo → 홍콩 → 찬마이 → 싱가포르",
     "price": "문의",
     "ref": "RCINV11I018-181026",
     "name": "김연정",
@@ -172,6 +172,26 @@
     "message": "발코니타입 금액은 안보이는데 객실예약 불가한가요?",
     "id": "1773363926185",
     "timestamp": "2026-03-13T01:05:26.185Z",
-    "status": "신규"
+    "status": "신규",
+    "fareHistory": [
+      {
+        "date": "2026. 3. 13.",
+        "pax": 2,
+        "types": [
+          {
+            "name": "인사이드",
+            "val": 2928.61
+          },
+          {
+            "name": "스위트",
+            "val": 7328.61
+          }
+        ],
+        "tax": 0,
+        "air": 0,
+        "etc": 0,
+        "remarks": ""
+      }
+    ]
   }
 ]
