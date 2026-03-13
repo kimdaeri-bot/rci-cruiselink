@@ -731,7 +731,7 @@ img { max-width: 100%; height: auto; }
 .czn-footer{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid #f0f0f0;margin-top:auto;}
 .czn-price-wrap{display:flex;align-items:baseline;gap:2px;}
 .czn-from{font-size:11px;color:#888;margin-right:2px;}
-.czn-price{font-size:24px;font-weight:900;color:#0a1628;}
+.czn-price{font-size:24px;font-weight:900;color:#E65100;}
 .czn-unit{font-size:11px;color:#888;}
 .czn-btn{background:#00338D;color:#fff;border:none;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;white-space:nowrap;transition:background .2s;}
 .czn-btn:hover{background:#001f6b;}
