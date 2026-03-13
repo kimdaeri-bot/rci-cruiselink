@@ -48,7 +48,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     const ref = new URLSearchParams(location.search).get('ref');
     if (!ref) {
-      document.getElementById('content').innerHTML = '<div class="empty-state"><span class="emoji">⚠️</span><p>잘못된 접근입니다</p></div>';
+      window.location.replace('search.html');
     }
 
     function stripHtml(html) {
