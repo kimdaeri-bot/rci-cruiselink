@@ -154,8 +154,7 @@ const Components = {
         </div>
         <div class="czn-footer">
           <div class="czn-price-wrap">
-            <span class="czn-from">부터</span>
-            <span class="czn-price">${priceStr}</span>
+            <span class="czn-price">${priceStr} ~</span>
             <span class="czn-unit">/ 1인</span>
           </div>
           <a href="cruise-view.html?ref=${c.ref}" class="czn-btn" onclick="event.stopPropagation()">예약하기</a>
