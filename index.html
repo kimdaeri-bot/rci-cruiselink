@@ -1171,11 +1171,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           const ref = c.ref || c.id || '';
           const shipSlug = c.shipSlug || '';
           const destUrl = ref ? `cruise-view.html?ref=${encodeURIComponent(ref)}${shipSlug ? '&ship=' + encodeURIComponent(shipSlug) : ''}` : '#';
+          const departPort = c.startsAt?.nameKo || (typeof Translations !== 'undefined' ? Translations.portName(c.startsAt?.name || '') : '') || c.startsAt?.name || '';
           return `
             <a href="${destUrl}" class="tab-card" onclick="event.preventDefault();if('${ref}'){window.location.href='${destUrl}';}">
               <div class="tab-card-img"><img src="${img}" alt="${title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80'"></div>
               <div class="tab-card-body">
                 <div class="tab-card-title">${title}</div>
+                ${departPort ? `<div class="tab-card-depart">📍 ${departPort} 출발</div>` : ''}
                 <div class="tab-card-from">최저가 (1인 기준)</div>
                 <div class="tab-card-price">${priceStr}</div>
                 <div class="tab-card-price-note">세금 · 제반 비용 별도</div>
