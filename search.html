@@ -200,6 +200,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   oninput="applyKeywordFilter()" onfocus="this.style.borderColor='#1565C0'" onblur="this.style.borderColor='#ddd'">
               </div>
             </div>
+            <!-- 닫기 버튼 (필터 열렸을 때만) -->
+            <div style="padding:12px 16px 20px;display:flex;justify-content:flex-end;">
+              <button onclick="closeFilter()" style="background:#1565C0;color:#fff;border:none;border-radius:50px;padding:10px 24px;font-size:0.9rem;font-weight:700;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);">✕ 닫기</button>
+            </div>
           </div>
           <div class="results-area">
             <div id="resultList" class="czn-grid"></div>
