@@ -12,13 +12,13 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html, body {
+html {
   overflow-x: hidden;
-  max-width: 100%;
 }
 body {
   font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--gray-900); background: var(--white); line-height: 1.6;
+  position: relative;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -558,12 +558,10 @@ img { max-width: 100%; height: auto; }
   .featured-slider-wrap { padding: 0 !important; overflow: hidden; }
   .featured-slider {
     overflow-x: scroll;
-    overflow-y: visible;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    padding-right: 12%;
-    box-sizing: content-box;
   }
   .featured-slider::-webkit-scrollbar { display: none; }
   .featured-track {
