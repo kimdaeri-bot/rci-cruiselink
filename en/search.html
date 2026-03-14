@@ -272,7 +272,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     function renderCruiseCard(c) {
       const T = typeof Translations !== 'undefined' ? Translations : null;
       const fromPrice = c.priceInside || c.priceOutside || c.priceBalcony;
-      const opName = ((T ? T.operatorName(c.operator) : c.operator) || c.operator || '').toUpperCase();
+      // EN: use English fields directly
+      const OP_EN = {'MSC크루즈':'MSC Cruises','MSC':'MSC Cruises','노르웨이전 크루즈 라인':'Norwegian Cruise Line','Norwegian':'Norwegian Cruise Line','로얄 캐리비안 인터내셔널':'Royal Caribbean','Royal Caribbean':'Royal Caribbean','셀레브리티 크루즈':'Celebrity Cruises','Celebrity':'Celebrity Cruises','카니발 크루즈 라인':'Carnival Cruise Line','Carnival':'Carnival Cruise Line','오세아니아 크루즈':'Oceania Cruises','Oceania':'Oceania Cruises','리젠트 세븐 시즈':'Regent Seven Seas','Regent':'Regent Seven Seas','익스플로라 저니':'Explora Journeys','Explora':'Explora Journeys','프린세스 크루즈':'Princess Cruises','Princess':'Princess Cruises'};
+      const opName = (OP_EN[c.operator] || c.operator || '').toUpperCase();
       const destName = c.destination || '';
       const dateStr = c.dateFrom ? c.dateFrom.substring(0,10).replace(/-/g,'. ') : '';
       const nights = c.nights || c.duration || '';
@@ -284,9 +286,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         return '';
       })();
-      const port = c.startsAt?.nameKo || (T ? T.portName(c.startsAt?.name||'') : '') || c.startsAt?.name || '';
-      const arrPort = c.endsAt?.nameKo || (T ? T.portName(c.endsAt?.name||'') : '') || c.endsAt?.name || '';
-      const routeStr = c.portRoute ? (T ? T.portRoute(c.portRoute) : c.portRoute) : '';
+      // Use English port names
+      const port = c.startsAt?.name || c.startsAt?.nameKo || '';
+      const arrPort = c.endsAt?.name || c.endsAt?.nameKo || '';
+      // Use English route (portRoute is English; portRouteKo is Korean)
+      const routeStr = c.portRoute || '';
       const today = new Date().toISOString().slice(0,10);
       const daysLeft = c.dateFrom ? Math.round((new Date(c.dateFrom) - new Date(today)) / 86400000) : 999;
       let badge = '', badgeColor = '';
