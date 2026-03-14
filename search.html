@@ -76,18 +76,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     bottom:0; left:0; right:0;
     width:100% !important;
     max-height:85vh;
-    overflow-y:auto;
+    overflow:hidden;
     border-radius:14px 14px 0 0;
     box-shadow:0 -3px 20px rgba(0,0,0,0.18);
     z-index:8000;
     transform:translateY(calc(100% - 52px));
-    transition:transform 0.32s cubic-bezier(.4,0,.2,1);
-    padding-bottom:env(safe-area-inset-bottom,0px);
-    will-change:transform;
     -webkit-transform:translateY(calc(100% - 52px));
+    transition:transform 0.32s cubic-bezier(.4,0,.2,1);
+    padding-bottom:0;
+    will-change:transform;
   }
   .filter-sidebar.open{
+    overflow-y:auto;
+    transform:translateY(0);
     -webkit-transform:translateY(0);
+    padding-bottom:env(safe-area-inset-bottom,0px);
   }
   .filter-sidebar.open{
     transform:translateY(0);
@@ -393,34 +396,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         if (window.innerWidth > 768) return;
         sidebar.classList.contains('open') ? closeFilter() : openFilter();
       });
-      // 터치 드래그로 열고 닫기
-      let touchStartY = 0, touchStartOpen = false;
-      sidebar.addEventListener('touchstart', function(e) {
+      // 터치 드래그 — 헤더/handle 영역에서만 반응
+      let touchStartY = 0, touchStartOpen = false, isDragging = false;
+      function onTouchStart(e) {
+        if (window.innerWidth > 768) return;
         touchStartY = e.touches[0].clientY;
         touchStartOpen = sidebar.classList.contains('open');
-        sidebar.style.transition = 'none';
-      }, { passive: true });
-      sidebar.addEventListener('touchmove', function(e) {
+        isDragging = false;
+      }
+      function onTouchMove(e) {
         if (window.innerWidth > 768) return;
         const dy = e.touches[0].clientY - touchStartY;
+        if (Math.abs(dy) > 10) isDragging = true;
+        if (!isDragging) return;
         if (touchStartOpen && dy > 0) {
-          // 열린 상태에서 아래로 드래그
-          sidebar.style.transform = 'translateY(' + Math.max(0, dy) + 'px)';
+          sidebar.style.transition = 'none';
+          sidebar.style.transform = 'translateY(' + dy + 'px)';
         } else if (!touchStartOpen && dy < 0) {
-          // 닫힌 상태에서 위로 드래그
+          sidebar.style.transition = 'none';
           const base = sidebar.offsetHeight - 52;
           sidebar.style.transform = 'translateY(' + Math.max(0, base + dy) + 'px)';
         }
-      }, { passive: true });
-      sidebar.addEventListener('touchend', function(e) {
+      }
+      function onTouchEnd(e) {
         if (window.innerWidth > 768) return;
         sidebar.style.transition = '';
         sidebar.style.transform = '';
         const dy = e.changedTouches[0].clientY - touchStartY;
-        if (touchStartOpen && dy > 60) closeFilter();
-        else if (!touchStartOpen && dy < -60) openFilter();
-        else sidebar.classList.contains('open') ? openFilter() : closeFilter();
-      });
+        if (isDragging) {
+          if (touchStartOpen && dy > 80) closeFilter();
+          else if (!touchStartOpen && dy < -80) openFilter();
+          else touchStartOpen ? openFilter() : closeFilter();
+        }
+      }
+      header.addEventListener('touchstart', onTouchStart, { passive: true });
+      header.addEventListener('touchmove', onTouchMove, { passive: true });
+      header.addEventListener('touchend', onTouchEnd);
+      if (handle) {
+        handle.addEventListener('touchstart', onTouchStart, { passive: true });
+        handle.addEventListener('touchmove', onTouchMove, { passive: true });
+        handle.addEventListener('touchend', onTouchEnd);
+      }
     });
     function toggleAcc(head) {
       const body = head.nextElementSibling;
