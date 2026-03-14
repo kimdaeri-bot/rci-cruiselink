@@ -31,10 +31,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 /* ── 새 카드 디자인 ── */
 #resultList { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
 @media(max-width:900px){#resultList{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:560px){#resultList{grid-template-columns:1fr;}}
+@media(max-width:560px){#resultList{grid-template-columns:repeat(2,1fr);gap:10px;}}
 .czn-card{background:#fff;border-radius:14px;overflow:hidden;border:1px solid #e8eaed;transition:box-shadow .2s,transform .2s;cursor:pointer;display:flex;flex-direction:column;}
 .czn-card:hover{box-shadow:0 8px 28px rgba(0,0,0,.13);transform:translateY(-3px);}
 .czn-card-img-wrap{position:relative;height:200px;overflow:hidden;background:#e0e0e0;}
+@media(max-width:560px){.czn-card-img-wrap{height:120px;} .czn-card-body{padding:8px;} .czn-card-title{font-size:0.8rem;} .czn-card-operator{font-size:0.7rem;} .czn-card-meta{font-size:0.75rem;} .czn-wish{width:28px;height:28px;}}
 .czn-card-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s;display:block;}
 .czn-card:hover .czn-card-img-wrap img{transform:scale(1.05);}
 .czn-badge{position:absolute;top:12px;left:12px;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:800;color:#fff;}
