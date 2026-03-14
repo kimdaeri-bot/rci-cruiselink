@@ -193,5 +193,23 @@
         "remarks": ""
       }
     ]
+  },
+  {
+    "product": "한국·대만 3박 크루즈",
+    "cruiseline": "MSC Cruises",
+    "ship": "MSC 벨리시마",
+    "dateFrom": "2027-06-20",
+    "ports": "",
+    "price": "문의",
+    "ref": "MSCBE20270620INCKEE",
+    "name": "이화섭",
+    "email": "whasuplee@gmail.com",
+    "phone": "01037614511",
+    "pax": "2",
+    "cabin": "발코니",
+    "message": "Whasup Lee\nMinkyoung Choi",
+    "id": "1773476050320",
+    "timestamp": "2026-03-14T08:14:10.320Z",
+    "status": "신규"
   }
 ]
