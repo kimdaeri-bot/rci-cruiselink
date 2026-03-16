@@ -199,7 +199,7 @@
     "cruiseline": "MSC Cruises",
     "ship": "MSC 벨리시마",
     "dateFrom": "2027-06-20",
-    "ports": "",
+    "ports": "인천 → Keelung (Chilung)",
     "price": "문의",
     "ref": "MSCBE20270620INCKEE",
     "name": "이화섭",
@@ -210,7 +210,23 @@
     "message": "Whasup Lee\nMinkyoung Choi",
     "id": "1773476050320",
     "timestamp": "2026-03-14T08:14:10.320Z",
-    "status": "신규"
+    "status": "신규",
+    "fareHistory": [
+      {
+        "date": "2026. 3. 16.",
+        "pax": 2,
+        "types": [
+          {
+            "name": "발코니",
+            "val": 419
+          }
+        ],
+        "tax": 0,
+        "air": 0,
+        "etc": 0,
+        "remarks": ""
+      }
+    ]
   },
   {
     "product": "일본·한국 4박 크루즈",
