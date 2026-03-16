@@ -343,7 +343,7 @@
     "cruiseline": "MSC Cruises",
     "ship": "MSC 씨뷰",
     "dateFrom": "2026-11-12",
-    "ports": "",
+    "ports": "바르셀로나 → 마르세유 → 제노바 → 치비타베키아 → Ajaccio, Corsica",
     "price": "문의",
     "ref": "MSCSV20261112BCNBCN",
     "name": "서한빛",
@@ -354,7 +354,7 @@
     "message": "없음",
     "id": "1773628392113",
     "timestamp": "2026-03-16T02:33:12.113Z",
-    "status": "신규"
+    "status": "요금안내 완료"
   },
   {
     "product": "지중해 10박 크루즈",
