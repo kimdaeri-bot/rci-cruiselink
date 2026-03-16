@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <title>인스타 초안 | Norwegian Jade 알래스카 7박 (2026.07.06)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', sans-serif; background: #f0f2f5; color: #333; }
+    .admin-bar { position: sticky; top: 0; z-index: 999; background: #1a1a2e; color: #fff; padding: 10px 20px; display: flex; align-items: center; gap: 12px; font-size: 13px; }
+    .admin-bar strong { color: #ffd700; }
+    .copy-all-btn { margin-left: auto; background: #E1306C; color: #fff; border: none; padding: 7px 18px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: 700; }
+    .copy-all-btn:hover { background: #c1255a; }
+    .wrapper { max-width: 860px; margin: 30px auto; padding: 0 16px 60px; }
+    .block { background: #fff; border-radius: 12px; padding: 24px 28px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,.07); position: relative; }
+    .block-label { font-size: 11px; font-weight: 800; color: #E1306C; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; }
+    .block:hover .copy-btn { opacity: 1; }
+    .copy-btn { position: absolute; top: 14px; right: 16px; opacity: 0; transition: opacity .2s; background: #E1306C; color: #fff; border: none; padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 700; }
+    .slides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 8px; }
+    .slide { background: linear-gradient(145deg, #1a237e, #1565c0); color: #fff; border-radius: 10px; aspect-ratio: 1/1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; position: relative; cursor: pointer; transition: transform .15s; }
+    .slide:hover { transform: scale(1.02); }
+    .slide:hover .slide-copy { opacity: 1; }
+    .slide-copy { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,.2); border: none; color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; opacity: 0; transition: opacity .2s; }
+    .slide-num { font-size: 11px; font-weight: 800; opacity: .5; margin-bottom: 10px; letter-spacing: 1px; }
+    .slide-title { font-size: 17px; font-weight: 900; line-height: 1.4; margin-bottom: 8px; }
+    .slide-sub { font-size: 12px; opacity: .8; line-height: 1.6; }
+    .slide-price { font-size: 22px; font-weight: 900; color: #FFD700; margin: 8px 0 4px; }
+    .caption-box { background: #fff8f0; border-left: 4px solid #E1306C; padding: 16px 20px; border-radius: 0 8px 8px 0; font-size: 15px; line-height: 2; white-space: pre-wrap; font-family: inherit; }
+    .hashtags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .ht { background: #f0f2ff; color: #3d5af1; font-size: 13px; padding: 4px 12px; border-radius: 20px; cursor: pointer; transition: background .15s; }
+    .ht:hover { background: #3d5af1; color: #fff; }
+    .story { background: linear-gradient(160deg, #0d47a1, #1565c0, #42a5f5); color: #fff; border-radius: 10px; aspect-ratio: 9/16; max-width: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px 14px; cursor: pointer; position: relative; }
+    .story:hover .slide-copy { opacity: 1; }
+    .story-title { font-size: 15px; font-weight: 900; line-height: 1.4; margin-bottom: 8px; }
+    .story-sub { font-size: 11px; opacity: .85; line-height: 1.6; }
+    .stories-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+    #toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #E1306C; color: #fff; padding: 10px 24px; border-radius: 20px; font-size: 14px; display: none; z-index: 9999; }
+  </style>
+</head>
+<body>
+
+<div class="admin-bar">
+  <strong>📸 인스타그램 초안</strong>
+  <span>noindex — 외부 비공개</span>
+  <span>|</span>
+  <span>Norwegian Jade 알래스카 7박 · 2026.07.06</span>
+  <button class="copy-all-btn" onclick="copyAll()">📋 전체 캡션 복사</button>
+</div>
+
+<div class="wrapper" id="insta-content">
+
+  <!-- 캐러셀 슬라이드 -->
+  <div class="block">
+    <div class="block-label">📱 피드 캐러셀 — 슬라이드 텍스트 (6장)</div>
+    <p style="font-size:13px;color:#888;margin-bottom:16px">각 슬라이드 클릭 → 텍스트 복사. 디자인 툴(미리캔버스·캔바 등)에 붙여넣기하세요.</p>
+    <div class="slides-grid">
+
+      <div class="slide" onclick="copySlide(this)">
+        <button class="slide-copy">복사</button>
+        <div class="slide-num">SLIDE 01</div>
+        <div class="slide-title">🧊 살면서 꼭 봐야 할<br>알래스카 빙하를<br>크루즈로 가자!</div>
+        <div class="slide-sub">Norwegian Jade<br>2026년 7월 6일 출발</div>
+      </div>
+
+      <div class="slide" onclick="copySlide(this)" style="background:linear-gradient(145deg,#004d40,#00695c)">
+        <button class="slide-copy">복사</button>
+        <div class="slide-num">SLIDE 02</div>
+        <div class="slide-title">🗺️ 7박 8일 루트</div>
+        <div class="slide-sub">
+          🛳️ 위티어(알래스카) 출항<br>
+          🧊 허바드 빙하 크루징<br>
+          🐋 아이시 스트레이트 포인트<br>
+          🦅 주노 · 스카그웨이 · 케치칸<br>
+          🍁 밴쿠버(캐나다) 하선
+        </div>
+      </div>
+
+      <div class="slide" onclick="copySlide(this)" style="background:linear-gradient(145deg,#37474f,#546e7a)">
+        <button class="slide-copy">복사</button>
+        <div class="slide-num">SLIDE 03</div>
+        <div class="slide-title">🧊 허바드 빙하란?</div>
+        <div class="slide-sub">
+          세계 최대 조수(潮水) 빙하<br>
+          길이 120km · 너비 10km<br>
+          눈앞에서 빙하 붕괴(calving) 목격<br>
+          "쾅!" 소리와 함께 바다로 떨어져요 🧊
+        </div>
+      </div>
+
+      <div class="slide" onclick="copySlide(this)" style="background:linear-gradient(145deg,#4a148c,#6a1b9a)">
+        <button class="slide-copy">복사</button>
+        <div class="slide-num">SLIDE 04</div>
+        <div class="slide-title">🦅 기항지 하이라이트</div>
+        <div class="slide-sub">
+          🚁 주노 — 헬기 빙하 아이스워킹<br>
+          🚂 스카그웨이 — 화이트패스 협궤열차<br>
+          🐋 아이시 스트레이트 — 혹등고래 관찰<br>
+          🦦 케치칸 — 토템폴·레인포레스트
+        </div>
+      </div>
+
+      <div class="slide" onclick="copySlide(this)" style="background:linear-gradient(145deg,#b71c1c,#c62828)">
+        <button class="slide-copy">복사</button>
+        <div class="slide-num">SLIDE 05</div>
+        <div class="slide-title">💰 요금 안내</div>
+        <div class="slide-sub">인사이드</div>
+        <div class="slide-price">$563~</div>
+        <div class="slide-sub">오션뷰 $638~ / 발코니 ⭐ $1,843~<br><small style="opacity:.7">1인 기준 · 항공 별도</small></div>
+      </div>
+
+      <div class="slide" onclick="copySlide(this)" style="background:linear-gradient(145deg,#e65100,#f57c00)">
+        <button class="slide-copy">복사</button>
+        <div class="slide-num">SLIDE 06</div>
+        <div class="slide-title">📞 지금 바로 상담하세요!</div>
+        <div class="slide-sub">
+          크루즈링크<br>
+          9개 글로벌 선사 공식 판매사<br><br>
+          💬 카카오톡 @크루즈링크<br>
+          🌐 www.cruiselink.co.kr
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 피드 캡션 (메인) -->
+  <div class="block">
+    <div class="block-label">✍️ 피드 캡션 (메인 포스팅용)</div>
+    <button class="copy-btn" onclick="copyBlock(this)">복사</button>
+    <div class="caption-box" id="caption-feed">인스타그램 포스팅 — Norwegian Jade 알래스카 7박 크루즈
+
+🧊 평생 한 번은 봐야 할 알래스카 빙하,
+크루즈로 가면 이렇게 다릅니다 🚢❄️
+
+📅 2026.07.06 ~ 07.13 (7박 8일)
+💰 1인 $563~ (인사이드 기준)
+—
+📍 DAY BY DAY 일정
+
+🛳️ DAY 1 | 위티어(알래스카) 탑승
+알래스카 만(灣)을 바라보며 출항! 백야로 밤 10시까지 해가 지지 않아요 ☀️
+
+🧊 DAY 2 | 허바드 빙하 크루징
+세계 최대 조수 빙하 눈앞에서 감상
+빙하 붕괴 "쾅!" 소리 직접 들어보세요 🧊
+
+🐋 DAY 3 | 아이시 스트레이트 포인트
+혹등고래 관찰 + 갈색곰 탐방
+알래스카 야생동물의 천국
+
+🦅 DAY 4 | 주노(알래스카 주도)
+헬기 타고 빙하 위에 착륙 🚁
+멘덴홀 빙하 트레킹 + 연어 낚시
+
+⛏️ DAY 5 | 스카그웨이
+1898년 골드러시 역사 마을 그대로!
+화이트패스 협궤열차 세계 최고 경치 🚂
+
+🦦 DAY 6 | 케치칸
+토템폴 공원 + 레인포레스트 탐방
+던지니스 크랩 & 연어 시식 🦀
+
+🌊 DAY 7 | 항해의 날
+인사이드 패시지 항해 + 작별 정찬 🥂
+
+🍁 DAY 8 | 밴쿠버(캐나다) 하선
+—
+✨ 알래스카 크루즈가 특별한 이유
+🧊 허바드 빙하 — 배에서 직접 접근, 빙하 붕괴 목격
+🐋 야생 고래·곰·독수리 — 야생동물 삼종 세트
+🚁 헬기 빙하 투어 — 빙하 위 아이스워킹
+🚂 화이트패스 철도 — 세계 최고 경치 열차
+—
+🏷️ 객실별 요금
+🚪 인사이드 $563~ | 🪟 오션뷰 $638~
+🌅 발코니 $1,843~ ⭐추천 | 👑 스위트 $1,913~
+
+👉 지금 바로 문의하세요!
+📞 02-3788-9119
+💬 카카오톡: @크루즈링크
+🌐 cruiselink.co.kr
+.
+.
+.
+#알래스카크루즈 #허바드빙하 #NCL크루즈 #NorwegianJade #빙하크루즈 #알래스카여행 #주노 #스카그웨이 #케치칸 #크루즈여행 #크루즈링크 #2026크루즈 #여름크루즈 #7월여행 #가족여행 #허니문크루즈 #여행스타그램 #해외여행 #Alaska #Alaskacruise #glacierviews #cruiselife</div>
+  </div>
+
+  <!-- 릴스 자막 -->
+  <div class="block">
+    <div class="block-label">🎬 릴스 / 숏폼 자막 (15초)</div>
+    <button class="copy-btn" onclick="copyBlock(this)">복사</button>
+    <div class="caption-box">⏱ 0~3초: "평생 한 번은 봐야 할 알래스카 빙하"
+⏱ 3~6초: "크루즈로 가면 이게 가능합니다"
+⏱ 6~9초: "Norwegian Jade 알래스카 7박 8일"
+⏱ 9~12초: "2026년 7월 6일 출발 · 인사이드 $563~"
+⏱ 12~15초: "크루즈링크에서 지금 바로 상담 → 링크 클릭"</div>
+  </div>
+
+  <!-- 스토리 슬라이드 -->
+  <div class="block">
+    <div class="block-label">📲 스토리 슬라이드 텍스트 (3장)</div>
+    <div class="stories-row">
+
+      <div class="story" onclick="copySlide(this)">
+        <button class="slide-copy">복사</button>
+        <div class="story-title">🧊 이번 여름<br>알래스카 빙하<br>크루즈로 간다!</div>
+        <div class="story-sub" style="margin-top:10px">Norwegian Jade<br>2026.07.06 출발<br>7박 8일</div>
+      </div>
+
+      <div class="story" onclick="copySlide(this)">
+        <button class="slide-copy">복사</button>
+        <div class="story-title">💰 얼마예요?</div>
+        <div style="font-size:26px;font-weight:900;color:#FFD700;margin:10px 0">$563~</div>
+        <div class="story-sub">인사이드 1인 기준<br>항공 별도<br>발코니 $1,843~</div>
+      </div>
+
+      <div class="story" onclick="copySlide(this)">
+        <button class="slide-copy">복사</button>
+        <div class="story-title">📩 지금 상담하세요</div>
+        <div class="story-sub" style="margin-top:10px">크루즈링크<br>9개 글로벌 선사<br>공식 판매사<br><br>💬 카카오톡<br>🌐 cruiselink.co.kr</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="block">
+    <div class="block-label">🏷️ 해시태그 (클릭하면 복사)</div>
+    <button class="copy-btn" onclick="copyHashtags()">전체 복사</button>
+    <div class="hashtags" id="hashtag-list">
+      <span class="ht" onclick="copyText('#알래스카크루즈')">#알래스카크루즈</span>
+      <span class="ht" onclick="copyText('#허바드빙하')">#허바드빙하</span>
+      <span class="ht" onclick="copyText('#NCL크루즈')">#NCL크루즈</span>
+      <span class="ht" onclick="copyText('#NorwegianJade')">#NorwegianJade</span>
+      <span class="ht" onclick="copyText('#빙하크루즈')">#빙하크루즈</span>
+      <span class="ht" onclick="copyText('#알래스카여행')">#알래스카여행</span>
+      <span class="ht" onclick="copyText('#주노')">#주노</span>
+      <span class="ht" onclick="copyText('#스카그웨이')">#스카그웨이</span>
+      <span class="ht" onclick="copyText('#케치칸')">#케치칸</span>
+      <span class="ht" onclick="copyText('#크루즈여행')">#크루즈여행</span>
+      <span class="ht" onclick="copyText('#크루즈링크')">#크루즈링크</span>
+      <span class="ht" onclick="copyText('#2026크루즈')">#2026크루즈</span>
+      <span class="ht" onclick="copyText('#여름크루즈')">#여름크루즈</span>
+      <span class="ht" onclick="copyText('#해외여행')">#해외여행</span>
+      <span class="ht" onclick="copyText('#허니문크루즈')">#허니문크루즈</span>
+      <span class="ht" onclick="copyText('#여행스타그램')">#여행스타그램</span>
+      <span class="ht" onclick="copyText('#Alaska')">#Alaska</span>
+      <span class="ht" onclick="copyText('#cruiselife')">#cruiselife</span>
+    </div>
+  </div>
+
+</div>
+
+<div id="toast">✅ 복사 완료!</div>
+
+<script>
+function showToast() {
+  const t = document.getElementById('toast');
+  t.style.display = 'block';
+  setTimeout(() => t.style.display = 'none', 2000);
+}
+function copyText(text) {
+  navigator.clipboard.writeText(text).then(() => showToast());
+}
+function copySlide(el) {
+  const texts = [];
+  el.querySelectorAll('.slide-num,.slide-title,.slide-sub,.slide-price,.story-title,.story-sub').forEach(e => {
+    const t = e.innerText.trim();
+    if (t && !e.classList.contains('slide-copy')) texts.push(t);
+  });
+  navigator.clipboard.writeText(texts.join('\n')).then(() => showToast());
+}
+function copyBlock(btn) {
+  const block = btn.parentElement;
+  const box = block.querySelector('.caption-box');
+  const text = box ? box.innerText.trim() : '';
+  navigator.clipboard.writeText(text).then(() => showToast());
+}
+function copyHashtags() {
+  const tags = [...document.querySelectorAll('.ht')].map(e => e.innerText).join(' ');
+  navigator.clipboard.writeText(tags).then(() => showToast());
+}
+function copyAll() {
+  const caption = document.getElementById('caption-feed').innerText.trim();
+  const tags = [...document.querySelectorAll('.ht')].map(e => e.innerText).join(' ');
+  navigator.clipboard.writeText(caption + '\n\n' + tags).then(() => showToast());
+}
+</script>
+</body>
+</html>
