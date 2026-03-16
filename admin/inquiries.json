@@ -355,5 +355,23 @@
     "id": "1773628392113",
     "timestamp": "2026-03-16T02:33:12.113Z",
     "status": "신규"
+  },
+  {
+    "product": "지중해 10박 크루즈",
+    "cruiseline": "Regent Seven Seas Cruises",
+    "ship": "세븐 시즈 보이저",
+    "dateFrom": "2026-03-23",
+    "ports": "",
+    "price": "문의",
+    "ref": "REGENTVOY260323",
+    "name": "김한나",
+    "email": "khn0781@naver.com",
+    "phone": "01063044424",
+    "pax": "4",
+    "cabin": "오션뷰",
+    "message": "kim hanna",
+    "id": "1773633321979",
+    "timestamp": "2026-03-16T03:55:21.979Z",
+    "status": "신규"
   }
 ]
