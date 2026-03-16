@@ -11,6 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>INVOICE</title>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
 <style>
 /* =========== 전체 레이아웃 =========== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -404,6 +405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div style="display:flex;gap:10px;width:100%">
         <button class="btn-print" onclick="doPrint()">🖨️ 인쇄 / PDF 저장</button>
+        <button class="btn-print" onclick="exportExcel()" style="background:#1b6e2e;flex:1">📊 엑셀 파일 변환</button>
         <button class="btn-reset" onclick="resetForm()">초기화</button>
       </div>
     </div>
@@ -862,6 +864,81 @@ function renderInvoice() {
 
 function render() {
   renderInvoice();
+}
+
+function exportExcel() {
+  const wb = XLSX.utils.book_new();
+
+  // ── 기본 정보
+  const customer  = document.getElementById('f_customer')?.value || '';
+  const issueDate = document.getElementById('f_issuedate')?.value || '';
+  const manager   = document.getElementById('f_manager')?.value || '';
+  const ship      = document.getElementById('f_ship')?.value || '';
+  const bookingNo = document.getElementById('f_bookingno')?.value || '';
+  const itinerary = document.getElementById('f_itinerary')?.value || '';
+  const embark    = document.getElementById('f_embark')?.value || '';
+  const embarkPort    = document.getElementById('f_embarkport')?.value || '';
+  const disembarkPort = document.getElementById('f_disembarkport')?.value || '';
+  const rate      = document.getElementById('f_rate')?.value || '';
+  const operator  = document.getElementById('f_operator')?.value || '';
+
+  // 스타일 헬퍼
+  const hdr = { font:{bold:true}, fill:{fgColor:{rgb:'1A237E'}}, font:{bold:true,color:{rgb:'FFFFFF'}} };
+  const sub = { font:{bold:true}, fill:{fgColor:{rgb:'E8EAF6'}} };
+
+  // ── 시트1: 인보이스 정보
+  const infoRows = [
+    ['크루즈 인보이스'],
+    [],
+    ['📋 기본 정보'],
+    ['고객명', customer, '', '발신일', issueDate, '', '담당자', manager],
+    [],
+    ['🚢 크루즈 정보'],
+    ['선사', operator, '', '선박명', ship, '', 'Booking No.', bookingNo],
+    ['크루즈 일정', itinerary, '', '승선일', embark],
+    ['승선 항구', embarkPort, '', '하선 항구', disembarkPort],
+    ['환율 (USD→KRW)', rate ? `1 USD = ${Number(rate).toLocaleString()} KRW` : ''],
+    [],
+    ['👥 승객 정보'],
+    ['No.', '성별', '이름', '선실 카테고리', '선실 No.', 'Dining', '요금($)', '팁($)', 'Tax($)', '합계($)', '합계(KRW)'],
+  ];
+
+  const rateNum = parseFloat(rate) || 0;
+  let totalUSD = 0;
+  paxRows.forEach((p, i) => {
+    const price = parseFloat(p.price) || 0;
+    const tip   = parseFloat(p.tip)   || 0;
+    const tax   = parseFloat(p.tax)   || 0;
+    const sum   = price + tip + tax;
+    totalUSD   += sum;
+    infoRows.push([
+      i + 1, p.gender, p.name, p.cabin_cat, p.cabin_no, p.dining,
+      price || '', tip || '', tax || '',
+      sum ? sum.toFixed(2) : '',
+      (rateNum && sum) ? Math.round(sum * rateNum).toLocaleString() : '',
+    ]);
+  });
+
+  infoRows.push([]);
+  infoRows.push([
+    '', '', '', '', '', '', '', '', '합계',
+    totalUSD.toFixed(2),
+    (rateNum && totalUSD) ? Math.round(totalUSD * rateNum).toLocaleString() : '',
+  ]);
+
+  const ws = XLSX.utils.aoa_to_sheet(infoRows);
+
+  // 열 너비
+  ws['!cols'] = [
+    {wch:6},{wch:6},{wch:16},{wch:16},{wch:10},{wch:12},
+    {wch:10},{wch:10},{wch:10},{wch:12},{wch:16},
+  ];
+
+  XLSX.utils.book_append_sheet(wb, ws, '인보이스');
+
+  // 파일명: INVOICE_고객명_날짜.xlsx
+  const fname = `INVOICE_${customer || 'cruiselink'}_${issueDate || 'nodate'}.xlsx`;
+  XLSX.writeFile(wb, fname);
 }
 
 function resetForm() {
