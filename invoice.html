@@ -428,12 +428,11 @@ const CANCEL_POLICIES = {
     color: '#b71c1c',
     note: '* 환율은 인보이스 발행일 하나은행 1회차 현금 매도율 기준의 환율이 적용됩니다.\n* 취소 기준일은 승선일 기준으로 자동 계산됩니다.',
     rows: (embark) => [
-      { period: '예약 확정 이후',    cutoff: null,           fee: '1인 $70' },
-      { period: '승선 76일 전까지',  cutoff: addDays(embark,-76), fee: '1인 $250' },
-      { period: '승선 75~61일 전',   cutoff: addDays(embark,-75), fee: '크루즈 요금의 25%' },
-      { period: '승선 60~51일 전',   cutoff: addDays(embark,-60), fee: '크루즈 요금의 50%' },
-      { period: '승선 50~31일 전',   cutoff: addDays(embark,-50), fee: '크루즈 요금의 75%' },
-      { period: '승선 30일 이내',    cutoff: addDays(embark,-30), fee: '크루즈 요금의 100%' },
+      { period: '승선 75일 전까지',       cutoff: addDays(embark,-75), fee: '취소료 없음' },
+      { period: '승선 74~60일 전',        cutoff: addDays(embark,-74), fee: '1인 $150' },
+      { period: '승선 59~50일 전',        cutoff: addDays(embark,-59), fee: '크루즈 요금의 25%' },
+      { period: '승선 49~30일 전',        cutoff: addDays(embark,-49), fee: '크루즈 요금의 50%' },
+      { period: '승선 29일 전 ~ 승선 당일', cutoff: addDays(embark,-29), fee: '크루즈 요금의 100%' },
     ],
   },
   NCL: {
