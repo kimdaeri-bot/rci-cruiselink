@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>CruiseLink Monthly Sales Report — 작성기</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Apple SD Gothic Neo','Noto Sans KR',sans-serif;background:#0f1623;color:#e0e6f0;min-height:100vh}
+header{background:linear-gradient(135deg,#0a2540,#0d3a6a);padding:18px 32px;border-bottom:2px solid #1a4a7a;display:flex;align-items:center;gap:14px}
+header h1{font-size:17px;font-weight:900;color:#fff}
+header p{font-size:11px;color:rgba(255,255,255,.4);margin-top:2px}
+.lock-badge{background:#1a3a6a;color:#4da6ff;font-size:10px;font-weight:800;padding:2px 9px;border-radius:10px;white-space:nowrap}
+.wrap{display:grid;grid-template-columns:420px 1fr;min-height:calc(100vh - 62px)}
+@media(max-width:1100px){.wrap{grid-template-columns:1fr}}
+.form-panel{background:#131e2e;padding:22px 18px;overflow-y:auto;border-right:1px solid #1e2e40}
+.sec{margin-bottom:20px}
+.sec h2{font-size:11.5px;font-weight:700;color:#6a8aaa;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #1e2e40}
+.form-row{margin-bottom:9px}
+label{display:block;font-size:11px;color:#7a9ab8;margin-bottom:3px;font-weight:600}
+input,select,textarea{width:100%;background:#0f1a28;border:1px solid #243040;border-radius:5px;color:#e0e6f0;font-size:12.5px;padding:6px 9px;outline:none;transition:border-color .2s;font-family:inherit}
+input:focus,select:focus{border-color:#4da6ff}
+input[readonly]{color:#4da6ff;cursor:default}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.add-btn{width:100%;background:#0d2347;color:#4da6ff;border:1px solid #1e3a6a;font-size:12px;font-weight:700;padding:7px;border-radius:5px;cursor:pointer;margin-top:6px}
+.add-btn:hover{background:#1a3a6a}
+.remove-btn{background:#3a1020;color:#f87171;border:none;font-size:10px;padding:2px 7px;border-radius:3px;cursor:pointer}
+.booking-item{background:#0d1828;border:1px solid #1e2e40;border-radius:6px;padding:10px;margin-bottom:8px}
+.booking-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.booking-header span{font-size:11px;font-weight:700;color:#4da6ff}
+.print-btn{width:100%;background:#0d3a6a;color:#fff;border:none;font-size:13px;font-weight:800;padding:11px;border-radius:6px;cursor:pointer;margin-top:6px}
+.print-btn:hover{background:#1a4a8a}
+.reset-btn{width:100%;background:#1e2e40;color:#7a9ab8;border:none;font-size:11.5px;padding:7px;border-radius:5px;cursor:pointer;margin-top:5px}
+
+/* ── 프리뷰 ── */
+.preview-panel{background:#e8e8e4;overflow-y:auto;display:flex;flex-direction:column;align-items:center;padding:28px 16px}
+.report-paper{background:#fff;width:240mm;min-height:297mm;padding:14mm 16mm;box-shadow:0 4px 28px rgba(0,0,0,.18);font-family:'Arial','Apple SD Gothic Neo',sans-serif;font-size:8.5pt;color:#111}
+@media(max-width:1100px){.report-paper{width:100%;min-height:auto}}
+
+/* 리포트 스타일 */
+.rpt-title{font-size:16pt;font-weight:900;color:#0a3a6a;text-align:center;margin-bottom:4px;letter-spacing:.5px}
+.rpt-meta{text-align:right;font-size:7.5pt;color:#888;margin-bottom:10px}
+.rpt-divider{height:2px;background:#0a3a6a;margin-bottom:12px}
+.rpt-section{margin-bottom:14px}
+.rpt-section-title{font-size:9pt;font-weight:900;color:#fff;background:#0a3a6a;padding:4px 10px;margin-bottom:8px;letter-spacing:.5px}
+.rpt-table{width:100%;border-collapse:collapse;font-size:7.5pt;margin-bottom:8px}
+.rpt-table th{background:#1a3a6a;color:#fff;padding:5px 6px;text-align:left;font-weight:700;font-size:7pt;white-space:nowrap}
+.rpt-table td{padding:4px 6px;border-bottom:1px solid #e8ecf0;vertical-align:middle;white-space:nowrap}
+.rpt-table tr:nth-child(even) td{background:#f8f9fb}
+.rpt-table .total-row td{background:#e8f0fa!important;font-weight:900;border-top:1.5px solid #1a3a6a}
+.rpt-table .num{text-align:right;font-feature-settings:'tnum'}
+.rpt-kpi{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:10px}
+.rpt-kpi-box{background:#f0f4fa;border-radius:5px;padding:8px 10px;text-align:center;border:1px solid #dce4ef}
+.rpt-kpi-label{font-size:7pt;color:#666;margin-bottom:3px}
+.rpt-kpi-val{font-size:12pt;font-weight:900;color:#0a3a6a}
+.rpt-mktg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rpt-mktg-box{background:#f8f9fb;border:1px solid #e0e4ea;border-radius:5px;padding:9px 11px}
+.rpt-mktg-box h4{font-size:8pt;font-weight:800;color:#0a3a6a;margin-bottom:6px;padding-bottom:4px;border-bottom:1px solid #dce4ef}
+.rpt-mktg-row{display:flex;justify-content:space-between;font-size:7.5pt;color:#444;margin-bottom:3px}
+.rpt-mktg-row .val{font-weight:700;color:#111}
+.rpt-mktg-row .val.paused{color:#aaa;font-style:italic}
+.rpt-img{margin-bottom:10px;text-align:center}
+.rpt-img img{max-width:100%;border:1px solid #e0e4ea;border-radius:4px}
+
+@media print{
+  body{background:#fff!important}
+  .form-panel,.preview-panel>:not(.report-paper){display:none}
+  .wrap{grid-template-columns:1fr}.preview-panel{padding:0;background:#fff}
+  .report-paper{box-shadow:none;width:100%;padding:10mm 12mm}
+  header{display:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <span class="lock-badge">🔒 INTERNAL</span>
+  <div>
+    <h1>📊 CruiseLink Monthly Sales Report 작성기</h1>
+    <p>데이터 입력 → 리포트 자동 생성 → PDF 저장</p>
+  </div>
+</header>
+
+<div class="wrap">
+<!-- ─── 좌측 폼 ─── -->
+<div class="form-panel">
+
+  <!-- 기본 정보 -->
+  <div class="sec">
+    <h2>📅 리포트 기본 정보</h2>
+    <div class="row2">
+      <div class="form-row"><label>월 (Month)</label>
+        <select id="repMonth" onchange="render()">
+          <option>January</option><option>February</option><option>March</option>
+          <option>April</option><option>May</option><option>June</option>
+          <option>July</option><option>August</option><option>September</option>
+          <option>October</option><option>November</option><option selected>December</option>
+        </select></div>
+      <div class="form-row"><label>연도 (Year)</label>
+        <input id="repYear" type="number" value="2025" oninput="render()"></div>
+    </div>
+    <div class="form-row"><label>작성 기준일 (as of)</label>
+      <input type="date" id="repAsOf" oninput="render()"></div>
+  </div>
+
+  <!-- 예약 내역 -->
+  <div class="sec">
+    <h2>🚢 예약 내역 (Sales Result)</h2>
+    <div id="bookingList"></div>
+    <button class="add-btn" onclick="addBooking()">+ 예약 추가</button>
+  </div>
+
+  <!-- 문의 통계 -->
+  <div class="sec">
+    <h2>📞 문의 채널 통계</h2>
+    <div class="row3">
+      <div class="form-row"><label>Web 문의</label>
+        <input type="number" id="inqWeb" value="0" oninput="render()"></div>
+      <div class="form-row"><label>전화 문의</label>
+        <input type="number" id="inqCall" value="0" oninput="render()"></div>
+      <div class="form-row"><label>카카오 채널</label>
+        <input type="number" id="inqKakao" value="0" oninput="render()"></div>
+    </div>
+    <div class="row2">
+      <div class="form-row"><label>견적 건수</label>
+        <input type="number" id="inqQuote" value="0" oninput="render()"></div>
+      <div class="form-row"><label>총 예약 건수</label>
+        <input type="number" id="inqBooking" value="0" oninput="render()"></div>
+    </div>
+  </div>
+
+  <!-- 네이버 광고 -->
+  <div class="sec">
+    <h2>🟢 네이버 광고</h2>
+    <div class="row2">
+      <div class="form-row"><label>기간 시작</label>
+        <input type="date" id="naverStart" oninput="render()"></div>
+      <div class="form-row"><label>기간 종료</label>
+        <input type="date" id="naverEnd" oninput="render()"></div>
+    </div>
+    <div class="row3">
+      <div class="form-row"><label>예산 (KRW)</label>
+        <input type="number" id="naverBudget" placeholder="1,635,970" oninput="render()"></div>
+      <div class="form-row"><label>노출 수</label>
+        <input type="number" id="naverExposure" placeholder="56,104" oninput="render()"></div>
+      <div class="form-row"><label>방문자 수</label>
+        <input type="number" id="naverVisitor" placeholder="3,938" oninput="render()"></div>
+    </div>
+    <div class="row2">
+      <div class="form-row"><label>클릭률 (%)</label>
+        <input type="number" id="naverCTR" step="0.01" placeholder="7.02" oninput="render()"></div>
+      <div class="form-row"><label>CPC (KRW)</label>
+        <input type="number" id="naverCPC" placeholder="415" oninput="render()"></div>
+    </div>
+  </div>
+
+  <!-- 구글 광고 -->
+  <div class="sec">
+    <h2>🔵 구글 광고</h2>
+    <div class="form-row">
+      <label><input type="checkbox" id="googlePaused" onchange="render()"> 임시중지</label>
+    </div>
+    <div id="googleFields">
+    <div class="row2">
+      <div class="form-row"><label>기간 시작</label>
+        <input type="date" id="googleStart" oninput="render()"></div>
+      <div class="form-row"><label>기간 종료</label>
+        <input type="date" id="googleEnd" oninput="render()"></div>
+    </div>
+    <div class="row3">
+      <div class="form-row"><label>예산 (KRW)</label>
+        <input type="number" id="googleBudget" oninput="render()"></div>
+      <div class="form-row"><label>노출 수</label>
+        <input type="number" id="googleExposure" oninput="render()"></div>
+      <div class="form-row"><label>방문자 수</label>
+        <input type="number" id="googleVisitor" oninput="render()"></div>
+    </div>
+    <div class="row2">
+      <div class="form-row"><label>클릭률 (%)</label>
+        <input type="number" id="googleCTR" step="0.01" oninput="render()"></div>
+      <div class="form-row"><label>CPC (KRW)</label>
+        <input type="number" id="googleCPC" oninput="render()"></div>
+    </div>
+    </div>
+  </div>
+
+  <!-- 이미지 첨부 -->
+  <div class="sec">
+    <h2>🖼️ 이미지 첨부 (그래프 등)</h2>
+    <div style="border:2px dashed #2a4a6a;border-radius:6px;padding:14px;text-align:center;position:relative;background:#0d1828;cursor:pointer" id="imgDrop">
+      <input type="file" accept="image/*" id="imgFile" onchange="handleImg(this)" style="position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%">
+      <p style="font-size:11.5px;color:#5a80a0;pointer-events:none">📋 Ctrl+V 붙여넣기 또는 클릭해서 파일 선택</p>
+    </div>
+    <div id="imgThumb" style="display:none;margin-top:8px;position:relative">
+      <img id="imgPreview" src="" style="max-width:100%;border-radius:5px;max-height:100px;object-fit:contain;border:1px solid #243040">
+      <button onclick="clearImg()" style="position:absolute;top:3px;right:3px;background:#cc3300;color:#fff;border:none;border-radius:3px;font-size:10px;padding:2px 6px;cursor:pointer">✕</button>
+    </div>
+  </div>
+
+  <button class="print-btn" onclick="window.print()">🖨️ PDF 저장 / 인쇄</button>
+  <button class="reset-btn" onclick="resetForm()">↺ 초기화</button>
+</div>
+
+<!-- ─── 우측 프리뷰 ─── -->
+<div class="preview-panel">
+  <div class="report-paper" id="reportPaper"></div>
+</div>
+</div>
+
+<script>
+let bookings = [], bId = 0, imgDataUrl = null;
+
+// ─── 유틸 ───────────────────────────────────────
+function gv(id){ const el=document.getElementById(id); return el?el.value:''; }
+function gn(id){ return parseFloat(gv(id))||0; }
+function gi(id){ return parseInt(gv(id))||0; }
+function fmt(n,d=2){ return Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d}); }
+function fmtKrw(n){ return Math.round(n).toLocaleString('ko-KR'); }
+function fmtDate(val){
+  if(!val) return '—';
+  const d=new Date(val+'T00:00:00');
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+function fmtDateLong(val){
+  if(!val) return '—';
+  const d=new Date(val+'T00:00:00');
+  const mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()];
+  return `${d.getDate()}${mo}'${String(d.getFullYear()).slice(2)}`;
+}
+
+// ─── 이미지 ─────────────────────────────────────
+function handleImg(input){ if(input.files[0]) readImgFile(input.files[0]); }
+function readImgFile(f){ if(!f.type.startsWith('image/')) return; const r=new FileReader(); r.onload=e=>setImg(e.target.result); r.readAsDataURL(f); }
+function setImg(url){ imgDataUrl=url; document.getElementById('imgPreview').src=url; document.getElementById('imgThumb').style.display='block'; render(); }
+function clearImg(){ imgDataUrl=null; document.getElementById('imgThumb').style.display='none'; document.getElementById('imgFile').value=''; render(); }
+
+// ─── 예약 추가/삭제 ──────────────────────────────
+function addBooking(){
+  const id=bId++;
+  bookings.push(id);
+  const div=document.createElement('div');
+  div.className='booking-item'; div.id=`b-${id}`;
+  div.innerHTML=`
+    <div class="booking-header"><span>예약 #${bookings.indexOf(id)+1}</span><button class="remove-btn" onclick="removeBooking(${id})">✕</button></div>
+    <div class="row2">
+      <div class="form-row"><label>예약일자</label><input type="date" id="b${id}_date" oninput="render()"></div>
+      <div class="form-row"><label>선사명</label><input id="b${id}_line" placeholder="MSC Cruise_Anam Air" oninput="render()"></div>
+    </div>
+    <div class="row2">
+      <div class="form-row"><label>BOOKING#</label><input id="b${id}_no" placeholder="52758389" oninput="render()"></div>
+      <div class="form-row"><label>승선일</label><input type="date" id="b${id}_sail" oninput="render()"></div>
+    </div>
+    <div class="row2">
+      <div class="form-row"><label>선박명</label><input id="b${id}_ship" placeholder="MSC Bellissima" oninput="render()"></div>
+      <div class="form-row"><label>CABIN TYPE</label><input id="b${id}_cabin" placeholder="BR2" oninput="render()"></div>
+    </div>
+    <div class="row3">
+      <div class="form-row"><label>CABIN FARE</label><input type="number" id="b${id}_fare" value="0" step="0.01" oninput="render()"></div>
+      <div class="form-row"><label>TAX</label><input type="number" id="b${id}_tax" value="0" step="0.01" oninput="render()"></div>
+      <div class="form-row"><label>COMM.</label><input type="number" id="b${id}_comm" value="0" step="0.01" oninput="render()"></div>
+    </div>
+    <div class="row2">
+      <div class="form-row"><label>OTHERS</label><input type="number" id="b${id}_others" value="0" step="0.01" oninput="render()"></div>
+      <div class="form-row"><label>Gross Fare (자동)</label><input id="b${id}_gross" readonly></div>
+    </div>
+  `;
+  document.getElementById('bookingList').appendChild(div);
+  render();
+}
+function removeBooking(id){ bookings=bookings.filter(b=>b!==id); document.getElementById(`b-${id}`).remove(); render(); }
+
+// ─── 렌더링 ──────────────────────────────────────
+function render(){
+  const mo=gv('repMonth'), yr=gv('repYear'), asOf=gv('repAsOf');
+  const asOfStr = asOf ? `as of ${fmtDateLong(asOf)}` : '';
+
+  // 구글 임시중지
+  const gPaused = document.getElementById('googlePaused').checked;
+  document.getElementById('googleFields').style.opacity = gPaused ? '.4' : '1';
+
+  // 예약 데이터 계산
+  let totFare=0, totTax=0, totOthers=0, totGross=0, totComm=0;
+  const bData = bookings.map(id=>{
+    const fare=gn(`b${id}_fare`), tax=gn(`b${id}_tax`), others=gn(`b${id}_others`), comm=gn(`b${id}_comm`);
+    const gross = fare+tax+others;
+    const gEl=document.getElementById(`b${id}_gross`); if(gEl) gEl.value=fmt(gross);
+    totFare+=fare; totTax+=tax; totOthers+=others; totGross+=gross; totComm+=comm;
+    return { date:gv(`b${id}_date`), line:gv(`b${id}_line`), no:gv(`b${id}_no`), sail:gv(`b${id}_sail`), ship:gv(`b${id}_ship`), cabin:gv(`b${id}_cabin`), fare, tax, others, gross, comm };
+  });
+
+  const tableRows = bData.map(b=>`
+    <tr>
+      <td>${fmtDate(b.date)}</td>
+      <td>${b.line||'—'}</td>
+      <td>${b.no||'—'}</td>
+      <td>${fmtDate(b.sail)}</td>
+      <td>${b.ship||'—'}</td>
+      <td>${b.cabin||'—'}</td>
+      <td class="num">$${fmt(b.fare)}</td>
+      <td class="num">$${fmt(b.tax)}</td>
+      <td class="num">$${fmt(b.others)}</td>
+      <td class="num"><b>$${fmt(b.gross)}</b></td>
+      <td class="num">$${fmt(b.comm)}</td>
+    </tr>`).join('');
+
+  const totalRow = bData.length ? `<tr class="total-row">
+    <td colspan="6" style="text-align:right;font-size:7pt">Total (USD)</td>
+    <td class="num">$${fmt(totFare)}</td>
+    <td class="num">$${fmt(totTax)}</td>
+    <td class="num">$${fmt(totOthers)}</td>
+    <td class="num"><b>$${fmt(totGross)}</b></td>
+    <td class="num">$${fmt(totComm)}</td>
+  </tr>` : '';
+
+  // KPI
+  const kpiHtml=`<div class="rpt-kpi">
+    <div class="rpt-kpi-box"><div class="rpt-kpi-label">Web 문의</div><div class="rpt-kpi-val">${gi('inqWeb')}</div></div>
+    <div class="rpt-kpi-box"><div class="rpt-kpi-label">전화 문의</div><div class="rpt-kpi-val">${gi('inqCall')}</div></div>
+    <div class="rpt-kpi-box"><div class="rpt-kpi-label">카카오</div><div class="rpt-kpi-val">${gi('inqKakao')}</div></div>
+    <div class="rpt-kpi-box"><div class="rpt-kpi-label">견적</div><div class="rpt-kpi-val">${gi('inqQuote')}</div></div>
+    <div class="rpt-kpi-box" style="background:#e8f5e9;border-color:#a5d6a7"><div class="rpt-kpi-label">Total 예약</div><div class="rpt-kpi-val" style="color:#1b5e20">${gi('inqBooking')}</div></div>
+  </div>`;
+
+  // 마케팅
+  const naverPeriod = (gv('naverStart')||gv('naverEnd')) ? `${fmtDate(gv('naverStart'))} ~ ${fmtDate(gv('naverEnd'))}` : '—';
+  const googlePeriod = gPaused ? '임시중지' : ((gv('googleStart')||gv('googleEnd')) ? `${fmtDate(gv('googleStart'))} ~ ${fmtDate(gv('googleEnd'))}` : '—');
+  const naverCTR = gv('naverCTR') ? (parseFloat(gv('naverCTR'))).toFixed(2)+'%' : '—';
+  const googleCTR = gv('googleCTR') ? (parseFloat(gv('googleCTR'))).toFixed(2)+'%' : '—';
+  const mktgHtml=`<div class="rpt-mktg">
+    <div class="rpt-mktg-box">
+      <h4>🟢 Naver Advertising</h4>
+      <div class="rpt-mktg-row"><span>Period</span><span class="val">${naverPeriod}</span></div>
+      <div class="rpt-mktg-row"><span>Budget</span><span class="val">${gv('naverBudget') ? '₩'+fmtKrw(gn('naverBudget')) : '—'}</span></div>
+      <div class="rpt-mktg-row"><span>Exposure</span><span class="val">${gv('naverExposure') ? fmtKrw(gn('naverExposure')) : '—'}</span></div>
+      <div class="rpt-mktg-row"><span>Visitor</span><span class="val">${gv('naverVisitor') ? fmtKrw(gn('naverVisitor')) : '—'}</span></div>
+      <div class="rpt-mktg-row"><span>Click Ratio</span><span class="val">${naverCTR}</span></div>
+      <div class="rpt-mktg-row"><span>CPC</span><span class="val">${gv('naverCPC') ? '₩'+fmtKrw(gn('naverCPC')) : '—'}</span></div>
+    </div>
+    <div class="rpt-mktg-box">
+      <h4>🔵 Google Advertising${gPaused?' <span style="color:#aaa;font-weight:400;font-size:7pt">(임시중지)</span>':''}</h4>
+      ${gPaused ? '<div style="text-align:center;color:#aaa;font-size:8pt;padding:16px 0">— 현재 임시중지 중 —</div>' : `
+      <div class="rpt-mktg-row"><span>Period</span><span class="val">${googlePeriod}</span></div>
+      <div class="rpt-mktg-row"><span>Budget</span><span class="val">${gv('googleBudget') ? '₩'+fmtKrw(gn('googleBudget')) : '—'}</span></div>
+      <div class="rpt-mktg-row"><span>Exposure</span><span class="val">${gv('googleExposure') ? fmtKrw(gn('googleExposure')) : '—'}</span></div>
+      <div class="rpt-mktg-row"><span>Visitor</span><span class="val">${gv('googleVisitor') ? fmtKrw(gn('googleVisitor')) : '—'}</span></div>
+      <div class="rpt-mktg-row"><span>Click Ratio</span><span class="val">${googleCTR}</span></div>
+      <div class="rpt-mktg-row"><span>CPC</span><span class="val">${gv('googleCPC') ? '₩'+fmtKrw(gn('googleCPC')) : '—'}</span></div>`}
+    </div>
+  </div>`;
+
+  const imgHtml = imgDataUrl ? `<div class="rpt-img"><img src="${imgDataUrl}" alt="첨부 이미지"></div>` : '';
+
+  document.getElementById('reportPaper').innerHTML = `
+    <div class="rpt-title">CruiseLink Monthly Sales Report</div>
+    <div class="rpt-meta">${mo} ${yr} &nbsp;|&nbsp; ${asOfStr}</div>
+    <div class="rpt-divider"></div>
+
+    <div class="rpt-section">
+      <div class="rpt-section-title">SALES</div>
+      ${imgHtml}
+      <table class="rpt-table">
+        <thead><tr>
+          <th>예약일</th><th>선사명</th><th>BOOKING#</th><th>승선일</th><th>선박명</th><th>CABIN</th>
+          <th class="num">FARE</th><th class="num">TAX</th><th class="num">OTHERS</th>
+          <th class="num">Gross</th><th class="num">COMM.</th>
+        </tr></thead>
+        <tbody>
+          ${tableRows||'<tr><td colspan="11" style="text-align:center;color:#aaa;padding:12px">예약 데이터를 입력하세요</td></tr>'}
+          ${totalRow}
+        </tbody>
+      </table>
+      <div style="font-size:7.5pt;color:#555;line-height:1.9;margin-top:4px">
+        <span style="margin-right:16px">· Web inquiry: <b>${gi('inqWeb')} times</b></span>
+        <span style="margin-right:16px">· Call inquiry: <b>${gi('inqCall')} times</b></span>
+        <span style="margin-right:16px">· KaKao Channel: <b>${gi('inqKakao')} times</b></span>
+        <span style="margin-right:16px">· Quotation: <b>${gi('inqQuote')} cases</b></span>
+        <span>· Total Booking: <b>${gi('inqBooking')} Bookings</b></span>
+      </div>
+    </div>
+
+    <div class="rpt-section">
+      <div class="rpt-section-title">문의 채널 현황</div>
+      ${kpiHtml}
+    </div>
+
+    <div class="rpt-section">
+      <div class="rpt-section-title">MARKETING</div>
+      ${mktgHtml}
+    </div>
+  `;
+}
+
+function resetForm(){
+  if(!confirm('초기화하시겠습니까?')) return;
+  bookings=[]; bId=0;
+  document.getElementById('bookingList').innerHTML='';
+  clearImg(); init();
+}
+
+function init(){
+  const now=new Date();
+  document.getElementById('repAsOf').value = now.toISOString().slice(0,10);
+  document.getElementById('repMonth').value = ['January','February','March','April','May','June','July','August','September','October','November','December'][now.getMonth()];
+  document.getElementById('repYear').value = now.getFullYear();
+  document.querySelectorAll('input,select').forEach(el=>{
+    el.addEventListener('input',render); el.addEventListener('change',render);
+  });
+  document.addEventListener('paste',e=>{
+    const items=e.clipboardData?.items; if(!items) return;
+    for(const it of items) if(it.type.startsWith('image/')){readImgFile(it.getAsFile());break;}
+  });
+  addBooking();
+  render();
+}
+init();
+</script>
+</body>
+</html>
