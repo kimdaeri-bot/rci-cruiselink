@@ -463,5 +463,23 @@
         "remarks": ""
       }
     ]
+  },
+  {
+    "product": "한국·대만 3박 크루즈",
+    "cruiseline": "MSC Cruises",
+    "ship": "MSC 벨리시마",
+    "dateFrom": "2027-06-20",
+    "ports": "",
+    "price": "문의",
+    "ref": "MSCBE20270620INCKEE",
+    "name": "김정웡",
+    "email": "kllra@naver.com",
+    "phone": "01099443771",
+    "pax": "3",
+    "cabin": "오션뷰",
+    "message": "Kimjunwon",
+    "id": "1773634298620",
+    "timestamp": "2026-03-16T04:11:38.620Z",
+    "status": "신규"
   }
 ]
