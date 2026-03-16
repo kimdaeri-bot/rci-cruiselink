@@ -469,7 +469,7 @@
     "cruiseline": "MSC Cruises",
     "ship": "MSC 벨리시마",
     "dateFrom": "2027-06-20",
-    "ports": "",
+    "ports": "인천 → Keelung (Chilung)",
     "price": "문의",
     "ref": "MSCBE20270620INCKEE",
     "name": "김정웡",
@@ -480,6 +480,25 @@
     "message": "Kimjunwon",
     "id": "1773634298620",
     "timestamp": "2026-03-16T04:11:38.620Z",
-    "status": "신규"
+    "status": "신규",
+    "fareHistory": [
+      {
+        "date": "2026. 3. 16.",
+        "pax": 3,
+        "types": [
+          {
+            "name": "오션뷰",
+            "val": 239
+          },
+          {
+            "name": "발코니",
+            "val": 349
+          }
+        ],
+        "air": 0,
+        "etc": 0,
+        "remarks": "* 오션뷰 : Deluxe Oceanview (5층 선실 기준)\n* 발코니 : Deluxe Balcony (8~10층 선실 기준)"
+      }
+    ]
   }
 ]
