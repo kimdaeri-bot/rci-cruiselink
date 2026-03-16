@@ -379,7 +379,7 @@
     "cruiseline": "MSC Cruises",
     "ship": "MSC 벨리시마",
     "dateFrom": "2027-06-20",
-    "ports": "",
+    "ports": "인천 → Keelung (Chilung)",
     "price": "문의",
     "ref": "MSCBE20270620INCKEE",
     "name": "김대윤",
@@ -390,6 +390,22 @@
     "message": "DAEYUN KIM",
     "id": "1773633427270",
     "timestamp": "2026-03-16T03:57:07.270Z",
-    "status": "신규"
+    "status": "신규",
+    "fareHistory": [
+      {
+        "date": "2026. 3. 16.",
+        "pax": 3,
+        "types": [
+          {
+            "name": "스위트",
+            "val": 559
+          }
+        ],
+        "tax": 0,
+        "air": 0,
+        "etc": 0,
+        "remarks": "* Premium Suite Aurea (SL1) 선실 기준"
+      }
+    ]
   }
 ]
