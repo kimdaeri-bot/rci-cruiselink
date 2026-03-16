@@ -9,85 +9,83 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Apple SD Gothic Neo','Noto Sans KR',sans-serif;background:#0f1623;color:#e0e6f0;min-height:100vh}
-header{background:linear-gradient(135deg,#0a2540,#0d3a6a);padding:16px 28px;border-bottom:2px solid #1a4a7a;display:flex;align-items:center;gap:12px}
+header{background:linear-gradient(135deg,#0a2540,#0d3a6a);padding:14px 24px;border-bottom:2px solid #1a4a7a;display:flex;align-items:center;gap:12px}
 header h1{font-size:16px;font-weight:900;color:#fff}
 header p{font-size:11px;color:rgba(255,255,255,.4);margin-top:2px}
-.lock-badge{background:#1a3a6a;color:#4da6ff;font-size:10px;font-weight:800;padding:2px 9px;border-radius:10px;white-space:nowrap}
-.wrap{display:grid;grid-template-columns:430px 1fr;min-height:calc(100vh - 58px)}
+.lb{background:#1a3a6a;color:#4da6ff;font-size:10px;font-weight:800;padding:2px 9px;border-radius:10px;white-space:nowrap}
+.wrap{display:grid;grid-template-columns:440px 1fr;min-height:calc(100vh - 54px)}
 @media(max-width:1100px){.wrap{grid-template-columns:1fr}}
-.fp{background:#131e2e;padding:20px 16px;overflow-y:auto;border-right:1px solid #1e2e40}
-.sec{margin-bottom:18px}
-.sec h2{font-size:11px;font-weight:700;color:#6a8aaa;letter-spacing:1px;text-transform:uppercase;margin-bottom:9px;padding-bottom:5px;border-bottom:1px solid #1e2e40}
-.fr{margin-bottom:8px}
+.fp{background:#131e2e;padding:18px 14px;overflow-y:auto;border-right:1px solid #1e2e40}
+.sec{margin-bottom:16px}
+.sec h2{font-size:11px;font-weight:700;color:#6a8aaa;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid #1e2e40}
+.fr{margin-bottom:7px}
 label{display:block;font-size:10.5px;color:#7a9ab8;margin-bottom:3px;font-weight:600}
-input,select,textarea{width:100%;background:#0f1a28;border:1px solid #243040;border-radius:5px;color:#e0e6f0;font-size:12px;padding:6px 8px;outline:none;transition:border-color .2s;font-family:inherit}
+input,select,textarea{width:100%;background:#0f1a28;border:1px solid #243040;border-radius:5px;color:#e0e6f0;font-size:12px;padding:5px 8px;outline:none;transition:border-color .2s;font-family:inherit}
 input:focus,select:focus{border-color:#4da6ff}
 input[readonly]{color:#4da6ff;cursor:default;background:#081018}
 .r2{display:grid;grid-template-columns:1fr 1fr;gap:7px}
 .r3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px}
-.r4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:5px}
-.add-btn{width:100%;background:#0d2347;color:#4da6ff;border:1px solid #1e3a6a;font-size:11.5px;font-weight:700;padding:6px;border-radius:5px;cursor:pointer;margin-top:5px}
+.r4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:4px}
+.add-btn{width:100%;background:#0d2347;color:#4da6ff;border:1px solid #1e3a6a;font-size:11.5px;font-weight:700;padding:6px;border-radius:5px;cursor:pointer;margin-top:4px}
 .add-btn:hover{background:#1a3a6a}
 .rm-btn{background:#3a1020;color:#f87171;border:none;font-size:10px;padding:2px 6px;border-radius:3px;cursor:pointer}
-.bk-item{background:#0d1828;border:1px solid #1e2e40;border-radius:5px;padding:9px;margin-bottom:7px}
-.bk-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
+.bk-item,.post-item{background:#0d1828;border:1px solid #1e2e40;border-radius:5px;padding:8px;margin-bottom:6px}
+.bk-hdr,.post-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .bk-hdr span{font-size:11px;font-weight:700;color:#4da6ff}
-.post-item{background:#0d1828;border:1px solid #1e2e40;border-radius:5px;padding:8px;margin-bottom:6px}
-.post-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .post-hdr span{font-size:11px;font-weight:700;color:#f59e0b}
-/* 이미지 드롭존 */
-.dz{border:2px dashed #2a4a6a;border-radius:6px;padding:12px;text-align:center;position:relative;background:#0d1828;cursor:pointer;min-height:70px;display:flex;align-items:center;justify-content:center}
-.dz:hover{border-color:#4da6ff;background:#0d2040}
+.dz{border:2px dashed #2a4a6a;border-radius:5px;padding:10px;text-align:center;position:relative;background:#0d1828;cursor:pointer;display:flex;align-items:center;justify-content:center;min-height:60px}
+.dz:hover{border-color:#4da6ff}
 .dz input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
-.dz p{font-size:11px;color:#5a80a0;pointer-events:none;line-height:1.7}
-.img-thumb{margin-top:7px;position:relative;display:inline-block;width:100%}
-.img-thumb img{max-width:100%;border-radius:5px;max-height:90px;object-fit:contain;border:1px solid #243040;width:100%}
-.img-clear{position:absolute;top:3px;right:3px;background:#cc3300;color:#fff;border:none;border-radius:3px;font-size:10px;padding:2px 6px;cursor:pointer;font-weight:700}
-.parse-btn{width:100%;margin-top:6px;background:#0d3a1a;color:#4ade80;border:1px solid #1a5a2a;font-size:11.5px;font-weight:700;padding:7px;border-radius:5px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px}
-.parse-btn:disabled{opacity:.5;cursor:not-allowed}
-.parse-st{margin-top:5px;font-size:11px;text-align:center;min-height:14px}
-.parse-st.loading{color:#f59e0b}.parse-st.ok{color:#4ade80}.parse-st.err{color:#f87171}
+.dz p{font-size:10.5px;color:#5a80a0;pointer-events:none;line-height:1.7}
+.img-th{margin-top:6px;position:relative}
+.img-th img{max-width:100%;border-radius:4px;max-height:80px;object-fit:contain;border:1px solid #243040;width:100%}
+.img-cl{position:absolute;top:2px;right:2px;background:#cc3300;color:#fff;border:none;border-radius:3px;font-size:10px;padding:1px 5px;cursor:pointer}
+.pb{width:100%;margin-top:5px;color:#4ade80;border:1px solid #1a5a2a;font-size:11px;font-weight:700;padding:6px;border-radius:5px;cursor:pointer;background:#0d3a1a;display:flex;align-items:center;justify-content:center;gap:4px}
+.pb:disabled{opacity:.5;cursor:not-allowed}
+.pst{margin-top:4px;font-size:11px;text-align:center;min-height:14px}
+.pst.L{color:#f59e0b}.pst.OK{color:#4ade80}.pst.ER{color:#f87171}
 .print-btn{width:100%;background:#0d3a6a;color:#fff;border:none;font-size:13px;font-weight:800;padding:10px;border-radius:6px;cursor:pointer;margin-top:5px}
 .reset-btn{width:100%;background:#1e2e40;color:#7a9ab8;border:none;font-size:11px;padding:6px;border-radius:5px;cursor:pointer;margin-top:4px}
-/* 연도별 데이터 편집 */
-.yr-table{width:100%;border-collapse:collapse;font-size:11px;margin-top:6px}
-.yr-table th{background:#0d2347;color:#90caf9;padding:4px 5px;font-size:10px;text-align:center}
-.yr-table td{padding:3px 4px;border-bottom:1px solid #1e2e40}
-.yr-table input{padding:3px 5px;font-size:11px;text-align:right}
-
-/* ── 프리뷰 ── */
-.pp{background:#ddd;overflow-y:auto;display:flex;flex-direction:column;align-items:center;padding:24px 14px}
-.rp{background:#fff;width:240mm;min-height:297mm;padding:12mm 14mm;box-shadow:0 4px 24px rgba(0,0,0,.18);font-family:'Arial','Apple SD Gothic Neo',sans-serif;font-size:8pt;color:#111}
+.yr-tbl{width:100%;border-collapse:collapse;font-size:10px;margin-top:5px}
+.yr-tbl th{background:#0d2347;color:#90caf9;padding:3px 4px;font-size:9.5px;text-align:center}
+.yr-tbl td{padding:2px 3px;border-bottom:1px solid #1e2e40;text-align:center;font-size:9.5px;color:#90caf9;font-weight:700}
+.yr-tbl input{padding:2px 4px;font-size:10px;text-align:right;background:#0a1520;border-color:#1e2e40}
+/* 프리뷰 */
+.pp{background:#ccc;overflow-y:auto;display:flex;flex-direction:column;align-items:center;padding:20px 12px}
+.rp{background:#fff;width:240mm;min-height:297mm;padding:11mm 13mm;box-shadow:0 4px 24px rgba(0,0,0,.2);font-family:'Arial','Apple SD Gothic Neo',sans-serif;font-size:8pt;color:#111}
 @media(max-width:1100px){.rp{width:100%;min-height:auto}}
-.rt{font-size:15pt;font-weight:900;color:#0a3a6a;text-align:center;margin-bottom:3px;letter-spacing:.5px}
-.rm{text-align:right;font-size:7pt;color:#888;margin-bottom:8px}
-.rdiv{height:2.5px;background:#0a3a6a;margin-bottom:10px}
-.rs{margin-bottom:12px}
-.rst{font-size:8.5pt;font-weight:900;color:#fff;background:#0a3a6a;padding:4px 10px;margin-bottom:7px;letter-spacing:.3px}
-.rtb{width:100%;border-collapse:collapse;font-size:7pt;margin-bottom:6px}
-.rtb th{background:#1a3a6a;color:#fff;padding:4px 5px;font-weight:700;white-space:nowrap;text-align:left}
-.rtb td{padding:3px 5px;border-bottom:1px solid #e8ecf0;white-space:nowrap;vertical-align:middle}
+.rt{font-size:15pt;font-weight:900;color:#0a3a6a;text-align:center;margin-bottom:3px}
+.rm{text-align:right;font-size:7pt;color:#888;margin-bottom:7px}
+.rdiv{height:2.5px;background:#0a3a6a;margin-bottom:9px}
+.rs{margin-bottom:11px}
+.rst{font-size:8.5pt;font-weight:900;color:#fff;background:#0a3a6a;padding:3px 9px;margin-bottom:6px}
+.rtb{width:100%;border-collapse:collapse;font-size:7pt;margin-bottom:5px}
+.rtb th{background:#1a3a6a;color:#fff;padding:3px 4px;font-weight:700;white-space:nowrap}
+.rtb td{padding:3px 4px;border-bottom:1px solid #e8ecf0;white-space:nowrap}
 .rtb tr:nth-child(even) td{background:#f8f9fb}
 .rtb .tr-row td{background:#e8f0fa!important;font-weight:900;border-top:1.5px solid #1a3a6a}
 .rtb .num{text-align:right}
-.kpi-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:8px}
-.kpi-box{background:#f0f4fa;border-radius:4px;padding:6px 8px;text-align:center;border:1px solid #dce4ef}
-.kpi-lbl{font-size:6.5pt;color:#666;margin-bottom:2px}
-.kpi-val{font-size:11pt;font-weight:900;color:#0a3a6a}
-.mktg-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
-.mktg-box{background:#f8f9fb;border:1px solid #e0e4ea;border-radius:4px;padding:8px 10px}
-.mktg-box h4{font-size:7.5pt;font-weight:800;color:#0a3a6a;margin-bottom:5px;padding-bottom:3px;border-bottom:1px solid #e0e4ea}
-.mktg-row{display:flex;justify-content:space-between;font-size:7pt;color:#444;margin-bottom:2px}
-.mktg-row .v{font-weight:700;color:#111}
-.rpt-img{margin-bottom:8px}
-.rpt-img img{max-width:100%;border:1px solid #e0e4ea;border-radius:3px;display:block}
-.chart-wrap{margin-bottom:10px;background:#f8f9fb;border:1px solid #e0e4ea;border-radius:4px;padding:8px}
-.chart-wrap h4{font-size:7.5pt;font-weight:800;color:#0a3a6a;margin-bottom:6px}
-.post-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.post-card{background:#f8f9fb;border:1px solid #e0e4ea;border-radius:4px;padding:7px 9px}
-.post-card h5{font-size:7pt;font-weight:800;color:#0a3a6a;margin-bottom:4px}
-.post-row{font-size:6.5pt;color:#444;margin-bottom:2px;line-height:1.6}
-.post-row a{color:#0077cc}
+.kpi-g{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-bottom:7px}
+.kpi-b{background:#f0f4fa;border-radius:4px;padding:5px 7px;text-align:center;border:1px solid #dce4ef}
+.kpi-l{font-size:6.5pt;color:#666;margin-bottom:2px}
+.kpi-v{font-size:11pt;font-weight:900;color:#0a3a6a}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:7px}
+.mb{background:#f8f9fb;border:1px solid #e0e4ea;border-radius:4px;padding:7px 9px}
+.mb h4{font-size:7.5pt;font-weight:800;color:#0a3a6a;margin-bottom:4px;padding-bottom:3px;border-bottom:1px solid #e0e4ea}
+.mr{display:flex;justify-content:space-between;font-size:7pt;color:#444;margin-bottom:2px}
+.mv{font-weight:700;color:#111}
+.rpt-img{margin-bottom:7px}
+.rpt-img img{max-width:100%;border:1px solid #e0e4ea;border-radius:3px}
+.cw{background:#f8f9fb;border:1px solid #e0e4ea;border-radius:4px;padding:7px;margin-bottom:7px}
+.cw h4{font-size:7.5pt;font-weight:800;color:#0a3a6a;margin-bottom:5px}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.pc{background:#f8f9fb;border:1px solid #e0e4ea;border-radius:3px;padding:6px 8px}
+.pc h5{font-size:7pt;font-weight:800;color:#0a3a6a;margin-bottom:3px}
+.pr{font-size:6.5pt;color:#444;margin-bottom:2px;line-height:1.6}
+.pr a{color:#0077cc}
+/* 저장 섹션 */
+.save-row{display:flex;gap:6px;margin-bottom:7px;align-items:flex-end}
+.save-row select{flex:1}
 @media print{
   body{background:#fff!important}
   .fp,.pp>:not(.rp){display:none}
@@ -99,116 +97,116 @@ input[readonly]{color:#4da6ff;cursor:default;background:#081018}
 </head>
 <body>
 <header>
-  <span class="lock-badge">🔒 INTERNAL</span>
-  <div>
-    <h1>📊 CruiseLink Monthly Sales Report 작성기</h1>
-    <p>데이터 입력 → 리포트 자동 생성 → PDF 저장</p>
-  </div>
+  <span class="lb">🔒 INTERNAL</span>
+  <div><h1>📊 CruiseLink Monthly Sales Report 작성기</h1><p>데이터 입력 → 실시간 프리뷰 → 저장 / PDF</p></div>
 </header>
-
 <div class="wrap">
 <div class="fp">
+
+  <!-- 저장/불러오기 -->
+  <div class="sec">
+    <h2>💾 리포트 저장/불러오기</h2>
+    <div class="save-row">
+      <select id="reportSelect"><option value="">── 저장된 리포트 선택 ──</option></select>
+      <button class="rm-btn" onclick="deleteReport()" style="padding:5px 10px;white-space:nowrap">🗑 삭제</button>
+    </div>
+    <button class="add-btn" style="background:#0d3a1a;color:#4ade80;border-color:#1a5a2a" onclick="saveReport()">💾 현재 리포트 저장</button>
+  </div>
 
   <!-- 기본 정보 -->
   <div class="sec">
     <h2>📅 기본 정보</h2>
     <div class="r3">
       <div class="fr"><label>Month</label>
-        <select id="repMonth" onchange="render()">
+        <select id="repMonth">
           <option>January</option><option>February</option><option>March</option>
           <option>April</option><option>May</option><option>June</option>
           <option>July</option><option>August</option><option>September</option>
           <option>October</option><option>November</option><option selected>December</option>
         </select></div>
-      <div class="fr"><label>Year</label>
-        <input id="repYear" type="number" value="2025" oninput="render()"></div>
-      <div class="fr"><label>as of</label>
-        <input type="date" id="repAsOf" oninput="render()"></div>
+      <div class="fr"><label>Year</label><input id="repYear" type="number" value="2025"></div>
+      <div class="fr"><label>as of</label><input type="date" id="repAsOf"></div>
     </div>
   </div>
 
-  <!-- 예약 내역 이미지 + AI 파싱 -->
+  <!-- 예약 이미지 파싱 -->
   <div class="sec">
-    <h2>🚢 예약 내역 — 이미지 파싱</h2>
+    <h2>🚢 예약 스크린샷 → AI 파싱</h2>
     <div class="dz" id="salesDz">
       <input type="file" accept="image/*" id="salesImgFile" onchange="handleSalesImg(this)">
-      <p>📋 Ctrl+V · 클릭 · 드래그 앤 드롭<br><b>엑셀 스크린샷</b> 붙여넣기</p>
+      <p>📋 Ctrl+V / 클릭 / 드래그<br>엑셀 스크린샷 붙여넣기</p>
     </div>
-    <div id="salesThumb" class="img-thumb" style="display:none">
-      <img id="salesImgPrev" src=""><button class="img-clear" onclick="clearSalesImg()">✕</button>
+    <div id="salesThumb" class="img-th" style="display:none">
+      <img id="salesImgPrev" src=""><button class="img-cl" onclick="clearSalesImg()">✕</button>
     </div>
-    <button class="parse-btn" id="salesParseBtn" onclick="parseSales()" disabled>
-      ✨ AI 파싱 → 예약 자동 입력
-    </button>
-    <div class="parse-st" id="salesParseStatus"></div>
+    <button class="pb" id="salesParseBtn" onclick="parseSales()" disabled>✨ AI 파싱 → 예약+월별 데이터 자동 입력</button>
+    <div class="pst" id="salesPSt"></div>
   </div>
 
-  <!-- 예약 내역 직접 입력 -->
+  <!-- 예약 직접 입력 -->
   <div class="sec">
-    <h2>🚢 예약 내역 (직접 입력)</h2>
+    <h2>🚢 예약 내역</h2>
     <div id="bookingList"></div>
     <button class="add-btn" onclick="addBooking()">+ 예약 추가</button>
   </div>
 
   <!-- 문의 통계 -->
   <div class="sec">
-    <h2>📞 문의 채널 통계</h2>
+    <h2>📞 문의 채널</h2>
     <div class="r3">
-      <div class="fr"><label>Web</label><input type="number" id="inqWeb" value="0" oninput="render()"></div>
-      <div class="fr"><label>전화</label><input type="number" id="inqCall" value="0" oninput="render()"></div>
-      <div class="fr"><label>카카오</label><input type="number" id="inqKakao" value="0" oninput="render()"></div>
+      <div class="fr"><label>Web</label><input type="number" id="inqWeb" value="0"></div>
+      <div class="fr"><label>전화</label><input type="number" id="inqCall" value="0"></div>
+      <div class="fr"><label>카카오</label><input type="number" id="inqKakao" value="0"></div>
     </div>
     <div class="r2">
-      <div class="fr"><label>견적 건수</label><input type="number" id="inqQuote" value="0" oninput="render()"></div>
-      <div class="fr"><label>총 예약 건수</label><input type="number" id="inqBooking" value="0" oninput="render()"></div>
+      <div class="fr"><label>견적</label><input type="number" id="inqQuote" value="0"></div>
+      <div class="fr"><label>총 예약</label><input type="number" id="inqBooking" value="0"></div>
     </div>
   </div>
 
-  <!-- 월별 판매 그래프 데이터 -->
+  <!-- 월별 비교 데이터 -->
   <div class="sec">
-    <h2>📈 월별 판매 비교 (2024 vs 2025 vs 2026)</h2>
-    <p style="font-size:10.5px;color:#5a80a0;margin-bottom:8px">2024년 데이터는 자동 로드됨. 2025/2026은 직접 입력.</p>
-    <table class="yr-table" id="yrTable">
-      <thead><tr><th>월</th><th>2024 Fare</th><th>2025 Fare</th><th>2026 Fare</th><th>2024 Comm</th><th>2025 Comm</th><th>2026 Comm</th></tr></thead>
-      <tbody id="yrBody"></tbody>
-    </table>
+    <h2>📈 월별 판매 비교 (2024 / 2025 / 2026)</h2>
+    <p style="font-size:10px;color:#5a80a0;margin-bottom:6px">2024년 자동로드 · 2025/2026 직접 입력 (파싱 시 자동 업데이트)</p>
+    <table class="yr-tbl"><thead><tr><th>월</th><th>24 Fare</th><th>25 Fare</th><th>26 Fare</th><th>24 Comm</th><th>25 Comm</th><th>26 Comm</th></tr></thead>
+    <tbody id="yrBody"></tbody></table>
   </div>
 
   <!-- 네이버 광고 -->
   <div class="sec">
     <h2>🟢 네이버 광고</h2>
     <div class="r2">
-      <div class="fr"><label>기간 시작</label><input type="date" id="naverStart" oninput="render()"></div>
-      <div class="fr"><label>기간 종료</label><input type="date" id="naverEnd" oninput="render()"></div>
+      <div class="fr"><label>기간 시작</label><input type="date" id="naverStart"></div>
+      <div class="fr"><label>기간 종료</label><input type="date" id="naverEnd"></div>
     </div>
     <div class="r3">
-      <div class="fr"><label>예산 (KRW)</label><input type="number" id="naverBudget" oninput="render()"></div>
-      <div class="fr"><label>노출 수</label><input type="number" id="naverExposure" oninput="render()"></div>
-      <div class="fr"><label>방문자</label><input type="number" id="naverVisitor" oninput="render()"></div>
+      <div class="fr"><label>예산(KRW)</label><input type="number" id="naverBudget"></div>
+      <div class="fr"><label>노출</label><input type="number" id="naverExposure"></div>
+      <div class="fr"><label>방문자</label><input type="number" id="naverVisitor"></div>
     </div>
     <div class="r2">
-      <div class="fr"><label>CTR (%)</label><input type="number" id="naverCTR" step="0.01" oninput="render()"></div>
-      <div class="fr"><label>CPC (KRW)</label><input type="number" id="naverCPC" oninput="render()"></div>
+      <div class="fr"><label>CTR(%)</label><input type="number" id="naverCTR" step="0.01"></div>
+      <div class="fr"><label>CPC(KRW)</label><input type="number" id="naverCPC"></div>
     </div>
   </div>
 
   <!-- 구글 광고 -->
   <div class="sec">
     <h2>🔵 구글 광고</h2>
-    <div class="fr"><label><input type="checkbox" id="googlePaused" onchange="render()"> 임시중지</label></div>
+    <div class="fr"><label><input type="checkbox" id="googlePaused"> 임시중지</label></div>
     <div id="googleFields">
       <div class="r2">
-        <div class="fr"><label>기간 시작</label><input type="date" id="googleStart" oninput="render()"></div>
-        <div class="fr"><label>기간 종료</label><input type="date" id="googleEnd" oninput="render()"></div>
+        <div class="fr"><label>기간 시작</label><input type="date" id="googleStart"></div>
+        <div class="fr"><label>기간 종료</label><input type="date" id="googleEnd"></div>
       </div>
       <div class="r3">
-        <div class="fr"><label>예산</label><input type="number" id="googleBudget" oninput="render()"></div>
-        <div class="fr"><label>노출</label><input type="number" id="googleExposure" oninput="render()"></div>
-        <div class="fr"><label>방문자</label><input type="number" id="googleVisitor" oninput="render()"></div>
+        <div class="fr"><label>예산</label><input type="number" id="googleBudget"></div>
+        <div class="fr"><label>노출</label><input type="number" id="googleExposure"></div>
+        <div class="fr"><label>방문자</label><input type="number" id="googleVisitor"></div>
       </div>
       <div class="r2">
-        <div class="fr"><label>CTR (%)</label><input type="number" id="googleCTR" step="0.01" oninput="render()"></div>
-        <div class="fr"><label>CPC</label><input type="number" id="googleCPC" oninput="render()"></div>
+        <div class="fr"><label>CTR(%)</label><input type="number" id="googleCTR" step="0.01"></div>
+        <div class="fr"><label>CPC</label><input type="number" id="googleCPC"></div>
       </div>
     </div>
   </div>
@@ -216,21 +214,22 @@ input[readonly]{color:#4da6ff;cursor:default;background:#081018}
   <!-- 광고 결과 이미지 -->
   <div class="sec">
     <h2>🖼️ 광고 결과 이미지</h2>
-    <div class="dz" id="adImgDz">
+    <div class="dz" id="adDz">
       <input type="file" accept="image/*" id="adImgFile" onchange="handleAdImg(this)">
-      <p>📋 Ctrl+V · 클릭 · 드래그<br>광고 그래프/결과 스크린샷</p>
+      <p>📋 Ctrl+V / 클릭 / 드래그<br>광고 그래프 스크린샷</p>
     </div>
-    <div id="adImgThumb" class="img-thumb" style="display:none">
-      <img id="adImgPrev" src=""><button class="img-clear" onclick="clearAdImg()">✕</button>
+    <div id="adThumb" class="img-th" style="display:none">
+      <img id="adImgPrev" src=""><button class="img-cl" onclick="clearAdImg()">✕</button>
     </div>
   </div>
 
-  <!-- 블로그/인스타 작업 현황 -->
+  <!-- 콘텐츠 현황 -->
   <div class="sec">
     <h2>📝 콘텐츠 작업 현황</h2>
+    <button class="add-btn" id="findContentBtn" style="background:#1a1a3a;color:#c084fc;border-color:#3a2a6a;margin-bottom:6px" onclick="findContent()">🔍 이번 달 작업 자동 찾기</button>
     <div id="postList"></div>
-    <button class="add-btn" onclick="addPost('blog')">+ 블로그 포스팅 추가</button>
-    <button class="add-btn" style="margin-top:4px" onclick="addPost('insta')">+ 인스타그램 추가</button>
+    <button class="add-btn" onclick="addPost('blog')">+ 블로그 추가</button>
+    <button class="add-btn" style="margin-top:3px" onclick="addPost('insta')">+ 인스타그램 추가</button>
   </div>
 
   <button class="print-btn" onclick="window.print()">🖨️ PDF 저장 / 인쇄</button>
@@ -239,117 +238,368 @@ input[readonly]{color:#4da6ff;cursor:default;background:#081018}
 
 <!-- 프리뷰 -->
 <div class="pp">
-  <div class="rp" id="reportPaper"></div>
+  <div class="rp" id="reportPaper">
+    <div id="rptTop"></div>
+    <!-- 차트 고정 영역 (DOM 재생성 안 함) -->
+    <div id="rptCharts" style="display:none">
+      <div class="rs">
+        <div class="rst">월별 판매 비교 — Gross Fare (USD)</div>
+        <div class="cw"><canvas id="fareChart" height="90"></canvas></div>
+        <div class="rst" style="margin-top:7px">월별 커미션 비교 (USD)</div>
+        <div class="cw"><canvas id="commChart" height="90"></canvas></div>
+      </div>
+    </div>
+    <div id="rptBottom"></div>
+  </div>
 </div>
 </div>
 
 <script>
-// ─── 상수 ─────────────────────────────────────────
-const PARSE_BOOKINGS_API = 'https://enttix-omega.vercel.app/api/parse-bookings';
+const PARSE_API = 'https://enttix-omega.vercel.app/api/parse-bookings';
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-const MONTHS_KO = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+const MKO = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+// 2024년 Sheet2 데이터
+const D24F=[0,8824.60,4730,2260,17086.14,16659.92,8756.56,10542.68,8221,0,0,24083.72,7352.18];
+const D24C=[0,387.10,236.50,167.40,963.16,1622.31,441.10,779.50,688.14,0,0,2718.85,900.90];
 
-// 2024년 기본 데이터 (Sheet2)
-const DATA_2024 = {
-  fare:  [0, 8824.60, 4730, 2260, 17086.14, 16659.92, 8756.56, 10542.68, 8221, 0, 0, 24083.72, 7352.18],
-  comm:  [0, 387.10, 236.50, 167.40, 963.16, 1622.31, 441.10, 779.50, 688.14, 0, 0, 2718.85, 900.90]
-};
-// [0]=dummy, [1]=Jan, ..., [12]=Dec
+let bookings=[],bId=0,posts=[],pId=0;
+let salesImg=null,salesMime='image/png',adImg=null;
+let fareCI=null,commCI=null;
 
-let bookings=[], bId=0, posts=[], pId=0;
-let salesImgData=null, salesImgMime='image/png';
-let adImgData=null;
-let chartInst=null;
-
-// ─── 유틸 ────────────────────────────────────────
+// ─── 유틸 ──────────────────────────────────────
 function gv(id){const e=document.getElementById(id);return e?e.value:'';}
 function gn(id){return parseFloat(gv(id))||0;}
 function gi(id){return parseInt(gv(id))||0;}
 function fmt(n,d=2){return Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
-function fmtKrw(n){return Math.round(n).toLocaleString('ko-KR');}
-function fmtDate(v){if(!v)return'—';const d=new Date(v+'T00:00:00');return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
-function fmtDateShort(v){if(!v)return'—';const d=new Date(v+'T00:00:00');const m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()];return`${d.getDate()}${m}'${String(d.getFullYear()).slice(2)}`;}
+function fmtK(n){return Math.round(n).toLocaleString('ko-KR');}
+function fmtD(v){if(!v)return'—';const d=new Date(v+'T00:00:00');return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
+function fmtDs(v){if(!v)return'—';const d=new Date(v+'T00:00:00');const m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()];return`${d.getDate()}${m}'${String(d.getFullYear()).slice(2)}`;}
 
-// ─── 이미지 공통 ──────────────────────────────────
-function readImg(file, cb){if(!file||!file.type.startsWith('image/'))return;const r=new FileReader();r.onload=e=>cb(e.target.result,file.type);r.readAsDataURL(file);}
-function handleSalesImg(input){if(input.files[0])readImg(input.files[0],(url,mime)=>{salesImgData=url;salesImgMime=mime;document.getElementById('salesImgPrev').src=url;document.getElementById('salesThumb').style.display='block';document.getElementById('salesParseBtn').disabled=false;});}
-function clearSalesImg(){salesImgData=null;document.getElementById('salesThumb').style.display='none';document.getElementById('salesImgFile').value='';document.getElementById('salesParseBtn').disabled=true;document.getElementById('salesParseStatus').textContent='';}
-function handleAdImg(input){if(input.files[0])readImg(input.files[0],(url)=>{adImgData=url;document.getElementById('adImgPrev').src=url;document.getElementById('adImgThumb').style.display='block';render();});}
-function clearAdImg(){adImgData=null;document.getElementById('adImgThumb').style.display='none';document.getElementById('adImgFile').value='';render();}
-function setSt(elId,msg,cls=''){const e=document.getElementById(elId);e.textContent=msg;e.className='parse-st '+cls;}
+// ─── 이미지 ────────────────────────────────────
+function readImg(f,cb){if(!f||!f.type.startsWith('image/'))return;const r=new FileReader();r.onload=e=>cb(e.target.result,f.type);r.readAsDataURL(f);}
+function handleSalesImg(i){if(i.files[0])readImg(i.files[0],(url,m)=>{salesImg=url;salesMime=m;document.getElementById('salesImgPrev').src=url;document.getElementById('salesThumb').style.display='block';document.getElementById('salesParseBtn').disabled=false;});}
+function clearSalesImg(){salesImg=null;document.getElementById('salesThumb').style.display='none';document.getElementById('salesImgFile').value='';document.getElementById('salesParseBtn').disabled=true;setSt('salesPSt','','');}
+function handleAdImg(i){if(i.files[0])readImg(i.files[0],(url)=>{adImg=url;document.getElementById('adImgPrev').src=url;document.getElementById('adThumb').style.display='block';render();});}
+function clearAdImg(){adImg=null;document.getElementById('adThumb').style.display='none';document.getElementById('adImgFile').value='';render();}
+function setSt(id,msg,c){const e=document.getElementById(id);e.textContent=msg;e.className='pst '+c;}
 
-// ─── AI 파싱 (예약) ───────────────────────────────
+// ─── AI 파싱 ───────────────────────────────────
 async function parseSales(){
-  if(!salesImgData) return;
+  if(!salesImg)return;
   const btn=document.getElementById('salesParseBtn');
-  btn.disabled=true; setSt('salesParseStatus','✨ AI 분석 중...','loading');
-  try {
-    const base64=salesImgData.split(',')[1];
-    const res=await fetch(PARSE_BOOKINGS_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({imageBase64:base64,mediaType:salesImgMime})});
+  btn.disabled=true; setSt('salesPSt','✨ AI 분석 중...','L');
+  try{
+    const res=await fetch(PARSE_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({imageBase64:salesImg.split(',')[1],mediaType:salesMime})});
     const data=await res.json();
-    if(!res.ok||data.error) throw new Error(data.error||'파싱 실패');
+    if(!res.ok||data.error)throw new Error(data.error||'파싱 실패');
+    // 기존 예약 초기화
     bookings=[]; bId=0; document.getElementById('bookingList').innerHTML='';
+    // 월별 집계 (sailDate 기준)
+    const yrAcc={};
     (data.bookings||[]).forEach(b=>{
       const id=addBooking(false);
       setbv(id,'date',b.date||''); setbv(id,'line',b.line||''); setbv(id,'no',b.bookingNo||'');
       setbv(id,'sail',b.sailDate||''); setbv(id,'ship',b.ship||''); setbv(id,'cabin',b.cabin||'');
       setbv(id,'fare',b.fare||0); setbv(id,'tax',b.tax||0); setbv(id,'others',b.others||0); setbv(id,'comm',b.comm||0);
+      // 월별 집계
+      if(b.sailDate){
+        const sd=new Date(b.sailDate+'T00:00:00');
+        const yr=sd.getFullYear(); const mo=sd.getMonth()+1;
+        const key=`${yr}_${mo}`;
+        if(!yrAcc[key])yrAcc[key]={fare:0,comm:0};
+        yrAcc[key].fare+=(b.fare||0)+(b.tax||0)+(b.others||0);
+        yrAcc[key].comm+=(b.comm||0);
+      }
+    });
+    // yrTable 업데이트
+    Object.entries(yrAcc).forEach(([key,val])=>{
+      const [yr,mo]=key.split('_').map(Number);
+      const yp=yr===2024?'24':yr===2025?'25':yr===2026?'26':null;
+      if(!yp)return;
+      const fi=document.getElementById(`y${yp}f${mo}`);
+      const ci=document.getElementById(`y${yp}c${mo}`);
+      if(fi)fi.value=val.fare.toFixed(2);
+      if(ci)ci.value=val.comm.toFixed(2);
     });
     render();
-    setSt('salesParseStatus',`✅ ${(data.bookings||[]).length}건 자동 입력 완료`,'ok');
-  } catch(e){ setSt('salesParseStatus','❌ '+e.message,'err'); }
-  finally{ btn.disabled=false; }
+    setSt('salesPSt',`✅ ${(data.bookings||[]).length}건 입력 + 월별 데이터 업데이트`,'OK');
+  }catch(e){setSt('salesPSt','❌ '+e.message,'ER');}
+  finally{btn.disabled=false;}
 }
 
-// ─── 예약 추가 ────────────────────────────────────
+// ─── 예약 추가/삭제 ────────────────────────────
 function addBooking(doRender=true){
   const id=bId++; bookings.push(id);
   const div=document.createElement('div'); div.className='bk-item'; div.id=`b-${id}`;
   div.innerHTML=`<div class="bk-hdr"><span>예약 #${bookings.indexOf(id)+1}</span><button class="rm-btn" onclick="removeBooking(${id})">✕</button></div>
-    <div class="r2"><div class="fr"><label>예약일</label><input type="date" id="b${id}_date" oninput="render()"></div><div class="fr"><label>선사명</label><input id="b${id}_line" placeholder="MSC Cruise_Anam Air" oninput="render()"></div></div>
-    <div class="r2"><div class="fr"><label>BOOKING#</label><input id="b${id}_no" oninput="render()"></div><div class="fr"><label>승선일</label><input type="date" id="b${id}_sail" oninput="render()"></div></div>
-    <div class="r2"><div class="fr"><label>선박명</label><input id="b${id}_ship" oninput="render()"></div><div class="fr"><label>CABIN</label><input id="b${id}_cabin" oninput="render()"></div></div>
-    <div class="r4"><div class="fr"><label>FARE</label><input type="number" id="b${id}_fare" value="0" step="0.01" oninput="render()"></div><div class="fr"><label>TAX</label><input type="number" id="b${id}_tax" value="0" step="0.01" oninput="render()"></div><div class="fr"><label>OTHERS</label><input type="number" id="b${id}_others" value="0" step="0.01" oninput="render()"></div><div class="fr"><label>COMM</label><input type="number" id="b${id}_comm" value="0" step="0.01" oninput="render()"></div></div>
-    <div class="fr"><label>Gross Fare (자동)</label><input id="b${id}_gross" readonly></div>`;
+    <div class="r2"><div class="fr"><label>예약일</label><input type="date" id="b${id}_date"></div><div class="fr"><label>선사명</label><input id="b${id}_line" placeholder="MSC Cruise"></div></div>
+    <div class="r2"><div class="fr"><label>BOOKING#</label><input id="b${id}_no"></div><div class="fr"><label>승선일</label><input type="date" id="b${id}_sail"></div></div>
+    <div class="r2"><div class="fr"><label>선박명</label><input id="b${id}_ship"></div><div class="fr"><label>CABIN</label><input id="b${id}_cabin"></div></div>
+    <div class="r4"><div class="fr"><label>FARE</label><input type="number" id="b${id}_fare" value="0" step="0.01"></div><div class="fr"><label>TAX</label><input type="number" id="b${id}_tax" value="0" step="0.01"></div><div class="fr"><label>OTHERS</label><input type="number" id="b${id}_others" value="0" step="0.01"></div><div class="fr"><label>COMM</label><input type="number" id="b${id}_comm" value="0" step="0.01"></div></div>
+    <div class="fr"><label>Gross (자동)</label><input id="b${id}_gross" readonly></div>`;
   document.getElementById('bookingList').appendChild(div);
-  if(doRender) render(); return id;
+  // 이벤트 연결
+  div.querySelectorAll('input,select').forEach(el=>el.addEventListener('input',render));
+  if(doRender)render(); return id;
 }
 function removeBooking(id){bookings=bookings.filter(b=>b!==id);document.getElementById(`b-${id}`).remove();render();}
 function setbv(id,f,v){const e=document.getElementById(`b${id}_${f}`);if(e)e.value=v;}
 
-// ─── 포스팅 추가 ──────────────────────────────────
+// ─── 포스팅 ────────────────────────────────────
 function addPost(type){
   const id=pId++; posts.push({id,type});
-  const isInsta=type==='insta';
+  const isi=type==='insta';
   const div=document.createElement('div'); div.className='post-item'; div.id=`p-${id}`;
-  div.innerHTML=`<div class="post-hdr"><span>${isInsta?'📸 인스타그램':'📝 블로그 포스팅'}</span><button class="rm-btn" onclick="removePost(${id})">✕</button></div>
-    <div class="r2"><div class="fr"><label>제목</label><input id="p${id}_title" placeholder="${isInsta?'캐러셀·릴스 제목':'블로그 포스팅 제목'}" oninput="render()"></div><div class="fr"><label>발행일</label><input type="date" id="p${id}_date" oninput="render()"></div></div>
-    <div class="fr"><label>링크 (선택)</label><input id="p${id}_url" placeholder="https://..." oninput="render()"></div>`;
+  div.innerHTML=`<div class="post-hdr"><span>${isi?'📸 인스타':'📝 블로그'}</span><button class="rm-btn" onclick="removePost(${id})">✕</button></div>
+    <div class="r2"><div class="fr"><label>제목</label><input id="p${id}_title" placeholder="${isi?'인스타 포스팅':'블로그 포스팅'}"></div><div class="fr"><label>발행일</label><input type="date" id="p${id}_date"></div></div>
+    <div class="fr"><label>링크</label><input id="p${id}_url" placeholder="https://..."></div>`;
   document.getElementById('postList').appendChild(div);
+  div.querySelectorAll('input').forEach(el=>el.addEventListener('input',render));
   render();
 }
 function removePost(id){posts=posts.filter(p=>p.id!==id);document.getElementById(`p-${id}`).remove();render();}
 
-// ─── 연도별 테이블 초기화 ─────────────────────────
+// ─── 블로그/인스타 자동 찾기 ───────────────────
+async function findContent(){
+  const mo=gv('repMonth'), yr=gv('repYear');
+  const btn=document.getElementById('findContentBtn');
+  btn.disabled=true; btn.textContent='🔍 검색 중...';
+  try{
+    const res=await fetch('/blog-draft/?_='+Date.now());
+    const html=await res.text();
+    const parser=new DOMParser();
+    const doc=parser.parseFromString(html,'text/html');
+    const moNum=String(MONTHS.indexOf(mo)+1).padStart(2,'0');
+    const prefix=`${yr}-${moNum}`;
+    const rows=doc.querySelectorAll('.board tbody tr');
+    let found=0;
+    rows.forEach(row=>{
+      const cells=row.querySelectorAll('td');
+      if(cells.length<5)return;
+      const link=cells[1].querySelector('a');
+      const dateText=cells[3]?.textContent.trim()||''; // 작성일
+      const openLink=cells[cells.length-1].querySelector('a');
+      if(!link||!dateText.startsWith(prefix))return;
+      const title=link.textContent.trim();
+      const href=openLink?openLink.getAttribute('href'):link.getAttribute('href');
+      const url='https://www.cruiselink.co.kr/blog-draft/'+(href||'');
+      const isi=title.includes('인스타')||title.includes('Instagram')||(href||'').includes('insta-');
+      const type=isi?'insta':'blog';
+      const id=pId++; posts.push({id,type});
+      const div=document.createElement('div'); div.className='post-item'; div.id=`p-${id}`;
+      div.innerHTML=`<div class="post-hdr"><span>${isi?'📸 인스타':'📝 블로그'}</span><button class="rm-btn" onclick="removePost(${id})">✕</button></div>
+        <div class="r2"><div class="fr"><label>제목</label><input id="p${id}_title" value="${title.replace(/"/g,'&quot;')}"></div><div class="fr"><label>발행일</label><input type="date" id="p${id}_date" value="${dateText}"></div></div>
+        <div class="fr"><label>링크</label><input id="p${id}_url" value="${url}"></div>`;
+      document.getElementById('postList').appendChild(div);
+      div.querySelectorAll('input').forEach(el=>el.addEventListener('input',render));
+      found++;
+    });
+    render();
+    alert(found?`✅ ${found}건 자동 입력!`:`${mo} ${yr} 작업 내역을 찾지 못했습니다.`);
+  }catch(e){alert('검색 실패: '+e.message);}
+  finally{btn.disabled=false; btn.textContent='🔍 이번 달 작업 자동 찾기';}
+}
+
+// ─── yrTable 초기화 ───────────────────────────
 function initYrTable(){
-  const tbody=document.getElementById('yrBody');
-  tbody.innerHTML='';
+  const tb=document.getElementById('yrBody'); tb.innerHTML='';
   for(let m=1;m<=12;m++){
     const tr=document.createElement('tr');
-    tr.innerHTML=`<td style="font-size:10px;color:#90caf9;font-weight:700">${MONTHS_KO[m-1]}</td>
-      <td><input type="number" id="y24f${m}" value="${DATA_2024.fare[m]}" step="0.01" oninput="render()" style="font-size:10px;padding:2px 4px"></td>
-      <td><input type="number" id="y25f${m}" value="0" step="0.01" oninput="render()" style="font-size:10px;padding:2px 4px"></td>
-      <td><input type="number" id="y26f${m}" value="0" step="0.01" oninput="render()" style="font-size:10px;padding:2px 4px"></td>
-      <td><input type="number" id="y24c${m}" value="${DATA_2024.comm[m]}" step="0.01" oninput="render()" style="font-size:10px;padding:2px 4px"></td>
-      <td><input type="number" id="y25c${m}" value="0" step="0.01" oninput="render()" style="font-size:10px;padding:2px 4px"></td>
-      <td><input type="number" id="y26c${m}" value="0" step="0.01" oninput="render()" style="font-size:10px;padding:2px 4px"></td>`;
-    tbody.appendChild(tr);
+    tr.innerHTML=`<td>${MKO[m-1]}</td>
+      <td><input type="number" id="y24f${m}" value="${D24F[m]}" step="0.01"></td>
+      <td><input type="number" id="y25f${m}" value="0" step="0.01"></td>
+      <td><input type="number" id="y26f${m}" value="0" step="0.01"></td>
+      <td><input type="number" id="y24c${m}" value="${D24C[m]}" step="0.01"></td>
+      <td><input type="number" id="y25c${m}" value="0" step="0.01"></td>
+      <td><input type="number" id="y26c${m}" value="0" step="0.01"></td>`;
+    tb.appendChild(tr);
+    tr.querySelectorAll('input').forEach(el=>el.addEventListener('input',render));
   }
 }
 
-// ─── 차트 캔버스 렌더 ────────────────────────────
-function renderChart(){
-  const labels=MONTHS_KO;
+// ─── 저장/불러오기 ─────────────────────────────
+function getReports(){try{return JSON.parse(localStorage.getItem('cl_reports')||'[]');}catch{return[];}}
+function saveReports(list){localStorage.setItem('cl_reports',JSON.stringify(list));}
+function refreshSelect(){
+  const sel=document.getElementById('reportSelect');
+  const list=getReports();
+  sel.innerHTML='<option value="">── 저장된 리포트 선택 ──</option>'+
+    list.map((r,i)=>`<option value="${i}">${r.title} (저장: ${r.savedAt})</option>`).join('');
+}
+function saveReport(){
+  const mo=gv('repMonth'), yr=gv('repYear');
+  const title=`${mo} ${yr}`;
+  const yrData={};
+  for(let m=1;m<=12;m++){
+    yrData[m]={y24f:gn(`y24f${m}`),y25f:gn(`y25f${m}`),y26f:gn(`y26f${m}`),y24c:gn(`y24c${m}`),y25c:gn(`y25c${m}`),y26c:gn(`y26c${m}`)};
+  }
+  const bData=bookings.map(id=>({date:gv(`b${id}_date`),line:gv(`b${id}_line`),no:gv(`b${id}_no`),sail:gv(`b${id}_sail`),ship:gv(`b${id}_ship`),cabin:gv(`b${id}_cabin`),fare:gn(`b${id}_fare`),tax:gn(`b${id}_tax`),others:gn(`b${id}_others`),comm:gn(`b${id}_comm`)}));
+  const pData=posts.map(p=>({type:p.type,title:gv(`p${p.id}_title`),date:gv(`p${p.id}_date`),url:gv(`p${p.id}_url`)}));
+  const data={
+    repMonth:mo, repYear:yr, repAsOf:gv('repAsOf'),
+    bookings:bData, yrData,
+    inqWeb:gi('inqWeb'), inqCall:gi('inqCall'), inqKakao:gi('inqKakao'), inqQuote:gi('inqQuote'), inqBooking:gi('inqBooking'),
+    naverStart:gv('naverStart'), naverEnd:gv('naverEnd'), naverBudget:gn('naverBudget'), naverExposure:gn('naverExposure'), naverVisitor:gn('naverVisitor'), naverCTR:gn('naverCTR'), naverCPC:gn('naverCPC'),
+    googlePaused:document.getElementById('googlePaused').checked, googleStart:gv('googleStart'), googleEnd:gv('googleEnd'), googleBudget:gn('googleBudget'), googleExposure:gn('googleExposure'), googleVisitor:gn('googleVisitor'), googleCTR:gn('googleCTR'), googleCPC:gn('googleCPC'),
+    posts:pData, adImg:adImg
+  };
+  const list=getReports();
+  const existing=list.findIndex(r=>r.title===title);
+  const now=new Date().toLocaleDateString('ko-KR');
+  const id=existing>=0?list[existing].id:Date.now();
+  const entry={id, title, savedAt:now};
+  if(existing>=0){list[existing]=entry;}else{list.push(entry);}
+  saveReports(list);
+  localStorage.setItem(`cl_report_${id}`, JSON.stringify(data));
+  refreshSelect();
+  const sel=document.getElementById('reportSelect');
+  const newIdx=getReports().findIndex(r=>r.title===title);
+  if(newIdx>=0)sel.value=newIdx;
+  alert(`✅ "${title}" 저장 완료!`);
+}
+function loadReport(){
+  const sel=document.getElementById('reportSelect');
+  if(sel.value===''||sel.value===undefined)return;
+  const list=getReports();
+  const entry=list[parseInt(sel.value)];
+  if(!entry)return;
+  const data=JSON.parse(localStorage.getItem(`cl_report_${entry.id}`)||'{}');
+  if(!data.repMonth)return;
+  // 기본 정보
+  document.getElementById('repMonth').value=data.repMonth;
+  document.getElementById('repYear').value=data.repYear;
+  document.getElementById('repAsOf').value=data.repAsOf||'';
+  // 문의
+  ['inqWeb','inqCall','inqKakao','inqQuote','inqBooking'].forEach(f=>{const e=document.getElementById(f);if(e)e.value=data[f]||0;});
+  // 네이버/구글
+  ['naverStart','naverEnd','naverBudget','naverExposure','naverVisitor','naverCTR','naverCPC',
+   'googleStart','googleEnd','googleBudget','googleExposure','googleVisitor','googleCTR','googleCPC'].forEach(f=>{const e=document.getElementById(f);if(e)e.value=data[f]||'';});
+  document.getElementById('googlePaused').checked=data.googlePaused||false;
+  // yrData
+  if(data.yrData){
+    for(let m=1;m<=12;m++){
+      const d=data.yrData[m]||{};
+      ['y24f','y25f','y26f','y24c','y25c','y26c'].forEach(k=>{const e=document.getElementById(`${k}${m}`);if(e&&d[k]!==undefined)e.value=d[k];});
+    }
+  }
+  // 예약
+  bookings=[]; bId=0; document.getElementById('bookingList').innerHTML='';
+  (data.bookings||[]).forEach(b=>{
+    const id=addBooking(false);
+    Object.entries(b).forEach(([k,v])=>setbv(id,k,v));
+  });
+  // 포스팅
+  posts=[]; pId=0; document.getElementById('postList').innerHTML='';
+  (data.posts||[]).forEach(p=>{
+    const id=pId++; posts.push({id,type:p.type});
+    const isi=p.type==='insta';
+    const div=document.createElement('div'); div.className='post-item'; div.id=`p-${id}`;
+    div.innerHTML=`<div class="post-hdr"><span>${isi?'📸 인스타':'📝 블로그'}</span><button class="rm-btn" onclick="removePost(${id})">✕</button></div>
+      <div class="r2"><div class="fr"><label>제목</label><input id="p${id}_title" value="${(p.title||'').replace(/"/g,'&quot;')}"></div><div class="fr"><label>발행일</label><input type="date" id="p${id}_date" value="${p.date||''}"></div></div>
+      <div class="fr"><label>링크</label><input id="p${id}_url" value="${p.url||''}"></div>`;
+    document.getElementById('postList').appendChild(div);
+    div.querySelectorAll('input').forEach(el=>el.addEventListener('input',render));
+  });
+  // 광고 이미지
+  if(data.adImg){adImg=data.adImg;document.getElementById('adImgPrev').src=data.adImg;document.getElementById('adThumb').style.display='block';}
+  render();
+}
+function deleteReport(){
+  const sel=document.getElementById('reportSelect');
+  if(sel.value===''||sel.value===undefined){alert('삭제할 리포트를 선택하세요.');return;}
+  const list=getReports();
+  const entry=list[parseInt(sel.value)];
+  if(!entry)return;
+  if(!confirm(`"${entry.title}" 삭제하시겠습니까?`))return;
+  localStorage.removeItem(`cl_report_${entry.id}`);
+  list.splice(parseInt(sel.value),1);
+  saveReports(list);
+  refreshSelect();
+}
+
+// ─── 렌더링 ───────────────────────────────────
+function render(){
+  const mo=gv('repMonth'), yr=gv('repYear'), asOf=gv('repAsOf');
+  const gP=document.getElementById('googlePaused').checked;
+  document.getElementById('googleFields').style.opacity=gP?'.4':'1';
+
+  // 예약 계산
+  let totF=0,totT=0,totO=0,totG=0,totC=0;
+  const bData=bookings.map(id=>{
+    const fare=gn(`b${id}_fare`),tax=gn(`b${id}_tax`),others=gn(`b${id}_others`),comm=gn(`b${id}_comm`);
+    const gross=fare+tax+others;
+    const ge=document.getElementById(`b${id}_gross`); if(ge)ge.value=fmt(gross);
+    totF+=fare; totT+=tax; totO+=others; totG+=gross; totC+=comm;
+    return{date:gv(`b${id}_date`),line:gv(`b${id}_line`),no:gv(`b${id}_no`),sail:gv(`b${id}_sail`),ship:gv(`b${id}_ship`),cabin:gv(`b${id}_cabin`),fare,tax,others,gross,comm};
+  });
+
+  const tRows=bData.map(b=>`<tr><td>${fmtD(b.date)}</td><td>${b.line||'—'}</td><td>${b.no||'—'}</td><td>${fmtD(b.sail)}</td><td>${b.ship||'—'}</td><td>${b.cabin||'—'}</td><td class="num">$${fmt(b.fare)}</td><td class="num">$${fmt(b.tax)}</td><td class="num">$${fmt(b.others)}</td><td class="num"><b>$${fmt(b.gross)}</b></td><td class="num">$${fmt(b.comm)}</td></tr>`).join('');
+  const totRow=bData.length?`<tr class="tr-row"><td colspan="6" style="text-align:right;font-size:6pt">Total</td><td class="num">$${fmt(totF)}</td><td class="num">$${fmt(totT)}</td><td class="num">$${fmt(totO)}</td><td class="num"><b>$${fmt(totG)}</b></td><td class="num">$${fmt(totC)}</td></tr>`:'';
+
+  const kpiH=`<div class="kpi-g">
+    <div class="kpi-b"><div class="kpi-l">Web</div><div class="kpi-v">${gi('inqWeb')}</div></div>
+    <div class="kpi-b"><div class="kpi-l">전화</div><div class="kpi-v">${gi('inqCall')}</div></div>
+    <div class="kpi-b"><div class="kpi-l">카카오</div><div class="kpi-v">${gi('inqKakao')}</div></div>
+    <div class="kpi-b"><div class="kpi-l">견적</div><div class="kpi-v">${gi('inqQuote')}</div></div>
+    <div class="kpi-b" style="background:#e8f5e9;border-color:#a5d6a7"><div class="kpi-l">예약</div><div class="kpi-v" style="color:#1b5e20">${gi('inqBooking')}</div></div>
+  </div>`;
+
+  const naverP=gv('naverStart')||gv('naverEnd')?`${fmtD(gv('naverStart'))} ~ ${fmtD(gv('naverEnd'))}`:'—';
+  const mktgH=`<div class="mg">
+    <div class="mb"><h4>🟢 Naver</h4>
+      <div class="mr"><span>Period</span><span class="mv">${naverP}</span></div>
+      <div class="mr"><span>Budget</span><span class="mv">${gv('naverBudget')?'₩'+fmtK(gn('naverBudget')):'—'}</span></div>
+      <div class="mr"><span>Exposure</span><span class="mv">${gv('naverExposure')?fmtK(gn('naverExposure')):'—'}</span></div>
+      <div class="mr"><span>Visitor</span><span class="mv">${gv('naverVisitor')?fmtK(gn('naverVisitor')):'—'}</span></div>
+      <div class="mr"><span>CTR</span><span class="mv">${gv('naverCTR')?gn('naverCTR').toFixed(2)+'%':'—'}</span></div>
+      <div class="mr"><span>CPC</span><span class="mv">${gv('naverCPC')?'₩'+fmtK(gn('naverCPC')):'—'}</span></div>
+    </div>
+    <div class="mb"><h4>🔵 Google${gP?' <small style="color:#aaa">(중지)</small>':''}</h4>
+      ${gP?'<div style="color:#aaa;text-align:center;padding:14px 0;font-size:7.5pt">임시중지</div>':`
+      <div class="mr"><span>Period</span><span class="mv">${gv('googleStart')||gv('googleEnd')?`${fmtD(gv('googleStart'))} ~ ${fmtD(gv('googleEnd'))}`:'—'}</span></div>
+      <div class="mr"><span>Budget</span><span class="mv">${gv('googleBudget')?'₩'+fmtK(gn('googleBudget')):'—'}</span></div>
+      <div class="mr"><span>Exposure</span><span class="mv">${gv('googleExposure')?fmtK(gn('googleExposure')):'—'}</span></div>
+      <div class="mr"><span>Visitor</span><span class="mv">${gv('googleVisitor')?fmtK(gn('googleVisitor')):'—'}</span></div>
+      <div class="mr"><span>CTR</span><span class="mv">${gv('googleCTR')?gn('googleCTR').toFixed(2)+'%':'—'}</span></div>
+      <div class="mr"><span>CPC</span><span class="mv">${gv('googleCPC')?'₩'+fmtK(gn('googleCPC')):'—'}</span></div>`}
+    </div>
+  </div>`;
+
+  const adH=adImg?`<div class="rpt-img"><img src="${adImg}" alt="광고결과"></div>`:'';
+
+  // 포스팅
+  const bl=posts.filter(p=>p.type==='blog'), il=posts.filter(p=>p.type==='insta');
+  const postH=(bl.length||il.length)?`<div class="rs"><div class="rst">CONTENT ACTIVITY</div><div class="pg">
+    <div class="pc"><h5>📝 Blog (${bl.length})</h5>${bl.map(p=>`<div class="pr">· ${gv(`p${p.id}_title`)||'(제목없음)'} <span style="color:#888">${fmtD(gv(`p${p.id}_date`))}</span>${gv(`p${p.id}_url`)?` <a href="${gv(`p${p.id}_url`)}">링크</a>`:''}</div>`).join('')||'<div class="pr" style="color:#aaa">없음</div>'}</div>
+    <div class="pc"><h5>📸 Instagram (${il.length})</h5>${il.map(p=>`<div class="pr">· ${gv(`p${p.id}_title`)||'(제목없음)'} <span style="color:#888">${fmtD(gv(`p${p.id}_date`))}</span>${gv(`p${p.id}_url`)?` <a href="${gv(`p${p.id}_url`)}">링크</a>`:''}</div>`).join('')||'<div class="pr" style="color:#aaa">없음</div>'}</div>
+  </div></div>`:'';
+
+  // rptTop 업데이트
+  document.getElementById('rptTop').innerHTML=`
+    <div class="rt">CruiseLink Monthly Sales Report</div>
+    <div class="rm">${mo} ${yr} &nbsp;|&nbsp; ${asOf?`as of ${fmtDs(asOf)}`:''}</div>
+    <div class="rdiv"></div>
+    <div class="rs"><div class="rst">SALES</div>
+      <table class="rtb"><thead><tr>
+        <th>예약일</th><th>선사명</th><th>BOOKING#</th><th>승선일</th><th>선박명</th><th>CABIN</th>
+        <th class="num">FARE</th><th class="num">TAX</th><th class="num">OTHERS</th><th class="num">Gross</th><th class="num">COMM</th>
+      </tr></thead><tbody>${tRows||'<tr><td colspan="11" style="text-align:center;color:#aaa;padding:8px">예약 없음</td></tr>'}${totRow}</tbody></table>
+      <div style="font-size:6.5pt;color:#555;line-height:2">· Web: <b>${gi('inqWeb')}</b> &nbsp;· 전화: <b>${gi('inqCall')}</b> &nbsp;· 카카오: <b>${gi('inqKakao')}</b> &nbsp;· 견적: <b>${gi('inqQuote')}</b> &nbsp;· 예약: <b>${gi('inqBooking')}</b></div>
+    </div>
+    <div class="rs"><div class="rst">문의 현황</div>${kpiH}</div>`;
+
+  // 차트 업데이트 (canvas 유지)
+  document.getElementById('rptCharts').style.display='block';
+  updateCharts();
+
+  // rptBottom 업데이트
+  document.getElementById('rptBottom').innerHTML=`
+    <div class="rs"><div class="rst">MARKETING</div>${mktgH}${adH}</div>
+    ${postH}`;
+}
+
+function updateCharts(){
+  const labels=MKO;
   const d24f=Array.from({length:12},(_,i)=>gn(`y24f${i+1}`));
   const d25f=Array.from({length:12},(_,i)=>gn(`y25f${i+1}`));
   const d26f=Array.from({length:12},(_,i)=>gn(`y26f${i+1}`));
@@ -357,150 +607,35 @@ function renderChart(){
   const d25c=Array.from({length:12},(_,i)=>gn(`y25c${i+1}`));
   const d26c=Array.from({length:12},(_,i)=>gn(`y26c${i+1}`));
 
-  // 차트 캔버스 HTML 반환 (프리뷰용 canvas)
-  return {d24f,d25f,d26f,d24c,d25c,d26c,labels};
-}
+  const fcEl=document.getElementById('fareChart');
+  const ccEl=document.getElementById('commChart');
+  if(!fcEl||!ccEl)return;
 
-// ─── 렌더링 ──────────────────────────────────────
-function render(){
-  const mo=gv('repMonth'), yr=gv('repYear'), asOf=gv('repAsOf');
-  const gPaused=document.getElementById('googlePaused').checked;
-  document.getElementById('googleFields').style.opacity=gPaused?'.4':'1';
+  if(fareCI){fareCI.data.datasets[0].data=d24f;fareCI.data.datasets[1].data=d25f;fareCI.data.datasets[2].data=d26f;fareCI.update();}
+  else{fareCI=new Chart(fcEl,{type:'bar',data:{labels,datasets:[
+    {label:'2024',data:d24f,backgroundColor:'rgba(100,149,237,.7)',borderColor:'rgba(100,149,237,1)',borderWidth:1},
+    {label:'2025',data:d25f,backgroundColor:'rgba(76,175,80,.7)',borderColor:'rgba(76,175,80,1)',borderWidth:1},
+    {label:'2026',data:d26f,backgroundColor:'rgba(255,152,0,.7)',borderColor:'rgba(255,152,0,1)',borderWidth:1},
+  ]},options:{responsive:true,plugins:{legend:{position:'top',labels:{font:{size:9}}}},scales:{y:{ticks:{font:{size:8}}},x:{ticks:{font:{size:8}}}}}});}
 
-  // 예약 계산
-  let totFare=0,totTax=0,totOthers=0,totGross=0,totComm=0;
-  const bData=bookings.map(id=>{
-    const fare=gn(`b${id}_fare`),tax=gn(`b${id}_tax`),others=gn(`b${id}_others`),comm=gn(`b${id}_comm`);
-    const gross=fare+tax+others;
-    const ge=document.getElementById(`b${id}_gross`); if(ge) ge.value=fmt(gross);
-    totFare+=fare; totTax+=tax; totOthers+=others; totGross+=gross; totComm+=comm;
-    return{date:gv(`b${id}_date`),line:gv(`b${id}_line`),no:gv(`b${id}_no`),sail:gv(`b${id}_sail`),ship:gv(`b${id}_ship`),cabin:gv(`b${id}_cabin`),fare,tax,others,gross,comm};
-  });
-
-  const tableRows=bData.map(b=>`<tr>
-    <td>${fmtDate(b.date)}</td><td>${b.line||'—'}</td><td>${b.no||'—'}</td><td>${fmtDate(b.sail)}</td><td>${b.ship||'—'}</td><td>${b.cabin||'—'}</td>
-    <td class="num">$${fmt(b.fare)}</td><td class="num">$${fmt(b.tax)}</td><td class="num">$${fmt(b.others)}</td>
-    <td class="num"><b>$${fmt(b.gross)}</b></td><td class="num">$${fmt(b.comm)}</td></tr>`).join('');
-  const totalRow=bData.length?`<tr class="tr-row"><td colspan="6" style="text-align:right;font-size:6.5pt">Total (USD)</td><td class="num">$${fmt(totFare)}</td><td class="num">$${fmt(totTax)}</td><td class="num">$${fmt(totOthers)}</td><td class="num"><b>$${fmt(totGross)}</b></td><td class="num">$${fmt(totComm)}</td></tr>`:'';
-
-  // KPI
-  const kpiHtml=`<div class="kpi-grid">
-    <div class="kpi-box"><div class="kpi-lbl">Web 문의</div><div class="kpi-val">${gi('inqWeb')}</div></div>
-    <div class="kpi-box"><div class="kpi-lbl">전화 문의</div><div class="kpi-val">${gi('inqCall')}</div></div>
-    <div class="kpi-box"><div class="kpi-lbl">카카오</div><div class="kpi-val">${gi('inqKakao')}</div></div>
-    <div class="kpi-box"><div class="kpi-lbl">견적</div><div class="kpi-val">${gi('inqQuote')}</div></div>
-    <div class="kpi-box" style="background:#e8f5e9;border-color:#a5d6a7"><div class="kpi-lbl">Total 예약</div><div class="kpi-val" style="color:#1b5e20">${gi('inqBooking')}</div></div>
-  </div>`;
-
-  // 마케팅
-  const naverP=gv('naverStart')||gv('naverEnd')?`${fmtDate(gv('naverStart'))} ~ ${fmtDate(gv('naverEnd'))}`:'—';
-  const mktgHtml=`<div class="mktg-grid">
-    <div class="mktg-box"><h4>🟢 Naver Advertising</h4>
-      <div class="mktg-row"><span>Period</span><span class="v">${naverP}</span></div>
-      <div class="mktg-row"><span>Budget</span><span class="v">${gv('naverBudget')?'₩'+fmtKrw(gn('naverBudget')):'—'}</span></div>
-      <div class="mktg-row"><span>Exposure</span><span class="v">${gv('naverExposure')?fmtKrw(gn('naverExposure')):'—'}</span></div>
-      <div class="mktg-row"><span>Visitor</span><span class="v">${gv('naverVisitor')?fmtKrw(gn('naverVisitor')):'—'}</span></div>
-      <div class="mktg-row"><span>CTR</span><span class="v">${gv('naverCTR')?parseFloat(gv('naverCTR')).toFixed(2)+'%':'—'}</span></div>
-      <div class="mktg-row"><span>CPC</span><span class="v">${gv('naverCPC')?'₩'+fmtKrw(gn('naverCPC')):'—'}</span></div>
-    </div>
-    <div class="mktg-box"><h4>🔵 Google Advertising${gPaused?' <small style="color:#aaa;font-weight:400">(중지)</small>':''}</h4>
-      ${gPaused?'<div style="text-align:center;color:#aaa;font-size:7.5pt;padding:14px 0">임시중지 중</div>':`
-      <div class="mktg-row"><span>Period</span><span class="v">${gv('googleStart')||gv('googleEnd')?`${fmtDate(gv('googleStart'))} ~ ${fmtDate(gv('googleEnd'))}`:'—'}</span></div>
-      <div class="mktg-row"><span>Budget</span><span class="v">${gv('googleBudget')?'₩'+fmtKrw(gn('googleBudget')):'—'}</span></div>
-      <div class="mktg-row"><span>Exposure</span><span class="v">${gv('googleExposure')?fmtKrw(gn('googleExposure')):'—'}</span></div>
-      <div class="mktg-row"><span>Visitor</span><span class="v">${gv('googleVisitor')?fmtKrw(gn('googleVisitor')):'—'}</span></div>
-      <div class="mktg-row"><span>CTR</span><span class="v">${gv('googleCTR')?parseFloat(gv('googleCTR')).toFixed(2)+'%':'—'}</span></div>
-      <div class="mktg-row"><span>CPC</span><span class="v">${gv('googleCPC')?'₩'+fmtKrw(gn('googleCPC')):'—'}</span></div>`}
-    </div>
-  </div>`;
-
-  // 광고 이미지
-  const adImgHtml=adImgData?`<div class="rpt-img"><img src="${adImgData}" alt="광고 결과"></div>`:'';
-
-  // 포스팅 현황
-  const blogPosts=posts.filter(p=>p.type==='blog');
-  const instaPosts=posts.filter(p=>p.type==='insta');
-  const postHtml=(blogPosts.length||instaPosts.length)?`
-    <div class="rs">
-      <div class="rst">CONTENT ACTIVITY</div>
-      <div class="post-grid">
-        <div class="post-card">
-          <h5>📝 Naver Blog (${blogPosts.length}건)</h5>
-          ${blogPosts.map(p=>`<div class="post-row">· ${gv(`p${p.id}_title`)||'(제목 없음)'} <span style="color:#888">${fmtDate(gv(`p${p.id}_date`))}</span>${gv(`p${p.id}_url`)?` <a href="${gv(`p${p.id}_url`)}" style="color:#0077cc">링크</a>`:''}</div>`).join('')||'<div class="post-row" style="color:#aaa">없음</div>'}
-        </div>
-        <div class="post-card">
-          <h5>📸 Instagram (${instaPosts.length}건)</h5>
-          ${instaPosts.map(p=>`<div class="post-row">· ${gv(`p${p.id}_title`)||'(제목 없음)'} <span style="color:#888">${fmtDate(gv(`p${p.id}_date`))}</span>${gv(`p${p.id}_url`)?` <a href="${gv(`p${p.id}_url`)}" style="color:#0077cc">링크</a>`:''}</div>`).join('')||'<div class="post-row" style="color:#aaa">없음</div>'}
-        </div>
-      </div>
-    </div>`:'';
-
-  document.getElementById('reportPaper').innerHTML=`
-    <div class="rt">CruiseLink Monthly Sales Report</div>
-    <div class="rm">${mo} ${yr} &nbsp;|&nbsp; ${asOf?`as of ${fmtDateShort(asOf)}`:''}</div>
-    <div class="rdiv"></div>
-    <div class="rs">
-      <div class="rst">SALES</div>
-      <table class="rtb"><thead><tr>
-        <th>예약일</th><th>선사명</th><th>BOOKING#</th><th>승선일</th><th>선박명</th><th>CABIN</th>
-        <th class="num">FARE</th><th class="num">TAX</th><th class="num">OTHERS</th><th class="num">Gross</th><th class="num">COMM.</th>
-      </tr></thead><tbody>
-        ${tableRows||'<tr><td colspan="11" style="text-align:center;color:#aaa;padding:10px">예약 없음</td></tr>'}
-        ${totalRow}
-      </tbody></table>
-      <div style="font-size:7pt;color:#555;line-height:2">
-        · Web inquiry: <b>${gi('inqWeb')}</b> &nbsp;·&nbsp; Call: <b>${gi('inqCall')}</b> &nbsp;·&nbsp; KaKao: <b>${gi('inqKakao')}</b> &nbsp;·&nbsp; Quotation: <b>${gi('inqQuote')}</b> &nbsp;·&nbsp; Total Booking: <b>${gi('inqBooking')}</b>
-      </div>
-    </div>
-    <div class="rs">
-      <div class="rst">문의 채널 현황</div>
-      ${kpiHtml}
-    </div>
-    <div class="rs">
-      <div class="rst">월별 판매 비교 (Gross Fare, USD)</div>
-      <div class="chart-wrap"><canvas id="fareChart" height="80"></canvas></div>
-      <div class="rst" style="margin-top:8px">월별 커미션 비교 (USD)</div>
-      <div class="chart-wrap"><canvas id="commChart" height="80"></canvas></div>
-    </div>
-    <div class="rs">
-      <div class="rst">MARKETING</div>
-      ${mktgHtml}
-      ${adImgHtml}
-    </div>
-    ${postHtml}
-  `;
-
-  // 차트 그리기
-  const {d24f,d25f,d26f,d24c,d25c,d26c,labels}=renderChart();
-  setTimeout(()=>{
-    const fc=document.getElementById('fareChart');
-    const cc=document.getElementById('commChart');
-    if(fc){
-      if(fc._chart) fc._chart.destroy();
-      fc._chart=new Chart(fc,{type:'bar',data:{labels,datasets:[
-        {label:'2024',data:d24f,backgroundColor:'rgba(100,149,237,.7)',borderColor:'rgba(100,149,237,1)',borderWidth:1},
-        {label:'2025',data:d25f,backgroundColor:'rgba(76,175,80,.7)',borderColor:'rgba(76,175,80,1)',borderWidth:1},
-        {label:'2026',data:d26f,backgroundColor:'rgba(255,152,0,.7)',borderColor:'rgba(255,152,0,1)',borderWidth:1},
-      ]},options:{responsive:true,plugins:{legend:{position:'top',labels:{font:{size:9}}}},scales:{y:{ticks:{font:{size:8}},title:{display:true,text:'USD',font:{size:8}}},x:{ticks:{font:{size:8}}}}}});
-    }
-    if(cc){
-      if(cc._chart) cc._chart.destroy();
-      cc._chart=new Chart(cc,{type:'bar',data:{labels,datasets:[
-        {label:'2024',data:d24c,backgroundColor:'rgba(100,149,237,.7)',borderColor:'rgba(100,149,237,1)',borderWidth:1},
-        {label:'2025',data:d25c,backgroundColor:'rgba(76,175,80,.7)',borderColor:'rgba(76,175,80,1)',borderWidth:1},
-        {label:'2026',data:d26c,backgroundColor:'rgba(255,152,0,.7)',borderColor:'rgba(255,152,0,1)',borderWidth:1},
-      ]},options:{responsive:true,plugins:{legend:{position:'top',labels:{font:{size:9}}}},scales:{y:{ticks:{font:{size:8}},title:{display:true,text:'USD',font:{size:8}}},x:{ticks:{font:{size:8}}}}}});
-    }
-  },100);
+  if(commCI){commCI.data.datasets[0].data=d24c;commCI.data.datasets[1].data=d25c;commCI.data.datasets[2].data=d26c;commCI.update();}
+  else{commCI=new Chart(ccEl,{type:'bar',data:{labels,datasets:[
+    {label:'2024',data:d24c,backgroundColor:'rgba(100,149,237,.7)',borderColor:'rgba(100,149,237,1)',borderWidth:1},
+    {label:'2025',data:d25c,backgroundColor:'rgba(76,175,80,.7)',borderColor:'rgba(76,175,80,1)',borderWidth:1},
+    {label:'2026',data:d26c,backgroundColor:'rgba(255,152,0,.7)',borderColor:'rgba(255,152,0,1)',borderWidth:1},
+  ]},options:{responsive:true,plugins:{legend:{position:'top',labels:{font:{size:9}}}},scales:{y:{ticks:{font:{size:8}}},x:{ticks:{font:{size:8}}}}}});}
 }
 
 function resetForm(){
-  if(!confirm('초기화하시겠습니까?')) return;
+  if(!confirm('초기화하시겠습니까?'))return;
   bookings=[]; bId=0; posts=[]; pId=0;
   document.getElementById('bookingList').innerHTML='';
   document.getElementById('postList').innerHTML='';
   clearSalesImg(); clearAdImg();
-  initYrTable(); init();
+  if(fareCI){fareCI.destroy();fareCI=null;}
+  if(commCI){commCI.destroy();commCI=null;}
+  document.getElementById('rptCharts').style.display='none';
+  init();
 }
 
 function init(){
@@ -508,31 +643,34 @@ function init(){
   document.getElementById('repAsOf').value=now.toISOString().slice(0,10);
   document.getElementById('repMonth').value=MONTHS[now.getMonth()];
   document.getElementById('repYear').value=now.getFullYear();
-  document.querySelectorAll('input,select').forEach(el=>{el.addEventListener('input',render);el.addEventListener('change',render);});
-  // 클립보드 paste
+  // 글로벌 이벤트
+  document.querySelectorAll('#repMonth,#repYear,#repAsOf,#inqWeb,#inqCall,#inqKakao,#inqQuote,#inqBooking,#naverStart,#naverEnd,#naverBudget,#naverExposure,#naverVisitor,#naverCTR,#naverCPC,#googleStart,#googleEnd,#googleBudget,#googleExposure,#googleVisitor,#googleCTR,#googleCPC,#googlePaused').forEach(el=>{
+    el.addEventListener('input',render); el.addEventListener('change',render);
+  });
+  // paste
   document.addEventListener('paste',e=>{
-    const items=e.clipboardData?.items; if(!items) return;
+    const items=e.clipboardData?.items; if(!items)return;
     for(const it of items) if(it.type.startsWith('image/')){
       const f=it.getAsFile();
-      // 포커스 위치에 따라 자동 분기
-      const active=document.activeElement;
-      const isAdZone=active&&(active.id==='adImgFile'||active.closest('#adImgDz'));
-      if(isAdZone){ readImg(f,(url)=>{adImgData=url;document.getElementById('adImgPrev').src=url;document.getElementById('adImgThumb').style.display='block';render();}); }
-      else { readImg(f,(url,mime)=>{salesImgData=url;salesImgMime=mime;document.getElementById('salesImgPrev').src=url;document.getElementById('salesThumb').style.display='block';document.getElementById('salesParseBtn').disabled=false;}); }
+      const focused=document.activeElement;
+      const isAd=focused&&(focused.id==='adImgFile'||focused.closest('#adDz'));
+      if(isAd){readImg(f,(url)=>{adImg=url;document.getElementById('adImgPrev').src=url;document.getElementById('adThumb').style.display='block';render();});}
+      else{readImg(f,(url,m)=>{salesImg=url;salesMime=m;document.getElementById('salesImgPrev').src=url;document.getElementById('salesThumb').style.display='block';document.getElementById('salesParseBtn').disabled=false;});}
       break;
     }
   });
-  // 드롭존
-  ['salesDz','adImgDz'].forEach(id=>{
+  // 드롭
+  ['salesDz','adDz'].forEach(id=>{
     const dz=document.getElementById(id);
     dz.addEventListener('dragover',e=>{e.preventDefault();dz.style.borderColor='#4da6ff';});
     dz.addEventListener('dragleave',()=>{dz.style.borderColor='#2a4a6a';});
     dz.addEventListener('drop',e=>{e.preventDefault();dz.style.borderColor='#2a4a6a';const f=e.dataTransfer.files[0];if(!f)return;
-      if(id==='adImgDz') readImg(f,(url)=>{adImgData=url;document.getElementById('adImgPrev').src=url;document.getElementById('adImgThumb').style.display='block';render();});
-      else readImg(f,(url,mime)=>{salesImgData=url;salesImgMime=mime;document.getElementById('salesImgPrev').src=url;document.getElementById('salesThumb').style.display='block';document.getElementById('salesParseBtn').disabled=false;});
+      if(id==='adDz')readImg(f,(url)=>{adImg=url;document.getElementById('adImgPrev').src=url;document.getElementById('adThumb').style.display='block';render();});
+      else readImg(f,(url,m)=>{salesImg=url;salesMime=m;document.getElementById('salesImgPrev').src=url;document.getElementById('salesThumb').style.display='block';document.getElementById('salesParseBtn').disabled=false;});
     });
   });
   initYrTable();
+  refreshSelect();
   addBooking();
   render();
 }
