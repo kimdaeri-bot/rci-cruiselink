@@ -337,5 +337,23 @@
         "remarks": ""
       }
     ]
+  },
+  {
+    "product": "지중해 6박 크루즈",
+    "cruiseline": "MSC Cruises",
+    "ship": "MSC 씨뷰",
+    "dateFrom": "2026-11-12",
+    "ports": "",
+    "price": "문의",
+    "ref": "MSCSV20261112BCNBCN",
+    "name": "서한빛",
+    "email": "shb3572@naver.com",
+    "phone": "01011111111",
+    "pax": "2",
+    "cabin": "발코니",
+    "message": "없음",
+    "id": "1773628392113",
+    "timestamp": "2026-03-16T02:33:12.113Z",
+    "status": "신규"
   }
 ]
