@@ -303,7 +303,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="form-row" style="margin:0">
             <label>승선일</label>
-            <input type="date" id="f_embark" oninput="render()">
+            <input type="date" id="f_embark" oninput="autoBalanceDL();render()">
           </div>
         </div>
         <div class="form-row-2">
@@ -613,6 +613,15 @@ function addDays(dateStr, days) {
   const d = new Date(dateStr);
   d.setDate(d.getDate() + days);
   return d.toISOString().substring(0,10);
+}
+
+// 승선일 변경 시 잔금 기한 자동 계산 (승선일 50일 전)
+function autoBalanceDL() {
+  const embark = document.getElementById('f_embark').value;
+  const balanceEl = document.getElementById('f_balance_dl');
+  if (embark) {
+    balanceEl.value = addDays(embark, -50);
+  }
 }
 function fmtDate(dateStr) {
   if (!dateStr) return '';
