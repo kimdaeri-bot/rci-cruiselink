@@ -632,7 +632,7 @@ function renderInvoice() {
   const customer = document.getElementById('f_customer').value || '고객명';
   const issueDate = document.getElementById('f_issuedate').value;
   const manager = document.getElementById('f_manager').value;
-  const ship = document.getElementById('f_ship').value || '선박명';
+  const ship = document.getElementById('f_ship').value || '';
   const bookingNo = document.getElementById('f_bookingno').value || '';
   const itinerary = document.getElementById('f_itinerary').value || '';
   const embark = document.getElementById('f_embark').value;
@@ -683,7 +683,7 @@ function renderInvoice() {
     </div>
     <div class="inv-header" style="margin-bottom:18px;">
       <div class="inv-title-main">CONFIRM &amp; INVOICE</div>
-      <div class="inv-subtitle">${customer} 고객님 크루즈링크 ${ship} 예약 인보이스</div>
+      <div class="inv-subtitle">${customer} 고객님 크루즈링크${ship ? ' ' + ship : ''} 예약 인보이스</div>
     </div>
 
     <!-- 메타 정보 -->
