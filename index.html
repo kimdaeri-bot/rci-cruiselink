@@ -325,6 +325,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         .cruise-tab-btn { padding:12px 22px; font-size:0.9rem; font-weight:600; color:var(--gray-700); border:none; background:none; cursor:pointer; white-space:nowrap; border-bottom:3px solid transparent; margin-bottom:-2px; transition:all 0.2s; font-family:inherit; }
         .cruise-tab-btn.active { color:var(--navy); border-bottom-color:var(--navy); font-weight:700; }
         .cruise-tab-btn:hover:not(.active) { color:var(--navy); }
+        .cruise-tab-featured { background:linear-gradient(135deg,#e8f0fe 0%,#fff 100%); border-radius:8px 8px 0 0; padding-left:14px!important; padding-right:14px!important; border:1.5px solid #c5d4f5; border-bottom:3px solid var(--navy)!important; }
+        .cruise-tab-featured.active { background:linear-gradient(135deg,#1a237e 0%,#283593 100%)!important; color:#fff!important; border-color:var(--navy)!important; }
+        .cruise-tab-featured:hover:not(.active) { background:linear-gradient(135deg,#c5d4f5 0%,#e8f0fe 100%); }
         /* ── 탭 슬라이더 ── */
         .tab-slider-wrap { position:relative; }
         .tab-slider-viewport { overflow:hidden; padding-bottom:12px; margin-bottom:-12px; }
@@ -413,8 +416,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         @media(max-width:700px){.dr-popup{width:calc(100vw - 32px);left:0}.dr-months{flex-direction:column}}
       </style>
       <nav class="cruise-tabs-nav" id="cruiseTabsNav">
-        <button class="cruise-tab-btn" onclick="switchTab(this,'incheon')">한국</button>
-        <button class="cruise-tab-btn active" onclick="switchTab(this,'mediterranean')">지중해</button>
+        <button class="cruise-tab-btn active cruise-tab-featured" onclick="switchTab(this,'incheon')">🇰🇷 한국출발</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'mediterranean')">지중해</button>
         <button class="cruise-tab-btn" onclick="switchTab(this,'alaska')">알래스카</button>
         <button class="cruise-tab-btn" onclick="switchTab(this,'caribbean')">카리브해</button>
         <button class="cruise-tab-btn" onclick="switchTab(this,'korea')">일본·아시아</button>
@@ -1272,11 +1275,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=600&q=80',
       ],
       incheon: [
-        'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80',
-        'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80',
-        'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=600&q=80',
-        'https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&q=80',
-        'https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=600&q=80',
+        // 서울 남산/야경
+        'https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?w=600&q=80',
+        // 제주도
+        'https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=600&q=80',
+        // 대만 타이페이 야경
+        'https://images.unsplash.com/photo-1470004914212-05527e49370b?w=600&q=80',
+        // 한국 전통 사찰
+        'https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=600&q=80',
+        // 대만 지우펀
+        'https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600&q=80',
       ],
       korea: [
         'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80',
@@ -1427,7 +1435,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     window.addEventListener('resize', updateTabArrows);
 
     // 첫 탭 자동 로드
-    switchTab(document.querySelector('.cruise-tab-btn'), 'mediterranean');
+    switchTab(document.querySelector('.cruise-tab-btn'), 'incheon');
 
     loadRecommended();
     loadRecommended2();
