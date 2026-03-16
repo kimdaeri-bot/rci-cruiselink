@@ -498,6 +498,23 @@
         "air": 0,
         "etc": 0,
         "remarks": "* 오션뷰 : Deluxe Oceanview (5층 선실 기준)\n* 발코니 : Deluxe Balcony (8~10층 선실 기준)"
+      },
+      {
+        "date": "2026. 3. 16.",
+        "pax": 3,
+        "types": [
+          {
+            "name": "오션뷰",
+            "val": 239
+          },
+          {
+            "name": "발코니",
+            "val": 349
+          }
+        ],
+        "air": 0,
+        "etc": 0,
+        "remarks": ""
       }
     ]
   }
