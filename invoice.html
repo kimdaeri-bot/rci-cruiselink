@@ -421,7 +421,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div style="display:flex;gap:10px;width:100%">
         <button class="btn-print" onclick="doPrint()">🖨️ 인쇄 / PDF 저장</button>
-        <button class="btn-print" onclick="exportExcel()" style="background:#1b6e2e;flex:1">📊 엑셀 파일 변환</button>
+        <button class="btn-print" onclick="exportExcel()" style="background:#1b6e2e;flex:1">📊 엑셀 변환</button>
+        <button class="btn-print" onclick="saveInvoice()" style="background:#4527a0">💾 저장</button>
+        <button class="btn-print" onclick="loadInvoice()" style="background:#1565c0">📂 불러오기</button>
         <button class="btn-reset" onclick="resetForm()">초기화</button>
       </div>
     </div>
@@ -798,11 +800,7 @@ function renderInvoice() {
             <span>신청금</span>
             <span class="amt">${deposit ? fmtMoney(deposit) : ''} ${rate && deposit ? `(${fmtKRW(deposit, rate)})` : ''}</span>
           </div>
-          <div class="inv-payment-row">
-            <span>결제 기한</span>
-            <span class="deadline">${fmtDate(depositDL)}</span>
-          </div>
-          ${depositPaid ? `<div class="inv-payment-row"><span>입금 일자</span><span>${fmtDate(depositPaid)}</span></div>` : ''}
+          ${!depositPaid ? `<div class="inv-payment-row"><span>결제 기한</span><span class="deadline">${fmtDate(depositDL)}</span></div>` : `<div class="inv-payment-row"><span>입금 완료 ✅</span><span style="color:#2e7d32;font-weight:700">${fmtDate(depositPaid)}</span></div>`}
           ${depositNote ? `<div class="inv-payment-row"><span>비고</span><span style="color:#555">${depositNote}</span></div>` : ''}
         </div>
       </div>
@@ -813,11 +811,7 @@ function renderInvoice() {
             <span>잔금</span>
             <span class="amt">${balance > 0 ? fmtMoney(balance) : ''} ${rate && balance > 0 ? `(${fmtKRW(balance, rate)})` : ''}</span>
           </div>
-          <div class="inv-payment-row">
-            <span>결제 기한</span>
-            <span class="deadline">${fmtDate(balanceDL)}</span>
-          </div>
-          ${balancePaid ? `<div class="inv-payment-row"><span>입금 일자</span><span>${fmtDate(balancePaid)}</span></div>` : ''}
+          ${!balancePaid ? `<div class="inv-payment-row"><span>결제 기한</span><span class="deadline">${fmtDate(balanceDL)}</span></div>` : `<div class="inv-payment-row"><span>입금 완료 ✅</span><span style="color:#2e7d32;font-weight:700">${fmtDate(balancePaid)}</span></div>`}
           ${balanceNote ? `<div class="inv-payment-row"><span>비고</span><span style="color:#555">${balanceNote}</span></div>` : ''}
         </div>
       </div>
@@ -891,76 +885,146 @@ function render() {
 function exportExcel() {
   const wb = XLSX.utils.book_new();
 
-  // ── 기본 정보
-  const customer  = document.getElementById('f_customer')?.value || '';
-  const issueDate = document.getElementById('f_issuedate')?.value || '';
-  const manager   = document.getElementById('f_manager')?.value || '';
-  const ship      = document.getElementById('f_ship')?.value || '';
-  const bookingNo = document.getElementById('f_bookingno')?.value || '';
-  const itinerary = document.getElementById('f_itinerary')?.value || '';
-  const embark    = document.getElementById('f_embark')?.value || '';
+  const customer      = document.getElementById('f_customer')?.value || '';
+  const issueDate     = document.getElementById('f_issuedate')?.value || '';
+  const manager       = document.getElementById('f_manager')?.value || '';
+  const ship          = document.getElementById('f_ship')?.value || '';
+  const bookingNo     = document.getElementById('f_bookingno')?.value || '';
+  const itinerary     = document.getElementById('f_itinerary')?.value || '';
+  const embark        = document.getElementById('f_embark')?.value || '';
   const embarkPort    = document.getElementById('f_embarkport')?.value || '';
   const disembarkPort = document.getElementById('f_disembarkport')?.value || '';
-  const rate      = document.getElementById('f_rate')?.value || '';
-  const operator  = document.getElementById('f_operator')?.value || '';
+  const rate          = document.getElementById('f_rate')?.value || '';
+  const operator      = document.getElementById('f_operator')?.value || '';
+  const deposit       = parseFloat(document.getElementById('f_deposit')?.value) || 0;
+  const depositDL     = document.getElementById('f_deposit_dl')?.value || '';
+  const depositPaid   = document.getElementById('f_deposit_paid')?.value || '';
+  const depositNote   = document.getElementById('f_deposit_note')?.value || '';
+  const balanceDL     = document.getElementById('f_balance_dl')?.value || '';
+  const balancePaid   = document.getElementById('f_balance_paid')?.value || '';
+  const balanceNote   = document.getElementById('f_balance_note')?.value || '';
+  const rateNum       = parseFloat(rate) || 0;
+  const fmtD = v => v ? v.replace(/-/g,'.') : '';
 
-  // 스타일 헬퍼
-  const hdr = { font:{bold:true}, fill:{fgColor:{rgb:'1A237E'}}, font:{bold:true,color:{rgb:'FFFFFF'}} };
-  const sub = { font:{bold:true}, fill:{fgColor:{rgb:'E8EAF6'}} };
-
-  // ── 시트1: 인보이스 정보
-  const infoRows = [
-    ['크루즈 인보이스'],
-    [],
-    ['📋 기본 정보'],
-    ['고객명', customer, '', '발신일', issueDate, '', '담당자', manager],
-    [],
-    ['🚢 크루즈 정보'],
-    ['선사', operator, '', '선박명', ship, '', 'Booking No.', bookingNo],
-    ['크루즈 일정', itinerary, '', '승선일', embark],
-    ['승선 항구', embarkPort, '', '하선 항구', disembarkPort],
-    ['환율 (USD→KRW)', rate ? `1 USD = ${Number(rate).toLocaleString()} KRW` : ''],
-    [],
-    ['👥 승객 정보'],
-    ['No.', '성별', '이름', '선실 카테고리', '선실 No.', 'Dining', '요금($)', '팁($)', 'Tax($)', '합계($)', '합계(KRW)'],
-  ];
-
-  const rateNum = parseFloat(rate) || 0;
   let totalUSD = 0;
+  const paxData = [];
   paxRows.forEach((p, i) => {
     const price = parseFloat(p.price) || 0;
     const tip   = parseFloat(p.tip)   || 0;
     const tax   = parseFloat(p.tax)   || 0;
     const sum   = price + tip + tax;
     totalUSD   += sum;
-    infoRows.push([
-      i + 1, p.gender, p.name, p.cabin_cat, p.cabin_no, p.dining,
+    paxData.push([
+      i + 1, p.gender || '', p.name || '', p.cabin_cat || '', p.cabin_no || '', p.dining || '',
       price || '', tip || '', tax || '',
-      sum ? sum.toFixed(2) : '',
-      (rateNum && sum) ? Math.round(sum * rateNum).toLocaleString() : '',
+      sum ? +sum.toFixed(2) : '',
+      (rateNum && sum) ? Math.round(sum * rateNum) : '',
     ]);
   });
 
-  infoRows.push([]);
-  infoRows.push([
-    '', '', '', '', '', '', '', '', '합계',
-    totalUSD.toFixed(2),
-    (rateNum && totalUSD) ? Math.round(totalUSD * rateNum).toLocaleString() : '',
-  ]);
+  const balance = totalUSD - deposit;
 
-  const ws = XLSX.utils.aoa_to_sheet(infoRows);
+  const rows = [
+    ['크루즈 인보이스', '', '', '', '', '', '', '', '', '', ''],
+    [],
+    ['▣ 기본 정보'],
+    ['고객명', customer, '', '', '발신일', issueDate, '', '', '담당자', manager, ''],
+    [],
+    ['▣ 크루즈 정보'],
+    ['선사', operator, '', '', '선박명', ship, '', '', 'Booking No.', bookingNo, ''],
+    ['크루즈 일정', itinerary, '', '', '', '', '', '', '', '', ''],
+    ['승선일', fmtD(embark), '', '', '승선 항구', embarkPort, '', '', '하선 항구', disembarkPort, ''],
+    [],
+    ['▣ 승객 정보'],
+    ['No.', '성별', '이름', '선실 카테고리', '선실 No.', 'Dining', '요금($)', '팁($)', 'Tax($)', '합계($)', '합계(KRW)'],
+    ...paxData,
+    [],
+    ['', '', '', '', '', '', '', '', '총 합계', +totalUSD.toFixed(2), rateNum ? Math.round(totalUSD * rateNum) : ''],
+    [],
+    ['▣ 결제 정보'],
+    ['적용 환율', rate ? `1 USD = ${Number(rate).toLocaleString()} KRW` : '', '', '', '', '', '', '', '', '', ''],
+    [],
+    ['[신청금]'],
+    ['신청금 ($)', deposit ? +deposit.toFixed(2) : '', '', '', '신청금 (KRW)', rateNum && deposit ? Math.round(deposit * rateNum) : '', '', '', '', '', ''],
+    [depositPaid ? '입금 완료' : '결제 기한', depositPaid ? fmtD(depositPaid) : fmtD(depositDL), '', '', '', '', '', '', '', '', ''],
+    ...(depositNote ? [['비고', depositNote, '', '', '', '', '', '', '', '', '']] : []),
+    [],
+    ['[잔금]'],
+    ['잔금 ($)', balance > 0 ? +balance.toFixed(2) : '', '', '', '잔금 (KRW)', rateNum && balance > 0 ? Math.round(balance * rateNum) : '', '', '', '', '', ''],
+    [balancePaid ? '입금 완료' : '결제 기한', balancePaid ? fmtD(balancePaid) : fmtD(balanceDL), '', '', '', '', '', '', '', '', ''],
+    ...(balanceNote ? [['비고', balanceNote, '', '', '', '', '', '', '', '', '']] : []),
+    [],
+    ['▣ 입금 계좌 안내'],
+    ['[USD 입금]', '하나은행 109-890027-46938', '', '', '예금주', '아남항공 주식회사', '', '', '', '', ''],
+    ['[KRW 입금]', '하나은행 109-910025-06504', '', '', '예금주', '아남항공 주식회사', '', '', '', '', ''],
+    [],
+    ['▣ MSC 취소 규정'],
+    ['취소 시점', '75일 전까지', '74~60일', '59~50일', '49~30일', '29~0일', '', '', '', '', ''],
+    ['취소 수수료', '없음', '$150', '25%', '50%', '100%', '', '', '', '', ''],
+  ];
 
-  // 열 너비
+  const ws = XLSX.utils.aoa_to_sheet(rows);
   ws['!cols'] = [
-    {wch:6},{wch:6},{wch:16},{wch:16},{wch:10},{wch:12},
-    {wch:10},{wch:10},{wch:10},{wch:12},{wch:16},
+    {wch:16},{wch:24},{wch:4},{wch:4},
+    {wch:14},{wch:22},{wch:4},{wch:4},
+    {wch:12},{wch:12},{wch:14},
   ];
 
   XLSX.utils.book_append_sheet(wb, ws, '인보이스');
-
-  // 파일명: INVOICE_고객명_날짜.xlsx
   const fname = `INVOICE_${customer || 'cruiselink'}_${issueDate || 'nodate'}.xlsx`;
   XLSX.writeFile(wb, fname);
+}
+
+// ── 저장 / 불러오기
+function saveInvoice() {
+  const fields = [
+    'f_customer','f_issuedate','f_manager','f_operator','f_ship',
+    'f_bookingno','f_itinerary','f_embark','f_embarkport','f_disembarkport',
+    'f_rate','f_deposit','f_deposit_dl','f_deposit_paid','f_deposit_note',
+    'f_balance_dl','f_balance_paid','f_balance_note','f_cruiseline_type','f_remarks'
+  ];
+  const data = {};
+  fields.forEach(id => { const el = document.getElementById(id); if (el) data[id] = el.value; });
+  data._paxRows = JSON.parse(JSON.stringify(paxRows));
+  data._savedAt = new Date().toISOString();
+
+  const key = `inv_${data.f_customer || 'draft'}_${data.f_issuedate || Date.now()}`;
+  localStorage.setItem('invoice_last', JSON.stringify(data));
+  localStorage.setItem(key, JSON.stringify(data));
+
+  let list = JSON.parse(localStorage.getItem('invoice_list') || '[]');
+  list = list.filter(k => k !== key);
+  list.unshift(key);
+  if (list.length > 30) list = list.slice(0, 30);
+  localStorage.setItem('invoice_list', JSON.stringify(list));
+
+  alert(`💾 저장 완료!\n고객: ${data.f_customer || '(없음)'}  발신일: ${data.f_issuedate || '(없음)'}`);
+}
+
+function loadInvoice() {
+  const list = JSON.parse(localStorage.getItem('invoice_list') || '[]');
+  if (!list.length) { alert('저장된 인보이스가 없습니다.'); return; }
+
+  const labels = list.map((k, i) => {
+    const d = JSON.parse(localStorage.getItem(k) || '{}');
+    const saved = d._savedAt ? new Date(d._savedAt).toLocaleString('ko-KR') : '';
+    return `${i+1}. ${d.f_customer || '(이름없음)'}  ${d.f_issuedate || ''}  [${saved}]`;
+  });
+
+  const idx = prompt('불러올 번호를 입력하세요:\n\n' + labels.join('\n'));
+  if (!idx) return;
+  const n = parseInt(idx) - 1;
+  if (isNaN(n) || n < 0 || n >= list.length) { alert('잘못된 번호입니다.'); return; }
+
+  const data = JSON.parse(localStorage.getItem(list[n]) || '{}');
+  ['f_customer','f_issuedate','f_manager','f_operator','f_ship',
+   'f_bookingno','f_itinerary','f_embark','f_embarkport','f_disembarkport',
+   'f_rate','f_deposit','f_deposit_dl','f_deposit_paid','f_deposit_note',
+   'f_balance_dl','f_balance_paid','f_balance_note','f_cruiseline_type','f_remarks'
+  ].forEach(id => { const el = document.getElementById(id); if (el && data[id] !== undefined) el.value = data[id]; });
+  if (data._paxRows) { paxRows = data._paxRows; renderPaxTable(); }
+  render();
+  alert('✅ 불러오기 완료!');
 }
 
 function resetForm() {
