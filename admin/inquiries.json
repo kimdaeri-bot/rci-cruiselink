@@ -868,5 +868,23 @@
     "id": "1773642175321",
     "timestamp": "2026-03-16T06:22:55.321Z",
     "status": "신규"
+  },
+  {
+    "product": "일본·한국 4박 크루즈",
+    "cruiseline": "MSC Cruises",
+    "ship": "MSC 벨리시마",
+    "dateFrom": "2027-06-10",
+    "ports": "",
+    "price": "문의",
+    "ref": "MSCBE20270610TYOINC",
+    "name": "김지나",
+    "email": "kjn5664@naver.com",
+    "phone": "01088330290",
+    "pax": "2",
+    "cabin": "발코니",
+    "message": "KIM JI NA\nJO SUNG YEOL",
+    "id": "1773787024037",
+    "timestamp": "2026-03-17T22:37:04.037Z",
+    "status": "신규"
   }
 ]
