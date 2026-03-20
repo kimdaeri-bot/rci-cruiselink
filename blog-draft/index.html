@@ -90,28 +90,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tbody>
   </table>
   <script>
-  (function(){
+  const CLOUD_API='https://enttix-omega.vercel.app/api/cl-reports';
+  const BASE_URL=location.origin+location.pathname.replace(/index\.html$/,'');
+
+  function renderReports(list){
+    const tbody=document.getElementById('reportListBody');
+    if(!list||!list.length){
+      tbody.innerHTML='<tr><td colspan="5" style="text-align:center;padding:20px;color:#aaa;font-size:13px">등록된 리포트가 없습니다.</td></tr>';
+      return;
+    }
+    tbody.innerHTML=list.map((r,i)=>{
+      const shareUrl=`sales-report.html?cloud=${r.id}`;
+      return `<tr>
+        <td class="num">${list.length-i}</td>
+        <td><b>${r.title}</b></td>
+        <td class="tag-col">${r.month||''} ${r.year||''}</td>
+        <td class="date-col">${r.savedAt||'—'}</td>
+        <td class="action-col">
+          <a href="${shareUrl}" style="background:#0077cc;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;text-decoration:none;margin-right:4px">열기</a>
+          <button onclick="copyLink('${shareUrl}')" style="background:#f0f4f8;color:#0a2540;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;border:1px solid #c8d8e8;cursor:pointer">🔗 공유</button>
+        </td>
+      </tr>`;
+    }).join('');
+  }
+
+  // 클라우드에서 먼저 로드
+  fetch(CLOUD_API).then(r=>r.json()).then(list=>{
+    renderReports(Array.isArray(list)?list:[]);
+  }).catch(()=>{
+    // 실패 시 localStorage 폴백
     try{
       const list=JSON.parse(localStorage.getItem('cl_reports')||'[]');
-      const tbody=document.getElementById('reportListBody');
-      if(!list.length){tbody.innerHTML='<tr><td colspan="5" style="text-align:center;padding:20px;color:#aaa;font-size:13px">등록된 리포트가 없습니다.</td></tr>';return;}
-      tbody.innerHTML=list.slice().reverse().map((r,i)=>{
-        const shareUrl=`sales-report.html?id=${r.id}`;
-        return `<tr>
-          <td class="num">${list.length-i}</td>
-          <td><b>${r.title}</b></td>
-          <td class="tag-col">${r.savedAt||'—'}</td>
-          <td class="date-col">${r.savedAt||'—'}</td>
-          <td class="action-col">
-            <a href="${shareUrl}" style="background:#0077cc;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;text-decoration:none;margin-right:4px">열기</a>
-            <button onclick="copyLink('${shareUrl}')" style="background:#f0f4f8;color:#0a2540;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;border:1px solid #c8d8e8;cursor:pointer">🔗 공유</button>
-          </td>
-        </tr>`;
-      }).join('');
-    }catch(e){document.getElementById('reportListBody').innerHTML='<tr><td colspan="5" style="text-align:center;color:#c00">오류: '+e.message+'</td></tr>';}
-  })();
+      renderReports(list.slice().reverse());
+    }catch(e){
+      document.getElementById('reportListBody').innerHTML='<tr><td colspan="5" style="text-align:center;color:#c00">로드 실패</td></tr>';
+    }
+  });
+
   function copyLink(path){
-    const url=location.origin+location.pathname.replace('index.html','')+path;
+    const url=BASE_URL+path;
     navigator.clipboard.writeText(url).then(()=>alert('✅ 링크 복사됨!\n'+url));
   }
   </script>

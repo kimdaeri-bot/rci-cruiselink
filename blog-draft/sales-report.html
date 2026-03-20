@@ -462,7 +462,15 @@ function saveReport(){
   const sel=document.getElementById('reportSelect');
   const newIdx=getReports().findIndex(r=>r.title===title);
   if(newIdx>=0)sel.value=newIdx;
-  alert(`✅ "${title}" 저장 완료!`);
+  // 클라우드에도 저장 (이미지 제외)
+  const cloudData={...data}; delete cloudData.adImg; delete cloudData.salesImg;
+  fetch('https://enttix-omega.vercel.app/api/cl-reports',{
+    method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({id,title,month:mo,year:yr,savedAt:now,data:cloudData})
+  }).then(r=>r.json()).then(r=>{
+    if(r.ok) alert(`✅ "${title}" 저장 완료! (클라우드 동기화 완료)`);
+    else alert(`✅ "${title}" 로컬 저장 완료\n⚠️ 클라우드 동기화 실패: ${r.error||'unknown'}`);
+  }).catch(()=>alert(`✅ "${title}" 로컬 저장 완료\n⚠️ 클라우드 동기화 오프라인`));
 }
 function loadReport(){
   const sel=document.getElementById('reportSelect');
@@ -686,18 +694,41 @@ function init(){
 // URL ?id= 파라미터로 접근 시 자동 로드
 function loadFromUrlParam(){
   const params=new URLSearchParams(location.search);
-  const id=params.get('id');
-  if(!id)return;
-  try{
-    const data=JSON.parse(localStorage.getItem(`cl_report_${id}`)||'{}');
-    if(!data.repMonth){alert('리포트를 찾을 수 없습니다.\n(같은 기기에서 저장된 리포트만 열 수 있습니다.)');return;}
-    const list=JSON.parse(localStorage.getItem('cl_reports')||'[]');
-    const idx=list.findIndex(r=>String(r.id)===String(id));
-    if(idx>=0){
-      const sel=document.getElementById('reportSelect');
-      if(sel){sel.value=idx; loadReport();}
-    }
-  }catch(e){console.warn('URL 자동 로드 실패:',e);}
+  const cloudId=params.get('cloud');
+  const localId=params.get('id');
+
+  if(cloudId){
+    // 클라우드에서 로드
+    fetch(`https://enttix-omega.vercel.app/api/cl-reports`)
+      .then(r=>r.json()).then(list=>{
+        if(!Array.isArray(list))throw new Error('invalid');
+        const entry=list.find(r=>String(r.id)===String(cloudId));
+        if(!entry||!entry.data){alert('클라우드에서 리포트를 찾을 수 없습니다.');return;}
+        applyReportData(entry.data);
+      }).catch(e=>alert('클라우드 로드 실패: '+e.message));
+    return;
+  }
+  if(localId){
+    try{
+      const data=JSON.parse(localStorage.getItem(`cl_report_${localId}`)||'{}');
+      if(!data.repMonth){alert('리포트를 찾을 수 없습니다.');return;}
+      applyReportData(data);
+    }catch(e){console.warn('로컬 로드 실패:',e);}
+  }
+}
+
+function applyReportData(data){
+  document.getElementById('repMonth').value=data.repMonth||'';
+  document.getElementById('repYear').value=data.repYear||'';
+  document.getElementById('repAsOf').value=data.repAsOf||'';
+  ['inqWeb','inqCall','inqKakao','inqQuote','inqBooking','cntBlogVisitor','cntBlogPosts','cntInstaPosts'].forEach(f=>{const e=document.getElementById(f);if(e)e.value=data[f]||0;});
+  ['naverStart','naverEnd','naverBudget','naverExposure','naverVisitor','naverCTR','naverCPC','googleStart','googleEnd','googleBudget','googleExposure','googleVisitor','googleCTR','googleCPC'].forEach(f=>{const e=document.getElementById(f);if(e)e.value=data[f]||'';});
+  document.getElementById('googlePaused').checked=data.googlePaused||false;
+  if(data.yrData){for(let m=1;m<=12;m++){const d=data.yrData[m]||{};['y24f','y25f','y26f','y24c','y25c','y26c'].forEach(k=>{const e=document.getElementById(`${k}${m}`);if(e&&d[k]!==undefined)e.value=d[k];});}}
+  bookings=[]; bId=0; document.getElementById('bookingList').innerHTML='';
+  (data.bookings||[]).forEach(b=>{const id=addBooking(false);Object.entries(b).forEach(([k,v])=>setbv(id,k,v));});
+  if(data.adImg){adImg=data.adImg;document.getElementById('adImgPrev').src=data.adImg;document.getElementById('adThumb').style.display='block';}
+  render();
 }
 
 function copyShareLink(){
