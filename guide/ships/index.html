@@ -90,7 +90,7 @@ const FALLBACK = 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w
 
 function renderGrid(list) {
   document.getElementById('shipGrid').innerHTML = list.map(s => `
-    <a class="s-card" href="${s.slug}.html">
+    <a class="s-card" href="${s.slug}/">
       <img src="${s.cover || FALLBACK}" alt="${s.title}" loading="lazy"
         onerror="this.src='${FALLBACK}'">
       <div class="s-card-body">
