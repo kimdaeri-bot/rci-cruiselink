@@ -191,7 +191,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const op = document.getElementById('filterOperator').value;
       const m = document.getElementById('filterMonth').value;
       const dur = document.getElementById('filterDuration').value;
-      let url = 'destination.html?';
+      let url = 'destination/?';
       if (d) url += `dest=${d}&`;
       if (op) url += `operator=${op}&`;
       if (m) url += `month=${m}&`;

@@ -1014,7 +1014,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (nights) params.set('nights', nights);
       if (dateFrom) params.set('dateFrom', dateFrom);
       if (dateTo) params.set('dateTo', dateTo);
-      location.href = `jp/search.html?${params.toString()}`;
+      location.href = `jp/search/?${params.toString()}`;
     }
 
     // === Destination slider ===
@@ -1529,8 +1529,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (ft) ft.innerHTML = patchHTML(ft.innerHTML);
     var cta = document.querySelector('.cta-section');
     if (cta) cta.innerHTML = patchHTML(cta.innerHTML);
-    document.querySelectorAll('a[href*="/search.html"]').forEach(function(a) {
-      if (a.href.indexOf('/jp/search.html') === -1) a.href = a.href.replace('/search.html', '/jp/search.html');
+    document.querySelectorAll('a[href*="/search/"]').forEach(function(a) {
+      if (a.href.indexOf('/jp/search/') === -1) a.href = a.href.replace('/search/', '/jp/search/');
     });
   }
   document.addEventListener('DOMContentLoaded', function() {

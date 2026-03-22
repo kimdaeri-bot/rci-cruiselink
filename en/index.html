@@ -1014,7 +1014,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (nights) params.set('nights', nights);
       if (dateFrom) params.set('dateFrom', dateFrom);
       if (dateTo) params.set('dateTo', dateTo);
-      location.href = `en/search.html?${params.toString()}`;
+      location.href = `en/search/?${params.toString()}`;
     }
 
     // === Destination slider ===
@@ -1534,8 +1534,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var cta = document.querySelector('.cta-section');
     if (cta) cta.innerHTML = patchHTML(cta.innerHTML);
     // search.html link
-    document.querySelectorAll('a[href*="/search.html"]').forEach(function(a) {
-      if (a.href.indexOf('/en/search.html') === -1) a.href = a.href.replace('/search.html', '/en/search.html');
+    document.querySelectorAll('a[href*="/search/"]').forEach(function(a) {
+      if (a.href.indexOf('/en/search/') === -1) a.href = a.href.replace('/search/', '/en/search/');
     });
   }
   document.addEventListener('DOMContentLoaded', function() {
