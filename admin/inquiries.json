@@ -954,5 +954,23 @@
     "id": "1774233533453",
     "timestamp": "2026-03-23T02:38:53.453Z",
     "status": "결제완료"
+  },
+  {
+    "product": "지중해 7박 크루즈",
+    "cruiseline": "MSC Cruises",
+    "ship": "MSC 월드 아시아",
+    "dateFrom": "2027-02-01",
+    "ports": "",
+    "price": "문의",
+    "ref": "MSCAS20270201CVVCVV",
+    "name": "박현진",
+    "email": "y7083bb@gmail.com",
+    "phone": "01044307977",
+    "pax": "4",
+    "cabin": "내측",
+    "message": "방2개(성인2,18세 1 ,14세 1), 커넥팅룸",
+    "id": "1774279627637",
+    "timestamp": "2026-03-23T15:27:07.637Z",
+    "status": "신규"
   }
 ]
