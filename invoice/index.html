@@ -1215,6 +1215,29 @@ function doPrint() {
 document.getElementById('f_issuedate').value = new Date().toISOString().substring(0,10);
 renderPaxTable();
 renderInvoice();
+
+// ── 페이지 로드 시 환율 자동 입력 (신청금·잔금 공통 초기값)
+(async function autoFillRate() {
+  const rateField    = document.getElementById('f_rate');
+  const balanceField = document.getElementById('f_balance_rate');
+  if (rateField.value && balanceField.value) return; // 이미 입력된 경우 스킵
+  try {
+    const res  = await fetch('/api/hana-rate');
+    const data = await res.json();
+    if (!data.rate) throw new Error('no rate');
+    const rate = parseFloat(data.rate.toFixed(2));
+    if (!rateField.value)    { rateField.value    = rate; }
+    if (!balanceField.value) { balanceField.value = rate; }
+    render();
+    // 출처 표시
+    const srcLabel = { naver: '네이버금융', frankfurter: 'ECB', fawazahmed0: '국제시세', naver2: '네이버금융' };
+    const src = srcLabel[data.source] || data.source;
+    ['btn-fetch-deposit-rate','btn-fetch-balance-rate'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) { btn.title = `자동입력: ${src} 기준 ${rate}원`; }
+    });
+  } catch (_) { /* 실패 시 수동 입력 유도 — 버튼 사용 */ }
+})();
 </script>
 </body>
 </html>
