@@ -370,8 +370,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="form-section-title">💳 요금 및 결제</div>
         <div class="form-row-4">
           <div class="form-row" style="margin:0">
-            <label>적용 환율 (원/달러) <button type="button" onclick="fetchRate()" id="btn-fetch-rate" style="margin-left:6px;font-size:11px;padding:2px 8px;background:#e8eaf6;border:1px solid #9fa8da;border-radius:4px;cursor:pointer;color:#1a237e;font-weight:600">🔄 현재 환율</button></label>
-            <input type="number" id="f_rate" placeholder="1474.05" step="0.01" oninput="render()">
+            <label>신청금 환율 (원/달러) <button type="button" onclick="fetchRate('deposit')" id="btn-fetch-deposit-rate" style="margin-left:6px;font-size:11px;padding:2px 8px;background:#e8eaf6;border:1px solid #9fa8da;border-radius:4px;cursor:pointer;color:#1a237e;font-weight:600">🔄 현재 환율</button></label>
+            <input type="number" id="f_rate" placeholder="1480.00" step="0.01" oninput="render()">
           </div>
           <div class="form-row" style="margin:0">
             <label>신청금 ($)</label>
@@ -388,6 +388,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="form-row" style="margin:0">
             <label>신청금 비고</label>
             <input type="text" id="f_deposit_note" placeholder="예: 카드 결제 완료" oninput="render()">
+          </div>
+          <div class="form-row" style="margin:0">
+            <label>잔금 환율 (원/달러) <button type="button" onclick="fetchRate('balance')" id="btn-fetch-balance-rate" style="margin-left:6px;font-size:11px;padding:2px 8px;background:#e8eaf6;border:1px solid #9fa8da;border-radius:4px;cursor:pointer;color:#1a237e;font-weight:600">🔄 현재 환율</button></label>
+            <input type="number" id="f_balance_rate" placeholder="1480.00" step="0.01" oninput="render()">
           </div>
           <div class="form-row" style="margin:0">
             <label>잔금 결제 기한</label>
@@ -667,7 +671,8 @@ function renderInvoice() {
   const disembarkPort = document.getElementById('f_disembarkport').value || '';
   const cruiseLineKey = document.getElementById('f_cruiseline_type').value || 'MSC';
   const cruiseLinePolicy = CANCEL_POLICIES[cruiseLineKey] || CANCEL_POLICIES.MSC;
-  const rate = parseFloat(document.getElementById('f_rate').value) || 0;
+  const rate        = parseFloat(document.getElementById('f_rate').value) || 0;
+  const balanceRate = parseFloat(document.getElementById('f_balance_rate')?.value) || rate;
   const deposit = parseFloat(document.getElementById('f_deposit').value) || 0;
   const depositDL = document.getElementById('f_deposit_dl').value;
   const depositPaid = document.getElementById('f_deposit_paid').value;
@@ -785,10 +790,10 @@ function renderInvoice() {
     </table>
 
     <!-- 환율 -->
-    ${rate ? `
+    ${(rate || balanceRate) ? `
     <div class="inv-exchange">
-      <div><strong>적용 환율 ${rate.toLocaleString('en-US', {minimumFractionDigits:2})}원/USD</strong> &nbsp;·&nbsp; 인보이스 발행일 하나은행 1회차 현금 매도율 기준</div>
-      <div>총액 원화: <strong>${fmtKRW(grandTotal, rate)}</strong></div>
+      <div><strong>신청금 환율 ${rate ? rate.toLocaleString('en-US', {minimumFractionDigits:2}) : '-'}원/USD</strong>${balanceRate && balanceRate !== rate ? ` &nbsp;·&nbsp; <strong>잔금 환율 ${balanceRate.toLocaleString('en-US', {minimumFractionDigits:2})}원/USD</strong>` : ''} &nbsp;·&nbsp; 하나은행 1회차 현금 매도율 기준</div>
+      <div>총액 원화: <strong>${fmtKRW(grandTotal, rate || balanceRate)}</strong></div>
       <div style="font-size:11px;color:#555;margin-top:4px">* 신용카드 결제 시, 환율이 적용된 원화로 결제 가능합니다.<br>결제하실 카드번호, 유효기간, 할부 개월 수 (필요하신 경우)를 유선 또는 카카오톡으로 말씀 남겨주시기 바랍니다.</div>
     </div>` : ''}
 
@@ -810,7 +815,7 @@ function renderInvoice() {
         <div class="pb">
           <div class="inv-payment-row">
             <span>잔금</span>
-            <span class="amt">${balance > 0 ? fmtMoney(balance) : ''} ${rate && balance > 0 ? `(${fmtKRW(balance, rate)})` : ''}</span>
+            <span class="amt">${balance > 0 ? fmtMoney(balance) : ''} ${rate && balance > 0 ? `(${fmtKRW(balance, balanceRate)})` : ''}</span>
           </div>
           ${!balancePaid ? `<div class="inv-payment-row"><span>결제 기한</span><span class="deadline">${fmtDate(balanceDL)}</span></div>` : `<div class="inv-payment-row"><span>입금 완료 ✅</span><span style="color:#2e7d32;font-weight:700">${fmtDate(balancePaid)}</span></div>`}
           ${balanceNote ? `<div class="inv-payment-row"><span>비고</span><span style="color:#555">${balanceNote}</span></div>` : ''}
@@ -903,8 +908,10 @@ function exportExcel() {
   const depositNote   = document.getElementById('f_deposit_note')?.value || '';
   const balanceDL     = document.getElementById('f_balance_dl')?.value || '';
   const balancePaid   = document.getElementById('f_balance_paid')?.value || '';
+  const balanceRateRaw = document.getElementById('f_balance_rate')?.value || '';
   const balanceNote   = document.getElementById('f_balance_note')?.value || '';
-  const rateNum       = parseFloat(rate) || 0;
+  const rateNum        = parseFloat(rate) || 0;
+  const balanceRateNum = parseFloat(document.getElementById('f_balance_rate')?.value) || rateNum;
   const fmtD = v => v ? v.replace(/-/g,'.') : '';
 
   let totalUSD = 0;
@@ -943,7 +950,7 @@ function exportExcel() {
     ['', '', '', '', '', '', '', '', '총 합계', +totalUSD.toFixed(2), rateNum ? Math.round(totalUSD * rateNum) : ''],
     [],
     ['▣ 결제 정보'],
-    ['적용 환율', rate ? `1 USD = ${Number(rate).toLocaleString()} KRW` : '', '', '', '', '', '', '', '', '', ''],
+    ['신청금 환율', rate ? `1 USD = ${Number(rate).toLocaleString()} KRW` : '', '', '', '잔금 환율', document.getElementById('f_balance_rate')?.value ? `1 USD = ${Number(document.getElementById('f_balance_rate').value).toLocaleString()} KRW` : (rate ? `1 USD = ${Number(rate).toLocaleString()} KRW` : ''), '', '', '', '', ''],
     [],
     ['[신청금]'],
     ['신청금 ($)', deposit ? +deposit.toFixed(2) : '', '', '', '신청금 (KRW)', rateNum && deposit ? Math.round(deposit * rateNum) : '', '', '', '', '', ''],
@@ -951,7 +958,7 @@ function exportExcel() {
     ...(depositNote ? [['비고', depositNote, '', '', '', '', '', '', '', '', '']] : []),
     [],
     ['[잔금]'],
-    ['잔금 ($)', balance > 0 ? +balance.toFixed(2) : '', '', '', '잔금 (KRW)', rateNum && balance > 0 ? Math.round(balance * rateNum) : '', '', '', '', '', ''],
+    ['잔금 ($)', balance > 0 ? +balance.toFixed(2) : '', '', '', '잔금 (KRW)', balanceRateNum && balance > 0 ? Math.round(balance * balanceRateNum) : '', '', '', '', '', ''],
     [balancePaid ? '입금 완료' : '결제 기한', balancePaid ? fmtD(balancePaid) : fmtD(balanceDL), '', '', '', '', '', '', '', '', ''],
     ...(balanceNote ? [['비고', balanceNote, '', '', '', '', '', '', '', '', '']] : []),
     [],
@@ -981,7 +988,7 @@ function saveInvoice() {
   const fields = [
     'f_customer','f_issuedate','f_manager','f_operator','f_ship',
     'f_bookingno','f_itinerary','f_embark','f_embarkport','f_disembarkport',
-    'f_rate','f_deposit','f_deposit_dl','f_deposit_paid','f_deposit_note',
+    'f_rate','f_balance_rate','f_deposit','f_deposit_dl','f_deposit_paid','f_deposit_note',
     'f_balance_dl','f_balance_paid','f_balance_note','f_cruiseline_type','f_remarks'
   ];
   const data = {};
@@ -1057,7 +1064,7 @@ function applyInvoice(key) {
   const data = JSON.parse(localStorage.getItem(key) || '{}');
   ['f_customer','f_issuedate','f_manager','f_operator','f_ship',
    'f_bookingno','f_itinerary','f_embark','f_embarkport','f_disembarkport',
-   'f_rate','f_deposit','f_deposit_dl','f_deposit_paid','f_deposit_note',
+   'f_rate','f_balance_rate','f_deposit','f_deposit_dl','f_deposit_paid','f_deposit_note',
    'f_balance_dl','f_balance_paid','f_balance_note','f_cruiseline_type','f_remarks'
   ].forEach(id => { const el = document.getElementById(id); if (el && data[id] !== undefined) el.value = data[id]; });
   if (data._paxRows) { paxRows = data._paxRows; renderPaxTable(); }
@@ -1078,34 +1085,34 @@ function deleteInvoice(key, btn) {
 }
 
 // ── 실시간 환율 불러오기 (USD → KRW)
-async function fetchRate() {
-  const btn = document.getElementById('btn-fetch-rate');
-  btn.textContent = '⏳ 불러오는 중...';
+async function fetchRate(type) {
+  const fieldId = type === 'balance' ? 'f_balance_rate' : 'f_rate';
+  const btnId   = type === 'balance' ? 'btn-fetch-balance-rate' : 'btn-fetch-deposit-rate';
+  const btn = document.getElementById(btnId);
+  btn.textContent = '⏳...';
   btn.disabled = true;
-  try {
-    // 1차: frankfurter.app (무료, 한국은행 기준)
-    const res = await fetch('https://api.frankfurter.app/latest?from=USD&to=KRW');
-    if (!res.ok) throw new Error('API 오류');
-    const data = await res.json();
-    const rate = data.rates && data.rates.KRW;
-    if (!rate) throw new Error('환율 없음');
-    document.getElementById('f_rate').value = rate.toFixed(2);
+  const applyRate = (rate) => {
+    document.getElementById(fieldId).value = rate.toFixed(2);
     render();
-    btn.textContent = `✅ ${rate.toFixed(2)}원 반영됨`;
+    btn.textContent = `✅ ${rate.toFixed(2)}원`;
     setTimeout(() => { btn.textContent = '🔄 현재 환율'; btn.disabled = false; }, 3000);
+  };
+  try {
+    const res = await fetch('https://api.frankfurter.app/latest?from=USD&to=KRW');
+    if (!res.ok) throw new Error('fail');
+    const data = await res.json();
+    const rate = data.rates?.KRW;
+    if (!rate) throw new Error('no rate');
+    applyRate(rate);
   } catch (e) {
-    // 2차 폴백: exchangerate-api (무료)
     try {
       const res2 = await fetch('https://open.er-api.com/v6/latest/USD');
       const data2 = await res2.json();
-      const rate2 = data2.rates && data2.rates.KRW;
-      if (!rate2) throw new Error('폴백도 실패');
-      document.getElementById('f_rate').value = rate2.toFixed(2);
-      render();
-      btn.textContent = `✅ ${rate2.toFixed(2)}원 반영됨`;
-      setTimeout(() => { btn.textContent = '🔄 현재 환율'; btn.disabled = false; }, 3000);
+      const rate2 = data2.rates?.KRW;
+      if (!rate2) throw new Error('fail');
+      applyRate(rate2);
     } catch (e2) {
-      btn.textContent = '❌ 실패 (수동 입력)';
+      btn.textContent = '❌ 실패';
       btn.disabled = false;
       setTimeout(() => { btn.textContent = '🔄 현재 환율'; }, 3000);
     }
