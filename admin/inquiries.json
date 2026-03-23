@@ -936,5 +936,23 @@
         "remarks": "* 프리미엄 발코니 (BL2) 기준 요금 (10~11층 배정 가능)\n* 포함 사항 : 크루즈 요금 + TAX\n* 불포함 사항 : 왕복 항공권, 현지 호텔비, 기항지 관광 선상팁, 기타 선내 유료 서비스, 여행자보험 등"
       }
     ]
+  },
+  {
+    "product": "한국·대만 3박 크루즈",
+    "cruiseline": "MSC Cruises",
+    "ship": "MSC 벨리시마",
+    "dateFrom": "2027-06-20",
+    "ports": "",
+    "price": "문의",
+    "ref": "MSCBE20270620INCKEE",
+    "name": "이화섭",
+    "email": "whasuplee@gmail.com",
+    "phone": "01037614511",
+    "pax": "2",
+    "cabin": "발코니",
+    "message": "없음",
+    "id": "1774233533453",
+    "timestamp": "2026-03-23T02:38:53.453Z",
+    "status": "신규"
   }
 ]
