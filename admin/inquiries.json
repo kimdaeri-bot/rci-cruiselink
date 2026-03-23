@@ -942,7 +942,7 @@
     "cruiseline": "MSC Cruises",
     "ship": "MSC 벨리시마",
     "dateFrom": "2027-06-20",
-    "ports": "",
+    "ports": "인천 → Keelung (Chilung)",
     "price": "문의",
     "ref": "MSCBE20270620INCKEE",
     "name": "이화섭",
@@ -953,6 +953,6 @@
     "message": "없음",
     "id": "1774233533453",
     "timestamp": "2026-03-23T02:38:53.453Z",
-    "status": "신규"
+    "status": "결제완료"
   }
 ]
