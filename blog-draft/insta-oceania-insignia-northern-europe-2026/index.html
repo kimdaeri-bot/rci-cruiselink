@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <title>인스타 초안 | Oceania Insignia 북유럽 10박 (2026.05.16)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans KR', sans-serif; background: #f0f2f5; color: #333; }
+    .admin-bar { position: sticky; top: 0; z-index: 999; background: #1a1a2e; color: #fff; padding: 10px 20px; display: flex; align-items: center; gap: 12px; font-size: 13px; }
+    .admin-bar strong { color: #ffd700; }
+    .copy-all-btn { margin-left: auto; background: #E1306C; color: #fff; border: none; padding: 7px 18px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: 700; }
+    .copy-all-btn:hover { background: #c1255a; }
+    .wrapper { max-width: 860px; margin: 30px auto; padding: 0 16px 60px; }
+    .block { background: #fff; border-radius: 12px; padding: 24px 28px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,.07); position: relative; }
+    .block-label { font-size: 11px; font-weight: 800; color: #E1306C; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; }
+    .block:hover .copy-btn { opacity: 1; }
+    .copy-btn { position: absolute; top: 14px; right: 16px; opacity: 0; transition: opacity .2s; background: #E1306C; color: #fff; border: none; padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 700; }
+    .slides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 8px; }
+    .slide { background: linear-gradient(145deg, #0a1628, #0077cc); color: #fff; border-radius: 10px; aspect-ratio: 1/1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; position: relative; cursor: pointer; transition: transform .15s; }
+    .slide:hover { transform: scale(1.02); }
+    .slide:hover .slide-copy { opacity: 1; }
+    .slide-copy { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,.2); border: none; color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; opacity: 0; transition: opacity .2s; }
+    .slide-num { font-size: 11px; font-weight: 800; opacity: .5; margin-bottom: 10px; letter-spacing: 1px; }
+    .slide-title { font-size: 17px; font-weight: 900; line-height: 1.4; margin-bottom: 8px; }
+    .slide-sub { font-size: 12px; opacity: .8; line-height: 1.6; }
+    .slide-price { font-size: 22px; font-weight: 900; color: #FFD700; margin: 8px 0 4px; }
+    .caption-box { background: #fff8f0; border-left: 4px solid #E1306C; padding: 16px 20px; border-radius: 0 8px 8px 0; font-size: 15px; line-height: 2; white-space: pre-wrap; font-family: inherit; }
+    .hashtags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .ht { background: #f0f2ff; color: #3d5af1; font-size: 13px; padding: 4px 12px; border-radius: 20px; cursor: pointer; transition: background .15s; }
+    .ht:hover { background: #3d5af1; color: #fff; }
+    .story { background: linear-gradient(160deg, #833ab4, #fd1d1d, #fcb045); color: #fff; border-radius: 10px; aspect-ratio: 9/16; max-width: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px 14px; cursor: pointer; position: relative; }
+    .story:hover .slide-copy { opacity: 1; }
+    .story-title { font-size: 15px; font-weight: 900; line-height: 1.4; margin-bottom: 8px; }
+    .story-sub { font-size: 11px; opacity: .85; line-height: 1.6; }
+    .stories-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+    #toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #E1306C; color: #fff; padding: 10px 24px; border-radius: 20px; font-size: 14px; display: none; z-index: 9999; }
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4PPLZNG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="admin-bar">
+  <strong>📸 인스타그램 초안</strong>
+  <span>noindex — 외부 비공개</span>
+  <span>|</span>
+  <span>Oceania Insignia 북유럽 10박 · 2026.05.16</span>
+  <button class="copy-all-btn" onclick="copyAll()">📋 전체 캡션 복사</button>
+</div>
+
+<div class="wrapper" id="insta-content">
+
+  <!-- 캐러셀 슬라이드 -->
+  <div class="block">
+    <div class="block-label">📱 피드 캐러셀 — 슬라이드 텍스트 (6장)</div>
+    <p style="font-size:13px;color:#888;margin-bottom:16px">각 슬라이드 클릭 → 텍스트 복사. 미리캔버스·캔바 등에 붙여넣기하세요.</p>
+    <div class="slides-grid">
+
+      <div class="slide" onclick="copySlide(this)" style="background:linear-gradient(145deg,#1b5e20,#2e7d32)">
+        <button class="slide-copy">복사</button>
+        <div class="slide-num">SLIDE 01</div>
+        <div class="slide-title">🍷 코펜하겐에서<br>파리까지<br>5개국 크루즈</div>
+        <div class="slide-sub">Oceania Insignia<br>2026년 5월 16일 출발<br>북유럽·서유럽 10박</div>
+      </div>
+
+      <div class="slide" onclick="copySlide(this)" style="background:linear-gradient(145deg,#1a237e,#283593)">
+        <button class="slide-copy">복사</button>
+        <div class="slide-num">SLIDE 02</div>
+        <div class="slide-title">🗺️ 10박 11일 루트</div>
+        <div class="slide-sub">
+          🇩🇰 코펜하겐 출항 (5/16)<br>
+          🇵🇹 리스본 → 포르투<br>
+          🇪🇸 라 코루냐 → 빌바오<br>
+          🇫🇷 보르도 → 생말로<br>
+          🇫🇷 르아브르(파리) 하선 (5/26)
+        </div>
+      </div>
+
+      <div class="slide" onclick="copySlide(this)" style="background:linear-gradient(145deg,#4a148c,#6a1b9a)">
+        <button class="slide-copy">복사</button>
+        <div class="slide-num">SLIDE 03</div>
+        <div class="slide-title">🍽️ 세계 최고<br>미식 크루즈</div>
+        <div class="slide-sub">
+          모든 스페셜티 레스토랑 무료 포함<br>
+          Polo Grill 스테이크 🥩<br>
+          Toscana 이탈리안 🍝<br>
+          Red Ginger 아시안 🥢
+        </div>
+      </div>
+
+      <div class="slide" onclick="copySlide(this)" style="background:linear-gradient(145deg,#b71c1c,#c62828)">
+        <button class="slide-copy">복사</button>
+        <div class="slide-num">SLIDE 04</div>
+        <div class="slide-title">✨ 기항지 하이라이트</div>
+        <div class="slide-sub">
+          🏛️ 빌바오 구겐하임 미술관<br>
+          🍷 보르도 와인 셀러<br>
+          📚 포르투 렐루 서점<br>
+          🥟 리스본 에그 타르트 원조집<br>
+          🎵 파두(Fado) 공연 🇵🇹
+        </div>
+      </div>
+
+      <div class="slide" onclick="copySlide(this)" style="background:linear-gradient(145deg,#004d40,#00695c)">
+        <button class="slide-copy">복사</button>
+        <div class="slide-num">SLIDE 05</div>
+        <div class="slide-title">💰 요금 안내</div>
+        <div class="slide-sub">인사이드</div>
+        <div class="slide-price">$1,981~</div>
+        <div class="slide-sub">오션뷰 $2,058~ / 발코니 $3,290~<br><small style="opacity:.7">1인 기준 · 항공 별도 · 스페셜티 레스토랑 무료</small></div>
+      </div>
+
+      <div class="slide" onclick="copySlide(this)" style="background:linear-gradient(145deg,#e65100,#f57c00)">
+        <button class="slide-copy">복사</button>
+        <div class="slide-num">SLIDE 06</div>
+        <div class="slide-title">📞 지금 바로 상담하세요!</div>
+        <div class="slide-sub">
+          크루즈링크<br>
+          9개 글로벌 선사 공식 판매사<br><br>
+          💬 카카오톡 @크루즈링크<br>
+          🌐 www.cruiselink.co.kr
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 피드 캡션 (메인) -->
+  <div class="block">
+    <div class="block-label">✍️ 피드 캡션 (메인 포스팅용)</div>
+    <button class="copy-btn" onclick="copyBlock(this)">복사</button>
+    <div class="caption-box" id="caption-feed">인스타그램 포스팅 — Oceania Insignia 북유럽·서유럽 10박 크루즈
+
+🍷 코펜하겐에서 출발해 파리에서 끝나는
+포르투갈·스페인·프랑스 완전정복 크루즈!
+오세아니아 인시그니아 — 세계 최고의 미식 크루즈 🌿
+
+📅 2026.05.16 ~ 05.26 (10박 11일)
+💰 1인 $1,981~ (오션뷰 $2,058~)
+—
+📍 DAY BY DAY 일정
+
+🇩🇰 DAY 1 | 코펜하겐 승선
+니하운·인어공주·티볼리 탐방 후 탑승 🏰
+
+🇵🇹 DAY 3 | 리스본
+벨렝 타워 🏛️ + 28번 트램 + 에그 타르트 원조집 🥮
+저녁 파두(Fado) 공연으로 포르투갈 감성 흠뻑 🎵
+
+🇵🇹 DAY 4 | 포르투
+세계 최아름다운 렐루 서점 📚
+동 루이스 1세 다리 + 포트 와인 셀러 시음 🍷
+
+🇪🇸 DAY 7 | 빌바오
+구겐하임 미술관 🏛️ + 핀초스(Pintxos) 바 탐방 🍢
+바스크 미식의 본고장!
+
+🇫🇷 DAY 9 | 보르도
+세계 와인 수도 🍷 — 라 시테 뒤 뱅 (와인 박물관)
+보르도 구시가 + 가론강 유람
+
+🇫🇷 DAY 11 | 르아브르(파리) 하선
+기차로 파리까지 2시간 — 에펠탑으로 직행! 🗼
+—
+✨ Oceania Insignia 하이라이트
+🍽️ 모든 스페셜티 레스토랑 무료 (Polo Grill·Toscana·Red Ginger)
+🚢 소형 선박 684명 — 조용하고 품격 있는 여행
+🌍 5개국 10개 기항지
+🏛️ 빌바오 구겐하임 + 보르도 와인 + 포르투 유네스코
+—
+🏷️ 객실별 요금
+🪟 오션뷰 $2,058~ ⭐추천 | 🌅 발코니 $3,290~
+
+👉 지금 바로 문의하세요!
+📞 02-3788-9119
+💬 카카오톡: @크루즈링크
+🌐 cruiselink.co.kr
+.
+.
+.
+#오세아니아크루즈 #북유럽크루즈 #서유럽크루즈 #포르투갈여행 #스페인여행 #보르도여행 #빌바오여행 #크루즈여행 #크루즈링크 #2026크루즈 #미식크루즈 #유럽크루즈 #허니문크루즈 #파리여행 #코펜하겐 #포르투여행 #리스본여행 #해외여행 #5월여행 #OceaniaCruises #Insignia #cruiselife #europe</div>
+  </div>
+
+  <!-- 릴스 자막 -->
+  <div class="block">
+    <div class="block-label">🎬 릴스 / 숏폼 자막 (15초)</div>
+    <button class="copy-btn" onclick="copyBlock(this)">복사</button>
+    <div class="caption-box">⏱ 0~3초: "코펜하겐에서 파리까지 크루즈로?"
+⏱ 3~6초: "포르투갈·스페인·프랑스 5개국 10박 11일"
+⏱ 6~9초: "세계 최고 미식 크루즈 — 스페셜티 레스토랑 전부 무료"
+⏱ 9~12초: "2026년 5월 16일 출발 · 오션뷰 $2,058~"
+⏱ 12~15초: "크루즈링크에서 지금 바로 상담 → 링크 클릭"</div>
+  </div>
+
+  <!-- 스토리 슬라이드 -->
+  <div class="block">
+    <div class="block-label">📲 스토리 슬라이드 텍스트 (3장)</div>
+    <div class="stories-row">
+
+      <div class="story" onclick="copySlide(this)">
+        <button class="slide-copy">복사</button>
+        <div class="story-title">🍷 코펜하겐 → 파리<br>5개국 크루즈</div>
+        <div class="story-sub" style="margin-top:10px">Oceania Insignia<br>2026.05.16 출발<br>10박 11일</div>
+      </div>
+
+      <div class="story" onclick="copySlide(this)">
+        <button class="slide-copy">복사</button>
+        <div class="story-title">💰 얼마예요?</div>
+        <div style="font-size:24px;font-weight:900;color:#FFD700;margin:10px 0">$2,058~</div>
+        <div class="story-sub">오션뷰 1인 기준<br>스페셜티 레스토랑 전부 무료<br>항공 별도</div>
+      </div>
+
+      <div class="story" onclick="copySlide(this)">
+        <button class="slide-copy">복사</button>
+        <div class="story-title">📩 지금 상담하세요</div>
+        <div class="story-sub" style="margin-top:10px">크루즈링크<br>9개 글로벌 선사<br>공식 판매사<br><br>💬 카카오톡<br>🌐 cruiselink.co.kr</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="block">
+    <div class="block-label">🏷️ 해시태그 (클릭하면 복사)</div>
+    <button class="copy-btn" onclick="copyHashtags()">전체 복사</button>
+    <div class="hashtags" id="hashtag-list">
+      <span class="ht" onclick="copyText('#오세아니아크루즈')">#오세아니아크루즈</span>
+      <span class="ht" onclick="copyText('#북유럽크루즈')">#북유럽크루즈</span>
+      <span class="ht" onclick="copyText('#서유럽크루즈')">#서유럽크루즈</span>
+      <span class="ht" onclick="copyText('#포르투갈여행')">#포르투갈여행</span>
+      <span class="ht" onclick="copyText('#스페인여행')">#스페인여행</span>
+      <span class="ht" onclick="copyText('#보르도여행')">#보르도여행</span>
+      <span class="ht" onclick="copyText('#빌바오여행')">#빌바오여행</span>
+      <span class="ht" onclick="copyText('#크루즈여행')">#크루즈여행</span>
+      <span class="ht" onclick="copyText('#크루즈링크')">#크루즈링크</span>
+      <span class="ht" onclick="copyText('#2026크루즈')">#2026크루즈</span>
+      <span class="ht" onclick="copyText('#미식크루즈')">#미식크루즈</span>
+      <span class="ht" onclick="copyText('#유럽크루즈')">#유럽크루즈</span>
+      <span class="ht" onclick="copyText('#허니문크루즈')">#허니문크루즈</span>
+      <span class="ht" onclick="copyText('#파리여행')">#파리여행</span>
+      <span class="ht" onclick="copyText('#OceaniaCruises')">#OceaniaCruises</span>
+      <span class="ht" onclick="copyText('#cruiselife')">#cruiselife</span>
+      <span class="ht" onclick="copyText('#europe')">#europe</span>
+    </div>
+  </div>
+
+</div>
+
+<div id="toast">✅ 복사 완료!</div>
+
+<script>
+function showToast() {
+  const t = document.getElementById('toast');
+  t.style.display = 'block';
+  setTimeout(() => t.style.display = 'none', 2000);
+}
+function copyText(text) {
+  navigator.clipboard.writeText(text).then(() => showToast());
+}
+function copySlide(el) {
+  const texts = [];
+  el.querySelectorAll('.slide-num,.slide-title,.slide-sub,.slide-price,.story-title,.story-sub').forEach(e => {
+    const t = e.innerText.trim();
+    if (t && !e.classList.contains('slide-copy')) texts.push(t);
+  });
+  navigator.clipboard.writeText(texts.join('\n')).then(() => showToast());
+}
+function copyBlock(btn) {
+  const block = btn.parentElement;
+  const box = block.querySelector('.caption-box');
+  const text = box ? box.innerText.trim() : '';
+  navigator.clipboard.writeText(text).then(() => showToast());
+}
+function copyHashtags() {
+  const tags = [...document.querySelectorAll('.ht')].map(e => e.innerText).join(' ');
+  navigator.clipboard.writeText(tags).then(() => showToast());
+}
+function copyAll() {
+  const caption = document.getElementById('caption-feed').innerText.trim();
+  const tags = [...document.querySelectorAll('.ht')].map(e => e.innerText).join(' ');
+  navigator.clipboard.writeText(caption + '\n\n' + tags).then(() => showToast());
+}
+</script>
+</body>
+</html>
