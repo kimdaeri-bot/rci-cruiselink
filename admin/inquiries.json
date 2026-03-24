@@ -996,7 +996,7 @@
     "cruiseline": "MSC Cruises",
     "ship": "MSC 월드 아시아",
     "dateFrom": "2027-02-01",
-    "ports": "",
+    "ports": "치비타베키아 → 메시나 → 발레타 → 바르셀로나 → 마르세유 → 제노바",
     "price": "문의",
     "ref": "MSCAS20270201CVVCVV",
     "name": "이나영",
@@ -1007,6 +1007,27 @@
     "message": "없음",
     "id": "1774338173967",
     "timestamp": "2026-03-24T07:42:53.967Z",
-    "status": "신규"
+    "status": "신규",
+    "fareHistory": [
+      {
+        "date": "2026. 03. 24. 오후 04:50",
+        "pax": 2,
+        "types": [
+          {
+            "name": "오션뷰",
+            "val": 1109,
+            "raw": "1109"
+          },
+          {
+            "name": "발코니",
+            "val": 1249,
+            "raw": "1249"
+          }
+        ],
+        "air": 0,
+        "etc": 0,
+        "remarks": "[선실 카테고리 안내]\n* Infinite Ocean View (VL1) - Deck 10~11\n* Deluxe Balcony (BR1) - Deck 9~10\n\n[WIFI & 음료 패키지 포함 시 요금]\n* Infinite Ocean View (VL1) - Deck 10~11 : 2인 총 $2,858\n* Deluxe Balcony (BR1) - Deck 9~10 : 2인 총 $3,138\n\n[요금 세부사항]\n- 포함사항 : 크루즈요금 + tax\n- 불포함사항 : 왕복 항공권, 현지 호텔비, 선상팁, 기항지 관광, 기타 선내 유료 서비스, 여행자 보험 등"
+      }
+    ]
   }
 ]
