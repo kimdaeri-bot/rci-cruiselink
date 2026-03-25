@@ -68,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     h2[id],h3[id]{scroll-margin-top:80px}
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
+
+    .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+    @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
+    .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-info{padding:12px}
+    .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+    .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
+    .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
+    .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+    @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
 <body>
@@ -106,6 +124,298 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+    <h2 id="dining">🍽️ 다이닝</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/07/11/30/57/98/Princess_Cruises_Coral_Class_sabatinis.jpg" alt="Sabatini's Italian Trattoria" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sabatini's Italian Trattoria</h3><p>Unique, handmade pasta courses, prepared fresh daily and treasured family recipes curated by our Italian chefs across the fleet inspire the menu at our acclaimed Italian speciality restaurant.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/07/11/30/16/528/Princess_Cruises_Coral_Class_Interior_crown_grill_.jpg" alt="Crown Grill℠" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Crown Grill℠</h3><p>Timeless Steakhouse TraditionsWith a rich wood décor and a theatre-style kitchen, it’s no wonder Crown Grill was named among the “Best Cruise Ship Steakhouses” by USA TODAY. Featuring premium aged bee</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/07/11/30/19/815/Princess_Cruises_Coral_Class_Interior_Horizon_Court.jpg" alt="Horizon Court Buffet" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Horizon Court Buffet</h3><p>An Ever-Changing Selection of FavouritesOur World Fresh Marketplace menu is offered in Horizon Court. Enjoy an endless selection that changes throughout the day to satisfy the most discriminating pala</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/07/11/30/56/577/Princess_Cruises_Coral_Class_Interior_vines_.jpg" alt="Vines Wine Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Vines Wine Bar</h3><p>Wines from Around the WorldVoted one of the “Best Wine Bars at Sea,” by  USA TODAY  and located in a charming corner of the Atrium, Vines boasts an extensive collection of wines, fine Champagne and sp</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/07/11/29/46/481/Princess_Cruises_Coral_Class_Balcony_Dining.jpg" alt="Ultimate Balcony Dining" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Ultimate Balcony Dining</h3><p>A Private Dining Room with a ViewChoose a luxurious breakfast or experience the “ultimate” romantic dinner at sea: a sumptuous multi-course meal, including succulent lobster tail and juicy steak, your</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/10/12/18/31/954/Princess_Cruises_Grand_Class_Ruby_Princess_Afternoon_Tea_close_up_food.jpg" alt="Afternoon Tea" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Afternoon Tea</h3><p>Celebration of Tasty Teas and Divine DessertsAfternoon tea is a treasured tradition whether it’s a special occasion, an intimate moment for two, a mother-daughter tea party or just quiet time for refl</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/07/11/30/21/316/Princess_Cruises_Coral_Class_Interior_international_court.jpg" alt="International Café" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>International Café</h3><p>Sip and Snack Around the ClockOpen 24-hours a day, the International Café located in the Piazza is the place for an ever-changing array of small bite meals, treats and gourmet beverages. Grab a freshl</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/07/11/30/28/160/Princess_Cruises_Coral_Class_Interior_lumiere_2.jpg" alt="Chef's Table Experience" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Chef's Table Experience</h3><p>Exclusive Glimpse into the Princess KitchenTaking dining to a new level, the Chef’s Table Experience includes pre-dinner cocktails and hors d’oeuvres in the galley for you and a limited number of fell</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/03/23/15/25/25/e5bcf7da-88ad-4901-aef5-ac28b93e5355/Princess Cruises Dining Chocolate Journeys.jpeg" alt="Chocolate Journeys℠" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Chocolate Journeys℠</h3><p>Indulge Your Chocolate FantasiesThere are few foods that inspire as much passion as chocolate. Our pastry chefs channeled their love of chocolate into handcrafted treats designed exclusively for our C</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/08/10/17/09/31/edbe3571-6bde-41ec-a61c-4c453039046b/Princess Cruise Regal Princess Alfredo's Pizzeria.jpg" alt="Alfredo's Pizzeria" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Alfredo's Pizzeria</h3><p>Hand-Tossed Pizza, Hot Out of the OvenNamed for our former Master Chef, Alfredo Marzi and voted "Best Pizza at Sea" by USA TODAY, this charming sit-down venue offers an enticing menu of freshly prepar</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2019/10/07/11/49/12/ee93ae64-2aac-4e62-a7ca-794fd8819d6f/Princess Cruises - Discovery Princess - The Salty Dog Grill.png" alt="The Salty Dog Grill" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Salty Dog Grill</h3><p>While you're enjoying the fresh air on the top deck, treat yourself to one of our 100% handmade gourmet burgers, including our Princess Burger or Triple Smoked Burger.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/03/23/15/25/25/950e994f-5e66-42ab-b2f2-48c42ffcb025/Princess Cruises Dining Coffee and Cones.jpeg" alt="Coffee and Cones" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Coffee and Cones</h3><p>Complimentary ice cream cones await you at our top-deck creamery venue. Pick up a chocolate cone, a vanilla, or a combination. Or treat yourself to an ice cream sandwich, with a tempting choice of fla</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2018/09/18/13/19/39/05519aa7-d6ad-417e-bb08-62d2a52d28fe/dragonfly20180918-7503-1ht1vep.jpg" alt="Crab Shack" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Crab Shack</h3><p>Seafood lovers won’t want to miss this full crab shack experience. An intriguing bistro option housed within the Horizon Court buffet, Crab Shack diners can savour Bayou-style boiled crawfish and spic</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/08/05/06/24/17/b1f0b4e3-1d64-4e82-963c-aa83aed96260/Princess Cruises Dine My Way.png" alt="Dine My Way℠" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Dine My Way℠</h3><p>Dine When, How and Where You LikeWith this new offering, you can customise every aspect of mealtime. Make reservations for the main dining room or speciality restaurants at your preferred time each da</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/08/05/07/34/47/d479125e-5ac7-4681-a976-bbf068644ae1/Princess cruises 24-hr room service.jpeg" alt="24-Hour Room Service" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>24-Hour Room Service</h3><p>From Breakfast in Bed to a Late-Night SnackWe offer 24-hour complimentary room service when you want to enjoy a quiet moment in your cabin eating a delicious club sandwich or maybe that slice of choco</p></div>
+  </div>
+    </div>
+
+    <h2 id="entertainment">🎭 엔터테인먼트</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/03/26/12/18/03/471/Princess_Cruises_Ruby_Princess_Interior_Princess_Theatre.jpg" alt="Princess Theatre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Princess Theatre</h3><p>Broadway-Style Productions at SeaWith dazzling stage sets, artists from around the globe, modern hits and timeless classics, the Princess Theatre, our largest theatre yet, showcases lavish, original p</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/03/26/12/48/13/576/Princess_Cruises_Ruby_Princess_Exterior_Movies_Under_The_Stars.jpg" alt="Movies Under The Stars" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Movies Under The Stars</h3><p>A Reel Treat Day or NightThroughout the day and night, our exclusive open-air poolside amphitheatre is the go-to destination for feature films, thrilling concerts and exciting sporting events such as </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/03/26/17/01/09/486/Princess_Cruises_Crown_Princess_Interior_Casino_2014.jpeg" alt="Vegas Style Casino" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Vegas Style Casino</h3><p>For Novices, Casual Players, or High RollersFrom gaming lessons to the latest slot machines to prize tournaments, our Casinos offer fun and excitement. If you enjoy blackjack, or “21,” and Texas Hold </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/03/26/12/18/02/451/Princess_Cruises_Ruby_Princess_Interior_Explorers_Lounge.jpg" alt="Explorer's Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Explorer's Lounge</h3><p>One of the Ship’s Coolest HangoutsWant to just sit back with a cocktail and people watch? There’s plenty of seating and the bar menu features themed drinks from exotic destinations, speciality liqueur</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/03/26/17/01/11/814/Princess_Cruises_Crown_Princess_Interior_Skywalkers_2014.jpeg" alt="The One5" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The One5</h3><p>A Prime Spot for Party-minded PeopleWhen you’re not quite ready to call it a night, check out one of the ship’s best late night spots, The One5. Recorded DJ music gets you up on the dance floor and th</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/03/26/17/01/10/198/Princess_Cruises_Crown_Princess_Interior_Crooners_2014.jpeg" alt="Crooner's Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Crooner's Bar</h3><p>Marvellous Martinis and MelodiesStep into Crooners bar and be transported to the classic Sinatra era, made complete with a top notch pianist singing tunes and tickling the ivories. The “Rat Pack” atmo</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/04/13/29/47/313/Princess_Cruises_Royal_Class_Interior_cigar_room.jpg" alt="Snooker's Cigar Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Snooker's Cigar Lounge</h3><p>The designated cigar lounge where guests can relax with a premium cigar and cognac and enjoy sporting events aired on the TV screens within the bar.It is located on the 6th Deck outside the lower leve</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/04/13/29/47/368/Princess_Cruises_Royal_Class_Interior_cyber_cafe.jpg" alt="Internet Café & Library" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Internet Café & Library</h3><p>Keep in Touch While Cruising at SeaOur Internet Café is filled with computers so it’s easy to access your mail account or browse the Internet for world news, sports and stock trading. Or bring your ow</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/10/12/57/09/103/Princess_Cruises_Grand_Class_Ruby_Princess_boutique_2.jpg" alt="The Shops of Princess" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Shops of Princess</h3><p>Tax and Duty-free ShoppingIt’s no surprise The Shops are awarded “Best Onboard Shopping” from Porthole magazine year after year. On board, you’ll find a fabulous range of fine merchandise from brands </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/10/12/55/48/530/Princess_Cruises_Grand_Class_Ruby_Princess_platinum_studios.jpg" alt="Platinum Photography Studio" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Platinum Photography Studio</h3><p>Capture a Memorable Moment in TimeOur Platinum Studio specialises in premium black and white portraits. Skilled photographers using expert lighting techniques will create a suite of stunning photograp</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/15/14/30/44/380/Princess_Cruises_Grand_Class_mermaids_tail_pool_bar.jpg" alt="Pool Bars" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pool Bars</h3><p>The Mermaids Tail bar serves the Neptune pool area and is located forward of the 14th Deck.It also sells a small selection of sweets and chocolates, for guests to purchase whilst watching the movies u</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/10/12/49/07/318/Princess_Cruises_Grand_Class_Ruby_Princess_Library_new.jpg" alt="Leaves Tea Lounge & Library" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Leaves Tea Lounge & Library</h3><p>Leaves Tea Lounge and Library is a multi purpose library and speciality tea room, hosting a daily quiz each morning.Located on Deck 7, the ship's library features a range of books from fiction to refe</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/16/14/58/58/527/Princess_cruises_grand_class_wheelhouse_bar.jpeg" alt="Wheelhouse Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Wheelhouse Bar</h3><p>The Wheelhouse Bar, located on the 7th Deck, is decorated in wood panelling with ship themed art work and models. It features live musical entertainment including country and western music.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/03/24/12/00/41/49082ec3-d848-4bfd-8a51-114f1e17e7a6/Princess Cruises Discovery at Sea.jpg" alt="Discovery at Sea" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Discovery at Sea</h3><p>Discover Even More with Discovery™Our exclusive partnership with Discovery™ lets you come back captivated with Stargazing on our top deck; activities featuring Discovery™ hit shows such as Shark Week </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/03/24/12/00/55/f0bb6842-63d3-4a42-95b2-75f09c84464f/Princess Cruises Piazza.jpg" alt="The Piazza" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Piazza</h3><p>Take a Stroll into the European-style PiazzaDiscover Old World charm as you stroll through our breathtaking Piazza—a hub of activity, inspired by the vibrant squares of Europe. Roving street performer</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2019/10/07/12/27/24/14d32823-356d-4f78-98ad-826cb5d25911/Princess Cruises - Discovery Princess - Art Gallery & Auctions.png" alt="Art Gallery and Auctions" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Art Gallery and Auctions</h3><p>Art Lovers Rejoice—Enjoy Exquisite Art AboardGreat art, like the destinations we visit, can be awe-inspiring. Peruse our extensive art gallery, or attend an art history lecture highlighting some of th</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/08/05/07/53/52/e243f335-1358-48be-9293-dc410210adc3/Princess Cruises Photo Gallery.png" alt="Photo Gallery" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Photo Gallery</h3><p>Take Home a Unique Photo KeepsakeOur staff of digital photographers helps capture the highlights of your cruise including onboard events, ports and scenery for lasting memories of your trip. Our studi</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/07/14/11/59/33/faea025e-86a4-4f63-9569-3c8cb1b84efb/Princess Cruises Original Musical Productions.jpeg" alt="Original Musical Productions" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Original Musical Productions</h3><p>Great Venues Large and SmallCrafted by some of the world’s top directors and choreographers, our remarkable and dynamic Princess productions transport you to realms as exotic as the destinations we vi</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2017/12/19/12/34/01/87b839e8-22de-4845-a43b-756bd7eb4d0f/Princess Cruises Magestic Princess Music and Dancing.jpg" alt="Music and Dancing" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Music and Dancing</h3><p>Dazzling Entertainment Every Day and NightWhen it comes to music and dancing we’ve got everything that your musical palette may desire. Whether it’s tapping your toes to cover bands, singing along in </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/08/13/15/10/05/acc5ff4a-ca17-49d3-9348-d8b11949f4ce/Princess Cruises Sky Princess Featured Guest Entertainers.png" alt="Featured Guest Entertainers" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Featured Guest Entertainers</h3><p>At Night, the Stars Shine Bright on Our StagesGrab a seat, order a cocktail and be prepared to be entertained by our lineup of world class entertainers. From magic to comedy, singers to instrumentalis</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2019/10/07/12/32/51/9bef6e57-a6f0-4075-a360-8566ba369f94/Festivals of the World.png" alt="Festivals of the World" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Festivals of the World</h3><p>Experience the World’s Great CelebrationsThere’s nothing like a Princess party to bring people together. Our Festivals of the World hosts onboard events that celebrate timeless traditions from nearly </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2019/10/07/13/25/20/63d8b108-0d2e-4bc3-b771-628753f73efe/Princess Cruises - Discovery Princess - Vista Show Lounge.png" alt="Vista Show Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Vista Show Lounge</h3><p>Sip Cocktails and Watch Top EntertainmentRelax with family and friends or learn a new talent with new friends that you’ve made on board. A full bar menu is available during performances.</p></div>
+  </div>
+    </div>
+
+    <h2 id="health">💆 스파 &amp; 웰니스</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/15/15/32/23/654/calypso_pool.jpg" alt="Freshwater Pools & Hot tubs" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Freshwater Pools & Hot tubs</h3><p>Soak in a World of RelaxationTake a dip in our sparkling freshwater pools and leave your everyday world behind. Unwind on a padded lounger and soak up the sun, catch up on reading, listen to music or </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/07/11/30/48/972/Princess_Cruises_Coral_Class_Interior_sports.jpg" alt="Sports Centre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sports Centre</h3><p>Get in the Game with a Variety of ActivitiesFeel the court under your feet and the thrill of victory as you sink the ball in for two points. No matter your athletic ability, there’s nothing like shoot</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/03/26/14/14/44/431/Princess_Cruises_Ruby_Princess_Interior_Sanctuary_147684.jpeg" alt="The Sanctuary" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Sanctuary</h3><p>Relax in a Tranquil Retreat Just for AdultsTake a break and indulge in a private getaway at The Sanctuary, our exclusive adults-only retreat offering a relaxing alternative to the myriad outdoor activ</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/07/11/30/27/157/Princess_Cruises_Coral_Class_Interior_lotus_spa.jpg" alt="Lotus Spa® " loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Lotus Spa® </h3><p>Go Ahead, Be Pampered – You Deserve ItNamed "Best Spa on a Cruise Ship" by Spafinder Wellness 365™, the Lotus Spa® offers a variety of relaxing treatments, such as facials, aroma stone therapy massage</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/16/15/05/58/759/Princess_Cruises_Grand_Class_Princess_Links.jpg" alt="Princess Links" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Princess Links</h3><p>Practice Your Putt and Play like a ChampionImagine playing on the green while surrounded by a beautiful blue ocean. Whether you’re a dabbler or a devoted disciple of the game, our nine-hole miniature </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/08/05/11/30/08/751305c9-6d68-497e-9509-aaaa51ae5862/Princess Cruises Lotus Spa Fitness Center.jpeg" alt="Lotus Spa® Fitness Centre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Lotus Spa® Fitness Centre</h3><p>A Host of Ways to Get an Energising WorkoutThe Lotus Spa Fitness Centre offers fitness programmes designed to help you maximise your wellness with Tour de Cycle, personal training and classes such as </p></div>
+  </div>
+    </div>
+
+    <h2 id="kids">👧 키즈 클럽</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2019/01/07/13/59/04/ae962628-5214-4ae4-a780-cf91d6baea5e/treehouse.jpeg" alt="Just for Kids 3-7 The Treehouse" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Just for Kids 3-7 The Treehouse</h3><p>Explore the TreehouseEven the littlest guests will delight in this whimsical, forest-themed world that inspires playtime and invites exploration. Kids, ages 3 to 7, can dance, enjoy pyjama movie night</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2019/01/07/14/00/19/3d19cff7-6fa3-45c0-8789-c7c5f58d11ce/The lodge.jpeg" alt="Just for Kids 8-12 The Lodge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Just for Kids 8-12 The Lodge</h3><p>Inspired by the great outdoors, this cozy centre keeps kids busy with games, dancing and kid-sized Olympic competitions. Their minds stay busy, too, with California Science Centre programmes like rock</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2019/01/07/14/01/30/869ef7aa-0d7e-48b1-8655-71657ad22a20/Beach house.jpeg" alt="Just for Teens 13-17 The Beach House" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Just for Teens 13-17 The Beach House</h3><p>This contemporary lounge is "the place” for teens — perfect for hanging out and socialising with late-night movie viewing, hip hop dance classes, video game tournaments and sports competitions like do</p></div>
+  </div>
+  <div class="facility-card">
+    
+    <div class="facility-info"><h3>Family</h3><p>Princess makes it easy to sail together in comfort. There is a wide selection of staterooms accommodating up to four guests, and you’ll enjoy substantial savings on your third and fourth guests. There</p></div>
+  </div>
+    </div>
+
+    <h2 id="cabins">🛏️ 객실 등급</h2>
+    <div class="cabin-grid">
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/08/06/10/53/41/47927dc7-3732-46b4-88bf-3cfaa8b2d87c/Princess Cruises Diamond Princess Suite.jpeg" alt="Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/08/05/12/01/00/71ca8eb9-5c84-4562-b11e-46edc6f129f5/Princess Cruises Coral Princess Mini Suite Club Class.jpeg" alt="Reserve Collection" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Reserve Collection</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/08/16/12/31/40/91a95511-365f-43da-8d99-c77178eeb9d9/Princess Suite Ruby Princess Two Bedroom Family Suite.jpeg" alt="Two Bedroom Family Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Two Bedroom Family Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/08/05/12/01/00/71ca8eb9-5c84-4562-b11e-46edc6f129f5/Princess Cruises Coral Princess Mini Suite Club Class.jpeg" alt="Mini-Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Mini-Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/08/11/08/48/29/2748c11e-cf11-4427-903f-4b33a2e256ea/Princess Cruises Diamond Princess Balcony Staterooms.jpeg" alt="Balcony " loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Balcony </div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/08/11/09/23/50/92a0f08b-b4e1-425b-88f4-376f82c2d843/Princess Cruises Diamond Princess Oceanview Staterooms.jpeg" alt="Oceanview " loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Oceanview </div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/08/11/09/31/41/d2284445-f89a-49df-bac4-42ebf81b824f/princess cruises diamond princess interior stateroom.jpeg" alt="Interior Staterooms" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Interior Staterooms</div>
+  </div>
+    </div>
+
+    <h2 id="deckplan">📐 덱 플랜</h2>
+    <div class="deckplan-list">
+  <div class="deckplan-item">
+    <img src="" alt="Deck 17/18 - Sky" loading="lazy">
+    <p>Deck 17/18 - Sky</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 16 - Sports" loading="lazy">
+    <p>Deck 16 - Sports</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 15 - Sun" loading="lazy">
+    <p>Deck 15 - Sun</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 14 - Lido" loading="lazy">
+    <p>Deck 14 - Lido</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 12 - Aloha" loading="lazy">
+    <p>Deck 12 - Aloha</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 11 - Baja" loading="lazy">
+    <p>Deck 11 - Baja</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 10 - Caribe" loading="lazy">
+    <p>Deck 10 - Caribe</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 9 - Dolphin" loading="lazy">
+    <p>Deck 9 - Dolphin</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 8 - Emerald" loading="lazy">
+    <p>Deck 8 - Emerald</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 7 - Promenade" loading="lazy">
+    <p>Deck 7 - Promenade</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 6 - Fiesta" loading="lazy">
+    <p>Deck 6 - Fiesta</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 5 -  Plaza" loading="lazy">
+    <p>Deck 5 -  Plaza</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 4" loading="lazy">
+    <p>Deck 4</p>
+  </div>
+    </div>
+
     <h2 id="book">예약 안내</h2>
     <p>그랜드 프린세스 탑승 크루즈 상품은 크루즈링크를 통해 예약하실 수 있습니다.</p>
     <ul>
@@ -123,6 +433,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#intro">선박 소개</a></li>
         <li><a href="#specs">선박 제원</a></li>
         
+        <li><a href="#dining">🍽️ 다이닝</a></li>
+        <li><a href="#entertainment">🎭 엔터테인먼트</a></li>
+        <li><a href="#health">💆 스파 &amp; 웰니스</a></li>
+        <li><a href="#kids">👧 키즈 클럽</a></li>
+        <li><a href="#cabins">🛏️ 객실 등급</a></li>
+        <li><a href="#deckplan">📐 덱 플랜</a></li>
         <li><a href="#book">예약 안내</a></li>
       </ul>
     </div>

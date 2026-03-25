@@ -68,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     h2[id],h3[id]{scroll-margin-top:80px}
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
+
+    .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+    @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
+    .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-info{padding:12px}
+    .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+    .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
+    .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
+    .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+    @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
 <body>
@@ -106,6 +124,322 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+    <h2 id="dining">🍽️ 다이닝</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/19/07/16/53/e794475e-fd34-41df-9aa6-8b065a774eef/NCL Norwegian Luna Palomar.jpeg" alt="Palomar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Palomar</h3><p>Explore the best flavours of the Med at Norwegian's first-ever Mediterranean restaurant. Seafood is the star attraction here, with European essence. With a casually - sophisticated setting, diners wil</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/08/10/14/e7e34e45-f31c-415f-9dca-f70b7daa8621/NCL Norwegian Aqua Sukothai 1.jpeg" alt="Sukhothai" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sukhothai</h3><p>Experience the all-new Sukhothai. Relish a stylish and warm atmosphere as the aroma of authentic Thai cuisine gently trails through the lush dining room.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/08/10/14/08033b7c-f43c-43ac-add2-a72d68e1a20b/NCL Norwegian Aqua Planterie.jpeg" alt="Planterie" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Planterie</h3><p>Enrich your holiday with healthier options at Planterie, a charming new station found at Indulge Food Hall, where plant lovers can delight in delicious plant-based bowls along with other healthy optio</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/08/10/14/ea145282-ff36-4010-8b2e-bd6874e49f2d/NCL Norwegian Aqua Swirl 1.jpeg" alt="Swirl" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Swirl</h3><p>Send your senses on an exotic journey through vineyards around the world at Swirl. Sip, swoon or simply unwind in the laid-back, intimate space as your glass tells stories through the grapevine.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/08/12/39/8d992c45-fa22-468e-8a33-ae865ceec4c1/NCL Norwegian Aqua Hudson's 1.jpeg" alt="Hudson's" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Hudson's</h3><p>As one of our two Main Dining Rooms, Hudson's has been thoughtfully designed to take full advantage of 270-degree scenic views over the ship's stern. Blending innovative dishes with fresh flavours, en</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/08/16/41/96075326-9597-4d10-9e2e-13ac9b149d89/NCL Norwegian Aqua Local Bar and Grill.jpeg" alt="The Local Bar & Grill" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Local Bar & Grill</h3><p>The Local offers classic pub fare in a relaxed atmosphere. With popular dishes like the Reuben Sandwich and Fish n' Chips, The Local has all your favourite comfort foods. So try one of our beers or co</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/08/16/41/7d509925-3a51-4555-ac6e-91ceabbbe921/NCL Norwegian Aqua Indulge Food Hall.jpeg" alt="Indulge Food Hall" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Indulge Food Hall</h3><p>Whatever you're craving, Indulge Food Hall is sure to satisfy. This collection of complimentary mini restaurants and food trucks offers indoor and outdoor seating, tableside ordering from an iPad, and</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/08/16/41/5ac0c780-a1fc-4734-af91-8abb1274f9fc/NCL Norwegian Aqua Surfside Grill 1.jpeg" alt="Surfside Café & Grill" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Surfside Café & Grill</h3><p>Whatever you're craving, chances are you will find it at the Surfside Café &amp; Grill. This complimentary buffet serves up plentiful options for breakfast, lunch and dinner. Indoor and outdoor seatin</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/08/22/16/14dfaa1c-a56b-4012-893d-57c72e3e1c6d/NCL Norwegian Aqua Le Bistro.jpeg" alt="Le Bistro" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Le Bistro</h3><p>Step into something out of Versailles at Le Bistro. An exquisitely elegant atmosphere permeates as stunning floor-to-ceiling chandeliers glimmer throughout the evening. If you're looking for a posh, d</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/08/22/16/8b09fe29-14dd-4b72-a410-4ba787dcbca2/NCL Norwegian Aqua Los Lobos.jpeg" alt="Los Lobos" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Los Lobos</h3><p>Seeking to spice up the evening? Bienvenido a Los Lobos, a premium Mexican restaurant celebrating traditional flavours with a modern twist. From Carne Asada to Tres Leches Cake with Coconut Cream, the</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/08/22/16/9642420d-fa99-4448-805b-49a7ef4a2f23/NCL Norwegian Aqua Onda By Scarpetta 1.jpeg" alt="Onda by Scarpetta" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Onda by Scarpetta</h3><p>Onda, or "wave" in Italian, brings the charm and effortless elegance of its critically acclaimed sister restaurant, Scarpetta, to sea. Indulge in a modern Italian culinary experience from signature pa</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/08/22/17/113d3b6f-5018-46d5-b57f-cb9ee6ea0c2c/NCL Norwegian Aqua Cagney's Steakhouse1.jpeg" alt="Cagney's Steakhouse" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Cagney's Steakhouse</h3><p>Premium cuts are the standard at our American steakhouse serving Certified Angus Beef®. Sip your favourite cocktail and don't forget to order our famous Parmesan dusted truffle fries!</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/08/31/48/0b472360-e088-4d86-9829-e8f976b06afd/NCL Norwegian Aqua Hasuki.jpeg" alt="Hasuki" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Hasuki</h3><p>Sit at a lively shared table as a skilful chef perfectly prepares shrimp, steak, chicken and fried rice on a large steel grill. And you've got a front row seat to all the sizzles and surprises in our </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/08/31/48/d1b84412-a6a2-4bf4-8506-26b60ce39b48/NCL Norwegian Aqua Nama.jpeg" alt="Nama" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Nama</h3><p>In the mood for sushi? Pull up a chair at this contemporary sushi bar for some traditional Japanese culinary bites.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/09/28/32/73a0fedf-e27e-4eb9-8ba0-760c961b5006/NCL Norwegian Aqua The Haven Restaurant Private Area.jpeg" alt="The Haven Restaurant" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Haven Restaurant</h3><p>More information coming soon.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/12/10/30/30/550a558a-679c-4a4a-b838-656efb222ac8/NCL Norwegian Luna Horizon Park ©Norwegian Cruise Line.jpg" alt="Horizon Park" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Horizon Park</h3><p>More information coming soon.</p></div>
+  </div>
+    </div>
+
+    <h2 id="entertainment">🎭 엔터테인먼트</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/12/10/30/29/ca775c00-201c-490f-8420-e4b5ec839bf3/NCL Norwegian Luna Aqua Slidecoaster ©Norwegian Cruise Line.jpg" alt="Aqua Slidecoaster" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Aqua Slidecoaster</h3><p>Slide into excitement aboard the all-new Aqua Slidecoaster, the world's first hybrid rollercoaster and waterslide. This two-person ride reaches rip-roaring speeds, launching passengers into another di</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/12/10/30/30/bcd09f28-1a28-45b6-b37d-ef3937e5554e/NCL Norwegian Luna Game Zone ©Norwegian Cruise Line.jpg" alt="Luna Game Zone" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Luna Game Zone</h3><p>Show off your old-school skills with retro arcade games like Donkey Kong and Ms. Pac-Man. Or take your turn at state-of-the-art VR games. From photo booths to interactive activities for kids, the Game</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/12/17/07/21/08/d63d28de-afb9-463e-b47c-c0cd8f6a2768/NCL Luna Rendering Ocean Walk.jpg" alt="Ocean Walk" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Ocean Walk</h3><p>Enjoy the fresh ocean air, wide open skies and a wide range of bars, lounges and activities just steps away on the all-new and expanded Ocean Boulevard. Walk over water across Oceanwalk's glass bridge</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/09/08/17/c6100ce9-0291-45a7-8091-117272e77e07/NCL Norwegian Aqua Penrose 1.jpeg" alt="Penrose Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Penrose Bar</h3><p>Amid the hustle and bustle of the Penrose Atrium, treat yourself to a mid-day Bloody Mary or your drink of choice. This is a morning and late-night favourite serving beer, wine, cocktails and more.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/09/14/50/2cf94b25-a227-4a21-8f1c-328a9e638f4e/NCL Norwegian Aqua Observation Lounge 1.jpeg" alt="Observation Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Observation Lounge</h3><p>Designed to blend both indoor and outdoor experiences with stunning views of the ocean through grandiose floor-to-ceiling windows for panoramic views from the ship’s bow.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/12/17/07/21/08/4ad96dcb-c6fe-4a62-9cc9-d61a194a4459/NCL Luna Rendering La Terraza.jpg" alt="La Terraza" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>La Terraza</h3><p>More information coming soon.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/19/07/16/52/ae93bb52-ee34-49e9-b9fa-f90087335068/NCL Norwegian Luna Vibe Beach.jpeg" alt="Vibe Beach Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Vibe Beach Club</h3><p>Oasis by day, party by night, Vibe Beach Club is a private retreat for guests 18 and over. Enjoy drinks from the full-service bar, gaze at the magical waterfall, and dip into our infinity hot tubs as </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/19/07/16/53/5624428e-7420-4211-91d7-31faac540136/NCL Norwegian Luna Infinity Beach.jpeg" alt="Infinity Beach" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Infinity Beach</h3><p>Located on either side of the ship on Ocean Boulevard, Norwegian Aqua's extended Infinity Beach boasts vast scenic views against the stunning horizon from every angle. Submerge in an infinity pool and</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/11/14/10/47/35/c8300e22-d431-401a-8382-31ab66071c3f/NCL Norwegian Aqua Glow Court 0.jpeg" alt="Glow Court" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Glow Court</h3><p>Did someone say shine bright? Glow Court, a sports court by day and lounge area by night, is a high-tech LED floor brilliantly engineered for immersive play. Jump, run, step, or skip - the Glow Court </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/11/03/09/02/05/2dcd8ca6-4c89-478a-a81c-678b76941cad/NCL Aqua The Drop.png" alt="The Drop" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Drop</h3><p>Let gravity do all the work on the world's first free-fall slide at sea. Spiral your way from top to bottom down ten stories on this jaw-dropping ride. Then head back up and do it again!</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/11/03/09/10/05/7202e7f9-1b52-4066-8fe6-d857a5ce2181/NCL Aqua Main Pool.png" alt="Aqua Park & Main Pool" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Aqua Park & Main Pool</h3><p>It's time to make waves! Stretch all the way out on our expanded pool deck with a frozen drink in hand. Gaze into the horizon from two infinity hot tubs or the brand-new infinity edge pool. Or if you'</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/09/08/17/08c1aceb-9ce9-455b-bc3d-5926233823bc/NCL Norwegian Aqua Metropolitan Bar 1.jpeg" alt="Metropolitan Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Metropolitan Bar</h3><p>Begin or end your evening with a sustainable craft cocktail, a biodynamic wine or a wide array of impressive classics at the exciting new Metropolitan Bar.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/09/08/18/551beda6-d3dc-4dc1-9d84-984114b48e64/NCL Norwegian Aqua Belvedere Bar 1.jpeg" alt="Belvedere Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Belvedere Bar</h3><p>Try a crafted bottled cocktail at this contemporary bar and cocktail lounge.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/09/14/50/59b9061a-cea0-482e-8876-db08573801c2/NCL Norwegian Aqua Waves Pool Bar.jpeg" alt="Waves Pool Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Waves Pool Bar</h3><p>Go from swimming to sipping. Grab your favourite tropical cocktail at the Waves Pool Bar and lounge the day away with a proper splash.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/09/14/50/c40bc68d-b2db-4044-ac6f-c3e123168e05/NCL Norwegian Aqua Starbucks.jpeg" alt=" Starbucks®" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3> Starbucks®</h3><p>Yes, we have Starbucks! Kick-start your day with a classic morning coffee or spice it up with some of Starbucks' famous signature drinks.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/09/19/31/b5148a37-c2f7-4433-8c41-fdffe04e5b07/NCL Norwegian Aqua, Aqua Park 1.jpeg" alt="Aqua Park" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Aqua Park</h3><p>It's time to make waves! Stretch all the way out on our expanded pool deck with a frozen drink in hand. Gaze into the horizon from two infinity hot tubs or the brand-new infinity edge pool. Or if you'</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/09/28/33/09cfec37-c15d-477d-8347-1cbecef30817/NCL Norwegian Aqua The Haven Outdoor Lounge 2.jpeg" alt="The Haven Outdoor Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Haven Outdoor Lounge</h3><p>More information coming soon.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/09/28/32/757f16c8-bd87-45ae-a5fa-f911692685c0/NCL Norwegian Aqua The Haven Sun Deck.jpeg" alt="The Haven Sun Deck" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Haven Sun Deck</h3><p>Extravagance exists both inside and out in The Haven. Expansive, private outdoor spaces offer breathtaking views and a variety of spectacular experiences. Dip into the infinity pool, then order some b</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/07/23/09/28/33/9e78553a-162a-4d65-9cdd-df825d3793be/NCL Norwegian Aqua The Haven Outdoor Lounge 0.jpeg" alt="The Haven Outdoor Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Haven Outdoor Bar</h3><p>More information coming soon.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/11/14/11/39/20/3f5e1b33-d6d2-4dbb-853a-caa669fb94cd/NCL Norwegian Aqua Bulls Eye Bar.jpeg" alt="Bull's Eye Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Bull's Eye Bar</h3><p>Play a round of darts with your favourite crew. This interactive darts system features instant automated scoring and video game graphics on the big screen. With 6 different games ranging from beginner</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/12/15/10/37/14/72717f6d-24a4-4ce1-b216-cd9e7157d064/Norwegian Luna Whiskey Bar ©Norwegian Cruise Line.jpg" alt="Whiskey Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Whiskey Bar</h3><p>Grab a whiskey before or after dinner at this jewel of a bar.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/11/14/11/39/22/0325bdcf-2fc4-4b3b-ad44-e35ff5ae4932/NCL Norwegian Aqua TeeTime New York.jpeg" alt="Tee Time" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Tee Time</h3><p>Go for a hole-in-one at Tee Time. Enjoy twelve interactive and high-tech holes across two decks featuring a Wonders of the World theme. It's fun for the whole family.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/12/10/30/30/77fd3a67-bcc9-4a68-9491-b58e49600020/NCL Norwegian Luna Moon Climber ©Norwegian Cruise Line.jpg" alt="Moon Climber" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Moon Climber</h3><p>More information coming soon.</p></div>
+  </div>
+    </div>
+
+    <h2 id="health">💆 스파 &amp; 웰니스</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/12/10/30/30/56a5ea83-9a7c-4ffb-bd6e-909bf17efaf6/NCL Norwegian Luna Mandara Spa ©Norwegian Cruise Line.jpg" alt="Mandara Spa and Salon" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Mandara Spa and Salon</h3><p>The new Mandara Spa will house twenty-two treatment rooms and an endless array of pampering from head to toe. Our enhanced massage beds utilise acoustic and vibrational therapy to achieve deep relaxat</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/12/15/10/37/13/07ee5ab4-29fb-4000-b07a-a13d7492683b/Norwegian Luna Pulse Fitness Centre ©Norwegian Cruise Line2.jpg" alt="Pulse Fitness Centre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pulse Fitness Centre</h3><p>You won't want to leave the gym, seriously. At the Pulse Fitness Centre, you can get your heart racing with the sunrise and do yoga beside the sunset, thanks to our 270-degree views of the ocean. Gaze</p></div>
+  </div>
+    </div>
+
+    <h2 id="kids">👧 키즈 클럽</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/12/10/30/30/0de2e147-2e8e-40fc-a7b8-252f829c5a7e/NCL Norwegian Luna Kids Aqua Park ©Norwegian Cruise Line.jpg" alt="Kids Aqua Park" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Kids Aqua Park</h3><p>More information coming soon.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/12/15/10/40/24/2cf7830a-17da-42ca-a0ae-baf43dc12f35/Norwegian Luna Splash Academy ©Norwegian Cruise Line3.jpg" alt="Splash Academy" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Splash Academy</h3><p>When the youngest cruisers are having a great time, you're having a great time. Sign them up for our complimentary youth programme programmes where they can enjoy creative play, active games, and more</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/12/15/10/40/23/a138cab6-a551-4dda-b4e3-80997ee12630/Norwegian Luna Entourage ©Norwegian Cruise Line2.jpg" alt="Entourage" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Entourage</h3><p>Run off and play whilst your teenagers hang out in a place filled with video games, movies, arts, music, sports and people their own age. From the coolest lounge at sea to the hippest dance club at ni</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/12/17/07/21/08/1eedacdc-1995-4685-9d54-a6721a00320b/NCL Splash Academy - Susan Seubert.jpeg" alt="Guppies" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Guppies</h3><p>Ideal for child-parent bonding, the Guppies programme is for children six months to four years old. Enjoy a space filled with interactive activities, where parents and children can play together.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Late Night" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Late Night</h3><p>Drop off the kids so you can enjoy a romantic night out. Available every evening for children ages 3-12. Fees apply. Late Night Fun ZonePlanning a romantic dinner for two? Leave the children in safe h</p></div>
+  </div>
+    </div>
+
+    <h2 id="cabins">🛏️ 객실 등급</h2>
+    <div class="cabin-grid">
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/11/03/08/20/00/db934ffc-3961-4223-a968-8208a6070ad8/NCL Aqua The Haven HE.png" alt="The Haven" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">The Haven</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/11/03/08/27/42/66f6e72c-00e6-45e1-a70e-a624572c46f4/NCL Aqua Suite SL.png" alt="Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/11/03/08/32/56/96f319de-6dbf-4143-a8d5-7118015d9939/NCL Aqua Club Balcony Suite MX MB.png" alt="Club Balcony Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Club Balcony Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/11/03/08/32/57/396029ab-bffb-42f1-8fe4-3fdca8b9e8a0/NCL Aqua Club Balcony Suite M2.png" alt="Sail Away Club Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Sail Away Club Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/12/10/30/30/242cc6c2-9c80-470f-9dd0-29829d43b8e8/NCL Norwegian Luna Balcony Cabin ©Norwegian Cruise Line.jpg" alt="Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/11/03/08/37/48/101c892e-9558-4344-8e93-98919f9a41c5/NCL Aqua Balcony B9 B1 B4 BA BB BF BX.png" alt="Sail Away Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Sail Away Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/11/03/08/43/12/1c5872d7-2445-4869-878c-a2e716577f08/NCL AQUA Oceanview O4 OA.png" alt="Oceanview" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Oceanview</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/11/03/08/43/12/1c5872d7-2445-4869-878c-a2e716577f08/NCL AQUA Oceanview O4 OA.png" alt="Sail Away Oceanview" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Sail Away Oceanview</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/11/03/08/46/27/629d7e72-863a-45e3-904f-52027aee3c22/NCL Aqua Inside I4 IA IB IF IX 1.png" alt="Inside" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Inside</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/11/03/08/46/27/403488fb-59b2-4915-8b3b-f7bb75e2c748/NCL Aqua Inside I4 IA IB IF IX 0.png" alt="Sail Away Inside" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Sail Away Inside</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/11/03/08/49/08/d38ce69e-711e-4d70-99cc-f9937243d290/NCL Aqua StudIo T1.png" alt="Studio" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Studio</div>
+  </div>
+    </div>
+
+    <h2 id="deckplan">📐 덱 플랜</h2>
+    <div class="deckplan-list">
+  <div class="deckplan-item">
+    <img src="" alt="Deck 20" loading="lazy">
+    <p>Deck 20</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 19" loading="lazy">
+    <p>Deck 19</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 18" loading="lazy">
+    <p>Deck 18</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 17" loading="lazy">
+    <p>Deck 17</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 16" loading="lazy">
+    <p>Deck 16</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 15" loading="lazy">
+    <p>Deck 15</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 14" loading="lazy">
+    <p>Deck 14</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 13" loading="lazy">
+    <p>Deck 13</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 12" loading="lazy">
+    <p>Deck 12</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 11" loading="lazy">
+    <p>Deck 11</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 10" loading="lazy">
+    <p>Deck 10</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 9" loading="lazy">
+    <p>Deck 9</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 8" loading="lazy">
+    <p>Deck 8</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 7" loading="lazy">
+    <p>Deck 7</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 6" loading="lazy">
+    <p>Deck 6</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 5" loading="lazy">
+    <p>Deck 5</p>
+  </div>
+    </div>
+
     <h2 id="book">예약 안내</h2>
     <p>Norwegian Luna 탑승 크루즈 상품은 크루즈링크를 통해 예약하실 수 있습니다.</p>
     <ul>
@@ -123,6 +457,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#intro">선박 소개</a></li>
         <li><a href="#specs">선박 제원</a></li>
         
+        <li><a href="#dining">🍽️ 다이닝</a></li>
+        <li><a href="#entertainment">🎭 엔터테인먼트</a></li>
+        <li><a href="#health">💆 스파 &amp; 웰니스</a></li>
+        <li><a href="#kids">👧 키즈 클럽</a></li>
+        <li><a href="#cabins">🛏️ 객실 등급</a></li>
+        <li><a href="#deckplan">📐 덱 플랜</a></li>
         <li><a href="#book">예약 안내</a></li>
       </ul>
     </div>

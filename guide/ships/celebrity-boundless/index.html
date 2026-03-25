@@ -68,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     h2[id],h3[id]{scroll-margin-top:80px}
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
+
+    .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+    @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
+    .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-info{padding:12px}
+    .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+    .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
+    .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
+    .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+    @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
 <body>
@@ -106,6 +124,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+    <h2 id="dining">🍽️ 다이닝</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/09/08/05/01/13/0798a83c-2be4-4775-b711-42cdbcd150be/CRC Restaurant Rendering ©Celebrity Cruises.jpg" alt="Restaurant" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Restaurant</h3><p>More information coming soon.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/09/08/05/01/12/fe0594d0-9b2f-4723-80e5-6556ec7ffa2e/CRC Cafe Al Bacio Rendering ©Celebrity Cruises.jpg" alt="Cafe Al Bacio" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Cafe Al Bacio</h3><p>More information coming soon.</p></div>
+  </div>
+    </div>
+
+    <h2 id="entertainment">🎭 엔터테인먼트</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/09/08/05/01/13/399acda7-4333-4f1b-8c4a-6b02577be8a9/CRC Lounge Rendering ©Celebrity Cruises.jpg" alt="Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Lounge</h3><p>More information coming soon.</p></div>
+  </div>
+    </div>
+
+    <h2 id="cabins">🛏️ 객실 등급</h2>
+    <div class="cabin-grid">
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/09/08/05/01/13/5d68f474-8bd9-4cec-9f02-eba9ac26cfc3/CRC Vista Balcony Interior Rendering ©Celebrity Cruises.jpg" alt="Vista Balcony Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Vista Balcony Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/09/08/05/01/13/4c5204e0-b006-46ce-a285-d46a07b91362/CRC Skylight Infinite Balcony Suite Bathroom Rendering ©Celebrity Cruises.jpg" alt="Skylight Infinite Balcony Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Skylight Infinite Balcony Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/09/08/05/01/12/fde04e36-e3b2-47e4-9dbb-bf596fd3c82c/CRC Balcony Interior Rendering ©Celebrity Cruises.jpg" alt="Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/09/08/05/01/12/bb88391d-5799-4efd-b534-fcf41c5049d7/CRC Infinite Balcony Rendering ©Celebrity Cruises.jpg" alt="Infinite Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Infinite Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/09/08/05/01/13/d7cdd46f-a00e-40d5-9172-1b64c7b25739/CRC River View Rendering ©Celebrity Cruises.jpg" alt="River View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">River View</div>
+  </div>
+    </div>
+
+    <h2 id="deckplan">📐 덱 플랜</h2>
+    <div class="deckplan-list">
+  <div class="deckplan-item">
+    <img src="" alt="Deck 4" loading="lazy">
+    <p>Deck 4</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 3" loading="lazy">
+    <p>Deck 3</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 2" loading="lazy">
+    <p>Deck 2</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 1" loading="lazy">
+    <p>Deck 1</p>
+  </div>
+    </div>
+
     <h2 id="book">예약 안내</h2>
     <p>Celebrity Boundless 탑승 크루즈 상품은 크루즈링크를 통해 예약하실 수 있습니다.</p>
     <ul>
@@ -123,6 +205,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#intro">선박 소개</a></li>
         <li><a href="#specs">선박 제원</a></li>
         
+        <li><a href="#dining">🍽️ 다이닝</a></li>
+        <li><a href="#entertainment">🎭 엔터테인먼트</a></li>
+        <li><a href="#cabins">🛏️ 객실 등급</a></li>
+        <li><a href="#deckplan">📐 덱 플랜</a></li>
         <li><a href="#book">예약 안내</a></li>
       </ul>
     </div>

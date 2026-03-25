@@ -68,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     h2[id],h3[id]{scroll-margin-top:80px}
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
+
+    .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+    @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
+    .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-info{padding:12px}
+    .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+    .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
+    .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
+    .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+    @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
 <body>
@@ -106,6 +124,190 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+    <h2 id="dining">🍽️ 다이닝</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/11/07/52/05/25da9866-931c-4ef5-abbf-62d47c30ac26/Disney Cruise Line Palo © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="Palo Steakhouse" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Palo Steakhouse</h3><p>Be our Guest at Palo Steakhouse, an evolution of our acclaimed Palo restaurant that Disney cruisers know and love. Choose from a selection of exquisite Italian dishes and the world’s finest steaks—fro</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/11/07/52/05/fe1947e5-071b-46dd-8362-6e644161bd1c/Disney Cruise Line Marceline Market © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="Marceline Market" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Marceline Market</h3><p>Tantalize your taste buds with an array of delicious offerings and mouthwatering specialties. Choose from a wide-ranging variety of freshly prepared cuisines the whole family can enjoy, including:Amer</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/11/07/52/05/e72d6f81-534c-4252-b2a9-e238e4e54062/Disney Cruise Line Festival of Foods © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="Mickey & Friends Festival of Foods" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Mickey & Friends Festival of Foods</h3><p>When hunger strikes, this whimsical open-air eatery is your go-to spot for quick bites and tasty treats—conveniently located on the upper decks in the center of all the fun.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/11/07/52/05/11f3532e-7db6-4af8-b8c9-fd1266a17932/Disney Cruise Line 1923 © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="1923" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>1923</h3><p>Indulge your senses with the best of California cuisine. Inspired by the fusion of cultural flavors found throughout the Golden State, 1923 features a diverse menu showcasing the region’s unique blend</p></div>
+  </div>
+    </div>
+
+    <h2 id="entertainment">🎭 엔터테인먼트</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/11/08/18/29/4b8a3def-b4b8-4d75-a11f-f8f56d2a01eb/Disney Cruise Line Cove Pool © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg.jpg" alt="Quiet Cove Pool" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Quiet Cove Pool</h3><p>Luxuriate in some relaxing alone time at this refuge expressly for Guests 18 and over.© 2026 Disney. All Rights Reserved. Ships’ Registry: The Bahamas.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/11/08/06/24/d695ccd2-dd24-4aa4-9441-d045fcaad935/Disney Cruise Line AquaMouse © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="AquaMouse" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>AquaMouse</h3><p>Thrills, chills and H2O hijinks await on the first-ever Disney attraction at sea.© 2026 Disney. All Rights Reserved. Ships’ Registry: The Bahamas.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/12/09/04/41/3c211f0a-b0f4-4716-b780-f0e0124d32d5/Disney Dream Currents © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas..jpg" alt="Currents" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Currents</h3><p>Ride a wave of relaxation at this open-air bar perched high on Deck 13. Offering commanding views of the sea, shore and sunset, this breezy hotspot is the perfect place to sip a cocktail or beverage a</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/11/08/15/44/5b175b64-6b38-40fb-a050-cf9bbacef2fc/Disney Cruise Line The Rose © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="The Rose" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Rose</h3><p>Indulge in pre- or post-dinner cocktails at this lavish lounge located at the entrance to Palo Steakhouse and Enchanté.© 2026 Disney. All Rights Reserved. Ships’ Registry: The Bahamas.</p></div>
+  </div>
+    </div>
+
+    <h2 id="health">💆 스파 &amp; 웰니스</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/13/48/31/84038ad0-7457-4e7a-a3c5-9803d0182297/Disney Cruise Line Fitness Center © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="Fitness Centre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Fitness Centre</h3><p>Enjoy a fully loaded workout facility sporting top-of-the-line weight machines and cardiovascular equipment.© 2026 Disney. All Rights Reserved. Ships’ Registry: The Bahamas.</p></div>
+  </div>
+    </div>
+
+    <h2 id="kids">👧 키즈 클럽</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/13/18/13/ff678259-1c1c-4fb9-9591-54b4a4f48b05/Disney Cruise Line EDGE © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="Edge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Edge</h3><p>Tweens ages 11 to 14 have a vibrant hangout all their own. From the outside, this cool retreat is disguised as an ordinary shop on San Fransokyo Street. But inside, it is designed as if tweens had tak</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/13/18/13/30524683-b936-4093-8d06-a032e9723907/Disney Cruise Line Vibe © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="Vibe" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Vibe</h3><p>Teens ages 14 to 17 have an ultra-exclusive retreat all their own. With a cool, retro design inspired by a vintage record store, the club is the perfect spot to watch movies, enjoy games and take the </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/13/18/13/dd1862c9-f0bb-469c-b72f-d35f2740a421/Disney Adventure Oceaneer Club © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="Disney's Oceaneer Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Disney's Oceaneer Club</h3><p>Kids ages 3 to 10 can let their imaginations soar as they interact with beloved Characters in themed spaces inspired by favorite Disney, Pixar and Marvel stories. Storytelling and immersive games are </p></div>
+  </div>
+    </div>
+
+    <h2 id="cabins">🛏️ 객실 등급</h2>
+    <div class="cabin-grid">
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/16/08/53/53/127a22a1-f8cb-4e93-98f6-6381307dd921/Disney Wish Tower Suite © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas..jpg" alt="Concierge Wish Tower Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge Wish Tower Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/16/08/53/53/a441eb21-8555-4b38-bf81-29df809493a3/Disney Wish Royal Suite 2B © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas..jpg" alt="2-Story Royal Suite with Verandah" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">2-Story Royal Suite with Verandah</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/16/08/53/53/4a1d95fe-76f8-4226-ae4a-987f9a42cc9a/Disney Wish Royal Suite 1B © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas..jpg" alt="1-Story Royal Suite with Verandah" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">1-Story Royal Suite with Verandah</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/16/08/53/53/03477031-dd6f-4c0b-9e6c-fbeae607db96/Disney Wish Concierge Suite 1B © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas..jpg" alt="Concierge 1-Bedroom Suite with Verandah" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge 1-Bedroom Suite with Verandah</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/16/08/53/53/66cfcfba-c29a-430e-9d40-61f8ba1c0ec5/Disney Wish Concierge Family Oceanview with Verandah © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas..jpg" alt="Concierge Family Oceanview Stateroom with Verandah" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge Family Oceanview Stateroom with Verandah</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/16/08/53/53/48a54085-756c-4f27-b2a5-c38785ac9379/Disney Wish Concierge Family Oceanview © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas..jpg" alt="Family Concierge Oceanview" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Family Concierge Oceanview</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/16/09/22/02/dbe5dbe7-c90f-407c-9bb6-bae8274d5e6a/Disney Wish Deluxe Family Oceanview with Verandah © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas..jpg" alt="Deluxe Family Oceanview with Verandah Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Family Oceanview with Verandah Stateroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/16/09/22/02/da8834c1-968b-4aff-a887-b6c394316c10/Disney Wish Deluxe Oceanview with Verandah © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas..jpg" alt="Deluxe Oceanview with Verandah Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Oceanview with Verandah Stateroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Verandah Stateroom Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Verandah Stateroom Guarantee</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/16/09/32/44/02433f01-aa06-4bcb-a3ad-07021b758dff/Disney Wish Deluxe Family Oceanview © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas..jpg" alt="Deluxe Family Oceanview Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Family Oceanview Stateroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/16/09/32/44/78515a20-20c2-4695-bee5-70ceea58f4c6/Disney Wish Deluxe Oceanview © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas..jpg" alt="Deluxe Oceanview Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Oceanview Stateroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Oceanview Stateroom Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Oceanview Stateroom Guarantee</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/16/09/36/08/45018c64-876f-4e35-b7a4-4a1a1ca597da/Disney Wish Inside Stateroom © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas..jpg" alt="Inside Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Inside Stateroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Inside Stateroom Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Inside Stateroom Guarantee</div>
+  </div>
+    </div>
+
+    <h2 id="deckplan">📐 덱 플랜</h2>
+    <div class="deckplan-list">
+  <div class="deckplan-item">
+    <img src="" alt="Deck 14 & 15" loading="lazy">
+    <p>Deck 14 & 15</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 13" loading="lazy">
+    <p>Deck 13</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 12" loading="lazy">
+    <p>Deck 12</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 11" loading="lazy">
+    <p>Deck 11</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 10" loading="lazy">
+    <p>Deck 10</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 9" loading="lazy">
+    <p>Deck 9</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 8" loading="lazy">
+    <p>Deck 8</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 7" loading="lazy">
+    <p>Deck 7</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 6" loading="lazy">
+    <p>Deck 6</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 5" loading="lazy">
+    <p>Deck 5</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 4" loading="lazy">
+    <p>Deck 4</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 3" loading="lazy">
+    <p>Deck 3</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 2" loading="lazy">
+    <p>Deck 2</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 1" loading="lazy">
+    <p>Deck 1</p>
+  </div>
+    </div>
+
     <h2 id="book">예약 안내</h2>
     <p>Disney Wish 탑승 크루즈 상품은 크루즈링크를 통해 예약하실 수 있습니다.</p>
     <ul>
@@ -123,6 +325,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#intro">선박 소개</a></li>
         <li><a href="#specs">선박 제원</a></li>
         
+        <li><a href="#dining">🍽️ 다이닝</a></li>
+        <li><a href="#entertainment">🎭 엔터테인먼트</a></li>
+        <li><a href="#health">💆 스파 &amp; 웰니스</a></li>
+        <li><a href="#kids">👧 키즈 클럽</a></li>
+        <li><a href="#cabins">🛏️ 객실 등급</a></li>
+        <li><a href="#deckplan">📐 덱 플랜</a></li>
         <li><a href="#book">예약 안내</a></li>
       </ul>
     </div>

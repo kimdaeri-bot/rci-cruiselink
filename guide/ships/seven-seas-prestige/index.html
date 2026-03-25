@@ -68,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     h2[id],h3[id]{scroll-margin-top:80px}
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
+
+    .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+    @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
+    .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-info{padding:12px}
+    .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+    .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
+    .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
+    .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+    @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
 <body>
@@ -106,6 +124,198 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+    <h2 id="dining">🍽️ 다이닝</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/52/07/8a2dbc4d-dad9-46b6-b21a-04d2aeb8983c/RSSC Seven Seas Prestige Deluxe Azure 1.jpg" alt="Azure" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Azure</h3><p>At the precise moment your appetite summons, enter a new restaurant of the Old World: Azure. Tables boast intricate inlaid patterns, and the chairs, with their clean lines and soft finishes, exude a s</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/54/01/2a75cc7d-1130-4222-99ba-ef58f9a6f330/RSSC Seven Seas Prestige Deluxe Chartreuse 1.jpg" alt="Chartreuse" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Chartreuse</h3><p>A contemporary sanctuary for refined hospitality — where heritage and modernity converge.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/54/01/a95af527-8d4d-4b37-8f9d-b0f825fad2ff/RSSC Seven Seas Prestige Deluxe Compass Rose 0.jpg" alt="Compass Rose" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Compass Rose</h3><p>This award-winning restaurant embodies the spirit of exploration and the serenity of the ocean.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/06/11/10/04/38/2246f213-7ec0-436a-a5a8-23498036ed7f/Regent Seven Seas Cruises, Seven Seas Prestige PacificRim.jpg" alt="Pacific Rim" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pacific Rim</h3><p>Breathtaking views combine with mouthwatering Asian dishes in a Zen-like oasis.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/54/02/db9fb972-2ea2-4c4a-bdec-8cafdcfe02b9/RSSC Seven Seas Prestige Deluxe Prime 7 1.jpg" alt="Prime 7" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Prime 7</h3><p>Drawing deep inspiration from Chicago’s storied past and the grandeur of its art deco skyline.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/54/01/d301c0ab-9fd7-466a-801f-5d0de685a913/RSSC Seven Seas Prestige Deluxe La Veranda 0.jpg" alt="La Veranda" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>La Veranda</h3><p>Chic indoor dining and the most expansive al fresco area ever seen on a Regent ship.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/54/02/40a851da-9d77-488b-9500-3d89043ff225/RSSC Seven Seas Prestige Deluxe La Veranda 4.jpg" alt="Sette Mari at Le Veranda " loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sette Mari at Le Veranda </h3><p>Serving authentic Italian specialties and boasting the most expansive al fresco dining area ever seen aboard Regent.</p></div>
+  </div>
+    </div>
+
+    <h2 id="entertainment">🎭 엔터테인먼트</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/06/11/10/14/54/bbaeb6af-f84a-4d13-8739-d71bad734cf2/Regent Seven Seas Cruises, Seven Seas Prestige, Atrium 9.jpg" alt="Starlight Atrium" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Starlight Atrium</h3><p>Embodying a blend of old-world elegance and modern sophistication, the Starlight Atrium recalls an era of quality craftmanship and style, illuminated by a glass-enclosed ceiling that allows sunlight a</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/05/13/08/55/02/0cca1570-c37e-481e-b5e8-f693cb2dae37/Regent Seven Seas Cruises, Seven Seas Prestige, Galileo’s Bar.png" alt="Galileo's Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Galileo's Bar</h3><p>Galileo’s Bar is strategically placed to serve both the Prestige Lounge and adjacent casino. The bar’s ceiling is a canvas displaying a contemporary masterpiece styled like an oil painting, framed by </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/05/13/08/55/02/b378ee0c-df8a-487b-80ac-84b49bbc828a/Regent Seven Seas Cruises, Seven Seas Prestige, Constellation Theater.png" alt="Constellation Theater" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Constellation Theater</h3><p>Wonders grace the night sky, as stars appear onstage. Vocalists, musicians, actors and dancers transport you to other worlds. They captivate your imagination until the final chord lingers in the hush </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/06/10/07/59/56/7be7ba1b-778c-4f60-b540-588552d8888b/RSSC Seven Seas Prestige Coffee Connection Rendering 2.jpg" alt="Coffee Connection" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Coffee Connection</h3><p>Warm aromas of freshly brewed coffee and sweet pastries mingle with lively conversation as you swap stories of adventures ashore. Even in the bright, bustling energy of the day, the coffee bar remains</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/05/13/08/55/03/f32680be-12f8-43cb-9ba7-7bbc07fc23a8/Regent Seven Seas Cruises, Seven Seas Prestige, Reception.png" alt="Reception" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Reception</h3><p>The reception area, also on deck 5, features pleated leather panels and a light fixture crafted from handblown glass and ceramic pearls. From the lifts, looking back towards Galileo’s Bar, walls are f</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/06/10/07/56/18/63e539fd-10e0-4fb8-9097-3ae8398d337c/RSSC Seven Seas Prestige Meridian Lounge Rendering 3.jpg" alt="Meridian Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Meridian Lounge</h3><p>An elegant and refined space that pays homage to the allure of uncovering new worlds.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/05/13/08/55/02/390cea6a-27bc-4f27-bf96-42685bde56c3/Regent Seven Seas Cruises, Seven Seas Prestige, Prestige Lounge.png" alt="Prestige Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Prestige Lounge</h3><p>Inspired performances that will lure you to the dance floor as you sail across the ocean.</p></div>
+  </div>
+    </div>
+
+    <h2 id="health">💆 스파 &amp; 웰니스</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/11/05/16/07/14/6fd2e4da-8ab1-4e96-8659-82ef277a5c84/Regent Seven Seas Cruises Seven Seas Prestige Serene Spa.jpeg" alt="Serene Spa & Wellness™" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Serene Spa & Wellness™</h3><p>Follow the rhythm of archways and soft light through a corridor inspired by seashells and the sea itself. Curved forms, flowing textures and glowing stone lead you to sanctuaries of rejuvenation. A po</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/11/05/16/29/18/5234b67f-1748-4017-9b04-67779fb3ef02/Regent Seven Seas Cruises Seven Seas Prestige Pool Deck 1.jpg" alt="Pool Deck" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pool Deck</h3><p>On days you wish to lounge by a pool, head here. You’ll be greeted by a Pool Deck with an unforgettable vista, elegant teak accents and an amiable crew offering cold drinks and lounge chairs with plus</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/11/05/16/46/24/e5c0ca69-be98-4590-87b8-8b48f730ebaa/Regent Seven Seas Cruises Seven Seas Prestige Sports Deck 2.jpg" alt="Sports Deck" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sports Deck</h3><p>Practice your golf swing, go for a jog around the track, or gather some new friends for a spirited (but fun) game of bocce ball, all while taking in stunning views and fresh, ocean air.You may visit o</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/30/11/41/28/64b900a0-67d1-4ed3-ae25-3a967be5817b/Regent Seven Seas Cruises Seven Seas Explorer Fitness Center.jpg" alt="Fitness Centre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Fitness Centre</h3><p>Look after yourself at sea. Take part in Pilates, yoga and aerobics classes or help yourself to spinning bikes, dumbbells, treadmills, Technogym Strength Machines, workout mats and step benches. For g</p></div>
+  </div>
+    </div>
+
+    <h2 id="kids">👧 키즈 클럽</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/30/12/34/35/98a534f8-9aac-412a-9ddb-bdec2e0f9281/Regent Seven Seas Cruises Seven Seas Explorer Club Mariner.jpg" alt="Club Mariner" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Club Mariner</h3><p>Families with young travellers will enjoy our Club Mariner Youth Program on select voyages. Children ages 5 to 17 can participate in a range of specialised activities, from mini-putt tournaments to da</p></div>
+  </div>
+    </div>
+
+    <h2 id="cabins">🛏️ 객실 등급</h2>
+    <div class="cabin-grid">
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/06/13/06/21/46/7bc218e5-4b10-418c-96bd-e7331a8de0bc/RSSC PRESTIGE Skyview Regent Suite 1.png" alt="Skyview Regent Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Skyview Regent Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/06/10/07/31/03/3e2205d6-1e0d-480f-9b08-71df250d7c26/RSSC Seven Seas Prestige Skyview Luna Suite Rendering 4.jpg" alt="Skyview Suites" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Skyview Suites</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/39/38/3a3c64c3-886a-4810-8ce4-c1b99d313405/RSSC Seven Seas Prestige Horizon Signature Suites 3.jpg" alt="Signature Suites" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Signature Suites</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/38/34/05156963-b813-4769-b1c8-eb231cd6d264/RSSC Seven Seas Prestige Horizon Grand Loft Suites 3.jpg" alt="Grand Loft Suites" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Grand Loft Suites</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/40/30/86bfad26-e0d0-4869-8b4b-5a2a7d5ec35e/RSSC Seven Seas Prestige Horizon Grand Suites 1.jpg" alt="Grand Suites" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Grand Suites</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/41/26/751244bc-fceb-4db5-b5e9-2578e3801ef5/RSSC Seven Seas Prestige Prestige Suites 2.jpg" alt="Prestige Suites" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Prestige Suites</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/42/07/04b41b09-a183-4f56-b2fc-5c6fbfe1f02a/RSSC Seven Seas Prestige Seven Seas Suites 3.jpg" alt="Seven Seas Suites" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Seven Seas Suites</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/37/06/5d5959b0-6a0a-4891-8c56-b280184596d7/RSSC Seven Seas Prestige Horizon Penthouse Suites 3.jpg" alt="Horizon Penthouse Suites" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Horizon Penthouse Suites</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/06/16/09/44/48/c090afd5-cf28-4763-a4f6-67f2c3fbaa88/RSSC Seven Seas Prestige Penthouse Suite 0.jpg" alt="Penthouse Suites" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Penthouse Suites</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/42/42/3dc61071-fe60-45a1-8b5d-ef424162762f/RSSC Seven Seas Prestige Concierge Suites 1.jpg" alt="Concierge Suites" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge Suites</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/43/20/d9d2165c-3e4b-4ad1-ad09-a20f39b65446/RSSC Seven Seas Prestige Serenity Suites 1.jpg" alt="Serenity Suites" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Serenity Suites</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/06/02/10/44/00/a396c512-5d6a-4638-b333-5705f9c757b0/RSSC Seven Seas Prestige Deluxe Veranda Suites 1.jpg" alt="Deluxe Veranda Suites" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Veranda Suites</div>
+  </div>
+    </div>
+
+    <h2 id="deckplan">📐 덱 플랜</h2>
+    <div class="deckplan-list">
+  <div class="deckplan-item">
+    <img src="" alt="Deck 15" loading="lazy">
+    <p>Deck 15</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 14" loading="lazy">
+    <p>Deck 14</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 12" loading="lazy">
+    <p>Deck 12</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 11" loading="lazy">
+    <p>Deck 11</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 10" loading="lazy">
+    <p>Deck 10</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 9" loading="lazy">
+    <p>Deck 9</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 8" loading="lazy">
+    <p>Deck 8</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 7" loading="lazy">
+    <p>Deck 7</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 6" loading="lazy">
+    <p>Deck 6</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 5" loading="lazy">
+    <p>Deck 5</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 4" loading="lazy">
+    <p>Deck 4</p>
+  </div>
+    </div>
+
     <h2 id="book">예약 안내</h2>
     <p>Seven Seas Prestige 탑승 크루즈 상품은 크루즈링크를 통해 예약하실 수 있습니다.</p>
     <ul>
@@ -123,6 +333,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#intro">선박 소개</a></li>
         <li><a href="#specs">선박 제원</a></li>
         
+        <li><a href="#dining">🍽️ 다이닝</a></li>
+        <li><a href="#entertainment">🎭 엔터테인먼트</a></li>
+        <li><a href="#health">💆 스파 &amp; 웰니스</a></li>
+        <li><a href="#kids">👧 키즈 클럽</a></li>
+        <li><a href="#cabins">🛏️ 객실 등급</a></li>
+        <li><a href="#deckplan">📐 덱 플랜</a></li>
         <li><a href="#book">예약 안내</a></li>
       </ul>
     </div>

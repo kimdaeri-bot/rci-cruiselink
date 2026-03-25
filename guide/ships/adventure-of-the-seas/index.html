@@ -68,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     h2[id],h3[id]{scroll-margin-top:80px}
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
+
+    .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+    @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
+    .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-info{padding:12px}
+    .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+    .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
+    .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
+    .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+    @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
 <body>
@@ -106,6 +124,402 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+    <h2 id="dining">🍽️ 다이닝</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/30/15/32/32/4a69e449-f39a-47da-811a-cf225317330d/Royal Caribbean International, Adventure of the Seas, Chops Grille 3.jpg" alt="Chop's Grille℠" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Chop's Grille℠</h3><p>CLASSIC AMERICAN STEAKHOUSEFor over a decade, the chefs at Chops Grille have proudly presented quality, hand-cut steaks at this hallmark Royal Caribbean restaurant. Now, they give you a fresh twist on</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2017/01/13/13/42/48/707/Royal_Caribbean_International_Jewel_of_the_Seas_Accommodation_Interior_Izumi.jpg" alt="Izumi" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Izumi</h3><p>THE HOTTEST SUSHI SPOT AT SEAFrom delicious sushi rolls to fresh sashimi and nigiri, Izumi serves up an exotic Asian-inspired dining experience. Savor izakaya-style appetizers and rolls that range fro</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/30/15/13/01/2fe4659e-a224-45b9-bd16-4ccf499a0c4b/Royal Caribbean International, Adventure of the Seas, Windjammer Cafe Child.jpeg" alt="Windjammer Cafe" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Windjammer Cafe</h3><p>TASTE YOUR WAY AROUND THE WORLDThe Windjammer is your go-to restaurant for tantalising global flavours served as complimentary. Like just-pressed paninis packed with all your favourite meats and chees</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/01/15/51/09/dee59fb9-64fc-490f-b8f3-98ffadd38f1a/RCI, Main Dining Room, Copyrights - DHeumann.jpg" alt="Main Dining Room" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Main Dining Room</h3><p>GOURMET COURSESIn the Main Dining Room, you can experience flavors that take you from Jamaica to Jaipur, a rotating menu of delicious dishes always offering something unexpected. A multi-level restaur</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/02/17/26/32/90f6ddee-7ce1-47ab-8893-3cc8132c1da5/RCI - Chef's Table.jpg" alt="Chef's Table" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Chef's Table</h3><p>AS VIP AND INTIMATE AS CAN BEWelcome to Chef’s Table, the most exclusive and elevated dining experience on our fleet. Join an intimate group of fellow foodies on a private epicurean journey led by the</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2016/03/24/14/30/54/990/Royal_Caribbean_International_Oasis_of_the_Seas_Dining_img4.jpg" alt="Giovanni's Table" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Giovanni's Table</h3><p>EAT MORE ITALIANEvery meal at Giovanni’s Table is a family-style celebration of rustic Italian flavour. You’ll find all your favourite Old-World classics on the menu here, like house focaccia served w</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/30/15/23/11/d95c0c3d-52c2-40fd-8ea6-fdeedabfc662/Royal Caribbean International, Adventure of the Seas, Johnny Rocket's.jpg" alt="Johnny Rocket's" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Johnny Rocket's</h3><p>BOLD FLAVORS, FLASHBACK VIBESJohnny Rockets® has been serving up delicious American fare to diners around the world since 1986. Its menu features fresh, never frozen, made-to-order hamburgers, sides, </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/01/10/43/01/018b97fd-da5b-4b53-a6e1-87caf495fb31/Royal Caribbean International, Adventure of the Seas, Cafe Promenade.jpg" alt="Cafe Promenade" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Cafe Promenade</h3><p>CAFÉ ALL DAYWhen it comes to quick and easy come-and-go eats, there’s no better place than Café Promenade. This casual, complimentary hotspot bustles 24 hours a day, so you can drop by any time — whet</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/20/00/47/47/ba022650-3b37-4799-a94d-b8621e15c82e/RCI Room Service.jpeg" alt="Room Service" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Room Service</h3><p>DELICIOUS DELIVERED TO YOUR DOORWant to savor a meal in the comfort of your stateroom? Order delicious in-room dining any time — day or night. Tuck into breakfast in bed with a fresh omelet or a steam</p></div>
+  </div>
+    </div>
+
+    <h2 id="entertainment">🎭 엔터테인먼트</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/02/08/56/35/7786e4cc-2e52-418e-9ebd-f3709f76042f/Royal Caribbean International, Flowrider2.jpg" alt="Flowrider®" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Flowrider®</h3><p>NOW BOARDING FOR ADVENTUREThe surf’s always up on the 40-foot-long FlowRider® surf simulator. Grab your board and get ready, 30,000 gallons of rushing awesome are headed your way. Carve like a pro — o</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/02/09/13/28/af2937c2-19ce-4e7f-b601-5cb636809fab/Royal Caribbean International, Adventure of the Seas, Rock Climbing, Dan Worden2.jpg" alt="Rock Climbing Wall" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Rock Climbing Wall</h3><p>A BOLDER BOULDERThe view alone is worth every step. Climb 12 metres above deck on the signature Rock Climbing Wall, where everyone from beginners to speed climbers can strap in and go vertical. With n</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/02/09/31/37/c4147a70-3a97-467f-873e-f3ff39c8196a/Royal Caribbean International, Adventure of the Seas, Sage Stephens.jpg" alt="Pool Deck" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pool Deck</h3><p>SWIM IT TO WIN ITThe pool deck is the place to be. And each ship has several to choose from. Bask in the sun or relax in the shade while you sip a cool tropical cocktail and enjoy the complimentary lo</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/25/12/52/53/a90c953a-294f-4999-b927-b493516837ee/RCI Typhoon and Cyclone.png" alt="Typhoon℠ and Cyclone℠" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Typhoon℠ and Cyclone℠</h3><p>DOUBLE THE THRILLSGrab your bravest friend and challenge them to a test of speed. The ride of your life awaits on twin racers Typhoon℠ and Cyclone℠ – part of The Perfect Storm℠: the boldest water slid</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/01/14/12/33/d013c79a-668a-4291-bb0c-3295cae01351/Royal Caribbean International, Adventure of the Seas, Pool Bar.jpg" alt="Pool Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pool Bar</h3><p>HYDRATE AT THE POOLSIDE BARYou don’t have to stray too far from your comfy poolside lounger to enjoy a cool and creamy piña colada, a tropical Mai Tai, a glass of bubbly, or your favorite ice cold bre</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/20/02/05/25/7eab1378-5d0f-4ac1-b030-4fdc8d9593b8/RCI The Perfect Storm.jpeg" alt="The Perfect Storm℠" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Perfect Storm℠</h3><p>A TWISTING TURNING ADVENTUREIt’s time to put on your brave face, because there are plenty of thrills on the agenda. Get ready to tackle hair-raising twists, turns and adrenaline-amping fun on The Perf</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/07/14/25/45/107e6602-9a0c-4eda-9d67-3ad52c8e9779/RCI, English Pub 3.jpg" alt="English Pub" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>English Pub</h3><p>PINTS AND POURS FOR EVERY SHOREIf you’re looking to grab a pint, this fleetwide favorite is the spot. Pop-up musical performances keep the vibe here is as lively as London, and the pub’s impressive dr</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/07/12/10/26/24/f15b24c7-fcd0-4a1c-9e48-b60c0a23da9c/RCI Utopia Boleros.jpg" alt="Boleros" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Boleros</h3><p>SHAKE IT LIKE A CAIPIRINHAWhether you’re stopping by for an after dinner drink or joining the salsa-stepping party, nighttime sizzles at Boleros. This Latin-themed club serves up Cuban mojitos, Brazil</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/01/14/33/30/ec726388-e154-46bd-9f47-c4430c9078f2/Royal Caribbean International, Allure of the Seas, Viking Crown Lounge.jpg" alt="Viking Crown Lounge®" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Viking Crown Lounge®</h3><p>SAVOR THE SIPS &amp; THE SIGHTSA fixture on nearly every cruise ship in the Royal Caribbean fleet and a true architectural wonder, the iconic Viking Crown Lounge® is the ultimate spot to soak up panor</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2016/02/01/12/12/13/444/RCI_QN_SchoonerBarF.jpg" alt="Schooner Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Schooner Bar</h3><p>LIVE MUSIC &amp; MASTERFUL MIXINGWrap up your night at Schooner Bar, where perfectly mixed cocktails and live entertainment come together in a warm-lit nautical-themed lounge. Cozy up in a seat under </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/20/01/29/47/4384b08b-b24a-405b-8a28-ad05f0dbd6ec/RCI Mariner of the Seas Diamond Club.jpeg" alt="Crown Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Crown Lounge</h3><p>A ROYAL RETREATRoyal Caribbean created the exclusive Crown Lounge to celebrate our brand’s legacy, our roots and our commitment to our most loyal guests. From complimentary bites available throughout </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/01/13/30/31/228b8765-ffd0-4f1f-96e9-2fb4b08f8090/Royal Caribbean International, Adventure of the Seas, Solarium Bar.jpg" alt="Solarium Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Solarium Bar</h3><p>SUN, SERENITY &amp; SIPSRelaxation can be thirsty work. While you're soaking up the vibe at the adults-only Solarium, grab a refreshment from the Solarium Bar, where friendly bartenders serve wine, be</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/01/14/26/11/c662fe36-18df-4336-bc1c-c3d4022aad0b/Royal Caribbean International, Moet-Chandon Champagne.jpg" alt="Champagne Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Champagne Bar</h3><p>TOAST TO VACATIONWhether you spent the day chasing onboard thrills or soaking up beachside chill, raise a glass of bubbly at the Champagne Bar and celebrate another day in paradise. From bold bruts to</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/02/09/06/45/57788b1a-3600-4dad-894f-9c8be0fcce1c/RCI, Casino 1.jpg" alt="Casino Royale℠" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Casino Royale℠</h3><p>BET ON BIG ACTIONIt's the lights of the slots, the sound of a fresh deck being shuffled and the roar when the dice come up right. Players love Casino Royale℠ – a slice of Vegas right on board every sh</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2016/02/02/12/40/26/501/RCI_Ice_Skating_DSC_4642.jpg" alt="Ice Skating" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Ice Skating</h3><p>THIS IS NO PLACE FOR COLD FEETYou may not expect to end a sunny day with figure eights on the ice rink. But on board, excitement like this comes as standard – and the ice-skating comes complimentary. </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/01/16/24/55/c35c87a2-b4ef-443e-9fa9-752220c7feec/Royal Caribbean International, Ice Skating Shows.jpg" alt="Ice-Skating Shows" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Ice-Skating Shows</h3><p>GLITTER AND GLAM ON ICECome for the g-force spins. Stay for the spectacular ice dancing. The Studio B ice rink presents dramatic ice shows starring a cast of professional skaters from around the world</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/02/08/46/10/eb3db005-96c7-4119-8e51-4eb391057631/RCI, Shopping 2.jpg" alt="Shopping" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Shopping</h3><p>SHOP IT LIKE IT'S HOTShop the biggest designer names and onboard exclusives, all at prices you won't find on land. Swiss timepieces, alcoholic drinks, fine jewellery, beauty and high fashion are all h</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/20/01/34/47/0ed43b40-64fc-4b5c-93c4-ae6d1f461038/RCI Mariner of the Seas Suite Lounge.jpeg" alt="Suite Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Suite Lounge</h3><p>SUITE SIPSWelcome to the most elevated spot for indulging in your favourite eats and libations. Reserved exclusively for guests of Grand Suite-level accommodations and above, the Suite Lounge serves c</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/20/02/02/23/566516cc-6172-46ab-abe8-07d4b59886b0/RCI Arcade.jpeg" alt="Arcade" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Arcade</h3><p>GAME ONIf you find yourself fleeing a gang of ghosts, saving deep space from invaders or starting a dance revolution, you might be at the Royal Caribbean Arcade. Your favourite games from the 1980s an</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/21/07/05/40/f6a81ad7-ca3e-4abb-bd25-6fceb32f6cdb/RCI Game Shows.jpeg" alt="Game Shows" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Game Shows</h3><p>BRING YOUR GAME FACEBring your skills for game time thrills and take on the challenges in Love &amp; Marriage, Battle of the Sexes and the adults-only Quest. Collaborate or calculate your next move an</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2022/05/16/19/26/36/2c2b708e-31ec-4693-9d6f-5f7613719b74/RCI Outdoor Film Nights.jpeg" alt="Outdoor Film Nights" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Outdoor Film Nights</h3><p>WATCH A DIVE-IN FILMWhy watch a film inside? Lounge on the pool deck with an ocean breeze, the moon and film stars on a grand scale. The 20.4 m2 film screen presents newly released films, live sportin</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/21/07/07/52/1d66b1b3-ba4e-4636-85b5-3156371947d5/RCI Library & Card room.jpeg" alt="Library & Card Room" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Library & Card Room</h3><p>A NOVEL IDEAIn the mood to curl up with a good book? Or show off your poker face? Our well-stocked Library and Card Room offers great reads across many genres. Plus tables for cards and board games.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/20/01/50/29/798fbd76-65fa-4d2c-9035-36b177d6d853/RCI Original Productions.jpeg" alt="Original Productions" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Original Productions</h3><p>CHART-TOPPERS AND SHOWSTOPPERSWe've got the venues and we know how to use them. Every sailing features original productions you can only see on board. Amazing vocalists and dancers deliver rousing per</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/11/03/06/35/45/c4f83d88-1cc2-4d57-8bca-aaf700361008/RCI Club Twenty.jpeg" alt="Club Twenty " loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Club Twenty </h3><p>WHERE NIGHT COMES TO LIFEAre you at sea – or are you on South Beach? Club Twenty is the onboard destination for fashionistas, scene-stealers and club hoppers. Here, living statues, pulsing colours, da</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/20/01/58/02/e5d86fe8-6dbc-493a-90f4-c0aaa797ccb1/RCI Pool Parties.jpeg" alt="Pool Parties" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pool Parties</h3><p>A HOT PARTY AT THE POOLWhen the stars come out, the party heats up on the Pool Deck. The DJ will be spinning club anthems and dance classics and the drinks will be pouring to keep you fuelled up, so y</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/20/01/47/15/d91868fa-1154-42c5-8ed7-0e1cb1e5c1e5/RCI Live Orchestra.jpeg" alt="Live Orchestra" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Live Orchestra</h3><p>STAY COMPOSEDNo PLAY buttons here – a full ensemble orchestra complete with conductor, strings and wind section, accompanies every main theatre performance on every ship. *Venues, performers and event</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/20/02/01/11/dfe6b374-092a-4ae2-8441-92388885a264/RCI Live Bands.jpeg" alt="Live Bands" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Live Bands</h3><p>THEY'RE PLAYING YOUR SONGIt's a great way to start an evening – or a mellow way to wind down at night. Our live music venues feature world-class musicians performing across the fleet nightly. Follow y</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/21/06/04/51/0367043b-c8d5-45f9-b867-f07ca353e828/RCI Salsa Dancing.jpeg" alt="Salsa Dancing" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Salsa Dancing</h3><p>THE HOTTEST HOT SPOT ANYWHEREMaybe you're a purist who takes their rum and tequila straight. Or maybe you like to shake it up with the cool kick of a refreshing mojito or margarita. Either way, Bolero</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/21/06/14/12/e5d89a9c-ec4b-4f94-9397-0233087f2057/RCI Dancing Under The Stars.jpeg" alt="Dancing Under The Stars" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Dancing Under The Stars</h3><p>STAR STEPPINGDress up in white and head to the Pool Deck, where a live DJ will keep the beat going strong long into the night as we dance under the stars. Bring your best moves, because you won’t want</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/21/06/49/41/7b059baa-6d8c-4072-b3cd-b828d7e49827/RCI Pub Performances.jpeg" alt="Pub Performances" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pub Performances</h3><p>RAISE A PINTHop across the pond and partake in the age-old tradition of English pub life. Throw back a pint or two of imported brews and request your favourite jams, unplugged.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/25/12/52/52/4f962d64-2a21-424c-b50f-fc4706e20985/RCI Theme Nights.png" alt="Theme Nights" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Theme Nights</h3><p>TOTAL TIME WARPWhether you prefer a masquerade mystery or traditional toga, you're in luck. Themed nights and parties may vary in era, but always deliver in fun.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/21/07/21/25/3058063f-d01b-4564-9fb4-6bc05b85e9c4/RCI Night Life.jpeg" alt="Night Life" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Night Life</h3><p>SUN GOES DOWN, WE TURN UPEvery night onboard is an opportunity to party. Explore an array of venues – all without cover charge – to suit your mood, tastes and moves. Try salsa dancing or heat up the f</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/25/12/52/53/4ac355ff-6fda-4e0a-80b2-ac022774c0d7/RCI Parades.png" alt="Parades " loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Parades </h3><p>CONFETTI AT THE READYThe costumes! The music! The can't-miss excitement. Line up for the parade as dozens of performers dance, cheer and even fly through the air.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/02/09/13/38/ead68816-30d8-4e1b-a6e8-945b0c324365/RCI, Shush! Silent Party 1.jpg" alt="SHUSH! Silent Party" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>SHUSH! Silent Party</h3><p>SILENT STEPPINGIf you walk in and see a room full of people dancing in silence, you’ve come to the right place. Welcome to the Silent Party, where DJs battle it out in a contest of quiet beats you can</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/07/13/33/28/dd45999e-cc94-4d63-9a9c-70fd1b774d4e/RCI Jewel of the Seas Mystery Dinner Theatre.png" alt="Mystery Dinner Theatre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Mystery Dinner Theatre</h3><p>DINNER AND A MYSTERYOur professional cast hosts an evening of theatre packed with mystery, intrigue and lots of laughs. Solve the crime in one of our speciality restaurants over an exquisite multi-cou</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/21/17/49/55/e60474de-ec53-4145-915b-e5abd50f001b/RCI Captain's Welcome Aboard Reception.png" alt="Captain's Welcome Aboard Reception" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Captain's Welcome Aboard Reception</h3><p>MEET THE CAPTAINThe Captain would like to make a toast – to you! Head down to a special reception dedicated to all the guests sailing onboard. Make sure you bring your camera along, as you’ll have the</p></div>
+  </div>
+    </div>
+
+    <h2 id="health">💆 스파 &amp; 웰니스</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/07/28/10/06/34/0c799eef-c924-43ac-8e75-790313ad3b46/RCI Wellness Spa - High Resolution 2.jpg" alt="Spa & Fitness Centre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Spa & Fitness Centre</h3><p>AHH INSPIRINGEmerge renewed, relaxed and rejuvenated at the Vitality℠ Spa. Professional spa products from acclaimed brands such as Elemis®, bliss®, La Thérapie and Ionithermie bring the most advanced </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/07/31/07/12/46/26626e60-bcc8-4789-bd90-b9d61a877118/RCI Oasis of the Seas Pickleball HR 5.jpg" alt="Sports Court" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sports Court</h3><p>BRING YOUR GAME FACEWe'll bring the balls – you bring your A game. Whether it's a pick-up game or one-or-one, go all in for basketball and volleyball action at sea, but with an awesome energising ocea</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/04/12/35/49/b0474a23-bfe5-45b8-8412-c6b199b1334a/Royal Caribbean International, Adventure of the Seas, Mini Golf.jpg" alt="Mini Golf" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Mini Golf</h3><p>ON PAR FOR ADVENTUREUp the ramp, around the curve and into the hole. Play on the green as you enjoy wide, blue ocean views. Mini golf is included in your fare, so play as much as you like. No reservat</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/04/09/59/06/fedfbe4f-1d22-4fe6-a0ee-182c9ac88f63/Royal Caribbean International, Navigator of the Seas, Hot tub, NMorley.jpg" alt="Whirlpools" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Whirlpools</h3><p>ENJOY SOME BUBBLYDiscover a different type of hot spot. Each Royal Caribbean® ship has multiple whirlpools. Find the warm and bubbly whirlpool that's calling your name.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/02/10/11/04/52/455/Royal_Caribbean_International_Voyager_of_the_Seas_Exterior_Pool_Woman_2.jpg" alt="Solarium" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Solarium</h3><p>SUN AND SERENITYCheck your watch: It's me time. Discover the Solarium, a relaxing indoor-outdoor retreat just for our adult guests. Perfectly positioned at the front of every Royal Caribbean® ship, th</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/21/06/53/18/08b9cff9-6a93-48de-8017-9a7fbb53bccc/RCI Fitness Classes.jpeg" alt="Fitness Classes" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Fitness Classes</h3><p>EXERCISE YOUR OPTIONSStart a healthy new habit or keep your fitness routine on track. VitalitySM Fitness Center© has an array of the most popular training classes including yoga, Pilates, spinning, sc</p></div>
+  </div>
+    </div>
+
+    <h2 id="kids">👧 키즈 클럽</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/11/11/26/26/1b962c80-82c3-4e18-83fc-73a3d8904434/RCI Adventure Ocean - Nic Morley.jpg" alt="Adventure Ocean®" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Adventure Ocean®</h3><p>PLAYTIME REDEFINEDThis is not paint by numbers – this is play outside the lines. The award-winning Adventure Ocean® is being totally reimagined to let kids choose their own immersive adventure. There </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2017/01/13/11/32/09/525/Royal_Caribbean_International_Majesty_of_the_Seas_Exterior_Splashaway_Bay.jpg" alt="Splashaway Bay℠" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Splashaway Bay℠</h3><p>FUN BY THE GALLONPint-sized cruisers will find gallons of fun at Splashaway Bay℠ aqua park. This bigger, better water adventure features colourful waterslides, water cannons, fountains, pools and whir</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/11/11/26/25/06f414af-209a-405f-8b83-918801a609f9/RCI Oasis Class Toddlers and Tots Programs - L.ISIEWSKI.jpg" alt="Babies and Tots Programs" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Babies and Tots Programs</h3><p>A PINT-SIZED PARTYJoin your wee one for a session of educational and engaging fun with Royal Babies® and Royal Tots® playgroups at Adventure Ocean®. Each interactive playgroup is held at one of our on</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/10/21/06/43/41/c586f88f-8057-4de5-a0f7-b9e2df681c33/RCI Teen Lounge.jpeg" alt="Teen Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Teen Lounge</h3><p>NON-STOP TEEN SPOTThe Royal Caribbean® teen program isn't some structured set of classes or rules. These 'almost adults' deserve a holiday of their own. So, we give them the freedom to join pre-planne</p></div>
+  </div>
+    </div>
+
+    <h2 id="cabins">🛏️ 객실 등급</h2>
+    <div class="cabin-grid">
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/12/19/10/39/37/3baa5fb2-16aa-4368-b052-c7a11e8cf23d/Royal Carribean International Adventure of the Seas Royal Suite - 1 bedroom.jpg" alt="Royal Suite - 1 bedroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Royal Suite - 1 bedroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/12/19/11/27/16/7789ef8e-782d-4546-adaf-778dcb13863e/Royal Carribean International Adventure of the Seas Grand Suite - 2 bedroom.jpg" alt="Grand Suite - 2 bedroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Grand Suite - 2 bedroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/12/19/10/39/36/dfc15473-954f-4fce-9c7d-b48de37d7a1b/Royal Carribean International Adventure of the Seas Owner's Suite - 1 bedroom.jpg" alt="Owner's Suite - 1 bedroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Owner's Suite - 1 bedroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/12/19/10/39/36/21d5713c-9c97-4dfd-b94b-6d06a4abe342/Royal Carribean International Adventure of the Seas Grand Suite - 1 bedroom.jpg" alt="Grand Suite - 1 bedroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Grand Suite - 1 bedroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2020/01/21/07/03/19/5e503988-d803-41a5-bfd7-d340741a94d8/Royal Caribbean - Allure of the Seas - Ocean View Panoramic Suite No Balcony.jpg" alt="Ocean View Panoramic Suite (No Balcony)" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Ocean View Panoramic Suite (No Balcony)</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/12/19/10/39/36/744d51aa-53e2-4d22-8722-e4f26752cc79/Royal Carribean International Adventure of the Seas Junior Suite.jpg" alt="Junior Suite " loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Junior Suite </div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/12/19/10/39/36/744d51aa-53e2-4d22-8722-e4f26752cc79/Royal Carribean International Adventure of the Seas Junior Suite.jpg" alt="Sunset Junior Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Sunset Junior Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/10/22/06/43/03/f2861275-fb38-45ee-8871-34e6b2a58bee/RCI Liberty of the Seas Junior Suite Guarantee.jpeg" alt="Junior Suite Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Junior Suite Guarantee</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/12/19/10/48/42/ee562153-7bfb-4ddd-b08d-bb81806b8e9f/Royal Carribean International Adventure of the Seas Ocean View Balcony.jpg" alt="Ocean View Balcony " loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Ocean View Balcony </div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/12/19/10/48/42/ee562153-7bfb-4ddd-b08d-bb81806b8e9f/Royal Carribean International Adventure of the Seas Ocean View Balcony.jpg" alt="Connecting Ocean View Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Connecting Ocean View Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/12/19/10/48/42/7ea3a43d-2ca2-4aec-aa22-e8df3ef059d4/Royal Carribean International Adventure of the Seas Spacious Ocean View Balcony.jpg" alt="Spacious Ocean View Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Spacious Ocean View Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/12/19/10/48/42/ee562153-7bfb-4ddd-b08d-bb81806b8e9f/Royal Carribean International Adventure of the Seas Ocean View Balcony.jpg" alt="Sunset Ocean View Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Sunset Ocean View Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/12/04/06/19/13/78fa2ac1-65f3-4993-a1b4-2e8cece7d4e5/RCI Spacious Sunset Ocean View Balcony WEB.jpg" alt="Spacious Sunset Ocean View Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Spacious Sunset Ocean View Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/10/20/11/40/32/6499cb18-c816-49dd-9bf2-b4e6dcbf282b/RCI Serenade of the Seas Ocean View Stateroom with Balcony Guarantee.png" alt="Ocean View Stateroom with Balcony Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Ocean View Stateroom with Balcony Guarantee</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/11/02/15/55/29/88db8b7e-d078-4481-983e-63c6853e0398/RCI Explorer of the Seas Ocean View.jpg" alt="Ocean View " loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Ocean View </div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/11/02/15/55/29/88db8b7e-d078-4481-983e-63c6853e0398/RCI Explorer of the Seas Ocean View.jpg" alt="Spacious Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Spacious Ocean View</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/12/19/11/12/47/68d04703-ca11-420b-b274-1f7865e6da7e/Royal Carribean International Adventure of the Seas Spacious Panoramic Ocean View.jpg" alt="Spacious Panoramic Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Spacious Panoramic Ocean View</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/10/01/09/25/16/40c7d61a-0ab3-4736-ad89-b9c4ce63d0ed/Royal Caribbean International, Adventure of the seas, Ultra Spacious Ocean View.jpg" alt="Ultra Spacious Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Ultra Spacious Ocean View</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/10/19/10/07/06/65f1a09c-15f7-4453-8368-3da76a921552/RCI Mariner of the Seas Ocean View Guarantee.jpeg" alt="Ocean View Stateroom Guarantee " loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Ocean View Stateroom Guarantee </div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/10/22/09/24/20/aa3372ca-7a66-4a8f-83d1-fdcf36c02606/RCI Liberty of the Seas Interior.jpeg" alt="Interior" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Interior</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/12/19/11/37/45/93f24950-f6f2-42e6-9b72-3a2c06f428b8/Royal Carribean International Adventure of the Seas Promenade View Interior.jpg" alt="Promenade View Interior" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Promenade View Interior</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/12/19/11/37/45/93f24950-f6f2-42e6-9b72-3a2c06f428b8/Royal Carribean International Adventure of the Seas Promenade View Interior.jpg" alt="Connecting Promenade Interior" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Connecting Promenade Interior</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2021/10/20/12/10/13/d21e54e8-0762-405c-95fc-c03fc5f7cade/RCI Serenade of the Seas Interior Stateroom Guarantee.png" alt="Interior Stateroom Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Interior Stateroom Guarantee</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Studio Interior" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Studio Interior</div>
+  </div>
+    </div>
+
+    <h2 id="deckplan">📐 덱 플랜</h2>
+    <div class="deckplan-list">
+  <div class="deckplan-item">
+    <img src="" alt="Deck 15" loading="lazy">
+    <p>Deck 15</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 14" loading="lazy">
+    <p>Deck 14</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 13" loading="lazy">
+    <p>Deck 13</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 12" loading="lazy">
+    <p>Deck 12</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 11" loading="lazy">
+    <p>Deck 11</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 10" loading="lazy">
+    <p>Deck 10</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 9" loading="lazy">
+    <p>Deck 9</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 8" loading="lazy">
+    <p>Deck 8</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 7" loading="lazy">
+    <p>Deck 7</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 6" loading="lazy">
+    <p>Deck 6</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 5" loading="lazy">
+    <p>Deck 5</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 4" loading="lazy">
+    <p>Deck 4</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 3" loading="lazy">
+    <p>Deck 3</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 2" loading="lazy">
+    <p>Deck 2</p>
+  </div>
+    </div>
+
     <h2 id="book">예약 안내</h2>
     <p>Adventure of the Seas 탑승 크루즈 상품은 크루즈링크를 통해 예약하실 수 있습니다.</p>
     <ul>
@@ -123,6 +537,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#intro">선박 소개</a></li>
         <li><a href="#specs">선박 제원</a></li>
         
+        <li><a href="#dining">🍽️ 다이닝</a></li>
+        <li><a href="#entertainment">🎭 엔터테인먼트</a></li>
+        <li><a href="#health">💆 스파 &amp; 웰니스</a></li>
+        <li><a href="#kids">👧 키즈 클럽</a></li>
+        <li><a href="#cabins">🛏️ 객실 등급</a></li>
+        <li><a href="#deckplan">📐 덱 플랜</a></li>
         <li><a href="#book">예약 안내</a></li>
       </ul>
     </div>

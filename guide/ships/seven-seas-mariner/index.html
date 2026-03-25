@@ -68,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     h2[id],h3[id]{scroll-margin-top:80px}
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
+
+    .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+    @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
+    .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-info{padding:12px}
+    .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+    .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
+    .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
+    .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+    @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
 <body>
@@ -106,6 +124,226 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+    <h2 id="dining">🍽️ 다이닝</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/03/22/07/40/32/65d8dd0f-b795-465c-9574-770bc0163687/RSSC, Lifestyle, Compass Rose, Couples.jpg" alt="Compass Rose" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Compass Rose</h3><p>Whether you arrive for breakfast, lunch or dinner, you can look forward to European-inspired Continental cuisine served in a beautifully refined atmosphere decorated in blues and silvers with stunning</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/03/18/14/25/20/1276647e-c4c9-4672-a28a-a4cb4f319111/RSSC, Seven Seas Mariner, La Veranda.jpg" alt="La Veranda" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>La Veranda</h3><p>La Veranda features quiet alcoves, made-to-order omelettes and tasty lunch buffets that include hot carving stations, an authentic pizzeria and regional specialties that reflect cuisines of the region</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/10/30/09/27/44/78a683b1-81d5-4e7f-865f-a423a51272ee/Regent Seven Seas MARINA Prime 7.jpg" alt="Prime 7" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Prime 7</h3><p>Vibrant blue colours and white-leather chairs heighten the senses as you enter this elegantly intimate, art-filled and luxurious setting to enjoy classic American steakhouse cuisine with a modern flai</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/11/53/30/eb406ff8-9e9e-4259-b79b-0e5574bd0f12/RSSC, Seven Seas Mariner, Sette Mari at La Veranda.jpg" alt="Sette Mari at La Veranda" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sette Mari at La Veranda</h3><p>Each evening, La Veranda transforms into Sette Mari at La Veranda, a casual, intimate dining experience. Enjoy an extensive menu of authentic antipasti and Italian specialties served á la carte and pa</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/03/18/13/48/40/f338613e-ddc2-40bd-996f-8f9b86ffa3e1/RSSC, Seven Seas Mariner, Chartreuse.jpg" alt="Chartreuse" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Chartreuse</h3><p>A restaurant with a modern French menu and attention to detail you'll notice in its Parisian décor, expertly prepared dishes and wait staff. About the closest thing to a Parisian culinary gem on the h</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/12/09/03/62ef9f8e-d784-45be-8116-6e5b1a5ef597/RSSC, Seven Seas Mariner, Pool Grill.jpg" alt="Pool Grill" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pool Grill</h3><p>After sunbathing or swimming in the pool, you may be in the mood for grilled-to-order burgers, seafood, sandwiches, even hand-dipped ice cream with sprinkles. Our Pool Grill will satisfy your comfort </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/03/18/13/52/54/05269a0e-fa78-40d6-8391-fc548228207a/RSSC, Seven Seas Mariner, Coffee Connection 1.jpg" alt="Coffee Connection" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Coffee Connection</h3><p>Enjoy barista-made Illy® coffees, delicious pastries, gourmet sandwiches and homemade cookies at Coffee Connection. Peruse thousands of publications using our complimentary PressReader app or strike u</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/03/10/12/29/57/2768d203-e17d-48cc-b198-2fbaf42b2ed8/Regent Seven Seas Cruises Room Service 2.jpg" alt="Room Service" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Room Service</h3><p>Knowing that guests sometimes prefer to simply dine in the comfort of their suites, we offer room service around the clock. Select from an extensive room service menu and the wait staff will promptly </p></div>
+  </div>
+    </div>
+
+    <h2 id="entertainment">🎭 엔터테인먼트</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/10/30/07/34/27/4f408c77-831a-476b-9e28-8386c139ce7e/Regent Seven Seas VOYAGER Theater1.jpg" alt="Constellation Theatre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Constellation Theatre</h3><p>Take in lavishly staged, high-energy shows created and produced by our own team of Broadway choreographers and directors in our delightful hall. So grand it needs two decks, it offers plush seating an</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/12/52/24/3071ea9d-01e0-4c40-b0a3-10a36562f1a7/RSSC, Seven Seas Mariner, Observation Lounge 1.jpg" alt="Observation Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Observation Lounge</h3><p>As indicated by its name, the Observation Lounge offers a wonderful vantage point to enjoy staggering views as your glorious ship enters and leaves ports of call. Live music adds to the serene vibe.A </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/11/03/11/19/52/88511fd9-f761-4707-82a3-f4161030af28/Regent Seven Seas Cruises Seven Seas Mariner Atrium.jpg" alt="Atrium" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Atrium</h3><p>Simply put, the Atrium is the very heart of Seven Seas Mariner®. With natural light shining from above, it’s a natural hub for guests to rendezvous or gather for organised activities.Often described a</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2020/01/06/12/01/16/0ddc521c-719b-4166-b258-a27a9866eb32/Regent Seven Seas Cruises - Seven Seas Mariner - Mariner Lounge.jpg" alt="Mariner Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Mariner Lounge</h3><p>You'll find our popular Mariner Lounge tough to resist. It’s an inviting spot to chat with new friends over cocktails before a delicious dinner, and an exciting space to dance the night away afterward</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/10/30/07/34/31/dd3cb43e-0445-4b87-b753-0a868c72d0e2/Regent Seven Seas VOYAGER Connoiseur Club.jpg" alt="Connoisseur Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Connoisseur Club</h3><p>Engage in spirited conversation with new friends in an elegant hideaway that calls to mind gentleman's clubs of old. An elegant throwback where cigars are savoured, you'll take to like a favourite car</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/10/30/09/27/47/c103c465-deaf-4619-b8cb-68609a990368/Regent Seven Seas MARINA Library 0.jpg" alt="Library" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Library</h3><p>Browse a vast collection of volumes, from destination-specific guide books to best-selling mysteries to classics of literature, upon a variety of comfortable chairs in our cozy Library.Well-stocked an</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2019/04/15/09/22/06/3ec4b029-cfb9-4869-996d-0451a22b06a9/starslounge_block.jpg" alt="Stars Lounge & Night Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Stars Lounge & Night Club</h3><p>Encircling a glistening stairwell that leads to the Casino, the Stars Lounge is a throwback nightspot that draws fun-loving crowds for after-dinner drinks and late-night cocktails. A favourite with ni</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2020/01/06/12/04/56/0b32453f-a877-4ca0-954a-9e01fb7c8405/Regent Seven Seas Cruises - Seven Seas Mariner - Horizon Lounge.jpg" alt="Horizon Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Horizon Lounge</h3><p>A alluring destination for informal drinks in an elegant setting. With live music throughout the day and expertly poured cocktails only a request away, the Horizon Lounge is a natural spot to rendezvo</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/13/37/55/da70cb2f-cdf4-4f86-9ff0-b5f683130efb/RSSC, Seven Seas Mariner, Boutiques.jpg" alt="Boutiques" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Boutiques</h3><p>Whether it’s designer evening wear, handbags, fragrances or a smart gift, our boutique items are carefully selected and of the highest quality. The same may be said of our personable staff.Stop into o</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/13/32/55/bbd44d86-5381-4014-87e7-f8bac2beebd9/RSSC, Seven Seas Mariner, The Casino.jpg" alt="The Casino" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Casino</h3><p>Glass doors lead to an elegant setting bustling with games of chance that include Blackjack, roulette, poker and slot machines. The Casino is open every day at sea when not restricted by territorial b</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/13/41/14/2778e00a-f045-4ce3-a7dc-08e22782d07e/RSSC, Seven Seas Mariner, Club.com.jpg" alt="Internet Café & Club.com" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Internet Café & Club.com</h3><p>For those who've chosen to leave their laptops at home, desktop computers are available at our staffed Internet Cafe. Of course, you may access WiFi without charge throughout the entirety of the ship.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/13/45/49/7e4f389f-e9db-423d-b061-205e4ebe199a/RSSC, Seven Seas Mariner, Pool Bar.jpg" alt="Pool Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pool Bar</h3><p>Very few things equate to a pure vacation activity more than sitting at our Pool Bar. Make new friends while sipping a cocktail or frozen drink in the most laid-back atmosphere imaginable.When you env</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/13/52/21/f0689291-4be0-4d4a-81eb-1a16eadfadff/RSSC, Seven Seas Mariner, Card & Conference Room.jpg" alt="Card & Conference Room" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Card & Conference Room</h3><p>Gather your favourite teammates in the Card Room for a lively afternoon or evening of cards, board games or a social game of Bridge. The spaces, which may be combined, are also designed to host confer</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/13/55/08/ef460efb-f24b-4216-9d23-50348ed66e31/RSSC, Seven Seas Mariner, Pool Deck.jpg" alt="Pool Deck" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pool Deck</h3><p>For those days when nothing but sitting poolside will do, head to our Pool Deck. You'll be greeted by an expansive space with unforgettable views, teak accents and an amiable crew offering cold drinks</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/12/40/17/72a872e0-299e-483b-8302-05c627ac1b8a/RSSC, Seven Seas Mariner, Destination Services.jpg" alt="Destination Services" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Destination Services</h3><p>Whether you’re interested in a tour from our FREE Unlimited Shore Excursion menu or a unique, small-group Regent Choice Shore Excursion, our staff at Destination Services is ready to assist.If the roa</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/12/48/23/8a6eff7e-2a7e-490d-86e8-82d39ad59a48/RSSC, Seven Seas Mariner, Reception & Concierge.jpg" alt="Reception & Concierge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Reception & Concierge</h3><p>Our knowledgeable Reception staff is available around the clock to answer your questions and ensure your pleasure with your Seven Seas Mariner® voyage. Reception is also where you may contact the ship</p></div>
+  </div>
+    </div>
+
+    <h2 id="health">💆 스파 &amp; 웰니스</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/14/01/27/07dba3f1-0e4d-4c23-ae1f-3bbd48eab37c/RSSC, Seven Seas Mariner, Serene Spa & Wellness.jpg" alt="Serene Spa & Wellness™" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Serene Spa & Wellness™</h3><p>Enrich your travel with Serene Spa &amp; Wellness™, a globally inspired, tranquil haven of health, beauty and wellness. Relax and restore aching muscles, moisturize and rejuvenate your skin, and both </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/14/10/40/6661ea38-25ea-4dd9-8d95-57d24c6e206a/RSSC, Seven Seas Mariner, Fitness Centre.jpg" alt="Fitness Centre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Fitness Centre</h3><p>Look after yourself at sea. Take part in Pilates, yoga and aerobics classes or help yourself to spinning bikes, dumbbells, treadmills, Technogym Strength Machines, workout mats and step benches. For g</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/14/21/35/b5e4c293-9086-4ddd-bc08-33df39ef005c/RSSC, Seven Seas Mariner, Jogging Track.jpg" alt="Jogging Track" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Jogging Track</h3><p>If you have a regular walking or running routine, fear not – your healthy habit can be maintained while cruising the high seas. Regardless of the speed you traverse our track, dramatic views and fresh</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/14/23/36/5ce56bb5-732f-42c5-ba3c-351cee76dbeb/RSSC, Seven Seas Mariner, Paddle Tennis Court.jpg" alt="Paddle Tennis Court " loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Paddle Tennis Court </h3><p>Our completely screened and well-maintained paddle tennis court will beckon you and your teammates to win at all costs – or simply enjoy a fun game of paddle tennis or two.One look at our Paddle Tenni</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/14/27/08/be38de88-8aae-4ce5-89ed-77f169fac26f/RSSC, Seven Seas Mariner, Putting Green.jpg" alt="Putting Green" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Putting Green</h3><p>Not nearly as serious as the Golf Net, our Putting Greens invite you to gather friends – perhaps after an afternoon cocktail – for a spirited round of putt-putt golf or two.While the Golf Net is meant</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/14/28/56/ef610806-604d-49dc-af39-567a1538b3e0/RSSC, Seven Seas Mariner, Golf Nets.jpg" alt="Golf Nets" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Golf Nets</h3><p>If the mood strikes to work on your fairway swing, head to our Golf Net. All equipment is provided for you to practice your swing while soaking up the most glorious views imaginable.The glorious ocean</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/14/31/20/ae794423-8220-462c-85fa-4601d9016d92/RSSC, Seven Seas Mariner, Bocce Court.jpg" alt="Bocce Court" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Bocce Court</h3><p>Gather some friends and engage in a game originated in 5,000 BC. Our Bocce Court has the requisite equipment – a pallina and 8 larger balls – for you to engage in a spirited contest as the sun sets.Th</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/14/33/22/ce9e8865-bbb6-4d5e-ad14-253409e85639/RSSC, Seven Seas Mariner, Shuffleboard.jpg" alt="Shuffleboard" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Shuffleboard</h3><p>Probably the game most associated with cruise ships, shuffleboard onboard Seven Seas Mariner® is a more dramatic affair. High atop your ship, you won’t mind awaiting your turn as you take in glorious </p></div>
+  </div>
+    </div>
+
+    <h2 id="kids">👧 키즈 클럽</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/30/12/34/35/98a534f8-9aac-412a-9ddb-bdec2e0f9281/Regent Seven Seas Cruises Seven Seas Explorer Club Mariner.jpg" alt="Club Mariner" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Club Mariner</h3><p>Families with young travellers will enjoy our Club Mariner Youth Program on select voyages. Children ages 5 to 17 can participate in a range of specialised activities, from mini-putt tournaments to da</p></div>
+  </div>
+    </div>
+
+    <h2 id="cabins">🛏️ 객실 등급</h2>
+    <div class="cabin-grid">
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/03/18/13/02/08/49eb884d-6ddd-489e-839b-367bd94742a0/RSSC, Seven Seas Mariner, Signature Suite 1.jpg" alt="Signature Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Signature Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2018/07/16/12/25/35/8d8ede5f-9f7f-484e-b4a1-dcd30e3542cd/RSSC Mariner 2.jpg" alt="Grand Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Grand Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/03/18/13/10/16/61fcebb0-bdba-4352-b1e2-a41e1b32c2c9/RSSC, Seven Seas Mariner, Mariner Suite 1.jpg" alt="Mariner Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Mariner Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/03/18/13/17/08/440aba1f-0f22-448c-91d9-8d1e27747768/RSSC, Seven Seas Mariner, Seven Seas Suite 1.jpg" alt="Seven Seas Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Seven Seas Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2018/04/16/16/14/58/fddc4627-94ad-4723-89fe-adbe65a913ec/Mariner_Horizon_View_1083_134.jpg" alt="Horizon View Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Horizon View Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/10/31/11/2a1874ac-feef-49e0-959b-e265ae98c79e/RSSC, Seven Seas Mariner, Penthouse Suite 1.jpg" alt="Penthouse Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Penthouse Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/03/18/13/27/13/915963ac-6ce9-4b95-a6c3-64b2a3791ece/RSSC, Seven Seas Mariner, Concierge Suite.jpg" alt="Concierge Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/03/18/13/30/41/7bc5eeb3-8aa0-4173-aafc-a266e2279691/RSSC, Seven Seas Mariner, Deluxe Veranda Suite.jpg" alt="Deluxe Veranda Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Veranda Suite</div>
+  </div>
+    </div>
+
+    <h2 id="deckplan">📐 덱 플랜</h2>
+    <div class="deckplan-list">
+  <div class="deckplan-item">
+    <img src="" alt="Deck 12" loading="lazy">
+    <p>Deck 12</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 11" loading="lazy">
+    <p>Deck 11</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 10" loading="lazy">
+    <p>Deck 10</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 9" loading="lazy">
+    <p>Deck 9</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 8" loading="lazy">
+    <p>Deck 8</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 7" loading="lazy">
+    <p>Deck 7</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 6" loading="lazy">
+    <p>Deck 6</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 5" loading="lazy">
+    <p>Deck 5</p>
+  </div>
+    </div>
+
     <h2 id="book">예약 안내</h2>
     <p>Seven Seas Mariner 탑승 크루즈 상품은 크루즈링크를 통해 예약하실 수 있습니다.</p>
     <ul>
@@ -123,6 +361,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#intro">선박 소개</a></li>
         <li><a href="#specs">선박 제원</a></li>
         
+        <li><a href="#dining">🍽️ 다이닝</a></li>
+        <li><a href="#entertainment">🎭 엔터테인먼트</a></li>
+        <li><a href="#health">💆 스파 &amp; 웰니스</a></li>
+        <li><a href="#kids">👧 키즈 클럽</a></li>
+        <li><a href="#cabins">🛏️ 객실 등급</a></li>
+        <li><a href="#deckplan">📐 덱 플랜</a></li>
         <li><a href="#book">예약 안내</a></li>
       </ul>
     </div>

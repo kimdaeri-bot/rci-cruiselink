@@ -68,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     h2[id],h3[id]{scroll-margin-top:80px}
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
+
+    .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+    @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
+    .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-info{padding:12px}
+    .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+    .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
+    .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
+    .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+    @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
 <body>
@@ -106,6 +124,250 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+    <h2 id="dining">🍽️ 다이닝</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/10/45/05/d7f8ef1d-04ea-4f07-9eac-c522090e546f/RSSC, Seven Seas Splendor, Coffee Connection 1.jpg" alt="Coffee Connection" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Coffee Connection</h3><p>So much more than a great spot for coffee – this specially designed Coffee Connection is a chic metropolitan café with an ocean view that’s impossible to beat.Sitting and chatting with newfound friend</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/10/32/58/cf0d2e7e-bff3-44e5-bde1-39daf62571fa/RSSC, Seven Seas Splendor, Prime 7 1.jpg" alt="Prime 7" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Prime 7</h3><p>From perfectly aged prime New York strip, porterhouse and succulent filet mignon to smoked salmon with a phenomenal tamarind-whiskey sauce, Prime 7 elevates classic American fare to lofty heights.A tr</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/10/38/19/b07c9d36-51b2-43ce-a028-047bf75518de/RSSC, Seven Seas Splendor, Chartreuse 1.jpg" alt="Chartreuse" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Chartreuse</h3><p>Classic French fare with a modern twist – and glorious ocean views. If Chartreuse seems familiar, you may have once stumbled upon a chic, fine-dining restaurant on a Champs-Elysees sidestreet. A fanta</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/11/17/54/6dbb273b-b49b-4cfa-8240-417430a019c5/RSSC, Seven Seas Splendor, La Veranda 1.jpg" alt="La Veranda" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>La Veranda</h3><p>Greet your days on the high seas with sumptuous breakfasts and shimmering ocean views. La Veranda features quiet alcoves, made-to-order omelettes and, for late risers, tasty lunch buffets that include</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/14/01/51/599e18ce-e3b1-4d2b-847e-420e8d877a7d/RSSC, Seven Seas Splendor, Pacific Rim 2.jpg" alt="Pacific RIm" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pacific RIm</h3><p>Prepare to be delighted by a perfect balance of delicious flavours and Zen-like ambiance. Amid dimly lit architectural details and lotus-shaped windows, dine Pan-Asian creations like Korean barbecue l</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/13/20/49/aaa934d9-d1de-4ae2-ba59-c3fb4ff22a0f/RSSC, Seven Seas Splendor, Compass Rose 1.jpg" alt="Compass Rose" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Compass Rose</h3><p>Our largest specialty restaurant on a ship full of spectacular dining options. Design your very own entrée from preferred sides, sauces, pastas and main features of beef, poultry and fish. Dessert? De</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/13/16/47/b43747bf-1a3c-4fbe-85c8-e923b6b731e9/RSSC, Seven Seas Splendor, Pool Grill.jpg" alt="Pool Grill" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pool Grill</h3><p>Al fresco dining with views of the world’s best-loved landscapes. Be inspired by the environs around Seven Seas Splendor™ while enjoying cuisines that include regional barbecues and old-fashioned dess</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/03/10/12/29/57/2768d203-e17d-48cc-b198-2fbaf42b2ed8/Regent Seven Seas Cruises Room Service 2.jpg" alt="Room Service" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Room Service</h3><p>Knowing that guests sometimes prefer to simply dine in the comfort of their suites, we offer room service around the clock. Select from an extensive room service menu and the wait staff will promptly </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/12/05/17/1aa4ab8b-2eed-4a8b-b2d1-ec3b204552db/RSSC, Seven Seas Splendor, Sette Mari at La Veranda.jpg" alt="Sette Mari at La Veranda" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sette Mari at La Veranda</h3><p>Settle into cozy, over-water alcoves for classic Italian specialties made with care. From old-school classics to modern cuisine, your Sette Mari meal will linger long as a perfect combination of atmos</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/12/12/01/a5078426-7a24-4eec-ae4a-3bda8dc43925/RSSC, Seven Seas Splendor, The Study.jpg" alt="The Study" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Study</h3><p>Guests of the most luxurious suite on the high seas — the Regent Suite on Seven Seas Splendor® — have exclusive access to The Study, a private, ornately decorated dining room that seats up to 12 guest</p></div>
+  </div>
+    </div>
+
+    <h2 id="entertainment">🎭 엔터테인먼트</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/12/09/10/09/54/9d42e8a5-bb82-46e4-8323-79a5ebacdedd/Regent Seven Seas Cruises, Seven Seas Grandeur, Meridian Lounge.jpg" alt="Meridian Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Meridian Lounge</h3><p>With an expansive bar and relaxed armchairs, this is an ideal spot to gather with new friends for a cocktail, especially after an exciting theatre performance that simply must be discussed at length.E</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/12/27/00/04d37c65-224f-4034-85c0-e9ba81123999/RSSC, Seven Seas Splendor, General Manager, Reception & Concierge 1.jpg" alt="General Manager, Reception & Concierge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>General Manager, Reception & Concierge</h3><p>Our welcoming Reception Desk is open 24 hours a day and our staff is happy to answer your questions and provide any general assistance you may need.Have your every wish, whim and want fulfilled at our</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2020/01/06/08/13/26/58b3ad1e-4b64-434f-8dd2-ec59b8d49010/Regent Seven Seas Cruises - Seven Seas Splendor - Destination Services.jpg" alt="Destination Services" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Destination Services</h3><p>The place for you to arrange onshore activities, whether one of our FREE Unlimited Shore Excursions or a unique, small-group Regent Choice Shore Excursion. All staff are eager to provide the assistanc</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/12/29/37/31d2c1b3-6472-4c0f-bcec-f34b1aef3303/RSSC, Seven Seas Splendor, Atrium.jpg" alt="Atrium" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Atrium</h3><p>Simply put, the Atrium is the very heart of Seven Seas Splendor®. With a magnificent chandelier above, the grand staircase descends to Compass Rose, our signature restaurant, creating a grand entrance</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/12/33/12/347b3206-9b61-4d20-bb1f-a7591f1793e9/RSSC, Seven Seas Splendor, Observation Lounge.jpg" alt="Observation Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Observation Lounge</h3><p>As indicated by its name, this feast for the eyes is a wonderful vantage point to enjoy staggering views as Seven Seas Splendor® enters and leaves ports of call. A whimsical chandelier and live music </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/14/01/51/c9e36b1e-8475-42da-bfe1-baf4f892707b/RSSC, Seven Seas Splendor, Splendor Lounge 1.jpg" alt="Splendor Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Splendor Lounge</h3><p>There’s no better way to whet your appetite for dinner than at this ship’s namesake lounge. Its elegant design will coax you into a state of relaxed bliss over signature cocktails and soulful sounds.A</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/14/09/54/e85d05c3-d12c-4d3b-97b7-f84d9be7be6b/RSSC, Seven Seas Splendor, Constellation Theatre 1.jpg" alt="Constellation Theatre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Constellation Theatre</h3><p>Thrill to nightly performances in our glorious, two-deck-high theatre. Plush seating and pleasing sightlines free you to focus on our lavishly staged, high-energy shows produced by our own team of Bro</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/12/51/38/e06e6098-fa4d-46f7-b46b-4a7914c37143/RSSC, Seven Seas Splendor, Card Room.jpg" alt="Card Room" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Card Room</h3><p>Seeking friendly competition? This jovial room has a clubby charm that’s both inviting and tranquil. Gather some friends for board games or Bridge, or maybe a tournament.The beautifully decorated spac</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/14/01/50/87da31e9-3143-4c5e-9e93-cd71911791cd/RSSC, Seven Seas Splendor, Casino.jpg" alt="The Casino" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Casino</h3><p>Step into an intimate, sophisticated environment filled with fun and excitement. Challenge friends at the poker table, take on the house in a thrilling game of blackjack or sip a cocktail and watch th</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/12/55/13/92036426-cc5a-40d3-ac8c-a98bdcd26889/RSSC, Seven Seas Splendor, Boutiques.jpg" alt="Boutiques" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Boutiques</h3><p>Browse designer garments, upscale handbags, exclusive fragrances and fine jewellery in an intimate and unhurried setting. A bit of shopping bliss, whether buying items for yourself or friends and fami</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/12/58/47/05c0d940-1722-49fa-9171-a1aec3a285ad/RSSC, Seven Seas Splendor, Connoisseur Club.jpg" alt="Connoisseur Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Connoisseur Club</h3><p>A very modern space with oversize leather armchairs and signature works of art, this guest favourite is more than its décor. You’ll immediately take to its low-key elegance, perhaps over a fine cigar </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/13/04/12/3ae43f6e-cd9b-4cce-a6a3-0ab75c0ab8ac/RSSC, Seven Seas Splendor, Pool Deck 1.jpg" alt="Pool Deck " loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pool Deck </h3><p>Teak accents and tasteful design make this a stylish oasis to soak up sun or go for a swim. Our Pool Deck features a lavish pool, two whirlpools and a crew dedicated to delivering refreshing drinks an</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/13/08/23/048df4f8-502a-4da4-9378-851b213ed026/RSSC, Seven Seas Splendor, Pool Bar 1.jpg" alt="Pool Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pool Bar</h3><p>Very few things equate to a pure vacation activity more than sitting at our Pool Bar. Make new friends while sipping a cocktail or frozen drink in the most laid-back atmosphere imaginable.When you env</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/13/13/34/2109f66c-3e6d-40f8-b13a-5d89ced3cb0b/RSSC, Seven Seas Splendor, Business Centre.jpg" alt="Business Centre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Business Centre</h3><p>For those who’ve chosen to leave their laptops at home, desktop computers are available at our staffed Business Centre. Of course, you may access WiFi without charge throughout the entirety of Seven S</p></div>
+  </div>
+    </div>
+
+    <h2 id="health">💆 스파 &amp; 웰니스</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/14/43/47/a8406e1b-ea7b-42a5-91bb-f0bfcf8aff24/RSSC, Seven Seas Splendor, Serene Spa & Wellness 1.jpg" alt="Serene Spa & Wellness™" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Serene Spa & Wellness™</h3><p>Enrich your travel with Serene Spa &amp; Wellness™, a globally inspired, tranquil haven of health, beauty and wellness. Relax and restore aching muscles, moisturize and rejuvenate your skin, and both </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/14/21/50/280d9bd4-56ce-4c6c-9e95-560328c087c8/RSSSC, Seven Seas Splendor, Fitness Centre.jpg" alt="Fitness Centre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Fitness Centre</h3><p>Look after yourself at sea. Take part in Pilates, yoga and aerobics classes or help yourself to spinning bikes, dumbbells, treadmills, Technogym Strength Machines, workout mats and step benches. For g</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/14/26/17/f6d13a06-05e0-4621-9433-9f53dfc0864a/RSSC, Seven Seas Splendor, Infinity-Edge Plunge Pool.jpg" alt="Infinity-Edge Plunge Pool" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Infinity-Edge Plunge Pool</h3><p>Go for a swim, stay for the views. Wherever you are in our Infinity-Edge Plunge Pool the views are dramatic, as the pool contours to the stern of the ship.Surrounded by an inviting teak-deck terrace f</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/14/39/09/642463fc-60fc-496c-9a7e-a19708deab99/RSSC, Seven Seas Splendor, Sports Deck.jpg" alt="Sports Deck" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sports Deck</h3><p>Practice your golf swing, go for a jog around the track, or gather some new friends for a spirited (but fun) game of bocce ball, all while taking in stunning views and fresh, ocean air.You may visit o</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/14/21/35/b5e4c293-9086-4ddd-bc08-33df39ef005c/RSSC, Seven Seas Mariner, Jogging Track.jpg" alt="Jogging Track" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Jogging Track</h3><p>If you have a regular walking or running routine, fear not – your healthy habit can be maintained while cruising the high seas. Regardless of the speed you traverse our track, magnificent views await.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/14/31/20/ae794423-8220-462c-85fa-4601d9016d92/RSSC, Seven Seas Mariner, Bocce Court.jpg" alt="Bocce Court" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Bocce Court</h3><p>Gather some friends and engage in a game originated in 5,000 BC. Our Bocce Court has the requisite equipment – a pallina and 8 larger balls – for you to engage in a spirited contest as the sun sets.Th</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/14/23/36/5ce56bb5-732f-42c5-ba3c-351cee76dbeb/RSSC, Seven Seas Mariner, Paddle Tennis Court.jpg" alt="Paddle Tennis Court" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Paddle Tennis Court</h3><p>Our completely screened and well-maintained paddle tennis court will beckon you and your teammates to win at all costs – or simply enjoy a fun game of paddle tennis or two.One look at our Paddle Tenni</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2020/01/06/11/25/58/c7e74db7-a7f4-4689-b99d-ad120f583450/Regent Seven Seas Cruises - Seven Seas Explorer - Putting Green.jpg" alt="Putting Green" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Putting Green</h3><p>Not nearly as serious as the Golf Net, our Putting Greens invite you to gather friends – perhaps after an afternoon cocktail – for a spirited round of putt-putt golf or two.While the Golf Net is meant</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/05/14/33/22/ce9e8865-bbb6-4d5e-ad14-253409e85639/RSSC, Seven Seas Mariner, Shuffleboard.jpg" alt="Shuffleboard" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Shuffleboard</h3><p>Probably the game most associated with cruise ships, shuffleboard onboard Seven Seas Splendor® is a more dramatic affair. High atop your ship, you won’t mind awaiting your turn as you take in glorious</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/15/19/18/dce89a47-3ee7-4399-be27-33b319a1c9c5/RSSC, Seven Seas Splendor, Golf Net.jpg" alt="Golf Net" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Golf Net</h3><p>If the mood strikes to work on your fairway swing, head to our Golf Net. All equipment is provided for you to practice your swing while soaking up the most glorious views imaginable.The glorious ocean</p></div>
+  </div>
+    </div>
+
+    <h2 id="kids">👧 키즈 클럽</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/30/12/34/35/98a534f8-9aac-412a-9ddb-bdec2e0f9281/Regent Seven Seas Cruises Seven Seas Explorer Club Mariner.jpg" alt="Club Mariner" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Club Mariner</h3><p>Families with young travellers will enjoy our Club Mariner Youth Program on select voyages. Children ages 5 to 17 can participate in a range of specialised activities, from mini-putt tournaments to da</p></div>
+  </div>
+    </div>
+
+    <h2 id="cabins">🛏️ 객실 등급</h2>
+    <div class="cabin-grid">
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/03/19/12/38/56/f301e95c-b9d1-4196-b33e-3dc82a47d7ba/RSSC, Seven Seas Splendor, Regent Suite 13.jpg" alt="Regent Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Regent Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/08/06/16/21/37/9ce90d68-ddae-4153-9d29-7aa63699a78c/RSSC, Seven Seas Splendor, Master Suite 1.jpg" alt="Signature Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Signature Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2022/02/24/09/30/00/9312032e-86cf-45e3-8b96-09d8215ef9a2/RSSC Seven Seas Splendor Grand Suite 1.jpg" alt="Grand Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Grand Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2022/02/24/09/38/03/24a0d972-f838-415e-97c0-cbb46c77c458/RSSC Seven Seas Splendor Splendor Suite.jpg" alt="Splendor Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Splendor Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/03/19/13/07/45/458693bf-1509-4216-b97e-3cdf01385736/RSSC, Seven Seas Splendor, Seven Seas Suite 1.jpg" alt="Seven Seas Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Seven Seas Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/03/19/13/14/39/ecac065e-e739-4e36-9d72-66f2d5ccf78b/RSSC, Seven Seas Splendor, Penthouse Suite 1.jpg" alt="Penthouse Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Penthouse Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/10/24/08/32/31/b678c461-87c9-4aed-8348-8a17f880df25/Regent Seven Seas SPLENDOR Concierge Suite LR 1.png" alt="Concierge Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/09/59/42/03f39f49-f56f-49a8-8fcc-e4b0105ff3b0/RSSC, Seven Seas Splendor, Concierge Suite.jpg" alt="Serenity Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Serenity Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/10/17/25/b3d20240-e664-4358-bac6-d24ddcfbb912/RSSC, Seven Seas Splendor, Deluxe Veranda Suite.jpg" alt="Deluxe Veranda Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Veranda Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/08/07/10/17/25/b3d20240-e664-4358-bac6-d24ddcfbb912/RSSC, Seven Seas Splendor, Deluxe Veranda Suite.jpg" alt="Veranda Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Veranda Suite</div>
+  </div>
+    </div>
+
+    <h2 id="deckplan">📐 덱 플랜</h2>
+    <div class="deckplan-list">
+  <div class="deckplan-item">
+    <img src="" alt="Deck 14" loading="lazy">
+    <p>Deck 14</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 12" loading="lazy">
+    <p>Deck 12</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 11" loading="lazy">
+    <p>Deck 11</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 10" loading="lazy">
+    <p>Deck 10</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 9" loading="lazy">
+    <p>Deck 9</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 8" loading="lazy">
+    <p>Deck 8</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 7" loading="lazy">
+    <p>Deck 7</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 6" loading="lazy">
+    <p>Deck 6</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 5" loading="lazy">
+    <p>Deck 5</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 4" loading="lazy">
+    <p>Deck 4</p>
+  </div>
+    </div>
+
     <h2 id="book">예약 안내</h2>
     <p>Seven Seas Splendor 탑승 크루즈 상품은 크루즈링크를 통해 예약하실 수 있습니다.</p>
     <ul>
@@ -123,6 +385,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#intro">선박 소개</a></li>
         <li><a href="#specs">선박 제원</a></li>
         
+        <li><a href="#dining">🍽️ 다이닝</a></li>
+        <li><a href="#entertainment">🎭 엔터테인먼트</a></li>
+        <li><a href="#health">💆 스파 &amp; 웰니스</a></li>
+        <li><a href="#kids">👧 키즈 클럽</a></li>
+        <li><a href="#cabins">🛏️ 객실 등급</a></li>
+        <li><a href="#deckplan">📐 덱 플랜</a></li>
         <li><a href="#book">예약 안내</a></li>
       </ul>
     </div>

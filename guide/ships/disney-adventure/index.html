@@ -68,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     h2[id],h3[id]{scroll-margin-top:80px}
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
+
+    .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+    @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
+    .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-info{padding:12px}
+    .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+    .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
+    .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
+    .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+    @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
 <body>
@@ -106,6 +124,202 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+    <h2 id="dining">🍽️ 다이닝</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/09/27/52/db8a1dbd-0a07-48e7-97a2-90bc31cfa77b/Disney Cruise Line Animators Palate © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas..jpg" alt="Animator's Palate & Animator's Table" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Animator's Palate & Animator's Table</h3><p>Celebrate the renowned artistry of Disney and Pixar at 2 distinct restaurants—Animator’s Palate and Animator’s Table. Watch in amazement as your own drawings are magically brought to life and featured</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/09/32/53/55acd3c4-6b6c-4e32-9387-c6255e8f8761/Disney Adventure Enchanted Summer Restaurant © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist’s impression.jpg" alt="Enchanted Summer Restaurant" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Enchanted Summer Restaurant</h3><p>Celebrate the spirit of the season at this whimsical buffet-style restaurant inspired by the Disney films Tangled and Frozen.Rotational DiningEnchanted Summer Restaurant is a Main Dining restaurant wi</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/09/48/40/c3f20bc5-96bd-4477-819b-ce9768126f5c/Disney Adventure Mike and Sulleys © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist’s impression. © 2026 DisneyPixar. All Rights Reserved..jpg" alt="Mike and Sulley's Flavors of Asia" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Mike and Sulley's Flavors of Asia</h3><p>Indulge in a delicious meal celebrating the artistry of Asian culture and cuisine. Choose between 4 signature dining experiences, each a first for Disney Cruise Line:Sushi &amp; SashimiStop by this op</p></div>
+  </div>
+    </div>
+
+    <h2 id="entertainment">🎭 엔터테인먼트</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/10/29/47/4dbfb22c-a64d-4870-af2a-3baf7e43859a/Disney Adventure Buccaneer Bar © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist's Impression.jpg" alt="Buccaneer Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Buccaneer Bar</h3><p>Walk the plank to this swashbuckling pub inspired by the legendary Captain Hook himself. Whether ye be kickin' yer boots up in the main bar area or lounging in one of 2 private “captain’s quarters” ba</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/10/30/02/d1a1206d-ac93-4700-9cb4-6b6a12e370f3/Disney Adventure Tiana's Bayou Lounge © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="Tiana's Bayou Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Tiana's Bayou Lounge</h3><p>Sit back and relax under an enchanting canopy of magnolia blossoms, Spanish moss and twinkling lights that look just like dancing fireflies.At Tiana’s Bayou Lounge, you’ll find a wide variety of refre</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/10/29/47/cd967949-e3f9-43ad-bbb4-2b4574abdc22/Disney Adventure Wayfinder Bay © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist's Impression.jpg" alt="Wayfinder Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Wayfinder Bar</h3><p>Follow your heart to relaxation and refreshment at this breezy, open-air oasis nestled within the Moana-inspired Wayfinder Bay.Offering views of the sea, shore and sunset from the back of Deck 10, Way</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/10/30/02/695f2127-3fb5-4464-9d38-225e5c1009a0/Disney Adventure Concierge Lounge © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist's Impression.jpg" alt="Concierge Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Concierge Lounge</h3><p>Step into a whole new world at this refined lounge inspired by the mythical city of Agrabah from the Disney animated film Aladdin. Unwind and savor refreshments and gourmet bites throughout the day. T</p></div>
+  </div>
+    </div>
+
+    <h2 id="health">💆 스파 &amp; 웰니스</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/10/47/26/883c360a-316f-4880-9b34-894f044e26a3/Disney Adventure Spa © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="Spa, Salon & Fitness" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Spa, Salon & Fitness</h3><p>Nature meets luxury at this oasis of relaxation. Indulge in soothing spa and beauty treatments designed to rejuvenate the mind, body and spirit. Or unwind in the expansive Thermal Spa outfitted with w</p></div>
+  </div>
+    </div>
+
+    <h2 id="kids">👧 키즈 클럽</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/13/18/13/dd1862c9-f0bb-469c-b72f-d35f2740a421/Disney Adventure Oceaneer Club © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="Disney’s Oceaneer Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Disney’s Oceaneer Club</h3><p>Kids ages 3 to 10 can let their imaginations soar as they interact with beloved Characters in themed spaces inspired by favorite Disney, Pixar and Marvel stories. Storytelling and immersive games are </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/13/18/13/ff678259-1c1c-4fb9-9591-54b4a4f48b05/Disney Cruise Line EDGE © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="Edge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Edge</h3><p>Tweens ages 11 to 14 have a vibrant hangout all their own. From the outside, this cool retreat is disguised as an ordinary shop on San Fransokyo Street. But inside, it is designed as if tweens had tak</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2026/03/10/13/18/13/30524683-b936-4093-8d06-a032e9723907/Disney Cruise Line Vibe © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas.jpg" alt="Vibe" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Vibe</h3><p>Teens ages 14 to 17 have an ultra-exclusive retreat all their own. With a cool, retro design inspired by a vintage record store, the club is the perfect spot to watch movies, enjoy games and take the </p></div>
+  </div>
+    </div>
+
+    <h2 id="cabins">🛏️ 객실 등급</h2>
+    <div class="cabin-grid">
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/18/09/28f0ebd9-df82-4960-905d-787cd35c90e3/Disney Cruise Line Disney Adventure Concierge Royal Suite © 2026 Disney. All Rights Reserved. Ships’ Registry The Bahamas. Artist's Impression. png.jpg" alt="Concierge Royal Suites with Oceanview Verandah" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge Royal Suites with Oceanview Verandah</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/44/16/421b8112-2cb2-48f0-94d7-9bfc1ba2ee22/Disney Cruise Line Disney Adventure Concierge Suite 1-Bedroom WEB © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist's Impression.jpg" alt="Concierge 1-Bedroom Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge 1-Bedroom Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/44/16/7997b7c3-f0c3-4692-8576-bb692af55ca2/Disney Cruise Line Disney Adventure Concierge Suite Oceanview Verandah WEB © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist's Impression.jpg" alt="Concierge Suite with Oceanview Verandah" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge Suite with Oceanview Verandah</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/44/16/8c449c33-3f66-4f3c-b76e-bbbeb124e818/Disney Cruise Line Disney Adventure Concierge Oceanview Suite WEB © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist's Impression.jpg" alt="Concierge Oceanview Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge Oceanview Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/44/16/e9be57a3-64c3-4446-8298-5340848d8146/Disney Cruise Line Disney Adventure Concierge Suite Family WEB © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist's Impression.jpg" alt="Concierge Family Oceanview Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge Family Oceanview Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/25/05/4556c009-3195-4ff4-8530-2220d6ed918b/Disney Cruise Line Disney Adventure Concierge Oceanview Verandah © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist’s impression.jpg" alt="Concierge Family Oceanview with Verandah" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge Family Oceanview with Verandah</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/44/16/2eb918a1-bb3f-4905-9e4d-49c650ee24d3/Disney Cruise Line Disney Adventure Concierge Family Garden View with Verandah WEB © 2026 Disney. All Rights Reserved. Ships’ Registry- The Bahamas. Artist's Impression.jpg" alt="Concierge Family Garden View with Verandah Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge Family Garden View with Verandah Stateroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/18/09/e794811c-7f5d-40bc-aa00-adb2da2f9419/Disney Cruise Line Disney Adventure Deluxe Verandah with Oceanview © 2026 Disney. All Rights Reserved. Ships’ Registry The Bahamas.jpg" alt="Deluxe Oceanview with Verandah Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Oceanview with Verandah Stateroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/25/05/4b2fe7ee-2677-40a3-90cd-f51b574b1d59/Disney Cruise Line Disney Adventure Garden View Deluxe Verandah © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist’s impression..jpg" alt="Deluxe Garden View with Verandah Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Garden View with Verandah Stateroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/44/16/28304723-1b55-41ee-83b9-fe224aba372b/Disney Cruise Line Disney Adventure Deluxe Reef View with Veranda WEB © 2026 Disney. All Rights Reserved. Ships’ Registry- The Bahamas. Artist's Impression.jpg" alt="Deluxe Reef View with Verandah Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Reef View with Verandah Stateroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/44/16/af39ef22-18fa-4652-8ce7-327c3aae66bc/Disney Cruise Line Disney Adventure Stateroom with Veranda WEB © 2026 Disney. All Rights Reserved. Ships’ Registry- The Bahamas. Artist's Impression.jpg" alt="Stateroom with Verandah" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Stateroom with Verandah</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/35/03/7ee98069-d0c6-4da8-b61e-d38553b9eac3/Disney Cruise Line Disney Adventure Deluxe Oceanview Stateroom © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist's Impression.jpg" alt="Deluxe Oceanview Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Oceanview Stateroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/18/09/e2fe462e-dd1e-466e-9f6d-8c027fcee5c2/Disney Cruise Line Disney Adventure Oceanview Stateroom © 2026 Disney. All Rights Reserved. Ships’ Registry The Bahamas.jpg" alt="Oceanview Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Oceanview Stateroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/35/02/55f77b58-4b26-4beb-92dd-22700738b06e/Disney Cruise Line Disney Adventure Deluxe Inside Reef View © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist's Impression.jpg" alt="Deluxe Inside Stateroom with Reef View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Inside Stateroom with Reef View</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/35/03/c3c5bbf0-2286-41aa-9e2c-76571cbe4479/Disney Cruise Line Disney Adventure Deluxe Inside Stateroom © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist's Impression.jpg" alt="Deluxe Inside Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Inside Stateroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/18/09/9b979b15-b428-4f13-a698-41b498bb31b4/Disney Cruise Line Disney Adventure Inside Stateroom © 2026 Disney. All Rights Reserved. Ships’ Registry The Bahamas. Artist's Impression.jpg" alt="Inside Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Inside Stateroom</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2026/03/09/12/35/03/1a12390b-702e-4a0e-b373-96fc6b02348d/Disney Cruise Line Disney Adventure Inside Family Stateroom WEB © 2026 Disney. All Rights Reserved. Ships’ Registry - The Bahamas. Artist's Impression.jpg" alt="Concierge Inside Family Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Concierge Inside Family Stateroom</div>
+  </div>
+    </div>
+
+    <h2 id="deckplan">📐 덱 플랜</h2>
+    <div class="deckplan-list">
+  <div class="deckplan-item">
+    <img src="" alt="Deck 19" loading="lazy">
+    <p>Deck 19</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 18" loading="lazy">
+    <p>Deck 18</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 17" loading="lazy">
+    <p>Deck 17</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 16" loading="lazy">
+    <p>Deck 16</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 15" loading="lazy">
+    <p>Deck 15</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 13" loading="lazy">
+    <p>Deck 13</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 12" loading="lazy">
+    <p>Deck 12</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 11" loading="lazy">
+    <p>Deck 11</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 10" loading="lazy">
+    <p>Deck 10</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 9" loading="lazy">
+    <p>Deck 9</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 8" loading="lazy">
+    <p>Deck 8</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 7" loading="lazy">
+    <p>Deck 7</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 6" loading="lazy">
+    <p>Deck 6</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 5" loading="lazy">
+    <p>Deck 5</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 4" loading="lazy">
+    <p>Deck 4</p>
+  </div>
+    </div>
+
     <h2 id="book">예약 안내</h2>
     <p>Disney Adventure 탑승 크루즈 상품은 크루즈링크를 통해 예약하실 수 있습니다.</p>
     <ul>
@@ -123,6 +337,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#intro">선박 소개</a></li>
         <li><a href="#specs">선박 제원</a></li>
         
+        <li><a href="#dining">🍽️ 다이닝</a></li>
+        <li><a href="#entertainment">🎭 엔터테인먼트</a></li>
+        <li><a href="#health">💆 스파 &amp; 웰니스</a></li>
+        <li><a href="#kids">👧 키즈 클럽</a></li>
+        <li><a href="#cabins">🛏️ 객실 등급</a></li>
+        <li><a href="#deckplan">📐 덱 플랜</a></li>
         <li><a href="#book">예약 안내</a></li>
       </ul>
     </div>

@@ -68,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     h2[id],h3[id]{scroll-margin-top:80px}
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
+
+    .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+    @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
+    .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-info{padding:12px}
+    .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+    .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
+    .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
+    .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+    @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
 <body>
@@ -106,6 +124,322 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+    <h2 id="dining">🍽️ 다이닝</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/14/24/28/5342d196-a268-4ce4-8118-08edc921d93c/MSC Cruises MSC Poesia Il Palladio Restaurant 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Il Palladio Restaurant" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Il Palladio Restaurant</h3><p>Located on Deck 6, serving a wide variety of dishes, prepared by hand with the freshest ingredients, there's a great variety of choice to be had in the restaurants. One of two main dining rooms onboar</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/14/29/19/86a2c0a9-d8a7-4e4e-9b8e-45de9edcbc60/MSC Cruises MSC Poesia Il Le Fontane Restaurant 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Le Fontane Restaurant" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Le Fontane Restaurant</h3><p>Located on deck 5, serving a wide variety of dishes, prepared by hand with the freshest ingredients, there's a great variety of choice to be had in the restaurants . One of two main dining rooms onboa</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/03/16/30/59/83505373-6aa0-4222-81d9-c1527da5283e/MSC Cruises, MSC Poesia, L'Obelisco Buffet Restaurant 7.jpg" alt="Villa Pompeiana Buffet Restaurant" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Villa Pompeiana Buffet Restaurant</h3><p>Open for dinner only from 6pm to 11pm and with reservations recommended, examples of dishes served are Tuna tartare, swordfish carpaccio and steamed king crab to start, with Tagliolini pasta with lobs</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/14/45/42/d04b4f0a-6a9e-490b-aca9-109dee256cd7/MSC Cruises MSC Poesia Kaito Sushi Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Kaito Sushi Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Kaito Sushi Bar</h3><p>If you're looking for something a little different that's fresh as the sea and oh so healthy then the Kaito Sushi Bar is the place to go. A unique concept where food is all prepared by hand by our exp</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/15/04/17/14c23a65-a21a-46e2-9391-09e07fe8e962/MSC Cruises MSC Poesia MSC Yacht Club Restaurant WEB ©MSC Rights.jpg" alt="MSC Yacht Club Restaurant" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>MSC Yacht Club Restaurant</h3><p>The MSC Yacht Club Restaurant is an exclusive and private venue reserved only for you. Embark on a culinary journey and delight in gourmet creations. From à la carte menus with premium Mediterranean a</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/14/57/07/bdaa73c5-1c85-41a8-99eb-ab0b32855284/MSC Cruises MSC Poesia Butcher's Cut WEB ©MSC Rights.jpg" alt="Butcher's Cut" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Butcher's Cut</h3><p>A restaurant where premium, expertly prepared cuts of meat are savoured in an elegant setting and for lovers of fresh flavours.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/02/15/45/23/174/MSC_Fantasia_Class_Icecream_bar.jpg" alt="Mojito Ice Cream Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Mojito Ice Cream Bar</h3><p>Situated on deck 13, The gelato comes in a wide variety of around 16 different flavours from vanilla, chocolate, strawberry, pineapple and coffee to pistachio, kiwi and lemon.</p></div>
+  </div>
+    </div>
+
+    <h2 id="entertainment">🎭 엔터테인먼트</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/12/03/08/49/06/e3d7787f-7891-4cdb-9f27-f60cc3c9e4b3/MSC Cruises MSC Poesia Theatre 0.jpg" alt="Teatro Carlo Felice" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Teatro Carlo Felice</h3><p>You’d normally have to travel to New York to see top-end shows, but thanks to our Broadway-style theatres you can enjoy superlative entertainment with an international line-up of artists without havin</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/12/03/08/53/00/7985b332-095b-48e1-b881-cf4e99ed2c79/MSC Cruises MSC Poesia Disco 9.jpg" alt="S32 Disco" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>S32 Disco</h3><p>With a live DJ and open from 11.00pm until late,  the ship's disco located on deck 14 and served by its own bar. It has seating for 172 guests.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2019/08/15/14/30/48/5846bf46-0a82-4a62-a35d-783c4c590d33/MSC Cruises MSC Poesia Casino.jpg" alt="Casino Royal" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Casino Royal</h3><p>Our casinos are elegantly designed, featuring games for all types of players. You’ll be able to try your hand at Roulette or Blackjack, challenge yourself at one of our Poker tables, or choose among a</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/15/36/08/06496d29-db6c-4fa0-b43c-85fd7191a606/MSC Cruises MSC PoesiaLe Rendez-Vous Piano Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Le Rendez-Vous Piano Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Le Rendez-Vous Piano Bar</h3><p>The 142 seat Piano Bar on deck 5 is the ship's reception bar, featuring live piano music and accompanying orchestra.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/15/43/25/4e917819-881f-4ce6-b835-f5600d47f76b/MSC Cruises MSC Poesia Il Grappolo d’Oro Lounge & Wine Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Il Grappolo d’Oro Lounge & Wine Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Il Grappolo d’Oro Lounge & Wine Bar</h3><p>The Lounge and Wine Tasting Bar with tapas and live music and can be found on deck 7 of the ship with seating for 135 guests.Each day special wine tastings are accompanied by different bites of food, </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/07/676/MSC_Musica_Class_blue_velvet_2.jpg" alt="Bar dei Poetii" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Bar dei Poetii</h3><p>The Coffee Bar is an additional charge bar, situated on deck 6 seating 220 guests and with complimentary snacks ranging from pastries to cookies and potato chips served with all drinks purchased.Coffe</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/15/54/01/fa3d8857-da31-4bfb-b3bc-8f7a7a5a7ea1/MSC Cruises MSC Poesia Giada Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="The Giada Bar & Bar Smeraldo" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Giada Bar & Bar Smeraldo</h3><p>The Ships cocktail bars are the ideal location for guests to enjoy a pre-dinner cocktail with live musical entertainment.They are located on deck 6 with seating for up to 45 guests in each bar.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/15/58/08/99d515bc-45bc-490c-b141-69f1503e7949/MSC Cruises MSC Poesia Hitchcock Cigar Lounge 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="The Hitchcock Cigar Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Hitchcock Cigar Lounge</h3><p>The ship's smoking room and whiskey bar is situated on deck 7 and seats 32 guests.The Cigar Lounge offers elegant surroundings with leather settees and armchairs for guests to relax on and enjoy a cig</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/25/501/MSC_Musica_Class_library.jpg" alt="Library" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Library</h3><p>The ship's small library and reading room are located on deck 7, with seats for 15 guests. It has a small selection of books in a variety of languages for guests to borrow. It also contains a number o</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/06/56/650/MSC_Musica_Class_Art_gallery.jpg" alt="Art Gallery" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Art Gallery</h3><p>The Art Gallery can be found on deck 7 of the ship. Guests can view a range of artwork from fine prints, lithographs, water colours and oils which can be purchased during the ship's champagne art auct</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/14/218/MSC_Musica_Class_cyber_cafe.jpg" alt="Cyber café" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Cyber café</h3><p>The Cyber Cafe located on deck 7 is the ship's computer room with 17 workstations and a printer (Charges apply).Costs are around €3.33 Euros for 10 minutes in the Cyber Cafe or if guests want to spend</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/10/492/MSC_Musica_Class_card_room.jpg" alt="Card Room" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Card Room</h3><p>The ship's card room is located on deck 7 and seats 28 guests.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/16/05/16/3f2e1847-82b3-4e3d-b0d1-924e35a38039/MSC Cruises MSC Poesia Zebra Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Zebra Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Zebra Bar</h3><p>The Zebra Bar is the ship's second show lounge served by its own bar and dance floor.It is situated on deck 6 with seating for 477 guests. Entertainment and activities range from bingo, seminars, Ital</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/16/10/17/4f31a2b5-39ae-493c-9f57-18bc70a86f72/MSC Cruises MSC Poesia Pigalle Lounge 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Pigalle Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Pigalle Lounge</h3><p>The Pigalle Lounge is located on deck 7 of the Poesia and has its own bar and dance floor along with seating for 330 guests. It is a large cabaret style lounge with live shows and bands for guests' en</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/20/18/44/96f9f7e0-53d8-47ce-9cf3-11f498f3c65b/MSC Cruises MSC Poesia All-Stars Sports Bar WEB ©MSC Rights.png" alt="All-Stars Sports Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>All-Stars Sports Bar</h3><p>The vibrant new All-Stars Sports Bar invites you to unwind in a lively atmosphere, perfect for sharing great food and memorable moments.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/16/20/19/9fa9869d-96aa-4ba2-ba0c-dceb054505c4/MSC Cruises MSC Poesia Cayo Levantado 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Swimming Pool" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Swimming Pool</h3><p>If a bit of poolside therapy sounds like your idea of heaven, look no further than one of our numerous swimming pools to get your fill of sun and relaxation, while our pool attendants can cater to you</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/11/15/08/04/09/4cf22a50-1d2e-4314-b8aa-11b1236b3d58/MSC Cruises Arcade.png" alt="Arcade" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Arcade</h3><p>While away a few enjoyable hours of game play at the Arcade on board the ship. Pit your wits and skill against those of your friends in any number of typical arcade options, including video games, pin</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/16/47/13/9e1e677c-823d-4db1-8d92-9b0926c23bca/MSC Cruises MSC Poesia Reception - Guest Service ©MSC Rights - Ivan Sarfatti.jpg" alt="Reception Guest Service" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Reception Guest Service</h3><p>The Reception Guest Service can be located on Deck 5.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/16/37/53/44e43d9d-339f-4a18-a51f-674615176a27/MSC Cruises MSC Poesia Duty Free 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Shops" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Shops</h3><p>Duty FreeDiscover everything the Duty Free shop has to offer, all at tax and duty-free prices*.You can choose between top-flight international tobacco products, technology products, fine wines, chocol</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/11/15/09/38/18/b1351c34-aee4-4d97-82f6-5e1c29b938b4/MSC Photo Portrait.png" alt="Studio Photography" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Studio Photography</h3><p>Timeless Studio PhotographyA dedicated Studio Photographer will provide you with a unique photo opportunity to capture the special moments of your cruise. During a private consultation you will be pre</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/03/13/50/20/968ac0b0-7b80-47bb-a2f9-a92d5661eccc/MSC Grandiosa - Photo Gallery.jpg" alt="Photo Gallery" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Photo Gallery</h3><p>Don’t forget to explore the All-Inclusive Digital Photo Package, which includes digital files of all the photos taken by our professional photographers on board. Digital photos are available for downl</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/11/19/08/19/36/0d95e248-1a2e-4cfa-9bb8-7a974fd539fd/MSC Cruises MSC Factor.png" alt="MSC Events" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>MSC Events</h3><p>MSC FactorThink you’ve got what it takes to be a star in our on-board talent competition, The MSC Factor? Then come and showcase what you can do in the most exciting talent show at sea. Whatever your </p></div>
+  </div>
+    </div>
+
+    <h2 id="health">💆 스파 &amp; 웰니스</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/21/36/21/797ad8ff-b852-4e9d-bd36-6600b46a7f49/MSC Cruises MSC Poesia MSC Aurea Spa - Thermal Area 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="MSC Aurea Spa" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>MSC Aurea Spa</h3><p>MSC Aurea Spa boasts an exotic interior of natural stone, precious woods and rich mosaics, and is equipped with specific and massage treatment suites. Being pampered by a traditional Balinese Massage </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/16/828/MSC_Musica_Class_golf_green.jpg" alt="Sport & Fitness" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sport & Fitness</h3><p>BasketballCome to the outdoor basketball court at the Sport Centre for a chance to hang out with friends, have fun shooting hoops and enjoy a full-body workout at the same time. You may not make the l</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/09/19/12/55/12/027b21be-63da-4f52-becf-b91876610009/MSC - Hair Salon 2.jpg" alt="Beauty and Hair Salon" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Beauty and Hair Salon</h3><p>You can enjoy the expertise of highly specialised staff in aesthetic treatments to offer you excellent results and improve the relaxing effects of your cruise. Customise your cruise with the best trea</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/21/50/51/19f740b3-fb9d-4930-b1d4-0561c8b38f3f/MSC Cruises MSC Poesia Gym by TechnoGym® 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Gym by TechnoGym®" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Gym by TechnoGym®</h3><p>Fitted with authentic TechnoGym® equipment and featuring panoramic ocean views, the on-board Gym is the place to be for all those who take their fitness regime seriously. Hone your physique with a ful</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/21/36/23/cac37e28-0352-4994-8448-9dba38fe0b85/MSC Cruises MSC Poesia TOP 16 Exclusive Solarium 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Top 16 Exclusive Solarium" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Top 16 Exclusive Solarium</h3><p>The Top 16 Exclusive Solarium Can be located on Deck 16</p></div>
+  </div>
+    </div>
+
+    <h2 id="kids">👧 키즈 클럽</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/22/15/51/0cca4ae6-0628-4c02-8ec5-ca8abe24210e/MSC Cruises MSC Poesia Baby Club 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Baby Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Baby Club</h3><p>Our partnership with leading baby care brand Chicco provides a dedicated play area with facilities for babies and toddlers under 3 years old. You can leave your toddlers with our MSC Babycare staff*, </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/12/03/10/16/21/73f03854-1410-4d10-943c-b941c012faab/MSC Cruises MSC Poesia Mini Club 2.jpg" alt="Mini Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Mini Club</h3><p>The Mini Club welcomes children aged between 3 and 6 years old, bringing them new friends and lots of fun, enriched by the stimulating toys of our partnership with LEGO®. The club offers games, events</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/17/14/28/59/2db3b5da-9c70-4d15-9632-6fb5fb552ecd/MSC Cruises, Junior Club.jpg" alt="Junior Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Junior Club</h3><p>The Junior Club inspires connection and cooperation among 7 to 11-year-olds, through a wide variety of activities. Highlights range from Masterchef at Sea Juniors and Dorebro Sport competitions to our</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/17/14/28/59/d62d8386-3630-432f-8219-d48d959c06f9/MSC Cruises, Young Club.jpg" alt="Young Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Young Club</h3><p>With the Young Club, kids from 12 to 14 years old can dive into a world of discovery, involvement and interaction. Each day holds the promise of new experiences, with a dedicated programme of sport to</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/22/15/51/fcf9b3c7-e2b2-418e-9036-5a3c394bfb76/MSC Cruises MSC Poesia Teen Club 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Teen Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Teen Club</h3><p>Teenagers aged from 15 to 17 years old can look forward to having the time of their lives on board. Teen Club activities range from sports and competitions, dance contests and social network games to </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/22/15/52/334e47f5-7d8c-4661-87c0-4f778f2a9c42/MSC Cruises MSC Poesia I Dinosauri Children Playroom 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="I Dinosauri Children Playroom" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>I Dinosauri Children Playroom</h3><p>The I Dinosauri Children Playroom can be located on Deck 14.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/14/58/47/210a6102-26a8-40c8-aea7-8f5c19fa0df7/MSC Cruises, MSC Armonia, Lego Experience 1, Copyrights - MSC Rights.jpg" alt="LEGO® Experience" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>LEGO® Experience</h3><p>Once during every cruise we hold a special entertainment event called the LEGO® Experience On Board: an entire day dedicated to fun LEGO activities for the whole family to enjoy. Thanks to this specia</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/02/14/15/04/23/b52de4da-802e-421b-a317-e2729d5503b5/MSC Cruises Babies and Toddlers Services.jpg" alt="Babies and Toddlers Services" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Babies and Toddlers Services</h3><p>Baby Clubs - along with activities that the whole family can enjoy together, we offer a Baby Club onboard all our ships with dedicated activities and facilities.  MSC Baby Care Service - we have thoug</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/09/19/12/47/37/d945b2d4-de38-469f-8ec2-a33f914ce0f7/MSC - Family Dining.jpg" alt="Family Dining" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Family Dining</h3><p>Enjoy a culinary voyage of discovery with your children on an MSC Cruise: an array of international dishes and ethnic specialties will delight the whole family with flavours from around the globe.For </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/12/24/52/59f199ea-e870-49ef-9932-1c89b4cdfdab/MSC Cruises, Family Activities.jpg" alt="Family Activities" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Family Activities</h3><p>Family Game Show - this is a competition for the whole family with dance, music and selfie challenges dedicated to Kelly &amp; Kloe On Board, MSC Cruises’ original web series created for kids and fami</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/09/30/08/41/54/e56c5267-c416-4685-8de3-977e49b87840/MSC Cruises Parent Time WEB.jpg" alt="Parent Time" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Parent Time</h3><p>Wind down, lie back, chill out or dress up, and make the most of every marvellous moment.While your kids are having the time of their lives, with our expert staff, you are free to enjoy all of those t</p></div>
+  </div>
+    </div>
+
+    <h2 id="cabins">🛏️ 객실 등급</h2>
+    <div class="cabin-grid">
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/10/31/32/e2d05ea6-4152-4852-990d-f85587f90432/MSC Cruises MSC Poesia MSC Yacht Club Royal Suite With Whirlpool Bath Suite 1 ©MSC Rights.png" alt="MSC Yacht Club Royal Suite With Whirlpool Bath Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">MSC Yacht Club Royal Suite With Whirlpool Bath Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/10/52/38/990a758e-0575-4579-b0fc-6d7f42d0774a/MSC Cruises MSC Poesia MSC Yacht Club Two-Room Grand Suite 1 ©MSC Rights.jpg" alt="MSC Yacht Club Two-Room Grand Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">MSC Yacht Club Two-Room Grand Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/11/08/01/ac022073-1f6d-473a-916d-1d6a40d70369/MSC Cruises MSC Poesia MSC Yacht Club Deluxe Suite 1 ©MSC Rights.jpg" alt="MSC Yacht Club Deluxe Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">MSC Yacht Club Deluxe Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/11/17/43/bbca64e9-2eee-43c9-b0c7-760cc5763d18/MSC Cruises MSC Poesia MSC Yacht Club Interior Suite 1 ©MSC Rights.jpg" alt="MSC Yacht Club Interior Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">MSC Yacht Club Interior Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2019/08/15/13/53/34/485d3968-ed8a-44fa-a50f-68300d622233/MSC Cruises MSC Poesia Suite.jpg" alt="Premium Suite Aurea" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Premium Suite Aurea</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/11/46/59/0fc14a5d-0ea2-4e63-b388-b2699a843cb3/MSC Cruises MSC Poesia Deluxe Balcony Aurea WEB.jpg" alt="Deluxe Balcony Aurea" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Balcony Aurea</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/12/04/14/7cf612e5-1663-4dd4-959f-e37c0d0ba5fe/MSC Cruises MSC Poesia Premium Balcony 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Premium Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Premium Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/12/15/38/75e84e4a-eaf7-4863-9541-9d7803d70c7c/MSC Cruises MSC Poesia Deluxe Balcony 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Deluxe Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/12/30/05/6cf635d6-b0b2-4693-bbd3-bd415b6238f9/MSC Cruises MSC Poesia Deluxe Balcony with Partial View 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Deluxe Balcony with Partial View " loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Balcony with Partial View </div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/12/30/05/6cf635d6-b0b2-4693-bbd3-bd415b6238f9/MSC Cruises MSC Poesia Deluxe Balcony with Partial View 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Balcony Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Balcony Guarantee</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/12/53/00/fe831ede-50d1-4352-b374-0d4c1b193ff7/MSC Cruises MSC Poesia Deluxe Ocean View WEB ©MSC Rights.jpg" alt="Deluxe Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Ocean View</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/13/05/59/7fa94427-199d-4854-a0ab-f98ffe80aafa/MSC Cruises MSC Poesia Deluxe Ocean View with Obstructed View WEB ©MSC Rights.jpg" alt="Deluxe Ocean View with Obstructed View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Ocean View with Obstructed View</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/13/05/59/7fa94427-199d-4854-a0ab-f98ffe80aafa/MSC Cruises MSC Poesia Deluxe Ocean View with Obstructed View WEB ©MSC Rights.jpg" alt="Guarantee Outside" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Guarantee Outside</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/13/17/30/b1a03f3b-3994-40f2-b21e-1898933fdf2d/MSC Cruises MSC Poesia Deluxe Interior WEB ©MSC Rights.jpg" alt="Deluxe Interior" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Interior</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/21/13/17/30/b1a03f3b-3994-40f2-b21e-1898933fdf2d/MSC Cruises MSC Poesia Deluxe Interior WEB ©MSC Rights.jpg" alt="Guarantee Inside " loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Guarantee Inside </div>
+  </div>
+    </div>
+
+    <h2 id="deckplan">📐 덱 플랜</h2>
+    <div class="deckplan-list">
+  <div class="deckplan-item">
+    <img src="" alt="Deck 16 - Sport" loading="lazy">
+    <p>Deck 16 - Sport</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 15 - Alfieri" loading="lazy">
+    <p>Deck 15 - Alfieri</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 14 - Pascoli" loading="lazy">
+    <p>Deck 14 - Pascoli</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 13 - Foscolo" loading="lazy">
+    <p>Deck 13 - Foscolo</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 12 - Leopardi" loading="lazy">
+    <p>Deck 12 - Leopardi</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 11 - D'Annunzio" loading="lazy">
+    <p>Deck 11 - D'Annunzio</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 10 - Carducci" loading="lazy">
+    <p>Deck 10 - Carducci</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 9 - Ungaretti" loading="lazy">
+    <p>Deck 9 - Ungaretti</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 8 - Tasso" loading="lazy">
+    <p>Deck 8 - Tasso</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 7 - Manzoni" loading="lazy">
+    <p>Deck 7 - Manzoni</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 6 - Dante" loading="lazy">
+    <p>Deck 6 - Dante</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 5 - Petrarca" loading="lazy">
+    <p>Deck 5 - Petrarca</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 4 - Boccaccio" loading="lazy">
+    <p>Deck 4 - Boccaccio</p>
+  </div>
+    </div>
+
     <h2 id="book">예약 안내</h2>
     <p>MSC 포에시아 탑승 크루즈 상품은 크루즈링크를 통해 예약하실 수 있습니다.</p>
     <ul>
@@ -123,6 +457,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#intro">선박 소개</a></li>
         <li><a href="#specs">선박 제원</a></li>
         
+        <li><a href="#dining">🍽️ 다이닝</a></li>
+        <li><a href="#entertainment">🎭 엔터테인먼트</a></li>
+        <li><a href="#health">💆 스파 &amp; 웰니스</a></li>
+        <li><a href="#kids">👧 키즈 클럽</a></li>
+        <li><a href="#cabins">🛏️ 객실 등급</a></li>
+        <li><a href="#deckplan">📐 덱 플랜</a></li>
         <li><a href="#book">예약 안내</a></li>
       </ul>
     </div>

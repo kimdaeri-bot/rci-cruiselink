@@ -68,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     h2[id],h3[id]{scroll-margin-top:80px}
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
+
+    .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+    @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
+    .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-info{padding:12px}
+    .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+    .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
+    .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
+    .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+    @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
 <body>
@@ -106,6 +124,234 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+    <h2 id="dining">🍽️ 다이닝</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/23/16/09/22/d4538420-fd51-4170-afe8-cdedfbc6664c/Princess Sun Princess - Main Dining Room.jpg" alt="Three-level Dining Room" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Three-level Dining Room</h3><p>Three stories, an elegant design, multicourse meals guests rave about and a different experience for each level.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/23/16/09/22/c2bb39c7-fd05-4de6-8840-c0835e5b991f/Princess Sun Princess - Crown Grill.jpg" alt="Crown Grill" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Crown Grill</h3><p>Crown Grill will be found on deck 7 aft. The specialty restaurant offers an intimate dining experience in a classically elegant setting, with top-quality cuts of beef, chops, and seafood.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/23/16/09/23/e7d3460c-3307-4837-8a27-cb9e26a13124/Princess Sun Princess - The Promenade.jpeg" alt="The Promenade" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Promenade</h3><p>Snacks for the in-between times that are always a special treat</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/15/07/25/6d7ccf32-e9dc-40e7-97dc-279992153c2e/Princess Cruises Sun Princess Gelateria.png" alt="Gelateria" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Gelateria</h3><p>Located on Deck 7</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/15/34/53/bfd81108-d618-4cff-a1ca-3183341c9a89/Princess Cruises Sun Princess Alfredo's Pizzeria.jpg" alt="Alfredo's Pizzeria" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Alfredo's Pizzeria</h3><p>Serves authentic certified Neapolitan pizza made to order in a cheerful restaurant named after our executive chef.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/15/39/27/bc47c1bc-e8a3-414f-b3d0-fca181053282/Princess Cruises Sun Princess International Cafe.jpg" alt="International Café" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>International Café</h3><p>Located on Deck 9</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/23/16/09/23/13864d69-48a0-4d9c-973d-55cc70ccdff6/Princess Sun Princess - The Catch by Rudi.jpg" alt="The Catch by Rudi" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Catch by Rudi</h3><p>A celebration of all things ocean, from the menu to the setting, from Chef Rudi Sodamin, head of culinary arts.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/23/16/09/23/86f62790-db90-4621-86d7-b55883502d79/Princess Sun Princess - The Eatery.jpeg" alt="The Eatery" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Eatery</h3><p>Taste food from around the world and dine inside or outside.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/23/16/09/22/eb41c07d-12d0-4716-9834-0d0cd9300c20/Princess Sun Princess - Sabatini's Italian.jpeg" alt="Sabatini's Italian Trattoria" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sabatini's Italian Trattoria</h3><p>This favorite goes next-level with a theater- style kitchen where chefs prepare top cuts of beef.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/23/16/09/22/bb0d3db3-943e-49fb-b9ae-5c11dd312d2c/Princess Sun Princess - O'Malley's Irish Pub.jfif" alt="O'Malleys Irish Pub" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>O'Malleys Irish Pub</h3><p>Everything you'd expect from an Irish pub: great food, great drinks, lively music, and a welcoming atmosphere.</p></div>
+  </div>
+    </div>
+
+    <h2 id="entertainment">🎭 엔터테인먼트</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/23/16/09/23/56728bfd-5764-428c-a227-d137d5cc997b/Princess Sun Princess - The Piazza.jpeg" alt="The Piazza" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Piazza</h3><p>We know you enjoy sweeping views, so we built our Piazza in a sphere of glass.See the World in a Whole New LightIt’s more than ocean vistas in every direction; it’s being immersed in the world around </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2022/09/21/11/42/05/f63948e4-5cf0-49e7-93f5-9466e48a2bab/Princess Cruises Sun Princess The Dome.jpeg" alt="The Dome" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Dome</h3><p>Get ready for the greatest entertainment under the Sun.This glass-enclosed dome is multilevel AND multipurpose: pool by sunlight, stage for shows by starlight. It features acrobatic performances creat</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/25/11/01/55/f4789281-bf97-4153-b6bd-b2591299c57b/Princess Sun Princess - Bellini's.jpg" alt="Bellini's Cocktail Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Bellini's Cocktail Bar</h3><p>Located on Deck 7</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/25/11/01/56/3a45ae64-a93e-4fa2-8510-539adcdb5816/Princess Sun Princess - Crooners.jpeg" alt="Crooners" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Crooners</h3><p>Located on Deck 8</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/25/11/01/56/d9105901-a10d-4699-8466-095bef7dca26/Princess Sun Princess - Princess Arena.jpg" alt="Princess Arena" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Princess Arena</h3><p>We know you want amazing entertainment, so we made our theatre a showstopper.Our most technologically advanced performance space can shapeshift into different designs, even in the round, to suit all o</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/16/30/02/a1e2fa39-1353-47ad-b341-48c88705de52/Princess Cruises Sun Princess Good Spirits At Sea.png" alt="Good Spirits At Sea" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Good Spirits At Sea</h3><p>Located on Deck 7</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/16/39/32/13aae7c0-ad1e-4e60-86b0-62ce8452bdd8/Princess Cruises Sun Princess Wheelhouse Bar.jpg" alt="Wheelhouse Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Wheelhouse Bar</h3><p>Located on Deck 7</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/25/11/01/55/d5f7b155-72e2-409d-9cab-e955b90d6dda/Princess Sun Princess - Signature Collection.jpg" alt="Signature Collection" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Signature Collection</h3><p>Introducing the Signature Collection, exclusively on Sun Princess®. In addition to premium stateroom amenities, Signature Collection Suites include access to the Signature Restaurant, Signature Lounge</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/16/55/02/20b6fe40-6ef0-4740-a031-ad8816c43f30/Princess Cruises Sun Princess Wake View Terrace.jpg" alt="Wake View Terrace" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Wake View Terrace</h3><p>The Views Revolve Around YouIn these all-new spaces, all you gotta do to recharge is take in the ocean vistas. Our Sea View Terrace sets the tone at the front, while the new Wake View Terrace features</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/10/25/10/27/30/02d10783-bdb9-4020-bfad-bc02f7bddad0/Princess Cruises Sun Princess - Casino.jpeg" alt="Casino" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Casino</h3><p>Our largest-ever casinoWe've leveled up our Vegas-caliber gaming with our expanded Princess Casino, featuring the first “Buffalo Zone” at seaEnjoy a game of Craps aboard Star PrincessChallenge opponen</p></div>
+  </div>
+    </div>
+
+    <h2 id="health">💆 스파 &amp; 웰니스</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/17/13/42/056ea781-369a-4226-862b-a67eee623ed0/Princess Cruises Sun Princess Lido Pools.jpg" alt="Lido Pools" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Lido Pools</h3><p>Soak Up The FunWe've surrounded this preferred poolside spot with lots of options for food and drinks: Lido Grill, Lido Slice by Alfredo’s, Lido Tacos, Lido Greens, Coffee &amp; Cones and THREE bars.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/17/13/41/c7220695-710a-43a3-8708-f6ec8828c44c/Princess Cruises Sun Princess Lotus Spa.jpg" alt="Lotus Spa®" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Lotus Spa®</h3><p>The Lotus Spa®Relax and recharge in our award-winning Lotus Spa®The onboard Lotus Spa® features a wide range of treatments for full relaxation and harmony. The spa operates "a la carte,” where each se</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/17/13/41/9b409d78-0cef-41bc-b764-8f9d305e5753/Princess Cruises Sun Princess The Sanctuary.jpg" alt="The Sanctuary" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Sanctuary</h3><p>Located on Deck 18</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/17/13/40/8a7a8352-13b1-40ce-85c2-d49030d8b578/Princess Cruises Sun Princess Sea View Terrace.jpg" alt="Sea View Terrace" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sea View Terrace</h3><p>Located on Deck 16</p></div>
+  </div>
+    </div>
+
+    <h2 id="kids">👧 키즈 클럽</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/17/22/22/27532b78-4387-4e6a-a1b4-f5864474a06d/Princess Cruises Sun Princess Firefly Park Kids Club.jpg" alt="Firefly Park Kids Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Firefly Park Kids Club</h3><p>With games, themed events and activities all reserved for you. So let the adults have their fun; you’ll have yours too.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/17/22/22/f1d9d996-6cc9-4dc8-972c-8631f4dae0a0/Princess Cruises Sun Princess Neon Grove Tweens Club.jpg" alt="Neon Grove Tweens Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Neon Grove Tweens Club</h3><p>With games, themed events and activities all reserved for you. So let the adults have their fun; you’ll have yours too.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/17/22/23/517a82ee-cdcc-4729-9fe9-7c852d052bb0/Princess Cruises Sun Princess The Underground Teen Lounge.jpg" alt="The Underground Teen Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Underground Teen Lounge</h3><p>With games, themed events and activities all reserved for you. So let the adults have their fun; you’ll have yours too.</p></div>
+  </div>
+    </div>
+
+    <h2 id="cabins">🛏️ 객실 등급</h2>
+    <div class="cabin-grid">
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/13/53/09/c2f84c77-6f7c-4c51-a704-45be74016f8e/Princess Cruises Sun Princess Signature Sky Suite.jpg" alt="Signature Sky Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Signature Sky Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/13/53/11/931996e3-b4f1-4dcf-a2b8-95c4705f4ffe/Princess Cruises Sun Princess Signature Owner's Suite.jpg" alt="Signature Collections Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Signature Collections Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/13/53/12/0ef381f7-1530-4633-853d-ebb4d1d09491/Princess Cruises Sun Princess Cabana Mini-Suite.jpg" alt="Cabana Mini-Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Cabana Mini-Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/06/20/13/53/12/0ef381f7-1530-4633-853d-ebb4d1d09491/Princess Cruises Sun Princess Cabana Mini-Suite.jpg" alt="Mini-Suite" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Mini-Suite</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2022/09/21/09/06/57/d74bfeed-e321-47c7-bbc3-c630d4ed1ae4/Princess Cruises Sun Princess Deluxe Balcony Stateroom.jpeg" alt="Deluxe Balcony " loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Balcony </div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2022/09/21/09/26/00/8372e24e-bff4-4c1b-bf83-4bbf67cf467a/Princess Cruises Sun Princess Premium Oceanview Stateroom.jpeg" alt="Premium Oceanview " loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Premium Oceanview </div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2022/09/21/09/36/20/a6ce16a5-9300-4157-b152-a85394a6cf6b/Princess Cruises Sun Princess Interior Stateroom.jpeg" alt="Interior " loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Interior </div>
+  </div>
+    </div>
+
+    <h2 id="deckplan">📐 덱 플랜</h2>
+    <div class="deckplan-list">
+  <div class="deckplan-item">
+    <img src="" alt="Deck 21" loading="lazy">
+    <p>Deck 21</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 20" loading="lazy">
+    <p>Deck 20</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 19" loading="lazy">
+    <p>Deck 19</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 18" loading="lazy">
+    <p>Deck 18</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 17" loading="lazy">
+    <p>Deck 17</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 16" loading="lazy">
+    <p>Deck 16</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 15" loading="lazy">
+    <p>Deck 15</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 14" loading="lazy">
+    <p>Deck 14</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 12" loading="lazy">
+    <p>Deck 12</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 11" loading="lazy">
+    <p>Deck 11</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 10" loading="lazy">
+    <p>Deck 10</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 9" loading="lazy">
+    <p>Deck 9</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 8" loading="lazy">
+    <p>Deck 8</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 7" loading="lazy">
+    <p>Deck 7</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 6" loading="lazy">
+    <p>Deck 6</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 5" loading="lazy">
+    <p>Deck 5</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 4" loading="lazy">
+    <p>Deck 4</p>
+  </div>
+    </div>
+
     <h2 id="book">예약 안내</h2>
     <p>선 프린세스 탑승 크루즈 상품은 크루즈링크를 통해 예약하실 수 있습니다.</p>
     <ul>
@@ -123,6 +369,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#intro">선박 소개</a></li>
         <li><a href="#specs">선박 제원</a></li>
         
+        <li><a href="#dining">🍽️ 다이닝</a></li>
+        <li><a href="#entertainment">🎭 엔터테인먼트</a></li>
+        <li><a href="#health">💆 스파 &amp; 웰니스</a></li>
+        <li><a href="#kids">👧 키즈 클럽</a></li>
+        <li><a href="#cabins">🛏️ 객실 등급</a></li>
+        <li><a href="#deckplan">📐 덱 플랜</a></li>
         <li><a href="#book">예약 안내</a></li>
       </ul>
     </div>

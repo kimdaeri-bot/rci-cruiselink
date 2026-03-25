@@ -68,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     h2[id],h3[id]{scroll-margin-top:80px}
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
+
+    .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+    @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
+    .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-info{padding:12px}
+    .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+    .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
+    .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
+    .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+    @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
 <body>
@@ -106,6 +124,302 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+    <h2 id="dining">🍽️ 다이닝</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/13/32/47/124285ee-122e-498b-97c0-9be070c97e3b/MSC Cruises MSC Orchestra Villa Borghese 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Villa Borghese Restaurant" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Villa Borghese Restaurant</h3><p>Located on Deck 6, serving a wide variety of dishes, prepared by hand with the freshest ingredients, there's a great variety of choice to be had in the restaurants. One of two main dining rooms onboar</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/13/41/43/fa224d09-bdba-4610-a829-ef75d2bee663/MSC Cruises MSC Orchestra L'Ibiscus Restaurant 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="L'Ibiscus Restaurant" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>L'Ibiscus Restaurant</h3><p>Located on deck 5, serving a wide variety of dishes, prepared by hand with the freshest ingredients, there's a great variety of choice to be had in the restaurants . One of two main dining rooms onboa</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/13/50/20/a2abe744-8b6d-4dbb-a0d6-2693ead632a0/MSC Cruises MSC Orchestra 4 Seasons Buffet Restaurant 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="4 Seasons Buffet Restaurant" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>4 Seasons Buffet Restaurant</h3><p>4 Seasons is Orchestra’s à la carte restaurant situated on deck 13 offering panoramic sea views with seating for 250 guests.Open for dinner only and with reservations recommended, the Italian inspired</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/14/00/59/f20f9a36-10be-4bf5-bab7-df829fc87778/MSC Cruises MSC Orchestra Shanghai 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Shanghai" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Shanghai</h3><p>Our Asian restaurant offers authentic Japanese, Chinese and Thai dishes in an informal atmosphere. A tempting range of oriental cuisine including nigiri, sashimi, maki, temaki, dim sum, dumplings, rol</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/39/08/202/MSC_Musica_Class_Self_service_buffet_1.jpg" alt="Self Service Café" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Self Service Café</h3><p>Situated on deck 6 is the ship's buffet cafeteria and is open from 7.00am in the morning until 10.00am for buffet breakfast. Food on offer at breakfast includes a selection of pastries, muffins, bread</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/02/15/45/23/174/MSC_Fantasia_Class_Icecream_bar.jpg" alt="Ice Cream Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Ice Cream Bar</h3><p>Situated on deck 13, The gelato comes in a wide variety of around 16 different flavours from vanilla, chocolate, strawberry, pineapple and coffee to pistachio, kiwi and lemon.</p></div>
+  </div>
+    </div>
+
+    <h2 id="entertainment">🎭 엔터테인먼트</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/12/02/07/15/53/84df65b2-0aef-416b-8222-678d1ab30dff/MSC Cruises MSC Orchestra Theatre 5.jpg" alt="Covent Garden Theatre" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Covent Garden Theatre</h3><p>State of the art theatre, and the main show lounge onboard, with seating for 1,240 people, it is home to MSC Orchestra’s shows ranging from singers and jugglers to shadow puppeteers and acrobatic gymn</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/14/44/32/ed171930-24a8-4d47-9619-e3cdeaf5b132/MSC Cruises MSC Orchestra R32 Disco 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="R32 Disco" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>R32 Disco</h3><p>With a live DJ and open from 11.00pm until late,  the ship's disco located on deck 14 and served by its own bar. It has seating for 172 guests.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/14/50/30/4a89ea9c-f946-45a2-8f7e-6c12f014fab4/MSC Cruises MSC Orchestra Palm Beach Casino 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Palm Beach Casino" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Palm Beach Casino</h3><p>The ship's 630 square meter casino, situated on deck 7 accommodating 222 guests. It is served by its own bar and features games from roulette and blackjack to poker and slot machines. The Casino is op</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/14/54/50/ad07d1e9-99b1-44ab-b67c-533a0e38a7b2/MSC Cruises MSC Orchestra L'Incontro Piano Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="L'Incontro Piano Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>L'Incontro Piano Bar</h3><p>The 142 seat Piano Bar on deck 5 is the ship's reception bar, featuring live piano music and accompanying orchestra.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/14/57/59/a2a77c59-ae42-4db5-9ae4-1df72198e357/MSC Cruises MSC Orchestra La Cantinella Lounge & Wine Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Cantinella Lounge & Wine Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>La Cantinella Lounge & Wine Bar</h3><p>The Lounge and Wine Tasting Bar with tapas and live music and can be found on deck 7 of the ship with seating for 135 guests.Each day special wine tastings are accompanied by different bites of food, </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/07/676/MSC_Musica_Class_blue_velvet_2.jpg" alt="Coffee Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Coffee Bar</h3><p>The Coffee Bar is an additional charge bar, situated on deck 6 seating 220 guests and with complimentary snacks ranging from pastries to cookies and potato chips served with all drinks purchased.Coffe</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/15/03/07/3804fe06-837b-462c-bf22-97cf54d49084/MSC Cruises MSC Orchestra The Purple Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="The Purple Bar & Zaffiro Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Purple Bar & Zaffiro Bar</h3><p>The Ships cocktail bars are the ideal location for guests to enjoy a pre-dinner cocktail with live musical entertainment.They are located on deck 6 with seating for up to 45 guests in each bar.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/15/14/32/f79f294e-9eda-49e4-8132-852044ad888a/MSC Cruises MSC Orchestra La Cubana Cigar Lounge 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Cubana Cigar Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>La Cubana Cigar Lounge</h3><p>The ship's smoking room and whiskey bar is situated on deck 7 and seats 32 guests.The Cigar Lounge offers elegant surroundings with leather settees and armchairs for guests to relax on and enjoy a cig</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/12/02/07/17/29/a45802f6-dbba-4ae1-9811-91c39797ea33/MSC Cruises MSC Orchestra Library 1.jpg" alt="Library" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Library</h3><p>The ship's small library and reading room are located on deck 7, with seats for 15 guests. It has a small selection of books in a variety of languages for guests to borrow. It also contains a number o</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/12/02/07/25/29/fb5818d5-c6a9-4205-8a9d-2a74b90846ea/MSC Cruises MSC Orchestra Art Arcade 0.jpg" alt="Art Arcade" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Art Arcade</h3><p>The Art Arcade can be found on deck 7 of the ship. Guests can view a range of artwork from fine prints, lithographs, water colours and oils which can be purchased during the ship's champagne art aucti</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/12/02/07/23/23/1a27576a-ff12-4bb8-8b92-813e8febc63b/MSC Cruises MSC Orchestra Internet Cafe 1.jpg" alt="Internet Café" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Internet Café</h3><p>Internet Cafe is located on deck 7.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/15/24/55/eff720b9-c3b3-4a84-8aa3-925f9e3c6ae1/MSC Cruises MSC Orchestra Card Room ©MSC Rights - Ivan Sarfatti.jpg" alt="Card Room" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Card Room</h3><p>The ship's card room is located on deck 7 and seats 28 guests.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/12/02/07/28/40/e9457ccc-c734-43f3-bebb-61030f6736c9/MSC Cruises MSC Orchestra Shops and Boutiques 3.jpg" alt="Shops & Boutiques" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Shops & Boutiques</h3><p>There are a variety of shops and boutique onboard. From the MSC Logo shop that sells MSC clothes, souvenirs and toys, Le Parfum selling a range of cosmetics and perfumes including Dior and Marc Jacobs</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/16/27/26/f8bc561d-9317-447d-9f20-7acd22e07a2c/MSC Cruises MSC Orchestra Savannah Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Savannah Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Savannah Bar</h3><p>The Savannah Bar is the ship's second show lounge served by its own bar and dance floor.It is situated on deck 6 with seating for 477 guests. Entertainment and activities range from bingo, seminars, I</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/16/30/43/43a7e8b4-77d8-4c0a-bc6c-6aa23ad19dcb/MSC Cruises MSC Orchestra Shaker Lounge 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Shaker Lounge" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Shaker Lounge</h3><p>The Shaker Lounge is located on deck 7 of the Orchestra and has its own bar and dance floor along with seating for 330 guests. It is a large cabaret style lounge with live shows and bands for guests' </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/24/10/28/07/d1b6e0e4-e879-4571-bd17-d1be7af105d9/MSC Cruises MSC Orchestra Acapulco 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Swimming Pools" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Swimming Pools</h3><p>If a bit of poolside therapy sounds like your idea of heaven, look no further than one of our numerous swimming pools to get your fill of sun and relaxation, while our pool attendants can cater to you</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/11/15/09/38/18/b1351c34-aee4-4d97-82f6-5e1c29b938b4/MSC Photo Portrait.png" alt="Photo Portrait" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Photo Portrait</h3><p>A dedicated Studio Photographer will provide you with a unique photo opportunity to capture the special moments of your cruise. During a private consultation you will be presented with the best locati</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/11/15/09/37/15/b8ae17b6-b8f5-4e22-94fe-3536c3992b05/MSC Photo Shop.png" alt="Photo Shop" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Photo Shop</h3><p>Smile! Our professional team of photographers constantly roam the ship, capturing wonderful memories every day. Be sure to stroll through the Photo Gallery daily, so you don’t miss one of their great </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/11/15/08/04/09/4cf22a50-1d2e-4314-b8aa-11b1236b3d58/MSC Cruises Arcade.png" alt="Arcade" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Arcade</h3><p>While away a few enjoyable hours of game play at the Arcade on board the ship. Pit your wits and skill against those of your friends in any number of typical arcade options, including video games, pin</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/26/17/12/28/59eda8a5-dfef-4106-85a1-3d964515fd31/MSC Cruises, MSC Orchestra, Photo Gallery, MSC Rights2.jpg" alt="Photo Gallery" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Photo Gallery</h3><p>Don’t forget to explore the All-Inclusive Digital Photo Package, which includes digital files of all the photos taken by our professional photographers on board. Digital photos are available for downl</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/26/17/35/53/119e7d03-5e38-427f-a69a-1f8e16f5bc87/MSC Cruises, MSC Orchestra, Reception - Guest Services, MSC Rights2.jpg" alt="Reception - Guest Services" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Reception - Guest Services</h3><p>The Reception - Guest Services can be located on deck 5.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/03/16/21/28/59940008-ab94-4564-a773-39b0b813bc94/MSC - MSC Factor 1.jpg" alt="MSC Events" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>MSC Events</h3><p>MSC FactorThink you’ve got what it takes to be a star in our on-board talent competition, The MSC Factor? Then come and showcase what you can do in the most exciting talent show at sea. Whatever your </p></div>
+  </div>
+    </div>
+
+    <h2 id="health">💆 스파 &amp; 웰니스</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/24/11/43/41/97b26c48-7ee6-4295-a123-2b7f9938700f/MSC Cruises MSC Orchestra, MSC Aurea Spa - Thermal Area 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="MSC Aurea Spa" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>MSC Aurea Spa</h3><p>MSC Aurea Spa boasts an exotic interior of natural stone, precious woods and rich mosaics, and is equipped with specific and massage treatment suites. Being pampered by a traditional Balinese Massage </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/24/12/10/42/f917ddb5-ebbc-4f33-99eb-a9c9cb0641aa/MSC Cruises MSC Orchestra, MSC Aurea Spa - Nail Salon ©MSC Rights - Ivan Sarfatti.jpg" alt="Beauty and Hair Salon" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Beauty and Hair Salon</h3><p>You can enjoy the expertise of highly specialised staff in aesthetic treatments to offer you excellent results and improve the relaxing effects of your cruise. Customise your cruise with the best trea</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/24/12/23/11/dd5a7c68-e25f-4f5d-b5eb-895326aeb5e6/MSC Cruises MSC Orchestra, Gym by TechnoGym® 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Gym by TechnoGym®" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Gym by TechnoGym®</h3><p>Fitted with authentic TechnoGym® equipment and featuring panoramic ocean views, the on-board Gym is the place to be for all those who take their fitness regime seriously. Hone your physique with a ful</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/11/16/08/34/22/d9d3954b-5a26-4937-9a8c-17302b2a590c/MSC Cruises Walking Track.png" alt="Sport & Fitness" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sport & Fitness</h3><p>BasketballCome to the outdoor basketball court at the Sport Centre for a chance to hang out with friends, have fun shooting hoops and enjoy a full-body workout at the same time. You may not make the l</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/24/11/18/33/909e0cc3-17cd-4a09-91af-d72f0e039b79/MSC Cruises MSC Orchestra, Top 16 Exclusive Solarium 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Top 16 Exclusive Solarium" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Top 16 Exclusive Solarium</h3><p>The Top 16 Exclusive Solarium Can be located on Deck 16</p></div>
+  </div>
+    </div>
+
+    <h2 id="kids">👧 키즈 클럽</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2019/06/17/14/52/29/28856b2b-a70c-40bf-b6b6-3eb31e40080a/MSC Cruises MSC Armonia Baby Club.jpg" alt="Baby Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Baby Club</h3><p>Our partnership with leading baby care brand Chicco provides a dedicated play area with facilities for babies and toddlers under 3 years old. You can leave your toddlers with our MSC Babycare staff*, </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/12/02/10/52/35/878c0c18-2809-4309-b198-5f0284ea1d56/MSC Cruises MSC Orchestra Mini Club 2.jpg" alt="Mini Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Mini Club</h3><p>The Mini Club welcomes children aged between 3 and 6 years old, bringing them new friends and lots of fun, enriched by the stimulating toys of our partnership with LEGO®. The club offers games, events</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/12/01/10/23/22/6286d1cf-4927-49ee-b685-22d73a6f76dc/MSC Cruises MSC Armonia Junior Club 3.jpg" alt="Junior Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Junior Club</h3><p>The Junior Club inspires connection and cooperation among 7 to 11-year-olds, through a wide variety of activities. Highlights range from Masterchef at Sea Juniors and Dorebro Sport competitions to our</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2019/06/17/14/53/49/26d19f5b-9065-4bbf-a883-299db3f971e5/MSC Cruises MSC Armonia Young Club.jpg" alt="Young Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Young Club</h3><p>With the Young Club, kids from 12 to 14 years old can dive into a world of discovery, involvement and interaction. Each day holds the promise of new experiences, with a dedicated programme of sport to</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/11/24/07/30/37/622de633-310e-44df-8af6-999ec4f9391e/MSC Cruises MSC Armonia Teen Club.jpg" alt="Teen Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Teen Club</h3><p>Teenagers aged from 15 to 17 years old can look forward to having the time of their lives on board. Teen Club activities range from sports and competitions, dance contests and social network games to </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/02/14/14/44/16/e7ded94b-1486-4a00-93f5-c21b1cd5b580/MSC Cruises MSC Euribia Kids Clubs and Family Activities.jpg" alt="Kids Clubs and Family Activities" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Kids Clubs and Family Activities</h3><p>Discover our Entertainment options on board: there's always so much to do that you kids will never get bored! An MSC cruise is an experience for the whole family to enjoy together in the safe, fun env</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/15/10/54/0e1c6434-03e8-4bd7-9c1a-2ea10c42c91c/MSC Cruises, Web Series.jpg" alt="Web Series" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Web Series</h3><p>Live the cruise experience before you board! Watch the web series Cabin 12006, created with Viacom, on the MSC Cruises official YouTube channel. Follow teenager Markus on his first cruise as his holid</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2023/02/14/15/04/23/b52de4da-802e-421b-a317-e2729d5503b5/MSC Cruises Babies and Toddlers Services.jpg" alt="Babies and Toddlers Services" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Babies and Toddlers Services</h3><p>Baby Clubs - along with activities that the whole family can enjoy together, we offer a Baby Club onboard all our ships with dedicated activities and facilities.MSC Baby Care Service - we have thought</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/08/26/09/05/51/c9e56257-54eb-4550-b591-82371c914975/MSC Cruises Seashore LEGO® Experience.png" alt="LEGO® Experience" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>LEGO® Experience</h3><p>Once during every cruise we hold a special entertainment event called the LEGO® Experience On Board: an entire day dedicated to fun LEGO activities for the whole family to enjoy. Thanks to this specia</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/09/19/12/47/37/d945b2d4-de38-469f-8ec2-a33f914ce0f7/MSC - Family Dining.jpg" alt="Family Dining" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Family Dining</h3><p>Enjoy a culinary voyage of discovery with your children on an MSC Cruise: an array of international dishes and ethnic specialties will delight the whole family with flavours from around the globe.For </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/09/30/08/41/54/e56c5267-c416-4685-8de3-977e49b87840/MSC Cruises Parent Time WEB.jpg" alt="Parent Time" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Parent Time</h3><p>Wind down, lie back, chill out or dress up, and make the most of every marvellous moment.While your kids are having the time of their lives, with our expert staff, you are free to enjoy all of those t</p></div>
+  </div>
+    </div>
+
+    <h2 id="cabins">🛏️ 객실 등급</h2>
+    <div class="cabin-grid">
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/11/23/41/2338c88f-f5fa-404e-8a5e-7367d37a09f5/MSC Cruises MSC Orchestra Premium Suite Aurea 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Premium Suite Aurea" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Premium Suite Aurea</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/11/33/57/edd26068-0207-43fa-861e-26ef4e5f4d01/MSC Cruises MSC Orchestra Deluxe Balcony Aurea 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Deluxe Balcony Aurea" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Balcony Aurea</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/11/47/27/f8be3c35-6059-48af-9cf8-7305b38ff731/MSC Cruises MSC Orchestra Premium Balcony 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Premium Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Premium Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/12/00/41/6bb4b351-b9f2-47e5-b9d4-a81bdc49934a/MSC Cruises MSC Orchestra Deluxe Balcony 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Deluxe Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/12/00/41/6bb4b351-b9f2-47e5-b9d4-a81bdc49934a/MSC Cruises MSC Orchestra Deluxe Balcony 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Deluxe Balcony with Partial View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Balcony with Partial View</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/12/00/41/6bb4b351-b9f2-47e5-b9d4-a81bdc49934a/MSC Cruises MSC Orchestra Deluxe Balcony 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Guarantee Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Guarantee Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/02/07/10/49/48/50fd2da0-cfbb-448b-8a6d-e72747f50379/MSC Cruises ORCHESTRA Ocean 1.png" alt="Deluxe Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Ocean View</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/02/07/10/49/48/50fd2da0-cfbb-448b-8a6d-e72747f50379/MSC Cruises ORCHESTRA Ocean 1.png" alt="Deluxe Ocean View with Obstructed View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Ocean View with Obstructed View</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2023/02/07/10/49/48/50fd2da0-cfbb-448b-8a6d-e72747f50379/MSC Cruises ORCHESTRA Ocean 1.png" alt="Guarantee Outside" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Guarantee Outside</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/12/31/03/5c6c80e6-ee5c-4985-9f05-c0952352ba24/MSC Cruises MSC Orchestra Deluxe Interior WEB ©MSC Rights.jpg" alt="Deluxe Interior" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Deluxe Interior</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2025/10/23/12/31/03/5c6c80e6-ee5c-4985-9f05-c0952352ba24/MSC Cruises MSC Orchestra Deluxe Interior WEB ©MSC Rights.jpg" alt="Guarantee Inside" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Guarantee Inside</div>
+  </div>
+    </div>
+
+    <h2 id="deckplan">📐 덱 플랜</h2>
+    <div class="deckplan-list">
+  <div class="deckplan-item">
+    <img src="" alt="Deck 16 - Sport" loading="lazy">
+    <p>Deck 16 - Sport</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 15 - Xilofono" loading="lazy">
+    <p>Deck 15 - Xilofono</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 14 - Chitarra" loading="lazy">
+    <p>Deck 14 - Chitarra</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 13 - Mandolino" loading="lazy">
+    <p>Deck 13 - Mandolino</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 12 - Clarinetto" loading="lazy">
+    <p>Deck 12 - Clarinetto</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 11 - Flauto" loading="lazy">
+    <p>Deck 11 - Flauto</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 10 - Lira" loading="lazy">
+    <p>Deck 10 - Lira</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 9 - Viola" loading="lazy">
+    <p>Deck 9 - Viola</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 8 - Arpa" loading="lazy">
+    <p>Deck 8 - Arpa</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 7 - Saxofono" loading="lazy">
+    <p>Deck 7 - Saxofono</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 6 - Violino" loading="lazy">
+    <p>Deck 6 - Violino</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 5 - Pianoforte" loading="lazy">
+    <p>Deck 5 - Pianoforte</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 4 - Violoncello" loading="lazy">
+    <p>Deck 4 - Violoncello</p>
+  </div>
+    </div>
+
     <h2 id="book">예약 안내</h2>
     <p>MSC 오케스트라 탑승 크루즈 상품은 크루즈링크를 통해 예약하실 수 있습니다.</p>
     <ul>
@@ -123,6 +437,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#intro">선박 소개</a></li>
         <li><a href="#specs">선박 제원</a></li>
         
+        <li><a href="#dining">🍽️ 다이닝</a></li>
+        <li><a href="#entertainment">🎭 엔터테인먼트</a></li>
+        <li><a href="#health">💆 스파 &amp; 웰니스</a></li>
+        <li><a href="#kids">👧 키즈 클럽</a></li>
+        <li><a href="#cabins">🛏️ 객실 등급</a></li>
+        <li><a href="#deckplan">📐 덱 플랜</a></li>
         <li><a href="#book">예약 안내</a></li>
       </ul>
     </div>

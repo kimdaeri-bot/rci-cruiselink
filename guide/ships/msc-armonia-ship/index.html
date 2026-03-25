@@ -68,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     h2[id],h3[id]{scroll-margin-top:80px}
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
+
+    .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+    @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
+    .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-info{padding:12px}
+    .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+    .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+    @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
+    .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
+    .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+    @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
 <body>
@@ -106,6 +124,258 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+    <h2 id="dining">🍽️ 다이닝</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/12/01/11/f2319cb2-e4b9-4a91-8c2f-e857e567939b/MSC Cruises MSC Armonia La Brassiere 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Brassiere" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>La Brassiere</h3><p>Located on Deck 11.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/12/04/42/09f08ad8-4bcd-41fd-9cb3-38c3a6177173/MSC Cruises MSC Armonia Il Girasole 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Il Girasole" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Il Girasole</h3><p>Located on Deck 11.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/12/12/48/e9d79d46-3d7e-4fde-9c28-a63dee59d699/MSC Cruises MSC Armonia La Pergola 4 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Pergola" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>La Pergola</h3><p>Located on Deck 6.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/11/05/35/b08ca2be-4d33-446d-b71c-a9259446b02c/MSC Cruises, MSC Armonia, Marco Polo Restaurant 3, Copyrights - MSC Rights.jpg" alt="Marco Polo" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Marco Polo</h3><p>Located on Deck 5.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/12/27/29/868efd38-394b-4a7a-b359-32bc51997967/MSC Cruises MSC Armonia Caffe San Marco 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Caffe San Marco" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Caffe San Marco</h3><p>Located on Deck 6.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/12/30/45/df33e248-8d63-4e34-a892-9bef75981a9d/MSC Cruises MSC Armonia Vitamin Bar ©MSC Rights - Ivan Sarfatti.jpg" alt="Vitamin Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Vitamin Bar</h3><p>Located on Deck 11.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/11/05/36/b7b5862a-d9e0-4440-bc25-060709c22669/MSC Cruises, MSC Armonia, Venchi Ice Cream Bar, Copyrights - MSC Rights.jpg" alt="Gelateria Italiana" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Gelateria Italiana</h3><p>Located on Deck 11.</p></div>
+  </div>
+    </div>
+
+    <h2 id="entertainment">🎭 엔터테인먼트</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/17/06/40/444afb3a-af0b-443e-8e35-b20205a70a59/MSC Cruises MSC Armonia Teatro La Fenice 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Teatro La Fenice" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Teatro La Fenice</h3><p>You’d normally have to travel to New York to see top-end shows, but thanks to our Broadway-style theatres you can enjoy superlative entertainment with an international line-up of artists without havin</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/12/06/41/12f24480-8d8f-4252-a3c1-55dc6fa6cf2c/MSC Cruises, MSC Armonia, Swimming Pool 2, Copyrights - MSC Rights.jpg" alt="Swimming Pools" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Swimming Pools</h3><p>Experience life on board our cruise ship, where sparkling pools invite you to relax and experience unforgettable moments. Sunbathe on deck, dive into crystal clear waters and enjoy a unique atmosphere</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/17/28/52/e0154b8f-72af-4405-bd55-1a87273b7285/MSC Cruises MSC Armonia Casino 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Casino" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Casino</h3><p>Welcome to MSC Casino Cruises, where Vegas-style games promise a thrilling holiday experience.Friendly staff await to provide you with exceptional service while a modern design and comfortable ameniti</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/21/22/10/507ab989-db3f-48f8-bb49-d5f31fd797d5/MSC Cruises MSC Armonia Starlight Disco 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Starlight Disco" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Starlight Disco</h3><p>Located on Deck 12.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/21/25/05/5d0f6708-6a08-4c47-8e70-b4dd61e61eef/MSC Cruises MSC Armonia The Red Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="The Red Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Red Bar</h3><p>Located on Deck 6.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/20/12/39/09/0b94277c-05e9-488d-acb6-bf1dc99b77ef/MSC Cruises, MSC Musica, Card Room, Copyrights - MSC Rights.jpg" alt="The Card Room" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The Card Room</h3><p>Located on Deck 7.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/21/32/39/1ccd04f1-914e-42bc-9f7f-fd51908512a0/MSC Cruises MSC Armonia Cigar Room 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Cigar Room" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Cigar Room</h3><p>Located on Deck 5.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/21/36/09/4d290c9b-acb2-4e25-996a-6ab44ef08dc3/MSC Cruises MSC Armonia The White Lion Pub 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="The White Lion Pub" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>The White Lion Pub</h3><p>Located on Deck 5.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/22/06/02/7fa96728-e64f-49f6-87e9-4ad521e99b31/MSC Cruises MSC Armonia Bar del Duomo 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Bar del Duomo" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Bar del Duomo</h3><p>Bar del Duomo is located on Deck 5.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/22/27/59/d0c9df3d-10ba-4f55-abd1-47928f31753c/MSC Cruises MSC Armonia II Lido Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="II Lido Bar" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>II Lido Bar</h3><p>Located on Deck 11</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/12/33/30/a45b5daf-428f-499e-848e-9c011f2560fd/MSC Cruises, MSC Armonia, Armonia Lounge & Library 1, Copyrights - MSC Rights.jpg" alt="Armonia Lounge & Library" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Armonia Lounge & Library</h3><p>Located on Deck 6.</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/21/39/17/dac3b4d0-af7c-4e3f-910f-18641823dcdc/MSC Cruises MSC Armonia Arcade ©MSC Rights - Ivan Sarfatti.jpg" alt="Arcade" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Arcade</h3><p>While away a few enjoyable hours of game play at the Arcade on board the ship. Pit your wits and skill against those of your friends in any number of typical arcade options, including video games, pin</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2021/11/15/08/15/13/b5a310fe-7a95-44be-83e5-85cab67e0ba9/MSC Cruises Shopping Duty Free.png" alt="Shopping" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Shopping</h3><p>Duty FreeDiscover everything the Duty Free shop has to offer, all at tax and duty-free prices*.You can choose between top-flight international tobacco products, technology products, fine wines, chocol</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/07/22/02/10/8232a2f0-0f53-4a2f-a436-f42b24790139/MSC Cruises MSC Armonia Photo 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Photo Gallery" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Photo Gallery</h3><p>Don’t forget to explore the All-Inclusive Digital Photo Package, which includes digital files of all the photos taken by our professional photographers on board. Digital photos are available for downl</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/b5388d4e-a29f-4da0-beb2-202f6a0431e2/MSC Cruises, MSC Factor.jpg" alt="MSC Events" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>MSC Events</h3><p>MSC FactorThink you’ve got what it takes to be a star in our on-board talent competition, The MSC Factor? Then come and showcase what you can do in the most exciting talent show at sea. Whatever your </p></div>
+  </div>
+    </div>
+
+    <h2 id="health">💆 스파 &amp; 웰니스</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/13/50/47/d27b10af-569c-4104-a1be-a61f0cb90489/MSC Cruises, MSC Armonia, MSC Aurea Spa 1, Copyrights - MSC Rights.jpg" alt="MSC Aurea Spa" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>MSC Aurea Spa</h3><p>MSC Aurea Spa boasts an exotic interior of natural stone, precious woods and rich mosaics, and is equipped with specific and massage treatment suites. Being pampered by a traditional Balinese Massage </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/13/50/46/f03e1b7f-8a03-4ea2-a74e-90efee79e776/MSC Cruises, MSC Armonia, Beauty Salon 1, Copyrights - MSC Rights.jpg" alt="Beauty and Hair Salon" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Beauty and Hair Salon</h3><p>You can enjoy the expertise of highly specialised staff in aesthetic treatments to offer you excellent results and improve the relaxing effects of your cruise. Customise your cruise with the best trea</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/08/08/48/37/47470f9e-c7e0-48f2-9d45-cb66a7424eb4/MSC Cruises MSC Armonia Sports Center 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Sport & Fitness" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Sport & Fitness</h3><p>BasketballCome to the outdoor basketball court at the Sport Centre for a chance to hang out with friends, have fun shooting hoops and enjoy a full-body workout at the same time. You may not make the l</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/08/09/45/13/46c18ff9-7524-4582-8a4d-1c54fcd18ecf/MSC Cruises MSC Armonia Gym by TechnoGym® 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Gym by TechnoGym®" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Gym by TechnoGym®</h3><p>Fitted with authentic TechnoGym® equipment and featuring panoramic ocean views, the on-board gym is the place to be for all those who take their fitness regime seriously. Hone your physique with a ful</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/13/50/48/7d44a1ea-0c59-40db-8575-1acf98c3cd37/MSC Cruises, MSC Armonia, Solarium 1, Copyrights - MSC Rights.jpg" alt="Top 13 Exclusive Solarium" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Top 13 Exclusive Solarium</h3><p>Exclusively for adults, this calm, quiet and peaceful retreat can be found on the Sun Deck.</p></div>
+  </div>
+    </div>
+
+    <h2 id="kids">👧 키즈 클럽</h2>
+    <div class="facility-grid">
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/03/13/53/20/f8c8c95d-3893-4157-be4f-3b8aac8eab28/MSC Grandiosa - Babies and Toddlers Services.jpg" alt="Babies and Toddlers Services" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Babies and Toddlers Services</h3><p>Baby Clubs - along with activities that the whole family can enjoy together, we offer a Baby Club onboard all our ships with dedicated activities and facilities.MSC Baby Care Service - we have thought</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/09/19/12/47/37/d945b2d4-de38-469f-8ec2-a33f914ce0f7/MSC - Family Dining.jpg" alt="Family Dining" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Family Dining</h3><p>Enjoy a culinary voyage of discovery with your children on an MSC Cruise: an array of international dishes and ethnic specialties will delight the whole family with flavours from around the globe.For </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/09/30/08/43/55/71a0e44a-71ba-4c3b-a37c-f8d565d33aab/MSC Cruises Kids Clubs and Family Activities WEB.jpg" alt="Kids Club and Family Activities" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Kids Club and Family Activities</h3><p>MSC ORIGINALS: On an MSC cruise, you'll discover a diverse array of activities designed for both children and adults. Our dedicated Kids Clubs offer a wide range of engaging experiences, including spo</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/15/10/54/0e1c6434-03e8-4bd7-9c1a-2ea10c42c91c/MSC Cruises, Web Series.jpg" alt="Web Series" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Web Series</h3><p>Experience the cruise adventure before you even step on board! Dive into the captivating web series Cabin 12006, available on MSC Cruises' official YouTube channel. Join Markus, a teenager embarking o</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/14/58/47/c6db789a-732d-4ce2-ab8e-0bec389e4b80/MSC Cruises, MSC Armonia, Lego Experience, Copyrights - MSC Rights.jpg" alt="LEGO® Experience" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>LEGO® Experience</h3><p>Once during every cruise we hold a special entertainment event called the LEGO® Experience On Board: an entire day dedicated to fun LEGO activities for the whole family to enjoy. Thanks to this specia</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/12/24/52/59f199ea-e870-49ef-9932-1c89b4cdfdab/MSC Cruises, Family Activities.jpg" alt="Family Activities" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Family Activities</h3><p>Family Game Show - this is a competition for the whole family with dance, music and selfie challenges dedicated to Kelly &amp; Kloe On Board, MSC Cruises’ original web series created for kids and fami</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/08/11/39/40/63612695-2304-4821-b933-8f27dd6ffa2b/MSC Cruises MSC Armonia Baby Club 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Baby Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Baby Club</h3><p>You can leave your toddlers with our MSC Babycare staff, or stay with them and enjoy the special Chicco toys and games. They'll love our music and rhythm activities, designed to awaken their curiosity</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/08/11/43/18/3a7d1719-1c70-4610-9ada-bcc9c9fa8928/MSC Cruises MSC Armonia Mini Club 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Mini Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Mini Club</h3><p>The Mini Club welcomes children aged between 3 and 6 years old, bringing them new friends and lots of fun, enriched by the stimulating toys of our partnership with LEGO®. The club offers games, events</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/08/11/45/13/2834b600-34ee-4712-9307-60a628896dfc/MSC Cruises MSC Armonia Junior Club 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Junior Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Junior Club</h3><p>The Junior Club inspires connection and cooperation among 7 to 11-year-olds, through a wide variety of activities. Highlights range from Masterchef at Sea Juniors and Dorebro Sport competitions to our</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2024/09/04/14/58/48/b407a842-6fbe-4f07-8cf3-4b20b42ef7f6/MSC Cruises, MSC Armonia, Young Club, Copyrights - MSC Rights.jpg" alt="Young Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Young Club</h3><p>With the Young Club, kids from 12 to 14 years old can dive into a world of discovery, involvement and interaction.Each day holds the promise of new experiences, with a dedicated programme of sport tou</p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/10/08/11/49/16/5893f424-7999-43c6-99b3-2533b659912d/MSC Cruises MSC Armonia Teen Club 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Teen Club" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Teen Club</h3><p>Teenagers aged from 15 to 17 years old can look forward to having the time of their lives on board. Teen Club activities range from sports and competitions, dance contests and social network games to </p></div>
+  </div>
+  <div class="facility-card">
+    <img src="https://assets.widgety.co.uk/2025/09/30/08/41/54/e56c5267-c416-4685-8de3-977e49b87840/MSC Cruises Parent Time WEB.jpg" alt="Parent Time" loading="lazy" onerror="this.style.display='none'">
+    <div class="facility-info"><h3>Parent Time</h3><p>Wind down, lie back, chill out or dress up, and make the most of every marvellous moment.While your kids are having the time of their lives, with our expert staff, you are free to enjoy all of those t</p></div>
+  </div>
+    </div>
+
+    <h2 id="cabins">🛏️ 객실 등급</h2>
+    <div class="cabin-grid">
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/09/02/12/53/40/6ba59cb1-d43e-4164-8900-52358c2edbba/MSC Cruises, MSC Armonia, Deluxe Suite Aurea.jpg" alt="Junior Suite Aurea" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Junior Suite Aurea</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/09/02/13/19/23/cebafd47-4d56-4895-9fa3-bab49aed2744/MSC Cruises, MSC Armonia, Balcony.jpg" alt="Junior Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Junior Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/09/02/13/19/23/cebafd47-4d56-4895-9fa3-bab49aed2744/MSC Cruises, MSC Armonia, Balcony.jpg" alt="Guarantee Balcony" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Guarantee Balcony</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/09/02/13/49/37/69a752e8-b8dd-4727-af4a-3750336692ca/MSC Cruises, MSC Armonia, Ocean View.jpg" alt="Premium Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Premium Ocean View</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/09/02/13/49/37/69a752e8-b8dd-4727-af4a-3750336692ca/MSC Cruises, MSC Armonia, Ocean View.jpg" alt="Junior Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Junior Ocean View</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/09/02/13/49/37/69a752e8-b8dd-4727-af4a-3750336692ca/MSC Cruises, MSC Armonia, Ocean View.jpg" alt="Junior Ocean View with Obstructed View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Junior Ocean View with Obstructed View</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/09/02/13/49/37/69a752e8-b8dd-4727-af4a-3750336692ca/MSC Cruises, MSC Armonia, Ocean View.jpg" alt="Guarantee Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Guarantee Ocean View</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/09/02/14/34/08/8835961d-8763-4502-808f-12d2f7259745/MSC Cruises, MSC Armonia, Interior.jpg" alt="Junior Interior" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Junior Interior</div>
+  </div>
+  <div class="cabin-card">
+    <img src="https://assets.widgety.co.uk/2024/09/02/14/34/08/8835961d-8763-4502-808f-12d2f7259745/MSC Cruises, MSC Armonia, Interior.jpg" alt="Guarantee Interior" loading="lazy" onerror="this.style.display='none'">
+    <div class="cabin-card-name">Guarantee Interior</div>
+  </div>
+    </div>
+
+    <h2 id="deckplan">📐 덱 플랜</h2>
+    <div class="deckplan-list">
+  <div class="deckplan-item">
+    <img src="" alt="Deck 13 - Sun Deck" loading="lazy">
+    <p>Deck 13 - Sun Deck</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 12 - Zaffiro" loading="lazy">
+    <p>Deck 12 - Zaffiro</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 11 - Acquamarina" loading="lazy">
+    <p>Deck 11 - Acquamarina</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 10 - Tormalina" loading="lazy">
+    <p>Deck 10 - Tormalina</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 9 - Ametista" loading="lazy">
+    <p>Deck 9 - Ametista</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 8 - Smeraldo" loading="lazy">
+    <p>Deck 8 - Smeraldo</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 7 - Topazio" loading="lazy">
+    <p>Deck 7 - Topazio</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 6 - Diamante" loading="lazy">
+    <p>Deck 6 - Diamante</p>
+  </div>
+  <div class="deckplan-item">
+    <img src="" alt="Deck 5 - Rubino" loading="lazy">
+    <p>Deck 5 - Rubino</p>
+  </div>
+    </div>
+
     <h2 id="book">예약 안내</h2>
     <p>MSC 아르모니아 탑승 크루즈 상품은 크루즈링크를 통해 예약하실 수 있습니다.</p>
     <ul>
@@ -123,6 +393,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#intro">선박 소개</a></li>
         <li><a href="#specs">선박 제원</a></li>
         
+        <li><a href="#dining">🍽️ 다이닝</a></li>
+        <li><a href="#entertainment">🎭 엔터테인먼트</a></li>
+        <li><a href="#health">💆 스파 &amp; 웰니스</a></li>
+        <li><a href="#kids">👧 키즈 클럽</a></li>
+        <li><a href="#cabins">🛏️ 객실 등급</a></li>
+        <li><a href="#deckplan">📐 덱 플랜</a></li>
         <li><a href="#book">예약 안내</a></li>
       </ul>
     </div>
