@@ -61,24 +61,6 @@
     ]
   },
   {
-    "product": "지중해 7박 크루즈",
-    "cruiseline": "Explora Journeys",
-    "ship": "엑스플로라 I",
-    "dateFrom": "2026-06-08",
-    "ports": "",
-    "price": "문의",
-    "ref": "EXPLORAEX20260608MCMBCN",
-    "name": "test",
-    "email": "june.jeong@diplat.co.kr",
-    "phone": "12312312312",
-    "pax": "2",
-    "cabin": "내측",
-    "message": "test",
-    "id": "1773232940786",
-    "timestamp": "2026-03-11T12:42:20.786Z",
-    "status": "신규"
-  },
-  {
     "product": "지중해 11박 크루즈",
     "cruiseline": "Explora Journeys",
     "ship": "익스플로라 II",
@@ -1081,20 +1063,21 @@
     "status": "신규"
   },
   {
-    "name": "테스트",
-    "email": "test@test.com",
-    "phone": "01000000000",
-    "pax": "1",
-    "cabin": "내측",
-    "message": "테스트",
-    "product": "테스트",
-    "cruiseline": "MSC",
-    "ship": "테스트",
-    "dateFrom": "2027-01-01",
+    "id": "1774100000001",
+    "timestamp": "2026-03-23T09:00:00.000Z",
+    "status": "신규",
+    "product": "MSC 월드 마시아 한국·대만 3박",
+    "cruiseline": "MSC Cruises",
+    "ship": "MSC 월드 마시아",
+    "dateFrom": "2027-03-09",
+    "ports": "",
     "price": "문의",
-    "ref": "TEST",
-    "id": "1774404769665",
-    "timestamp": "2026-03-25T02:12:49.665Z",
-    "status": "신규"
+    "ref": "",
+    "name": "안유빈",
+    "email": "compia9@naver.com",
+    "phone": "01094455869",
+    "pax": "2",
+    "cabin": "스위트",
+    "message": "없음"
   }
 ]
