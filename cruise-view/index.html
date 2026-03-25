@@ -147,17 +147,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               }
             },
             itinerary: {
-              days: (lc.ports || []).map((p, i) => ({
-                day: i + 1,
-                day_name: p.nameKo || p.name || '',
-                locations: [{
-                  name: p.name || '',
-                  country: p.country || '',
-                  arrival_time: '',
-                  departure_time: '',
-                  widgety_data: { images: [], description: '' }
-                }]
-              }))
+              days: (() => {
+                const ports = lc.ports || [];
+                const totalNights = lc.nights || ports.length;
+                const seaDays = Math.max(0, totalNights - ports.length + 1); // 전체 day수 = nights+1 (승선일 포함)
+                // 실제 day 수 = nights + 1 (출발일 포함), ports는 기항지만
+                // 전략: 첫 기항지 = day1, 마지막 기항지 = 마지막 day, 나머지 해상일은 사이에 배분
+                const totalDays = totalNights + 1;
+                const seaDayCount = totalDays - ports.length;
+                const days = [];
+                let portIdx = 0;
+                let dayNum = 1;
+                // 첫 기항지는 day1
+                if (ports.length > 0) {
+                  days.push({ day: dayNum++, day_name: ports[0].nameKo || ports[0].name || '', locations: [{ name: ports[0].name || '', country: ports[0].country || '', arrival_time: '', departure_time: '', widgety_data: { images: [], description: '' } }] });
+                  portIdx = 1;
+                }
+                // 남은 port 배분: 해상일을 균등하게 끼워넣기
+                const remainPorts = ports.slice(1);
+                const remainSeaDays = seaDayCount;
+                // 해상일을 앞쪽에 배치 (마지막 기항지 전에)
+                let seaInserted = 0;
+                for (let pi = 0; pi < remainPorts.length; pi++) {
+                  // 마지막 기항지 직전까지 해상일 배분
+                  const seaForThis = (pi === remainPorts.length - 1)
+                    ? remainSeaDays - seaInserted
+                    : Math.floor(remainSeaDays / remainPorts.length);
+                  for (let s = 0; s < seaForThis; s++) {
+                    days.push({ day: dayNum++, day_name: '해상', day_type: 'SEA', locations: [] });
+                    seaInserted++;
+                  }
+                  const p = remainPorts[pi];
+                  days.push({ day: dayNum++, day_name: p.nameKo || p.name || '', locations: [{ name: p.name || '', country: p.country || '', arrival_time: '', departure_time: '', widgety_data: { images: [], description: '' } }] });
+                }
+                // 남은 해상일 (뒤에 추가)
+                while (dayNum <= totalDays) {
+                  days.push({ day: dayNum++, day_name: '해상', day_type: 'SEA', locations: [] });
+                }
+                return days;
+              })()
             }
           };
         }
