@@ -1207,7 +1207,7 @@
     "cruiseline": "MSC Cruises",
     "ship": "MSC 유리비아",
     "dateFrom": "2026-07-05",
-    "ports": "",
+    "ports": "코펜하겐 → Hellesylt → 게이랑에르 → Ålesund → Flåm → 킬",
     "price": "문의",
     "ref": "MSCER20260705CPHCPH",
     "name": "박명훈",
@@ -1215,6 +1215,22 @@
     "phone": "01033194000",
     "pax": "2",
     "cabin": "발코니",
-    "message": ""
+    "message": "",
+    "fareHistory": [
+      {
+        "date": "2026. 03. 25. 오후 04:47",
+        "pax": 2,
+        "types": [
+          {
+            "name": "발코니",
+            "val": 3009,
+            "raw": "3009"
+          }
+        ],
+        "air": 0,
+        "etc": 0,
+        "remarks": "* 디럭스 발코니 기준 요금\n\n* 요금 세부 사항\n- 포함사항 : 크루즈 요금 + tax\n- 불포함사항 : 왕복 항공권, 현지 호텔비, 기항지 관광, 선상팁, 여행자보험, 기타 선내 유료서비스 등"
+      }
+    ]
   }
 ]
