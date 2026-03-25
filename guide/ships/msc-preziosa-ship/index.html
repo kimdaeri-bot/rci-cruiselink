@@ -69,22 +69,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
 
+
     .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
     @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
     .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-card img{width:100%;height:160px;object-fit:cover;display:block}
+    .facility-card .no-img{width:100%;height:160px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem}
     .facility-info{padding:12px}
     .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
     .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
     @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
     .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card img{width:100%;height:120px;object-fit:cover;display:block}
+    .cabin-card .no-img{width:100%;height:120px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
     .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
     .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
     @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
-    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200);display:block}
+    .deckplan-item .no-img{width:100%;height:200px;background:var(--gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem}
     .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
@@ -124,358 +128,443 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+
     <h2 id="dining">🍽️ 다이닝</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/11/43/13/8b4e2c23-f4cc-4944-b458-e70858ebb005/MSC Cruises MSC Preziosa Le Palmeraie Credits - MSC Rights 1.jpg" alt="Le Palmeraie" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Le Palmeraie</h3><p>Located on Deck 15. MSC Yacht Club Dedicated Restaurant</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/11/43/13/8b4e2c23-f4cc-4944-b458-e70858ebb005/MSC Cruises MSC Preziosa Le Palmeraie Credits - MSC Rights 1.jpg" alt="Le Palmeraie" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Le Palmeraie</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/11/56/04/8cdfcd62-a2e0-4cb7-b7c0-cc270a74d4f4/MSC Cruises MSC Preziosa The Golden Lobster - Credit - MSC Rights 1.jpg" alt="The Golden Lobster" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Golden Lobster</h3><p>Located on Deck 6</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/11/56/04/8cdfcd62-a2e0-4cb7-b7c0-cc270a74d4f4/MSC Cruises MSC Preziosa The Golden Lobster - Credit - MSC Rights 1.jpg" alt="The Golden Lobster" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Golden Lobster</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/14/11/08/22/751/_MSC_Cruises_Fantasia_Class_sports_bar.jpg" alt="Sports & Bowling Diner" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sports & Bowling Diner</h3><p>Located on Deck 7</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/14/11/08/22/751/_MSC_Cruises_Fantasia_Class_sports_bar.jpg" alt="Sports & Bowling Diner" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sports & Bowling Diner</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/11/47/57/f7427ece-a4ee-4720-8fb4-3979e29bd149/MSC Cruises MSC Preziosa L'Arabesque Panoramic Restaurant - Credit - MSC Rights 1.jpg" alt="L’Arabesque" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>L’Arabesque</h3><p>Located on Deck 6</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/11/47/57/f7427ece-a4ee-4720-8fb4-3979e29bd149/MSC Cruises MSC Preziosa L'Arabesque Panoramic Restaurant - Credit - MSC Rights 1.jpg" alt="L’Arabesque" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>L’Arabesque</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/12/02/40/3c89b4ae-3c9a-407b-92f6-010afb85b7a0/MSC Cruises MSC Preziosa Galaxy Kaito - Credits - MSC Rights 3.jpg" alt="Galaxy Kaito" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Galaxy Kaito</h3><p>Ranked by the Berlitz guide as “the best sushi at sea”, this charming venue offers deliciously authentic Asian cuisine prepared on the spot with only the freshest, highest quality ingredients. The men</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/12/02/40/3c89b4ae-3c9a-407b-92f6-010afb85b7a0/MSC Cruises MSC Preziosa Galaxy Kaito - Credits - MSC Rights 3.jpg" alt="Galaxy Kaito" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Galaxy Kaito</h3><p>선상 최고의 스시 레스토랑으로, 신선한 사시미와 롤을 즐길 수 있는 아시안 다이닝 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/16/14/08/08/33b21b6e-ad3b-48c4-b1cc-d82c476ce92c/MSC Cruises, MSC Divina, Butchers Cut.jpg" alt="Butcher's Cut" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Butcher's Cut</h3><p>This American-style steak house serves select Linz heritage angus beef, gold standard in high-end angus beef thanks to the best genetics in breed. The highest quality product custom cut by master butc</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/16/14/08/08/33b21b6e-ad3b-48c4-b1cc-d82c476ce92c/MSC Cruises, MSC Divina, Butchers Cut.jpg" alt="Butcher's Cut" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Butcher's Cut</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/12/11/36/d0d6fe3e-ee36-49e8-98b7-f0a858f6b960/MSC Cruises MSC Preziosa Inca Maya Buffets - Credits - MSC Rights 1.jpg" alt="Inca & Maya Buffets" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Inca & Maya Buffets</h3><p>Located on Deck 14</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/12/11/36/d0d6fe3e-ee36-49e8-98b7-f0a858f6b960/MSC Cruises MSC Preziosa Inca Maya Buffets - Credits - MSC Rights 1.jpg" alt="Inca & Maya Buffets" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Inca & Maya Buffets</h3><p>다채로운 세계 요리를 뷔페 형식으로 즐길 수 있는 캐주얼 레스토랑입니다.</p></div>
   </div>
     </div>
 
     <h2 id="entertainment">🎭 엔터테인먼트</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/09/09/18/58/14f668df-fad8-4e4b-9984-d3c1d34f1df6/MSC Cruises MSC Preziosa MSC Yacht Club 8.jpg" alt="MSC Yacht Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Yacht Club</h3><p>The most discerning guests may opt for the secluded luxury of the MSC Yacht Club, a “ship within a ship” consisting of exclusive suites, butler service, and dedicated facilities like a panoramic bar, </p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/09/09/18/58/14f668df-fad8-4e4b-9984-d3c1d34f1df6/MSC Cruises MSC Preziosa MSC Yacht Club 8.jpg" alt="MSC Yacht Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Yacht Club</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/09/09/15/11/1b0a4323-b453-4854-8722-05a9ce9aa258/MSC Cruises MSC Preziosa Theatre 3.jpg" alt="Platinum Theatre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Platinum Theatre</h3><p>West End TheatreYou’d normally have to travel to London to see top-end shows, but thanks to our West End-style theatres, you can enjoy superlative entertainment with an international line-up of artist</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/09/09/15/11/1b0a4323-b453-4854-8722-05a9ce9aa258/MSC Cruises MSC Preziosa Theatre 3.jpg" alt="Platinum Theatre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Platinum Theatre</h3><p>브로드웨이 스타일의 대형 공연장으로, 세계적 수준의 쇼와 공연을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/02/14/21/25/212/MSC_Fantasia_Class_sports_bar_2.jpg" alt="Sports Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sports Bar</h3><p>Located on Deck 7</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/02/14/21/25/212/MSC_Fantasia_Class_sports_bar_2.jpg" alt="Sports Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sports Bar</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/12/53/01/5d5e98e1-d843-4bff-9051-d95b828b5621/MSC Cruises MSC Preziosa Casino - Credits - MSC Rights 2.jpg" alt="Millennium Star Casino" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Millennium Star Casino</h3><p>Feeling lucky? Test your skills with roulette, blackjack, or challenge yourself at our poker tables. With a wide array of slot machines, our elegantly designed casinos cater to every type of player, w</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/12/53/01/5d5e98e1-d843-4bff-9051-d95b828b5621/MSC Cruises MSC Preziosa Casino - Credits - MSC Rights 2.jpg" alt="Millennium Star Casino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Millennium Star Casino</h3><p>라스베이거스 스타일의 카지노로, 슬롯머신과 테이블 게임을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/08/16/14/27/10/0e9066b3-3420-4e22-8983-3a1c7ea21c32/MSC Cruises MSC Preziosa The Green Sax Jazz Bar.jpg" alt="Green Sax Jazz Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Green Sax Jazz Bar</h3><p>The Green Sax Jazz Bar has seating for 106 visitors and features live jazz music along with a special range of 'made to measure' drinks.</p></div>
+    <img src="https://assets.widgety.co.uk/2019/08/16/14/27/10/0e9066b3-3420-4e22-8983-3a1c7ea21c32/MSC Cruises MSC Preziosa The Green Sax Jazz Bar.jpg" alt="Green Sax Jazz Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Green Sax Jazz Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/08/16/14/27/57/24f3ada4-9dba-4d58-9214-777deb1a5040/MSC Cruises MSC Preziosa Diamond Bar.jpg" alt="Diamond Bar & Library" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Diamond Bar & Library</h3><p>Located on Deck 6</p></div>
+    <img src="https://assets.widgety.co.uk/2019/08/16/14/27/57/24f3ada4-9dba-4d58-9214-777deb1a5040/MSC Cruises MSC Preziosa Diamond Bar.jpg" alt="Diamond Bar & Library" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Diamond Bar & Library</h3><p>독서와 카드 게임을 즐길 수 있는 조용한 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/08/16/14/28/44/42b37c8d-c1cb-4b05-ba40-3046123c56ac/MSC Cruises MSC Preziosa Preziosa Bar 2.jpg" alt="Preziosa Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Preziosa Bar</h3><p>Located on Deck 5</p></div>
+    <img src="https://assets.widgety.co.uk/2019/08/16/14/28/44/42b37c8d-c1cb-4b05-ba40-3046123c56ac/MSC Cruises MSC Preziosa Preziosa Bar 2.jpg" alt="Preziosa Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Preziosa Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/08/16/14/29/13/20308bcb-e26f-40d5-b26c-d5a581b2c5ce/MSC Cruises MSC Preziosa El Dorado Piano Bar.jpg" alt="El Dorado Piano Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>El Dorado Piano Bar</h3><p>Located on Deck 7</p></div>
+    <img src="https://assets.widgety.co.uk/2019/08/16/14/29/13/20308bcb-e26f-40d5-b26c-d5a581b2c5ce/MSC Cruises MSC Preziosa El Dorado Piano Bar.jpg" alt="El Dorado Piano Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>El Dorado Piano Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/02/15/12/14/352/MSC_Fantasia_Class_pool_bar.jpg" alt="The Pool Bars" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Pool Bars</h3><p>Located on Deck 14</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/02/15/12/14/352/MSC_Fantasia_Class_pool_bar.jpg" alt="The Pool Bars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Pool Bars</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/03/08/14/28/11/5a642d34-ecd6-4478-9e88-2f1cae2f930f/MSC Cruises MSC Preziosa Il Cappuccino 1.jpg" alt="Il Cappuccino" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Il Cappuccino</h3><p>Located on Deck 7</p></div>
+    <img src="https://assets.widgety.co.uk/2023/03/08/14/28/11/5a642d34-ecd6-4478-9e88-2f1cae2f930f/MSC Cruises MSC Preziosa Il Cappuccino 1.jpg" alt="Il Cappuccino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Il Cappuccino</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/12/56/14/196784ec-4a92-4fa8-8e1c-bb9251d73f95/MSC Cruises MSC Preziosa La Caramella Sweet Shop - Credits - MSC Rights.jpg" alt="La Caramella Sweet Shop" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>La Caramella Sweet Shop</h3><p>Located on Deck 6</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/12/56/14/196784ec-4a92-4fa8-8e1c-bb9251d73f95/MSC Cruises MSC Preziosa La Caramella Sweet Shop - Credits - MSC Rights.jpg" alt="La Caramella Sweet Shop" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>La Caramella Sweet Shop</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/13/02/46/cedc98ef-4f3f-4526-ba37-6de61471fb2d/MSC Cruises MSC Preziosa Shopping - Credits - MSC Rights 1.jpg" alt="Shopping" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Shopping</h3><p>Explore the MSC Logo Shop for exclusive souvenirs and browse our Jewellery Boutiques for exquisite bracelets and watches.Discover the latest fashion trends in our boutiques or take advantage of tax-fr</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/13/02/46/cedc98ef-4f3f-4526-ba37-6de61471fb2d/MSC Cruises MSC Preziosa Shopping - Credits - MSC Rights 1.jpg" alt="Shopping" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Shopping</h3><p>면세 쇼핑을 즐길 수 있는 선상 쇼핑몰로, 명품 브랜드와 기념품을 구매할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/06/15/56/37/99b38a50-9319-42a7-99ce-7e7e2b67ae0f/MSC Cruises, MSC Preziosa, Photo Gallery 3, Copyrights - MSC Rights.jpg" alt="Photo Gallery" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Photo Gallery</h3><p>Don’t forget to explore the All-Inclusive Digital Photo Package, which includes digital files of all the photos taken by our professional photographers on board. Digital photos are available for downl</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/06/15/56/37/99b38a50-9319-42a7-99ce-7e7e2b67ae0f/MSC Cruises, MSC Preziosa, Photo Gallery 3, Copyrights - MSC Rights.jpg" alt="Photo Gallery" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Photo Gallery</h3><p>전문 사진작가가 촬영한 아름다운 사진을 간직하세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/02/14/20/16/761/MSC_Fantasia_Class_internet_cafe.jpg" alt="Cybercafé" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Cybercafé</h3><p>Located on Deck 5</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/02/14/20/16/761/MSC_Fantasia_Class_internet_cafe.jpg" alt="Cybercafé" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Cybercafé</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/02/14/19/48/950/MSC_Fantasia_Class_art_gallery_2.jpg" alt="Art Gallery" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Art Gallery</h3><p>Located on Deck 7</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/02/14/19/48/950/MSC_Fantasia_Class_art_gallery_2.jpg" alt="Art Gallery" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Art Gallery</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/14/11/21/01/274/msc_cruises_fantasia_class_f1_simulator.jpg" alt="MSC Formula Racer" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Formula Racer</h3><p>Our amazing on-board MSC Formula Racer delivers an adrenaline-pumping virtual-reality race*, with you in the driver’s seat of a racing car. Go head to head against other racers and thrill to the feel </p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/14/11/21/01/274/msc_cruises_fantasia_class_f1_simulator.jpg" alt="MSC Formula Racer" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Formula Racer</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/06/15/56/35/3fafbe2c-fd11-430e-942d-5f27c2895d44/MSC Cruises, MSC Preziosa, La Locanda 3, Copyrights - MSC Rights.jpg" alt="La Locanda" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>La Locanda</h3><p>Located on Deck 7</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/06/15/56/35/3fafbe2c-fd11-430e-942d-5f27c2895d44/MSC Cruises, MSC Preziosa, La Locanda 3, Copyrights - MSC Rights.jpg" alt="La Locanda" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>La Locanda</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/09/09/20/48/8826fecc-a371-46de-a3fb-68d6bafc8683/MSC Cruises MSC Preziosa Galaxy Lounge 1.jpg" alt="Galaxy Lounge " loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Galaxy Lounge </h3><p>Located on Deck 16</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/09/09/20/48/8826fecc-a371-46de-a3fb-68d6bafc8683/MSC Cruises MSC Preziosa Galaxy Lounge 1.jpg" alt="Galaxy Lounge " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Galaxy Lounge </h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/14/13/56/45/648/_MSC_Cruises_Fantasia_Class_Preziosa_SAFARI_LOUNGE.jpg" alt="Safari Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Safari Lounge</h3><p>Located on Deck 7</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/14/13/56/45/648/_MSC_Cruises_Fantasia_Class_Preziosa_SAFARI_LOUNGE.jpg" alt="Safari Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Safari Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/09/09/09/30/47551d97-3568-48c6-bea1-4960f227426b/MSC Cruises MSC Preziosa La Playa Preziosa.jpg" alt="La Playa Preziosa" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>La Playa Preziosa</h3><p>Located on Deck 14.</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/09/09/09/30/47551d97-3568-48c6-bea1-4960f227426b/MSC Cruises MSC Preziosa La Playa Preziosa.jpg" alt="La Playa Preziosa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>La Playa Preziosa</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/09/09/09/28/dc327041-fa4c-4475-9e9f-daf73b49caea/MSC Cruises MSC Preziosa Aqua Park.jpg" alt="Aqua Park" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Aqua Park</h3><p>Located on Deck 14.</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/09/09/09/28/dc327041-fa4c-4475-9e9f-daf73b49caea/MSC Cruises MSC Preziosa Aqua Park.jpg" alt="Aqua Park" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Aqua Park</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/09/09/09/31/64d9bc0b-abda-4dba-a64e-962304928054/MSC Cruises MSC Preziosa The Garden Pool.jpg" alt="The Garden Pool" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Garden Pool</h3><p>Located on Deck 15.</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/09/09/09/31/64d9bc0b-abda-4dba-a64e-962304928054/MSC Cruises MSC Preziosa The Garden Pool.jpg" alt="The Garden Pool" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Garden Pool</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/09/09/25/37/b2c15536-ae12-4059-808a-e46d2f494f11/MSC Cruises MSC Preziosa 4D Cinema.jpg" alt="4D Cinema" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>4D Cinema</h3><p>Visit our on-board 4D Cinema* for a chance to enter a world of adventure without having to leave the comfort of your seat. Enjoy a unique cinematic experience, full of surprising features and visual e</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/09/09/25/37/b2c15536-ae12-4059-808a-e46d2f494f11/MSC Cruises MSC Preziosa 4D Cinema.jpg" alt="4D Cinema" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>4D Cinema</h3><p>최신 영화를 감상할 수 있는 선상 영화관입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/13/29/52/22cfb9af-df50-4b65-830a-1d523c70f7c8/MSC Cruises MSC Preziosa Mini Bowling - Credits - MSC Rights.jpg" alt="Mini Bowling" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Mini Bowling</h3><p>Strike! That’s what you want to hear every time the bowling ball barrels down the alley. See whether you have the knack and play against your family and friends to crown the bowling champion in your m</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/13/29/52/22cfb9af-df50-4b65-830a-1d523c70f7c8/MSC Cruises MSC Preziosa Mini Bowling - Credits - MSC Rights.jpg" alt="Mini Bowling" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Mini Bowling</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/15/08/04/09/4cf22a50-1d2e-4314-b8aa-11b1236b3d58/MSC Cruises Arcade.png" alt="Arcade" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Arcade</h3><p>Spend a few fun-filled hours gaming at the Arcadeon board the ship. Pit your wits and skill against your friends in a variety of classic arcade games, including video games, pinball, and more.Type of </p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/15/08/04/09/4cf22a50-1d2e-4314-b8aa-11b1236b3d58/MSC Cruises Arcade.png" alt="Arcade" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Arcade</h3><p>다양한 아케이드 게임을 즐길 수 있는 게임룸입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/03/08/14/44/27/442def33-e6ee-4bb4-8797-e419a226fed1/MSC Cruises MSC Preziosa Top Sail Lounge 1.jpg" alt="Top Sail Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Top Sail Lounge</h3><p>Located on Deck 15</p></div>
+    <img src="https://assets.widgety.co.uk/2023/03/08/14/44/27/442def33-e6ee-4bb4-8797-e419a226fed1/MSC Cruises MSC Preziosa Top Sail Lounge 1.jpg" alt="Top Sail Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Top Sail Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/03/08/14/52/01/78377e30-38d6-40dc-a106-4c514ff10070/MSC Cruises MSC Preziosa Saphir Bar.jpg" alt="Saphir Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Saphir Bar</h3><p>Located on Deck 14</p></div>
+    <img src="https://assets.widgety.co.uk/2023/03/08/14/52/01/78377e30-38d6-40dc-a106-4c514ff10070/MSC Cruises MSC Preziosa Saphir Bar.jpg" alt="Saphir Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Saphir Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/03/08/15/04/09/88369489-0fe0-428f-939c-7dbd3fb379e4/MSC Cruises MSC Preziosa Turquoise Bar.jpg" alt="Turquoise Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Turquoise Bar</h3><p>Located on Deck 14</p></div>
+    <img src="https://assets.widgety.co.uk/2023/03/08/15/04/09/88369489-0fe0-428f-939c-7dbd3fb379e4/MSC Cruises MSC Preziosa Turquoise Bar.jpg" alt="Turquoise Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Turquoise Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/03/08/15/27/07/f8a3cd7a-d720-4923-bf6f-af42b02ffabf/MSC Cruises MSC Preziosa Phoenician Plaza 1.jpg" alt="Phoenician Plaza" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Phoenician Plaza</h3><p>Located on Deck 6</p></div>
+    <img src="https://assets.widgety.co.uk/2023/03/08/15/27/07/f8a3cd7a-d720-4923-bf6f-af42b02ffabf/MSC Cruises MSC Preziosa Phoenician Plaza 1.jpg" alt="Phoenician Plaza" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Phoenician Plaza</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/03/08/16/24/18/f2db9168-5d28-4eb0-ad11-91b9acdbdc44/MSC Cruises MSC Preziosa La Playa Preciosa.jpg" alt="La Playa Preciosa" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>La Playa Preciosa</h3><p>Located on Deck 14</p></div>
+    <img src="https://assets.widgety.co.uk/2023/03/08/16/24/18/f2db9168-5d28-4eb0-ad11-91b9acdbdc44/MSC Cruises MSC Preziosa La Playa Preciosa.jpg" alt="La Playa Preciosa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>La Playa Preciosa</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/13/49/53/da6a73b7-5ddf-4d9b-bc6e-6de7535f424e/MSC Cruises MSC Preziosa The One Bar - Credits - MSC Rights - The One Bar 1.jpg" alt="The One Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The One Bar</h3><p>Located on Deck 18</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/13/49/53/da6a73b7-5ddf-4d9b-bc6e-6de7535f424e/MSC Cruises MSC Preziosa The One Bar - Credits - MSC Rights - The One Bar 1.jpg" alt="The One Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The One Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/06/17/04/21/3e185d29-477b-45f2-8c50-000dfb7af9ba/MSC Cruises, MSC Preziosa, Reception - Guest Service 1, Copyrights - MSC Rights.jpg" alt="Reception - Guest Service" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Reception - Guest Service</h3><p>The Reception - Guest Service can be located on Deck 5.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/06/17/04/21/3e185d29-477b-45f2-8c50-000dfb7af9ba/MSC Cruises, MSC Preziosa, Reception - Guest Service 1, Copyrights - MSC Rights.jpg" alt="Reception - Guest Service" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Reception - Guest Service</h3><p>선상 아이스링크에서 스케이팅과 아이스쇼를 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/15/09/38/18/b1351c34-aee4-4d97-82f6-5e1c29b938b4/MSC Photo Portrait.png" alt="Timeless Studio Photography" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Timeless Studio Photography</h3><p>A dedicated Studio Photographer will provide you with a unique photo opportunity to capture the special moments of your cruise. During a private consultation you will be presented with the best locati</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/15/09/38/18/b1351c34-aee4-4d97-82f6-5e1c29b938b4/MSC Photo Portrait.png" alt="Timeless Studio Photography" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Timeless Studio Photography</h3><p>전문 사진작가가 촬영한 아름다운 사진을 간직하세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/06/21/44/55/928d1c16-a686-4c65-be04-a903f9e94310/MSC Cruises, MSC Preziosa, Excursion Office 1, Copyrights - MSC Rights.jpg" alt="Excursion Office" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Excursion Office</h3><p>The Excursion Office can be located on Deck 6.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/06/21/44/55/928d1c16-a686-4c65-be04-a903f9e94310/MSC Cruises, MSC Preziosa, Excursion Office 1, Copyrights - MSC Rights.jpg" alt="Excursion Office" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Excursion Office</h3><p>선상 아이스링크에서 스케이팅과 아이스쇼를 즐길 수 있습니다.</p></div>
   </div>
     </div>
 
     <h2 id="health">💆 스파 &amp; 웰니스</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/08/16/14/32/46/f2b72801-5c28-4397-9cdc-344ed6d2fbcf/MSC Cruises MSC Preziosa Gym.jpg" alt="Gym by TechnoGym®" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Gym by TechnoGym®</h3><p>Fitted with authentic TechnoGym® equipment and featuring panoramic ocean views, the on-board gym is the place to be for all those who take their fitness regime seriously. Hone your physique with a ful</p></div>
+    <img src="https://assets.widgety.co.uk/2019/08/16/14/32/46/f2b72801-5c28-4397-9cdc-344ed6d2fbcf/MSC Cruises MSC Preziosa Gym.jpg" alt="Gym by TechnoGym®" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Gym by TechnoGym®</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/09/09/04/39/5af48bd0-0032-496a-800b-7f7bfa3d0e77/MSC Cruises MSC Preziosa Spa 4.jpg" alt="MSC Aurea Spa" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Aurea Spa</h3><p>MSC Aurea Spa boasts an exotic interior of natural stone, precious woods and rich mosaics, and is equipped with specific and massage treatment suites. Being pampered by a traditional Balinese Massage </p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/09/09/04/39/5af48bd0-0032-496a-800b-7f7bfa3d0e77/MSC Cruises MSC Preziosa Spa 4.jpg" alt="MSC Aurea Spa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Aurea Spa</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/09/09/09/28/dc327041-fa4c-4475-9e9f-daf73b49caea/MSC Cruises MSC Preziosa Aqua Park.jpg" alt="The Pools and Aqua Park" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Pools and Aqua Park</h3><p>Located on Deck 14 and Deck 15</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/09/09/09/28/dc327041-fa4c-4475-9e9f-daf73b49caea/MSC Cruises MSC Preziosa Aqua Park.jpg" alt="The Pools and Aqua Park" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Pools and Aqua Park</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/09/09/18/57/2f92341b-4c61-46ac-87cc-6c860b6bae6d/MSC Cruises MSC Preziosa MSC Yacht Club 7.jpg" alt="Top 18 Solarium" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Top 18 Solarium</h3><p>Located on Deck 18</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/09/09/18/57/2f92341b-4c61-46ac-87cc-6c860b6bae6d/MSC Cruises MSC Preziosa MSC Yacht Club 7.jpg" alt="Top 18 Solarium" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Top 18 Solarium</h3><p>성인 전용 솔라리움에서 조용하고 평화로운 휴식을 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/19/12/55/11/766e4e4a-9c3e-47d5-b3a2-8e33081f768e/MSC - Beauty Salon 1.jpg" alt="Beauty Salon" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Beauty Salon</h3><p>You can enjoy the expertise of highly specialised staff in aesthetic treatments to offer you excellent results and improve the relaxing effects of your cruise. Customise your cruise with the best trea</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/19/12/55/11/766e4e4a-9c3e-47d5-b3a2-8e33081f768e/MSC - Beauty Salon 1.jpg" alt="Beauty Salon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Beauty Salon</h3><p>전문 뷰티 살롱에서 헤어와 네일 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/19/12/55/10/5bb86288-7d54-4122-a6a5-39211f18a3f5/MSC - Power Walking Track 2.jpg" alt="Power Walking Track" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Power Walking Track</h3><p>Enjoying time off on your cruise doesn’t need to mean letting your fitness routine slide, so gear up and rendezvous with the power walking and jogging track on deck to get your daily exercise fix whil</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/19/12/55/10/5bb86288-7d54-4122-a6a5-39211f18a3f5/MSC - Power Walking Track 2.jpg" alt="Power Walking Track" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Power Walking Track</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/15/09/50/53/32f1e50b-eb79-47a4-b6d7-1a6c59ed5d7c/MSC Cruises Medi Spa.png" alt="Medi Spa Centre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Medi Spa Centre</h3><p>Relaxing on one of our ships will do wonders for you, but we also have a few secrets on board to help you look and feel even better. Make the most of our range of safe and effective Anti-Ageing treatm</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/15/09/50/53/32f1e50b-eb79-47a4-b6d7-1a6c59ed5d7c/MSC Cruises Medi Spa.png" alt="Medi Spa Centre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Medi Spa Centre</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/09/09/04/36/cc6a360a-5bd7-4041-93f1-553614b3b7f5/MSC Cruises MSC Preziosa Spa 0.jpg" alt="Thermal Area" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Thermal Area</h3><p>Start your wellness journey in our on board thermal area and achieve a lasting feeling of absolute well-being that will stay with you well beyond your cruise. Our thermal experiences are designed to s</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/09/09/04/36/cc6a360a-5bd7-4041-93f1-553614b3b7f5/MSC Cruises MSC Preziosa Spa 0.jpg" alt="Thermal Area" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Thermal Area</h3><p>테라피 효과의 온열 시설에서 몸과 마음의 긴장을 풀어보세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/19/12/55/12/8ca00d3d-95c2-4f79-8314-0df8164441e8/MSC - Hair Salon 1.jpg" alt="Hair Salon" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Hair Salon</h3><p>Refresh your look with a new hairstyle! There are different packages which include a personalised shampoo &amp; conditioning mask, a haircut and a single process colour treatment. Leave the salon styl</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/19/12/55/12/8ca00d3d-95c2-4f79-8314-0df8164441e8/MSC - Hair Salon 1.jpg" alt="Hair Salon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Hair Salon</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/15/04/30/ac70cca8-caf5-4edb-bad6-da4ae846328d/MSC Lirica - Sports Tournament 1.jpg" alt="Sport Tournaments" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sport Tournaments</h3><p>Tennis Tournament - if you've got a killer backhand then why not enter our onboard tennis tournament? It might not be Wimbledon but it'll serve up a great workout and possibly a taste of glory, tooSoc</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/15/04/30/ac70cca8-caf5-4edb-bad6-da4ae846328d/MSC Lirica - Sports Tournament 1.jpg" alt="Sport Tournaments" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sport Tournaments</h3><p>테니스 코트에서 바다를 바라보며 테니스를 즐길 수 있습니다.</p></div>
   </div>
     </div>
 
     <h2 id="kids">👧 키즈 클럽</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/15/08/47/7a846015-7e66-4a8a-9cc8-9826874e803d/MSC Cruises MSC Preziosa Baby and Toddler Club - Credits - MSC Rights 5.jpg" alt="Baby Club 0-3" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Baby Club 0-3</h3><p>You can leave your toddlers with our MSC Babycare staff, or stay with them and enjoy the special Chicco toys and games. They'll love our music and rhythm activities, designed to awaken their curiosity</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/15/08/47/7a846015-7e66-4a8a-9cc8-9826874e803d/MSC Cruises MSC Preziosa Baby and Toddler Club - Credits - MSC Rights 5.jpg" alt="Baby Club 0-3" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Baby Club 0-3</h3><p>유아를 위한 전용 공간으로, 안전하고 즐거운 활동을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/15/08/47/dd536403-5cb8-4f3d-b8c8-619852e1dba0/MSC Cruises MSC Preziosa Baby and Toddler Club - Credits - MSC Rights 4.jpg" alt="Mini Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Mini Club</h3><p>The Mini Club welcomes children aged between 3 and 6 years old, bringing them new friends and lots of fun, enriched by the stimulating toys of our partnership with LEGO®. The club offers games, events</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/15/08/47/dd536403-5cb8-4f3d-b8c8-619852e1dba0/MSC Cruises MSC Preziosa Baby and Toddler Club - Credits - MSC Rights 4.jpg" alt="Mini Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Mini Club</h3><p>어린이를 위한 미니 클럽으로, 또래 친구들과 다양한 활동을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/15/08/47/6b4a431c-bb89-499b-b050-49e64fe3fc10/MSC Cruises MSC Preziosa Baby and Toddler Club - Credits - MSC Rights 1.jpg" alt="Junior Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Junior Club</h3><p>The Junior Club inspires connection and cooperation among 7 to 11-year-olds, through a wide variety of activities. Highlights range from Masterchef at Sea Juniors and Dorebro Sport competitions to our</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/15/08/47/6b4a431c-bb89-499b-b050-49e64fe3fc10/MSC Cruises MSC Preziosa Baby and Toddler Club - Credits - MSC Rights 1.jpg" alt="Junior Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Junior Club</h3><p>7-11세 어린이를 위한 전용 프로그램을 제공하는 주니어 클럽입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/17/14/28/59/d62d8386-3630-432f-8219-d48d959c06f9/MSC Cruises, Young Club.jpg" alt="Young Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Young Club</h3><p>With the Young Club, kids from 12 to 14 years old can dive into a world of discovery, involvement and interaction.Each day holds the promise of new experiences, with a dedicated programme of sport tou</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/17/14/28/59/d62d8386-3630-432f-8219-d48d959c06f9/MSC Cruises, Young Club.jpg" alt="Young Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Young Club</h3><p>신나는 음악과 함께 춤을 즐길 수 있는 디스코장입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/17/14/28/59/4b92b580-b75b-4ffa-8f7e-346121de6e70/MSC Cruises, Teen Club.jpg" alt="Teen Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Teen Club</h3><p>Teenagers aged from 15 to 17 years old can look forward to having the time of their lives on board. Teen Club activities range from sports and competitions, dance contests and social network games to </p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/17/14/28/59/4b92b580-b75b-4ffa-8f7e-346121de6e70/MSC Cruises, Teen Club.jpg" alt="Teen Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Teen Club</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/15/13/14/25cd5e85-e6b5-4188-a5a7-228db3ee0500/MSC Cruises MSC Preziosa Doremi Castle - Credits - MSC Rights 1.jpg" alt="Vertigo & Doremi Castle" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Vertigo & Doremi Castle</h3><p>Located on Deck 16.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/15/13/14/25cd5e85-e6b5-4188-a5a7-228db3ee0500/MSC Cruises MSC Preziosa Doremi Castle - Credits - MSC Rights 1.jpg" alt="Vertigo & Doremi Castle" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Vertigo & Doremi Castle</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/09/09/20/51/17d20b67-6d66-48d9-91c9-3d092f98d89f/MSC Cruises MSC Preziosa Graffiti's Teen 2.jpg" alt="Graffiti Teen Disco " loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Graffiti Teen Disco </h3><p>Located on Deck 15.</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/09/09/20/51/17d20b67-6d66-48d9-91c9-3d092f98d89f/MSC Cruises MSC Preziosa Graffiti's Teen 2.jpg" alt="Graffiti Teen Disco " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Graffiti Teen Disco </h3><p>신나는 음악과 함께 춤을 즐길 수 있는 디스코장입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/02/14/14/44/16/e7ded94b-1486-4a00-93f5-c21b1cd5b580/MSC Cruises MSC Euribia Kids Clubs and Family Activities.jpg" alt="Kids Clubs and Family Activities" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Kids Clubs and Family Activities</h3><p>MSC ORIGINALS: On an MSC cruise, you'll discover a diverse array of activities designed for both children and adults. Our dedicated Kids Clubs offer a wide range of engaging experiences, including spo</p></div>
+    <img src="https://assets.widgety.co.uk/2023/02/14/14/44/16/e7ded94b-1486-4a00-93f5-c21b1cd5b580/MSC Cruises MSC Euribia Kids Clubs and Family Activities.jpg" alt="Kids Clubs and Family Activities" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Kids Clubs and Family Activities</h3><p>전문 스태프가 운영하는 키즈클럽으로, 다양한 활동과 프로그램을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/02/14/15/19/24/e48ce65f-64ad-44b8-bfdd-0df6725b4fa6/MSC Cruises Web Series.jpg" alt="Web Series" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Web Series</h3><p>Experience the cruise adventure before you even step on board! Dive into the captivating web series Cabin 12006, available on MSC Cruises' official YouTube channel. Join Markus, a teenager embarking o</p></div>
+    <img src="https://assets.widgety.co.uk/2023/02/14/15/19/24/e48ce65f-64ad-44b8-bfdd-0df6725b4fa6/MSC Cruises Web Series.jpg" alt="Web Series" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Web Series</h3><p>10대 청소년을 위한 전용 공간으로, 게임과 소셜 활동을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/19/13/00/43/ed665b8b-ec67-4309-b857-17f4ad7157de/MSC - Babies and Toddlers Services.jpg" alt="Babies and Toddlers Services" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Babies and Toddlers Services</h3><p>Baby Clubs - along with activities that the whole family can enjoy together, we offer a Baby Club onboard all our ships with dedicated activities and facilities.MSC Baby Care Service - we have thought</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/19/13/00/43/ed665b8b-ec67-4309-b857-17f4ad7157de/MSC - Babies and Toddlers Services.jpg" alt="Babies and Toddlers Services" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Babies and Toddlers Services</h3><p>유아를 위한 전용 공간으로, 안전하고 즐거운 활동을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/14/58/47/210a6102-26a8-40c8-aea7-8f5c19fa0df7/MSC Cruises, MSC Armonia, Lego Experience 1, Copyrights - MSC Rights.jpg" alt="LEGO® Experience" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>LEGO® Experience</h3><p>Once during every cruise we hold a special entertainment event called the LEGO® Experience On Board: an entire day dedicated to fun LEGO activities for the whole family to enjoy. Thanks to this specia</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/14/58/47/210a6102-26a8-40c8-aea7-8f5c19fa0df7/MSC Cruises, MSC Armonia, Lego Experience 1, Copyrights - MSC Rights.jpg" alt="LEGO® Experience" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>LEGO® Experience</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/03/13/50/54/8fb72aa5-be95-4424-802b-79ec47a49665/MSC Grandiosa - Family Dining.jpg" alt="Family Dining" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Family Dining</h3><p>Enjoy a culinary voyage of discovery with your children on an MSC Cruise: an array of international dishes and ethnic specialties will delight the whole family with flavours from around the globe.For </p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/03/13/50/54/8fb72aa5-be95-4424-802b-79ec47a49665/MSC Grandiosa - Family Dining.jpg" alt="Family Dining" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Family Dining</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/12/24/52/59f199ea-e870-49ef-9932-1c89b4cdfdab/MSC Cruises, Family Activities.jpg" alt="Family Activities" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Family Activities</h3><p>Family Game Show - this is a competition for the whole family with dance, music and selfie challenges dedicated to Kelly &amp; Kloe On Board, MSC Cruises’ original web series created for kids and fami</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/12/24/52/59f199ea-e870-49ef-9932-1c89b4cdfdab/MSC Cruises, Family Activities.jpg" alt="Family Activities" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Family Activities</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
     </div>
 
     <h2 id="cabins">🛏️ 객실 등급</h2>
     <div class="cabin-grid">
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/08/13/57/52/d8bcbea7-2dce-40a6-8d26-2f7669049a37/MSC Cruises MSC Preziosa MSC Yacht Club Executive and Family Suite with Balcony - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="MSC Yacht Club Executive and Family Suite with Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/08/13/57/52/d8bcbea7-2dce-40a6-8d26-2f7669049a37/MSC Cruises MSC Preziosa MSC Yacht Club Executive and Family Suite with Balcony - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="MSC Yacht Club Executive and Family Suite with Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">MSC Yacht Club Executive and Family Suite with Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/08/12/46/28/8edfeeed-771d-47a9-97c9-937775850f16/MSC Cruises MSC Prezioa MSC Yacht Club Executive and Family Suite with Balcony - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="MSC Yacht Club Executive and Family Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/08/12/46/28/8edfeeed-771d-47a9-97c9-937775850f16/MSC Cruises MSC Prezioa MSC Yacht Club Executive and Family Suite with Balcony - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="MSC Yacht Club Executive and Family Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">MSC Yacht Club Executive and Family Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/08/14/05/25/0ec9c6e2-5263-4a88-9daf-a34370f142b2/MSC Cruises MSC Preziosa MSC Yacht Club Grand Suite - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="MSC Yacht Club Grand Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/08/14/05/25/0ec9c6e2-5263-4a88-9daf-a34370f142b2/MSC Cruises MSC Preziosa MSC Yacht Club Grand Suite - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="MSC Yacht Club Grand Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">MSC Yacht Club Grand Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/08/14/05/25/0ec9c6e2-5263-4a88-9daf-a34370f142b2/MSC Cruises MSC Preziosa MSC Yacht Club Grand Suite - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="MSC Yacht Club Deluxe Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/08/14/05/25/0ec9c6e2-5263-4a88-9daf-a34370f142b2/MSC Cruises MSC Preziosa MSC Yacht Club Grand Suite - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="MSC Yacht Club Deluxe Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">MSC Yacht Club Deluxe Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/08/13/57/53/5cadb0e4-6918-4d30-b7e5-3128d29b247a/MSC Cruises MSC Preziosa MSC Yacht Club Executive and Family Suite with Balcony - Credit - MSC Rights - Ivan Sarfatti 4.jpg" alt="Grand Suite Aurea" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/08/13/57/53/5cadb0e4-6918-4d30-b7e5-3128d29b247a/MSC Cruises MSC Preziosa MSC Yacht Club Executive and Family Suite with Balcony - Credit - MSC Rights - Ivan Sarfatti 4.jpg" alt="Grand Suite Aurea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Grand Suite Aurea</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/12/45/22/16564503-99d4-407c-a552-c36764dc8084/MSC Cruises MSC Fantasia Premium Suite Aurea - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Premium Suite Aurea" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/09/22/12/45/22/16564503-99d4-407c-a552-c36764dc8084/MSC Cruises MSC Fantasia Premium Suite Aurea - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Premium Suite Aurea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Suite Aurea</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/09/30/13/52/17/9bf154e9-0f6d-4e64-ab09-d932ef2b98a8/MSC Cruises MSC Splendida Premium Suite with Sealed Window - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="Premium Suite Aurea with Sealed Window" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/09/30/13/52/17/9bf154e9-0f6d-4e64-ab09-d932ef2b98a8/MSC Cruises MSC Splendida Premium Suite with Sealed Window - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="Premium Suite Aurea with Sealed Window" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Suite Aurea with Sealed Window</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/13/18/03/d54aa4a8-1107-45ed-8edf-cb4f5c34c799/MSC Cruises MSC Fantasia Junior Suite Aurea with Sealed Window - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Junior Suite Aurea with Sealed Window" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/09/22/13/18/03/d54aa4a8-1107-45ed-8edf-cb4f5c34c799/MSC Cruises MSC Fantasia Junior Suite Aurea with Sealed Window - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Junior Suite Aurea with Sealed Window" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Suite Aurea with Sealed Window</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/06/16/57/21/698ce236-180a-4849-832e-e53009167218/MSC Cruises MSC Divina Deluxe Balcony Aurea - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Deluxe Balcony Aurea" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/06/16/57/21/698ce236-180a-4849-832e-e53009167218/MSC Cruises MSC Divina Deluxe Balcony Aurea - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Deluxe Balcony Aurea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Balcony Aurea</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/06/17/08/15/63364694-a2cb-4054-bc72-19b0ee259cb1/MSC Cruises MSC Divina Premium Balcony - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="Premium Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/06/17/08/15/63364694-a2cb-4054-bc72-19b0ee259cb1/MSC Cruises MSC Divina Premium Balcony - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="Premium Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/06/17/08/15/63364694-a2cb-4054-bc72-19b0ee259cb1/MSC Cruises MSC Divina Premium Balcony - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="Junior Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/06/17/08/15/63364694-a2cb-4054-bc72-19b0ee259cb1/MSC Cruises MSC Divina Premium Balcony - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="Junior Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/07/11/36/29/8518b1bb-35e6-4bf4-b170-e5ab84acde6b/MSC Cruises MSC Divina Deluxe Balcony with Partial View - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="Deluxe Balcony With Partial View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/07/11/36/29/8518b1bb-35e6-4bf4-b170-e5ab84acde6b/MSC Cruises MSC Divina Deluxe Balcony with Partial View - Credit - MSC Rights - Ivan Sarfatti.jpg" alt="Deluxe Balcony With Partial View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Balcony With Partial View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2019/08/16/13/58/57/98bcca0e-07d8-4260-b1c8-4baafcea7e43/MSC Cruises MSC Preziosa Balcony.jpg" alt="Balcony Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2019/08/16/13/58/57/98bcca0e-07d8-4260-b1c8-4baafcea7e43/MSC Cruises MSC Preziosa Balcony.jpg" alt="Balcony Guarantee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Balcony Guarantee</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/16/11/23/36/3a537c6e-971d-4773-92e4-f383e972a302/MSC Cruises, MSC Divina, Premium Ocean View.jpg" alt="Premium Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/16/11/23/36/3a537c6e-971d-4773-92e4-f383e972a302/MSC Cruises, MSC Divina, Premium Ocean View.jpg" alt="Premium Ocean View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Ocean View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/16/11/23/36/3a537c6e-971d-4773-92e4-f383e972a302/MSC Cruises, MSC Divina, Premium Ocean View.jpg" alt="Deluxe Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/16/11/23/36/3a537c6e-971d-4773-92e4-f383e972a302/MSC Cruises, MSC Divina, Premium Ocean View.jpg" alt="Deluxe Ocean View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Ocean View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/16/11/23/36/3a537c6e-971d-4773-92e4-f383e972a302/MSC Cruises, MSC Divina, Premium Ocean View.jpg" alt="Junior Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/16/11/23/36/3a537c6e-971d-4773-92e4-f383e972a302/MSC Cruises, MSC Divina, Premium Ocean View.jpg" alt="Junior Ocean View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Ocean View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/16/11/23/36/3a537c6e-971d-4773-92e4-f383e972a302/MSC Cruises, MSC Divina, Premium Ocean View.jpg" alt="Guarantee Outside" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/16/11/23/36/3a537c6e-971d-4773-92e4-f383e972a302/MSC Cruises, MSC Divina, Premium Ocean View.jpg" alt="Guarantee Outside" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Outside</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/07/11/55/39/15126342-2bab-495c-9de3-c75410bfc717/MSC Cruises MSC Divina Deluxe Interior.jpg" alt="Deluxe Interior" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/07/11/55/39/15126342-2bab-495c-9de3-c75410bfc717/MSC Cruises MSC Divina Deluxe Interior.jpg" alt="Deluxe Interior" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Interior</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/11/29/05/6138c86b-e441-445a-aaa0-07a1282ad2f1/MSC Cruises MSC Preziosa Junior Interior Webpage.jpg" alt="Junior Interior" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/14/11/29/05/6138c86b-e441-445a-aaa0-07a1282ad2f1/MSC Cruises MSC Preziosa Junior Interior Webpage.jpg" alt="Junior Interior" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Interior</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/07/11/55/39/15126342-2bab-495c-9de3-c75410bfc717/MSC Cruises MSC Divina Deluxe Interior.jpg" alt="Interior Guarantee " loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/07/11/55/39/15126342-2bab-495c-9de3-c75410bfc717/MSC Cruises MSC Divina Deluxe Interior.jpg" alt="Interior Guarantee " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Interior Guarantee </div>
   </div>
     </div>
@@ -483,59 +572,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="deckplan">📐 덱 플랜</h2>
     <div class="deckplan-list">
   <div class="deckplan-item">
-    <img src="" alt="Deck 18 - Topazio" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/05/15/15/15/6b7ba55c-09b6-4aac-b08c-5ec0d7b06508/MSC Cruises, MSC Preziosa, Deck 18 - Topazio.png" alt="Deck 18 - Topazio" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 18 - Topazio</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 16 - Acquamarina" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/05/15/15/15/ab66a2ae-5faf-4788-99b6-a6bce2863699/MSC Cruises, MSC Preziosa, Deck 16 - Acquamarina.png" alt="Deck 16 - Acquamarina" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 16 - Acquamarina</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 15 - Cristallo" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/05/15/15/15/8ad37862-e1a3-41c7-a405-fe6bfa809393/MSC Cruises, MSC Preziosa, Deck 15 - Cristallo.png" alt="Deck 15 - Cristallo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 15 - Cristallo</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 14 - Smeraldo" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/05/15/15/15/e621f826-5efd-4bce-9127-27224486740d/MSC Cruises, MSC Preziosa, Deck 14 - Smeraldo.png" alt="Deck 14 - Smeraldo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 14 - Smeraldo</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 13 - Ametista" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/05/15/22/50/a7c1227e-0db7-4f9c-9190-60f573b28460/MSC Cruises, MSC Preziosa, Deck 13 - Ametista.png" alt="Deck 13 - Ametista" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 13 - Ametista</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 12 - Opale" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/05/15/15/15/16df50ef-4afb-40bb-9570-84cb61631eb8/MSC Cruises, MSC Preziosa, Deck 12 - Opale.png" alt="Deck 12 - Opale" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 12 - Opale</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 11 - Giada" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/05/15/15/15/96a5a426-a7e9-4d46-9b40-cc2130f2fd71/MSC Cruises, MSC Preziosa, Deck 11 - Giada.png" alt="Deck 11 - Giada" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 11 - Giada</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 10 - Tormalina" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/05/15/15/15/c32a400c-aeaf-4d91-85f1-6ce0bd5fe78d/MSC Cruises, MSC Preziosa, Deck 10 - Tormalina.png" alt="Deck 10 - Tormalina" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 10 - Tormalina</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 9 - Agata" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/05/15/15/15/ef8f2405-b399-42ba-bf42-6839fc5b00d8/MSC Cruises, MSC Preziosa, Deck 9 - Agata.png" alt="Deck 9 - Agata" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 9 - Agata</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 8 - Onice" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/05/15/15/15/6cd78812-3f63-48a3-9fea-39c10b399a69/MSC Cruises, MSC Preziosa, Deck 8 - Onice.png" alt="Deck 8 - Onice" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 8 - Onice</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 7 - Rubino" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/05/15/15/15/543709a1-9772-4a55-8a42-0a3132225b6d/MSC Cruises, MSC Preziosa, Deck 7 - Rubino.png" alt="Deck 7 - Rubino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 7 - Rubino</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 6 - Diamante" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/05/15/15/14/70806006-e5b7-43b7-b40c-5c2e18173c38/MSC Cruises, MSC Preziosa, Deck 6 - Diamante.png" alt="Deck 6 - Diamante" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 6 - Diamante</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 5 - Corallo" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/05/15/15/14/70a15734-9038-491f-8e9c-ab04dfc95933/MSC Cruises, MSC Preziosa, Deck 5 - Corallo.png" alt="Deck 5 - Corallo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 5 - Corallo</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 4 - Ambra" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/08/11/35/33/2f4b0b4e-556b-432a-afcf-ef89d8b5b316/MSC Cruises MSC Preziosa Deck Plan 4.png" alt="Deck 4 - Ambra" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 4 - Ambra</p>
   </div>
     </div>

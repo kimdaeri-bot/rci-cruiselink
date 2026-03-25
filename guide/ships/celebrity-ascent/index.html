@@ -69,22 +69,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
 
+
     .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
     @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
     .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-card img{width:100%;height:160px;object-fit:cover;display:block}
+    .facility-card .no-img{width:100%;height:160px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem}
     .facility-info{padding:12px}
     .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
     .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
     @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
     .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card img{width:100%;height:120px;object-fit:cover;display:block}
+    .cabin-card .no-img{width:100%;height:120px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
     .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
     .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
     @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
-    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200);display:block}
+    .deckplan-item .no-img{width:100%;height:200px;background:var(--gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem}
     .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
@@ -124,382 +128,473 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+
     <h2 id="dining">🍽️ 다이닝</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/04/30/09/08/10/c5e441a7-93b8-405b-b49c-683a717c1719/Celebrity Cruises Celebrity Beyond luminae the retreat dining min.png" alt="Luminae at The Retreat" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Luminae at The Retreat</h3><p>For Retreat guests only -Luminae at The Retreat features a unique design by Kelly Hoppen, CBE that’s as boldly elegant as the cuisine served here. Explore exclusive menus crafted by our chef that you </p></div>
+    <img src="https://assets.widgety.co.uk/2021/04/30/09/08/10/c5e441a7-93b8-405b-b49c-683a717c1719/Celebrity Cruises Celebrity Beyond luminae the retreat dining min.png" alt="Luminae at The Retreat" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Luminae at The Retreat</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/16/12/31/45/3aac9d97-5934-4831-9d96-51df8c342a22/Celebrity Cruises Le Voyage by Daniel Boulud.jpg" alt="Le Voyage℠ by Daniel Boulud" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Le Voyage℠ by Daniel Boulud</h3><p>Just as the name implies, travel is the inspiration for the mouthwatering dishes created by Daniel. The global flavors he’s infused into his menu are designed to give guests a taste of the places that</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/16/12/31/45/3aac9d97-5934-4831-9d96-51df8c342a22/Celebrity Cruises Le Voyage by Daniel Boulud.jpg" alt="Le Voyage℠ by Daniel Boulud" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Le Voyage℠ by Daniel Boulud</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/16/12/37/44/29e56a55-3fa9-4942-88ca-bcd18c15edf0/Celebrity Cruises Fine Cut Steakhouse.jpg" alt="Fine Cut Steakhouse" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Fine Cut Steakhouse</h3><p>Sink your knife and fork into the tender Grass Fed Lamb Chops, the Pan Roasted Maine Lobster Tail with creamy garlic sauce, or the Slow Roasted Cornish Game Hen. Beyond the delicious entrées, you’ll f</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/16/12/37/44/29e56a55-3fa9-4942-88ca-bcd18c15edf0/Celebrity Cruises Fine Cut Steakhouse.jpg" alt="Fine Cut Steakhouse" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Fine Cut Steakhouse</h3><p>정통 스테이크하우스로, 엄선된 최고급 소고기 스테이크와 신선한 해산물을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/04/19/30/43/10a00cb1-54f3-4e35-add4-dc6587afb5c9/Celebrity Cruises Le Grand Bistro 1.jpg" alt="Le Grand Bistro" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Le Grand Bistro</h3><p>Inspired by classic French bistros, the mouthwatering sights, scents, and sounds of a bustling boulangerie-patisserie will excite you almost as much as the food itself. The ambience changes from morni</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/04/19/30/43/10a00cb1-54f3-4e35-add4-dc6587afb5c9/Celebrity Cruises Le Grand Bistro 1.jpg" alt="Le Grand Bistro" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Le Grand Bistro</h3><p>프렌치 퀴진을 선보이는 고급 레스토랑으로, 우아한 분위기에서 다이닝을 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/08/15/12/16/02/ac27665a-96b9-46cb-9e02-947e50bee2a5/Celebrity Cruises Celebrity Ascent Blu ©CEL 1.jpg" alt="Blu" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Blu</h3><p>Blu, the exclusive restaurant for AquaClass® guests, offers new clean cuisine menu options that are focused on a healthier lifestyle. These delicious dishes are perfectly complemented by an extensive </p></div>
+    <img src="https://assets.widgety.co.uk/2025/08/15/12/16/02/ac27665a-96b9-46cb-9e02-947e50bee2a5/Celebrity Cruises Celebrity Ascent Blu ©CEL 1.jpg" alt="Blu" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Blu</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/15/10/54/48/4380a29d-1243-48f1-9369-04725906c1ed/Celebrity Cruises Le Petit Chef.jpg" alt="Le Petit Chef®" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Le Petit Chef®</h3><p>The world-renown artists of Skullmapping have reached a true pinnacle of their custom 3D table animation art form. This dining experience is beautifully choreographed with an elegant menu created by o</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/15/10/54/48/4380a29d-1243-48f1-9369-04725906c1ed/Celebrity Cruises Le Petit Chef.jpg" alt="Le Petit Chef®" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Le Petit Chef®</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/16/13/15/27/2da5986d-b730-4d9a-93f0-abf22938fc20/Celebrity Cruises Cyprus Restaurant.jpg" alt="Cyprus Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Cyprus Restaurant</h3><p>This is a restaurant that’s dear to our hearts, because it represents our company’s Greek heritage. The mouthwatering menus of Cyprus remain focused on seafood and feature simple, clean dishes that ce</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/16/13/15/27/2da5986d-b730-4d9a-93f0-abf22938fc20/Celebrity Cruises Cyprus Restaurant.jpg" alt="Cyprus Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Cyprus Restaurant</h3><p>신선한 해산물 요리를 전문으로 하는 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/04/18/21/55/9df51034-5430-4aea-874c-37e46f438e28/Celebrity Cruises Tuscan Restaurant 2.jpg" alt="Tuscan Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Tuscan Restaurant</h3><p>Borrowing from the success of our hugely popular specialty dining venue, Tuscan Grille, Tuscan Restaurant elevates those successes to new heights. Step inside and discover Italian inspired cuisine alo</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/04/18/21/55/9df51034-5430-4aea-874c-37e46f438e28/Celebrity Cruises Tuscan Restaurant 2.jpg" alt="Tuscan Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Tuscan Restaurant</h3><p>독특한 컨셉의 스페셜티 레스토랑으로, 특별한 식사 경험을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/12/46/12/f84d25eb-9861-4377-a184-87b1e77598be/Celebrity Cruises, Celebrity Ascent, Cosmopolitan Restaurant 2 ©CEL.jpg" alt="Cosmopolitan Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Cosmopolitan Restaurant</h3><p>Mirroring our current main dining experience across our fleet, which is what brings so many of our guests back time and time again, Cosmopolitan Restaurant is the next evolution of our current main re</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/12/46/12/f84d25eb-9861-4377-a184-87b1e77598be/Celebrity Cruises, Celebrity Ascent, Cosmopolitan Restaurant 2 ©CEL.jpg" alt="Cosmopolitan Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Cosmopolitan Restaurant</h3><p>다양한 코스 요리를 즐길 수 있는 메인 다이닝룸으로, 매일 바뀌는 메뉴를 선보입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/04/18/33/10/67d7300e-654d-4083-9d7b-15d8c3a97940/Celebrity Cruises Normandie Restaurant 1.jpg" alt="Normandie Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Normandie Restaurant</h3><p>Normandie Restaurant features contemporary French cuisine in a modern and refined setting that evokes the romance of summertime in Paris, with a colour palette reminiscent of cherry blossoms in full b</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/04/18/33/10/67d7300e-654d-4083-9d7b-15d8c3a97940/Celebrity Cruises Normandie Restaurant 1.jpg" alt="Normandie Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Normandie Restaurant</h3><p>프렌치 퀴진을 선보이는 고급 레스토랑으로, 우아한 분위기에서 다이닝을 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/04/19/50/51/49518103-3681-47b7-8f62-684c47c20cfc/Celebrity Cruises Rooftop Garden Grill 2.jpg" alt="Rooftop Garden Grill" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Rooftop Garden Grill</h3><p>Get a taste of the great outdoors at Rooftop Garden Grill, nestled perfectly in its own delicious corner of the Rooftop Garden. Satisfy your cravings along with the most incredible ocean views around.</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/04/19/50/51/49518103-3681-47b7-8f62-684c47c20cfc/Celebrity Cruises Rooftop Garden Grill 2.jpg" alt="Rooftop Garden Grill" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Rooftop Garden Grill</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/16/12/01/00/8876f2f2-0f19-4819-92ab-8e273041dc02/Celebrity Cruises Oceanview Cafe.jpg" alt="Oceanview Café" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Oceanview Café</h3><p>Oceanview Café is the perfect spot to enjoy stunning views along with a variety of world flavors. A marketplace atmosphere with multiple stations offer made-to-order breakfast and lunch, with a rotati</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/16/12/01/00/8876f2f2-0f19-4819-92ab-8e273041dc02/Celebrity Cruises Oceanview Cafe.jpg" alt="Oceanview Café" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Oceanview Café</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/28/09/21/18/aa9e9ea9-64a6-4295-8a86-4f3e0b8266d6/Celebrity Cruises, Celebrity Apex, Spa Cafe ©CEL.jpg" alt="Spa Café and Juice Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Spa Café and Juice Bar</h3><p>After indulging at the spa, grab something fresh and flavorful. You’ll love our creative take on healthy cuisine with nourishing salads and a signature smoothie by goop*.  *Additional Cost</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/28/09/21/18/aa9e9ea9-64a6-4295-8a86-4f3e0b8266d6/Celebrity Cruises, Celebrity Apex, Spa Cafe ©CEL.jpg" alt="Spa Café and Juice Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Spa Café and Juice Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/04/19/41/56/10bdf1e5-77ab-498a-8d5e-9a558ed349ff/Celebrity Cruises Raw On 5 6.jpg" alt="Raw on 5" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Raw on 5</h3><p>Raw on 5, with its whimsically sophisticated ambiance, is an intimate eatery that features an amazing array of delicacies from the sea and views of the horizon make the dining experience here even mor</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/04/19/41/56/10bdf1e5-77ab-498a-8d5e-9a558ed349ff/Celebrity Cruises Raw On 5 6.jpg" alt="Raw on 5" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Raw on 5</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/05/10/28/27/7c2a25b4-9ffc-4d1d-9aa6-95430aeda797/Celebrity Cruises Eden Restaurant 8.jpg" alt="Eden Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Eden Restaurant</h3><p>Dinner at Eden Restaurant isn’t just a meal. It’s an extraordinary culinary journey, featuring an open kitchen, innovative dishes, and three levels of design excellence. Exciting new menus offer more </p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/05/10/28/27/7c2a25b4-9ffc-4d1d-9aa6-95430aeda797/Celebrity Cruises Eden Restaurant 8.jpg" alt="Eden Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Eden Restaurant</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/16/11/50/25/df3f897b-4b55-4f98-bdd3-fd24ce345165/Celebrity Cruises Eden Cafe.jpg" alt="Eden Café" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Eden Café</h3><p>Eden Café offers a wide variety of morning beverages and casual culinary bites. Three stories of glass bring in the shimmering morning light to create a bright and airy atmosphere, and change as the m</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/16/11/50/25/df3f897b-4b55-4f98-bdd3-fd24ce345165/Celebrity Cruises Eden Cafe.jpg" alt="Eden Café" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Eden Café</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/05/11/04/28/082a04fe-3308-4ced-aa15-98562ae30c10/Celebrity Cruises Mast Grill.jpg" alt="Mast Grill" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Mast Grill</h3><p>Enjoy ocean views and curb your hunger with a burger, salad, or sandwich in a relaxed, poolside atmosphere. There’s no better place to sample some hearty fare than on the top deck at the Mast Grill.</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/05/11/04/28/082a04fe-3308-4ced-aa15-98562ae30c10/Celebrity Cruises Mast Grill.jpg" alt="Mast Grill" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Mast Grill</h3><p>신선한 패티로 만든 버거와 아메리칸 푸드를 즐길 수 있는 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/29/12/13/03/0706d970-186f-42be-945b-10886d4da354/Celebrity Cruises, Room Service 1.jpeg" alt="Room Service" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Room Service</h3><p>Turn your stateroom into a private dining room with one phone call. Whether you crave a gourmet breakfast in bed, a leisurely lunch, an intimate dinner, or even a late-night snack, our dedicated staff</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/29/12/13/03/0706d970-186f-42be-945b-10886d4da354/Celebrity Cruises, Room Service 1.jpeg" alt="Room Service" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Room Service</h3><p>객실에서 편안하게 즐기는 룸서비스로, 언제든지 원하는 음식을 주문할 수 있습니다.</p></div>
   </div>
     </div>
 
     <h2 id="entertainment">🎭 엔터테인먼트</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/14/43/24/0ac7e727-d190-4a4c-a48b-0addedb04639/Celebrity Cruises, Celebrity Ascent, Resort Deck 4 ©CEL.jpg" alt="Resort Deck" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Resort Deck</h3><p>The Resort Deck is unlike any other outdoor space at sea—or anywhere. Here, you’ll find endless ways to enjoy the outdoors and connect with the sea, including the Rooftop Garden, the adults-only Solar</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/14/43/24/0ac7e727-d190-4a4c-a48b-0addedb04639/Celebrity Cruises, Celebrity Ascent, Resort Deck 4 ©CEL.jpg" alt="Resort Deck" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Resort Deck</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/18/31/41/06f5d470-9346-4f99-9f3d-0cba69809774/Celebrity Cruises, Celebrity Ascent, Rooftop Garden 2 ©CEL.jpg" alt="Rooftop Garden" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Rooftop Garden</h3><p>What better place could there be to gaze at the sea than float pools that are cantilevered over the open ocean? This feat is one of the highlights of our Rooftop Garden, which extends right over the w</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/18/31/41/06f5d470-9346-4f99-9f3d-0cba69809774/Celebrity Cruises, Celebrity Ascent, Rooftop Garden 2 ©CEL.jpg" alt="Rooftop Garden" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Rooftop Garden</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/04/10/05/37/19/c2365d8f-7143-448c-986b-3c74492fc10d/Celebrity Cruises, Edge Class, The Magic Carpet.jpg" alt="The Magic Carpet" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Magic Carpet</h3><p>The Magic Carpet is designed with comfortable seating, a full bar, and space for live music performances, so it truly is a destination itself on Celebrity Ascent.Welcome to one of the best places to t</p></div>
+    <img src="https://assets.widgety.co.uk/2024/04/10/05/37/19/c2365d8f-7143-448c-986b-3c74492fc10d/Celebrity Cruises, Edge Class, The Magic Carpet.jpg" alt="The Magic Carpet" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Magic Carpet</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/04/30/09/08/16/18de1512-50b2-4ebe-8026-0430d33d565f/Celebrity Cruises celebrity beyond sunset bar entrance min.jpg" alt="The Sunset Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Sunset Bar</h3><p>The open sea is one of the most rejuvenating places you can be, and we took full advantage of this with our Sunset Bar. The aft location offers amazing wake views, creating the perfect backdrop for th</p></div>
+    <img src="https://assets.widgety.co.uk/2021/04/30/09/08/16/18de1512-50b2-4ebe-8026-0430d33d565f/Celebrity Cruises celebrity beyond sunset bar entrance min.jpg" alt="The Sunset Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Sunset Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/18/14/17/db3f4680-1c29-4a67-9335-9498028ad533/Celebrity Cruises, Celebrity Ascent, Casino 1 ©CEL.jpg" alt="The Casino" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Casino</h3><p>This Vegas-style casino rivals the biggest and best land-based casinos. With a variety of games, you instantly become a member of the casino rewards program, Blue Chip Club, to start earning points wi</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/18/14/17/db3f4680-1c29-4a67-9335-9498028ad533/Celebrity Cruises, Celebrity Ascent, Casino 1 ©CEL.jpg" alt="The Casino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Casino</h3><p>라스베이거스 스타일의 카지노로, 슬롯머신과 테이블 게임을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2020/12/15/12/17/38/f67f1502-6406-4b63-a46f-6dcbea724ee3/Celebrity Cruises - Celebrity Edge - The Retreat Lounge _1_.jpg" alt="The Retreat® Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Retreat® Lounge</h3><p>For guests of The Retreat -Exclusive to guests of The Retreat, this warmly inviting lounge offers a fully stocked and expertly staffed bar, as well as gourmet bites and live entertainment.The Retreat </p></div>
+    <img src="https://assets.widgety.co.uk/2020/12/15/12/17/38/f67f1502-6406-4b63-a46f-6dcbea724ee3/Celebrity Cruises - Celebrity Edge - The Retreat Lounge _1_.jpg" alt="The Retreat® Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Retreat® Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/11/11/13/16/00/4ee1debc-12c6-46d2-a188-58ffd371f5b8/Celebrity Cruises - Celebrity Edge - Eden kitchen.jpg" alt="Eden" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Eden</h3><p>Awaken all your senses in this breathtaking, three-story venue that epitomizes Celebrity Ascent’s outward-facing design, connecting you with the world outside. It also invites you to immerse yourself </p></div>
+    <img src="https://assets.widgety.co.uk/2019/11/11/13/16/00/4ee1debc-12c6-46d2-a188-58ffd371f5b8/Celebrity Cruises - Celebrity Edge - Eden kitchen.jpg" alt="Eden" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Eden</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/18/25/11/374b68f7-d74e-432f-bc86-303648835ed0/Celebrity Cruises, Celebrity Ascent, Grand Plaza ©CEL.jpg" alt="The Grand Plaza" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Grand Plaza</h3><p>The Grand Plaza is a transformational place that offers a different experience every time you visit. From day to night, the lighting changes from warm and inviting to bright and dramatic. And, on Cele</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/18/25/11/374b68f7-d74e-432f-bc86-303648835ed0/Celebrity Cruises, Celebrity Ascent, Grand Plaza ©CEL.jpg" alt="The Grand Plaza" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Grand Plaza</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2018/09/13/14/51/43/279f2506-ae8e-4e5d-a21a-68194c88d5ae/Celebrity Cruises Celebrity Edge Theatre.jpg" alt="The Theatre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Theatre</h3><p>Every entertaining moment is more exciting than the next. With a perfect view from any seat, The Theatre introduces three all-new production shows with programming exclusive to Celebrity AscentSM , br</p></div>
+    <img src="https://assets.widgety.co.uk/2018/09/13/14/51/43/279f2506-ae8e-4e5d-a21a-68194c88d5ae/Celebrity Cruises Celebrity Edge Theatre.jpg" alt="The Theatre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Theatre</h3><p>브로드웨이 스타일의 대형 공연장으로, 세계적 수준의 쇼와 공연을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/16/16/52/37/1b1c670b-8fec-4094-98d1-d04da1742402/Celebrity Cruises The Club.jpg" alt="The Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Club</h3><p>Whether you’re joining the excitement of the daily activities that take place here or popping in at night for the cutting-edge entertainment experiences, The Club offers hours of entertainment.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/16/16/52/37/1b1c670b-8fec-4094-98d1-d04da1742402/Celebrity Cruises The Club.jpg" alt="The Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Club</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/18/25/11/28063418-5aed-4ad5-b4b7-93c435ef05f4/Celebrity Cruises, Celebrity Ascent, Martini Bar 1 ©CEL.jpg" alt="Martini Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Martini Bar</h3><p>Located in the middle of all the action in the Grand Plaza, this is without a doubt the epicenter of the social scene on Celebrity Ascent. Grab a seat at the circular bar underneath the glow of the ne</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/18/25/11/28063418-5aed-4ad5-b4b7-93c435ef05f4/Celebrity Cruises, Celebrity Ascent, Martini Bar 1 ©CEL.jpg" alt="Martini Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Martini Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/05/15/13/08/936485ae-8614-4604-a37e-ae4b00bee0a1/Celebrity Cruises World Class Bar 4.jpg" alt="World Class Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>World Class Bar</h3><p>Where fine drinking is as important as fine dining. Here, the ritual of making craft cocktails is just as exciting as drinking them. Using the freshest ingredients and the finest spirits, our expert m</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/05/15/13/08/936485ae-8614-4604-a37e-ae4b00bee0a1/Celebrity Cruises World Class Bar 4.jpg" alt="World Class Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>World Class Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/05/14/28/50/4214286f-2ccd-4688-86df-903ebfe2faee/Celebrity Cruises Celebrity Shops 1.jpg" alt="The Celebrity Shops" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Celebrity Shops</h3><p>A Shopping Journey Like Nowhere Else in the World...From jewelry to watches, beauty products to spirits, The Celebrity Shops feature a lineup of world-class brands — many of which are available at sea</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/05/14/28/50/4214286f-2ccd-4688-86df-903ebfe2faee/Celebrity Cruises Celebrity Shops 1.jpg" alt="The Celebrity Shops" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Celebrity Shops</h3><p>면세 쇼핑을 즐길 수 있는 선상 쇼핑몰로, 명품 브랜드와 기념품을 구매할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/16/16/40/13/21c6758a-7265-4913-97dd-a6596a9330f1/Celebrity Cruises Cafe al Bacio 1.jpg" alt="Café al Bacio" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Café al Bacio</h3><p>Start your morning with a foamy latte and sweet treat as you stare at the sea and think about the wonderful day ahead. Whether you’re fuelling up for your day ashore—or refuelling for your evening abo</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/16/16/40/13/21c6758a-7265-4913-97dd-a6596a9330f1/Celebrity Cruises Cafe al Bacio 1.jpg" alt="Café al Bacio" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Café al Bacio</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/05/16/47/26/e3f16e4a-132d-4bb9-9cd7-519c4085848d/Celebrity Cruises Craft Social Bar 3.jpg" alt="Craft Social Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Craft Social Bar</h3><p>Craft Social Bar will be the spot to be if you are looking for a fun, casual, relaxing atmosphere and a vast selection of craft beers served by a certified cicerone (beer sommelier), wines and cocktai</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/05/16/47/26/e3f16e4a-132d-4bb9-9cd7-519c4085848d/Celebrity Cruises Craft Social Bar 3.jpg" alt="Craft Social Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Craft Social Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/05/16/26/56/40b29332-57ed-477e-a2bf-82596c0ab960/Celebrity Cruises Martini Bar 8.jpg" alt="The Martini Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Martini Bar</h3><p>Located in the middle of all the action in the Grand Plaza, this is without a doubt the epicentre of the social scene on Celebrity Ascent. Grab a seat at the circular bar underneath the glow of the ne</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/05/16/26/56/40b29332-57ed-477e-a2bf-82596c0ab960/Celebrity Cruises Martini Bar 8.jpg" alt="The Martini Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Martini Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/06/09/20/44/528d1633-c570-4ad8-9aec-03566edbbf43/Celebrity Cruises Mast Bar 3.jpg" alt="Mast Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Mast Bar</h3><p>If your day’s agenda is to swim, lounge, relax, and repeat, you’ll love the addition of our Mast Bar to the main pool area. A refreshing poolside cocktail is just steps away, so there’s no need to str</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/06/09/20/44/528d1633-c570-4ad8-9aec-03566edbbf43/Celebrity Cruises Mast Bar 3.jpg" alt="Mast Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Mast Bar</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/16/16/50/57/c0bdbe49-1cfd-44d0-afcb-2b282ff8ee93/Celebrity Cruises Eden Bar.jpg" alt="Eden Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Eden Bar</h3><p>Tantalise your senses with a collection of craft cocktails that perfectly match the chillful, playful, and wonderful vibes of Eden.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/16/16/50/57/c0bdbe49-1cfd-44d0-afcb-2b282ff8ee93/Celebrity Cruises Eden Bar.jpg" alt="Eden Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Eden Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/06/09/23/44/0c9a983a-a332-422f-89a6-624f2f9dab45/Celebrity Cruises Il Secondo Bacio.jpg" alt="Il Secondo Bacio" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Il Secondo Bacio</h3><p>Located within Oceanview Café, Il Secondo Bacio offers specialty coffees and freshly squeezed juices to go along with your meal or enjoy on their own.</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/06/09/23/44/0c9a983a-a332-422f-89a6-624f2f9dab45/Celebrity Cruises Il Secondo Bacio.jpg" alt="Il Secondo Bacio" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Il Secondo Bacio</h3><p>독특한 컨셉의 스페셜티 레스토랑으로, 특별한 식사 경험을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/14/43/24/b6181082-fb7c-46f6-a58a-644d58f565e6/Celebrity Cruises, Celebrity Ascent, Resort Deck 1 ©CEL.jpg" alt="The Pool Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Pool Bar</h3><p>Sip on refreshing cocktails as you unwind poolside, losing yourself in the live music and gentle sea breezes.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/14/43/24/b6181082-fb7c-46f6-a58a-644d58f565e6/Celebrity Cruises, Celebrity Ascent, Resort Deck 1 ©CEL.jpg" alt="The Pool Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Pool Bar</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/31/09/35/19/4f8eb38e-68b3-4cec-81bf-d4e687bcf9fb/Celebrity Cruises, Residency ©CEL.jpg" alt="Theatre Shows" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Theatre Shows</h3><p>Celebrity Ascent - It's Almost ShowtimeThe latest award-winning resort at sea, is our most innovative ship yet, featuring all the best of our Edge® Series.ResidencyLas Vegas, the entertainment capital</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/31/09/35/19/4f8eb38e-68b3-4cec-81bf-d4e687bcf9fb/Celebrity Cruises, Residency ©CEL.jpg" alt="Theatre Shows" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Theatre Shows</h3><p>브로드웨이 스타일의 대형 공연장으로, 세계적 수준의 쇼와 공연을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/29/14/34/54/0de04b69-3b92-4395-9653-7aff4ebb9449/Celebrity Cruises, Deal or No Deal.jpg" alt="Deal or No Deal" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Deal or No Deal</h3><p>Play the world’s most popular TV game show where contestants play and deal for cash in a high-energy contest of nerves and raw intuition. Everyone in the audience gets to play along and could win up t</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/29/14/34/54/0de04b69-3b92-4395-9653-7aff4ebb9449/Celebrity Cruises, Deal or No Deal.jpg" alt="Deal or No Deal" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Deal or No Deal</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/08/15/16/13/50/d91bd1e4-a537-4292-baee-f0435e4c508f/Celebrity Cruises Celebrity Ascent Private Experiences ©CEL 1.png" alt="Private Experiences" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Private Experiences</h3><p>A PRIVATE, INTERACTIVE SPACE DESIGNED FOR MEMORABLE GROUP EXPERIENCES.Choose from a selection of package experiences, including a multi-sport simulator, celebrations, sports broadcasting, movie stream</p></div>
+    <img src="https://assets.widgety.co.uk/2025/08/15/16/13/50/d91bd1e4-a537-4292-baee-f0435e4c508f/Celebrity Cruises Celebrity Ascent Private Experiences ©CEL 1.png" alt="Private Experiences" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Private Experiences</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
     </div>
 
     <h2 id="health">💆 스파 &amp; 웰니스</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2020/12/15/12/20/58/03936497-aad1-4946-87e0-0d3301820243/Celebrity Cruises - Celebrity Edge The Retreat Sundeck _1_.jpg" alt="The Retreat® Sundeck" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Retreat® Sundeck</h3><p>For guests of The Retreat - The Retreat Sundeck on Celebrity Ascent offers you two levels of unadulterated outdoor bliss. Kick back poolside with a cocktail delivered by a dedicated attendant who's th</p></div>
+    <img src="https://assets.widgety.co.uk/2020/12/15/12/20/58/03936497-aad1-4946-87e0-0d3301820243/Celebrity Cruises - Celebrity Edge The Retreat Sundeck _1_.jpg" alt="The Retreat® Sundeck" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Retreat® Sundeck</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/07/10/48/23/91239741-ca97-4b52-9678-d5f67124bf44/Celebrity Cruises Fitness Centre 1.jpg" alt="The Fitness Centre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Fitness Centre</h3><p>Even though you’re on vacation, you won’t want to skip this gym. On Celebrity Apex® and Beyond, an expanded studio offers new programs like the first F45 classes while our fleet boasts sought-after cl</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/07/10/48/23/91239741-ca97-4b52-9678-d5f67124bf44/Celebrity Cruises Fitness Centre 1.jpg" alt="The Fitness Centre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Fitness Centre</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/11/11/12/19/23/abb0b42e-ba23-4d06-a3d0-7ecbe596fade/Celebrity Cruises - Celebrity Edge - Pool daytime.jpg" alt="The Pool" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Pool</h3><p>A holiday just isn’t a holiday without a day spent lounging by the pool! Grab your favourite book and perhaps enjoy a beverage from one of the poolside bars. Situated on the top deck, you’ll be treate</p></div>
+    <img src="https://assets.widgety.co.uk/2019/11/11/12/19/23/abb0b42e-ba23-4d06-a3d0-7ecbe596fade/Celebrity Cruises - Celebrity Edge - Pool daytime.jpg" alt="The Pool" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Pool</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2017/03/21/11/24/24/976/Solarium_Day_2.1_HR.jpg" alt="The Solarium" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Solarium</h3><p>On the Resort Deck, you’ll find one of the most popular spots on every Celebrity Ship—the adults-only Solarium. Celebrity Ascent continues the tradition of offering this glass dome covered pool area w</p></div>
+    <img src="https://assets.widgety.co.uk/2017/03/21/11/24/24/976/Solarium_Day_2.1_HR.jpg" alt="The Solarium" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Solarium</h3><p>성인 전용 솔라리움에서 조용하고 평화로운 휴식을 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/07/11/32/07/c5004e8a-d56b-4aab-90cb-2db7a239a03b/Celebrity Cruises Sea Thermal Suite 1.jpg" alt="Sea Thermal Suite" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sea Thermal Suite</h3><p>An evolution of our popular Persian Garden, the SEA Thermal Suite features eight distinctive therapeutic experiences, all inspired by nature to create one incredible place to relax and connect with fe</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/07/11/32/07/c5004e8a-d56b-4aab-90cb-2db7a239a03b/Celebrity Cruises Sea Thermal Suite 1.jpg" alt="Sea Thermal Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sea Thermal Suite</h3><p>테라피 효과의 온열 시설에서 몸과 마음의 긴장을 풀어보세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/07/11/42/32/5262618b-1c10-4038-be2b-5a95b03f7db6/Celebrity Cruises Spa 1.jpg" alt="The Spa" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Spa</h3><p>Whether you want to clear your mind, fine-tune your body, reinvigorate your spirit—or all of the above—The Spa is a luxurious sanctuary where you can do it all. Here, we’ve introduced an array of inno</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/07/11/42/32/5262618b-1c10-4038-be2b-5a95b03f7db6/Celebrity Cruises Spa 1.jpg" alt="The Spa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Spa</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/08/27/10/32/18/cec5f0a7-6206-4215-837e-d3902338ca0e/Celebrity Cruises Silhouette Kerastase Salon.png" alt="Kérastase Salon" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Kérastase Salon</h3><p>We’ve partnered with Kérastase®, one of the world’s most recognised luxury haircare brands, to create the ultimate salon experience. On Edge Series, guests will experience a couture styling session th</p></div>
+    <img src="https://assets.widgety.co.uk/2021/08/27/10/32/18/cec5f0a7-6206-4215-837e-d3902338ca0e/Celebrity Cruises Silhouette Kerastase Salon.png" alt="Kérastase Salon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Kérastase Salon</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/15/17/37/24/daea4023-daf2-4306-9de2-9dc04744010f/Celebrity Cruises The Barber.jpg" alt="The Barber" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Barber</h3><p>We know that today’s man wants to look fresh for a night out, too. That’s why we created The Barber at The Spa. Kelly Hoppen, CBE used of warm tones and rich natural materials to create a perfectly in</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/15/17/37/24/daea4023-daf2-4306-9de2-9dc04744010f/Celebrity Cruises The Barber.jpg" alt="The Barber" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Barber</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/02/04/12/08/58/b878ce52-9255-4d66-bda0-2ba54d9457f0/Celebrity Cruises, Celebrity Beyond, Pickleball 2 ©CEL.jpg" alt="Pickleball" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Pickleball</h3><p>The world’s fastest growing sport comes to the world’s best ships.Pickleball fans can bring their game to the high seas on Celebrity Cruises. Whether a first-time player or an avid pro, guests can now</p></div>
+    <img src="https://assets.widgety.co.uk/2025/02/04/12/08/58/b878ce52-9255-4d66-bda0-2ba54d9457f0/Celebrity Cruises, Celebrity Beyond, Pickleball 2 ©CEL.jpg" alt="Pickleball" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Pickleball</h3></div>
   </div>
     </div>
 
     <h2 id="kids">👧 키즈 클럽</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/08/13/10/18/02/d8a04ea5-c6ca-4eeb-b9ca-90fec7292862/Celebrity Cruises Celebrity Edge Camp at Sea ©CEL 2.jpg" alt="Camp at Sea" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Camp at Sea</h3><p>Fun, Engaging and Enriching Family Cruise Experiences. Never the Same Camp Twice.Our cruises offer unforgettable experiences for kids of all ages. With fun games, outdoor activities, video game tourna</p></div>
+    <img src="https://assets.widgety.co.uk/2025/08/13/10/18/02/d8a04ea5-c6ca-4eeb-b9ca-90fec7292862/Celebrity Cruises Celebrity Edge Camp at Sea ©CEL 2.jpg" alt="Camp at Sea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Camp at Sea</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/29/00c98ebb-4b26-483d-8fb3-a31ae80e0320/Celebrity Cruises Teens 2.jpg" alt="Teens" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Teens</h3><p>Teens can hang out at the Teen Club, a space designed exclusively for young adults, where they can socialise with other cruisers in their same age group. Teen-focused activities and events at the Teen</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/29/00c98ebb-4b26-483d-8fb3-a31ae80e0320/Celebrity Cruises Teens 2.jpg" alt="Teens" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Teens</h3><p>10대 청소년을 위한 전용 공간으로, 게임과 소셜 활동을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/30/1b34af0e-22db-4fdd-8c29-335186d73673/Celebrity Cruises Captains 1.jpg" alt="Captains" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Captains</h3><p>Older kids are known as Captains in our Camp at Sea program, and they enjoy more freedom while on board. You can spot Captain cruisers on scavenger hunts, STEM, and competing in various sports and gam</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/30/1b34af0e-22db-4fdd-8c29-335186d73673/Celebrity Cruises Captains 1.jpg" alt="Captains" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Captains</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/08/27/10/51/00/984fa885-97f4-4503-92b0-ccf78d6fdbc9/Celebrity Cruises Sihouette Cadets 1.png" alt="Cadets" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Cadets</h3><p>Adventure awaits on board for our Cadets, who can enrol in a one-of-a-kind nautical program, where they’ll learn the basics of sailing including navigation, time, weather patterns, and more. Cadets ca</p></div>
+    <img src="https://assets.widgety.co.uk/2021/08/27/10/51/00/984fa885-97f4-4503-92b0-ccf78d6fdbc9/Celebrity Cruises Sihouette Cadets 1.png" alt="Cadets" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Cadets</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/31/7e13f53f-f555-4909-92ef-f59b5f4f064a/Celebrity Cruises Shipmates.jpg" alt="Shipmates" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Shipmates</h3><p>Young cruisers that are fully potty trained can enrol as Shipmates at our Camp at Sea program, where they’ll work on their art skills at the Creation Station, learn new camp songs, and interact with o</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/31/7e13f53f-f555-4909-92ef-f59b5f4f064a/Celebrity Cruises Shipmates.jpg" alt="Shipmates" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Shipmates</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/31/fec3ed28-1928-45aa-b8a7-7dd302ea3cba/Celebrity Cruises Art.jpg" alt="Art" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Art</h3><p>Budding artists will love the Creation Station, a program that uses materials and tools for junior cruisers to express themselves through painting, collaging, and more. During our unique art activitie</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/31/fec3ed28-1928-45aa-b8a7-7dd302ea3cba/Celebrity Cruises Art.jpg" alt="Art" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Art</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/31/57e66da3-be47-4441-9480-5f95fb9feae8/Celebrity Cruises Recreation.jpg" alt="Recreation" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Recreation</h3><p>For more active kids, there’s a wide range of games and challenges onboard to sharpen their skills and teach them the importance of teamwork. From modern twists on popular camp games to our Challenge </p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/31/57e66da3-be47-4441-9480-5f95fb9feae8/Celebrity Cruises Recreation.jpg" alt="Recreation" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Recreation</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/32/ec6e4fb6-08fd-44d0-ab4b-1309de581d95/Celebrity Cruises Culinary.jpg" alt="Culinary" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Culinary</h3><p>Young foodies will want to try out the variety of culinary experiences geared towards developing the tastes of up-and-coming gourmets. It’s a mouthwatering set of fun family cruise activities sure to </p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/32/ec6e4fb6-08fd-44d0-ab4b-1309de581d95/Celebrity Cruises Culinary.jpg" alt="Culinary" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Culinary</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/29/10eb29aa-85f6-48e6-9d06-1033c2539d67/Celebrity Cruises Autism-Friendly.jpg" alt="Autism-Friendly Cruises" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Autism-Friendly Cruises</h3><p>We offer a welcoming, autism-friendly environment on all of our cruise ships. Onboard, kids with special needs can enjoy sensory-friendly films, toys, and dietary menu options. Additionally, we offer </p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/07/12/36/29/10eb29aa-85f6-48e6-9d06-1033c2539d67/Celebrity Cruises Autism-Friendly.jpg" alt="Autism-Friendly Cruises" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Autism-Friendly Cruises</h3></div>
   </div>
     </div>
 
     <h2 id="cabins">🛏️ 객실 등급</h2>
     <div class="cabin-grid">
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/02/15/13/02/d131544d-b32a-4247-b422-af5517fef597/Celebrity Cruises Celebrity Ascent Iconic Suite 1.jpg" alt="Iconic Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/02/15/13/02/d131544d-b32a-4247-b422-af5517fef597/Celebrity Cruises Celebrity Ascent Iconic Suite 1.jpg" alt="Iconic Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Iconic Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/02/15/39/29/c73bbe5d-f98f-47b9-a66e-b11b204036b4/Celebrity Cruises Celebrity Ascent Penthouse Suite 1.jpg" alt="Penthouse Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/02/15/39/29/c73bbe5d-f98f-47b9-a66e-b11b204036b4/Celebrity Cruises Celebrity Ascent Penthouse Suite 1.jpg" alt="Penthouse Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Penthouse Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/13/16/03/08/01b845d1-4b51-4bfb-8a97-9fcf81839557/Celebrity Cruises Celebrity Apex Edge Villa 2.jpg" alt="Edge Villa" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/13/16/03/08/01b845d1-4b51-4bfb-8a97-9fcf81839557/Celebrity Cruises Celebrity Apex Edge Villa 2.jpg" alt="Edge Villa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Edge Villa</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/11/18/37/12/b2612b9d-9738-4713-bda9-53a712b8724c/Celebrity Cruises Celebrity Beyond Royal Suite 1.jpg" alt="Royal Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/11/18/37/12/b2612b9d-9738-4713-bda9-53a712b8724c/Celebrity Cruises Celebrity Beyond Royal Suite 1.jpg" alt="Royal Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Royal Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2019/05/29/13/10/17/a81df7ca-194d-4748-aff3-eefeefc6091e/Celebrity suite 3.jpg" alt="Celebrity Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2019/05/29/13/10/17/a81df7ca-194d-4748-aff3-eefeefc6091e/Celebrity suite 3.jpg" alt="Celebrity Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Celebrity Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/01/05/07/36/30/1bf9a0aa-5377-44d1-86ef-87b9f6cd7b7b/Celebrity Cruises Celebrity Apex AquaClass Sky Suite Rendering 1.png" alt="Aqua Sky Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/01/05/07/36/30/1bf9a0aa-5377-44d1-86ef-87b9f6cd7b7b/Celebrity Cruises Celebrity Apex AquaClass Sky Suite Rendering 1.png" alt="Aqua Sky Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Aqua Sky Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/01/05/08/14/34/57ecb3b1-182c-475d-8941-a4c769bec1bf/Celebrity Cruises Celebrity Apex Magic Carpet0.png" alt="Sunset Sky Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/01/05/08/14/34/57ecb3b1-182c-475d-8941-a4c769bec1bf/Celebrity Cruises Celebrity Apex Magic Carpet0.png" alt="Sunset Sky Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Sunset Sky Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2019/05/29/13/12/48/e6f6d320-4991-470b-a877-6a2cff93fef9/Celebrity sky suite 1.jpg" alt="Sky Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2019/05/29/13/12/48/e6f6d320-4991-470b-a877-6a2cff93fef9/Celebrity sky suite 1.jpg" alt="Sky Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Sky Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/11/19/20/50/44e679b2-9355-4c34-b1a4-008eb70fd77d/Celebrity Cruises Celebrity Beyond Sky Suite 3.jpg" alt="Magic Carpet Sky Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/11/19/20/50/44e679b2-9355-4c34-b1a4-008eb70fd77d/Celebrity Cruises Celebrity Beyond Sky Suite 3.jpg" alt="Magic Carpet Sky Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Magic Carpet Sky Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2019/05/29/13/12/48/e6f6d320-4991-470b-a877-6a2cff93fef9/Celebrity sky suite 1.jpg" alt="Guarantee Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2019/05/29/13/12/48/e6f6d320-4991-470b-a877-6a2cff93fef9/Celebrity sky suite 1.jpg" alt="Guarantee Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2017/03/17/12/06/22/437/Celebrity_Edge_Accommodation_AquaClass_Stateroom.jpg" alt="Prime AquaClass® Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2017/03/17/12/06/22/437/Celebrity_Edge_Accommodation_AquaClass_Stateroom.jpg" alt="Prime AquaClass® Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Prime AquaClass® Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="AquaClass® Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="AquaClass® Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">AquaClass® Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="AquaClass® Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="AquaClass® Guarantee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">AquaClass® Guarantee</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="Prime Concierge Class Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="Prime Concierge Class Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Prime Concierge Class Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="Concierge Class Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="Concierge Class Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Concierge Class Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="Concierge Class Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="Concierge Class Guarantee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Concierge Class Guarantee</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="Prime Edge Stateroom with Infinite Veranda" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="Prime Edge Stateroom with Infinite Veranda" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Prime Edge Stateroom with Infinite Veranda</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="Edge Stateroom with Infinite Veranda" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/12/10/49/37/f5e3b98a-918b-4e23-978a-9082afd62437/Celebrity Cruises Celebrity Beyond Aquaclass Stateroom 1.jpg" alt="Edge Stateroom with Infinite Veranda" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Edge Stateroom with Infinite Veranda</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/01/10/13/12/42/29fee6f1-b9ac-4f34-abb8-d70ac39a222d/Celebrity Cruises Celebrity Beyond Edge Single.png" alt="Edge Single Stateroom with Infinite Veranda" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/01/10/13/12/42/29fee6f1-b9ac-4f34-abb8-d70ac39a222d/Celebrity Cruises Celebrity Beyond Edge Single.png" alt="Edge Single Stateroom with Infinite Veranda" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Edge Single Stateroom with Infinite Veranda</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/01/10/13/11/55/8d0bcd33-bee3-43d3-ae8d-24669ff51897/Celebrity Cruises Celebrity Beyond Edge Sunset Veranda.png" alt="Sunset Veranda Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/01/10/13/11/55/8d0bcd33-bee3-43d3-ae8d-24669ff51897/Celebrity Cruises Celebrity Beyond Edge Sunset Veranda.png" alt="Sunset Veranda Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Sunset Veranda Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/01/10/13/11/54/2b5f593b-7656-4261-a123-4661576e76a6/Celebrity Cruises Celebrity Beyond Deluxe Porthole View with Veranda.png" alt="Deluxe Porthole View with Veranda Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/01/10/13/11/54/2b5f593b-7656-4261-a123-4661576e76a6/Celebrity Cruises Celebrity Beyond Deluxe Porthole View with Veranda.png" alt="Deluxe Porthole View with Veranda Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Porthole View with Veranda Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Infinite Veranda Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Infinite Veranda Guarantee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Infinite Veranda Guarantee</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/01/10/13/11/54/2b5f593b-7656-4261-a123-4661576e76a6/Celebrity Cruises Celebrity Beyond Deluxe Porthole View with Veranda.png" alt="Veranda Stateroom Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/01/10/13/11/54/2b5f593b-7656-4261-a123-4661576e76a6/Celebrity Cruises Celebrity Beyond Deluxe Porthole View with Veranda.png" alt="Veranda Stateroom Guarantee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Veranda Stateroom Guarantee</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/12/12/48/19/4889b0ad-53a0-493b-a3d6-b943eed26168/Celebrity Cruises Celebrity Beyond Deluxe Ocean View Stateroom 1.jpg" alt="Deluxe Ocean View Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/12/12/48/19/4889b0ad-53a0-493b-a3d6-b943eed26168/Celebrity Cruises Celebrity Beyond Deluxe Ocean View Stateroom 1.jpg" alt="Deluxe Ocean View Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Ocean View Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/12/12/35/08/454e5cec-66d1-47bb-aa00-1ab35ca30b48/Celebrity Cruises Celebrity Beyond Panoramic Ocean View Stateroom 1.jpg" alt="Panoramic Ocean View Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/12/12/35/08/454e5cec-66d1-47bb-aa00-1ab35ca30b48/Celebrity Cruises Celebrity Beyond Panoramic Ocean View Stateroom 1.jpg" alt="Panoramic Ocean View Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Panoramic Ocean View Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/01/10/13/28/55/001689a9-e910-41e0-b8fc-45c478dee665/Celebrity Cruises Celebrity Beyond Deluxe Ocean View.png" alt="Prime Ocean View Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/01/10/13/28/55/001689a9-e910-41e0-b8fc-45c478dee665/Celebrity Cruises Celebrity Beyond Deluxe Ocean View.png" alt="Prime Ocean View Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Prime Ocean View Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/13/22/01/15/1c088c3e-9044-4b85-b11b-6f68f8b5226e/Celebrity Cruise Lines Celebrity Apex AquaClass Sky Suite 2.jpg" alt="Ocean View Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/13/22/01/15/1c088c3e-9044-4b85-b11b-6f68f8b5226e/Celebrity Cruise Lines Celebrity Apex AquaClass Sky Suite 2.jpg" alt="Ocean View Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Ocean View Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/07/13/22/01/15/1c088c3e-9044-4b85-b11b-6f68f8b5226e/Celebrity Cruise Lines Celebrity Apex AquaClass Sky Suite 2.jpg" alt="Ocean View Stateroom Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/07/13/22/01/15/1c088c3e-9044-4b85-b11b-6f68f8b5226e/Celebrity Cruise Lines Celebrity Apex AquaClass Sky Suite 2.jpg" alt="Ocean View Stateroom Guarantee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Ocean View Stateroom Guarantee</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2021/10/05/10/00/58/03c7ae50-d869-4ab5-90af-bdff69ce34df/Celebrity Cruises Celebrity Apex Deluxe Inside Stateroom 1.png" alt="Deluxe Inside Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2021/10/05/10/00/58/03c7ae50-d869-4ab5-90af-bdff69ce34df/Celebrity Cruises Celebrity Apex Deluxe Inside Stateroom 1.png" alt="Deluxe Inside Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Inside Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/06/15/13/13/04/8dfa125a-c53e-4ae5-9092-33810e9e2447/Celebrity Cruises Celebrity Ascent Inside Staterooms.jpg" alt="Inside Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/06/15/13/13/04/8dfa125a-c53e-4ae5-9092-33810e9e2447/Celebrity Cruises Celebrity Ascent Inside Staterooms.jpg" alt="Inside Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Inside Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/06/15/13/13/04/8dfa125a-c53e-4ae5-9092-33810e9e2447/Celebrity Cruises Celebrity Ascent Inside Staterooms.jpg" alt="Interior Stateroom Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/06/15/13/13/04/8dfa125a-c53e-4ae5-9092-33810e9e2447/Celebrity Cruises Celebrity Ascent Inside Staterooms.jpg" alt="Interior Stateroom Guarantee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Interior Stateroom Guarantee</div>
   </div>
     </div>
@@ -507,63 +602,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="deckplan">📐 덱 플랜</h2>
     <div class="deckplan-list">
   <div class="deckplan-item">
-    <img src="" alt="Deck 17" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/49/b2949500-2247-4f3b-a910-0a5f1297d6af/Celebrity Cruises Celebrity Ascent Deck 17.png" alt="Deck 17" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 17</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 16" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/48/2ed902c2-2cbf-4aff-a95c-cc4edf2d88f8/Celebrity Cruises Celebrity Ascent Deck 16.png" alt="Deck 16" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 16</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 15" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/48/1fc171db-e1a1-4de9-bdfa-5a362e21820b/Celebrity Cruises Celebrity Ascent Deck 15.png" alt="Deck 15" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 15</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 14" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/48/beac0c78-566c-4af0-9e11-7de703bf6603/Celebrity Cruises Celebrity Ascent Deck 14.png" alt="Deck 14" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 14</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 12" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/48/d33a9390-decd-4d4e-acb1-496e49235461/Celebrity Cruises Celebrity Ascent Deck 12.png" alt="Deck 12" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 12</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 11" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/48/d0ab9d60-cc7b-419e-80f0-4403bec56b34/Celebrity Cruises Celebrity Ascent Deck 11.png" alt="Deck 11" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 11</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 10" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/48/d6173e78-765b-492c-906f-d46b4a92456d/Celebrity Cruises Celebrity Ascent Deck 10.png" alt="Deck 10" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 10</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 9" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/48/4dea5b50-7cab-46b3-b2c2-d6b03321f0d6/Celebrity Cruises Celebrity Ascent Deck 9.png" alt="Deck 9" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 9</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 8" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/48/169cc9e1-4a2e-4b39-baeb-1a7cae614c5a/Celebrity Cruises Celebrity Ascent Deck 8.png" alt="Deck 8" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 8</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 7" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/48/b29ad5e1-1df2-45d7-9d43-5519c87c23e9/Celebrity Cruises Celebrity Ascent Deck 7.png" alt="Deck 7" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 7</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 6" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/47/4b25bb77-f6e5-4758-99e6-51b43737e50f/Celebrity Cruises Celebrity Ascent Deck 6.png" alt="Deck 6" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 6</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 5" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/47/4e4cab2a-f45e-4a5e-aab4-78861993a5b2/Celebrity Cruises Celebrity Ascent Deck 5.png" alt="Deck 5" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 5</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 4" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/47/a1798c15-820c-478b-bfd7-d0ffcdb961a9/Celebrity Cruises Celebrity Ascent Deck 4.png" alt="Deck 4" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 4</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 3" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/47/4f4d0dbd-daa9-4fce-8ef1-d8650c417d1e/Celebrity Cruises Celebrity Ascent Deck 3.png" alt="Deck 3" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 3</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 2" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/08/13/12/59/47/31321101-8696-4c5b-aae4-21d319de37e4/Celebrity Cruises Celebrity Ascent Deck 2.png" alt="Deck 2" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 2</p>
   </div>
     </div>

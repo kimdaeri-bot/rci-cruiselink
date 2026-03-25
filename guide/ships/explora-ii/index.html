@@ -69,22 +69,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
 
+
     .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
     @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
     .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-card img{width:100%;height:160px;object-fit:cover;display:block}
+    .facility-card .no-img{width:100%;height:160px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem}
     .facility-info{padding:12px}
     .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
     .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
     @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
     .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card img{width:100%;height:120px;object-fit:cover;display:block}
+    .cabin-card .no-img{width:100%;height:120px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
     .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
     .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
     @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
-    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200);display:block}
+    .deckplan-item .no-img{width:100%;height:200px;background:var(--gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem}
     .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
@@ -124,190 +128,234 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+
     <h2 id="dining">🍽️ 다이닝</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/10/58/03/0c52c020-9865-4da2-b9e7-296fc7ca3d92/Explora Journeys, EXPLORA I, Anthology 1.jpg" alt="Anthology" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Anthology</h3><p>A Gastronomic DiscoveryTaking guests on a unique culinary journey through Italy.Refined Italian CuisineAs our signature fine-dining experience, Anthology elevates Italian cuisine, offering an unparall</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/10/58/03/0c52c020-9865-4da2-b9e7-296fc7ca3d92/Explora Journeys, EXPLORA I, Anthology 1.jpg" alt="Anthology" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Anthology</h3><p>이탈리안 정통 요리를 즐길 수 있는 레스토랑으로, 파스타와 피자 등 클래식 메뉴를 선보입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/00/15/890fb934-e889-4f4d-bcd2-e51fd3359cf8/Explora Journeys, EXPLORA I, Sakura 0.jpg" alt="Sakura" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sakura</h3><p>Named after the cherry blossom - the national flower of Japan - and symbolic of renewal and optimism, Sakura offers Japanese, Thai, Vietnamese, and Malaysian flavours for a taste of Pan-Asian cuisine </p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/00/15/890fb934-e889-4f4d-bcd2-e51fd3359cf8/Explora Journeys, EXPLORA I, Sakura 0.jpg" alt="Sakura" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sakura</h3><p>다채로운 아시안 퀴진을 선보이는 레스토랑으로, 동남아부터 일식까지 다양한 메뉴를 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/01/10/4cfdb5ea-b7d4-43ea-9032-6096b7414700/Explora Journeys, EXPLORA I, Marble & Co. Grill 0.jpg" alt="Marble & Co. Grill" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Marble & Co. Grill</h3><p>Inspired by the marbling found in only the finest beef, Marble &amp; Co. Grill serves exceptional cuts, personally sourced and sustainably farmed.The menu has been designed to take guests on a journey</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/01/10/4cfdb5ea-b7d4-43ea-9032-6096b7414700/Explora Journeys, EXPLORA I, Marble & Co. Grill 0.jpg" alt="Marble & Co. Grill" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Marble & Co. Grill</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/02/15/e9a02849-8028-4421-9f90-0c7c905ef995/Explora Journeys, EXPLORA I, Med Yacht Club0.jpg" alt="Med Yacht Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Med Yacht Club</h3><p>A relaxed celebration of the flavours, ambience and la dolce vita of the Mediterranean.Inspired by sailings across crystal clear waters, the Med Yacht Club is influenced by sophisticated, beachside Me</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/02/15/e9a02849-8028-4421-9f90-0c7c905ef995/Explora Journeys, EXPLORA I, Med Yacht Club0.jpg" alt="Med Yacht Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Med Yacht Club</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/03/36/d8f9bb4e-71bb-4a2e-a141-f3ed78c81be8/Explora Journeys, EXPLORA I, Emporium 0.jpg" alt="Emporium Marketplace" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Emporium Marketplace</h3><p>Energetic all-day dining, celebrating the finest flavours from across the globe.Drawn from the Greek word emporion (ἐμπόριον), an Emporium is defined as a place offering many different things.Onboard </p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/03/36/d8f9bb4e-71bb-4a2e-a141-f3ed78c81be8/Explora Journeys, EXPLORA I, Emporium 0.jpg" alt="Emporium Marketplace" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Emporium Marketplace</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/04/52/8e791cd0-8ae4-4ba5-be65-c1cd28dd15cb/Explora Journeys, EXPLORA I, Fil Rouge 0.jpg" alt="Fil Rouge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Fil Rouge</h3><p>A global tasting tour to French-inspired international cuisine.A common red thread that unites international flavours with a French influence. Fil Rouge is a sophisticated and intimate restaurant, off</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/04/52/8e791cd0-8ae4-4ba5-be65-c1cd28dd15cb/Explora Journeys, EXPLORA I, Fil Rouge 0.jpg" alt="Fil Rouge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Fil Rouge</h3><p>프렌치 퀴진을 선보이는 고급 레스토랑으로, 우아한 분위기에서 다이닝을 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/05/44/940d66ef-f365-466c-b5dd-f5eefef2b630/Explora Journeys, EXPLORA I, Chef's Kitchen 1.jpg" alt="Chef's Kitchen" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Chef's Kitchen</h3><p>Offering an enriching, hands-on culinary experience set within an intimate, ocean-front private kitchen.The Chef’s Kitchen offers a range of enriching, hands-on culinary experience set within an intim</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/05/44/940d66ef-f365-466c-b5dd-f5eefef2b630/Explora Journeys, EXPLORA I, Chef's Kitchen 1.jpg" alt="Chef's Kitchen" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Chef's Kitchen</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/06/27/89b7d1d6-17a6-4a31-ac57-e9b802b452f6/Explora Journeys, EXPLORA I, Gelateria 0.jpg" alt="Gelateria & Creperie at The Conservatory" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Gelateria & Creperie at The Conservatory</h3><p>Authentic French and Italian indulgences served poolside.Set in the relaxed, weather-protected poolside Conservatory, this is the place to treat yourself to authentic French and Italian indulgencies.O</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/06/27/89b7d1d6-17a6-4a31-ac57-e9b802b452f6/Explora Journeys, EXPLORA I, Gelateria 0.jpg" alt="Gelateria & Creperie at The Conservatory" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Gelateria & Creperie at The Conservatory</h3><p>이탈리안 정통 요리를 즐길 수 있는 레스토랑으로, 파스타와 피자 등 클래식 메뉴를 선보입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/06/22/29/6c5cee52-0c31-46eb-93e3-e426ce40984f/Explora Journeys, EXPLORA I, Owner's Residence 6.jpg" alt="In-Suite Dining" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>In-Suite Dining</h3><p>Refined dining in the comfort of your suite or private terrace.Our guests can enjoy an array of cuisines at any time, day or night, in the comfort of their suite or private terrace. Available 24 hours</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/06/22/29/6c5cee52-0c31-46eb-93e3-e426ce40984f/Explora Journeys, EXPLORA I, Owner's Residence 6.jpg" alt="In-Suite Dining" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>In-Suite Dining</h3></div>
   </div>
     </div>
 
     <h2 id="entertainment">🎭 엔터테인먼트</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/20/09/f066a894-5831-4d47-bae4-85c8da33bec4/Explora Journeys, EXPLORA I, Journeys Lounge 0.jpg" alt="Journeys Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Journeys Lounge</h3><p>Mixology, enrichment and entertainment continuously evolving throughout the day.The most spacious onboard lounge features mixology specialists, enrichment activities and cabaret-style entertainment da</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/20/09/f066a894-5831-4d47-bae4-85c8da33bec4/Explora Journeys, EXPLORA I, Journeys Lounge 0.jpg" alt="Journeys Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Journeys Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/19/00/61ffdaa4-8c9f-4f49-8e7d-4fb716f8e0c9/Explora Journeys, EXPLORA I, Explora Lounge 1.jpg" alt="Explora Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Explora Lounge</h3><p>A luminous lounge offering spectacular 270-degree views of the ocean, a spectacular backdrop to informal drinking and dining.Explora Lounge is a central meeting place bathed in natural bright light, w</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/19/00/61ffdaa4-8c9f-4f49-8e7d-4fb716f8e0c9/Explora Journeys, EXPLORA I, Explora Lounge 1.jpg" alt="Explora Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Explora Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/14/50/3c7ead58-e374-4e06-af9a-ee359bd9b751/Explora Journeys, EXPLORA I, Astern Pool 2.jpg" alt="Astern Pool & Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Astern Pool & Bar</h3><p>An all-day pool and outdoor lounge at the water's edge.An all-day lounge next to the infinity pool, ideal for a waterfront escape offering chilled beach club vibes, with low background music by day an</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/14/50/3c7ead58-e374-4e06-af9a-ee359bd9b751/Explora Journeys, EXPLORA I, Astern Pool 2.jpg" alt="Astern Pool & Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Astern Pool & Bar</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/17/49/16e7b8f6-8839-4e1d-adb5-002f4aeb3df3/Explora Journeys, EXPLORA I, Astern Lounge 0.jpg" alt="Astern Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Astern Lounge</h3><p>An all-day lounge and oceanfront escape opening onto the Astern Pool.The Astern Lounge is the social hub of any journey, with a collection of daily events and happenings suited to every taste.Effortle</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/17/49/16e7b8f6-8839-4e1d-adb5-002f4aeb3df3/Explora Journeys, EXPLORA I, Astern Lounge 0.jpg" alt="Astern Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Astern Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/11/18/9c7d9f73-35db-4e5a-a4e2-882cae72e675/Explora Journeys, EXPLORA I, The Conservatory 0.jpg" alt="The Conservatory Pool & Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Conservatory Pool & Bar</h3><p>An all-day poolside lounge protected from the elements.The Conservatory is a weather-protected poolside lounge by day. By night, it turns into a cinema experience under the stars. A relaxed, calming v</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/11/18/9c7d9f73-35db-4e5a-a4e2-882cae72e675/Explora Journeys, EXPLORA I, The Conservatory 0.jpg" alt="The Conservatory Pool & Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Conservatory Pool & Bar</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/10/07/19/06/9e5f360d-4d39-401a-b7b3-9f6b0bbad8ab/Explora Journeys, EXPLORA I, Lobby Bar 1.jpg" alt="Lobby Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Lobby Bar</h3><p>A centrally-located social bar and lounge.A central gathering social bar and lounge, amongst high-end boutiques, provides the ideal spot to enjoy refreshments throughout the day and night.Indoor seati</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/10/07/19/06/9e5f360d-4d39-401a-b7b3-9f6b0bbad8ab/Explora Journeys, EXPLORA I, Lobby Bar 1.jpg" alt="Lobby Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Lobby Bar</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/21/37/5833aaf8-4782-42de-b082-762f36d4b868/Explora Journeys, EXPLORA I, Malt Whiskey Bar 0.jpg" alt="Malt Whisky Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Malt Whisky Bar</h3><p>A refined tour across the globe’s most celebrated whiskey regions.Set within the Explora Lounge, Malt offers a refined tour of the global whisky regions, including some of the rarest whiskies, complet</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/21/37/5833aaf8-4782-42de-b082-762f36d4b868/Explora Journeys, EXPLORA I, Malt Whiskey Bar 0.jpg" alt="Malt Whisky Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Malt Whisky Bar</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/22/28/2058e4b3-59c3-4a25-977a-34b34064b324/Explora Journeys, EXPLORA I, Crema Cafe 0.jpg" alt="Crema Café" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Crema Café</h3><p>Bustling European all-day café culture on the world’s oceans.A luxurious layer of crema nods to the freshness of an espresso and aptly lends authenticity and sophistication to a café at the centre of </p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/22/28/2058e4b3-59c3-4a25-977a-34b34064b324/Explora Journeys, EXPLORA I, Crema Cafe 0.jpg" alt="Crema Café" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Crema Café</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/15/59/ecdf2f91-bc15-4910-ad6e-9e18b22b0e0f/Explora Journeys, EXPLORA I, Atoll Pool 0.jpg" alt="Atoll Pool & Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Atoll Pool & Bar</h3><p>An intimate pool with a chilled vibe throughout the day.Here, guests can enjoy the sun, sea and serenity along with sunny, sparkling and colourful drinks.Outdoor seating: 138 (Includes sunbeds, lounge</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/15/59/ecdf2f91-bc15-4910-ad6e-9e18b22b0e0f/Explora Journeys, EXPLORA I, Atoll Pool 0.jpg" alt="Atoll Pool & Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Atoll Pool & Bar</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/09/53/f9aa7761-ef9a-4af7-8bd6-2d659a020a83/Explora Journeys, EXPLORA I, Helios Pool 0.jpg" alt="Helios Pool & Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Helios Pool & Bar</h3><p>A panoramic adults-only pool and lounge experience.Inspired by the Ancient Greek god of the sun, and also literally meaning “sun” in Greek, this adults-only area is indeed the sunniest venue onboard, </p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/09/53/f9aa7761-ef9a-4af7-8bd6-2d659a020a83/Explora Journeys, EXPLORA I, Helios Pool 0.jpg" alt="Helios Pool & Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Helios Pool & Bar</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/11/23/20/d288f44c-4029-483a-8116-44d2528ba596/Explora Journeys, EXPLORA I, Sky Bar On 14 0.jpg" alt="Sky Bar On 14" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sky Bar On 14</h3><p>Refreshing cocktails and infinite views in a sophisticated outdoor setting.Set on the ship’s highest point, on deck 14, this panoramic outdoor lounge setting is ideal for soothing cocktails and infini</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/11/23/20/d288f44c-4029-483a-8116-44d2528ba596/Explora Journeys, EXPLORA I, Sky Bar On 14 0.jpg" alt="Sky Bar On 14" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sky Bar On 14</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/08/07/16/49/19/bebf92f6-29a7-4bf8-9f44-ffb561d2ecb6/Explora Journeys Explora I - Events, Midnight Wayfinder.jpg" alt="Events" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Events</h3><p>Explora Journeys offers a diverse programme of enriching and delectable events. Designed to connect guests, hosts and luminaries.Captain’s Log Secrets of the SailGuests will walk the Ship alongside th</p></div>
+    <img src="https://assets.widgety.co.uk/2024/08/07/16/49/19/bebf92f6-29a7-4bf8-9f44-ffb561d2ecb6/Explora Journeys Explora I - Events, Midnight Wayfinder.jpg" alt="Events" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Events</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/08/07/16/49/19/8e55bb72-58db-4a7a-856b-b74a07f0bceb/Explora Journeys Explora I - Experiences, Le Jazz.jpg" alt="Experiences" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Experiences</h3><p>Unique, curated, immersive and captivating, experiences provide unforgettable moments to be savoured.DecadenceThe themes of this fabulously indulgent experience switch from lounge to lounge, with live</p></div>
+    <img src="https://assets.widgety.co.uk/2024/08/07/16/49/19/8e55bb72-58db-4a7a-856b-b74a07f0bceb/Explora Journeys Explora I - Experiences, Le Jazz.jpg" alt="Experiences" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Experiences</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/08/07/16/49/19/a3faabee-631f-41cd-a029-378b209ad365/Explora Journeys Explora I - Casino.jpg" alt="Casino" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Casino</h3><p>Explore the intimate, elegant space of The Casino and its diverse gaming offerings: from thrilling poker and blackjack tables to the excitement of American roulette, baccarat elegance, and the chance </p></div>
+    <img src="https://assets.widgety.co.uk/2024/08/07/16/49/19/a3faabee-631f-41cd-a029-378b209ad365/Explora Journeys Explora I - Casino.jpg" alt="Casino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Casino</h3><p>라스베이거스 스타일의 카지노로, 슬롯머신과 테이블 게임을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/08/07/16/49/19/1077fcb2-9e24-48ba-84cb-3d108faa959f/Explora Journeys Explora I - The Journey 3.jpg" alt="The Journey" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Journey</h3><p>Inspired by the Ocean State of Mind and influenced by the destinations we visit, The Journey is more than just a place to browse.Shop fragrance, skincare, apparel, homeware, accessories and fine foods</p></div>
+    <img src="https://assets.widgety.co.uk/2024/08/07/16/49/19/1077fcb2-9e24-48ba-84cb-3d108faa959f/Explora Journeys Explora I - The Journey 3.jpg" alt="The Journey" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Journey</h3></div>
   </div>
     </div>
 
     <h2 id="health">💆 스파 &amp; 웰니스</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/10/06/30/54/8e04a276-1560-45a3-b03c-a8b54b8cb662/Explora Journeys, EXPLORA I, Ocean Wellness 6.jpg" alt="Ocean Wellness The Spa" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Ocean Wellness The Spa</h3><p>A calming space designed to reconnect guests to themselves – influenced at every level by the calming presence of the ocean.The spa is where the pressures of daily life dissipate to insignificance ami</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/10/06/30/54/8e04a276-1560-45a3-b03c-a8b54b8cb662/Explora Journeys, EXPLORA I, Ocean Wellness 6.jpg" alt="Ocean Wellness The Spa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Ocean Wellness The Spa</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/10/06/30/53/8ed2aabd-7ae5-4012-9378-54b4f1f08699/Explora Journeys, EXPLORA I, Ocean Wellness 13.jpg" alt="Ocean Wellness The Beauty Studio" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Ocean Wellness The Beauty Studio</h3><p>We believe true beauty begins within. When you feel well, it radiates, bringing confidence on the outside too.Step inside The Beauty Studio - a serene, flowing space, designed to meet all your beauty </p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/10/06/30/53/8ed2aabd-7ae5-4012-9378-54b4f1f08699/Explora Journeys, EXPLORA I, Ocean Wellness 13.jpg" alt="Ocean Wellness The Beauty Studio" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Ocean Wellness The Beauty Studio</h3><p>전문 뷰티 살롱에서 헤어와 네일 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/10/06/19/10/29383821-aca0-4687-9b2a-807951d59f44/Explora Journeys, EXPLORA I, Fitness Centre 0.jpg" alt="Ocean Wellness The Fitness Centre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Ocean Wellness The Fitness Centre</h3><p>An approach that echoes the revitalising power of the oceansOver 350 sqm (3,750 sq ft) of indoor and outdoor fitness facilities designed in partnership with Technogym.Features:Functional trainingStren</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/10/06/19/10/29383821-aca0-4687-9b2a-807951d59f44/Explora Journeys, EXPLORA I, Fitness Centre 0.jpg" alt="Ocean Wellness The Fitness Centre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Ocean Wellness The Fitness Centre</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/09/30/13/29/20/a2c72715-00ba-4f78-a077-e1adccff260f/Explora Journeys Explora I Wellbeing 5.png" alt="Ocean Wellness Wellbeing" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Ocean Wellness Wellbeing</h3><p>Experiences, programmes and spaces designed to enhance the influence of the ocean on wellbeingFrom sleep to nutrition, our collection of initiatives has been carefully curated to ensure each and every</p></div>
+    <img src="https://assets.widgety.co.uk/2022/09/30/13/29/20/a2c72715-00ba-4f78-a077-e1adccff260f/Explora Journeys Explora I Wellbeing 5.png" alt="Ocean Wellness Wellbeing" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Ocean Wellness Wellbeing</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/10/06/19/09/84107975-07e6-4467-8161-6685bd20d1a6/Explora Journeys, EXPLORA I, Open Air Fitness 0.jpg" alt="Open Air Fitness" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Open Air Fitness</h3><p>On the outdoor deck, guests can train in the open air, with direct ocean views. The Open Air Fitness area provides guests with the latest fitness equipment such as:SKILLROW, the first outdoor rowing e</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/10/06/19/09/84107975-07e6-4467-8161-6685bd20d1a6/Explora Journeys, EXPLORA I, Open Air Fitness 0.jpg" alt="Open Air Fitness" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Open Air Fitness</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/06/22/27/3fa1d2cc-3e2a-4290-9c76-c2a8a249cfd9/Explora Journeys, EXPLORA I, Owner's Residence 24.jpg" alt="In-Suite Fitness" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>In-Suite Fitness</h3><p>Enjoy the all-inclusive functional training kit that empowers you to perform myriads of total body workouts, with the guidance of the Technogym virtual coach.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/13/06/22/27/3fa1d2cc-3e2a-4290-9c76-c2a8a249cfd9/Explora Journeys, EXPLORA I, Owner's Residence 24.jpg" alt="In-Suite Fitness" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>In-Suite Fitness</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/10/06/19/09/a8d9ae9c-0ce2-4561-9dc4-217aece3cd00/Explora Journeys, EXPLORA I, Sports Court 0.jpg" alt="Sports Court" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sports Court</h3><p>A dedicated space for various activities, such as touch tennis, half basketball and yoga ritual experiences.The use of the space is complimentary for all guests and the equipment such as balls, racket</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/10/06/19/09/a8d9ae9c-0ce2-4561-9dc4-217aece3cd00/Explora Journeys, EXPLORA I, Sports Court 0.jpg" alt="Sports Court" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sports Court</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/05/10/06/19/09/9f94c4ef-a3f3-4fcd-af47-2329d956db9a/Explora Journeys, EXPLORA I, Gym 1.jpg" alt="Fitness Studio" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Fitness Studio</h3><p>Located within the Fitness Centre, the Fitness Studio allows guests to take part in yoga classes with the Technogym training mats, which offer extra-large size and maximum comfort, or enjoy functional</p></div>
+    <img src="https://assets.widgety.co.uk/2024/05/10/06/19/09/9f94c4ef-a3f3-4fcd-af47-2329d956db9a/Explora Journeys, EXPLORA I, Gym 1.jpg" alt="Fitness Studio" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Fitness Studio</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
     </div>
 
     <h2 id="cabins">🛏️ 객실 등급</h2>
     <div class="cabin-grid">
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/06/22/30/e2e25cd7-5c57-4de8-aa1c-27c100a8a83c/Explora Journeys, EXPLORA I, Owner's Residence 2.jpg" alt="Owner's Residence" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/05/13/06/22/30/e2e25cd7-5c57-4de8-aa1c-27c100a8a83c/Explora Journeys, EXPLORA I, Owner's Residence 2.jpg" alt="Owner's Residence" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Owner's Residence</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/06/31/20/088b9d26-c573-44ac-ae54-1b2929867521/Explora Journeys, EXPLORA I, Retreat Residence 0.jpg" alt="Retreat Residence" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/05/13/06/31/20/088b9d26-c573-44ac-ae54-1b2929867521/Explora Journeys, EXPLORA I, Retreat Residence 0.jpg" alt="Retreat Residence" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Retreat Residence</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/06/32/26/11349a38-f8e1-4126-adaf-5e48c556442a/Explora Journeys, EXPLORA I, Cove Residence 0.jpg" alt="Cove Residence" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/05/13/06/32/26/11349a38-f8e1-4126-adaf-5e48c556442a/Explora Journeys, EXPLORA I, Cove Residence 0.jpg" alt="Cove Residence" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Cove Residence</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/06/33/44/73b74953-768d-4a62-aa2f-09d2cc0b9c01/Explora Journeys, EXPLORA I, Serenity Residence 0.jpg" alt="Serenity Residence" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/05/13/06/33/44/73b74953-768d-4a62-aa2f-09d2cc0b9c01/Explora Journeys, EXPLORA I, Serenity Residence 0.jpg" alt="Serenity Residence" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Serenity Residence</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/06/35/52/9afeea32-1c9a-4d2f-b7b2-4b4a4f37a975/Explora Journeys, EXPLORA I, Cocoon Residence 0.jpg" alt="Cocoon Residence" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/05/13/06/35/52/9afeea32-1c9a-4d2f-b7b2-4b4a4f37a975/Explora Journeys, EXPLORA I, Cocoon Residence 0.jpg" alt="Cocoon Residence" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Cocoon Residence</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/06/38/10/0b0f325f-63d8-4653-9874-dc03e2b4bc4b/Explora Journeys, EXPLORA I, Grand Penthouse 0.jpg" alt="Grand Penthouse" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/05/13/06/38/10/0b0f325f-63d8-4653-9874-dc03e2b4bc4b/Explora Journeys, EXPLORA I, Grand Penthouse 0.jpg" alt="Grand Penthouse" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Grand Penthouse</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/06/37/01/a0ba3f4d-3a1f-4d3c-8ebd-5acbbcbaaa3b/Explora Journeys, EXPLORA I, Premier Penthouse 0.jpg" alt="Premier Penthouse" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/05/13/06/37/01/a0ba3f4d-3a1f-4d3c-8ebd-5acbbcbaaa3b/Explora Journeys, EXPLORA I, Premier Penthouse 0.jpg" alt="Premier Penthouse" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premier Penthouse</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/11/20/09/10/11/f9c50316-710f-4679-ae44-e6a9750c7cf1/Explora Journeys Explora III Deluxe Penthouse DP_01.jpg" alt="Deluxe Penthouse" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/11/20/09/10/11/f9c50316-710f-4679-ae44-e6a9750c7cf1/Explora Journeys Explora III Deluxe Penthouse DP_01.jpg" alt="Deluxe Penthouse" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Penthouse</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/06/40/02/ba9f19ad-a209-4830-ac65-6dbf2e403d74/Explora Journeys, EXPLORA I, Penthouse 1.jpg" alt="Penthouse" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/05/13/06/40/02/ba9f19ad-a209-4830-ac65-6dbf2e403d74/Explora Journeys, EXPLORA I, Penthouse 1.jpg" alt="Penthouse" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Penthouse</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/06/41/32/54def1ad-98e1-4379-928f-28af4c3875b1/Explora Journeys, EXPLORA I, Ocean & Grand Ocean Terrace 0.jpg" alt="Ocean Grand Terrace Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/05/13/06/41/32/54def1ad-98e1-4379-928f-28af4c3875b1/Explora Journeys, EXPLORA I, Ocean & Grand Ocean Terrace 0.jpg" alt="Ocean Grand Terrace Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Ocean Grand Terrace Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/05/13/06/41/32/54def1ad-98e1-4379-928f-28af4c3875b1/Explora Journeys, EXPLORA I, Ocean & Grand Ocean Terrace 0.jpg" alt="Ocean Terrace Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/05/13/06/41/32/54def1ad-98e1-4379-928f-28af4c3875b1/Explora Journeys, EXPLORA I, Ocean & Grand Ocean Terrace 0.jpg" alt="Ocean Terrace Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Ocean Terrace Suite</div>
   </div>
     </div>
@@ -315,47 +363,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="deckplan">📐 덱 플랜</h2>
     <div class="deckplan-list">
   <div class="deckplan-item">
-    <img src="" alt="Deck 14" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/06/10/11/46/19/855b3e66-b3a6-42c9-b2af-69e29452ecc7/Explora Journeys, Explora II Deck 14.jpg" alt="Deck 14" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 14</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 12" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/06/10/11/46/19/f1e81cdc-144b-4a29-ab4b-46226260e815/Explora Journeys, Explora II Deck 12.jpg" alt="Deck 12" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 12</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 11" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/06/10/11/46/19/e71ec208-f2ca-4466-9d4f-451a2661ffbe/Explora Journeys, Explora II Deck 11.jpg" alt="Deck 11" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 11</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 10" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/06/10/11/46/19/0a81d2a5-6858-429b-94d5-eb8d29eefe2e/Explora Journeys, Explora II Deck 10.jpg" alt="Deck 10" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 10</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 9" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/06/10/11/46/19/995f19f7-3f1e-4299-b1c5-40d348b3e048/Explora Journeys, Explora II Deck 9.jpg" alt="Deck 9" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 9</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 8" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/06/10/11/46/19/b92139ba-6adf-4854-a356-0858c1e22b57/Explora Journeys, Explora II Deck 8.jpg" alt="Deck 8" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 8</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 7" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/06/10/12/01/14/bd061dd4-fa4e-481b-97b4-48e86ea34586/Explora Journeys, Explora II Deck 7.jpg" alt="Deck 7" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 7</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 6" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/06/10/11/46/19/cabdb7bc-1066-4b34-b3e0-06ae86cdca7d/Explora Journeys, Explora II Deck 6.jpg" alt="Deck 6" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 6</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 5" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/06/10/11/46/19/fd7aea96-d082-454d-a905-721c01aead5c/Explora Journeys, Explora II Deck 5.jpg" alt="Deck 5" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 5</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 4" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/06/10/11/46/19/0fe7588e-6d93-45eb-9f7e-d28f1bd35a87/Explora Journeys, Explora II Deck 4.jpg" alt="Deck 4" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 4</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 3" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/06/10/11/46/18/996c69b3-28e0-472c-9cab-6866a95b08d4/Explora Journeys, Explora II Deck 3.jpg" alt="Deck 3" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 3</p>
   </div>
     </div>

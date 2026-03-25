@@ -69,22 +69,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
 
+
     .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
     @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
     .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-card img{width:100%;height:160px;object-fit:cover;display:block}
+    .facility-card .no-img{width:100%;height:160px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem}
     .facility-info{padding:12px}
     .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
     .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
     @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
     .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card img{width:100%;height:120px;object-fit:cover;display:block}
+    .cabin-card .no-img{width:100%;height:120px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
     .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
     .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
     @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
-    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200);display:block}
+    .deckplan-item .no-img{width:100%;height:200px;background:var(--gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem}
     .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
@@ -124,202 +128,249 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+
     <h2 id="dining">🍽️ 다이닝</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/20/12/01/18/947d572c-88fc-4e55-9990-a9f50c561735/Oceania Cruises Riviera The Grand Dining Room 6.jpg" alt="The Grand Dining Room" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Grand Dining Room</h3><p>DINING IN GRAND STYLEThe grande dame of the Oceania Cruises culinary world, The Grand Dining Room invites guests to a leisurely dining experience amidst an ambiance that soars to heights as lofty as t</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/20/12/01/18/947d572c-88fc-4e55-9990-a9f50c561735/Oceania Cruises Riviera The Grand Dining Room 6.jpg" alt="The Grand Dining Room" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Grand Dining Room</h3><p>정찬 코스를 즐길 수 있는 메인 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/20/12/12/07/2112abf8-a065-4e57-82db-4376e1ac6fce/Oceania Cruises Jacques 7.jpg" alt="Jacques" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Jacques</h3><p>A PASSION FOR FRENCH CUISINEExquisitely decorated with heirloom antiques, pickled wood furnishings and art from Jacques Pépin’s personal collection, Jacques was modeled after a Parisian bistro. Comfor</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/20/12/12/07/2112abf8-a065-4e57-82db-4376e1ac6fce/Oceania Cruises Jacques 7.jpg" alt="Jacques" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Jacques</h3><p>프렌치 퀴진을 선보이는 고급 레스토랑으로, 우아한 분위기에서 다이닝을 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/20/12/36/38/bef2b0ed-b007-4a93-b6e8-8d9fa4e5dae7/Oceania Cruises Red Ginger 1.jpg" alt="Red Ginger" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Red Ginger</h3><p>BOLD ASIAN CUISINEWith a nod to feng shui, Red Ginger radiates harmony and tranquility. The interior simply glows with ebony woods, ruby red leathers and striking, modern Asian artworks. To complement</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/20/12/36/38/bef2b0ed-b007-4a93-b6e8-8d9fa4e5dae7/Oceania Cruises Red Ginger 1.jpg" alt="Red Ginger" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Red Ginger</h3><p>다채로운 아시안 퀴진을 선보이는 레스토랑으로, 동남아부터 일식까지 다양한 메뉴를 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/20/13/23/37/5fa2171f-3a26-43a5-a234-085d5720ce02/Oceania Cruises Polo Grill 1.jpg" alt="Polo Grill" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Polo Grill</h3><p>A CLASSIC STEAKHOUSEPolo Grill embodies all the elements of a classic steakhouse, expressing them with timeless reverence. Mindful of tradition, the decor features crisp, white linen tablecloths, dark</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/20/13/23/37/5fa2171f-3a26-43a5-a234-085d5720ce02/Oceania Cruises Polo Grill 1.jpg" alt="Polo Grill" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Polo Grill</h3><p>정통 스테이크하우스로, 엄선된 최고급 소고기 스테이크와 신선한 해산물을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/20/13/33/36/51872049-11e1-46b8-9f6a-a7f2971d9e31/Oceania Cruises Toscana 1.jpg" alt="Toscana" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Toscana</h3><p>AUTHENTIC ITALIANToscana means Tuscan, and just as Tuscan cuisine evolved from rich family traditions, many of our recipes originated with the mothers and grandmothers of our own Italian culinary staf</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/20/13/33/36/51872049-11e1-46b8-9f6a-a7f2971d9e31/Oceania Cruises Toscana 1.jpg" alt="Toscana" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Toscana</h3><p>이탈리안 정통 요리를 즐길 수 있는 레스토랑으로, 파스타와 피자 등 클래식 메뉴를 선보입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/20/13/41/09/dd60f815-7bd6-464e-ae3d-811e2976e4b4/Oceania Cruises Terrace Cafe 3.jpg" alt="Terrace Café" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Terrace Café</h3><p>INFORMAL DININGInformal and carefree, the Terrace Café is wonderfully inviting any time of day. During breakfast, the room is infused with natural sunlight from the floor-to-ceiling windows, stimulati</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/20/13/41/09/dd60f815-7bd6-464e-ae3d-811e2976e4b4/Oceania Cruises Terrace Cafe 3.jpg" alt="Terrace Café" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Terrace Café</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/20/14/01/28/aaac6bac-66e3-4ed9-b1fa-b34e55cff24f/Oceania Cruises Waves Grill 3.jpg" alt="Waves Grill" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Waves Grill</h3><p>ALFRESCO DININGSometimes, the ultimate luxury is casual dining on all-American favourites, a laid-back style Waves Grill epitomises. Located in a spacious, shaded area steps from the swimming pool, Wa</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/20/14/01/28/aaac6bac-66e3-4ed9-b1fa-b34e55cff24f/Oceania Cruises Waves Grill 3.jpg" alt="Waves Grill" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Waves Grill</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/27/18/20/54/585927f4-58af-430d-b9b9-df1af5bcd56d/Oceania Cruises Baristas 1.jpg" alt="Baristas" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Baristas</h3><p>A Neighborhood GemThis delightful coffee bar is a favorite stop for java lovers. Enjoy complimentary illy® espressos, cappuccinos and lattes prepared by our master baristas, as well as the delicious p</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/27/18/20/54/585927f4-58af-430d-b9b9-df1af5bcd56d/Oceania Cruises Baristas 1.jpg" alt="Baristas" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Baristas</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/06/18/10/15/39/0cc9a1f8-96ad-4771-b183-6e064878f35a/Oceania Marina - Aquamar Kitchen.JPG" alt="Aquamar Kitchen" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Aquamar Kitchen</h3><p>WELLNESS MEETS INDULGENCEAt Aquamar Kitchen, the harmony of nourishing flavors, a bright and airy ambiance evoking an endless Mediterranean summer and just the right amount of indulgence revitalizes y</p></div>
+    <img src="https://assets.widgety.co.uk/2024/06/18/10/15/39/0cc9a1f8-96ad-4771-b183-6e064878f35a/Oceania Marina - Aquamar Kitchen.JPG" alt="Aquamar Kitchen" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Aquamar Kitchen</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2016/05/05/12/25/52/680/Oceania_Cruises_Marina_privee.jpg" alt="Privée" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Privée</h3><p>A PRIVATE PARTYFor the ultimate in exclusivity, Privée may be reserved for the evening for parties of up to 10 privileged guests. Choose from several different gourmet menus to create an unforgettable</p></div>
+    <img src="https://assets.widgety.co.uk/2016/05/05/12/25/52/680/Oceania_Cruises_Marina_privee.jpg" alt="Privée" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Privée</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/11/20/11/17/25/dd5b6468-902e-46c9-b453-e20421c29a4e/Oceania Riviera - La Reserve 43.jpg" alt="Experiences by La Reserve" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Experiences by La Reserve</h3><p>THE DOM PÉRIGNON EXPERIENCEChampagne defines the most jubilant moments of our lives and we have partnered with France’s esteemed Moët &amp; Chandon to create the Dom Pérignon Experience, an exuberant </p></div>
+    <img src="https://assets.widgety.co.uk/2023/11/20/11/17/25/dd5b6468-902e-46c9-b453-e20421c29a4e/Oceania Riviera - La Reserve 43.jpg" alt="Experiences by La Reserve" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Experiences by La Reserve</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/11/13/12/11/25/98c213ea-fa07-4f11-9533-1cd822107236/Oceania Regatta - Afternoon Tea 5.jpg" alt="Afternoon Tea" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Afternoon Tea</h3><p>TIME-HONOURED PASTIMEEach afternoon, the parade of gleaming four-tiered pastry carts begins. Savor freshly made, flavorful smoked salmon and egg salad finger sandwiches. Enjoy mirror-glazed petits fou</p></div>
+    <img src="https://assets.widgety.co.uk/2023/11/13/12/11/25/98c213ea-fa07-4f11-9533-1cd822107236/Oceania Regatta - Afternoon Tea 5.jpg" alt="Afternoon Tea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Afternoon Tea</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/07/04/17/13/25/e8acfaf7-21b4-46e1-946d-b90339268ed6/Oceania Marina - Room Service.jpg" alt="Room Service" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Room Service</h3><p>GOURMET DINING DELIVERED TO YOUAfter a day of enriching shore excursions ashore or various activities on board, you may dine in the privacy of your suite or stateroom with our compliments. An extensiv</p></div>
+    <img src="https://assets.widgety.co.uk/2024/07/04/17/13/25/e8acfaf7-21b4-46e1-946d-b90339268ed6/Oceania Marina - Room Service.jpg" alt="Room Service" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Room Service</h3><p>객실에서 편안하게 즐기는 룸서비스로, 언제든지 원하는 음식을 주문할 수 있습니다.</p></div>
   </div>
     </div>
 
     <h2 id="entertainment">🎭 엔터테인먼트</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/15/15/36/55/d8533e32-2a36-495b-bd8a-46e67ea34d24/Oceania Cruises Onboard Shows.jpg" alt="Onboard Shows" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Onboard Shows</h3><p>EXCLUSIVE PRODUCTION SHOWSWorld-class musical performances will delight you, showcasing an ever-changing array of guest entertainers such as pianists, classical string quartets, dynamic vocalists and </p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/15/15/36/55/d8533e32-2a36-495b-bd8a-46e67ea34d24/Oceania Cruises Onboard Shows.jpg" alt="Onboard Shows" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Onboard Shows</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/11/16/15/43/55/584705a8-6515-416d-8f1a-f26771f1669d/Oceania Vista - Casino.jpg" alt="Casino" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Casino</h3><p>Monte Carlo-Style GamingEARN CASINO POINTSThe professional staff is happy to provide lessons on how games are played, the rules and proper table procedures. Unwind from a busy day ashore by playing yo</p></div>
+    <img src="https://assets.widgety.co.uk/2023/11/16/15/43/55/584705a8-6515-416d-8f1a-f26771f1669d/Oceania Vista - Casino.jpg" alt="Casino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Casino</h3><p>라스베이거스 스타일의 카지노로, 슬롯머신과 테이블 게임을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/20/15/12/12/e0acf67a-99a2-4593-bd41-40261dff0e18/Oceania Cruises Boutiques 1.jpg" alt="Boutiques" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Boutiques</h3><p>UNIQUE GIFTS, JEWELLERY &amp; MOREOur stylish boutiques feature a tastefully curated selection of items ranging from sundries to chic resort wear and fine jewellery. Discover thoughtful gifts for frie</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/20/15/12/12/e0acf67a-99a2-4593-bd41-40261dff0e18/Oceania Cruises Boutiques 1.jpg" alt="Boutiques" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Boutiques</h3><p>신나는 음악과 함께 춤을 즐길 수 있는 디스코장입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/11/20/11/51/18/79a206fd-45a6-4a6b-962b-965027a28002/Oceania Isignia - Library 2.jpg" alt="Library" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Library</h3><p>QUIETUDE AT SEAPick up a steaming cappuccino and settle in to the welcoming ambiance of our classic library on board Oceania Marina with the novel or bestseller you’ve been meaning to read. Read, rela</p></div>
+    <img src="https://assets.widgety.co.uk/2023/11/20/11/51/18/79a206fd-45a6-4a6b-962b-965027a28002/Oceania Isignia - Library 2.jpg" alt="Library" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Library</h3><p>독서와 카드 게임을 즐길 수 있는 조용한 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/20/15/28/28/63dc22e1-e87c-465c-bcb2-b830a324a676/Ocean Cruises Oceania@Sea Internet Centre.jpg" alt="Oceania@Sea Internet Centre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Oceania@Sea Internet Centre</h3><p>Stay ConnectedStay in touch with family and friends, monitor business developments and more in our 24-hour Internet centre, Oceania@Sea.For personalised service, Oceania@Sea is fully staffed as follow</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/20/15/28/28/63dc22e1-e87c-465c-bcb2-b830a324a676/Ocean Cruises Oceania@Sea Internet Centre.jpg" alt="Oceania@Sea Internet Centre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Oceania@Sea Internet Centre</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/20/15/57/01/a8598826-08e6-40ae-ae81-647b88d91b53/Oceania Cruises Martinis 2.jpg" alt="Martinis" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Martinis</h3><p>Martinis serves numerous incarnations of this famous cocktail in a sophisticated yet affable atmosphere reminiscent of an exclusive New York members’ club, featuring live piano music.</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/20/15/57/01/a8598826-08e6-40ae-ae81-647b88d91b53/Oceania Cruises Martinis 2.jpg" alt="Martinis" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Martinis</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/11/27/08/51/44/7c3742f6-4181-4e4b-84b1-fb02ebf3a831/Oceania Marina - Grand Bar 1.jpg" alt="The Grand Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Grand Bar</h3><p>Before sitting down to a gourmet meal, sample a rare vintage or savour your favourite apéritif as you enjoy spirited conversation with newfound friends amid the refined atmosphere of the convivial Gra</p></div>
+    <img src="https://assets.widgety.co.uk/2023/11/27/08/51/44/7c3742f6-4181-4e4b-84b1-fb02ebf3a831/Oceania Marina - Grand Bar 1.jpg" alt="The Grand Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Grand Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/28/10/34/40/31f35cb1-b57b-4305-b9f2-8c6707951db5/Oceania Cruises Marina Lounge.jpg" alt="Marina Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Marina Lounge</h3><p>From headline acts to comedians, magicians and lively jazz ensembles, head to the Oceania Marina Lounge to discover the centre of nightly entertainment aboard Oceania Cruises.</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/28/10/34/40/31f35cb1-b57b-4305-b9f2-8c6707951db5/Oceania Cruises Marina Lounge.jpg" alt="Marina Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Marina Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/20/16/14/32/0c027742-3501-4989-b8a5-c2bb8cfbc2eb/Oceania Cruises Horizons.jpg" alt="Horizons" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Horizons</h3><p>An elegant observation lounge with dramatic floor-to-ceiling windows and a country club casual ambiance, Horizons transforms into a sophisticated evening venue by night. Dance the night away to the so</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/20/16/14/32/0c027742-3501-4989-b8a5-c2bb8cfbc2eb/Oceania Cruises Horizons.jpg" alt="Horizons" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Horizons</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/20/16/19/34/b6fd0f98-afb1-491c-8e24-f5520c16ce0a/Oceania Cruises Waves Bar 2.jpg" alt="Waves Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Waves Bar</h3><p>Located in a shaded area just steps from the swimming pool, Waves Bar offers a wide variety of libations to enhance your poolside experience. Revel in the perfect afternoon on deck with your favourite</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/20/16/19/34/b6fd0f98-afb1-491c-8e24-f5520c16ce0a/Oceania Cruises Waves Bar 2.jpg" alt="Waves Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Waves Bar</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/11/20/11/17/25/03c78007-a948-43f1-a64e-06370849250b/Oceania Riviera - Patio.png" alt="Patio" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Patio</h3><p>Sit back, relax and enjoy the stunning panoramic ocean views in the shaded, comfortable Patio as you sail to the next exciting destination.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/11/20/11/17/25/03c78007-a948-43f1-a64e-06370849250b/Oceania Riviera - Patio.png" alt="Patio" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Patio</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/11/20/11/41/14/3768700f-8cc3-47b1-83c1-3f1086e19b89/Oceania Marina - Sanctuary.jpg" alt="Sanctuary" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sanctuary</h3><p>Sit back, relax and enjoy the stunning panoramic ocean views in the shaded comfortable Sanctuary as you sail to the next exciting destination.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/11/20/11/41/14/3768700f-8cc3-47b1-83c1-3f1086e19b89/Oceania Marina - Sanctuary.jpg" alt="Sanctuary" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sanctuary</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/11/20/11/41/13/d4cdeea6-c436-4714-8974-43f9bd0ead9e/Oceania Marina - Executive Lounge 1.jpg" alt="Executive Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Executive Lounge</h3><p>Enjoy the fully-staffed Executive Lounge with Complimentary beverages and snacks throughout the day and evening.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/11/20/11/41/13/d4cdeea6-c436-4714-8974-43f9bd0ead9e/Oceania Marina - Executive Lounge 1.jpg" alt="Executive Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Executive Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/11/20/11/41/12/27eb8dbb-fd12-4cfc-a9f9-77e809ee5c29/Oceania Marina - Casino Bar 1.jpg" alt="Casino Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Casino Bar</h3><p>Try your hand at exciting table games such as blackjack, poker and roulette while enjoying a delightful cocktail from the Casino Bar</p></div>
+    <img src="https://assets.widgety.co.uk/2023/11/20/11/41/12/27eb8dbb-fd12-4cfc-a9f9-77e809ee5c29/Oceania Marina - Casino Bar 1.jpg" alt="Casino Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Casino Bar</h3><p>라스베이거스 스타일의 카지노로, 슬롯머신과 테이블 게임을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/11/20/11/41/13/4c8ed6c2-a857-4026-9f04-b23be3746f79/Oceania Marina - Concierge Lounge.png" alt="Concierge Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Concierge Lounge</h3><p>Enjoy the fully-staffed Concierge Lounge with complimentary beverages and snacks throughout the day an evening.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/11/20/11/41/13/4c8ed6c2-a857-4026-9f04-b23be3746f79/Oceania Marina - Concierge Lounge.png" alt="Concierge Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Concierge Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
     </div>
 
     <h2 id="health">💆 스파 &amp; 웰니스</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/21/09/46/10/947923d2-5e91-4b05-ae70-55304fb4994e/Oceania Cruises Aquamar Spa Vitality Centre 1.jpg" alt="Aquamar Spa + Vitality Centre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Aquamar Spa + Vitality Centre</h3><p>NEW PATHS TO WELLNESSRevel in the benefits of restorative therapies and treatments, savor healthy Aquamar Vitality Cuisine, enjoy immersive wellness experiences ashore, benefit from nutrition and life</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/21/09/46/10/947923d2-5e91-4b05-ae70-55304fb4994e/Oceania Cruises Aquamar Spa Vitality Centre 1.jpg" alt="Aquamar Spa + Vitality Centre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Aquamar Spa + Vitality Centre</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/16/11/24/34/750405c6-cecf-43c9-9382-0145c24aea0b/Oceania Fitness Centre.jpg" alt="Fitness Centre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Fitness Centre</h3><p>FREE FITNESS CLASSES &amp; MOREFrom Pilates and yoga to full-body strength training, you are certain to find a complimentary fitness class to suit your preferences. One-on-one personal training is als</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/16/11/24/34/750405c6-cecf-43c9-9382-0145c24aea0b/Oceania Fitness Centre.jpg" alt="Fitness Centre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Fitness Centre</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/21/10/00/03/cd44e6a4-7b3f-442e-8c3d-dd50c45ccdce/Oceania Cruises The Pool 1.jpg" alt="The Pool" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Pool</h3><p>SWIM, SIP &amp; LOUNGEOn the sparkling pool deck, take a refreshing dip in the large saltwater pool or relax in one of the two whirlpool spas. Plenty of comfortable chaise lounge chairs and luxurious </p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/21/10/00/03/cd44e6a4-7b3f-442e-8c3d-dd50c45ccdce/Oceania Cruises The Pool 1.jpg" alt="The Pool" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Pool</h3><p>따뜻한 월풀에서 여유로운 시간을 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/21/10/09/13/98d4deb5-ef8f-4753-a2e1-4d06a6ce421e/Oceania Cruises Running Track & Sports Deck 1.jpg" alt="Running Track & Sports Deck" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Running Track & Sports Deck</h3><p>ACTIVITIES WITH A VIEWHigh atop the ship, revel in the breathtaking views and refreshing sea breeze. Breathe in the fresh sea air with a few invigorating laps on the running track at your own pace or </p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/21/10/09/13/98d4deb5-ef8f-4753-a2e1-4d06a6ce421e/Oceania Cruises Running Track & Sports Deck 1.jpg" alt="Running Track & Sports Deck" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Running Track & Sports Deck</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/16/12/05/47/8f336d3a-12cf-40f0-b50e-da70487775ea/Oceania Cruises Thermal Environments 1.jpg" alt="Thermal Environments" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Thermal Environments</h3><p>For centuries, people have turned to water for purification, muscle and joint relief and deep relaxation. Our aromatic steam rooms and thalassotherapy pools relieve tired muscles and joints, detoxify </p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/16/12/05/47/8f336d3a-12cf-40f0-b50e-da70487775ea/Oceania Cruises Thermal Environments 1.jpg" alt="Thermal Environments" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Thermal Environments</h3><p>테라피 효과의 온열 시설에서 몸과 마음의 긴장을 풀어보세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/16/12/05/46/25ccdbd9-0fd4-431e-b516-c9fd43e0ca33/Oceania Cruises Massage Therapies.jpg" alt="Massage Therapies" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Massage Therapies</h3><p>Relish moments of calm and reflection that inspire longevity and complete well-being. Massage brings waves of relaxation while addressing the anatomy of the body and stressors that disrupt its natural</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/16/12/05/46/25ccdbd9-0fd4-431e-b516-c9fd43e0ca33/Oceania Cruises Massage Therapies.jpg" alt="Massage Therapies" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Massage Therapies</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/16/12/05/45/8907acc0-f247-424b-81d8-18e29d868cc8/Oceania Cruises Body Therapies.jpg" alt="Body Therapies" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Body Therapies</h3><p>The human body has a deep connection with water. Much like the ocean, it is comprised of this element. Cleanse the body and maintain its nourishment with a selection of ocean-inspired wraps, polishes,</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/16/12/05/45/8907acc0-f247-424b-81d8-18e29d868cc8/Oceania Cruises Body Therapies.jpg" alt="Body Therapies" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Body Therapies</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/16/12/05/45/acf0d046-520a-41e2-84f2-7ec9ef2b1c5d/Oceania Cruises Facial Therapies.jpg" alt="Facial Therapies" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Facial Therapies</h3><p>Hands-on facial treatments use touch as a powerful diagnostic tool, softening and preparing the skin to receive essential vitamins and nutrients. Therapeutic treatments call on a combination of ancien</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/16/12/05/45/acf0d046-520a-41e2-84f2-7ec9ef2b1c5d/Oceania Cruises Facial Therapies.jpg" alt="Facial Therapies" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Facial Therapies</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/16/12/29/12/59dbbe2f-7da1-4aa7-9d6d-f88cc0ce4e89/Oceania Cruises Salon & Barber Shop Services.jpg" alt="Salon & Barber Shop Services" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Salon & Barber Shop Services</h3><p>Aquamar Spa + Vitality Centre’s salon offers luxury hair care products, deluxe services, and a specialty colour bar. Salon experts can identify haircare needs and create personalised treatments along </p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/16/12/29/12/59dbbe2f-7da1-4aa7-9d6d-f88cc0ce4e89/Oceania Cruises Salon & Barber Shop Services.jpg" alt="Salon & Barber Shop Services" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Salon & Barber Shop Services</h3><p>독특한 컨셉의 스페셜티 레스토랑으로, 특별한 식사 경험을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/06/29/09/50/43/6ff96c39-872c-4712-9b74-6179aa221d63/Oceania Cruises Medi-Spa Services.jpg" alt="Medi-Spa Services" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Medi-Spa Services</h3><p>Discover your fountain of youth. Modern medicine has paved a path for a more youthful-looking skin and body. Aquamar Spa + Vitality Center offers an array of safe and effective cosmetic treatments adm</p></div>
+    <img src="https://assets.widgety.co.uk/2022/06/29/09/50/43/6ff96c39-872c-4712-9b74-6179aa221d63/Oceania Cruises Medi-Spa Services.jpg" alt="Medi-Spa Services" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Medi-Spa Services</h3><p>신나는 음악과 함께 춤을 즐길 수 있는 디스코장입니다.</p></div>
   </div>
     </div>
 
     <h2 id="cabins">🛏️ 객실 등급</h2>
     <div class="cabin-grid">
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/07/04/17/13/23/43ca51d9-7c6a-4107-a035-b3c9b3ff8105/Oceania Marina - Owners Suite 2.jpg" alt="Owner's Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/07/04/17/13/23/43ca51d9-7c6a-4107-a035-b3c9b3ff8105/Oceania Marina - Owners Suite 2.jpg" alt="Owner's Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Owner's Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2026/01/28/15/10/44/77b8c5f4-e01e-43f1-b2a2-a03192dd8279/Oceania Cruises Oceania Marina Vista Suite 1.jpg" alt="Vista Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2026/01/28/15/10/44/77b8c5f4-e01e-43f1-b2a2-a03192dd8279/Oceania Cruises Oceania Marina Vista Suite 1.jpg" alt="Vista Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Vista Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2026/01/28/15/23/32/95fa1e09-ce40-4f49-a362-e55350ac49af/Oceania Cruises Oceania Marina Oceania Suite 1.jpg" alt="Oceania Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2026/01/28/15/23/32/95fa1e09-ce40-4f49-a362-e55350ac49af/Oceania Cruises Oceania Marina Oceania Suite 1.jpg" alt="Oceania Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Oceania Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2026/01/28/15/34/04/7aa1cc34-4a54-419c-93e5-bcdd3c0286f9/Oceania Cruises Oceania Marina Penthouse Suite 1.jpg" alt="Penthouse Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2026/01/28/15/34/04/7aa1cc34-4a54-419c-93e5-bcdd3c0286f9/Oceania Cruises Oceania Marina Penthouse Suite 1.jpg" alt="Penthouse Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Penthouse Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/07/04/17/05/00/b391a61e-65be-4b8b-ad71-a5565d234eb8/Oceania Marina - Concierge Level Veranda.jpg" alt="Concierge Veranda Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/07/04/17/05/00/b391a61e-65be-4b8b-ad71-a5565d234eb8/Oceania Marina - Concierge Level Veranda.jpg" alt="Concierge Veranda Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Concierge Veranda Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2022/06/27/17/12/48/6dbb2d7e-a0d0-488b-bc30-122407949354/Oceania Cruises Marina Veranda Stateroom 1.jpg" alt="Veranda Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2022/06/27/17/12/48/6dbb2d7e-a0d0-488b-bc30-122407949354/Oceania Cruises Marina Veranda Stateroom 1.jpg" alt="Veranda Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Veranda Stateroom</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2026/01/28/15/46/23/8d993a9f-7845-4546-aeef-48db236e1827/Oceania Cruises Oceania Marina Deluxe Oceanview Stateroom.jpg" alt="Deluxe Oceanview Staterooms" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2026/01/28/15/46/23/8d993a9f-7845-4546-aeef-48db236e1827/Oceania Cruises Oceania Marina Deluxe Oceanview Stateroom.jpg" alt="Deluxe Oceanview Staterooms" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Oceanview Staterooms</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/07/04/17/05/01/ea699aab-ea31-4a5d-8cbb-d3a3cfdff8c2/Oceania Marina - Inside Stateroom 3.jpg" alt="Inside Stateroom" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/07/04/17/05/01/ea699aab-ea31-4a5d-8cbb-d3a3cfdff8c2/Oceania Marina - Inside Stateroom 3.jpg" alt="Inside Stateroom" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Inside Stateroom</div>
   </div>
     </div>
@@ -327,47 +378,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="deckplan">📐 덱 플랜</h2>
     <div class="deckplan-list">
   <div class="deckplan-item">
-    <img src="" alt="Deck 16" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2026/01/28/13/30/51/c742b6f4-e58a-4fb9-9bad-6fd442f32144/Oceania Cruises Oceania Marina Deck 16.png" alt="Deck 16" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 16</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 15" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2026/01/28/13/28/03/b081e1d5-c3cf-4437-8529-7bc4e5da6794/Oceania Cruises Oceania Marina Deck 15.png" alt="Deck 15" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 15</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 14" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2026/01/28/13/28/03/1792b788-2356-4a4b-bf79-b7bc5732de40/Oceania Cruises Oceania Marina Deck 14.png" alt="Deck 14" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 14</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 12" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2026/01/28/13/28/03/e66b9165-63ad-479c-a483-f01a15efadc0/Oceania Cruises Oceania Marina Deck 12.png" alt="Deck 12" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 12</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 11" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2026/01/28/13/28/03/25180c26-60f3-4e4b-b982-91899f52749b/Oceania Cruises Oceania Marina Deck 11.png" alt="Deck 11" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 11</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 10" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2026/01/28/13/28/02/93914d90-a64c-4baa-9f04-ad1604e1c512/Oceania Cruises Oceania Marina Deck 10.png" alt="Deck 10" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 10</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 9" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2026/01/28/13/28/02/7c9f510f-f309-446a-bae8-daf3e020c120/Oceania Cruises Oceania Marina Deck 9.png" alt="Deck 9" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 9</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 8" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2026/01/28/13/43/04/fae13579-edaa-4d2c-a8f8-dc757abecca0/Oceania Cruises Oceania Marina Deck 8.png" alt="Deck 8" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 8</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 7" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2026/01/28/13/39/09/f744994a-de36-4e40-8f12-b38d89f63ffb/Oceania Cruises Oceania Marina Deck 7.png" alt="Deck 7" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 7</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 6" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2026/01/28/13/28/02/578bbff1-60a7-4e72-9cdb-5cfc1a46028e/Oceania Cruises Oceania Marina Deck 6.png" alt="Deck 6" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 6</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 5" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2026/01/28/13/28/02/9372f2bd-6e96-4213-86e0-ea69dbf4d628/Oceania Cruises Oceania Marina Deck 5.png" alt="Deck 5" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 5</p>
   </div>
     </div>

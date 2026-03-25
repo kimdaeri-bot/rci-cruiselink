@@ -69,22 +69,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
 
+
     .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
     @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
     .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-card img{width:100%;height:160px;object-fit:cover;display:block}
+    .facility-card .no-img{width:100%;height:160px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem}
     .facility-info{padding:12px}
     .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
     .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
     @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
     .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card img{width:100%;height:120px;object-fit:cover;display:block}
+    .cabin-card .no-img{width:100%;height:120px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
     .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
     .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
     @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
-    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200);display:block}
+    .deckplan-item .no-img{width:100%;height:200px;background:var(--gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem}
     .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
@@ -124,222 +128,273 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+
     <h2 id="dining">🍽️ 다이닝</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/16/09/04/08/e23d4b44-aab4-4f33-be9d-0dab918c2fd3/MSC Cruises, MSC Sinfonia, II Galeone 1, Copyrights - MSC Rights.jpg" alt="II Galeone Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>II Galeone Restaurant</h3><p>II Galeone can be found on Deck 5.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/16/09/04/08/e23d4b44-aab4-4f33-be9d-0dab918c2fd3/MSC Cruises, MSC Sinfonia, II Galeone 1, Copyrights - MSC Rights.jpg" alt="II Galeone Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>II Galeone Restaurant</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/13/51/28/179143a3-e0b1-40c6-b7df-483ace02cf29/MSC Cruises MSC Sinfonia II Covo Restaurant ©MSC Rights - Ivan Sarfatti.jpg" alt="II Covo Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>II Covo Restaurant</h3><p>II Covo Restaurant can be found on Deck 6.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/13/51/28/179143a3-e0b1-40c6-b7df-483ace02cf29/MSC Cruises MSC Sinfonia II Covo Restaurant ©MSC Rights - Ivan Sarfatti.jpg" alt="II Covo Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>II Covo Restaurant</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/15/08/58/25/f7b15cce-0beb-4dde-9d03-88bcaf562ab4/MSC Cruises MSC Sinfonia Hamburger Paradise.jpg" alt="Caffè del Mare Hamburger Paradise" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Caffè del Mare Hamburger Paradise</h3><p>Caffè del Mare Hamburger Paradise can be found on Deck 11.</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/15/08/58/25/f7b15cce-0beb-4dde-9d03-88bcaf562ab4/MSC Cruises MSC Sinfonia Hamburger Paradise.jpg" alt="Caffè del Mare Hamburger Paradise" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Caffè del Mare Hamburger Paradise</h3><p>신선한 패티로 만든 버거와 아메리칸 푸드를 즐길 수 있는 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/15/08/58/27/e3819fa4-13f2-4b5f-92e1-c990be7f42b6/MSC Cruises MSC Sinfonia Pizza & Pasta.jpg" alt="Caffè del Mare Pizza & Pasta" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Caffè del Mare Pizza & Pasta</h3><p>Caffè del Mare Pizza &amp; Pasta can be found on Deck 11.</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/15/08/58/27/e3819fa4-13f2-4b5f-92e1-c990be7f42b6/MSC Cruises MSC Sinfonia Pizza & Pasta.jpg" alt="Caffè del Mare Pizza & Pasta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Caffè del Mare Pizza & Pasta</h3><p>갓 구운 피자와 이탈리안 음식을 즐길 수 있는 캐주얼 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/14/14/49/a542b3dd-76a9-4a26-a40c-a4ccb73bb45d/MSC Cruises MSC Sinfonia La Terrazza 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Terrazza" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>La Terrazza</h3><p>La Terrazza can be found on Deck 11.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/14/14/49/a542b3dd-76a9-4a26-a40c-a4ccb73bb45d/MSC Cruises MSC Sinfonia La Terrazza 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Terrazza" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>La Terrazza</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/14/19/21/2c571446-32f7-40a8-aff5-dcdf0af92592/MSC Cruises MSC Sinfonia Vitamin Bar ©MSC Rights - Ivan Sarfatti.jpg" alt="Vitamin Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Vitamin Bar</h3><p>Vitamin Bar can be found on Deck 11.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/14/19/21/2c571446-32f7-40a8-aff5-dcdf0af92592/MSC Cruises MSC Sinfonia Vitamin Bar ©MSC Rights - Ivan Sarfatti.jpg" alt="Vitamin Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Vitamin Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
     </div>
 
     <h2 id="entertainment">🎭 엔터테인먼트</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/15/09/06/04/5af73b88-4396-4f21-b615-71c8a8b8b051/MSC Cruises MSC Sinfonia Theatre 2.jpg" alt="Teatro San Carlo" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Teatro San Carlo</h3><p>You’d normally have to travel to New York to see top-end shows, but thanks to our Broadway-style theatres you can enjoy superlative entertainment with an international line-up of artists without havin</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/15/09/06/04/5af73b88-4396-4f21-b615-71c8a8b8b051/MSC Cruises MSC Sinfonia Theatre 2.jpg" alt="Teatro San Carlo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Teatro San Carlo</h3><p>브로드웨이 스타일의 대형 공연장으로, 세계적 수준의 쇼와 공연을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/14/57/13/fe604777-3652-45be-9791-076e073a5df2/MSC Cruises MSC Sinfonia Sanremo Casino 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Sanremo Casino" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sanremo Casino</h3><p>Our casinos are elegantly designed, featuring games for all types of players. You’ll be able to try your hand at Roulette or Blackjack, challenge yourself at one of our Poker tables, or choose among a</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/14/57/13/fe604777-3652-45be-9791-076e073a5df2/MSC Cruises MSC Sinfonia Sanremo Casino 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Sanremo Casino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sanremo Casino</h3><p>라스베이거스 스타일의 카지노로, 슬롯머신과 테이블 게임을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/15/13/04/f9b353a6-9283-45e2-98ca-7b09837cec88/MSC Cruises MSC Sinfonia Pasha Club Disco 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Pasha Club Disco" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Pasha Club Disco</h3><p>Late-night bar and nightclub with a 450 square foot dance floor.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/15/13/04/f9b353a6-9283-45e2-98ca-7b09837cec88/MSC Cruises MSC Sinfonia Pasha Club Disco 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Pasha Club Disco" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Pasha Club Disco</h3><p>밤 문화를 즐길 수 있는 선상 나이트클럽입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/01/14/28/35/800/MSC_Lirica_Class_Piano_Bar.jpg" alt="Piano Bar & Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Piano Bar & Lounge</h3><p>Show lounge, with piano and bar and 193 square foot dance floor.</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/01/14/28/35/800/MSC_Lirica_Class_Piano_Bar.jpg" alt="Piano Bar & Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Piano Bar & Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/01/14/28/46/878/MSC_Lirica_Class_The_card_room_2.jpg" alt="The Card Room" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Card Room</h3><p>The ship's card room is located on deck 7 and seats 28 guests.</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/01/14/28/46/878/MSC_Lirica_Class_The_card_room_2.jpg" alt="The Card Room" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Card Room</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/16/03/28/d1259627-a807-4b93-ab9f-fdbdf19630d2/MSC Cruises MSC Sinfonia Shelagh's House 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Shelagh's House Irish Pub" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Shelagh's House Irish Pub</h3><p>Shelagh's House Irish Pub can be found on Deck 5.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/16/03/28/d1259627-a807-4b93-ab9f-fdbdf19630d2/MSC Cruises MSC Sinfonia Shelagh's House 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Shelagh's House Irish Pub" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Shelagh's House Irish Pub</h3><p>영국 스타일의 퍼브로, 생맥주와 라이브 음악을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/15/51/41/3fcdd492-f708-4fde-bb19-99710143ffcd/MSC Cruises MSC Sinfonia Sinfonia Lounge & Library 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Sinfonia Lounge & Library" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sinfonia Lounge & Library</h3><p>Sinfonia Lounge &amp; Library can be found on Deck 6.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/15/51/41/3fcdd492-f708-4fde-bb19-99710143ffcd/MSC Cruises MSC Sinfonia Sinfonia Lounge & Library 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Sinfonia Lounge & Library" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sinfonia Lounge & Library</h3><p>독서와 카드 게임을 즐길 수 있는 조용한 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/16/15/55/6124581b-77a0-48b1-bbea-9d8a48389e67/MSC Cruises MSC Sinfonia Capri Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Capri Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Capri Bar</h3><p>Capri Bar can be found on Deck 11.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/16/15/55/6124581b-77a0-48b1-bbea-9d8a48389e67/MSC Cruises MSC Sinfonia Capri Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Capri Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Capri Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/16/23/44/cf122185-fca4-4614-b213-80183be7c25c/MSC Cruises MSC Sinfonia Cafè Le Baroque 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Cafè Le Baroque " loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Cafè Le Baroque </h3><p>Cafè Le Baroque can be found on Deck 6.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/16/23/44/cf122185-fca4-4614-b213-80183be7c25c/MSC Cruises MSC Sinfonia Cafè Le Baroque 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Cafè Le Baroque " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Cafè Le Baroque </h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/16/28/32/f8a3119d-5928-43cf-b18f-a1e89875cbfd/MSC Cruises MSC Sinfonia Manhattan Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Manhattan Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Manhattan Bar</h3><p>Manhattan Bar can be found on Deck 5.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/16/28/32/f8a3119d-5928-43cf-b18f-a1e89875cbfd/MSC Cruises MSC Sinfonia Manhattan Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Manhattan Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Manhattan Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/16/33/17/f807f4a6-7e1a-4517-82ba-203c88e7e37f/MSC Cruises MSC Sinfonia Ambassador Cigar Room 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Ambassador Cigar Room" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Ambassador Cigar Room</h3><p>Ambassador Cigar Room can be found on Deck 5.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/16/33/17/f807f4a6-7e1a-4517-82ba-203c88e7e37f/MSC Cruises MSC Sinfonia Ambassador Cigar Room 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Ambassador Cigar Room" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Ambassador Cigar Room</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/16/37/27/55eb2b24-ef65-409f-b38e-04b65f814b5c/MSC Cruises MSC Sinfonia Le Piscine Pool 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Le Piscine Pool" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Le Piscine Pool</h3><p>Le Piscine Pool can be found on Deck 11.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/16/37/27/55eb2b24-ef65-409f-b38e-04b65f814b5c/MSC Cruises MSC Sinfonia Le Piscine Pool 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Le Piscine Pool" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Le Piscine Pool</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/15/09/45/38/fd20f27a-e38e-44d9-bcd5-cb2fec6ffbd7/MSC Cruises MSC Sinfonia Virtual Arcade.jpg" alt="Arcade" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Arcade</h3><p>Spend a few fun-filled hours gaming at the Arcadeon board the ship. Pit your wits and skill against your friends in a variety of classic arcade games, including video games, pinball, and more.</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/15/09/45/38/fd20f27a-e38e-44d9-bcd5-cb2fec6ffbd7/MSC Cruises MSC Sinfonia Virtual Arcade.jpg" alt="Arcade" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Arcade</h3><p>다양한 아케이드 게임을 즐길 수 있는 게임룸입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/16/10/17/25/ec0f66d1-882c-4052-b135-09a71a90b9e1/MSC Cruises, MSC Sinfonia, Photo Shop, Copyrights - MSC Rights.jpg" alt="Photo Gallery" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Photo Gallery</h3><p>Don’t forget to explore the All-Inclusive Digital Photo Package, which includes digital files of all the photos taken by our professional photographers on board. Digital photos are available for downl</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/16/10/17/25/ec0f66d1-882c-4052-b135-09a71a90b9e1/MSC Cruises, MSC Sinfonia, Photo Shop, Copyrights - MSC Rights.jpg" alt="Photo Gallery" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Photo Gallery</h3><p>전문 사진작가가 촬영한 아름다운 사진을 간직하세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/15/09/38/18/b1351c34-aee4-4d97-82f6-5e1c29b938b4/MSC Photo Portrait.png" alt="Photo Portrait" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Photo Portrait</h3><p>Timeless Studio Photography A dedicated Studio Photographer will provide you with a unique photo opportunity to capture the special moments of your cruise. During a private consultation you will be pr</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/15/09/38/18/b1351c34-aee4-4d97-82f6-5e1c29b938b4/MSC Photo Portrait.png" alt="Photo Portrait" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Photo Portrait</h3><p>전문 사진작가가 촬영한 아름다운 사진을 간직하세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/20/29/35/eeb06192-bb97-434b-8630-5bb52fbbab75/MSC Cruises MSC Sinfonia Reception - Guest Services 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Reception - Guest Services" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Reception - Guest Services</h3><p>The Reception can be found on Deck 5.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/20/29/35/eeb06192-bb97-434b-8630-5bb52fbbab75/MSC Cruises MSC Sinfonia Reception - Guest Services 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Reception - Guest Services" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Reception - Guest Services</h3><p>선상 아이스링크에서 스케이팅과 아이스쇼를 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/21/02/45/8182330a-8dfc-407c-be1b-f607abe1efe0/MSC Cruises MSC Sinfonia Boutique 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Shops" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Shops</h3><p>MSC Logo ShopInfuse your cruise with gifts that spark magical memories of your voyage across the waves! Navigate the MSC Logo Shop for everything from gadgets to books and novelty gifts!  You’ll also </p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/21/02/45/8182330a-8dfc-407c-be1b-f607abe1efe0/MSC Cruises MSC Sinfonia Boutique 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Shops" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Shops</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/b5388d4e-a29f-4da0-beb2-202f6a0431e2/MSC Cruises, MSC Factor.jpg" alt="MSC Events" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Events</h3><p>MSC FactorThink you’ve got what it takes to be a star in our on-board talent competition, The MSC Factor? Then come and showcase what you can do in the most exciting talent show at sea. Whatever your </p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/b5388d4e-a29f-4da0-beb2-202f6a0431e2/MSC Cruises, MSC Factor.jpg" alt="MSC Events" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Events</h3></div>
   </div>
     </div>
 
     <h2 id="health">💆 스파 &amp; 웰니스</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/21/14/07/3a98d75e-070a-4308-ac84-fe67a51253ca/MSC Cruises MSC Sinfonia Top 13 Exclusive Solarium 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Top 13 Exclusive Solarium" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Top 13 Exclusive Solarium</h3><p>Exclusively for adults, this calm, quiet and peaceful retreat can be found on the Sun Deck.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/21/14/07/3a98d75e-070a-4308-ac84-fe67a51253ca/MSC Cruises MSC Sinfonia Top 13 Exclusive Solarium 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Top 13 Exclusive Solarium" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Top 13 Exclusive Solarium</h3><p>성인 전용 솔라리움에서 조용하고 평화로운 휴식을 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/21/51/04/e9de7220-f7d2-48ba-9fba-6253ca3f572d/MSC Cruises MSC Sinfonia MSC Aurea Spa 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="MSC Aurea Spa" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Aurea Spa</h3><p>MSC Aurea Spa boasts an exotic interior of natural stone, precious woods and rich mosaics, and is equipped with specific and massage treatment suites. Being pampered by a traditional Balinese Massage </p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/21/51/04/e9de7220-f7d2-48ba-9fba-6253ca3f572d/MSC Cruises MSC Sinfonia MSC Aurea Spa 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="MSC Aurea Spa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Aurea Spa</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/22/05/49/9fd59de9-08a7-428e-9d87-29019fee77c9/MSC Cruises MSC Sinfonia Gym by TechnoGym® 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Gym by TechnoGym®" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Gym by TechnoGym®</h3><p>Fitted with authentic TechnoGym® equipment and featuring panoramic ocean views, the on-board Gym is the place to be for all those who take their fitness regime seriously. Hone your physique with a ful</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/22/05/49/9fd59de9-08a7-428e-9d87-29019fee77c9/MSC Cruises MSC Sinfonia Gym by TechnoGym® 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Gym by TechnoGym®" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Gym by TechnoGym®</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/21/51/06/b7dd6428-4652-4c90-96a6-cc140ece56ee/MSC Cruises MSC Sinfonia Hair Salon 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Beauty and Hair Salon" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Beauty and Hair Salon</h3><p>You can enjoy the expertise of highly specialised staff in aesthetic treatments to offer you excellent results and improve the relaxing effects of your cruise. Customise your cruise with the best trea</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/21/51/06/b7dd6428-4652-4c90-96a6-cc140ece56ee/MSC Cruises MSC Sinfonia Hair Salon 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Beauty and Hair Salon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Beauty and Hair Salon</h3><p>전문 뷰티 살롱에서 헤어와 네일 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/15/09/40/21/8c86c960-fbe7-4603-9d09-0a0b1988a6f5/MSC Cruises MSC Sinfonia Shuffleboard.jpg" alt="Sport & Fitness" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sport & Fitness</h3><p>BasketballCome to the outdoor basketball court at the Sport Centre for a chance to hang out with friends, have fun shooting hoops and enjoy a full-body workout at the same time. You may not make the l</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/15/09/40/21/8c86c960-fbe7-4603-9d09-0a0b1988a6f5/MSC Cruises MSC Sinfonia Shuffleboard.jpg" alt="Sport & Fitness" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sport & Fitness</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
     </div>
 
     <h2 id="kids">👧 키즈 클럽</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/14/12/42/07/ec47f19d-473f-43d6-9d75-b6cfb19fdcf7/MSC Cruises MSC Sinfonia Baby Club 2.jpg" alt="Baby Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Baby Club</h3><p>Our partnership with leading baby care brand Chicco provides a dedicated play area with facilities for babies and toddlers under 3 years old. You can leave your toddlers with our MSC Babycare staff*, </p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/14/12/42/07/ec47f19d-473f-43d6-9d75-b6cfb19fdcf7/MSC Cruises MSC Sinfonia Baby Club 2.jpg" alt="Baby Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Baby Club</h3><p>유아를 위한 전용 공간으로, 안전하고 즐거운 활동을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/14/12/42/09/46840a97-bdff-4876-a3cb-8cc7cd9bdc3b/MSC Cruises MSC Sinfonia Mini Club 1.jpg" alt="Mini Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Mini Club</h3><p>The Mini Club welcomes children aged between 3 and 6 years old, bringing them new friends and lots of fun, enriched by the stimulating toys of our partnership with LEGO®. The club offers games, events</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/14/12/42/09/46840a97-bdff-4876-a3cb-8cc7cd9bdc3b/MSC Cruises MSC Sinfonia Mini Club 1.jpg" alt="Mini Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Mini Club</h3><p>어린이를 위한 미니 클럽으로, 또래 친구들과 다양한 활동을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/14/12/42/07/e13047a4-3fce-4a83-8ba4-5da2b8195fb3/MSC Cruises MSC Sinfonia Junior Club 0.jpg" alt="Junior Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Junior Club</h3><p>The Junior Club inspires connection and cooperation among 7 to 11-year-olds, through a wide variety of activities. Highlights range from Masterchef at Sea Juniors and Dorebro Sport competitions to our</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/14/12/42/07/e13047a4-3fce-4a83-8ba4-5da2b8195fb3/MSC Cruises MSC Sinfonia Junior Club 0.jpg" alt="Junior Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Junior Club</h3><p>7-11세 어린이를 위한 전용 프로그램을 제공하는 주니어 클럽입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/14/12/42/11/fc000e8a-155f-42ca-8be3-3577cefbe6ff/MSC Cruises MSC Sinfonia Young Club 0.jpg" alt="Young Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Young Club</h3><p>With the Young Club, kids from 12 to 14 years old can dive into a world of discovery, involvement and interaction.Each day holds the promise of new experiences, with a dedicated programme of sport tou</p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/14/12/42/11/fc000e8a-155f-42ca-8be3-3577cefbe6ff/MSC Cruises MSC Sinfonia Young Club 0.jpg" alt="Young Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Young Club</h3><p>신나는 음악과 함께 춤을 즐길 수 있는 디스코장입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/12/14/12/42/10/09885273-e2ef-4e61-a2af-22ae290931ae/MSC Cruises MSC Sinfonia Teen Club 1.jpg" alt="Teen Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Teen Club</h3><p>Teenagers aged from 15 to 17 years old can look forward to having the time of their lives on board. Teen Club activities range from sports and competitions, dance contests and social network games to </p></div>
+    <img src="https://assets.widgety.co.uk/2021/12/14/12/42/10/09885273-e2ef-4e61-a2af-22ae290931ae/MSC Cruises MSC Sinfonia Teen Club 1.jpg" alt="Teen Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Teen Club</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/22/18/28/2a471cb7-6c54-4a09-b194-086130fdd5fa/MSC Cruises MSC Sinfonia Doremi Spray Park 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Doremi Spray Park" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Doremi Spray Park</h3><p>Located on Deck 11.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/13/22/18/28/2a471cb7-6c54-4a09-b194-086130fdd5fa/MSC Cruises MSC Sinfonia Doremi Spray Park 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Doremi Spray Park" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Doremi Spray Park</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/14/58/47/210a6102-26a8-40c8-aea7-8f5c19fa0df7/MSC Cruises, MSC Armonia, Lego Experience 1, Copyrights - MSC Rights.jpg" alt="Lego Experience" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Lego Experience</h3><p>Once during every cruise we hold a special entertainment event called the LEGO® Experience On Board: an entire day dedicated to fun LEGO activities for the whole family to enjoy. Thanks to this specia</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/14/58/47/210a6102-26a8-40c8-aea7-8f5c19fa0df7/MSC Cruises, MSC Armonia, Lego Experience 1, Copyrights - MSC Rights.jpg" alt="Lego Experience" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Lego Experience</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/03/13/53/20/f8c8c95d-3893-4157-be4f-3b8aac8eab28/MSC Grandiosa - Babies and Toddlers Services.jpg" alt="Babies and Toddlers Services" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Babies and Toddlers Services</h3><p>Baby Clubs - along with activities that the whole family can enjoy together, we offer a Baby Club onboard all our ships with dedicated activities and facilities.  MSC Baby Care Service - we have thoug</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/03/13/53/20/f8c8c95d-3893-4157-be4f-3b8aac8eab28/MSC Grandiosa - Babies and Toddlers Services.jpg" alt="Babies and Toddlers Services" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Babies and Toddlers Services</h3><p>유아를 위한 전용 공간으로, 안전하고 즐거운 활동을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/15/10/54/0e1c6434-03e8-4bd7-9c1a-2ea10c42c91c/MSC Cruises, Web Series.jpg" alt="Web Series" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Web Series</h3><p>Experience the cruise adventure before you even step on board! Dive into the captivating web series the web series Cabin 12006 available on MSC Cruises' official YouTube channel. Join Markus, a teenag</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/15/10/54/0e1c6434-03e8-4bd7-9c1a-2ea10c42c91c/MSC Cruises, Web Series.jpg" alt="Web Series" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Web Series</h3><p>10대 청소년을 위한 전용 공간으로, 게임과 소셜 활동을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/19/12/47/37/d945b2d4-de38-469f-8ec2-a33f914ce0f7/MSC - Family Dining.jpg" alt="Family Dining" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Family Dining</h3><p>Enjoy a culinary voyage of discovery with your children  on an MSC Cruise: an array of international dishes and ethnic specialties will delight the whole family with flavours from around the globe. Fo</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/19/12/47/37/d945b2d4-de38-469f-8ec2-a33f914ce0f7/MSC - Family Dining.jpg" alt="Family Dining" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Family Dining</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/30/08/43/55/71a0e44a-71ba-4c3b-a37c-f8d565d33aab/MSC Cruises Kids Clubs and Family Activities WEB.jpg" alt="Kids Clubs and Family Activities" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Kids Clubs and Family Activities</h3><p>Discover our Entertainment options on board: there's always so much to do that you kids will never get bored! An MSC cruise is an experience for the whole family to enjoy together in the safe, fun env</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/30/08/43/55/71a0e44a-71ba-4c3b-a37c-f8d565d33aab/MSC Cruises Kids Clubs and Family Activities WEB.jpg" alt="Kids Clubs and Family Activities" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Kids Clubs and Family Activities</h3><p>전문 스태프가 운영하는 키즈클럽으로, 다양한 활동과 프로그램을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/30/08/41/54/e56c5267-c416-4685-8de3-977e49b87840/MSC Cruises Parent Time WEB.jpg" alt="Parent Time" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Parent Time</h3><p>Wind down, lie back, chill out or dress up, and make the most of every marvellous moment.While your kids are having the time of their lives, with our expert staff, you are free to enjoy all of those t</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/30/08/41/54/e56c5267-c416-4685-8de3-977e49b87840/MSC Cruises Parent Time WEB.jpg" alt="Parent Time" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Parent Time</h3></div>
   </div>
     </div>
 
     <h2 id="cabins">🛏️ 객실 등급</h2>
     <div class="cabin-grid">
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/13/12/15/19/09c31160-8d60-4738-8e99-c4611bfd5caa/MSC Cruises MSC Sinfonia Junior Suite Aurea 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Junior Suite Aurea" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/13/12/15/19/09c31160-8d60-4738-8e99-c4611bfd5caa/MSC Cruises MSC Sinfonia Junior Suite Aurea 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Junior Suite Aurea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Suite Aurea</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2021/12/15/08/00/57/ebf1714e-d72b-4b2d-9d43-22d78dcbab60/MSC Cruises MSC Sinfonia Balcony 1.jpg" alt="Junior Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2021/12/15/08/00/57/ebf1714e-d72b-4b2d-9d43-22d78dcbab60/MSC Cruises MSC Sinfonia Balcony 1.jpg" alt="Junior Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2021/12/15/08/00/57/ebf1714e-d72b-4b2d-9d43-22d78dcbab60/MSC Cruises MSC Sinfonia Balcony 1.jpg" alt="Guarantee Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2021/12/15/08/00/57/ebf1714e-d72b-4b2d-9d43-22d78dcbab60/MSC Cruises MSC Sinfonia Balcony 1.jpg" alt="Guarantee Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2021/12/15/08/00/58/a198b0ff-02e1-422a-a00a-ee9260e7692a/MSC Cruises MSC Sinfonia Ocean View 2.jpg" alt="Premium Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2021/12/15/08/00/58/a198b0ff-02e1-422a-a00a-ee9260e7692a/MSC Cruises MSC Sinfonia Ocean View 2.jpg" alt="Premium Ocean View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Ocean View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2021/12/15/08/00/58/a198b0ff-02e1-422a-a00a-ee9260e7692a/MSC Cruises MSC Sinfonia Ocean View 2.jpg" alt="Junior Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2021/12/15/08/00/58/a198b0ff-02e1-422a-a00a-ee9260e7692a/MSC Cruises MSC Sinfonia Ocean View 2.jpg" alt="Junior Ocean View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Ocean View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2021/12/15/08/00/58/a198b0ff-02e1-422a-a00a-ee9260e7692a/MSC Cruises MSC Sinfonia Ocean View 2.jpg" alt="Junior Ocean View with Obstructed View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2021/12/15/08/00/58/a198b0ff-02e1-422a-a00a-ee9260e7692a/MSC Cruises MSC Sinfonia Ocean View 2.jpg" alt="Junior Ocean View with Obstructed View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Ocean View with Obstructed View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2021/12/15/08/00/58/a198b0ff-02e1-422a-a00a-ee9260e7692a/MSC Cruises MSC Sinfonia Ocean View 2.jpg" alt="Guarantee Outside" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2021/12/15/08/00/58/a198b0ff-02e1-422a-a00a-ee9260e7692a/MSC Cruises MSC Sinfonia Ocean View 2.jpg" alt="Guarantee Outside" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Outside</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2021/12/15/08/02/54/60f4e4c5-8c3a-48cf-9603-4f43b827b385/MSC Cruises MSC Sinfonia Interior.png" alt="Junior Interior" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2021/12/15/08/02/54/60f4e4c5-8c3a-48cf-9603-4f43b827b385/MSC Cruises MSC Sinfonia Interior.png" alt="Junior Interior" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Interior</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2021/12/15/08/02/54/60f4e4c5-8c3a-48cf-9603-4f43b827b385/MSC Cruises MSC Sinfonia Interior.png" alt="Guarantee Inside" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2021/12/15/08/02/54/60f4e4c5-8c3a-48cf-9603-4f43b827b385/MSC Cruises MSC Sinfonia Interior.png" alt="Guarantee Inside" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Inside</div>
   </div>
     </div>
@@ -347,39 +402,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="deckplan">📐 덱 플랜</h2>
     <div class="deckplan-list">
   <div class="deckplan-item">
-    <img src="" alt="Deck 13 - Sun Deck" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/13/11/59/04/81265e98-7c52-47b4-b88e-a1602b7cf515/MSC Cruises MSC Sinfonia Deck 13 - Schubert.png" alt="Deck 13 - Sun Deck" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 13 - Sun Deck</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 12 - Bizet" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/13/11/59/04/b74cd7ca-28a3-4ab4-b1b1-10cddf83829a/MSC Cruises MSC Sinfonia Deck 12 - Bizet.png" alt="Deck 12 - Bizet" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 12 - Bizet</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 11 - Debussy" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/13/11/59/04/be092db6-9a6a-433a-a4a8-12de5c32336c/MSC Cruises MSC Sinfonia Deck 11 - Debussy.png" alt="Deck 11 - Debussy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 11 - Debussy</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 10 - Sibelius" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/13/11/59/04/42189622-64bb-4511-a26b-20005f8abd38/MSC Cruises MSC Sinfonia Deck 10 - Sibelius.png" alt="Deck 10 - Sibelius" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 10 - Sibelius</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 9 - Tchaikovsky" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/13/11/59/04/4b942640-4321-4c8a-aa2a-c981cddc9776/MSC Cruises MSC Sinfonia Deck 9 - Tchaikovski.png" alt="Deck 9 - Tchaikovsky" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 9 - Tchaikovsky</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 8 - Bach" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/13/11/59/04/058c5ef3-62ac-4061-8fd4-f83c08367c84/MSC Cruises MSC Sinfonia Deck 8 - Bach.png" alt="Deck 8 - Bach" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 8 - Bach</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 7 - Brahms" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/13/11/59/03/e36dc089-bde8-4118-a87b-c7431842029c/MSC Cruises MSC Sinfonia Deck 7 - Brahms.png" alt="Deck 7 - Brahms" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 7 - Brahms</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 6 - Mozart" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/13/11/59/03/2d6dab0e-b204-482e-a469-d02abbf626c1/MSC Cruises MSC Sinfonia Deck 6 - Mozart.png" alt="Deck 6 - Mozart" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 6 - Mozart</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 5 - Beethoven" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/13/11/59/03/68473b71-1051-44ec-84ea-3d5b237d757f/MSC Cruises MSC Sinfonia Deck 5 - Beethoven.png" alt="Deck 5 - Beethoven" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 5 - Beethoven</p>
   </div>
     </div>

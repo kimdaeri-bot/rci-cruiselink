@@ -69,22 +69,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
 
+
     .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
     @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
     .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-card img{width:100%;height:160px;object-fit:cover;display:block}
+    .facility-card .no-img{width:100%;height:160px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem}
     .facility-info{padding:12px}
     .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
     .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
     @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
     .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card img{width:100%;height:120px;object-fit:cover;display:block}
+    .cabin-card .no-img{width:100%;height:120px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
     .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
     .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
     @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
-    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200);display:block}
+    .deckplan-item .no-img{width:100%;height:200px;background:var(--gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem}
     .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
@@ -124,258 +128,318 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+
     <h2 id="dining">🍽️ 다이닝</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/05/09/13/10/46/50ac92ac-e943-420e-a7e1-3e016923409f/Carnival Cruise Line Bonsai Sushi Express.jpg" alt="Bonsai Sushi™ Express" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Bonsai Sushi™ Express</h3><p>Sometimes you sit and take things slow, and sometimes you gotta roll — there’s just so much to do on a Carnival cruise! Cruisers with places to be, fun to get done, meet the new Bonsai Sushi™ Express.</p></div>
+    <img src="https://assets.widgety.co.uk/2022/05/09/13/10/46/50ac92ac-e943-420e-a7e1-3e016923409f/Carnival Cruise Line Bonsai Sushi Express.jpg" alt="Bonsai Sushi™ Express" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Bonsai Sushi™ Express</h3><p>선상 최고의 스시 레스토랑으로, 신선한 사시미와 롤을 즐길 수 있는 아시안 다이닝 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/27/07/46/12/f065fba4-c4ad-4aa1-9662-9c8bb469c58e/Carnival Cruise Line Pizzeria del Capitano 1.png" alt="Pizzeria del Capitano" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Pizzeria del Capitano</h3><p>On Carnival ships, the captain tends to be kind of a big deal — almost a celebrity. On a few select ships, they’ve even got their own pizza kitchen. The best part? Pizzeria del Capitano is open to eve</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/27/07/46/12/f065fba4-c4ad-4aa1-9662-9c8bb469c58e/Carnival Cruise Line Pizzeria del Capitano 1.png" alt="Pizzeria del Capitano" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Pizzeria del Capitano</h3><p>갓 구운 피자와 이탈리안 음식을 즐길 수 있는 캐주얼 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/28/10/06/45/c36339a9-7561-4e72-a295-a24ac2995df9/Carnival Cruise Line Carnival Dream Steakhouse.png" alt="Steakhouse" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Steakhouse</h3><p>Turn your special vacation in the direction of delicious — book a table for an unforgettably delectable evening at the onboard Steakhouse. Our menu features mouthwatering premium cuts of beef cooked t</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/28/10/06/45/c36339a9-7561-4e72-a295-a24ac2995df9/Carnival Cruise Line Carnival Dream Steakhouse.png" alt="Steakhouse" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Steakhouse</h3><p>정통 스테이크하우스로, 엄선된 최고급 소고기 스테이크와 신선한 해산물을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/27/07/31/26/bff306b9-894c-4d8c-8165-5e61d01d0c31/Carnival Cruise Line Lido Marketplace 1.png" alt="Lido Marketplace" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Lido Marketplace</h3><p>Featuring an amazing variety of casual dining spots, each just a few flip-flopped steps from the last, Lido Marketplace always has a special something ready to satisfy your latest craving spectacularl</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/27/07/31/26/bff306b9-894c-4d8c-8165-5e61d01d0c31/Carnival Cruise Line Lido Marketplace 1.png" alt="Lido Marketplace" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Lido Marketplace</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/27/07/17/49/6f32d090-5f3b-4c53-898d-d0e749a794de/Carnival Cruise Line Pizza Delivery.png" alt="Pizza Delivery" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Pizza Delivery</h3><p>So here's the problem: you're having an amazing fun time on your cruise and a craving strikes. You need pizza! Your options are: 1) let the craving go, 2) put the fun on hold to go get a slice, 3) pul</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/27/07/17/49/6f32d090-5f3b-4c53-898d-d0e749a794de/Carnival Cruise Line Pizza Delivery.png" alt="Pizza Delivery" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Pizza Delivery</h3><p>갓 구운 피자와 이탈리안 음식을 즐길 수 있는 캐주얼 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/05/24/09/44/04/263f360d-4715-40c9-9e62-5ab3929de97d/CCL Carnival Liberty Dining Room 3.png" alt="Dining Room" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Dining Room</h3><p>“Hey, which side does the fork go on?” is a question you’ll never have to ask at a dining room dinner aboard a Carnival cruise… we set the table for you. We also bring to the table a full three course</p></div>
+    <img src="https://assets.widgety.co.uk/2022/05/24/09/44/04/263f360d-4715-40c9-9e62-5ab3929de97d/CCL Carnival Liberty Dining Room 3.png" alt="Dining Room" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Dining Room</h3><p>정찬 코스를 즐길 수 있는 메인 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/05/09/12/54/38/05d5d5bb-ae7e-4a88-8a2b-f5348e972e3a/Carnival Cruise Line 24-Hour Room Service.jpg" alt="24-Hour Room Service" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>24-Hour Room Service</h3><p>So you're in the mood for some good eats, but you’d rather stay in your comfy, cozy stateroom? Really, who could blame you? Simply pick up the phone and order something tasty from our extensive room s</p></div>
+    <img src="https://assets.widgety.co.uk/2022/05/09/12/54/38/05d5d5bb-ae7e-4a88-8a2b-f5348e972e3a/Carnival Cruise Line 24-Hour Room Service.jpg" alt="24-Hour Room Service" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>24-Hour Room Service</h3><p>객실에서 편안하게 즐기는 룸서비스로, 언제든지 원하는 음식을 주문할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/05/27/16/12/36/ce7aaa87-c62b-4f8d-aa21-33aa75158fa7/Carnival Cruise Line The Chef's Table.jpg" alt="The Chef's Table" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Chef's Table</h3><p>Treat your taste buds to the experience of a lifetime, culminating in a sumptuous multi-course dinner hosted by the Master Executive Chef. Your VIP experience starts with cocktails and hors d’oeuvres </p></div>
+    <img src="https://assets.widgety.co.uk/2022/05/27/16/12/36/ce7aaa87-c62b-4f8d-aa21-33aa75158fa7/Carnival Cruise Line The Chef's Table.jpg" alt="The Chef's Table" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Chef's Table</h3><p>셰프가 직접 안내하는 프라이빗 다이닝 경험으로, 선상 최고급 미식 여행을 선사합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/27/07/47/22/c70cdeea-1f52-4e87-a163-8f8fc3fdae6c/Carnival Cruise Line JavaBlue Cafe.png" alt="JavaBlue™ Café" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>JavaBlue™ Café</h3><p>Maybe you take your coffee straight-up, or perhaps you prefer your pick-me-up with an upgrade. From the simply caffeinated to the simply sublime, nothing satisfies your coffee craving like JavaBlue™ C</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/27/07/47/22/c70cdeea-1f52-4e87-a163-8f8fc3fdae6c/Carnival Cruise Line JavaBlue Cafe.png" alt="JavaBlue™ Café" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>JavaBlue™ Café</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/27/07/44/46/a1387c7e-4945-4474-b9a2-0b92b1af9238/Carnival Cruise Line The Carnival Deli 1.png" alt="The Carnival Deli" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Carnival Deli</h3><p>Looking for a little taste from the old neighbourhood? Pile 'em high at the Carnival Deli. Enjoy old time favourites like a hot pastrami on rye, grilled Reuben, or roasted turkey breast on a country r</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/27/07/44/46/a1387c7e-4945-4474-b9a2-0b92b1af9238/Carnival Cruise Line The Carnival Deli 1.png" alt="The Carnival Deli" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Carnival Deli</h3></div>
   </div>
     </div>
 
     <h2 id="entertainment">🎭 엔터테인먼트</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/05/04/10/36/47/428558e0-ee5e-46b2-98bc-884666253eb8/Carnival Cruise Line Playlist Productions 4.png" alt="Playlist Productions™" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Playlist Productions™</h3><p>Everyone has those perfect songs that never fail to get them moving. Playlist Productions™ brings lists like yours to life! Your favourites become full-blown musical productions featuring singers and </p></div>
+    <img src="https://assets.widgety.co.uk/2022/05/04/10/36/47/428558e0-ee5e-46b2-98bc-884666253eb8/Carnival Cruise Line Playlist Productions 4.png" alt="Playlist Productions™" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Playlist Productions™</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/01/20/15/17/36/107f50cf-f489-4831-a1ef-ce0a20d11e3f/Carnival Cruise Lines Carnival Celebration Punchliner.png" alt="The Punchliner Comedy Club™" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Punchliner Comedy Club™</h3><p>Comedy clubs on land… well, it’s kinda funny. Nobody likes paying cover charges, and you know that two-drink minimum? They’ve gotta be joking! You won’t find either of these at The Punchliner Comedy C</p></div>
+    <img src="https://assets.widgety.co.uk/2021/01/20/15/17/36/107f50cf-f489-4831-a1ef-ce0a20d11e3f/Carnival Cruise Lines Carnival Celebration Punchliner.png" alt="The Punchliner Comedy Club™" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Punchliner Comedy Club™</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/11/26/57/9a63d4b0-5997-4f3f-a596-b90bb4f9bf56/Carnival Cruise Line RedFrog Rum Bar.png" alt="RedFrog® Rum Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>RedFrog® Rum Bar</h3><p>Guests have told us we hit on something special with the cool Caribbean chill of the RedFrog® Pub. We've taken the best parts and brought them poolside with the RedFrog® Rum Bar, where the frog keeps </p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/11/26/57/9a63d4b0-5997-4f3f-a596-b90bb4f9bf56/Carnival Cruise Line RedFrog Rum Bar.png" alt="RedFrog® Rum Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>RedFrog® Rum Bar</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/05/18/17/50/51/58e9d52a-52d7-4bbc-96af-d1fc92c3dd6d/Carnival Cruise Line Pools 1.jpg" alt="Pools" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Pools</h3><p>POOL DAY! Whether today's the day for a bit of a dip, a dash of splash or even some swimming — or just a serious poolside lounging session — your Carnival cruise has just the pool for you. In fact, po</p></div>
+    <img src="https://assets.widgety.co.uk/2022/05/18/17/50/51/58e9d52a-52d7-4bbc-96af-d1fc92c3dd6d/Carnival Cruise Line Pools 1.jpg" alt="Pools" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Pools</h3><p>아이들을 위한 물놀이 공간으로, 안전한 워터 어트랙션을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/09/24/33/dfb4290a-f8e3-4360-af76-0481d388634e/Carnival Cruise Line Cherry on Top.png" alt="Cherry On Top™" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Cherry On Top™</h3><p>A cruise is the perfect time to treat yourself to something sweet, and Cherry On Top™ happens to be the perfect place. You'll find this well-stocked candy-and-more-store not only great for enjoying so</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/09/24/33/dfb4290a-f8e3-4360-af76-0481d388634e/Carnival Cruise Line Cherry on Top.png" alt="Cherry On Top™" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Cherry On Top™</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/10/54/48/836138c0-183e-43f6-9736-5bdec86cc003/Carnival Cruise Line Fine Jewelry.png" alt="The Fun Shops™" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Fun Shops™</h3><p>FINE JEWELLERYIf you catch sparkling on your cruise, it may be the night sky. It could be the sun on the waves. Or you may just be near The Fun Shops™, where you’ll discover a selection of pretty much</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/10/54/48/836138c0-183e-43f6-9736-5bdec86cc003/Carnival Cruise Line Fine Jewelry.png" alt="The Fun Shops™" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Fun Shops™</h3><p>신나는 음악과 함께 춤을 즐길 수 있는 디스코장입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/30/13/08/40/75fd22a8-a015-4913-8b2f-b8f30b118b5b/Carnival Cruise Line Atrium 1.jpg" alt="Atrium" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Atrium</h3><p>Here’s where you come in! The Atrium — the entrance to the ship and to vacation itself — is your first impression of all the fun to come. We make sure that this, the very heart of the ship, screams “w</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/30/13/08/40/75fd22a8-a015-4913-8b2f-b8f30b118b5b/Carnival Cruise Line Atrium 1.jpg" alt="Atrium" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Atrium</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/20/11/11/41/a5e8943f-1836-464d-85b7-7c2eb582b72e/Carnival Cruise Lines Piano Bar.jpg" alt="Piano Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Piano Bar</h3><p>Play it again, Sam. Or Diana. Or whatever your name is. Because this is the bar where you call the shots… and the tunes. Hey songbird — pull up a seat, order your favourite cocktail and let your frien</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/20/11/11/41/a5e8943f-1836-464d-85b7-7c2eb582b72e/Carnival Cruise Lines Piano Bar.jpg" alt="Piano Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Piano Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/18/17/31/54/7b2c67f7-5d39-415c-93fc-d5ef9e83a687/Carnival Cruise Lines Carnival Players Club 1.jpg" alt="Casino" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Casino</h3><p>CARNIVAL PLAYERS CLUBJoining the Carnival Players Club® is easy and, best of all, free. In fact, if we’ve ever had the pleasure of hosting you at one of our onboard casinos, you may already be a membe</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/18/17/31/54/7b2c67f7-5d39-415c-93fc-d5ef9e83a687/Carnival Cruise Lines Carnival Players Club 1.jpg" alt="Casino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Casino</h3><p>라스베이거스 스타일의 카지노로, 슬롯머신과 테이블 게임을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/05/03/18/03/21/869bf7d2-36b8-4596-aa4e-abf8855efc34/Carnival Cruise Line Library 1.jpg" alt="Library" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Library</h3><p>With wall-to-wall activities, most people wouldn’t think of their cruise vacation as a great time to read a book, but you’ll find the bibliophilic faithful stretched out on deck chairs, enjoying the s</p></div>
+    <img src="https://assets.widgety.co.uk/2022/05/03/18/03/21/869bf7d2-36b8-4596-aa4e-abf8855efc34/Carnival Cruise Line Library 1.jpg" alt="Library" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Library</h3><p>독서와 카드 게임을 즐길 수 있는 조용한 공간입니다.</p></div>
   </div>
     </div>
 
     <h2 id="health">💆 스파 &amp; 웰니스</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/30/14/23/45/2991d980-6bfd-4288-a73a-1d9ba70e3ae2/Carnival Cruise Line Serenity Adult-Only Retreat 1.jpg" alt="Serenity Adult-Only Retreat™" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Serenity Adult-Only Retreat™</h3><p>Somebody at Carnival knows just what you need, and it's pretty much exactly the Serenity Adult-Only Retreat™. Look, you'll still be on the same ship as the kids, the hoopla, and all the Carnival-style</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/30/14/23/45/2991d980-6bfd-4288-a73a-1d9ba70e3ae2/Carnival Cruise Line Serenity Adult-Only Retreat 1.jpg" alt="Serenity Adult-Only Retreat™" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Serenity Adult-Only Retreat™</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/10/41/49/4cf5f4df-cc88-4846-8310-5533d139e425/Carnival Cruise Line Cloud 9 Spa 1.png" alt="Cloud 9 Spa™" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Cloud 9 Spa™</h3><p>Sometimes you just need to get away… from all that vacation. We know — sitting at home, it’s hard to imagine that, but trust us — it’s really, really nice to have a place to unwind from the day’s exci</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/10/41/49/4cf5f4df-cc88-4846-8310-5533d139e425/Carnival Cruise Line Cloud 9 Spa 1.png" alt="Cloud 9 Spa™" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Cloud 9 Spa™</h3><p>선상 아이스링크에서 스케이팅과 아이스쇼를 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/10/41/51/3c564ec1-0a3f-43d8-8dc0-1bc6f45a90aa/Carnival Cruise Line Mens Spa Services.png" alt="Men's Spa Services" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Men's Spa Services</h3><p>Hey man, been to the spa lately? Well, why let the ladies have all the fun? You can actually enjoy a lot of the same stuff they do, plus manly services like razor-close barbershop-style shaves — pair </p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/10/41/51/3c564ec1-0a3f-43d8-8dc0-1bc6f45a90aa/Carnival Cruise Line Mens Spa Services.png" alt="Men's Spa Services" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Men's Spa Services</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/10/41/51/b3f35039-6c57-40ee-8828-837981fa2ce5/Carnival Cruise Line Medi Spa.png" alt="Medi-Spa" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Medi-Spa</h3><p>Has anyone told you lately that you’re a beautiful person? We’re telling you — we like you the way you are. Now, with that said, we want to let you know that your Carnival cruise contains a Medi-spa. </p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/10/41/51/b3f35039-6c57-40ee-8828-837981fa2ce5/Carnival Cruise Line Medi Spa.png" alt="Medi-Spa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Medi-Spa</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/10/41/50/7f229e6e-6738-471a-9b9e-112b104fcd79/Carnival Cruise Line Hair & Beauty Salon.png" alt="Hair & Beauty Salon" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Hair & Beauty Salon</h3><p>A trip to the salon is an opportunity to relax, to chat with others, to focus on yourself. It’s about more than just getting your hair or nails done… but it’s definitely about getting your hair or nai</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/10/41/50/7f229e6e-6738-471a-9b9e-112b104fcd79/Carnival Cruise Line Hair & Beauty Salon.png" alt="Hair & Beauty Salon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Hair & Beauty Salon</h3><p>전문 뷰티 살롱에서 헤어와 네일 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/10/32/30/0a895a3a-40e7-4c83-82f5-8b33a45ec96a/Carnival Cruise Line Jogging Track.png" alt="Jogging Track" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Jogging Track</h3><p>Jogging may not immediately come to mind when you think of things to do at sea, but it probably should. You don’t have to walk on water, you just have to get on a Carnival cruise. After all, if you’re</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/10/32/30/0a895a3a-40e7-4c83-82f5-8b33a45ec96a/Carnival Cruise Line Jogging Track.png" alt="Jogging Track" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Jogging Track</h3><p>갑판 조깅 트랙에서 신선한 바다 공기를 마시며 달려보세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/05/18/17/58/51/c53914ad-b9a0-43fe-b5b2-f9e3259ed8d3/Carnival Cruise Line Fitness Classes 2.jpg" alt="Fitness Classes" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Fitness Classes</h3><p>You can have all the will in the world, a great attitude that keeps you working hard at the gym, but still not see the results you’re hoping for. If that’s the case — or you’re just looking to shake t</p></div>
+    <img src="https://assets.widgety.co.uk/2022/05/18/17/58/51/c53914ad-b9a0-43fe-b5b2-f9e3259ed8d3/Carnival Cruise Line Fitness Classes 2.jpg" alt="Fitness Classes" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Fitness Classes</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/07/07/10/48/23/91239741-ca97-4b52-9678-d5f67124bf44/Celebrity Cruises Fitness Centre 1.jpg" alt="Fitness Centre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Fitness Centre</h3><p>We have some bad news for you — your ship has a gym. In other words, there’s no excuse for leaving your fitness routine back on land. That’s great news, however, for your body, which will definitely b</p></div>
+    <img src="https://assets.widgety.co.uk/2022/07/07/10/48/23/91239741-ca97-4b52-9678-d5f67124bf44/Celebrity Cruises Fitness Centre 1.jpg" alt="Fitness Centre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Fitness Centre</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/10/46/13/6dd87d7b-1eb7-4c8b-b04c-64ad171b6ed0/Carnival Cruise Line Acupuncture.png" alt="Acupuncture" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Acupuncture</h3><p>Lots of pins in your body — who would want that? Lots of people, clearly — acupuncture is performed all around the world, and has been used for all manner of ailments for thousands of years. Whether y</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/10/46/13/6dd87d7b-1eb7-4c8b-b04c-64ad171b6ed0/Carnival Cruise Line Acupuncture.png" alt="Acupuncture" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Acupuncture</h3></div>
   </div>
     </div>
 
     <h2 id="kids">👧 키즈 클럽</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/18/18/36/54/d6480f03-bd15-4837-a18d-f6fffeffd4d5/Carnival Cruise Lines Seuss at Sea.jpg" alt="Seuss At Sea" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Seuss At Sea</h3><p>From the whimsical and always wonderful world of Dr. Seuss® comes Cats in Hats, Fish Red and Blue, and both kinds of Things — 1 and 2. And they’re all coming to a Carnival cruise near you as the world</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/18/18/36/54/d6480f03-bd15-4837-a18d-f6fffeffd4d5/Carnival Cruise Lines Seuss at Sea.jpg" alt="Seuss At Sea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Seuss At Sea</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/07/41/21/3a05fcae-f609-459b-9554-a0516e690ecc/Carnival Cruise Line Club O2 1.png" alt="Club O2" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Club O2</h3><p>Your parents deserve a nice vacation… but then again, so do you. So let’s let them go do their thing while you do yours. Where to? Club O2®. Hang out doing stuff like watching movies, listening to mus</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/07/41/21/3a05fcae-f609-459b-9554-a0516e690ecc/Carnival Cruise Line Club O2 1.png" alt="Club O2" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Club O2</h3><p>선상 아이스링크에서 스케이팅과 아이스쇼를 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/07/42/26/be5f004e-f01e-4953-8818-f839278ead4a/Carnival Cruise Line Circle C.png" alt="Circle “C®”" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Circle “C®”</h3><p>What does the C in Circle “C®” stand for? Well… how about “cruise,” “chill” and “connect”? (Just to name a few, of course.) It’s the onboard spot where teens ages 12 to 14 go to hang out, meet new fri</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/07/42/26/be5f004e-f01e-4953-8818-f839278ead4a/Carnival Cruise Line Circle C.png" alt="Circle “C®”" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Circle “C®”</h3><p>10대 청소년을 위한 전용 공간으로, 게임과 소셜 활동을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/07/37/35/0bc9ccef-79ff-41e3-9133-1c918ac32910/Carnival Cruise Line Camp Ocean 1.png" alt="Camp Ocean" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Camp Ocean</h3><p>The little ones can enjoy the best parts of summer camp, year-round aboard their Carnival cruise. At Camp Ocean kids will have a blast in supervised, age-based groups and give each a cool marine-life </p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/07/37/35/0bc9ccef-79ff-41e3-9133-1c918ac32910/Carnival Cruise Line Camp Ocean 1.png" alt="Camp Ocean" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Camp Ocean</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/07/44/43/80487d88-48aa-4aed-b181-fc00149d3895/Carnival Cruise Line Zumbini.png" alt="Zumbini®" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Zumbini®</h3><p>Cruises are great for relaxing… unless you’re a kid! Since kids have virtually unlimited energy — and you know they definitely bring it with them on vacation — your Carnival cruise will get your kids </p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/07/44/43/80487d88-48aa-4aed-b181-fc00149d3895/Carnival Cruise Line Zumbini.png" alt="Zumbini®" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Zumbini®</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/07/53/14/d2dfe777-6f03-4c98-bdab-c5cd73a91ab0/Carnival Cruise Line Night Owls.png" alt="Night Owls™" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Night Owls™</h3><p>Think back — as a kid, was there anything better than times you got to stay up late? Even as an adult, nighttime is funtime, especially with all there is to do on your Carnival cruise. We have the per</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/07/53/14/d2dfe777-6f03-4c98-bdab-c5cd73a91ab0/Carnival Cruise Line Night Owls.png" alt="Night Owls™" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Night Owls™</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/07/55/37/3c9d16a8-2cda-4b35-9759-f2082f6acde5/Carnival Cruise Line Build-A-Bear Workshop at Sea.png" alt="Build-A-Bear Workshop At Sea®" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Build-A-Bear Workshop At Sea®</h3><p>A Carnival cruise gives kids plenty of chances to make new friends… but never before quite like this. When kids visit the Build-A-Bear Workshop At Sea® , they use their little hands and big creativity</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/07/55/37/3c9d16a8-2cda-4b35-9759-f2082f6acde5/Carnival Cruise Line Build-A-Bear Workshop at Sea.png" alt="Build-A-Bear Workshop At Sea®" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Build-A-Bear Workshop At Sea®</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/18/12/36/50/516/Carnival_Cruise_Lines_Carnival_Splendor_Interior_seuss_at_sea_2.jpg" alt="Seuss-a-palooza™ Story Time" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Seuss-a-palooza™ Story Time</h3><p>Experience Dr. Seuss® books like never before at Seuss-a-palooza™ Story Time. Watch as your favourite stories come to life in a setting that’s as one-of-a-kind as the Dr. Seuss classics themselves. Bu</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/18/12/36/50/516/Carnival_Cruise_Lines_Carnival_Splendor_Interior_seuss_at_sea_2.jpg" alt="Seuss-a-palooza™ Story Time" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Seuss-a-palooza™ Story Time</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/04/26/09/26/39/023235e0-2a77-4af2-8d2d-fad863a8105d/Carnival Cruise Line ZSpa.png" alt="ZSPA" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>ZSPA</h3><p>There’s a lot to being a teen — they need to kick back, chill and sometimes even indulge just as much as adults… if not more! We understand them, which is why we’ve tailored our onboard ZSPA treatment</p></div>
+    <img src="https://assets.widgety.co.uk/2022/04/26/09/26/39/023235e0-2a77-4af2-8d2d-fad863a8105d/Carnival Cruise Line ZSpa.png" alt="ZSPA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>ZSPA</h3><p>10대 청소년을 위한 전용 공간으로, 게임과 소셜 활동을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/05/18/18/49/50/9b0bc211-5461-49ef-b2d2-a652d20ecb83/Carnival Cruise Line Arts and Crafts 4.jpg" alt="Arts and Crafts" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Arts and Crafts</h3><p>To kids, arts and crafts is a fun way to spend an afternoon. Camp Ocean® presents plenty of creative opportunities for budding Picassos to master Monets, and kids can express themselves with all kinds</p></div>
+    <img src="https://assets.widgety.co.uk/2022/05/18/18/49/50/9b0bc211-5461-49ef-b2d2-a652d20ecb83/Carnival Cruise Line Arts and Crafts 4.jpg" alt="Arts and Crafts" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Arts and Crafts</h3></div>
   </div>
     </div>
 
     <h2 id="cabins">🛏️ 객실 등급</h2>
     <div class="cabin-grid">
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/12/47/21/80f2f139-b27e-4965-9dd6-b8a4da7e39b9/Carnival Cruise Line, Carnival Luminosa, Grand Vista Suite.jpg" alt="Grand Vista Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/47/21/80f2f139-b27e-4965-9dd6-b8a4da7e39b9/Carnival Cruise Line, Carnival Luminosa, Grand Vista Suite.jpg" alt="Grand Vista Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Grand Vista Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/12/53/54/18a006ce-d3c6-4367-8a7d-a88de434ece8/Carnival Cruise Line, Carnival Luminosa, Extended Balcony Grand Suite.jpg" alt="Extended Balcony Grand Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/53/54/18a006ce-d3c6-4367-8a7d-a88de434ece8/Carnival Cruise Line, Carnival Luminosa, Extended Balcony Grand Suite.jpg" alt="Extended Balcony Grand Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Extended Balcony Grand Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/12/57/43/303dbc2d-1fea-4649-a8d5-1202cf965f67/Carnival Cruise Line, Carnival Luminosa, Grand Suite.jpg" alt="Grand Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/57/43/303dbc2d-1fea-4649-a8d5-1202cf965f67/Carnival Cruise Line, Carnival Luminosa, Grand Suite.jpg" alt="Grand Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Grand Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/05/14/a0bf013a-506d-463b-8878-b7020e064fb0/Carnival Cruise Line, Carnival Luminosa, Cloud 9 Spa Suite.jpg" alt="Cloud 9 Spa Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/05/14/a0bf013a-506d-463b-8878-b7020e064fb0/Carnival Cruise Line, Carnival Luminosa, Cloud 9 Spa Suite.jpg" alt="Cloud 9 Spa Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Cloud 9 Spa Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/12/40/21044a87-d15d-4684-a8db-5fa33768929a/Carnival Cruise Line, Carnival Luminosa, Ocean Suite.jpg" alt="Ocean Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/12/40/21044a87-d15d-4684-a8db-5fa33768929a/Carnival Cruise Line, Carnival Luminosa, Ocean Suite.jpg" alt="Ocean Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Ocean Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/14/38/c1baddd3-7355-4a5e-a8d7-3761ceef4f8e/Carnival Cruise Line, Carnival Luminosa, Junior Suite.jpg" alt="Junior Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/14/38/c1baddd3-7355-4a5e-a8d7-3761ceef4f8e/Carnival Cruise Line, Carnival Luminosa, Junior Suite.jpg" alt="Junior Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/14/38/c1baddd3-7355-4a5e-a8d7-3761ceef4f8e/Carnival Cruise Line, Carnival Luminosa, Junior Suite.jpg" alt="Suite Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/14/38/c1baddd3-7355-4a5e-a8d7-3761ceef4f8e/Carnival Cruise Line, Carnival Luminosa, Junior Suite.jpg" alt="Suite Guarantee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Suite Guarantee</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/19/52/845624e0-54eb-4d84-bdca-5fe9302dbb4a/Carnival Cruise Line, Carnival Luminosa, Cloud 9 Spa Balcony.jpg" alt="Cloud 9 Spa Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/19/52/845624e0-54eb-4d84-bdca-5fe9302dbb4a/Carnival Cruise Line, Carnival Luminosa, Cloud 9 Spa Balcony.jpg" alt="Cloud 9 Spa Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Cloud 9 Spa Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/23/31/2135317d-17f5-4d83-ab56-3f9e57462e38/Carnival Cruise Line, Carnival Luminosa, Premium Balcony.jpg" alt="Premium Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/23/31/2135317d-17f5-4d83-ab56-3f9e57462e38/Carnival Cruise Line, Carnival Luminosa, Premium Balcony.jpg" alt="Premium Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/26/38/e9173ae1-476c-4688-9ce3-8600dc2de4a3/Carnival Cruise Line, Carnival Luminosa, Extended Balcony.jpg" alt="Extended Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/26/38/e9173ae1-476c-4688-9ce3-8600dc2de4a3/Carnival Cruise Line, Carnival Luminosa, Extended Balcony.jpg" alt="Extended Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Extended Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/29/26/b15e89fc-532d-4168-b71c-665ef3f0562a/Carnival Cruise Line, Carnival Luminosa, Aft-View Extended Balcony.jpg" alt="Aft-View Extended Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/29/26/b15e89fc-532d-4168-b71c-665ef3f0562a/Carnival Cruise Line, Carnival Luminosa, Aft-View Extended Balcony.jpg" alt="Aft-View Extended Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Aft-View Extended Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/33/56/a95922ae-4be6-439e-bf83-a87e99f137c4/Carnival Cruise Line, Carnival Luminosa, Balcony.jpg" alt="Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/33/56/a95922ae-4be6-439e-bf83-a87e99f137c4/Carnival Cruise Line, Carnival Luminosa, Balcony.jpg" alt="Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/33/56/a95922ae-4be6-439e-bf83-a87e99f137c4/Carnival Cruise Line, Carnival Luminosa, Balcony.jpg" alt="Balcony Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/33/56/a95922ae-4be6-439e-bf83-a87e99f137c4/Carnival Cruise Line, Carnival Luminosa, Balcony.jpg" alt="Balcony Guarantee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Balcony Guarantee</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/40/22/45cc9c70-db9b-4000-a6a9-d1fb047cc955/Carnival Cruise Line, Carnival Luminosa, Ocean View.jpg" alt="Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/40/22/45cc9c70-db9b-4000-a6a9-d1fb047cc955/Carnival Cruise Line, Carnival Luminosa, Ocean View.jpg" alt="Ocean View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Ocean View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/40/22/45cc9c70-db9b-4000-a6a9-d1fb047cc955/Carnival Cruise Line, Carnival Luminosa, Ocean View.jpg" alt="Ocean View Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/40/22/45cc9c70-db9b-4000-a6a9-d1fb047cc955/Carnival Cruise Line, Carnival Luminosa, Ocean View.jpg" alt="Ocean View Guarantee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Ocean View Guarantee</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/53/29/e600cbbf-6a7d-4f3f-8dc0-4c96cc076784/Carnival Cruise Line, Carnival Luminosa, Cloud 9 Spa Interior.jpg" alt="Cloud 9 Spa Interior" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/53/29/e600cbbf-6a7d-4f3f-8dc0-4c96cc076784/Carnival Cruise Line, Carnival Luminosa, Cloud 9 Spa Interior.jpg" alt="Cloud 9 Spa Interior" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Cloud 9 Spa Interior</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/14/02/38/57410b0d-6e91-4004-b7b0-4d83cd1c1e76/Interior with Window Obstructed View.jpg" alt="Interior with Window (Obstructed View)" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/14/02/38/57410b0d-6e91-4004-b7b0-4d83cd1c1e76/Interior with Window Obstructed View.jpg" alt="Interior with Window (Obstructed View)" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Interior with Window (Obstructed View)</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/13/58/46/49233e6c-0585-4692-81b9-1d8c4dfc3b45/Carnival Cruise Line, Carnival Luminosa, Interior with Window Obstructed View.jpg" alt="Interior with Picture Window (Walkway View)" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/13/58/46/49233e6c-0585-4692-81b9-1d8c4dfc3b45/Carnival Cruise Line, Carnival Luminosa, Interior with Window Obstructed View.jpg" alt="Interior with Picture Window (Walkway View)" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Interior with Picture Window (Walkway View)</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/14/10/13/da20734b-36d2-4b44-ba96-cccd42229387/Carnival Cruise Line, Carnival Luminosa Interior.jpg" alt="Interior" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/14/10/13/da20734b-36d2-4b44-ba96-cccd42229387/Carnival Cruise Line, Carnival Luminosa Interior.jpg" alt="Interior" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Interior</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/04/04/14/10/13/da20734b-36d2-4b44-ba96-cccd42229387/Carnival Cruise Line, Carnival Luminosa Interior.jpg" alt="Interior Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/04/04/14/10/13/da20734b-36d2-4b44-ba96-cccd42229387/Carnival Cruise Line, Carnival Luminosa Interior.jpg" alt="Interior Guarantee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Interior Guarantee</div>
   </div>
     </div>
@@ -383,51 +447,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="deckplan">📐 덱 플랜</h2>
     <div class="deckplan-list">
   <div class="deckplan-item">
-    <img src="" alt="Deck 12" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/30/35/b138575d-df11-4bec-b0e3-620ab5e87605/Carnival Cruise Line, Carnival Luminosa Deck 12.jpg" alt="Deck 12" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 12</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 11" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/30/35/aef78a75-8a55-4327-a307-f92b229d933b/Carnival Cruise Line, Carnival Luminosa Deck 11.jpg" alt="Deck 11" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 11</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 10" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/30/35/893df784-c078-4189-b23a-ec3a281fa713/Carnival Cruise Line, Carnival Luminosa Deck 10.jpg" alt="Deck 10" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 10</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 9" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/30/34/65ef35a1-b98b-49b4-b08d-020084f033a6/Carnival Cruise Line, Carnival Luminosa Deck 9.jpg" alt="Deck 9" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 9</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 8" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/30/34/e1beb7d5-1758-43c3-b87b-de638343e48c/Carnival Cruise Line, Carnival Luminosa Deck 8.jpg" alt="Deck 8" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 8</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 7" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/30/34/b98ec601-f1dc-4da2-9ae3-dcbabe82f651/Carnival Cruise Line, Carnival Luminosa Deck 7.jpg" alt="Deck 7" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 7</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 6" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/30/34/ee29d1c4-6dab-42cf-9aa7-316a5ca2b3ed/Carnival Cruise Line, Carnival Luminosa Deck 6.jpg" alt="Deck 6" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 6</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 5" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/30/34/b0639706-f58d-486b-8ecb-8c28a91d6dac/Carnival Cruise Line, Carnival Luminosa Deck 5.jpg" alt="Deck 5" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 5</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 4" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/30/34/d953af2b-805e-48cf-a339-9f33d785ec30/Carnival Cruise Line, Carnival Luminosa Deck 4.jpg" alt="Deck 4" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 4</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 3" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/30/34/83dc9329-b62b-4002-8b41-9d2fafcf2acd/Carnival Cruise Line, Carnival Luminosa Deck 3.jpg" alt="Deck 3" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 3</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 2" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/30/33/060ee6e7-509f-4399-95cc-02aa61844180/Carnival Cruise Line, Carnival Luminosa Deck 2.jpg" alt="Deck 2" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 2</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 1" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/04/04/12/30/33/e9053de5-24ef-4b0d-82d4-0a2ba34298a5/Carnival Cruise Line, Carnival Luminosa Deck 1.jpg" alt="Deck 1" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 1</p>
   </div>
     </div>

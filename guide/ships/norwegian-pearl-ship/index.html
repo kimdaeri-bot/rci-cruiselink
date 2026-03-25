@@ -69,22 +69,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
 
+
     .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
     @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
     .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-card img{width:100%;height:160px;object-fit:cover;display:block}
+    .facility-card .no-img{width:100%;height:160px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem}
     .facility-info{padding:12px}
     .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
     .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
     @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
     .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card img{width:100%;height:120px;object-fit:cover;display:block}
+    .cabin-card .no-img{width:100%;height:120px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
     .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
     .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
     @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
-    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200);display:block}
+    .deckplan-item .no-img{width:100%;height:200px;background:var(--gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem}
     .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
@@ -124,346 +128,428 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+
     <h2 id="dining">🍽️ 다이닝</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/19/12/26/36/163aeb84-bdee-44bf-9f6a-567b1a8dfc2f/Norwegian Pearl - Lotus Garden.jpg" alt="Lotus Garden" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Lotus Garden</h3><p>Enjoy our Asian Fusion dining venue featuring freshly prepared noodles, delicious wok fried dishes, authentic soups, and more.Price Per Person: Cover Charge USD $50</p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/19/12/26/36/163aeb84-bdee-44bf-9f6a-567b1a8dfc2f/Norwegian Pearl - Lotus Garden.jpg" alt="Lotus Garden" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Lotus Garden</h3><p>다채로운 아시안 퀴진을 선보이는 레스토랑으로, 동남아부터 일식까지 다양한 메뉴를 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/19/12/26/36/5fb40b03-c4cc-49e4-a56d-6a893f8ecfed/Norwegian Pearl - Indigo.jpg" alt="Indigo " loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Indigo </h3><p>One of our two Main Restaurants serving a variety of culinary delights with a contemporary flair.Price Per Person: Complimentary</p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/19/12/26/36/5fb40b03-c4cc-49e4-a56d-6a893f8ecfed/Norwegian Pearl - Indigo.jpg" alt="Indigo " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Indigo </h3><p>선상 아이스링크에서 스케이팅과 아이스쇼를 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/19/12/26/36/56b89d59-9052-4b74-95a0-60f259bb9c2f/Norwegian Pearl - Sushi.jpg" alt="Sushi" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sushi</h3><p>In the mood for sushi? Take a seat at this contemporary sushi bar for some traditional Japanese culinary bites.Price Per Person: Cover Charge USD $50</p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/19/12/26/36/56b89d59-9052-4b74-95a0-60f259bb9c2f/Norwegian Pearl - Sushi.jpg" alt="Sushi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sushi</h3><p>선상 최고의 스시 레스토랑으로, 신선한 사시미와 롤을 즐길 수 있는 아시안 다이닝 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/11/52/00/356af46b-a356-4e41-8cf0-828b8a986f99/NCL Norwegian Pearl Garden Cafe.jpeg" alt="Garden Café" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Garden Café</h3><p>Whatever you’re craving, chances are you will find it at the Garden Café. This complimentary, indoor buffet restaurant serves up breakfast, lunch and dinnerPrice Per Person: Complimentary</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/06/11/52/00/356af46b-a356-4e41-8cf0-828b8a986f99/NCL Norwegian Pearl Garden Cafe.jpeg" alt="Garden Café" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Garden Café</h3><p>다채로운 세계 요리를 뷔페 형식으로 즐길 수 있는 캐주얼 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/07/14/08/35/c2896c52-82ae-41d3-8103-a051a9fd6392/NCL Norwegian Pearl Cagney's Steakhouse 2.jpeg" alt="Cagney's Steakhouse" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Cagney's Steakhouse</h3><p>Specialising in Premium Black Angus Beef and exceptional seafood, this American-style steakhouse is second to none. With classic cocktails, an extensive wine list, and attentive service, Cagney's Stea</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/07/14/08/35/c2896c52-82ae-41d3-8103-a051a9fd6392/NCL Norwegian Pearl Cagney's Steakhouse 2.jpeg" alt="Cagney's Steakhouse" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Cagney's Steakhouse</h3><p>정통 스테이크하우스로, 엄선된 최고급 소고기 스테이크와 신선한 해산물을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/11/4b0b0fdb-ced4-4e29-ab5d-f6b80dcdbacc/Norwegian Pearl - Topsiders.jpg" alt="Topsiders Bar & Grill" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Topsiders Bar & Grill</h3><p>Enjoy casual dining to suit every taste. From grilled burgers to hot dogs, come as you are and eat as you like after a night out or before your day begins.Price Per Person: Complimentary</p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/11/4b0b0fdb-ced4-4e29-ab5d-f6b80dcdbacc/Norwegian Pearl - Topsiders.jpg" alt="Topsiders Bar & Grill" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Topsiders Bar & Grill</h3><p>신선한 패티로 만든 버거와 아메리칸 푸드를 즐길 수 있는 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/07/13/13/49/90fec56c-3952-4f42-ae2c-3fdbe4acf442/NCL Norwegian Pearl The Great Outdoors.jpeg" alt="The Great Outdoors" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Great Outdoors</h3><p>Come as you are, even in your swimsuit, to this casual, buffet bar serving grilled favourites like burgers, hot dogs and great ocean views.Price Per Person: Complimentary</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/07/13/13/49/90fec56c-3952-4f42-ae2c-3fdbe4acf442/NCL Norwegian Pearl The Great Outdoors.jpeg" alt="The Great Outdoors" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Great Outdoors</h3><p>다채로운 세계 요리를 뷔페 형식으로 즐길 수 있는 캐주얼 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/19/12/26/36/54c14209-ac47-4129-ab10-7cec0fa78933/Norwegian Pearl - Teppenyaki.jpg" alt="Teppanyaki" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Teppanyaki</h3><p>Sit at a lively shared table as a skillful chef perfectly prepares shrimp, steak, chicken and fried rice on a large steel grill. And you've got a front row seat to all the sizzles and surprises in our</p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/19/12/26/36/54c14209-ac47-4129-ab10-7cec0fa78933/Norwegian Pearl - Teppenyaki.jpg" alt="Teppanyaki" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Teppanyaki</h3><p>선상 아이스링크에서 스케이팅과 아이스쇼를 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/07/14/33/00/0d2e8a88-3df9-4248-8fa7-09b726d74f72/NCL Norwegian Pearl Le Bistro 1.jpeg" alt="Le Bistro " loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Le Bistro </h3><p>Romance is in the air at our signature French restaurant. Elegant interiors, crisp white linens and attentive servers make this an intimate dining experience. By the end of your meal, you might just b</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/07/14/33/00/0d2e8a88-3df9-4248-8fa7-09b726d74f72/NCL Norwegian Pearl Le Bistro 1.jpeg" alt="Le Bistro " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Le Bistro </h3><p>프렌치 퀴진을 선보이는 고급 레스토랑으로, 우아한 분위기에서 다이닝을 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/07/13/28/21/e591094b-0f8b-4a3d-89dd-4c39df46ef20/NCL Norwegian Pearl La Cucina 1.jpeg" alt="La Cucina " loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>La Cucina </h3><p>Buona Sera! Enjoy the finest ingredients at our vibrant Italian ristorante. Dine on Italian classics and indulge with a rich homemade Tiramisu. Your good evening just got better.Price Per Person: Cove</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/07/13/28/21/e591094b-0f8b-4a3d-89dd-4c39df46ef20/NCL Norwegian Pearl La Cucina 1.jpeg" alt="La Cucina " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>La Cucina </h3><p>이탈리안 정통 요리를 즐길 수 있는 레스토랑으로, 파스타와 피자 등 클래식 메뉴를 선보입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/07/15/09/25/9fb17a2b-c9f2-41e4-8572-58942e77cac5/NCL Norwegian Pearl Sky High Bar & Grill.jpeg" alt="Sky High Bar & Grill" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sky High Bar & Grill</h3><p>For great sea views, grab a bite and enjoy the warm ocean breeze poolside at this colourful, hot-air balloon-themed grill.Price Per Person: Complimentary</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/07/15/09/25/9fb17a2b-c9f2-41e4-8572-58942e77cac5/NCL Norwegian Pearl Sky High Bar & Grill.jpeg" alt="Sky High Bar & Grill" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sky High Bar & Grill</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/11/45/03/82771448-d967-4db1-96ad-ad50f28ae885/NCL Norwegian Pearl O'Sheehan's Bar & Grill.jpeg" alt="O'Sheehan's Bar & Grill" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>O'Sheehan's Bar & Grill</h3><p>O'Sheehan's offers classic pub fare in a relaxed atmosphere. With popular dishes like the Reuben Sandwich and Fish n' Chips, O'Sheehan's has all your favourite comfort foods. So try one of our beers o</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/06/11/45/03/82771448-d967-4db1-96ad-ad50f28ae885/NCL Norwegian Pearl O'Sheehan's Bar & Grill.jpeg" alt="O'Sheehan's Bar & Grill" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>O'Sheehan's Bar & Grill</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/07/13/18/35/7ac62bc4-e546-401c-bd61-d8c189d2a231/NCL Norwegian Pearl Moderno Churrascaria.jpeg" alt="Moderno Churrascaria" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Moderno Churrascaria</h3><p>Looking for a unique experience? Our authentic Brazilian churrascaria is a must. Start with an impressive salad bar, but save plenty of room for our slow-roasted meats carved tableside by our Passador</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/07/13/18/35/7ac62bc4-e546-401c-bd61-d8c189d2a231/NCL Norwegian Pearl Moderno Churrascaria.jpeg" alt="Moderno Churrascaria" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Moderno Churrascaria</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/07/15/17/32/db97b862-0874-4070-b606-555d1962e022/NCL Norwegian Pearl Starbucks.jpeg" alt="Starbucks®" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Starbucks®</h3><p>Kick-start your day with a Caramel Macchiato. Grab a Teavana® Shaken Iced Green Tea Lemonade to sip whilst lounging poolside. Or recount the day's excitement with your friends over freshly brewed coff</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/07/15/17/32/db97b862-0874-4070-b606-555d1962e022/NCL Norwegian Pearl Starbucks.jpeg" alt="Starbucks®" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Starbucks®</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/07/13/11/19/65df9cf1-cc54-40ff-859c-3e71382ed1cb/NCL Norwegian Pearl Summer Palace.jpeg" alt="Summer Palace" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Summer Palace</h3><p>Stunning in design with ocean views, this Main Restaurant offers traditional cuisine to please every palate.Price Per Person: Complimentary</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/07/13/11/19/65df9cf1-cc54-40ff-859c-3e71382ed1cb/NCL Norwegian Pearl Summer Palace.jpeg" alt="Summer Palace" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Summer Palace</h3><p>선상 아이스링크에서 스케이팅과 아이스쇼를 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/14/15/52/01/41/Norwegian_Cruise_Line_Norwegian_Jewel_Interior_Room_Service.jpg" alt="Room Service" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Room Service</h3><p>Available 24 hours a day, simply pick up the phone and order breakfast, lunch, dinner or late-night munchies. A room service fee may apply.Price Per Person: Room Service Fee may apply.</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/14/15/52/01/41/Norwegian_Cruise_Line_Norwegian_Jewel_Interior_Room_Service.jpg" alt="Room Service" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Room Service</h3><p>객실에서 편안하게 즐기는 룸서비스로, 언제든지 원하는 음식을 주문할 수 있습니다.</p></div>
   </div>
     </div>
 
     <h2 id="entertainment">🎭 엔터테인먼트</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/07/15/29/19/858a857f-d974-4dc0-90d0-c7ef412fb018/NCL Norwegian Pearl Bliss Ultra Lounge & Night Club 1.jpeg" alt="Bliss Ultra Lounge & Night Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Bliss Ultra Lounge & Night Club</h3><p>A lounge inspired by all things spherical and out of space. Bubbles, the use of lighting, colour and ultraviolet artworks will be throughout this room.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/07/15/29/19/858a857f-d974-4dc0-90d0-c7ef412fb018/NCL Norwegian Pearl Bliss Ultra Lounge & Night Club 1.jpeg" alt="Bliss Ultra Lounge & Night Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Bliss Ultra Lounge & Night Club</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/33/3cee9823-6c53-41c8-834b-c04c6577d9a2/Norwegian Pearl - Magnums Champagne Bar.jpg" alt="Magnum's Champagne & Wine bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Magnum's Champagne & Wine bar</h3><p>Imagine Paris in the 20's. Magnum's is an inspiration of French Art Deco and the décor of the grand old cruise liner Normandie.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/33/3cee9823-6c53-41c8-834b-c04c6577d9a2/Norwegian Pearl - Magnums Champagne Bar.jpg" alt="Magnum's Champagne & Wine bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Magnum's Champagne & Wine bar</h3><p>프렌치 퀴진을 선보이는 고급 레스토랑으로, 우아한 분위기에서 다이닝을 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/34/e1286d92-8950-47d2-bf24-ff4b82a37ce1/Norwegian Pearl - Shakers Martini Barjpg.jpg" alt="Shakers Martini & Cocktail Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Shakers Martini & Cocktail Bar</h3><p>How do you like your martini? Shaken, not stirred? Of course you do. James Bond silhouettes reflect back at you from a screen behind the bar in this Art Deco inspired ode to the 1960's and 70's.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/34/e1286d92-8950-47d2-bf24-ff4b82a37ce1/Norwegian Pearl - Shakers Martini Barjpg.jpg" alt="Shakers Martini & Cocktail Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Shakers Martini & Cocktail Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/33/0f9f686e-d95c-4378-a02e-e33209cf3d4a/Norwegian Pearl - Maltings Beer & Whisky Bar.jpg" alt="Maltings Beer & Whiskey Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Maltings Beer & Whiskey Bar</h3><p>Inspired by the lobby bar from the Mandarin Oriental in London, this contemporary full bar has low lounges and tables with the perfect hint of mood lighting.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/33/0f9f686e-d95c-4378-a02e-e33209cf3d4a/Norwegian Pearl - Maltings Beer & Whisky Bar.jpg" alt="Maltings Beer & Whiskey Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Maltings Beer & Whiskey Bar</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/34/e0739b5f-0287-438d-ab19-0b3742f6ab85/Norwegian Pearl - Spinnaker Lounge.jpg" alt="Spinnaker Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Spinnaker Lounge</h3><p>At night, the atmosphere at the Spinnaker Lounge is charged when the music comes up and the stage becomes a dance floor.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/34/e0739b5f-0287-438d-ab19-0b3742f6ab85/Norwegian Pearl - Spinnaker Lounge.jpg" alt="Spinnaker Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Spinnaker Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/32/8ed273e3-adcc-4ae6-aa77-e9e568995f7c/Norwegian Pearl - Atrium Bar.jpeg" alt="Atrium Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Atrium Bar</h3><p>Amid the hustle and bustle of the Atrium, treat yourself to a mid-day Bloody Mary or your drink of choice. This is a morning and late-night favorite serving beer, wine, cocktails and more.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/32/8ed273e3-adcc-4ae6-aa77-e9e568995f7c/Norwegian Pearl - Atrium Bar.jpeg" alt="Atrium Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Atrium Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/10/00/06/f380b592-0652-46f0-9419-6c9aae29d078/NCL Norwegian Pearl Stardust Theatre 2.jpeg" alt="Stardust Theatre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Stardust Theatre</h3><p>It's showtime! And we've got a really big show for you at the Stardust. Enjoy Broadway and Vegas-style shows with cocktails before or after dinner with a European Art Noveau backdrop and a peacock ado</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/10/00/06/f380b592-0652-46f0-9419-6c9aae29d078/NCL Norwegian Pearl Stardust Theatre 2.jpeg" alt="Stardust Theatre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Stardust Theatre</h3><p>브로드웨이 스타일의 대형 공연장으로, 세계적 수준의 쇼와 공연을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/10/06/13/2a3d65ee-5de2-443c-9f1a-1fbcf763f405/NCL Norwegian Pearl Sugarcane Mojito Bar.jpeg" alt="Sugarcane Mojito Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sugarcane Mojito Bar</h3><p>Freshly muddled just the way you like, enjoy a refreshing mojito with friends – day or night.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/10/06/13/2a3d65ee-5de2-443c-9f1a-1fbcf763f405/NCL Norwegian Pearl Sugarcane Mojito Bar.jpeg" alt="Sugarcane Mojito Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sugarcane Mojito Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/11/13/14/06/24/44b1b85e-0a7f-446d-9b53-6411cc800ae4/NCL, Norwegian Sun, Park West Gallery.jpeg" alt="Onboard Shopping" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Onboard Shopping</h3><p>Forget to pack something? No worries! Our gift shops onboard carry everything you'll need for fun in the sun. Shop from a variety of souvenirs, cosmetics, clothing, snacks and sundry items. Treat your</p></div>
+    <img src="https://assets.widgety.co.uk/2024/11/13/14/06/24/44b1b85e-0a7f-446d-9b53-6411cc800ae4/NCL, Norwegian Sun, Park West Gallery.jpeg" alt="Onboard Shopping" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Onboard Shopping</h3><p>면세 쇼핑을 즐길 수 있는 선상 쇼핑몰로, 명품 브랜드와 기념품을 구매할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/10/40/28/ad5579a6-6d11-4d4d-bfc1-1317aab2cd36/NCL Norwegian Pearl Pearl Club Casino.jpeg" alt="Pearl Club Casino" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Pearl Club Casino</h3><p>Spin your way to the jackpot playing the most popular slots including reel and video slots. Or pull up a chair at your favourite table game, from blackjack to craps and more. Whatever games you choose</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/10/40/28/ad5579a6-6d11-4d4d-bfc1-1317aab2cd36/NCL Norwegian Pearl Pearl Club Casino.jpeg" alt="Pearl Club Casino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Pearl Club Casino</h3><p>라스베이거스 스타일의 카지노로, 슬롯머신과 테이블 게임을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/33/c6755e8e-a315-4a90-9f6e-1d142091745d/Norwegian Pearl - Sake Bar.jpg" alt="Sake Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sake Bar</h3><p>Full Sake Bar inside Lotus Garden Restaurant.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/33/c6755e8e-a315-4a90-9f6e-1d142091745d/Norwegian Pearl - Sake Bar.jpg" alt="Sake Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sake Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/12/21/19/17/01/79a164d9-62ec-496d-93b8-637b8d5cc3af/NCL Norwegian Gem Art Gallery.jpeg" alt="Art Gallery" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Art Gallery</h3><p>Stroll through Norwegian Pearl's Art Gallery of original works for sale by a wide range of well-known artists.</p></div>
+    <img src="https://assets.widgety.co.uk/2022/12/21/19/17/01/79a164d9-62ec-496d-93b8-637b8d5cc3af/NCL Norwegian Gem Art Gallery.jpeg" alt="Art Gallery" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Art Gallery</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/07/15/31/27/7b8ace70-fe52-4e31-948e-02d07a4d646d/NCL Norwegian Pearl Corona Cigar Club.jpeg" alt="Corona Cigar Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Corona Cigar Club</h3><p>Hand-rolled premium cigars, cognacs and spirits at the Corona Cigar Club. This is one place where it is completely acceptable to light up in public.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/07/15/31/27/7b8ace70-fe52-4e31-948e-02d07a4d646d/NCL Norwegian Pearl Corona Cigar Club.jpeg" alt="Corona Cigar Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Corona Cigar Club</h3><p>영국 스타일의 퍼브로, 생맥주와 라이브 음악을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/32/d75eb65a-89fa-48d4-a226-839945a5a4e1/Norwegian Pearl - Bowling.jpg" alt="Bowling" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Bowling</h3><p>What could be more fun than having a few cocktails and trying to score a perfect ten? Our four-lane bowling alley with funky lighting and neon-colored bowling balls are simply striking. Exceptional va</p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/32/d75eb65a-89fa-48d4-a226-839945a5a4e1/Norwegian Pearl - Bowling.jpg" alt="Bowling" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Bowling</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/10/51/49/533ad28c-ed81-4927-a69b-17b10379e116/NCL Norwegian Pearl Video Arcade.jpeg" alt="Arcade" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Arcade</h3><p>Level up your fun at the Arcade! Take on thrilling challenges - capture aliens, pilot a fighter jet, race to the finish, and more. Can you rise to the top and claim the highest score?</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/10/51/49/533ad28c-ed81-4927-a69b-17b10379e116/NCL Norwegian Pearl Video Arcade.jpeg" alt="Arcade" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Arcade</h3><p>다양한 아케이드 게임을 즐길 수 있는 게임룸입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/07/13/13/49/90fec56c-3952-4f42-ae2c-3fdbe4acf442/NCL Norwegian Pearl The Great Outdoors.jpeg" alt="Great Outdoors Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Great Outdoors Bar</h3><p>Enjoy wine, beer and a fully selection of cocktails at this covered outdoor bar, located at the aft of Norwegian Pearl.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/07/13/13/49/90fec56c-3952-4f42-ae2c-3fdbe4acf442/NCL Norwegian Pearl The Great Outdoors.jpeg" alt="Great Outdoors Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Great Outdoors Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/07/13/18/35/7ac62bc4-e546-401c-bd61-d8c189d2a231/NCL Norwegian Pearl Moderno Churrascaria.jpeg" alt="Moderno Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Moderno Bar</h3><p>Sit back and enjoy your favourite drink at the Moderno Bar located inside Moderno Churrascaria.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/07/13/18/35/7ac62bc4-e546-401c-bd61-d8c189d2a231/NCL Norwegian Pearl Moderno Churrascaria.jpeg" alt="Moderno Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Moderno Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/11/09/19/56/10/79f3e1f7-4a9a-4afc-9932-4eb33c6d1582/NCL Norwegian Prima Perspectives Studio.jpg" alt="Perspectives Photography Studio" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Perspectives Photography Studio</h3><p>At Perspectives Photography Studio, we celebrate love, life and human connection creating spectacular portraits that will be handed down for generations. Your onboard Portrait Artists will capture you</p></div>
+    <img src="https://assets.widgety.co.uk/2022/11/09/19/56/10/79f3e1f7-4a9a-4afc-9932-4eb33c6d1582/NCL Norwegian Prima Perspectives Studio.jpg" alt="Perspectives Photography Studio" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Perspectives Photography Studio</h3><p>전문 사진작가가 촬영한 아름다운 사진을 간직하세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2022/11/09/20/07/37/2289f4c3-3892-44a8-a770-60bbfb04e447/NCL Norwegian Prima Professional Portraits.jpg" alt="Professional Portraits" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Professional Portraits</h3><p>Take advantage of this time together whilst onboard to create beautiful photographs that will last a lifetime. Our professional photographers set up studios in the atrium and around the ship each nigh</p></div>
+    <img src="https://assets.widgety.co.uk/2022/11/09/20/07/37/2289f4c3-3892-44a8-a770-60bbfb04e447/NCL Norwegian Prima Professional Portraits.jpg" alt="Professional Portraits" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Professional Portraits</h3><p>전문 사진작가가 촬영한 아름다운 사진을 간직하세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/10/18/07/4aa5bb24-d46a-4aa7-992e-4eae169f893f/NCL Norwegian Pearl Card Room.jpeg" alt="Card Room" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Card Room</h3><p>Here is one room where playing games is not just encouraged, it's expected. Find another couple and play bridge or test your skill with board games, checkers, and Scrabble®.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/10/18/07/4aa5bb24-d46a-4aa7-992e-4eae169f893f/NCL Norwegian Pearl Card Room.jpeg" alt="Card Room" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Card Room</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/10/38/05/dd40d82a-72cc-47a2-b5d5-1caf56587538/NCL Norwegian Pearl Meeting Rooms 1.jpeg" alt="Meeting Rooms" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Meeting Rooms</h3><p>Norwegian Pearl's meeting room area features three individual rooms, the Vienna room, the Prague room, and the Barcelona room. Prague and Barcelona may be used together.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/10/38/05/dd40d82a-72cc-47a2-b5d5-1caf56587538/NCL Norwegian Pearl Meeting Rooms 1.jpeg" alt="Meeting Rooms" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Meeting Rooms</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/07/02/13/13/09/961ef730-ce7b-4f58-a2c5-cd06d2f077bf/NCL Viva Deal or No Deal.jpg" alt="Game Shows" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Game Shows</h3><p>Deal or No DealEnjoy an exhilarating show where contestants play and deal for cash in a high-energy contest of nerves and intuition.Play cards will be available for purchase onboard.Wheel of FortuneWh</p></div>
+    <img src="https://assets.widgety.co.uk/2024/07/02/13/13/09/961ef730-ce7b-4f58-a2c5-cd06d2f077bf/NCL Viva Deal or No Deal.jpg" alt="Game Shows" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Game Shows</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/10/16/04/f893d26f-0bb8-4dce-874e-ec18caf4cb4e/NCL Norwegian Pearl Art Gallery and Internet Café.jpeg" alt="Internet Café" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Internet Café</h3><p>No matter how far you are from home, having access to the Internet is always nearby at the Internet Café.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/10/16/04/f893d26f-0bb8-4dce-874e-ec18caf4cb4e/NCL Norwegian Pearl Art Gallery and Internet Café.jpeg" alt="Internet Café" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Internet Café</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/10/18/07/4aa5bb24-d46a-4aa7-992e-4eae169f893f/NCL Norwegian Pearl Card Room.jpeg" alt="LifeStyle Room" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>LifeStyle Room</h3><p>Looking for a quiet place to write postcards, play cards or read a book? Drop by the Lifestyles Room.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/10/18/07/4aa5bb24-d46a-4aa7-992e-4eae169f893f/NCL Norwegian Pearl Card Room.jpeg" alt="LifeStyle Room" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>LifeStyle Room</h3></div>
   </div>
     </div>
 
     <h2 id="health">💆 스파 &amp; 웰니스</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/11/27/10/a15158ff-1f48-446f-b1c5-eda7809bc505/NCL Norwegian Pearl Mandara Spa & Salon 1.jpeg" alt="Mandara Spa & Salon" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Mandara Spa & Salon</h3><p>Step into the world-renowned Mandara Spa and Salon®, where time slows and tranquility takes over. Indulge in signature massages, high-performance Biotec facials, and ancient healing through acupunctur</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/11/27/10/a15158ff-1f48-446f-b1c5-eda7809bc505/NCL Norwegian Pearl Mandara Spa & Salon 1.jpeg" alt="Mandara Spa & Salon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Mandara Spa & Salon</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/04/14/38/53/63b7c148-97b9-4c70-a4cd-4ad9c813f4dd/NCL Norwegian Bliss Vibe Beach Club Lifestyle 2 ©Norwegian Cruise Line.jpg" alt="Vibe Beach Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Vibe Beach Club</h3><p>Vibe Beach Club is an exclusive, adults-only retreat with ocean views, plush loungers, an oversized hot tub, and perks like chilled towels and fruit skewers. Access requires a Pass or Cabana for two, </p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/04/14/38/53/63b7c148-97b9-4c70-a4cd-4ad9c813f4dd/NCL Norwegian Bliss Vibe Beach Club Lifestyle 2 ©Norwegian Cruise Line.jpg" alt="Vibe Beach Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Vibe Beach Club</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/11/45/23/eaec03e6-f1b2-4494-b6f7-ad2a8ccdbb37/NCL Norwegian Pearl Pulse Fitness Centre.jpeg" alt="Pulse Fitness Centre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Pulse Fitness Centre</h3><p>Get your heart rate up using state-of-the-art machines whilst enjoying a view through floor-to-ceiling windows. In addition, you can participate in aerobics, spinning and exercise classes. The Pulse F</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/11/45/23/eaec03e6-f1b2-4494-b6f7-ad2a8ccdbb37/NCL Norwegian Pearl Pulse Fitness Centre.jpeg" alt="Pulse Fitness Centre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Pulse Fitness Centre</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/11/48/12/552d0c33-998c-4fea-935b-eda129206c9f/NCL Norwegian Pearl Spa Thermal Suite 1.jpeg" alt="Spa Thermal Suite" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Spa Thermal Suite</h3><p>The Thermal Suite offers a unique experience benefiting the mind and body. Feel the weightlessness and total relaxation created by the kneading effect of water in the Thalasso Therapy Pool. Head to th</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/11/48/12/552d0c33-998c-4fea-935b-eda129206c9f/NCL Norwegian Pearl Spa Thermal Suite 1.jpeg" alt="Spa Thermal Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Spa Thermal Suite</h3><p>테라피 효과의 온열 시설에서 몸과 마음의 긴장을 풀어보세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/11/30/50/80fd2563-7bb7-4e12-84b4-b33688733ee7/NCL Norwegian Pearl Pool Deck.jpeg" alt="Pool Deck" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Pool Deck</h3><p>Norwegian Pearl's main outdoor pool is surrounded by 144 sun beds, 314 deck chairs and Topsider's Bar and Grill.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/11/30/50/80fd2563-7bb7-4e12-84b4-b33688733ee7/NCL Norwegian Pearl Pool Deck.jpeg" alt="Pool Deck" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Pool Deck</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/11/28/16/46/55/e5e0944e-42ea-491c-a9f8-a2b722e5c4cf/Norwegian Jewel - Sports Court.jpg" alt="Basketball/Volleyball/Tennis Court" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Basketball/Volleyball/Tennis Court</h3><p>Shoot hoops, join a pick up game, play beach volleyball or some tennis at the outdoor Basketball/Volleyball/Tennis Court, where we will be happy to accommodate you.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/11/28/16/46/55/e5e0944e-42ea-491c-a9f8-a2b722e5c4cf/Norwegian Jewel - Sports Court.jpg" alt="Basketball/Volleyball/Tennis Court" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Basketball/Volleyball/Tennis Court</h3><p>테니스 코트에서 바다를 바라보며 테니스를 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/11/20/11/41/05/1f0b7fc3-4acd-499b-958a-7faeea393b99/NCL, Hot Tubs, Credit - Jim Hughes Photography.jpeg" alt="Hot Tubs" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Hot Tubs</h3><p>You will find 6 outdoor hot tubs located on deck 12.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/11/20/11/41/05/1f0b7fc3-4acd-499b-958a-7faeea393b99/NCL, Hot Tubs, Credit - Jim Hughes Photography.jpeg" alt="Hot Tubs" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Hot Tubs</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/14/15/50/22/929/Norwegian_Cruise_Line_Norwegian_Jewel_Exterior_Jogging_Walking_Track.jpg" alt="Jogging/Walking Track" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Jogging/Walking Track</h3><p>Run circles around the other guests or get your daily walk in before breakfast on the outdoor track.</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/14/15/50/22/929/Norwegian_Cruise_Line_Norwegian_Jewel_Exterior_Jogging_Walking_Track.jpg" alt="Jogging/Walking Track" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Jogging/Walking Track</h3><p>갑판 조깅 트랙에서 신선한 바다 공기를 마시며 달려보세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/11/27/09/5604603d-1800-4eff-9b5b-e18cd6491c86/NCL Norwegian Pearl Mandara Spa & Salon 3.jpeg" alt="Treatments" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Treatments</h3><p>Aroma Spa Seaweed Massage - 100 minutesIndulge in this detoxifying wrap and massage to reduce fluid retention and cellulite and replenish your body's systems with vital trace elements. This treatment </p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/11/27/09/5604603d-1800-4eff-9b5b-e18cd6491c86/NCL Norwegian Pearl Mandara Spa & Salon 3.jpeg" alt="Treatments" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Treatments</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
     </div>
 
     <h2 id="kids">👧 키즈 클럽</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/33/69305489-1f9d-4e97-94b0-7db58f764823/Norwegian Pearl - Entourage.jpg" alt="Entourage" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Entourage</h3><p>It is time to change the way you play. Entourage for 13-17 year olds offers modern, digital, and inclusive options to engage the way you want. Connect. Influence. Create. Be You.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/12/19/12/27/33/69305489-1f9d-4e97-94b0-7db58f764823/Norwegian Pearl - Entourage.jpg" alt="Entourage" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Entourage</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/11/18/11/26/45/6c71a21e-c418-49da-99ec-bfa6260d1b8b/NCL, Guppies.jpg" alt="Guppies" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Guppies</h3><p>Guppies Open Play is for the littlest cruisers and offers a play space for parents to interact with their infants/babies/toddlers 6 months - 3 years old and children in nappies. Toys, balls, and senso</p></div>
+    <img src="https://assets.widgety.co.uk/2024/11/18/11/26/45/6c71a21e-c418-49da-99ec-bfa6260d1b8b/NCL, Guppies.jpg" alt="Guppies" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Guppies</h3><p>유아를 위한 전용 공간으로, 안전하고 즐거운 활동을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/01/09/12/11/18/30dcb760-55b0-453d-aefd-e11fab4a9d1f/NCL Norwegian Pearl Splash Academy 1.jpeg" alt="Splash Academy" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Splash Academy</h3><p>Get into the zone of fun because Splash Academy is just for kids! With lots of open space for active games, an arts and crafts area and creative theme days kids can do what they do best - be a kid! Th</p></div>
+    <img src="https://assets.widgety.co.uk/2023/01/09/12/11/18/30dcb760-55b0-453d-aefd-e11fab4a9d1f/NCL Norwegian Pearl Splash Academy 1.jpeg" alt="Splash Academy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Splash Academy</h3><p>아이들을 위한 물놀이 공간으로, 안전한 워터 어트랙션을 즐길 수 있습니다.</p></div>
   </div>
     </div>
 
     <h2 id="cabins">🛏️ 객실 등급</h2>
     <div class="cabin-grid">
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/12/18/15/50/41/846edd13-f8dc-4957-9387-af4d4a2ec38f/NCL, Norwegian Pearl, The Haven 3-Bedroom Garden Villa 1.jpeg" alt="The Haven 3-Bedroom Garden Villa" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/12/18/15/50/41/846edd13-f8dc-4957-9387-af4d4a2ec38f/NCL, Norwegian Pearl, The Haven 3-Bedroom Garden Villa 1.jpeg" alt="The Haven 3-Bedroom Garden Villa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">The Haven 3-Bedroom Garden Villa</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/12/18/15/57/03/f8aa696a-f610-4f83-8756-c02c3ea229ff/NCL, Norwegian Pearl, The Haven Deluxe Owner's Suite with Large Balcony 1.jpeg" alt="The Haven Deluxe Owner's Suite with Large Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/12/18/15/57/03/f8aa696a-f610-4f83-8756-c02c3ea229ff/NCL, Norwegian Pearl, The Haven Deluxe Owner's Suite with Large Balcony 1.jpeg" alt="The Haven Deluxe Owner's Suite with Large Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">The Haven Deluxe Owner's Suite with Large Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/12/18/16/04/38/371d1fbe-3bb5-4022-9668-e67dee1b0730/NCL, Norwegian Pearl, The Haven Deluxe Owner's Suite with Balcony 1.jpeg" alt="The Haven Deluxe Owner's Suite with Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/12/18/16/04/38/371d1fbe-3bb5-4022-9668-e67dee1b0730/NCL, Norwegian Pearl, The Haven Deluxe Owner's Suite with Balcony 1.jpeg" alt="The Haven Deluxe Owner's Suite with Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">The Haven Deluxe Owner's Suite with Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/05/18/15/52/67fdefb0-8a22-4554-8de2-cfe56de2d3a6/NCL Norwegian Pearl The Haven Deluxe Owner's Suite with Balcony 1.jpeg" alt="The Haven Owner's Suite with Large Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/05/18/15/52/67fdefb0-8a22-4554-8de2-cfe56de2d3a6/NCL Norwegian Pearl The Haven Deluxe Owner's Suite with Balcony 1.jpeg" alt="The Haven Owner's Suite with Large Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">The Haven Owner's Suite with Large Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/05/18/25/23/5220d34c-e3b7-4634-b40e-f38b5629b061/NCL Norwegian Pearl The Haven 2-Bedroom Family Villa with Balcony 1.jpeg" alt="The Haven 2-Bedroom Family Villa with Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/05/18/25/23/5220d34c-e3b7-4634-b40e-f38b5629b061/NCL Norwegian Pearl The Haven 2-Bedroom Family Villa with Balcony 1.jpeg" alt="The Haven 2-Bedroom Family Villa with Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">The Haven 2-Bedroom Family Villa with Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/05/18/25/23/5220d34c-e3b7-4634-b40e-f38b5629b061/NCL Norwegian Pearl The Haven 2-Bedroom Family Villa with Balcony 1.jpeg" alt="The Haven Courtyard Penthouse with Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/05/18/25/23/5220d34c-e3b7-4634-b40e-f38b5629b061/NCL Norwegian Pearl The Haven 2-Bedroom Family Villa with Balcony 1.jpeg" alt="The Haven Courtyard Penthouse with Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">The Haven Courtyard Penthouse with Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/05/18/25/23/5220d34c-e3b7-4634-b40e-f38b5629b061/NCL Norwegian Pearl The Haven 2-Bedroom Family Villa with Balcony 1.jpeg" alt="2-Bedroom Deluxe Family Suite with Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/05/18/25/23/5220d34c-e3b7-4634-b40e-f38b5629b061/NCL Norwegian Pearl The Haven 2-Bedroom Family Villa with Balcony 1.jpeg" alt="2-Bedroom Deluxe Family Suite with Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">2-Bedroom Deluxe Family Suite with Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/05/18/40/32/fd323177-6286-4c85-b3c5-291992c11aa8/NCL Norwegian Pearl Forward-Facing Deluxe Penthouse with Large Balcony.jpeg" alt="Forward-Facing Deluxe Penthouse with Large Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/05/18/40/32/fd323177-6286-4c85-b3c5-291992c11aa8/NCL Norwegian Pearl Forward-Facing Deluxe Penthouse with Large Balcony.jpeg" alt="Forward-Facing Deluxe Penthouse with Large Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Forward-Facing Deluxe Penthouse with Large Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/05/18/45/46/07613ca4-91be-4b01-8504-e9bbf52a8cf0/NCL Norwegian Pearl Forward-Facing Penthouse with Large Balcony.jpeg" alt="Forward-Facing Penthouse with Large Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/05/18/45/46/07613ca4-91be-4b01-8504-e9bbf52a8cf0/NCL Norwegian Pearl Forward-Facing Penthouse with Large Balcony.jpeg" alt="Forward-Facing Penthouse with Large Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Forward-Facing Penthouse with Large Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/05/18/45/46/07613ca4-91be-4b01-8504-e9bbf52a8cf0/NCL Norwegian Pearl Forward-Facing Penthouse with Large Balcony.jpeg" alt="Aft-Facing Penthouse with Large Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/05/18/45/46/07613ca4-91be-4b01-8504-e9bbf52a8cf0/NCL Norwegian Pearl Forward-Facing Penthouse with Large Balcony.jpeg" alt="Aft-Facing Penthouse with Large Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Aft-Facing Penthouse with Large Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/05/18/45/46/07613ca4-91be-4b01-8504-e9bbf52a8cf0/NCL Norwegian Pearl Forward-Facing Penthouse with Large Balcony.jpeg" alt="Aft-Facing Penthouse with Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/05/18/45/46/07613ca4-91be-4b01-8504-e9bbf52a8cf0/NCL Norwegian Pearl Forward-Facing Penthouse with Large Balcony.jpeg" alt="Aft-Facing Penthouse with Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Aft-Facing Penthouse with Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/05/18/56/25/a060e372-7380-4201-bbd3-630226412222/NCL Norwegian Pearl Aft-Facing Club Balcony Suite 1.jpeg" alt="Aft-Facing Club Balcony Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/05/18/56/25/a060e372-7380-4201-bbd3-630226412222/NCL Norwegian Pearl Aft-Facing Club Balcony Suite 1.jpeg" alt="Aft-Facing Club Balcony Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Aft-Facing Club Balcony Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/05/18/56/25/a060e372-7380-4201-bbd3-630226412222/NCL Norwegian Pearl Aft-Facing Club Balcony Suite 1.jpeg" alt="Club Balcony Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/05/18/56/25/a060e372-7380-4201-bbd3-630226412222/NCL Norwegian Pearl Aft-Facing Club Balcony Suite 1.jpeg" alt="Club Balcony Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Club Balcony Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/05/18/56/25/a060e372-7380-4201-bbd3-630226412222/NCL Norwegian Pearl Aft-Facing Club Balcony Suite 1.jpeg" alt="Sail Away Club Balcony Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/05/18/56/25/a060e372-7380-4201-bbd3-630226412222/NCL Norwegian Pearl Aft-Facing Club Balcony Suite 1.jpeg" alt="Sail Away Club Balcony Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Sail Away Club Balcony Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/08/44/54/c391534e-0f7b-45ae-8260-615f9ee86b68/NCL Norwegian Pearl Aft-Facing Balcony.jpeg" alt="Aft-Facing Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/06/08/44/54/c391534e-0f7b-45ae-8260-615f9ee86b68/NCL Norwegian Pearl Aft-Facing Balcony.jpeg" alt="Aft-Facing Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Aft-Facing Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/08/44/54/c391534e-0f7b-45ae-8260-615f9ee86b68/NCL Norwegian Pearl Aft-Facing Balcony.jpeg" alt="Family Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/06/08/44/54/c391534e-0f7b-45ae-8260-615f9ee86b68/NCL Norwegian Pearl Aft-Facing Balcony.jpeg" alt="Family Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Family Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/08/44/54/c391534e-0f7b-45ae-8260-615f9ee86b68/NCL Norwegian Pearl Aft-Facing Balcony.jpeg" alt="Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/06/08/44/54/c391534e-0f7b-45ae-8260-615f9ee86b68/NCL Norwegian Pearl Aft-Facing Balcony.jpeg" alt="Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/08/44/54/c391534e-0f7b-45ae-8260-615f9ee86b68/NCL Norwegian Pearl Aft-Facing Balcony.jpeg" alt="Solo Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/06/08/44/54/c391534e-0f7b-45ae-8260-615f9ee86b68/NCL Norwegian Pearl Aft-Facing Balcony.jpeg" alt="Solo Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Solo Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/08/44/54/c391534e-0f7b-45ae-8260-615f9ee86b68/NCL Norwegian Pearl Aft-Facing Balcony.jpeg" alt="Sail Away Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/06/08/44/54/c391534e-0f7b-45ae-8260-615f9ee86b68/NCL Norwegian Pearl Aft-Facing Balcony.jpeg" alt="Sail Away Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Sail Away Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/09/18/27/aa0a5794-aac4-4b1b-ae74-3a4b2cb68377/NCL Norwegian Pearl Family Oceanview.jpeg" alt="Family Oceanview" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/06/09/18/27/aa0a5794-aac4-4b1b-ae74-3a4b2cb68377/NCL Norwegian Pearl Family Oceanview.jpeg" alt="Family Oceanview" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Family Oceanview</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/09/18/27/aa0a5794-aac4-4b1b-ae74-3a4b2cb68377/NCL Norwegian Pearl Family Oceanview.jpeg" alt="Oceanview with Picture Window" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/06/09/18/27/aa0a5794-aac4-4b1b-ae74-3a4b2cb68377/NCL Norwegian Pearl Family Oceanview.jpeg" alt="Oceanview with Picture Window" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Oceanview with Picture Window</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/09/30/23/a74fa088-80c4-49f0-87b7-1e310fb51cbe/NCL Norwegian Pearl Oceanview.jpeg" alt="Oceanview" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/06/09/30/23/a74fa088-80c4-49f0-87b7-1e310fb51cbe/NCL Norwegian Pearl Oceanview.jpeg" alt="Oceanview" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Oceanview</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/09/33/27/ef54062e-c712-4420-90a4-dc46ca6e3bda/NCL Norwegian Pearl Obstructed Oceanview.jpeg" alt="Obstructed Oceanview" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/06/09/33/27/ef54062e-c712-4420-90a4-dc46ca6e3bda/NCL Norwegian Pearl Obstructed Oceanview.jpeg" alt="Obstructed Oceanview" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Obstructed Oceanview</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/03/13/26/46/94f720d1-5a71-43f6-ad9c-c6d393bf0696/NCL Norwegian Jade Family Oceanview.jpeg" alt="Solo Oceanview" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/03/13/26/46/94f720d1-5a71-43f6-ad9c-c6d393bf0696/NCL Norwegian Jade Family Oceanview.jpeg" alt="Solo Oceanview" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Solo Oceanview</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/03/13/26/46/94f720d1-5a71-43f6-ad9c-c6d393bf0696/NCL Norwegian Jade Family Oceanview.jpeg" alt="Sail Away Oceanview" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/03/13/26/46/94f720d1-5a71-43f6-ad9c-c6d393bf0696/NCL Norwegian Jade Family Oceanview.jpeg" alt="Sail Away Oceanview" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Sail Away Oceanview</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/11/30/39/8f8214e6-b377-4491-9f8f-da310ae8c46c/NCL Norwegian Pearl Family Inside.jpeg" alt="Family Inside" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/06/11/30/39/8f8214e6-b377-4491-9f8f-da310ae8c46c/NCL Norwegian Pearl Family Inside.jpeg" alt="Family Inside" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Family Inside</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/11/30/39/8f8214e6-b377-4491-9f8f-da310ae8c46c/NCL Norwegian Pearl Family Inside.jpeg" alt="Inside" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/06/11/30/39/8f8214e6-b377-4491-9f8f-da310ae8c46c/NCL Norwegian Pearl Family Inside.jpeg" alt="Inside" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Inside</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/11/30/39/8f8214e6-b377-4491-9f8f-da310ae8c46c/NCL Norwegian Pearl Family Inside.jpeg" alt="Solo Inside" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/06/11/30/39/8f8214e6-b377-4491-9f8f-da310ae8c46c/NCL Norwegian Pearl Family Inside.jpeg" alt="Solo Inside" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Solo Inside</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/01/06/11/30/39/8f8214e6-b377-4491-9f8f-da310ae8c46c/NCL Norwegian Pearl Family Inside.jpeg" alt="Sail Away Inside" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/01/06/11/30/39/8f8214e6-b377-4491-9f8f-da310ae8c46c/NCL Norwegian Pearl Family Inside.jpeg" alt="Sail Away Inside" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Sail Away Inside</div>
   </div>
     </div>
@@ -471,51 +557,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="deckplan">📐 덱 플랜</h2>
     <div class="deckplan-list">
   <div class="deckplan-item">
-    <img src="" alt="Deck 15" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/12/18/16/46/02/91e37669-a9e5-403b-905b-fd1e7f69f790/Norwegian Pearl - Deck 15.png" alt="Deck 15" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 15</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 14" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/12/18/16/46/02/0ca6a980-07ab-48aa-ae1c-596cca820e7b/Norwegian Pearl - Deck 14.png" alt="Deck 14" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 14</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 13" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/12/18/16/46/01/a347b275-bac4-4f85-b554-3d9b6e9ac901/Norwegian Pearl - Deck 13.png" alt="Deck 13" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 13</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 12" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/12/18/16/46/01/bd348bb3-cbcd-4898-8d12-f56ae1da1fbe/Norwegian Pearl - Deck 12.png" alt="Deck 12" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 12</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 11" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/12/18/15/32/45/a18672ff-bc77-4640-95a9-5bfe55ba37bd/NCL, Norwegian Pear, Deck Plan 11.jpg" alt="Deck 11" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 11</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 10" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/12/18/15/32/45/1f3f83be-a3b7-4d9b-b580-f845bb73b0b7/NCL, Norwegian Pear, Deck Plan 10.jpg" alt="Deck 10" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 10</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 9" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/12/18/15/32/45/a3a160ff-38f1-4db2-a9ce-8e3a5f9bbba5/NCL, Norwegian Pear, Deck Plan 9.jpg" alt="Deck 9" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 9</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 8" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/12/18/15/32/44/c21e7dca-e7cf-4ead-a3c9-63da815b2b6c/NCL, Norwegian Pear, Deck Plan 8.jpg" alt="Deck 8" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 8</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 7" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/12/18/15/32/44/ca9bb6c7-cdd5-4eea-91be-78e02a0e6a4e/NCL, Norwegian Pear, Deck Plan 7.jpg" alt="Deck 7" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 7</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 6" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/12/18/15/32/44/d374165c-00ff-48c6-8f55-1923b0d99e03/NCL, Norwegian Pear, Deck Plan 6.jpg" alt="Deck 6" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 6</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 5" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/12/18/15/32/44/98ff8a9c-8d40-4e51-a4c1-f8e46c3e87df/NCL, Norwegian Pear, Deck Plan 5.jpg" alt="Deck 5" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 5</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 4" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/12/18/15/32/44/0a2e4288-57fa-46bd-8905-06fd6c1ff67c/NCL, Norwegian Pear, Deck Plan 4.jpg" alt="Deck 4" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 4</p>
   </div>
     </div>

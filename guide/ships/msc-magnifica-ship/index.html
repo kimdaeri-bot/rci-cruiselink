@@ -69,22 +69,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
 
+
     .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
     @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
     .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-card img{width:100%;height:160px;object-fit:cover;display:block}
+    .facility-card .no-img{width:100%;height:160px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem}
     .facility-info{padding:12px}
     .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
     .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
     @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
     .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card img{width:100%;height:120px;object-fit:cover;display:block}
+    .cabin-card .no-img{width:100%;height:120px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
     .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
     .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
     @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
-    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200);display:block}
+    .deckplan-item .no-img{width:100%;height:200px;background:var(--gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem}
     .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
@@ -124,278 +128,343 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+
     <h2 id="dining">🍽️ 다이닝</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/06/43/58/8d6c3789-4e63-4a1a-a84c-88ef53b48a96/MSC Cruises MSC Magnifica Quattro Venti Restaurant 2.jpg" alt="Quattro Venti Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Quattro Venti Restaurant</h3><p>Quattro Venti, located on Deck 6, boasts a top gastronomic selection thanks to the variety of dishes and the high quality of the foods, from choice Italian meats, scrupulously controlled, to fresh fru</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/06/43/58/8d6c3789-4e63-4a1a-a84c-88ef53b48a96/MSC Cruises MSC Magnifica Quattro Venti Restaurant 2.jpg" alt="Quattro Venti Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Quattro Venti Restaurant</h3><p>이탈리안 정통 요리를 즐길 수 있는 레스토랑으로, 파스타와 피자 등 클래식 메뉴를 선보입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/06/42/47/81ae864d-13f6-43d0-9b55-ac3a7ad84348/MSC Cruises MSC Magnifica Le'Edera Restaurant 2.jpg" alt="L'Edera Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>L'Edera Restaurant</h3><p>Located on deck 5, serving a wide variety of dishes, prepared by hand with the freshest ingredients, there's a great variety of choice to be had in the restaurants . One of two main dining rooms onboa</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/06/42/47/81ae864d-13f6-43d0-9b55-ac3a7ad84348/MSC Cruises MSC Magnifica Le'Edera Restaurant 2.jpg" alt="L'Edera Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>L'Edera Restaurant</h3><p>다양한 코스 요리를 즐길 수 있는 메인 다이닝룸으로, 매일 바뀌는 메뉴를 선보입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/06/45/10/05e42bcb-7009-465a-9538-7059138c3afa/MSC Cruises MSC Magnifica Quattro Oriental Plaza 2.jpg" alt="Oriental Plaza" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Oriental Plaza</h3><p>Our Asian restaurant offers authentic Japanese, Chinese and Thai dishes in an informal atmosphere. A tempting range of oriental cuisine including nigiri, sashimi, maki, temaki, dim sum, dumplings, rol</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/06/45/10/05e42bcb-7009-465a-9538-7059138c3afa/MSC Cruises MSC Magnifica Quattro Oriental Plaza 2.jpg" alt="Oriental Plaza" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Oriental Plaza</h3><p>다채로운 아시안 퀴진을 선보이는 레스토랑으로, 동남아부터 일식까지 다양한 메뉴를 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/03/11/39/08/202/MSC_Musica_Class_Self_service_buffet_1.jpg" alt="Sahara Buffet " loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sahara Buffet </h3><p>Sahara can accommodate 472 guests and is located on deck 13. It is the ship's self service buffet restaurant serving breakfast and lunch in a casual environment. It features an omelette station, a san</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/39/08/202/MSC_Musica_Class_Self_service_buffet_1.jpg" alt="Sahara Buffet " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sahara Buffet </h3><p>다채로운 세계 요리를 뷔페 형식으로 즐길 수 있는 캐주얼 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/02/15/45/23/174/MSC_Fantasia_Class_Icecream_bar.jpg" alt="La Barchetta Ice Cream Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>La Barchetta Ice Cream Bar</h3><p>Situated on deck 13, The gelato comes in a wide variety of around 16 different flavours from vanilla, chocolate, strawberry, pineapple and coffee to pistachio, kiwi and lemon.</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/02/15/45/23/174/MSC_Fantasia_Class_Icecream_bar.jpg" alt="La Barchetta Ice Cream Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>La Barchetta Ice Cream Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/11/14/02/43/498/msc_cruises_muscia_class_L_Oasi_restaurant.jpg" alt="L'Oasi Buffet Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>L'Oasi Buffet Restaurant</h3><p>With panoramic sea views L’Oasi on Deck 13 within the Sahara Cafeteria, seating 250 guests, offers a gourmet three-course à la carte meal using typical Mediterranean ingredients with a twist with a me</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/11/14/02/43/498/msc_cruises_muscia_class_L_Oasi_restaurant.jpg" alt="L'Oasi Buffet Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>L'Oasi Buffet Restaurant</h3><p>다채로운 세계 요리를 뷔페 형식으로 즐길 수 있는 캐주얼 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/11/14/06/37/887/_MSC_Cruises_Musica_Class_sports_bar_3.jpg" alt="L’Olimpiade Sports Bar " loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>L’Olimpiade Sports Bar </h3><p>The ship's Sports Bar, L’Olimpiade, is located on deck 7 and seats 120. It serves an à la carte menu between 10.00am to 1.00am, featuring Steamed shrimp cocktail, Fish &amp; Chips, Buffalo Chicken Win</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/11/14/06/37/887/_MSC_Cruises_Musica_Class_sports_bar_3.jpg" alt="L’Olimpiade Sports Bar " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>L’Olimpiade Sports Bar </h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/22/13/57/32/44e56c42-6e9a-4f16-b09d-240c3a588147/MSC Cruises MSC Magnifica MSC Yacht Club Restaurant 1 ©MSC Rights.jpg" alt="MSC Yacht Club Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Yacht Club Restaurant</h3><p>The MSC Yacht Club Restaurant is an exclusive and private venue reserved only for you. Embark on a culinary journey and delight in gourmet creations. From à la carte menus with premium Mediterranean a</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/22/13/57/32/44e56c42-6e9a-4f16-b09d-240c3a588147/MSC Cruises MSC Magnifica MSC Yacht Club Restaurant 1 ©MSC Rights.jpg" alt="MSC Yacht Club Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Yacht Club Restaurant</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
     </div>
 
     <h2 id="entertainment">🎭 엔터테인먼트</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/06/48/31/3d8d8162-f63e-4c8f-83a1-ef7c8728c290/MSC Cruises MSC Magnifica Royal Theatre 3.jpg" alt="Royal Theatre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Royal Theatre</h3><p>You’d normally have to travel to New York to see top-end shows, but thanks to our Broadway-style theatres you can enjoy superlative entertainment with an international line-up of artists without havin</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/06/48/31/3d8d8162-f63e-4c8f-83a1-ef7c8728c290/MSC Cruises MSC Magnifica Royal Theatre 3.jpg" alt="Royal Theatre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Royal Theatre</h3><p>브로드웨이 스타일의 대형 공연장으로, 세계적 수준의 쇼와 공연을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/06/50/22/970a460e-c8f4-4292-bd57-b4f8999e3bde/MSC Cruises MSC Magnifica Disco 3.jpg" alt="T32 Disco" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>T32 Disco</h3><p>With a live DJ and open from 11.00pm until late,  the ship's disco located on deck 14 and served by its own bar. It has seating for 172 guests.</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/06/50/22/970a460e-c8f4-4292-bd57-b4f8999e3bde/MSC Cruises MSC Magnifica Disco 3.jpg" alt="T32 Disco" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>T32 Disco</h3><p>신나는 음악과 함께 춤을 즐길 수 있는 디스코장입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/06/24/11/19/05/02a54f34-db3e-47fc-a77a-c4ce470ee26a/MSC Cruises MSC Magnifica Casino Bar.jpg" alt="Atlantic City Casino" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Atlantic City Casino</h3><p>Our casinos are elegantly designed, featuring games for all types of players. You’ll be able to try your hand at Roulette or Blackjack, challenge yourself at one of our Poker tables, or choose among a</p></div>
+    <img src="https://assets.widgety.co.uk/2019/06/24/11/19/05/02a54f34-db3e-47fc-a77a-c4ce470ee26a/MSC Cruises MSC Magnifica Casino Bar.jpg" alt="Atlantic City Casino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Atlantic City Casino</h3><p>라스베이거스 스타일의 카지노로, 슬롯머신과 테이블 게임을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/18/18/09/30/93d343d0-421e-4799-811b-73a5c7ee32c4/MSC Magnifica - Topazio Bar, MSC Rights.jpg" alt="Topazio Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Topazio Bar</h3><p>The 220 seat Piano Bar on deck 6 is the ship's reception bar, featuring live piano music and accompanying orchestra.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/18/18/09/30/93d343d0-421e-4799-811b-73a5c7ee32c4/MSC Magnifica - Topazio Bar, MSC Rights.jpg" alt="Topazio Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Topazio Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/07/676/MSC_Musica_Class_blue_velvet_2.jpg" alt="Le Gocce Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Le Gocce Bar</h3><p>Magnifica’s Coffee Bar is located on deck 5, midship with seating for 142 guests and music ranging from Latin to classical, drinks on offer range from chilled liquor based coffees such as Espresso Mar</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/07/676/MSC_Musica_Class_blue_velvet_2.jpg" alt="Le Gocce Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Le Gocce Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/15/10/MSC_Musica_Class_gold_bar_2.jpg" alt="The Purple Bar & Ruby Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Purple Bar & Ruby Bar</h3><p>The Ships cocktail bars are the ideal location for guests to enjoy a pre-dinner cocktail with live musical entertainment.They are located on deck 6 with seating for up to 45 guests in each bar.</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/15/10/MSC_Musica_Class_gold_bar_2.jpg" alt="The Purple Bar & Ruby Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Purple Bar & Ruby Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/20/509/MSC_Musica_Class_havana_club_3.jpg" alt="Cuba Lounge Cigar Room" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Cuba Lounge Cigar Room</h3><p>The ship's smoking room and whiskey bar is situated on deck 7 and seats 32 guests.The Cigar Lounge offers elegant surroundings with leather settees and armchairs for guests to relax on and enjoy a cig</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/20/509/MSC_Musica_Class_havana_club_3.jpg" alt="Cuba Lounge Cigar Room" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Cuba Lounge Cigar Room</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/06/57/00/a4cf59e9-be06-4088-a8ea-949cf2e2e2f5/MSC Cruises MSC Magnifica Library 3.jpg" alt="Library" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Library</h3><p>The ship's small library and reading room are located on deck 7, with seats for 15 guests. It has a small selection of books in a variety of languages for guests to borrow. It also contains a number o</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/06/57/00/a4cf59e9-be06-4088-a8ea-949cf2e2e2f5/MSC Cruises MSC Magnifica Library 3.jpg" alt="Library" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Library</h3><p>독서와 카드 게임을 즐길 수 있는 조용한 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/03/11/06/56/650/MSC_Musica_Class_Art_gallery.jpg" alt="Art Gallery" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Art Gallery</h3><p>The Art Gallery can be found on deck 7 of the ship. Guests can view a range of artwork from fine prints, lithographs, water colours and oils which can be purchased during the ship's champagne art auct</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/06/56/650/MSC_Musica_Class_Art_gallery.jpg" alt="Art Gallery" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Art Gallery</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/14/218/MSC_Musica_Class_cyber_cafe.jpg" alt="Cyber café" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Cyber café</h3><p>The Cyber Cafe located on deck 7.</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/14/218/MSC_Musica_Class_cyber_cafe.jpg" alt="Cyber café" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Cyber café</h3><p>하루 종일 가볍게 즐길 수 있는 카페로, 음료와 간식을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/10/492/MSC_Musica_Class_card_room.jpg" alt="Card Room" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Card Room</h3><p>The ship's card room is located on deck 7.</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/03/11/07/10/492/MSC_Musica_Class_card_room.jpg" alt="Card Room" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Card Room</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/18/18/09/29/57cb7390-7228-448d-b3f6-2ed5782b43fe/MSC Magnifica - Tiger Bar, MSC Rights.jpg" alt="Tiger Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Tiger Bar</h3><p>The Tiger Bar is the ship's second show lounge served by its own bar and dance floor.It is situated on deck 6 with seating for 477 guests. Entertainment and activities range from bingo, seminars, Ital</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/18/18/09/29/57cb7390-7228-448d-b3f6-2ed5782b43fe/MSC Magnifica - Tiger Bar, MSC Rights.jpg" alt="Tiger Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Tiger Bar</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/11/11/44/14/484/_MSC_Cruises_Musica_Class_shaker_lounge.jpg" alt="L'Ametista Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>L'Ametista Lounge</h3><p>L'Ametista Lounge is located on deck 7 of the Magnifica and has its own bar and dance floor along with seating for 330 guests. It is a large cabaret style lounge with live shows and bands for guests' </p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/11/11/44/14/484/_MSC_Cruises_Musica_Class_shaker_lounge.jpg" alt="L'Ametista Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>L'Ametista Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/07/00/00/b8654820-de8d-47c8-8092-188f4d0d1ae8/MSC Cruises MSC Magnifica 4D Cinema.jpg" alt="4D Cinema" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>4D Cinema</h3><p>Visit our on-board 4D Cinema* for a chance to enter a world of adventure without having to leave the comfort of your seat. Enjoy a unique cinematic experience, full of surprising features and visual e</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/07/00/00/b8654820-de8d-47c8-8092-188f4d0d1ae8/MSC Cruises MSC Magnifica 4D Cinema.jpg" alt="4D Cinema" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>4D Cinema</h3><p>최신 영화를 감상할 수 있는 선상 영화관입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/06/58/57/73472848-f252-4df5-ba96-e0a35f98d323/MSC Cruises MSC Magnifica Bowling 2.jpg" alt="Bowling Lanes" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Bowling Lanes</h3><p>Ten pin bowling is available in T32 aft of deck 14.The bowling alley is designed for maximum entertainment and impact, including a traditional-looking bowling surface made of a tough phenol compound w</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/06/58/57/73472848-f252-4df5-ba96-e0a35f98d323/MSC Cruises MSC Magnifica Bowling 2.jpg" alt="Bowling Lanes" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Bowling Lanes</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/18/18/13/20/636c55ad-7021-40a3-b550-67cc2bd5182e/MSC Magnifica - L'Ompliade Sports Bar.jpg" alt="Billiard Room & Library" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Billiard Room & Library</h3><p>For a bit of quiet time on board your ship, check out the Billiard Room &amp; Library to play a civilised game or read in peace amid a haven of tranquility and calm. With the clicking of the balls and</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/18/18/13/20/636c55ad-7021-40a3-b550-67cc2bd5182e/MSC Magnifica - L'Ompliade Sports Bar.jpg" alt="Billiard Room & Library" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Billiard Room & Library</h3><p>독서와 카드 게임을 즐길 수 있는 조용한 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/18/18/09/27/c4315644-01e8-4caa-82d2-73d1c99dcdbc/MSC Magnifica - Il Bar del Sole, MSC Rights.jpg" alt="Il Bar del Sole" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Il Bar del Sole</h3><p>Il Bar del Sole can be found on deck 16.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/18/18/09/27/c4315644-01e8-4caa-82d2-73d1c99dcdbc/MSC Magnifica - Il Bar del Sole, MSC Rights.jpg" alt="Il Bar del Sole" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Il Bar del Sole</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/06/54/44/cd205160-de86-40f0-a5e1-86e3d0772f87/MSC Cruises MSC Magnifica Arcade.jpg" alt="Arcade" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Arcade</h3><p>While away a few enjoyable hours of game play at the Arcade on board the ship. Pit your wits and skill against those of your friends in any number of typical arcade options, including video games, pin</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/06/54/44/cd205160-de86-40f0-a5e1-86e3d0772f87/MSC Cruises MSC Magnifica Arcade.jpg" alt="Arcade" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Arcade</h3><p>다양한 아케이드 게임을 즐길 수 있는 게임룸입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/03/13/50/20/968ac0b0-7b80-47bb-a2f9-a92d5661eccc/MSC Grandiosa - Photo Gallery.jpg" alt="Photos" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Photos</h3><p>PHOTO SHOPSmile! Our professional team of photographers constantly roam the ship, capturing wonderful memories every day. Be sure to stroll through the Photo Gallery daily, so you don’t miss one of th</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/03/13/50/20/968ac0b0-7b80-47bb-a2f9-a92d5661eccc/MSC Grandiosa - Photo Gallery.jpg" alt="Photos" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Photos</h3><p>전문 사진작가가 촬영한 아름다운 사진을 간직하세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/18/18/09/28/3d361df7-0fcf-49dc-a183-cfd64a457b23/MSC Magnifica - Shops 1, MSC Rights.jpg" alt="Shops" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Shops</h3><p>MSC LOGO SHOPInfuse your cruise with gifts that spark magical memories of your voyage across the waves! Navigate the MSC Logo Shop for everything from gadgets to books and novelty gifts! You’ll also f</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/18/18/09/28/3d361df7-0fcf-49dc-a183-cfd64a457b23/MSC Magnifica - Shops 1, MSC Rights.jpg" alt="Shops" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Shops</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/18/18/12/09/188395c8-2bc6-43f7-bdb5-6535170f1156/MSC Magnifica - Reception 1, MSC Rights.jpg" alt="Reception" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Reception</h3><p>The Reception can be found on Deck 5</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/18/18/12/09/188395c8-2bc6-43f7-bdb5-6535170f1156/MSC Magnifica - Reception 1, MSC Rights.jpg" alt="Reception" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Reception</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/b5388d4e-a29f-4da0-beb2-202f6a0431e2/MSC Cruises, MSC Factor.jpg" alt="MSC Events" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Events</h3><p>MSC FactorThink you’ve got what it takes to be a star in our on-board talent competition, The MSC Factor? Then come and showcase what you can do in the most exciting talent show at sea. Whatever your </p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/b5388d4e-a29f-4da0-beb2-202f6a0431e2/MSC Cruises, MSC Factor.jpg" alt="MSC Events" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Events</h3></div>
   </div>
     </div>
 
     <h2 id="health">💆 스파 &amp; 웰니스</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/07/11/30/0150df6d-0920-4c79-a8f9-5c14ac28ec90/MSC Cruises MSC Magnifica Spa & Relax Aurea 0.jpg" alt="MSC Aurea Spa" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Aurea Spa</h3><p>MSC Aurea Spa boasts an exotic interior of natural stone, precious woods and rich mosaics, and is equipped with specific and massage treatment suites. Being pampered by a traditional Balinese Massage </p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/07/11/30/0150df6d-0920-4c79-a8f9-5c14ac28ec90/MSC Cruises MSC Magnifica Spa & Relax Aurea 0.jpg" alt="MSC Aurea Spa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Aurea Spa</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/07/23/40/26530652-e695-41ad-a5ff-6ef3cff21a59/MSC Cruises MSC Magnifica Pool 3.jpg" alt="Swimming Pools" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Swimming Pools</h3><p>If a bit of poolside therapy sounds like your idea of heaven, look no further than one of our numerous swimming pools to get your fill of sun and relaxation, while our pool attendants can cater to you</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/07/23/40/26530652-e695-41ad-a5ff-6ef3cff21a59/MSC Cruises MSC Magnifica Pool 3.jpg" alt="Swimming Pools" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Swimming Pools</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/07/15/16/fe4d5245-aa4d-49dd-af9e-ea6a54a079fb/MSC Cruises MSC Magnifica Salon.jpg" alt="Beauty and Hair Salon" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Beauty and Hair Salon</h3><p>You can enjoy the expertise of highly specialised staff in aesthetic treatments to offer you excellent results and improve the relaxing effects of your cruise. Customise your cruise with the best trea</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/07/15/16/fe4d5245-aa4d-49dd-af9e-ea6a54a079fb/MSC Cruises MSC Magnifica Salon.jpg" alt="Beauty and Hair Salon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Beauty and Hair Salon</h3><p>전문 뷰티 살롱에서 헤어와 네일 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/18/18/13/59/73708fa7-4889-443f-9bbc-fac7e90f6cf6/MSC Magnifica - Gym, MSC Rights.jpg" alt="Gym by TechnoGym®" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Gym by TechnoGym®</h3><p>Fitted with authentic TechnoGym® equipment and featuring panoramic ocean views, the on-board Gym is the place to be for all those who take their fitness regime seriously. Hone your physique with a ful</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/18/18/13/59/73708fa7-4889-443f-9bbc-fac7e90f6cf6/MSC Magnifica - Gym, MSC Rights.jpg" alt="Gym by TechnoGym®" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Gym by TechnoGym®</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/16/08/34/22/d9d3954b-5a26-4937-9a8c-17302b2a590c/MSC Cruises Walking Track.png" alt="Sport & Fitness" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sport & Fitness</h3><p>BasketballCome to the outdoor basketball court at the Sport Centre for a chance to hang out with friends, have fun shooting hoops and enjoy a full-body workout at the same time. You may not make the l</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/16/08/34/22/d9d3954b-5a26-4937-9a8c-17302b2a590c/MSC Cruises Walking Track.png" alt="Sport & Fitness" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sport & Fitness</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
     </div>
 
     <h2 id="kids">👧 키즈 클럽</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/08/26/09/05/51/c9e56257-54eb-4550-b591-82371c914975/MSC Cruises Seashore LEGO® Experience.png" alt="Lego® Experience" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Lego® Experience</h3><p>Once during every cruise we hold a special entertainment event called the LEGO® Experience On Board: an entire day dedicated to fun LEGO activities for the whole family to enjoy. Thanks to this specia</p></div>
+    <img src="https://assets.widgety.co.uk/2021/08/26/09/05/51/c9e56257-54eb-4550-b591-82371c914975/MSC Cruises Seashore LEGO® Experience.png" alt="Lego® Experience" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Lego® Experience</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/17/14/28/59/cf18af82-37d5-4bc7-8fd0-1c1aa8603480/MSC Cruises, Baby Club.jpg" alt="Baby Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Baby Club</h3><p>Our partnership with leading baby care brand Chicco provides a dedicated play area with facilities for babies and toddlers under 3 years old. You can leave your toddlers with our MSC Babycare staff*, </p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/17/14/28/59/cf18af82-37d5-4bc7-8fd0-1c1aa8603480/MSC Cruises, Baby Club.jpg" alt="Baby Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Baby Club</h3><p>유아를 위한 전용 공간으로, 안전하고 즐거운 활동을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/19/12/22/26/6a2636b5-bc84-4720-9091-036da05994dd/MSC Magnifica - Mini Club 1, MSC Rights.jpg" alt="Mini Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Mini Club</h3><p>The Mini Club welcomes children aged between 3 and 6 years old, bringing them new friends and lots of fun, enriched by the stimulating toys of our partnership with LEGO®. The club offers games, events</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/19/12/22/26/6a2636b5-bc84-4720-9091-036da05994dd/MSC Magnifica - Mini Club 1, MSC Rights.jpg" alt="Mini Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Mini Club</h3><p>어린이를 위한 미니 클럽으로, 또래 친구들과 다양한 활동을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/17/14/28/59/2db3b5da-9c70-4d15-9632-6fb5fb552ecd/MSC Cruises, Junior Club.jpg" alt="Junior Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Junior Club</h3><p>The Junior Club inspires connection and cooperation among 7 to 11-year-olds, through a wide variety of activities. Highlights range from Masterchef at Sea Juniors and Dorebro Sport competitions to our</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/17/14/28/59/2db3b5da-9c70-4d15-9632-6fb5fb552ecd/MSC Cruises, Junior Club.jpg" alt="Junior Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Junior Club</h3><p>7-11세 어린이를 위한 전용 프로그램을 제공하는 주니어 클럽입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/06/17/14/53/49/26d19f5b-9065-4bbf-a883-299db3f971e5/MSC Cruises MSC Armonia Young Club.jpg" alt="Young Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Young Club</h3><p>With the Young Club, kids from 12 to 14 years old can dive into a world of discovery, involvement and interaction. Each day holds the promise of new experiences, with a dedicated programme of sport to</p></div>
+    <img src="https://assets.widgety.co.uk/2019/06/17/14/53/49/26d19f5b-9065-4bbf-a883-299db3f971e5/MSC Cruises MSC Armonia Young Club.jpg" alt="Young Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Young Club</h3><p>신나는 음악과 함께 춤을 즐길 수 있는 디스코장입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/07/30/37/622de633-310e-44df-8af6-999ec4f9391e/MSC Cruises MSC Armonia Teen Club.jpg" alt="Teen Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Teen Club</h3><p>Teenagers aged from 15 to 17 years old can look forward to having the time of their lives on board. Teen Club activities range from sports and competitions, dance contests and social network games to </p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/07/30/37/622de633-310e-44df-8af6-999ec4f9391e/MSC Cruises MSC Armonia Teen Club.jpg" alt="Teen Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Teen Club</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/03/13/53/20/f8c8c95d-3893-4157-be4f-3b8aac8eab28/MSC Grandiosa - Babies and Toddlers Services.jpg" alt="Babies and Toddlers Services" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Babies and Toddlers Services</h3><p>Baby Clubs - along with activities that the whole family can enjoy together, we offer a Baby Club onboard all our ships with dedicated activities and facilities.  MSC Baby Care Service - we have thoug</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/03/13/53/20/f8c8c95d-3893-4157-be4f-3b8aac8eab28/MSC Grandiosa - Babies and Toddlers Services.jpg" alt="Babies and Toddlers Services" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Babies and Toddlers Services</h3><p>유아를 위한 전용 공간으로, 안전하고 즐거운 활동을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/15/10/54/0e1c6434-03e8-4bd7-9c1a-2ea10c42c91c/MSC Cruises, Web Series.jpg" alt="Web Series" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Web Series</h3><p>Experience the cruise adventure before you even step on board! Dive into the captivating web series Cabin 12006, available on MSC Cruises' official YouTube channel. Join Markus, a teenager embarking o</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/15/10/54/0e1c6434-03e8-4bd7-9c1a-2ea10c42c91c/MSC Cruises, Web Series.jpg" alt="Web Series" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Web Series</h3><p>10대 청소년을 위한 전용 공간으로, 게임과 소셜 활동을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/17/14/41/03/9fd1b8da-2588-4bf5-8ff2-06ed81f45e82/MSC Cruises, Kids Clubs and Family Activities.jpg" alt="Kids Clubs and Family Activities" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Kids Clubs and Family Activities</h3><p>Discover our Entertainment options on board: there's always so much to do that you kids will never get bored! An MSC cruise is an experience for the whole family to enjoy together in the safe, fun env</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/17/14/41/03/9fd1b8da-2588-4bf5-8ff2-06ed81f45e82/MSC Cruises, Kids Clubs and Family Activities.jpg" alt="Kids Clubs and Family Activities" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Kids Clubs and Family Activities</h3><p>전문 스태프가 운영하는 키즈클럽으로, 다양한 활동과 프로그램을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/30/08/41/54/e56c5267-c416-4685-8de3-977e49b87840/MSC Cruises Parent Time WEB.jpg" alt="Parent Time" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Parent Time</h3><p>Wind down, lie back, chill out or dress up, and make the most of every marvellous moment.While your kids are having the time of their lives, with our expert staff, you are free to enjoy all of those t</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/30/08/41/54/e56c5267-c416-4685-8de3-977e49b87840/MSC Cruises Parent Time WEB.jpg" alt="Parent Time" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Parent Time</h3></div>
   </div>
     </div>
 
     <h2 id="cabins">🛏️ 객실 등급</h2>
     <div class="cabin-grid">
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/21/10/31/32/e2d05ea6-4152-4852-990d-f85587f90432/MSC Cruises MSC Poesia MSC Yacht Club Royal Suite With Whirlpool Bath Suite 1 ©MSC Rights.png" alt="Yacht Club Royal Suite with Whirlpool Bath" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/21/10/31/32/e2d05ea6-4152-4852-990d-f85587f90432/MSC Cruises MSC Poesia MSC Yacht Club Royal Suite With Whirlpool Bath Suite 1 ©MSC Rights.png" alt="Yacht Club Royal Suite with Whirlpool Bath" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Yacht Club Royal Suite with Whirlpool Bath</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/22/10/54/35/879eaebb-fc0e-4a99-b517-e545a7573578/MSC Cruises MSC Magnifica Yacht Club Executive and Family Suite with Balcony Suite 1 WEB ©MSC Rights.jpg" alt="Yacht Club Executive and Family Suite with Balcony Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/22/10/54/35/879eaebb-fc0e-4a99-b517-e545a7573578/MSC Cruises MSC Magnifica Yacht Club Executive and Family Suite with Balcony Suite 1 WEB ©MSC Rights.jpg" alt="Yacht Club Executive and Family Suite with Balcony Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Yacht Club Executive and Family Suite with Balcony Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/22/11/26/50/51e9213f-475f-4e1b-a712-f0fae7e3e080/MSC Cruises MSC Magnifica Yacht Club Two-Room Grand Suite WEB 1 ©MSC Rights.jpg" alt="Yacht Club Two-Room Grand Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/22/11/26/50/51e9213f-475f-4e1b-a712-f0fae7e3e080/MSC Cruises MSC Magnifica Yacht Club Two-Room Grand Suite WEB 1 ©MSC Rights.jpg" alt="Yacht Club Two-Room Grand Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Yacht Club Two-Room Grand Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/05/06/10/34/25/f004bfb7-ef68-4eba-9f09-0ecda02068cc/MSC Cruises, MSC Magnifica, Yacht Club Grand Suite ADA YCP Bedroom.png" alt="Yacht Club Grand Suite ADA" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/05/06/10/34/25/f004bfb7-ef68-4eba-9f09-0ecda02068cc/MSC Cruises, MSC Magnifica, Yacht Club Grand Suite ADA YCP Bedroom.png" alt="Yacht Club Grand Suite ADA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Yacht Club Grand Suite ADA</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/22/11/43/30/11663c5b-2441-4b47-a0b7-ba71a5724c9d/MSC Cruises MSC Magnifica MSC Yacht Club Deluxe Suite ©MSC Rights.jpg" alt="Yacht Club Deluxe Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/22/11/43/30/11663c5b-2441-4b47-a0b7-ba71a5724c9d/MSC Cruises MSC Magnifica MSC Yacht Club Deluxe Suite ©MSC Rights.jpg" alt="Yacht Club Deluxe Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Yacht Club Deluxe Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/22/11/54/07/00d3640d-6e61-420a-8233-4a3631194e6e/MSC Cruises MSC Magnifica MSC Yacht Club Interior Suite WEB 1 ©MSC Rights.jpg" alt="Yacht Club Interior Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/22/11/54/07/00d3640d-6e61-420a-8233-4a3631194e6e/MSC Cruises MSC Magnifica MSC Yacht Club Interior Suite WEB 1 ©MSC Rights.jpg" alt="Yacht Club Interior Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Yacht Club Interior Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/06/30/25/f4c7f0f7-bcce-4886-b14c-36e07aa7dd9c/MSC Cruises MSC Magnifica Suite 1.jpg" alt="Premium Suite Aurea" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2021/11/24/06/30/25/f4c7f0f7-bcce-4886-b14c-36e07aa7dd9c/MSC Cruises MSC Magnifica Suite 1.jpg" alt="Premium Suite Aurea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Suite Aurea</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/17/3903096b-b9eb-4a46-9468-d2416e8c94a9/MSC Magnifica - Suite 3, MSC Rights.jpg" alt="Junior Suite Aurea" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/17/3903096b-b9eb-4a46-9468-d2416e8c94a9/MSC Magnifica - Suite 3, MSC Rights.jpg" alt="Junior Suite Aurea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Suite Aurea</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/38/7f9f9a60-0af6-414c-a971-2701066eb528/MSC Magnifica - Balcony, MSC Rights.jpg" alt="Deluxe Balcony Aurea" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/38/7f9f9a60-0af6-414c-a971-2701066eb528/MSC Magnifica - Balcony, MSC Rights.jpg" alt="Deluxe Balcony Aurea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Balcony Aurea</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/38/7f9f9a60-0af6-414c-a971-2701066eb528/MSC Magnifica - Balcony, MSC Rights.jpg" alt="Premium Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/38/7f9f9a60-0af6-414c-a971-2701066eb528/MSC Magnifica - Balcony, MSC Rights.jpg" alt="Premium Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/38/7f9f9a60-0af6-414c-a971-2701066eb528/MSC Magnifica - Balcony, MSC Rights.jpg" alt="Deluxe Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/38/7f9f9a60-0af6-414c-a971-2701066eb528/MSC Magnifica - Balcony, MSC Rights.jpg" alt="Deluxe Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/38/7f9f9a60-0af6-414c-a971-2701066eb528/MSC Magnifica - Balcony, MSC Rights.jpg" alt="Junior Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/38/7f9f9a60-0af6-414c-a971-2701066eb528/MSC Magnifica - Balcony, MSC Rights.jpg" alt="Junior Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/38/7f9f9a60-0af6-414c-a971-2701066eb528/MSC Magnifica - Balcony, MSC Rights.jpg" alt="Deluxe Balcony with Partial View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/38/7f9f9a60-0af6-414c-a971-2701066eb528/MSC Magnifica - Balcony, MSC Rights.jpg" alt="Deluxe Balcony with Partial View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Balcony with Partial View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/38/7f9f9a60-0af6-414c-a971-2701066eb528/MSC Magnifica - Balcony, MSC Rights.jpg" alt="Guarantee Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/38/7f9f9a60-0af6-414c-a971-2701066eb528/MSC Magnifica - Balcony, MSC Rights.jpg" alt="Guarantee Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/02/24/09/18/53/c58abaa2-15c9-40f2-9f5a-ee7e6d5e988a/MSC Cruises MAGNIFICA Ocean View.jpg" alt="Deluxe Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/02/24/09/18/53/c58abaa2-15c9-40f2-9f5a-ee7e6d5e988a/MSC Cruises MAGNIFICA Ocean View.jpg" alt="Deluxe Ocean View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Ocean View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/39/476dcb9a-7cbb-4950-a438-5f9d9e06d41c/MSC Magnifica - Ocean View, MSC Rights.jpg" alt="Deluxe Ocean View with Obstructed View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/19/12/15/39/476dcb9a-7cbb-4950-a438-5f9d9e06d41c/MSC Magnifica - Ocean View, MSC Rights.jpg" alt="Deluxe Ocean View with Obstructed View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Ocean View with Obstructed View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/02/24/09/18/53/c58abaa2-15c9-40f2-9f5a-ee7e6d5e988a/MSC Cruises MAGNIFICA Ocean View.jpg" alt="Guarantee Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/02/24/09/18/53/c58abaa2-15c9-40f2-9f5a-ee7e6d5e988a/MSC Cruises MAGNIFICA Ocean View.jpg" alt="Guarantee Ocean View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Ocean View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/06/19/12/12/34/2dc8f94b-9177-416c-9ca5-3397007a2aa7/MSC Cruises, MSC Magnifica, Junior Interior.jpg" alt="Junior Interior" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/06/19/12/12/34/2dc8f94b-9177-416c-9ca5-3397007a2aa7/MSC Cruises, MSC Magnifica, Junior Interior.jpg" alt="Junior Interior" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Interior</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/06/19/12/12/34/2dc8f94b-9177-416c-9ca5-3397007a2aa7/MSC Cruises, MSC Magnifica, Junior Interior.jpg" alt="Guarantee Interior" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/06/19/12/12/34/2dc8f94b-9177-416c-9ca5-3397007a2aa7/MSC Cruises, MSC Magnifica, Junior Interior.jpg" alt="Guarantee Interior" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Interior</div>
   </div>
     </div>
@@ -403,51 +472,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="deckplan">📐 덱 플랜</h2>
     <div class="deckplan-list">
   <div class="deckplan-item">
-    <img src="" alt="Deck 16 - Sport" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/18/15/50/38/a8cd09f6-3240-4623-ab67-541d2a0ffee9/MSC Magnifica - Deck 16.png" alt="Deck 16 - Sport" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 16 - Sport</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 15 - Capri" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/18/15/50/38/c491d0a1-298c-4c91-bb38-a00f58ab316d/MSC Magnifica - Deck 15.png" alt="Deck 15 - Capri" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 15 - Capri</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 14 - Positano" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/18/15/50/38/cd7d84d4-35f8-4f00-8f0a-66cef3dbad45/MSC Magnifica - Deck 14.png" alt="Deck 14 - Positano" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 14 - Positano</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 13 - Porto Cervo" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/18/15/50/38/f734c684-a947-44ca-abab-2bd3812f003a/MSC Magnifica - Deck 13.png" alt="Deck 13 - Porto Cervo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 13 - Porto Cervo</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 12 - Portovenere" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/18/15/50/37/658363ec-1dfa-4d06-9dfc-578c9b25b7e4/MSC Magnifica - Deck 12.png" alt="Deck 12 - Portovenere" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 12 - Portovenere</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 11 - Ischia" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/18/15/50/37/bdcddc57-0400-4c22-8fb2-b7d343beccaf/MSC Magnifica - Deck 11.png" alt="Deck 11 - Ischia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 11 - Ischia</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 10 - Riccione" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/18/15/50/37/9823e942-30e9-4142-a0b6-89f6526dbad1/MSC Magnifica - Deck 10.png" alt="Deck 10 - Riccione" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 10 - Riccione</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 9 - Panarea" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/18/15/50/37/46802245-ac88-4eaf-b21f-754704463a7e/MSC Magnifica - Deck 9.png" alt="Deck 9 - Panarea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 9 - Panarea</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 8 - Camogli" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/18/15/50/37/9db7c61a-bda8-4ea2-b051-fc3d005ee90e/MSC Magnifica - Deck 8.png" alt="Deck 8 - Camogli" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 8 - Camogli</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 7 -  Amalfi" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/18/15/50/37/6173595e-9eda-4e44-ac98-3389eac896e0/MSC Magnifica - Deck 7.png" alt="Deck 7 -  Amalfi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 7 -  Amalfi</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 6 - Portofino" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/18/15/50/37/5a2d290e-72ce-458c-997e-8c2e77a58d4b/MSC Magnifica - Deck 6.png" alt="Deck 6 - Portofino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 6 - Portofino</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 5 - Sorrento" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/18/15/50/37/e34bcaee-4e61-4a68-bf55-9b70f56e697f/MSC Magnifica - Deck 5.png" alt="Deck 5 - Sorrento" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 5 - Sorrento</p>
   </div>
     </div>

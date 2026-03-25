@@ -69,22 +69,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
 
+
     .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
     @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
     .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-card img{width:100%;height:160px;object-fit:cover;display:block}
+    .facility-card .no-img{width:100%;height:160px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem}
     .facility-info{padding:12px}
     .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
     .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
     @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
     .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card img{width:100%;height:120px;object-fit:cover;display:block}
+    .cabin-card .no-img{width:100%;height:120px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
     .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
     .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
     @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
-    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200);display:block}
+    .deckplan-item .no-img{width:100%;height:200px;background:var(--gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem}
     .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
@@ -124,218 +128,268 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+
     <h2 id="dining">🍽️ 다이닝</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/14/08/37/ff3d8c68-6abc-4f80-8924-e22c46abcbe6/MSC Cruises MSC Lirica Italian Ice Cream Bar ©MSC Rights - Ivan Sarfatti.jpg" alt="The Italian Ice Cream Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Italian Ice Cream Bar</h3><p>MSC Cruises is proud to bring the very best in artisanal gelato to our travellers. Venchi has been making superlative desserts since 1878 and owes much of its success to the use of 100% natural ingred</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/14/08/37/ff3d8c68-6abc-4f80-8924-e22c46abcbe6/MSC Cruises MSC Lirica Italian Ice Cream Bar ©MSC Rights - Ivan Sarfatti.jpg" alt="The Italian Ice Cream Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Italian Ice Cream Bar</h3><p>이탈리안 정통 요리를 즐길 수 있는 레스토랑으로, 파스타와 피자 등 클래식 메뉴를 선보입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/14/06/40/e7d5af30-7fa4-4398-b43f-3a3aacdf5e14/MSC Cruises MSC Lirica Vitamin Bar ©MSC Rights - Ivan Sarfatti.jpg" alt="Vitamin Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Vitamin Bar</h3><p>Bar with vitamin drinks made from fresh fruits and juice such as Orange Delight and Carrot Fantasy.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/14/06/40/e7d5af30-7fa4-4398-b43f-3a3aacdf5e14/MSC Cruises MSC Lirica Vitamin Bar ©MSC Rights - Ivan Sarfatti.jpg" alt="Vitamin Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Vitamin Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/14/00/31/8c2b8946-c511-4351-8a7e-5ee109ed0b97/MSC Cruises MSC Lirica Kaito Sushi Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Kaito Sushi Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Kaito Sushi Bar</h3><p>Tradition and modernity go hand in hand in this stylish sushi restaurant. This charming venue offers deliciously authentic Asian cuisine prepared on the spot with only the freshest, highest quality in</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/14/00/31/8c2b8946-c511-4351-8a7e-5ee109ed0b97/MSC Cruises MSC Lirica Kaito Sushi Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Kaito Sushi Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Kaito Sushi Bar</h3><p>선상 최고의 스시 레스토랑으로, 신선한 사시미와 롤을 즐길 수 있는 아시안 다이닝 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/13/39/32/c2f1fcb6-62f4-421e-baea-7455abebff30/MSC Cruises MSC Lirica La Pergola 2 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Pergola" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>La Pergola</h3><p>Located on Deck 11.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/13/39/32/c2f1fcb6-62f4-421e-baea-7455abebff30/MSC Cruises MSC Lirica La Pergola 2 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Pergola" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>La Pergola</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/13/46/16/c30c32d5-1f23-4239-bc1a-cb55c15bb07b/MSC Cruises MSC Lirica La Bussola 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Bussola" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>La Bussola</h3><p>Located on Deck 5.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/13/46/16/c30c32d5-1f23-4239-bc1a-cb55c15bb07b/MSC Cruises MSC Lirica La Bussola 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Bussola" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>La Bussola</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/13/30/17/76b6b810-470c-4b2e-acdb-b749964dab99/MSC Cruises MSC Lirica Le Bistrot 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Le Bistrot" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Le Bistrot</h3><p>Located on Deck 11.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/13/30/17/76b6b810-470c-4b2e-acdb-b749964dab99/MSC Cruises MSC Lirica Le Bistrot 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Le Bistrot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Le Bistrot</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/13/56/39/c0e9ad08-069f-4bb1-9dd6-c30ed85656db/MSC Cruises MSC Lirica L'Ippocampo 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="L'Ippocampo" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>L'Ippocampo</h3><p>Located on Deck 6.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/13/56/39/c0e9ad08-069f-4bb1-9dd6-c30ed85656db/MSC Cruises MSC Lirica L'Ippocampo 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="L'Ippocampo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>L'Ippocampo</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/13/39/31/debf6a82-9ccd-4605-a6ca-0288226b356c/MSC Cruises MSC Lirica La Pergola 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Pergola Outside Cafeteria" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>La Pergola Outside Cafeteria</h3><p>Located on deck 11</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/13/39/31/debf6a82-9ccd-4605-a6ca-0288226b356c/MSC Cruises MSC Lirica La Pergola 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Pergola Outside Cafeteria" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>La Pergola Outside Cafeteria</h3><p>하루 종일 가볍게 즐길 수 있는 카페로, 음료와 간식을 제공합니다.</p></div>
   </div>
     </div>
 
     <h2 id="entertainment">🎭 엔터테인먼트</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/25/10/48/52/faec15d4-d8ad-4ca9-9ca2-65aef72efe99/MSC Cruises MSC Lirica Theatre 1.jpg" alt="The Broadway Theatre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Broadway Theatre</h3><p>You’d normally have to travel to New York to see top-end shows, but thanks to our Broadway-style theatres you can enjoy superlative entertainment with an international line-up of artists without havin</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/25/10/48/52/faec15d4-d8ad-4ca9-9ca2-65aef72efe99/MSC Cruises MSC Lirica Theatre 1.jpg" alt="The Broadway Theatre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Broadway Theatre</h3><p>브로드웨이 스타일의 대형 공연장으로, 세계적 수준의 쇼와 공연을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/25/10/48/51/8a0ffdd7-d1fa-4d69-a2aa-013652831aca/MSC Cruises MSC Lirica Casino 3.jpg" alt="Las Vegas Casino" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Las Vegas Casino</h3><p>Our casinos are elegantly designed, featuring games for all types of players. You’ll be able to try your hand at Roulette or Blackjack, challenge yourself at one of our Poker tables, or choose among a</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/25/10/48/51/8a0ffdd7-d1fa-4d69-a2aa-013652831aca/MSC Cruises MSC Lirica Casino 3.jpg" alt="Las Vegas Casino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Las Vegas Casino</h3><p>라스베이거스 스타일의 카지노로, 슬롯머신과 테이블 게임을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/15/11/23/8406c3a7-7eeb-4c0d-b609-41eef476064b/MSC Lirica - Blue Club Disco 1, MSC Rights, Ivan Sarfatti.jpg" alt="The Blue Club Disco" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Blue Club Disco</h3><p>Late-night bar and nightclub with a 450 square foot dance floor.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/15/11/23/8406c3a7-7eeb-4c0d-b609-41eef476064b/MSC Lirica - Blue Club Disco 1, MSC Rights, Ivan Sarfatti.jpg" alt="The Blue Club Disco" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Blue Club Disco</h3><p>밤 문화를 즐길 수 있는 선상 나이트클럽입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/01/14/28/46/878/MSC_Lirica_Class_The_card_room_2.jpg" alt="The Card Room" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Card Room</h3><p>The ship's card room is located on deck 7 and seats 28 guests.</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/01/14/28/46/878/MSC_Lirica_Class_The_card_room_2.jpg" alt="The Card Room" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Card Room</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/14/34/26/405ac964-c5a8-45b3-8dca-1f6095dd0918/MSC Cruises MSC Lirica The Coffee Corner 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="The Coffee Corner" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Coffee Corner</h3><p>Located on Deck 6.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/14/34/26/405ac964-c5a8-45b3-8dca-1f6095dd0918/MSC Cruises MSC Lirica The Coffee Corner 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="The Coffee Corner" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Coffee Corner</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/14/38/36/f9f41488-16a1-4e5c-ae92-83e21e03b9b6/MSC Cruises MSC Lirica The Beverly Hills Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="The Beverly Hills Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Beverly Hills Bar</h3><p>Located on Deck 5.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/14/38/36/f9f41488-16a1-4e5c-ae92-83e21e03b9b6/MSC Cruises MSC Lirica The Beverly Hills Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="The Beverly Hills Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Beverly Hills Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/14/52/14/47904400-0ff3-4e57-bb03-21101b68f2fa/MSC Cruises MSC Lirica La Canzone del Mare Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Canzone del Mare Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>La Canzone del Mare Bar</h3><p>Located on Deck 11.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/14/52/14/47904400-0ff3-4e57-bb03-21101b68f2fa/MSC Cruises MSC Lirica La Canzone del Mare Bar 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="La Canzone del Mare Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>La Canzone del Mare Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/14/58/38/32d4cbb1-f566-440e-b9e3-dc8fbd6c53b9/MSC Cruises MSC Lirica L'Atmosphere 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="L'Atmosphere Piano Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>L'Atmosphere Piano Bar</h3><p>Located on Deck 6.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/14/58/38/32d4cbb1-f566-440e-b9e3-dc8fbd6c53b9/MSC Cruises MSC Lirica L'Atmosphere 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="L'Atmosphere Piano Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>L'Atmosphere Piano Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/29/06/23/12/14660d36-a517-4b48-aa59-a2364a040c96/MSC Cruises MSC Lirica Swimming Pools & Pool Deck 1.jpg" alt="Swimming Pools" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Swimming Pools</h3><p>If a bit of poolside therapy sounds like your idea of heaven, look no further than one of our numerous swimming pools to get your fill of sun and relaxation, while our pool attendants can cater to you</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/29/06/23/12/14660d36-a517-4b48-aa59-a2364a040c96/MSC Cruises MSC Lirica Swimming Pools & Pool Deck 1.jpg" alt="Swimming Pools" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Swimming Pools</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/29/06/24/41/692eee46-e7a0-47a6-ab25-0e983bc3976f/MSC Cruises MSC Lirica Arcade.jpg" alt="Arcade" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Arcade</h3><p>While away a few enjoyable hours of game play at the Arcade on board the ship. Pit your wits and skill against those of your friends in any number of typical arcade options, including video games, pin</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/29/06/24/41/692eee46-e7a0-47a6-ab25-0e983bc3976f/MSC Cruises MSC Lirica Arcade.jpg" alt="Arcade" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Arcade</h3><p>다양한 아케이드 게임을 즐길 수 있는 게임룸입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/15/43/14/b7b58edd-7dd2-4c09-b5c4-95df93d8ef0c/MSC Cruises MSC Lirica Lord Nelson Pub 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Lord Nelson Pub" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Lord Nelson Pub</h3><p>The Lord Nelson Pub can be found on Deck 5.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/15/43/14/b7b58edd-7dd2-4c09-b5c4-95df93d8ef0c/MSC Cruises MSC Lirica Lord Nelson Pub 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Lord Nelson Pub" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Lord Nelson Pub</h3><p>영국 스타일의 퍼브로, 생맥주와 라이브 음악을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/16/26/40/32a7a6b0-ecef-4fb2-b8b6-35fd5edc5843/MSC Cruises MSC Lirica La Galleria 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Shops" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Shops</h3><p>MSC LOGO SHOPInfuse your cruise with gifts that spark magical memories of your voyage across the waves! Navigate the MSC Logo Shop for everything from gadgets to books and novelty gifts! You’ll also f</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/16/26/40/32a7a6b0-ecef-4fb2-b8b6-35fd5edc5843/MSC Cruises MSC Lirica La Galleria 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Shops" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Shops</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/15/49/15/11f0f623-8fa6-4cf4-841d-dfca4f4d8b1c/MSC Cruises MSC Lirica Photo Gallery 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Photo Gallery" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Photo Gallery</h3><p>Don’t forget to explore the All-Inclusive Digital Photo Package, which includes digital files of all the photos taken by our professional photographers on board. Digital photos are available for downl</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/15/49/15/11f0f623-8fa6-4cf4-841d-dfca4f4d8b1c/MSC Cruises MSC Lirica Photo Gallery 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Photo Gallery" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Photo Gallery</h3><p>전문 사진작가가 촬영한 아름다운 사진을 간직하세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/14/53/25/b363af29-c651-4a3d-94e9-6243244629aa/MSC Lirica - Reception, MSC Rights, Ivan Sarfatti.jpg" alt="Reception & Guest Services" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Reception & Guest Services</h3><p>The Reception can be found on Deck 5.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/14/53/25/b363af29-c651-4a3d-94e9-6243244629aa/MSC Lirica - Reception, MSC Rights, Ivan Sarfatti.jpg" alt="Reception & Guest Services" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Reception & Guest Services</h3><p>선상 아이스링크에서 스케이팅과 아이스쇼를 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/b5388d4e-a29f-4da0-beb2-202f6a0431e2/MSC Cruises, MSC Factor.jpg" alt="MSC Events" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Events</h3><p>MSC FactorThink you’ve got what it takes to be a star in our on-board talent competition, The MSC Factor? Then come and showcase what you can do in the most exciting talent show at sea. Whatever your </p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/b5388d4e-a29f-4da0-beb2-202f6a0431e2/MSC Cruises, MSC Factor.jpg" alt="MSC Events" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Events</h3></div>
   </div>
     </div>
 
     <h2 id="health">💆 스파 &amp; 웰니스</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/20/44/50/6fb4a3fb-65a3-47e1-86a5-dcaec501160a/MSC Cruises MSC Lirica MSC Aurea Spa 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="MSC Aurea Spa" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Aurea Spa</h3><p>MSC Aurea Spa boasts an exotic interior of natural stone, precious woods and rich mosaics, and is equipped with specific and massage treatment suites. Being pampered by a traditional Balinese Massage </p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/20/44/50/6fb4a3fb-65a3-47e1-86a5-dcaec501160a/MSC Cruises MSC Lirica MSC Aurea Spa 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="MSC Aurea Spa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Aurea Spa</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/01/14/28/31/395/MSC_Lirica_Class_Le_Piscine_2.jpg" alt="Le Piscine & Children's Spray Park" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Le Piscine & Children's Spray Park</h3><p>Pool area with separate children's Spray Park. Located on Deck Eleven.</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/01/14/28/31/395/MSC_Lirica_Class_Le_Piscine_2.jpg" alt="Le Piscine & Children's Spray Park" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Le Piscine & Children's Spray Park</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/25/10/10/27/90c429b2-6a91-4724-b1eb-0a831ed3cf31/MSC Cruises MSC Lirica Gym Fitness 3.jpg" alt="Gym by TechnoGym®" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Gym by TechnoGym®</h3><p>Fitted with authentic TechnoGym® equipment and featuring panoramic ocean views, the on-board Gym is the place to be for all those who take their fitness regime seriously. Hone your physique with a ful</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/25/10/10/27/90c429b2-6a91-4724-b1eb-0a831ed3cf31/MSC Cruises MSC Lirica Gym Fitness 3.jpg" alt="Gym by TechnoGym®" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Gym by TechnoGym®</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/16/08/34/22/d9d3954b-5a26-4937-9a8c-17302b2a590c/MSC Cruises Walking Track.png" alt="Sport & Fitness" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sport & Fitness</h3><p>BasketballCome to the outdoor basketball court at the Sport Centre for a chance to hang out with friends, have fun shooting hoops and enjoy a full-body workout at the same time. You may not make the l</p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/16/08/34/22/d9d3954b-5a26-4937-9a8c-17302b2a590c/MSC Cruises Walking Track.png" alt="Sport & Fitness" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sport & Fitness</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/01/15/07/12/325/MSC_Lirica_Class_Solarium.jpg" alt="Top 13 Exclusive Solarium" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Top 13 Exclusive Solarium</h3><p>Exclusively for adults, this calm, quiet and peaceful retreat can be found on the Sun Deck.</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/01/15/07/12/325/MSC_Lirica_Class_Solarium.jpg" alt="Top 13 Exclusive Solarium" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Top 13 Exclusive Solarium</h3><p>성인 전용 솔라리움에서 조용하고 평화로운 휴식을 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/20/44/52/cbc1bd04-48af-4e03-a4fa-977808eb2f06/MSC Cruises MSC Lirica MSC Aurea Spa Beauty Sevices ©MSC Rights - Ivan Sarfatti.jpg" alt="Beauty and Hair Salon" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Beauty and Hair Salon</h3><p>You can enjoy the expertise of highly specialised staff in aesthetic treatments to offer you excellent results and improve the relaxing effects of your cruise. Customise your cruise with the best trea</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/14/20/44/52/cbc1bd04-48af-4e03-a4fa-977808eb2f06/MSC Cruises MSC Lirica MSC Aurea Spa Beauty Sevices ©MSC Rights - Ivan Sarfatti.jpg" alt="Beauty and Hair Salon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Beauty and Hair Salon</h3><p>전문 뷰티 살롱에서 헤어와 네일 트리트먼트를 받으세요.</p></div>
   </div>
     </div>
 
     <h2 id="kids">👧 키즈 클럽</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/06/17/14/52/29/28856b2b-a70c-40bf-b6b6-3eb31e40080a/MSC Cruises MSC Armonia Baby Club.jpg" alt="Baby Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Baby Club</h3><p>You can leave your toddlers with our MSC Babycare staff, or stay with them and enjoy the special Chicco toys and games. They'll love our music and rhythm activities, designed to awaken their curiosity</p></div>
+    <img src="https://assets.widgety.co.uk/2019/06/17/14/52/29/28856b2b-a70c-40bf-b6b6-3eb31e40080a/MSC Cruises MSC Armonia Baby Club.jpg" alt="Baby Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Baby Club</h3><p>유아를 위한 전용 공간으로, 안전하고 즐거운 활동을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/06/17/14/07/01/d53dee21-bceb-4af3-8995-9a05265829d3/MSC Cruises MSC Armonia Mini Club.jpg" alt="Mini Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Mini Club</h3><p>The Mini Club welcomes children aged between 3 and 6 years old, bringing them new friends and lots of fun, enriched by the stimulating toys of our partnership with LEGO®. The club offers games, events</p></div>
+    <img src="https://assets.widgety.co.uk/2019/06/17/14/07/01/d53dee21-bceb-4af3-8995-9a05265829d3/MSC Cruises MSC Armonia Mini Club.jpg" alt="Mini Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Mini Club</h3><p>어린이를 위한 미니 클럽으로, 또래 친구들과 다양한 활동을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/06/17/14/52/28/61bff310-bd1f-4b63-a57b-c1267f7ae0ac/MSC Cruises MSC Armonia Junior Club.jpg" alt="Junior Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Junior Club</h3><p>The Junior Club inspires connection and cooperation among 7 to 11-year-olds, through a wide variety of activities. Highlights range from Masterchef at Sea Juniors and Dorebro Sport competitions to our</p></div>
+    <img src="https://assets.widgety.co.uk/2019/06/17/14/52/28/61bff310-bd1f-4b63-a57b-c1267f7ae0ac/MSC Cruises MSC Armonia Junior Club.jpg" alt="Junior Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Junior Club</h3><p>7-11세 어린이를 위한 전용 프로그램을 제공하는 주니어 클럽입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/06/17/14/53/49/26d19f5b-9065-4bbf-a883-299db3f971e5/MSC Cruises MSC Armonia Young Club.jpg" alt="Young Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Young Club</h3><p>With the Young Club, kids from 12 to 14 years old can dive into a world of discovery, involvement and interaction. Each day holds the promise of new experiences, with a dedicated programme of sport to</p></div>
+    <img src="https://assets.widgety.co.uk/2019/06/17/14/53/49/26d19f5b-9065-4bbf-a883-299db3f971e5/MSC Cruises MSC Armonia Young Club.jpg" alt="Young Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Young Club</h3><p>신나는 음악과 함께 춤을 즐길 수 있는 디스코장입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2021/11/24/07/30/37/622de633-310e-44df-8af6-999ec4f9391e/MSC Cruises MSC Armonia Teen Club.jpg" alt="Teen Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Teen Club</h3><p>Teenagers aged from 15 to 17 years old can look forward to having the time of their lives on board. Teen Club activities range from sports and competitions, dance contests and social network games to </p></div>
+    <img src="https://assets.widgety.co.uk/2021/11/24/07/30/37/622de633-310e-44df-8af6-999ec4f9391e/MSC Cruises MSC Armonia Teen Club.jpg" alt="Teen Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Teen Club</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/03/13/50/54/94fc85b9-0bab-46b3-9172-2438614cc5b7/MSC Grandiosa - Family Activities.jpg" alt="Family Activities" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Family Activities</h3><p>Family Game Show - this is a competition for the whole family with dance, music and selfie challenges dedicated to Kelly &amp; Kloe On Board, MSC Cruises’ original web series created for kids and fami</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/03/13/50/54/94fc85b9-0bab-46b3-9172-2438614cc5b7/MSC Grandiosa - Family Activities.jpg" alt="Family Activities" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Family Activities</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/05/10/44/52/530db09c-deb6-466f-b53f-54e972bba5fd/MSC Cruises Family Excursions - MSC Rights.jpg" alt="Family Excursions" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Family Excursions</h3><p>Discover each destination with your children at a rhythm that suits families, thanks to our  Family Fun excursions. Guided by talented, qualified local guides in constant contact with the ship, they a</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/05/10/44/52/530db09c-deb6-466f-b53f-54e972bba5fd/MSC Cruises Family Excursions - MSC Rights.jpg" alt="Family Excursions" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Family Excursions</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/19/12/47/37/d945b2d4-de38-469f-8ec2-a33f914ce0f7/MSC - Family Dining.jpg" alt="Family Dining" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Family Dining</h3><p>Enjoy a culinary voyage of discovery with your children on an MSC Cruise: an array of international dishes and ethnic specialties will delight the whole family with flavours from around the globe.For </p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/19/12/47/37/d945b2d4-de38-469f-8ec2-a33f914ce0f7/MSC - Family Dining.jpg" alt="Family Dining" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Family Dining</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/03/13/53/20/f8c8c95d-3893-4157-be4f-3b8aac8eab28/MSC Grandiosa - Babies and Toddlers Services.jpg" alt="Baby and Toddlers Services" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Baby and Toddlers Services</h3><p>Baby Clubs - along with activities that the whole family can enjoy together, we offer a Baby Club onboard all our ships with dedicated activities and facilities.  MSC Baby Care Service - we have thoug</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/03/13/53/20/f8c8c95d-3893-4157-be4f-3b8aac8eab28/MSC Grandiosa - Babies and Toddlers Services.jpg" alt="Baby and Toddlers Services" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Baby and Toddlers Services</h3><p>유아를 위한 전용 공간으로, 안전하고 즐거운 활동을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/02/14/15/21/47/bbd21b37-a97a-4a27-9e4b-a168260a0856/MSC Cruises LEGO Experience.jpg" alt="Lego® Experience" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Lego® Experience</h3><p>Once during every cruise we hold a special entertainment event called the LEGO® Experience On Board: an entire day dedicated to fun LEGO activities for the whole family to enjoy. Thanks to this specia</p></div>
+    <img src="https://assets.widgety.co.uk/2023/02/14/15/21/47/bbd21b37-a97a-4a27-9e4b-a168260a0856/MSC Cruises LEGO Experience.jpg" alt="Lego® Experience" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Lego® Experience</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/30/08/41/54/e56c5267-c416-4685-8de3-977e49b87840/MSC Cruises Parent Time WEB.jpg" alt="Parent Time" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Parent Time</h3><p>Wind down, lie back, chill out or dress up, and make the most of every marvellous moment.While your kids are having the time of their lives, with our expert staff, you are free to enjoy all of those t</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/30/08/41/54/e56c5267-c416-4685-8de3-977e49b87840/MSC Cruises Parent Time WEB.jpg" alt="Parent Time" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Parent Time</h3></div>
   </div>
     </div>
 
     <h2 id="cabins">🛏️ 객실 등급</h2>
     <div class="cabin-grid">
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/09/20/24/9d1ae9f1-661c-4344-8ee4-83a3a43a6b52/MSC Cruises MSC Lirica Junior Suite Aurea 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Junior Suite Aurea" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/14/09/20/24/9d1ae9f1-661c-4344-8ee4-83a3a43a6b52/MSC Cruises MSC Lirica Junior Suite Aurea 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Junior Suite Aurea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Suite Aurea</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/09/30/24/0ffdddc4-b039-49d3-baad-518192dc4835/MSC Cruises MSC Lirica Junior Balcony 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Junior Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/14/09/30/24/0ffdddc4-b039-49d3-baad-518192dc4835/MSC Cruises MSC Lirica Junior Balcony 1 ©MSC Rights - Ivan Sarfatti.jpg" alt="Junior Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2019/06/24/12/32/59/4c117408-8b42-4a38-8ac5-4a7611a448e9/MSC Cruises MSC Lirica Balcony.jpg" alt="Guarantee Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2019/06/24/12/32/59/4c117408-8b42-4a38-8ac5-4a7611a448e9/MSC Cruises MSC Lirica Balcony.jpg" alt="Guarantee Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/10/14/12/07/36/8a649c52-035c-4c25-886e-e8cb91e9d688/MSC Cruises MSC Lirica Premium Ocean View WEB.png" alt="Premium Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/10/14/12/07/36/8a649c52-035c-4c25-886e-e8cb91e9d688/MSC Cruises MSC Lirica Premium Ocean View WEB.png" alt="Premium Ocean View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Ocean View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2019/06/24/12/33/10/321bb54a-f229-4c31-b87e-72e8283bd583/MSC Cruises MSC Lirica Ocean View.jpg" alt="Junior Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2019/06/24/12/33/10/321bb54a-f229-4c31-b87e-72e8283bd583/MSC Cruises MSC Lirica Ocean View.jpg" alt="Junior Ocean View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Ocean View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2019/06/24/12/33/10/321bb54a-f229-4c31-b87e-72e8283bd583/MSC Cruises MSC Lirica Ocean View.jpg" alt="Junior Ocean View with Obstructed View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2019/06/24/12/33/10/321bb54a-f229-4c31-b87e-72e8283bd583/MSC Cruises MSC Lirica Ocean View.jpg" alt="Junior Ocean View with Obstructed View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Ocean View with Obstructed View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2019/06/24/12/33/10/321bb54a-f229-4c31-b87e-72e8283bd583/MSC Cruises MSC Lirica Ocean View.jpg" alt="Guarantee Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2019/06/24/12/33/10/321bb54a-f229-4c31-b87e-72e8283bd583/MSC Cruises MSC Lirica Ocean View.jpg" alt="Guarantee Ocean View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Ocean View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2019/06/24/12/33/02/ccb55eb6-d860-4970-96a9-1a7a2c2c64b3/MSC Cruises MSC Lirica Inside.jpg" alt="Junior Interior" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2019/06/24/12/33/02/ccb55eb6-d860-4970-96a9-1a7a2c2c64b3/MSC Cruises MSC Lirica Inside.jpg" alt="Junior Interior" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Interior</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2019/06/24/12/33/02/ccb55eb6-d860-4970-96a9-1a7a2c2c64b3/MSC Cruises MSC Lirica Inside.jpg" alt="Guarantee Interior" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2019/06/24/12/33/02/ccb55eb6-d860-4970-96a9-1a7a2c2c64b3/MSC Cruises MSC Lirica Inside.jpg" alt="Guarantee Interior" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Interior</div>
   </div>
     </div>
@@ -343,39 +397,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="deckplan">📐 덱 플랜</h2>
     <div class="deckplan-list">
   <div class="deckplan-item">
-    <img src="" alt="Deck 13 - Sun Deck" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/04/09/57/04/2fb001ae-ef92-4ec6-ac5a-6a1bfbf01e35/MSC Lirica - Deck 13, Sun Deck.png" alt="Deck 13 - Sun Deck" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 13 - Sun Deck</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 12 - Rossini" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/04/09/57/04/41363e6a-67bc-47e9-a6cb-42c8c28c6f52/MSC Lirica - Deck 12, Rossini.png" alt="Deck 12 - Rossini" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 12 - Rossini</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 11- Vivaldi" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/04/09/57/04/d5e9e9a7-3721-4772-98cc-366725c7e4cb/MSC Lirica - Deck 11, Vivaldi.png" alt="Deck 11- Vivaldi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 11- Vivaldi</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 10 - Bellini" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/04/09/57/04/e5b19b26-54bb-432d-9bbe-d0b02581ccc2/MSC Lirica - Deck 10, Bellini.png" alt="Deck 10 - Bellini" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 10 - Bellini</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 9 - Albinoni" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/04/09/57/04/a606a8ca-9178-4d1f-88ab-4282751615f2/MSC Lirica - Deck 9, Albinoni.png" alt="Deck 9 - Albinoni" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 9 - Albinoni</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 8 - Paganini" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/04/09/57/04/bb0201f0-8f6a-423d-9b10-d3268b18fbac/MSC Lirica - Deck 8, Paganini.png" alt="Deck 8 - Paganini" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 8 - Paganini</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 7 - Scarlatti" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/04/09/57/04/7e662156-44b9-4e50-a999-0abb7a13e153/MSC Lirica - Deck 7, Scarlatti.png" alt="Deck 7 - Scarlatti" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 7 - Scarlatti</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 6 - Puccini" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/04/09/57/04/29cc3ac4-e1f2-4938-8dc5-4f9f6b9b9bfa/MSC Lirica - Deck 6, Puccini.png" alt="Deck 6 - Puccini" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 6 - Puccini</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 5 - Verdi" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2024/09/04/09/57/04/7cdc4a04-5d85-499d-9de3-3bf599dbb2a6/MSC Lirica - Deck 5, Verdi.png" alt="Deck 5 - Verdi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 5 - Verdi</p>
   </div>
     </div>

@@ -69,22 +69,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
 
+
     .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
     @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
     .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-card img{width:100%;height:160px;object-fit:cover;display:block}
+    .facility-card .no-img{width:100%;height:160px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem}
     .facility-info{padding:12px}
     .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
     .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
     @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
     .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card img{width:100%;height:120px;object-fit:cover;display:block}
+    .cabin-card .no-img{width:100%;height:120px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
     .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
     .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
     @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
-    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200);display:block}
+    .deckplan-item .no-img{width:100%;height:200px;background:var(--gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem}
     .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
@@ -124,102 +128,123 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+
     <h2 id="dining">🍽️ 다이닝</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/29/17/40/46/5b256d8d-58a3-4d7d-997d-e48f491d9e2a/Celebrity Flora - Seaside Restaurant, ©CEL.jpg" alt="Seaside Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Seaside Restaurant</h3><p>The main restaurant, Seaside Restaurant on Deck 4, serves breakfast, lunch and dinner, with a dinner menu that offers Celebrity Signature dishes every night throughout your cruise as well as Ecuadoria</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/29/17/40/46/5b256d8d-58a3-4d7d-997d-e48f491d9e2a/Celebrity Flora - Seaside Restaurant, ©CEL.jpg" alt="Seaside Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Seaside Restaurant</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/29/17/40/46/d61901dd-e588-488f-8d91-2852524dccc5/Celebrity Flora - Ocean Grill, ©CEL.jpg" alt="Ocean Grill Restaurant " loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Ocean Grill Restaurant </h3><p>From grilling up the highest quality sustainable seafood for lunch, to the spectacular Dinner Under the Stars, Ocean Grill is the envy of any destination restaurant—on land or at sea.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/29/17/40/46/d61901dd-e588-488f-8d91-2852524dccc5/Celebrity Flora - Ocean Grill, ©CEL.jpg" alt="Ocean Grill Restaurant " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Ocean Grill Restaurant </h3><p>신선한 해산물 요리를 전문으로 하는 레스토랑입니다.</p></div>
   </div>
     </div>
 
     <h2 id="entertainment">🎭 엔터테인먼트</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/27/8bf40ae9-f70d-4ed9-beab-0ea712f1dc0d/Celebrity Flora - Observatory 1, ©CEL.jpg" alt="The Observatory" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Observatory</h3><p>Want to learn even more about the Galapagos? Head up to the Observatory—our stunning library dedicated to the Galapagos Islands, surrounded by floor-to-ceiling windows. There’s no better place to cozy</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/27/8bf40ae9-f70d-4ed9-beab-0ea712f1dc0d/Celebrity Flora - Observatory 1, ©CEL.jpg" alt="The Observatory" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Observatory</h3><p>독서와 카드 게임을 즐길 수 있는 조용한 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/27/944cf766-efe5-4562-8563-3f88f72aa086/Celebrity Flora - Discovery Centre 5, ©CEL.jpg" alt="Discovery Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Discovery Lounge</h3><p>When you’re not learning about the islands from our team of Naturalists, the Discovery Lounge is where you’ll be socialising, unwinding, and being entertained by performances and conversations with yo</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/27/944cf766-efe5-4562-8563-3f88f72aa086/Celebrity Flora - Discovery Centre 5, ©CEL.jpg" alt="Discovery Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Discovery Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/29/35c0eb8f-7bd4-4f25-bcf4-6251b943c361/Celebrity Flora - The Vista 3, ©CEL.jpg" alt="The Vista" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Vista</h3><p>This open-air hideaway is the ultimate place for unwinding. Slip into the hot tub for a muscle soothing soak or sink into a cocoon-style lounger.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/29/35c0eb8f-7bd4-4f25-bcf4-6251b943c361/Celebrity Flora - The Vista 3, ©CEL.jpg" alt="The Vista" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Vista</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/28/22de2250-899e-4ad5-8678-ccd1e74db7ba/Celebrity Flora - Sunset Lounge 2, ©CEL.jpg" alt="Sunset Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sunset Lounge</h3><p>Slip into the plunge pool and soak a while. Catch some rays in the sunny areas or escape the sun in the shady spots. This intimate scene, which accommodates up to 26 guests, offers chaise lounges that</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/28/22de2250-899e-4ad5-8678-ccd1e74db7ba/Celebrity Flora - Sunset Lounge 2, ©CEL.jpg" alt="Sunset Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sunset Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/28/f3860335-4beb-4bd3-b77d-d469b884c7e4/Celebrity Flora - Stargazing Deck 1, ©CEL.jpg" alt="Stargazing Deck" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Stargazing Deck</h3><p>With space for 30 guests, this vantage point directs your gaze up to the sky at night and out to the islands by day</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/28/f3860335-4beb-4bd3-b77d-d469b884c7e4/Celebrity Flora - Stargazing Deck 1, ©CEL.jpg" alt="Stargazing Deck" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Stargazing Deck</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/26/1065c8e4-c312-41f4-8301-3b38ec0b9795/Celebrity Flora - Darwins Cove, ©CEL.jpg" alt="Darwin’s Cove" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Darwin’s Cove</h3><p>Located on deck 3, this area for up to 72 guests houses Guest Relations, where you check in at arrival and find answers throughout your sailing.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/26/1065c8e4-c312-41f4-8301-3b38ec0b9795/Celebrity Flora - Darwins Cove, ©CEL.jpg" alt="Darwin’s Cove" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Darwin’s Cove</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/10/12/55/30/4d1f66cb-343e-48c0-832a-d621e3697569/Celebrity Cruises, Celebrity Flora, Shops - Credit - ©CEL.jpeg" alt="Shops" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Shops</h3><p>There are small shops with limited expedition gear as well as some souvenirs. In addition, there is a limited quantity of sunscreen and other sundries available.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/10/12/55/30/4d1f66cb-343e-48c0-832a-d621e3697569/Celebrity Cruises, Celebrity Flora, Shops - Credit - ©CEL.jpeg" alt="Shops" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Shops</h3></div>
   </div>
     </div>
 
     <h2 id="health">💆 스파 &amp; 웰니스</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/39/c10181f0-f265-4b23-aaf3-fa12de4b97b0/Celebrity Flora - Spa Treatment Room 1, ©CEL.jpg" alt="Spa" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Spa</h3><p>The Spa can be found on Deck 5.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/39/c10181f0-f265-4b23-aaf3-fa12de4b97b0/Celebrity Flora - Spa Treatment Room 1, ©CEL.jpg" alt="Spa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Spa</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/39/22c6a730-7848-4f8f-94c6-47a8e770a55c/Celebrity Flora - Fitness Room 1, ©CEL.jpg" alt="Fitness Room" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Fitness Room</h3><p>The Fitness Room can be found on Deck 5.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/39/22c6a730-7848-4f8f-94c6-47a8e770a55c/Celebrity Flora - Fitness Room 1, ©CEL.jpg" alt="Fitness Room" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Fitness Room</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/39/174b451d-bac3-4c03-adf7-b0876e9ed403/Celebrity Flora - Jacuzzi 1, ©CEL.jpg" alt="Hot Tub" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Hot Tub</h3><p>The Hot Tub can be found on Deck 8.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/11/39/174b451d-bac3-4c03-adf7-b0876e9ed403/Celebrity Flora - Jacuzzi 1, ©CEL.jpg" alt="Hot Tub" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Hot Tub</h3></div>
   </div>
     </div>
 
     <h2 id="kids">👧 키즈 클럽</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/18/23/6cfddd37-efc6-4699-83d8-e651cc0a727f/Celebrity Flora - Marina 3, ©CEL.jpg" alt="EarthEcho" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>EarthEcho</h3><p>We’ve partnered with EarthEcho International, a nonprofit organisation founded by Philippe Cousteau. Jr., to introduce a comprehensive and customised youth program designed to empower a new generation</p></div>
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/18/23/6cfddd37-efc6-4699-83d8-e651cc0a727f/Celebrity Flora - Marina 3, ©CEL.jpg" alt="EarthEcho" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>EarthEcho</h3><p>어린이와 청소년을 위한 전용 클럽으로, 다양한 교육적 활동을 제공합니다.</p></div>
   </div>
     </div>
 
     <h2 id="cabins">🛏️ 객실 등급</h2>
     <div class="cabin-grid">
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/14/e1016cf9-353f-4d9a-8cdc-6a831c7e2c4d/Celebrity Flora - Penthouse Suite 8, ©CEL.jpg" alt="Penthouse Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/14/e1016cf9-353f-4d9a-8cdc-6a831c7e2c4d/Celebrity Flora - Penthouse Suite 8, ©CEL.jpg" alt="Penthouse Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Penthouse Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/15/c366dafb-0055-4b31-a0bb-325c61eaee6e/Celebrity Flora - Royal Suite 4, ©CEL.jpg" alt="Royal Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/15/c366dafb-0055-4b31-a0bb-325c61eaee6e/Celebrity Flora - Royal Suite 4, ©CEL.jpg" alt="Royal Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Royal Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/16/d9635e73-c13e-4bfe-b5d0-78ac95270995/Celebrity Flora - Ultimate Sky Suite with Infinite Veranda 1, ©CEL.jpg" alt="Ultimate Sky Suite with Infinite Veranda℠" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/16/d9635e73-c13e-4bfe-b5d0-78ac95270995/Celebrity Flora - Ultimate Sky Suite with Infinite Veranda 1, ©CEL.jpg" alt="Ultimate Sky Suite with Infinite Veranda℠" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Ultimate Sky Suite with Infinite Veranda℠</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/15/985b0215-6045-42c1-b586-36b286e3a75c/Celebrity Flora - Sky Suite with Infinite Veranda 2, ©CEL.jpg" alt="Premium Sky Suite with Infinite Veranda℠" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/15/985b0215-6045-42c1-b586-36b286e3a75c/Celebrity Flora - Sky Suite with Infinite Veranda 2, ©CEL.jpg" alt="Premium Sky Suite with Infinite Veranda℠" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Sky Suite with Infinite Veranda℠</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/16/fe53a030-cf5f-40a3-a74e-c8f8f9e4dd0e/Celebrity Flora - Sky Suite with Infinite Veranda 3, ©CEL.jpg" alt="Sky Suites with Infinite Veranda℠" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/16/fe53a030-cf5f-40a3-a74e-c8f8f9e4dd0e/Celebrity Flora - Sky Suite with Infinite Veranda 3, ©CEL.jpg" alt="Sky Suites with Infinite Veranda℠" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Sky Suites with Infinite Veranda℠</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/16/d9635e73-c13e-4bfe-b5d0-78ac95270995/Celebrity Flora - Ultimate Sky Suite with Infinite Veranda 1, ©CEL.jpg" alt="Sky Suite with Veranda" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/16/d9635e73-c13e-4bfe-b5d0-78ac95270995/Celebrity Flora - Ultimate Sky Suite with Infinite Veranda 1, ©CEL.jpg" alt="Sky Suite with Veranda" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Sky Suite with Veranda</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/16/4ab50aba-c58e-45dc-90d9-932666b6c2b2/Celebrity Flora - Suite Guarantee.jpg" alt="Deluxe Guarantee" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/01/30/16/10/16/4ab50aba-c58e-45dc-90d9-932666b6c2b2/Celebrity Flora - Suite Guarantee.jpg" alt="Deluxe Guarantee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Guarantee</div>
   </div>
     </div>
@@ -227,27 +252,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="deckplan">📐 덱 플랜</h2>
     <div class="deckplan-list">
   <div class="deckplan-item">
-    <img src="" alt="Deck 8" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/01/29/12/32/53/99bcac12-4759-490e-9e4d-dfd01f7330e6/Celebrity Flora - Deck 8.png" alt="Deck 8" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 8</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 7" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/01/29/12/32/52/a9f5044f-5926-4e09-adf3-1a62f69c121c/Celebrity Flora - Deck 7.png" alt="Deck 7" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 7</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 6" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/01/29/12/32/52/17f2ae9f-a67a-4c30-a5c7-ffe045908fee/Celebrity Flora - Deck 6.png" alt="Deck 6" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 6</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 5" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/01/29/12/32/52/a5b8f7e7-7e3d-4877-81d2-616b574c1b92/Celebrity Flora - Deck 5.png" alt="Deck 5" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 5</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 4" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/01/29/12/32/52/62b46059-e3d4-4c48-b3ae-6c096f5626b0/Celebrity Flora - Deck 4.png" alt="Deck 4" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 4</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 3" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/01/29/12/32/52/4d279621-831e-42bc-a7e7-1e6360871f63/Celebrity Flora - Deck 3.png" alt="Deck 3" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 3</p>
   </div>
     </div>

@@ -69,22 +69,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
 
+
     .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
     @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
     .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-card img{width:100%;height:160px;object-fit:cover;display:block}
+    .facility-card .no-img{width:100%;height:160px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem}
     .facility-info{padding:12px}
     .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
     .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
     @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
     .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card img{width:100%;height:120px;object-fit:cover;display:block}
+    .cabin-card .no-img{width:100%;height:120px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
     .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
     .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
     @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
-    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200);display:block}
+    .deckplan-item .no-img{width:100%;height:200px;background:var(--gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem}
     .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
@@ -124,206 +128,253 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+
     <h2 id="dining">🍽️ 다이닝</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/01/37/798e98c6-a1a2-4be1-a58c-e6d815a50e79/Regent Seven Seas EXPLORER Pacific Rim 1.jpg" alt="Pacific Rim" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Pacific Rim</h3><p>Walk past the Tibetan Prayer wheel at the Pacific Rim entrance and be prepared for an evening of culinary perfection with an array of Pan-Asian flavors and dishes. An elegantly exotic eatery.Maximise </p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/01/37/798e98c6-a1a2-4be1-a58c-e6d815a50e79/Regent Seven Seas EXPLORER Pacific Rim 1.jpg" alt="Pacific Rim" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Pacific Rim</h3><p>다채로운 아시안 퀴진을 선보이는 레스토랑으로, 동남아부터 일식까지 다양한 메뉴를 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/01/45/2cf6919d-d71f-4c7b-84c9-9e1e1f07cf4f/Regent Seven Seas EXPLORER Compass Rose 1.jpg" alt="Compass Rose" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Compass Rose</h3><p>The wondrous colors outside Seven Seas Explorer® are no match for the vivid cobalt-blue glass installation on the ceiling of our elegant Compass Rose, a perfect setting for breakfast and dinner.We are</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/01/45/2cf6919d-d71f-4c7b-84c9-9e1e1f07cf4f/Regent Seven Seas EXPLORER Compass Rose 1.jpg" alt="Compass Rose" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Compass Rose</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2020/01/06/09/33/54/313614a6-ccc1-4380-9cd6-dc891a292851/Regent Seven Seas Cruises - Seven Seas Explorer - Pool Grill.jpg" alt="Pool Grill" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Pool Grill</h3><p>When you desire a quick bite after sunbathing or swimming in the pool, our Pool Grill is the place for grilled-to-order burgers, seafood, sandwiches, even hand-dipped ice cream sprinkled with tasty to</p></div>
+    <img src="https://assets.widgety.co.uk/2020/01/06/09/33/54/313614a6-ccc1-4380-9cd6-dc891a292851/Regent Seven Seas Cruises - Seven Seas Explorer - Pool Grill.jpg" alt="Pool Grill" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Pool Grill</h3><p>신선한 해산물 요리를 전문으로 하는 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/01/40/f3ab2b90-e5b8-403c-8a27-2f721e772b11/Regent Seven Seas EXPLORER La Veranda 1.jpg" alt="La Veranda" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>La Veranda</h3><p>Located on Deck 11 aft, guests take in stunning ocean views while enjoying elegant breakfast and lunch buffets in the chic indoor dining room or al fresco on the shaded, open-air deck.Take in stunning</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/01/40/f3ab2b90-e5b8-403c-8a27-2f721e772b11/Regent Seven Seas EXPLORER La Veranda 1.jpg" alt="La Veranda" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>La Veranda</h3><p>정찬 코스를 즐길 수 있는 메인 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/01/31/c9aa2528-fc2f-47b4-8603-c4921cad6716/Regent Seven Seas EXPLORER Prime 7 1.jpg" alt="Prime 7" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Prime 7</h3><p>From perfectly aged New York strip, porterhouse and succulent filet mignon to smoked salmon with a phenomenal tamarind-whiskey sauce, Prime 7 elevates classic American fare to lofty heights.A true cla</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/01/31/c9aa2528-fc2f-47b4-8603-c4921cad6716/Regent Seven Seas EXPLORER Prime 7 1.jpg" alt="Prime 7" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Prime 7</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/01/41/d796795d-58a5-4f12-9622-1dd2e154013f/Regent Seven Seas EXPLORER La Veranda 0.jpg" alt="Sette Mari at La Veranda" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sette Mari at La Veranda</h3><p>Enjoy an extensive menu of authentic antipasti and Italian specialties served á la carte and paired with fine Italian wines. All dishes are prepared with the freshest gourmet ingredients and served by</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/01/41/d796795d-58a5-4f12-9622-1dd2e154013f/Regent Seven Seas EXPLORER La Veranda 0.jpg" alt="Sette Mari at La Veranda" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sette Mari at La Veranda</h3><p>이탈리안 정통 요리를 즐길 수 있는 레스토랑으로, 파스타와 피자 등 클래식 메뉴를 선보입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/01/48/0e52c512-5739-4d13-9d65-ae43c0151a25/Regent Seven Seas EXPLORER Chartreuse 1.jpg" alt="Chartreuse" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Chartreuse</h3><p>A restaurant with a modern French menu and attention to detail you’ll notice in its Parisian décor, expertly prepared dishes and wait staff. About the closest thing to a Parisian culinary gem on the h</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/01/48/0e52c512-5739-4d13-9d65-ae43c0151a25/Regent Seven Seas EXPLORER Chartreuse 1.jpg" alt="Chartreuse" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Chartreuse</h3><p>프렌치 퀴진을 선보이는 고급 레스토랑으로, 우아한 분위기에서 다이닝을 즐기세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/05/24/55/376b5964-a2e3-4c1b-984d-53a4b037847f/Regent Seven Seas EXPLORER Coffee Connection 0.jpg" alt="Coffee Connection" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Coffee Connection</h3><p>Grab a barista-made coffee, check the headlines of international newspapers or choose from a variety of handmade pastries in our cozy café which is open throughout the day.Enjoy complimentary coffee d</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/05/24/55/376b5964-a2e3-4c1b-984d-53a4b037847f/Regent Seven Seas EXPLORER Coffee Connection 0.jpg" alt="Coffee Connection" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Coffee Connection</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/03/10/12/29/57/2768d203-e17d-48cc-b198-2fbaf42b2ed8/Regent Seven Seas Cruises Room Service 2.jpg" alt="Room Service" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Room Service</h3><p>Knowing that guests sometimes prefer to simply dine in the comfort of their suites, we offer room service around the clock. Select from an extensive room service menu and the wait staff will promptly </p></div>
+    <img src="https://assets.widgety.co.uk/2023/03/10/12/29/57/2768d203-e17d-48cc-b198-2fbaf42b2ed8/Regent Seven Seas Cruises Room Service 2.jpg" alt="Room Service" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Room Service</h3><p>객실에서 편안하게 즐기는 룸서비스로, 언제든지 원하는 음식을 주문할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2020/01/06/08/25/47/cc9b521c-4928-48aa-96cd-f6812f42e9cb/Regent Seven Seas Cruises - Seven Seas Splendor - The Study.jpg" alt="The Study" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Study</h3><p>Guests of the most luxurious suite on the high seas — the Regent Suite on Seven Seas Explorer® — have exclusive access to The Study, a private, ornately decorated dining room that seats up to 12 guest</p></div>
+    <img src="https://assets.widgety.co.uk/2020/01/06/08/25/47/cc9b521c-4928-48aa-96cd-f6812f42e9cb/Regent Seven Seas Cruises - Seven Seas Splendor - The Study.jpg" alt="The Study" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Study</h3><p>정찬 코스를 즐길 수 있는 메인 레스토랑입니다.</p></div>
   </div>
     </div>
 
     <h2 id="entertainment">🎭 엔터테인먼트</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/10/e6bc921b-b3e5-4d5a-ad3c-157f14cb4b1b/Regent Seven Seas EXPLORER Explorer Lounge 1.jpg" alt="Explorer Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Explorer Lounge</h3><p>The perfect spot to begin or end an evening, our Explorer Lounge inspires intimate conversations over perfectly mixed cocktails at an elegant, black marble bar while resident musicians play soothing l</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/10/e6bc921b-b3e5-4d5a-ad3c-157f14cb4b1b/Regent Seven Seas EXPLORER Explorer Lounge 1.jpg" alt="Explorer Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Explorer Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/07/d43ac917-a6c1-4d7e-ae41-03e04f5906d8/Regent Seven Seas EXPLORER Observation Lounge 1.jpg" alt="Observation Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Observation Lounge</h3><p>With musicians performing throughout the day and night, captivating décor and floor-to-ceiling windows, you’ll be instantly drawn to this chic yet comfortable lounge as you unwind with a cocktail and </p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/07/d43ac917-a6c1-4d7e-ae41-03e04f5906d8/Regent Seven Seas EXPLORER Observation Lounge 1.jpg" alt="Observation Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Observation Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/05/9557b152-ad01-4194-a1d9-f1a9af5def2c/Regent Seven Seas EXPLORER Theater 0.jpg" alt="Constellation Theater" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Constellation Theater</h3><p>Even before the lights drop and a lavishly staged, high-energy show begins, you're greeted by a Gatsby-esque atmosphere of glamor and sophistication as you enter our Constellation Theatre.A dazzling s</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/05/9557b152-ad01-4194-a1d9-f1a9af5def2c/Regent Seven Seas EXPLORER Theater 0.jpg" alt="Constellation Theater" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Constellation Theater</h3><p>브로드웨이 스타일의 대형 공연장으로, 세계적 수준의 쇼와 공연을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2019/05/13/09/23/03/9ff12a2d-40cd-462f-be44-b87fa4feaab6/connoisseur club.jpg" alt="Connoisseur Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Connoisseur Club</h3><p>Engage in spirited conversation with new friends in an elegant hideaway that calls to mind gentleman's clubs of old. An elegant throwback where cigars are savored, you’ll take to like a favorite cardi</p></div>
+    <img src="https://assets.widgety.co.uk/2019/05/13/09/23/03/9ff12a2d-40cd-462f-be44-b87fa4feaab6/connoisseur club.jpg" alt="Connoisseur Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Connoisseur Club</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/15/89789f0b-9018-48f9-ae65-1d05977b8929/Regent Seven Seas EXPLORER Atrium.jpg" alt="Atrium " loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Atrium </h3><p>Simply put, the Atrium is the very heart of Seven Seas Explorer®. Natural light cascades from above but it’s a magnificent chandelier shining like a glowing star that steals the show.Often described a</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/15/89789f0b-9018-48f9-ae65-1d05977b8929/Regent Seven Seas EXPLORER Atrium.jpg" alt="Atrium " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Atrium </h3><p>선상 아이스링크에서 스케이팅과 아이스쇼를 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/13/ede0659c-1155-458c-b0cc-683669a43505/Regent Seven Seas EXPLORER Casino.jpg" alt="The Casino" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Casino</h3><p>Enjoy the elegance and excitement of a Monte Carlo-style casino. Stride through the Casino's glass doors to an elegant setting abuzz with Blackjack, roulette, poker, as well as slot machines.Get a tas</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/13/ede0659c-1155-458c-b0cc-683669a43505/Regent Seven Seas EXPLORER Casino.jpg" alt="The Casino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Casino</h3><p>라스베이거스 스타일의 카지노로, 슬롯머신과 테이블 게임을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2020/01/06/08/54/42/a45080cb-1ddd-403c-9cdb-c7a4cb801eca/Regent Seven Seas Cruises - Seven Seas Explorer - Meridian Lounge.jpg" alt="Meridian Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Meridian Lounge</h3><p>A popular spot for informal gatherings over impromptu cocktails, you may find yourself here after a thrilling theater experience. Meridian Lounge is a spacious, friendly space with an expansive bar an</p></div>
+    <img src="https://assets.widgety.co.uk/2020/01/06/08/54/42/a45080cb-1ddd-403c-9cdb-c7a4cb801eca/Regent Seven Seas Cruises - Seven Seas Explorer - Meridian Lounge.jpg" alt="Meridian Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Meridian Lounge</h3><p>브로드웨이 스타일의 대형 공연장으로, 세계적 수준의 쇼와 공연을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/14/15/c89fef13-7e21-42ea-9513-d83aefd6f31a/Regent Seven Seas EXPLORER Card Room.png" alt="Card Room" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Card Room</h3><p>Clubby and comfortable, our Card Room is a charming spot for you and new friends to gather for friendly competition in elegant surroundings.An inviting and tranquil oasis dedicated to the pure pleasur</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/14/15/c89fef13-7e21-42ea-9513-d83aefd6f31a/Regent Seven Seas EXPLORER Card Room.png" alt="Card Room" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Card Room</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/10/9eee7b53-ecb8-4fc2-990f-d57602abadb7/Regent Seven Seas EXPLORER Library 0.jpg" alt="Library" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Library</h3><p>Choose from a large selection of reading material in our Library, a relaxing retreat dedicated to calming the senses as well as stimulating the brain.Well-stocked and exceedingly comfortable, you'll i</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/10/9eee7b53-ecb8-4fc2-990f-d57602abadb7/Regent Seven Seas EXPLORER Library 0.jpg" alt="Library" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Library</h3><p>독서와 카드 게임을 즐길 수 있는 조용한 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/14/5d79e83e-7405-4bb7-a715-a33a647f350b/Regent Seven Seas EXPLORER Boutique.jpg" alt="Boutique" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Boutique</h3><p>Perhaps it's a dress to wear for dinner or a piece of jewellery that calls your name. Our boutique items are carefully selected, providing you with quality handbags, fragrances and clothes to give as </p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/25/06/12/14/5d79e83e-7405-4bb7-a715-a33a647f350b/Regent Seven Seas EXPLORER Boutique.jpg" alt="Boutique" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Boutique</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2020/01/06/09/37/11/814e9fca-8e6c-4d1b-a55a-9a2175e1829e/Regent Seven Seas Cruises - Seven Seas Explorer - Pool Bar.jpg" alt="Pool Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Pool Bar</h3><p>Very few things equate to a pure vacation activity more than sitting at our Pool Bar. Make new friends while sipping a cocktail or frozen drink in the most laid-back atmosphere imaginable.When you env</p></div>
+    <img src="https://assets.widgety.co.uk/2020/01/06/09/37/11/814e9fca-8e6c-4d1b-a55a-9a2175e1829e/Regent Seven Seas Cruises - Seven Seas Explorer - Pool Bar.jpg" alt="Pool Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Pool Bar</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/19/08/33/41/26faba1e-b0c9-432d-9671-28511fc98e82/RSSC Business Center.png" alt="Business Centre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Business Centre</h3><p>For those who've chosen to leave their laptops at home, desktop computers are available at our staffed Business Centre. Of course, you may access WiFi without charge throughout the entirety of the shi</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/19/08/33/41/26faba1e-b0c9-432d-9671-28511fc98e82/RSSC Business Center.png" alt="Business Centre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Business Centre</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/03/22/08/07/04/7c76e8b6-dd33-4fb8-9a4e-60ffb17874f0/RSSC, Personalised Services, Reception Concierge.jpg" alt="Reception & Concierge/General Manager" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Reception & Concierge/General Manager</h3><p>Turn to the Reception Desk for answers to questions about your Seven Seas Explorer® experience. Our knowledgeable staff is available day and night. You may also contact the ship's Concierge here.Our R</p></div>
+    <img src="https://assets.widgety.co.uk/2024/03/22/08/07/04/7c76e8b6-dd33-4fb8-9a4e-60ffb17874f0/RSSC, Personalised Services, Reception Concierge.jpg" alt="Reception & Concierge/General Manager" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Reception & Concierge/General Manager</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2020/01/06/08/13/26/58b3ad1e-4b64-434f-8dd2-ec59b8d49010/Regent Seven Seas Cruises - Seven Seas Splendor - Destination Services.jpg" alt="Destination Services " loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Destination Services </h3><p>A great resource if you’re keen on making the most of your time in port cities. Visit Destination Services to book a FREE Unlimited Shore Excursion or unique, small-group Regent Choice Shore Excursion</p></div>
+    <img src="https://assets.widgety.co.uk/2020/01/06/08/13/26/58b3ad1e-4b64-434f-8dd2-ec59b8d49010/Regent Seven Seas Cruises - Seven Seas Splendor - Destination Services.jpg" alt="Destination Services " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Destination Services </h3><p>선상 아이스링크에서 스케이팅과 아이스쇼를 즐길 수 있습니다.</p></div>
   </div>
     </div>
 
     <h2 id="health">💆 스파 &amp; 웰니스</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/24/09/12/34/48859db2-1843-4823-be86-6ed90874ad14/Regent Seven Seas EXPLORER Serene Spa 0.jpg" alt="Serene Spa & Wellness™" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Serene Spa & Wellness™</h3><p>A globally inspired, tranquil haven of health, beauty and wellness, our spa offers restorative treatments and activities that incorporate globally sourced, natural ingredients to soothe both the body </p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/24/09/12/34/48859db2-1843-4823-be86-6ed90874ad14/Regent Seven Seas EXPLORER Serene Spa 0.jpg" alt="Serene Spa & Wellness™" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Serene Spa & Wellness™</h3><p>전문 뷰티 살롱에서 헤어와 네일 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/12/09/09/51/04/5d26a8ba-703e-47e5-8983-ad1d423a79ba/Regent Seven Seas Cruises, Seven Seas Explorer, Pool Deck.jpg" alt="Pool Deck" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Pool Deck</h3><p>On days you wish to lounge by a pool, head here. You’ll be greeted by a Pool Deck with an unforgettable vista, elegant teak accents and an amiable crew offering cold drinks and lounge chairs with plus</p></div>
+    <img src="https://assets.widgety.co.uk/2024/12/09/09/51/04/5d26a8ba-703e-47e5-8983-ad1d423a79ba/Regent Seven Seas Cruises, Seven Seas Explorer, Pool Deck.jpg" alt="Pool Deck" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Pool Deck</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/24/07/06/39/8341b41c-b389-4265-8c81-d5ec4e11b243/Regent Seven Seas Yoga Fitness Wellness.jpg" alt="Sports Deck" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sports Deck</h3><p>Practice your golf swing, go for a jog around the track, or gather some new friends for a spirited (but fun) game of bocce ball, all while taking in stunning views and fresh, ocean air.You may visit o</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/24/07/06/39/8341b41c-b389-4265-8c81-d5ec4e11b243/Regent Seven Seas Yoga Fitness Wellness.jpg" alt="Sports Deck" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sports Deck</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2020/03/17/10/10/12/3a2dd226-315f-4440-a94b-9cb8f35e84e0/RSSC - Seven Seas Explorer - Wellness - Infinity Pool.jpg" alt="Infinity Pool" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Infinity Pool</h3><p>What better way to relax your body and mind than in a refreshing pool with dramatic views every way you turn? Discover this and an inviting teak-deck terrace for yourself, just outside Serene Spa and </p></div>
+    <img src="https://assets.widgety.co.uk/2020/03/17/10/10/12/3a2dd226-315f-4440-a94b-9cb8f35e84e0/RSSC - Seven Seas Explorer - Wellness - Infinity Pool.jpg" alt="Infinity Pool" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Infinity Pool</h3><p>신나는 음악과 함께 춤을 즐길 수 있는 디스코장입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/30/11/41/28/64b900a0-67d1-4ed3-ae25-3a967be5817b/Regent Seven Seas Cruises Seven Seas Explorer Fitness Center.jpg" alt="Fitness Centre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Fitness Centre</h3><p>Look after yourself at sea. Take part in Pilates, yoga and aerobics classes or help yourself to spinning bikes, dumbbells, treadmills, Technogym Strength Machines, workout mats and step benches. For g</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/30/11/41/28/64b900a0-67d1-4ed3-ae25-3a967be5817b/Regent Seven Seas Cruises Seven Seas Explorer Fitness Center.jpg" alt="Fitness Centre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Fitness Centre</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/10/24/06/45/12/74c90dfe-aea8-4258-a550-92f88593259e/Regent Seven Seas Jogging Track.png" alt="Jogging Track" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Jogging Track</h3><p>If you have a regular walking or running routine, fear not – your healthy habit can be maintained while cruising the high seas. Regardless of the speed you traverse our track, dramatic views and fresh</p></div>
+    <img src="https://assets.widgety.co.uk/2023/10/24/06/45/12/74c90dfe-aea8-4258-a550-92f88593259e/Regent Seven Seas Jogging Track.png" alt="Jogging Track" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Jogging Track</h3><p>갑판 조깅 트랙에서 신선한 바다 공기를 마시며 달려보세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2020/01/06/11/17/10/d2666058-f0fc-4058-a834-9efdda53a866/Regent Seven Seas Cruises - Seven Seas Voyager - Golf Net.jpg" alt="Golf Net" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Golf Net</h3><p>If the mood strikes to work on your fairway swing, head to our Golf Net. All equipment is provided for you to practice your swing while soaking up the most glorious views imaginable.The glorious ocean</p></div>
+    <img src="https://assets.widgety.co.uk/2020/01/06/11/17/10/d2666058-f0fc-4058-a834-9efdda53a866/Regent Seven Seas Cruises - Seven Seas Voyager - Golf Net.jpg" alt="Golf Net" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Golf Net</h3><p>바다 전망을 즐기며 골프 퍼팅을 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2020/01/06/11/22/29/e8f2d42b-8e3a-402d-a0be-5e822e9dccf2/Regent Seven Seas Cruises - Seven Seas Explorer - Bocce Court.jpg" alt="Bocce Court" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Bocce Court</h3><p>Gather some friends and engage in a game originated in 5,000 BC. Our Bocce Court has the requisite equipment – a pallina and 8 larger balls – for you to engage in a spirited contest as the sun sets.Th</p></div>
+    <img src="https://assets.widgety.co.uk/2020/01/06/11/22/29/e8f2d42b-8e3a-402d-a0be-5e822e9dccf2/Regent Seven Seas Cruises - Seven Seas Explorer - Bocce Court.jpg" alt="Bocce Court" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Bocce Court</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2020/01/06/11/23/55/396817fa-6584-4b89-9629-3621739be1b3/Regent Seven Seas Cruises - Seven Seas Explorer - Shuffleboard.jpg" alt="Shuffleboard" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Shuffleboard</h3><p>Probably the game most associated with cruise ships, shuffleboard onboard Seven Seas Explorer® is a more dramatic affair. High atop your ship, you won't mind awaiting your turn as you take in glorious</p></div>
+    <img src="https://assets.widgety.co.uk/2020/01/06/11/23/55/396817fa-6584-4b89-9629-3621739be1b3/Regent Seven Seas Cruises - Seven Seas Explorer - Shuffleboard.jpg" alt="Shuffleboard" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Shuffleboard</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2020/01/06/11/15/37/03076285-8130-4089-a61c-33ce5fb90098/Regent Seven Seas Cruises - Seven Seas Voyager - Paddle Tennis Court.jpg" alt="Paddle Tennis Court " loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Paddle Tennis Court </h3><p>Our completely screened and well-maintained paddle tennis court will beckon you and your teammates to win at all costs – or simply enjoy a fun game of paddle tennis or two.One look at our Paddle Tenni</p></div>
+    <img src="https://assets.widgety.co.uk/2020/01/06/11/15/37/03076285-8130-4089-a61c-33ce5fb90098/Regent Seven Seas Cruises - Seven Seas Voyager - Paddle Tennis Court.jpg" alt="Paddle Tennis Court " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Paddle Tennis Court </h3><p>테니스 코트에서 바다를 바라보며 테니스를 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2020/01/06/11/25/58/c7e74db7-a7f4-4689-b99d-ad120f583450/Regent Seven Seas Cruises - Seven Seas Explorer - Putting Green.jpg" alt="Putting Green " loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Putting Green </h3><p>Not nearly as serious as the Golf Net, our Putting Greens invite you to gather friends – perhaps after an afternoon cocktail – for a spirited round of putt-putt golf or two.While the Golf Net is meant</p></div>
+    <img src="https://assets.widgety.co.uk/2020/01/06/11/25/58/c7e74db7-a7f4-4689-b99d-ad120f583450/Regent Seven Seas Cruises - Seven Seas Explorer - Putting Green.jpg" alt="Putting Green " loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Putting Green </h3><p>바다 전망을 즐기며 골프 퍼팅을 즐길 수 있는 공간입니다.</p></div>
   </div>
     </div>
 
     <h2 id="kids">👧 키즈 클럽</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/10/30/12/34/35/98a534f8-9aac-412a-9ddb-bdec2e0f9281/Regent Seven Seas Cruises Seven Seas Explorer Club Mariner.jpg" alt="Club Mariner" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Club Mariner</h3><p>Families with young travellers will enjoy our Club Mariner Youth Program on select voyages. Children ages 5 to 17 can participate in a range of specialised activities, from mini-putt tournaments to da</p></div>
+    <img src="https://assets.widgety.co.uk/2025/10/30/12/34/35/98a534f8-9aac-412a-9ddb-bdec2e0f9281/Regent Seven Seas Cruises Seven Seas Explorer Club Mariner.jpg" alt="Club Mariner" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Club Mariner</h3><p>어린이와 청소년을 위한 전용 클럽으로, 다양한 교육적 활동을 제공합니다.</p></div>
   </div>
     </div>
 
     <h2 id="cabins">🛏️ 객실 등급</h2>
     <div class="cabin-grid">
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/05/24/48/2fb2c44b-dd77-4b47-8001-5903b7527800/Regent Seven Seas EXPLORER Regent Suite 5.jpg" alt="Regent Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/10/25/05/24/48/2fb2c44b-dd77-4b47-8001-5903b7527800/Regent Seven Seas EXPLORER Regent Suite 5.jpg" alt="Regent Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Regent Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/05/36/03/0c8cd4f2-8fdc-4446-84ae-06a7ed876d70/Regent Seven Seas EXPLORER Master Suite 0.jpg" alt="Signature Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/10/25/05/36/03/0c8cd4f2-8fdc-4446-84ae-06a7ed876d70/Regent Seven Seas EXPLORER Master Suite 0.jpg" alt="Signature Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Signature Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/05/36/07/c676e04c-beb0-4160-b64a-b86fc9bfa53f/Regent Seven Seas EXPLORER Grand Suite 0.jpg" alt="Grand Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/10/25/05/36/07/c676e04c-beb0-4160-b64a-b86fc9bfa53f/Regent Seven Seas EXPLORER Grand Suite 0.jpg" alt="Grand Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Grand Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/05/36/07/e8b5253c-27eb-4bb3-9999-1065e6e022cc/Regent Seven Seas EXPLORER Explorer Suite 0.jpg" alt="Explorer Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/10/25/05/36/07/e8b5253c-27eb-4bb3-9999-1065e6e022cc/Regent Seven Seas EXPLORER Explorer Suite 0.jpg" alt="Explorer Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Explorer Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/05/24/42/d6086bfc-6ccc-48fc-82e6-7a78cd468dc4/Regent Seven Seas EXPLORER Seven Seas Suite 1.jpg" alt="Seven Seas Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/10/25/05/24/42/d6086bfc-6ccc-48fc-82e6-7a78cd468dc4/Regent Seven Seas EXPLORER Seven Seas Suite 1.jpg" alt="Seven Seas Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Seven Seas Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/03/17/12/02/00/5522b8d8-bfdc-4e54-8d40-3a8ef73f6e15/RSSC, Seven Seas Explorer, Penthouse Suite.jpg" alt="Penthouse Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/03/17/12/02/00/5522b8d8-bfdc-4e54-8d40-3a8ef73f6e15/RSSC, Seven Seas Explorer, Penthouse Suite.jpg" alt="Penthouse Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Penthouse Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/05/36/10/9d5818b4-5f38-437b-825a-7a0167fc0333/Regent Seven Seas EXPLORER Concierge Suite 1.jpg" alt="Concierge Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/10/25/05/36/10/9d5818b4-5f38-437b-825a-7a0167fc0333/Regent Seven Seas EXPLORER Concierge Suite 1.jpg" alt="Concierge Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Concierge Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/10/25/05/46/28/bb61c356-b7da-42d0-bada-303c2a4c058e/Regent Seven Seas EXPLORER Superior Suite 0.png" alt="Serenity Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/10/25/05/46/28/bb61c356-b7da-42d0-bada-303c2a4c058e/Regent Seven Seas EXPLORER Superior Suite 0.png" alt="Serenity Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Serenity Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/07/23/14/47/06/ac5c309a-05f0-441a-8b7e-ab1599e9d3e3/RSSC, Seven Seas Explorer, Deluxe Veranda Suite.jpg" alt="Deluxe Veranda Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/07/23/14/47/06/ac5c309a-05f0-441a-8b7e-ab1599e9d3e3/RSSC, Seven Seas Explorer, Deluxe Veranda Suite.jpg" alt="Deluxe Veranda Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Veranda Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/07/23/14/47/06/ac5c309a-05f0-441a-8b7e-ab1599e9d3e3/RSSC, Seven Seas Explorer, Deluxe Veranda Suite.jpg" alt="Veranda Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/07/23/14/47/06/ac5c309a-05f0-441a-8b7e-ab1599e9d3e3/RSSC, Seven Seas Explorer, Deluxe Veranda Suite.jpg" alt="Veranda Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Veranda Suite</div>
   </div>
     </div>
@@ -331,43 +382,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="deckplan">📐 덱 플랜</h2>
     <div class="deckplan-list">
   <div class="deckplan-item">
-    <img src="" alt="Deck 14" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/29/14/42/23/cb661eda-0022-40f7-afaf-dc7dd0c7bb01/Regent Seven Seas Cruises Seven Seas Explorer Deck 14.png" alt="Deck 14" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 14</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 12" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/29/14/42/22/1d789019-8399-45b8-aa5c-269163914f04/Regent Seven Seas Cruises Seven Seas Explorer Deck 12.png" alt="Deck 12" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 12</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 11" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/29/14/42/22/ed70b3f5-25d4-473b-9db8-da63e3297ee2/Regent Seven Seas Cruises Seven Seas Explorer Deck 11.png" alt="Deck 11" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 11</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 10" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/29/14/42/22/e219ee70-8d80-47a9-838c-cbaa1b71de2e/Regent Seven Seas Cruises Seven Seas Explorer Deck 10.png" alt="Deck 10" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 10</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 9" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/29/14/42/22/2c294cbd-2f47-4765-ae87-c13896750f19/Regent Seven Seas Cruises Seven Seas Explorer Deck 9.png" alt="Deck 9" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 9</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 8" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/29/14/42/22/72255707-5bf5-4001-80e8-411761abddd9/Regent Seven Seas Cruises Seven Seas Explorer Deck 8.png" alt="Deck 8" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 8</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 7" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/29/14/42/22/2854793a-a5e0-41f7-9d69-783eb76c5eff/Regent Seven Seas Cruises Seven Seas Explorer Deck 7.png" alt="Deck 7" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 7</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 6" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/29/14/42/22/85ce6090-54fb-44b1-8b15-007b3b6b1753/Regent Seven Seas Cruises Seven Seas Explorer Deck 6.png" alt="Deck 6" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 6</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 5" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/29/14/42/22/8e9a4f0c-813c-4e39-b71e-e15d5a43d077/Regent Seven Seas Cruises Seven Seas Explorer Deck 5.png" alt="Deck 5" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 5</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 4" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/10/29/14/42/22/c9ede21e-07ad-4ef4-a1db-5ef67bdc36e9/Regent Seven Seas Cruises Seven Seas Explorer Deck 4.png" alt="Deck 4" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 4</p>
   </div>
     </div>

@@ -69,22 +69,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
 
+
     .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
     @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
     .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-card img{width:100%;height:160px;object-fit:cover;display:block}
+    .facility-card .no-img{width:100%;height:160px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem}
     .facility-info{padding:12px}
     .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
     .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
     @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
     .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card img{width:100%;height:120px;object-fit:cover;display:block}
+    .cabin-card .no-img{width:100%;height:120px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
     .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
     .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
     @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
-    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200);display:block}
+    .deckplan-item .no-img{width:100%;height:200px;background:var(--gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem}
     .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
@@ -124,338 +128,418 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+
     <h2 id="dining">🍽️ 다이닝</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/14/51/31/3678a00e-1652-46c4-92de-e19038018b5f/MSC Cruises MSC L'Africana Buffet Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="L'Africana Buffet" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>L'Africana Buffet</h3><p>Located on Deck 14.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/22/14/51/31/3678a00e-1652-46c4-92de-e19038018b5f/MSC Cruises MSC L'Africana Buffet Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="L'Africana Buffet" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>L'Africana Buffet</h3><p>다채로운 세계 요리를 뷔페 형식으로 즐길 수 있는 캐주얼 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/14/51/31/3678a00e-1652-46c4-92de-e19038018b5f/MSC Cruises MSC L'Africana Buffet Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Zanzibar Buffet Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Zanzibar Buffet Restaurant</h3><p>Located on Deck 14.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/22/14/51/31/3678a00e-1652-46c4-92de-e19038018b5f/MSC Cruises MSC L'Africana Buffet Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Zanzibar Buffet Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Zanzibar Buffet Restaurant</h3><p>다채로운 세계 요리를 뷔페 형식으로 즐길 수 있는 캐주얼 레스토랑입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/15/04/03/2afef9bc-94f7-4658-980c-a6fdf8d6d0f6/MSC Cruises MSC Fantasia Red Velvet Restaurant - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Red Velvet Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Red Velvet Restaurant</h3><p>Located on Deck 6.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/22/15/04/03/2afef9bc-94f7-4658-980c-a6fdf8d6d0f6/MSC Cruises MSC Fantasia Red Velvet Restaurant - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Red Velvet Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Red Velvet Restaurant</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/25/14/40/55/138be815-3a43-4831-83d2-d500ded5339c/MSC Cruises, MSC Fantasia, El Sombrero 1, Copyrights - MSC Rights, Mike Louagie.jpg" alt="El Sombrero" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>El Sombrero</h3><p>El Sombrero Tex Mex is Fantasia’s Mexican speciality restaurant with a show gallery kitchen where guests can watch the food being prepared; and bar serving traditional Mexican drinks from beers to Teq</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/25/14/40/55/138be815-3a43-4831-83d2-d500ded5339c/MSC Cruises, MSC Fantasia, El Sombrero 1, Copyrights - MSC Rights, Mike Louagie.jpg" alt="El Sombrero" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>El Sombrero</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/25/15/22/35/3059306f-957b-4b0d-b0ef-63ea5f37dfe1/MSC Cruises, MSC Fantasia, Piazza San Giorgia 1, Copyrights - MSC Rights.jpg" alt="Piazza San Giorgia" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Piazza San Giorgia</h3><p>Located on Deck 6.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/25/15/22/35/3059306f-957b-4b0d-b0ef-63ea5f37dfe1/MSC Cruises, MSC Fantasia, Piazza San Giorgia 1, Copyrights - MSC Rights.jpg" alt="Piazza San Giorgia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Piazza San Giorgia</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/15/28/40/163ec43b-dc31-4a9f-9b40-4b94263d51e6/MSC Cruises MSC Fantasia Il Cerchio d'Oro Restaurant - Credit - Ivan Sarfatti - MSC Rights 4.jpg" alt="Il Cerchio d'Oro" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Il Cerchio d'Oro</h3><p>Located on Deck 6.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/22/15/28/40/163ec43b-dc31-4a9f-9b40-4b94263d51e6/MSC Cruises MSC Fantasia Il Cerchio d'Oro Restaurant - Credit - Ivan Sarfatti - MSC Rights 4.jpg" alt="Il Cerchio d'Oro" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Il Cerchio d'Oro</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/15/14/26/0d30de1d-591b-42e4-a7ae-ce87d468efd5/MSC Cruises MSC Fantasia L'Etoile Restaurant - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="L'Etoile Restaurant" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>L'Etoile Restaurant</h3><p>The MSC Yacht Club Restaurant is an exclusive and private venue reserved only for you with spectacular sea views.Embark on a culinary journey and delight in gourmet creations and five-star service. Fr</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/22/15/14/26/0d30de1d-591b-42e4-a7ae-ce87d468efd5/MSC Cruises MSC Fantasia L'Etoile Restaurant - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="L'Etoile Restaurant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>L'Etoile Restaurant</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/15/38/36/7e3258e3-8a66-45b8-9ab4-aea2b2842028/MSC Cruises MSC Fantasia Butchers Cut - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Butcher's Cut" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Butcher's Cut</h3><p>This American-style steak house serves select Linz heritage angus beef, gold standard in high-end angus beef thanks to the best genetics in breed. The highest quality product custom cut by master butc</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/22/15/38/36/7e3258e3-8a66-45b8-9ab4-aea2b2842028/MSC Cruises MSC Fantasia Butchers Cut - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Butcher's Cut" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Butcher's Cut</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/15/17/23/720bde50-d063-4b00-9608-23c01f85964e/MSC Cruises MSC Fantasia La Cantina Toscana - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="La Cantina Toscana" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>La Cantina Toscana</h3><p>Located on Deck 7.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/22/15/17/23/720bde50-d063-4b00-9608-23c01f85964e/MSC Cruises MSC Fantasia La Cantina Toscana - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="La Cantina Toscana" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>La Cantina Toscana</h3></div>
   </div>
     </div>
 
     <h2 id="entertainment">🎭 엔터테인먼트</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/16/42/47/f9c460f8-1650-4170-98ab-bfbf1c1f49ed/MSC Cruises MSC Fantasia Teatro L'Avanguardia - Credit - MSC Rights - Ivan Sarfatti 3.jpg" alt="Teatro L'Avanguardia" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Teatro L'Avanguardia</h3><p>West End Theatre - You’d normally have to travel to London to see top-end shows, but thanks to our West End-style theatres, you can enjoy superlative entertainment with an international line-up of art</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/22/16/42/47/f9c460f8-1650-4170-98ab-bfbf1c1f49ed/MSC Cruises MSC Fantasia Teatro L'Avanguardia - Credit - MSC Rights - Ivan Sarfatti 3.jpg" alt="Teatro L'Avanguardia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Teatro L'Avanguardia</h3><p>브로드웨이 스타일의 대형 공연장으로, 세계적 수준의 쇼와 공연을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/16/42/47/5ab757ba-0365-49c5-9204-3daffad2fabb/MSC Cruises MSC Fantasia Sports Bar - Credit - MSC Rights - Ivan Sarfatti 2.jpg" alt="Sports Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sports Bar</h3><p>Located on Deck 7.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/22/16/42/47/5ab757ba-0365-49c5-9204-3daffad2fabb/MSC Cruises MSC Fantasia Sports Bar - Credit - MSC Rights - Ivan Sarfatti 2.jpg" alt="Sports Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sports Bar</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/16/49/18/05705fb1-8efb-4e2e-8704-c91d8570adcd/MSC Cruises MSC Fantasia Casino - Credit - Ivan Sarfatti - MSC Rights 3.jpg" alt="Casino Delle Palme" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Casino Delle Palme</h3><p>Our casinos are elegantly designed, featuring games for all types of players. You’ll be able to try your hand at Roulette or Blackjack, challenge yourself at one of our Poker tables, or choose from a </p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/22/16/49/18/05705fb1-8efb-4e2e-8704-c91d8570adcd/MSC Cruises MSC Fantasia Casino - Credit - Ivan Sarfatti - MSC Rights 3.jpg" alt="Casino Delle Palme" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Casino Delle Palme</h3><p>라스베이거스 스타일의 카지노로, 슬롯머신과 테이블 게임을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/16/51/06/1582bc65-73ac-4a45-902b-cde0513393b9/MSC Cruises MSC Fantasia Manhattan Bar - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Manhattan Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Manhattan Bar</h3><p>Located on Deck 7</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/22/16/51/06/1582bc65-73ac-4a45-902b-cde0513393b9/MSC Cruises MSC Fantasia Manhattan Bar - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Manhattan Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Manhattan Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/16/53/26/23bf6188-a08e-4dcb-81d9-a200a0214e48/MSC Cruises MSC Fantasia Le Vele Bar - Credit - Ivan Sarfatti - MSC Rights 2.jpg" alt="Le Vele Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Le Vele Bar</h3><p>Located on Deck 6</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/22/16/53/26/23bf6188-a08e-4dcb-81d9-a200a0214e48/MSC Cruises MSC Fantasia Le Vele Bar - Credit - Ivan Sarfatti - MSC Rights 2.jpg" alt="Le Vele Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Le Vele Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/17/00/06/457a2275-6a38-4bba-ad89-0d027543fcc1/MSC Cruises MSC Fantasia Fantasia Bar - Credit - Ivan Sarfatti - MSC Rights 3.jpg" alt="Fantasia Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Fantasia Bar</h3><p>Located on Deck 5</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/22/17/00/06/457a2275-6a38-4bba-ad89-0d027543fcc1/MSC Cruises MSC Fantasia Fantasia Bar - Credit - Ivan Sarfatti - MSC Rights 3.jpg" alt="Fantasia Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Fantasia Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/12/52/22/88eb7448-f771-49d6-a4d6-db510c54d521/MSC Cruises MSC Fantasia Cigar Lounge - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="The Cigar Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Cigar Lounge</h3><p>Located on Deck 6</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/12/52/22/88eb7448-f771-49d6-a4d6-db510c54d521/MSC Cruises MSC Fantasia Cigar Lounge - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="The Cigar Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Cigar Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/13/01/46/d026fc74-3816-465a-92a4-bc291a1e8acd/MSC Cruises MSC Fantasia Il Transatlantico Piano Bar - Credit - Ivan Sarfatti - MSC Rights.jpg" alt="Il Transatlantico Piano Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Il Transatlantico Piano Bar</h3><p>Located on Deck 7</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/13/01/46/d026fc74-3816-465a-92a4-bc291a1e8acd/MSC Cruises MSC Fantasia Il Transatlantico Piano Bar - Credit - Ivan Sarfatti - MSC Rights.jpg" alt="Il Transatlantico Piano Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Il Transatlantico Piano Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/30/10/19/17/4d698428-1ee4-4786-93b0-f2e4c56aa66c/MSC Cruises, MSC Fantasia, Pool Bar 1, Copyrights - MSC Rights.jpg" alt="The Pool Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Pool Bar</h3><p>Located on Deck 14</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/30/10/19/17/4d698428-1ee4-4786-93b0-f2e4c56aa66c/MSC Cruises, MSC Fantasia, Pool Bar 1, Copyrights - MSC Rights.jpg" alt="The Pool Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Pool Bar</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/13/12/06/549accb2-d618-443a-8e54-9a9a1858ecea/MSC Cruises MSC Fantasia Il Cappuccino - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Il Cappuccino Coffee Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Il Cappuccino Coffee Bar</h3><p>Located on Deck 7.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/13/12/06/549accb2-d618-443a-8e54-9a9a1858ecea/MSC Cruises MSC Fantasia Il Cappuccino - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Il Cappuccino Coffee Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Il Cappuccino Coffee Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/02/14/29/58/776/MSC_Fantasia_Class_sweet_shop.jpg" alt="Sweet Shop" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sweet Shop</h3><p>Located on Deck 6</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/02/14/29/58/776/MSC_Fantasia_Class_sweet_shop.jpg" alt="Sweet Shop" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sweet Shop</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/13/39/39/1449d0c7-a89c-40d9-bb85-dc3ff240a6cd/MSC Cruises MSC Fantasia Shopping - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Shopping" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Shopping</h3><p>ShoppingOn our ships you'll find a wide selection of the best boutiques at sea stocked with all your favourite premium brands, so you can enjoy the best shopping experience during your cruise. Treat y</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/13/39/39/1449d0c7-a89c-40d9-bb85-dc3ff240a6cd/MSC Cruises MSC Fantasia Shopping - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Shopping" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Shopping</h3><p>면세 쇼핑을 즐길 수 있는 선상 쇼핑몰로, 명품 브랜드와 기념품을 구매할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/30/12/43/07/fbe4d766-ef97-4098-85d8-bc728b775848/MSC Cruises, MSC Fantasia, Photo Gallery 1, Copyrights - MSC Rights.jpg" alt="Photo Gallery" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Photo Gallery</h3><p>Capture every momentOur professional photographers are ready to capture every special moment, from embarkation to sail-away parties and beyond. Explore the All-Inclusive Digital Photo Package to downl</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/30/12/43/07/fbe4d766-ef97-4098-85d8-bc728b775848/MSC Cruises, MSC Fantasia, Photo Gallery 1, Copyrights - MSC Rights.jpg" alt="Photo Gallery" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Photo Gallery</h3><p>전문 사진작가가 촬영한 아름다운 사진을 간직하세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/13/43/40/c41441f0-4ef4-4c19-bbcd-ea712eb01ffe/MSC Cruises MSC Fantasia 4D Cinema - Credit - Ivan Sarfatti - MSC Rights 2.jpg" alt="4D Cinema" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>4D Cinema</h3><p>Visit our on-board 4D Cinema* for a chance to enter a world of adventure without having to leave the comfort of your seat. Enjoy a unique cinematic experience, full of surprising features and visual e</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/13/43/40/c41441f0-4ef4-4c19-bbcd-ea712eb01ffe/MSC Cruises MSC Fantasia 4D Cinema - Credit - Ivan Sarfatti - MSC Rights 2.jpg" alt="4D Cinema" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>4D Cinema</h3><p>최신 영화를 감상할 수 있는 선상 영화관입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/30/11/35/41/1ae78222-c44a-4db6-b73f-77020ce306f9/MSC Cruises, MSC Fantasia, MSC Formula Racer 1, Copyrights - MSC Rights.jpg" alt="MSC Formula Racer" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Formula Racer</h3><p>Our amazing on-board MSC Formula Racer delivers an adrenaline-pumping virtual-reality race*, with you in the driver’s seat of a racing car. Go head to head against other racers and thrill to the feel </p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/30/11/35/41/1ae78222-c44a-4db6-b73f-77020ce306f9/MSC Cruises, MSC Fantasia, MSC Formula Racer 1, Copyrights - MSC Rights.jpg" alt="MSC Formula Racer" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Formula Racer</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/30/10/01/01/f4da02b5-3868-4072-8957-624c79a86b6a/MSC Cruises, MSC Fantasia, Liquid Disco 1, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Liquid Disco" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Liquid Disco</h3><p>Located on Deck 16</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/30/10/01/01/f4da02b5-3868-4072-8957-624c79a86b6a/MSC Cruises, MSC Fantasia, Liquid Disco 1, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Liquid Disco" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Liquid Disco</h3><p>신나는 음악과 함께 춤을 즐길 수 있는 디스코장입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/14/06/27/ec8703e3-4c88-4748-a00f-6dde2fa3040d/MSC Cruises MSC Fantasia L'Insolito - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="L’Insolito" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>L’Insolito</h3><p>Located on Deck 7</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/14/06/27/ec8703e3-4c88-4748-a00f-6dde2fa3040d/MSC Cruises MSC Fantasia L'Insolito - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="L’Insolito" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>L’Insolito</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/14/12/11/2804e4e0-e8ef-4692-bcfc-ff26c792b187/MSC Cruises MSC Fantasia MSC Yacht Club - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="MSC Yacht Club" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Yacht Club</h3><p>Feel the finesse and elegance of luxury cruises with MSC Yacht Club, an exclusive area of refined indulgence. Surround yourself in unparalleled comfort and personalised service as you embark on an ast</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/14/12/11/2804e4e0-e8ef-4692-bcfc-ff26c792b187/MSC Cruises MSC Fantasia MSC Yacht Club - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="MSC Yacht Club" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Yacht Club</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/30/12/59/24/1cd81b0e-8e1a-4400-b6ee-573e2a7d3cba/MSC Cruises, MSC Fantasia, Business Centre 1, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Business Centre" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Business Centre</h3><p>Located on Deck 5</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/30/12/59/24/1cd81b0e-8e1a-4400-b6ee-573e2a7d3cba/MSC Cruises, MSC Fantasia, Business Centre 1, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Business Centre" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Business Centre</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/14/18/07/5ed9c5e2-ae29-405a-859c-95b72df919ad/MSC Cruises MSC Fantasia Cyberlibrary - Credit - Ivan Sarfatti - MSC Rights 2.jpg" alt="Cyber Library" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Cyber Library</h3><p>The Cyber Library is located on deck 5.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/14/18/07/5ed9c5e2-ae29-405a-859c-95b72df919ad/MSC Cruises MSC Fantasia Cyberlibrary - Credit - Ivan Sarfatti - MSC Rights 2.jpg" alt="Cyber Library" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Cyber Library</h3><p>독서와 카드 게임을 즐길 수 있는 조용한 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/a08d9da8-6de2-49f2-b476-225fdc0bf7f3/MSC Cruises, Beer Festival.jpg" alt="Beer Festival" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Beer Festival</h3><p>Fun-packed festive celebrations with a Bavarian flair - decorations, costumes, games, music and of course beer. There’s even a Master of Beer competition and a 6-metre-tall inflatable beer mug.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/a08d9da8-6de2-49f2-b476-225fdc0bf7f3/MSC Cruises, Beer Festival.jpg" alt="Beer Festival" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Beer Festival</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/7689184e-3b4c-4cc8-9779-9df35e53c316/MSC Cruises, Sailaway Party.jpg" alt="Sailaway Party" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sailaway Party</h3><p>A start-of-the-cruise event celebrating the ship's departure, led by the Entertainment Team and Dancers in a spectacular Costume Parade.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/7689184e-3b4c-4cc8-9779-9df35e53c316/MSC Cruises, Sailaway Party.jpg" alt="Sailaway Party" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sailaway Party</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/f530cac7-97f7-44ca-bc90-105693b82242/MSC Cruises, Masterchef.jpg" alt="MasterChef" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MasterChef</h3><p>The world's best-loved food show awaits you on the MSC Cruises fleet! Experience the adrenaline-fuelled creativity of an extraordinary on-board cooking competition for adults and junior guests.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/f530cac7-97f7-44ca-bc90-105693b82242/MSC Cruises, Masterchef.jpg" alt="MasterChef" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MasterChef</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/b5388d4e-a29f-4da0-beb2-202f6a0431e2/MSC Cruises, MSC Factor.jpg" alt="MSC Factor" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Factor</h3><p>Think you’ve got what it takes to be a star in our on-board talent competition, The MSC Factor? Then come and showcase what you can do in the most exciting talent show at sea. Whatever your specific t</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/b5388d4e-a29f-4da0-beb2-202f6a0431e2/MSC Cruises, MSC Factor.jpg" alt="MSC Factor" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Factor</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/66c2d7f4-a901-40eb-a212-6f25381382a9/MSC Cruises, Theme Parties.jpg" alt="Theme Parties" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Theme Parties</h3><p>We organise various daytime and evening Theme Parties on board. You may wish to bring bright fun clothes for the Sunshine Party and something white for the White Party.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/13/00/42/66c2d7f4-a901-40eb-a212-6f25381382a9/MSC Cruises, Theme Parties.jpg" alt="Theme Parties" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Theme Parties</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/14/20/54/b863b735-5382-4fda-b131-633acf925d19/MSC Cruises MSC Fantasia Arcade - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Arcade" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Arcade</h3><p>Spend a few fun-filled hours gaming at the Arcadeon board the ship. Pit your wits and skill against your friends in a variety of classic arcade games, including video games, pinball, and more.</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/14/20/54/b863b735-5382-4fda-b131-633acf925d19/MSC Cruises MSC Fantasia Arcade - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Arcade" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Arcade</h3><p>다양한 아케이드 게임을 즐길 수 있는 게임룸입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/14/28/38/6562634c-3733-42a1-aa05-def885e11648/MSC Cruises MSC Fantasia Pools - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Swimming Pools" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Swimming Pools</h3><p>If a bit of poolside therapy sounds like your idea of heaven, look no further than one of our numerous swimming pools to get your fill of sun and relaxation, while our pool attendants can cater to you</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/14/28/38/6562634c-3733-42a1-aa05-def885e11648/MSC Cruises MSC Fantasia Pools - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Swimming Pools" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Swimming Pools</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/14/33/20/274ed4df-a219-4387-97a1-60d325786088/MSC Cruises MSC Fantasia The One Bar - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="The One Bar" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The One Bar</h3><p>Located on Deck 18</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/14/33/20/274ed4df-a219-4387-97a1-60d325786088/MSC Cruises MSC Fantasia The One Bar - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="The One Bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The One Bar</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/14/12/11/2804e4e0-e8ef-4692-bcfc-ff26c792b187/MSC Cruises MSC Fantasia MSC Yacht Club - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Top Sail Lounge" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Top Sail Lounge</h3><p>The Top Sail Lounge, located in the MSC Yacht Club area at the forefront of the ship, offers breathtaking views alongside exceptional food and service.As part of a luxury cruise experience, this exclu</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/14/12/11/2804e4e0-e8ef-4692-bcfc-ff26c792b187/MSC Cruises MSC Fantasia MSC Yacht Club - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Top Sail Lounge" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Top Sail Lounge</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
     </div>
 
     <h2 id="health">💆 스파 &amp; 웰니스</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/14/50/12/31cddcf9-7d57-4a6c-8b24-23b4b820c6e0/MSC Cruises MSC Fantasia MSC Aurea Spa - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="MSC Aurea Spa" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Aurea Spa</h3><p>Feeling healthy and looking your best is a part of the MSC Cruises experience. Try something new, like high-tech beauty treatments, a soothing sauna or enjoy a Balinese massage. Book now one of our sp</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/14/50/12/31cddcf9-7d57-4a6c-8b24-23b4b820c6e0/MSC Cruises MSC Fantasia MSC Aurea Spa - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="MSC Aurea Spa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Aurea Spa</h3><p>전문 뷰티 살롱에서 헤어와 네일 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/14/53/35/b797428e-60c4-44e3-ac3c-b18b37de127b/MSC Cruises MSC Fantasia Salon - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Beauty Salon" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Beauty Salon</h3><p>You can enjoy the expertise of highly specialised staff in aesthetic treatments to offer you excellent results and improve the relaxing effects of your cruise. Customise your cruise with the best trea</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/14/53/35/b797428e-60c4-44e3-ac3c-b18b37de127b/MSC Cruises MSC Fantasia Salon - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Beauty Salon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Beauty Salon</h3><p>전문 뷰티 살롱에서 헤어와 네일 트리트먼트를 받으세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/30/14/30/02/bf3828fd-8aca-4351-b34f-fa136254a19f/MSC Cruises, MSC Fantasia, Gym By TechnoGym, Copyrights - MSC Rights.jpg" alt="Gym By TechnoGym®" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Gym By TechnoGym®</h3><p>Fitted with authentic TechnoGym® equipment and featuring panoramic ocean views, the on-board gym is the place to be for all those who take their fitness regime seriously. Hone your physique with a ful</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/30/14/30/02/bf3828fd-8aca-4351-b34f-fa136254a19f/MSC Cruises, MSC Fantasia, Gym By TechnoGym, Copyrights - MSC Rights.jpg" alt="Gym By TechnoGym®" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Gym By TechnoGym®</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2015/09/02/14/20/58/444/MSC_Fantasia_Class_sports.jpg" alt="MSC Arena" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>MSC Arena</h3><p>Located on Deck 16.</p></div>
+    <img src="https://assets.widgety.co.uk/2015/09/02/14/20/58/444/MSC_Fantasia_Class_sports.jpg" alt="MSC Arena" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>MSC Arena</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/15/03/42/d4c3c6e3-3957-420f-84b2-315301d19462/MSC Cruises MSC Fantasia Hair Salon - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Hair Salon" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Hair Salon</h3><p>Refresh your look with a new hairstyle! There are different packages which include a personalised shampoo &amp; conditioning mask, a haircut and a single-process colour treatment. Leave the salon styl</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/15/03/42/d4c3c6e3-3957-420f-84b2-315301d19462/MSC Cruises MSC Fantasia Hair Salon - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Hair Salon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Hair Salon</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/14/50/12/31cddcf9-7d57-4a6c-8b24-23b4b820c6e0/MSC Cruises MSC Fantasia MSC Aurea Spa - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Thermal Area" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Thermal Area</h3><p>Start your wellness journey in our on board thermal area and achieve a lasting feeling of absolute well-being that will stay with you well beyond your cruise. Our thermal experiences are designed to s</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/14/50/12/31cddcf9-7d57-4a6c-8b24-23b4b820c6e0/MSC Cruises MSC Fantasia MSC Aurea Spa - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Thermal Area" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Thermal Area</h3><p>테라피 효과의 온열 시설에서 몸과 마음의 긴장을 풀어보세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/30/14/39/02/1baedfc7-85e2-45a5-a292-398214a2ca06/MSC Cruises, MSC Fantasia, Power Walking Track, Copyrights - MSC Rights.jpg" alt="Power Walking Track" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Power Walking Track</h3><p>Enjoying time off on your cruise doesn’t need to mean letting your fitness routine slide, so gear up and rendezvous with the power walking and jogging track on deck to get your daily exercise fix whil</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/30/14/39/02/1baedfc7-85e2-45a5-a292-398214a2ca06/MSC Cruises, MSC Fantasia, Power Walking Track, Copyrights - MSC Rights.jpg" alt="Power Walking Track" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Power Walking Track</h3><p>최첨단 장비를 갖춘 선상 피트니스 센터로, 전문 트레이너의 클래스도 이용할 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/17/13/38/08/75cc385a-27ef-4b7a-aba0-800b17d5a912/MSC Cruises, Basketball.jpg" alt="Basketball" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Basketball</h3><p>Come to the outdoor basketball court at the Sports Centre for a chance to hang out with friends, have fun shooting hoops and enjoy a full-body workout at the same time. You may not make the latest lin</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/17/13/38/08/75cc385a-27ef-4b7a-aba0-800b17d5a912/MSC Cruises, Basketball.jpg" alt="Basketball" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Basketball</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/14/23/28/546b0d0a-99cc-445e-9d56-763d9487840a/MSC Cruises, MSC Armonia, Tennis Court, Copyrights - MSC Rights.jpg" alt="Tennis Court" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Tennis Court</h3><p>Anyone for tennis? Play to your heart’s content at the outdoor or indoor tennis court of our on-board Sport Center. Tennis is ideal for getting some healthy activity, honing your hand-to-eye coordinat</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/14/23/28/546b0d0a-99cc-445e-9d56-763d9487840a/MSC Cruises, MSC Armonia, Tennis Court, Copyrights - MSC Rights.jpg" alt="Tennis Court" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Tennis Court</h3><p>테니스 코트에서 바다를 바라보며 테니스를 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/17/13/41/06/3b802796-e31f-471d-94e7-916f826d93f6/MSC Cruises, Volleyball.jpg" alt="Volleyball" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Volleyball</h3><p>Fast-paced, energetic and a ton of fun to play, volleyball is one of the world’s most popular team sports and one you can enjoy at the outdoor volleyball court at the on-board Sports Centre. Burn some</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/17/13/41/06/3b802796-e31f-471d-94e7-916f826d93f6/MSC Cruises, Volleyball.jpg" alt="Volleyball" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Volleyball</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/17/13/48/45/0c153c23-cd7c-4146-b4c9-1012674c1b34/MSC Cruises, Five-a-side Football.jpg" alt="Five-a-side Football" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Five-a-side Football</h3><p>Fancy a game of footy? Your wish can be granted at the outdoor five-a-side football pitch at the Sports Centre. Team up with some friends or family and play a match against another on-board team. A gr</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/17/13/48/45/0c153c23-cd7c-4146-b4c9-1012674c1b34/MSC Cruises, Five-a-side Football.jpg" alt="Five-a-side Football" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Five-a-side Football</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/03/02/15/56/17/1a40792f-ea54-458c-b92d-14be541f2043/MSC Cruises MSC Splendida Squash Court.jpg" alt="Squash Court" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Squash Court</h3><p>If a fast game of squash is your favourite way of keeping fit or if you’d just like to give it a first go, simply book the outside squash court at our on-board Sports Centre and prepare to hit it like</p></div>
+    <img src="https://assets.widgety.co.uk/2023/03/02/15/56/17/1a40792f-ea54-458c-b92d-14be541f2043/MSC Cruises MSC Splendida Squash Court.jpg" alt="Squash Court" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Squash Court</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/14/23/27/55e9d30e-40ea-4cfc-b497-6adccb1c03f9/MSC Cruises, Barber Shop.jpg" alt="Barber Shop" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Barber Shop</h3><p>Inside the MSC Aurea Spa there’s a dedicated Barber Shop to keep you looking at your best during your time on board! Leave the salon styled and ready for a great evening.</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/14/23/27/55e9d30e-40ea-4cfc-b497-6adccb1c03f9/MSC Cruises, Barber Shop.jpg" alt="Barber Shop" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Barber Shop</h3><p>선내 다양한 바 중 하나로, 칵테일과 음료를 즐길 수 있는 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/17/14/59/00/7ac34c0d-cecb-4bee-9fb4-df85985a65eb/MSC Cruises, Sports Tournaments.jpg" alt="Sport Tournaments" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sport Tournaments</h3><p>Tennis Tournament - if you've got a killer backhand then why not enter our onboard tennis tournament? It might not be Wimbledon but it'll serve up a great workout and possibly a taste of glory, tooSoc</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/17/14/59/00/7ac34c0d-cecb-4bee-9fb4-df85985a65eb/MSC Cruises, Sports Tournaments.jpg" alt="Sport Tournaments" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sport Tournaments</h3><p>테니스 코트에서 바다를 바라보며 테니스를 즐길 수 있습니다.</p></div>
   </div>
     </div>
 
     <h2 id="kids">👧 키즈 클럽</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/14/58/47/210a6102-26a8-40c8-aea7-8f5c19fa0df7/MSC Cruises, MSC Armonia, Lego Experience 1, Copyrights - MSC Rights.jpg" alt="Lego® Experience" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Lego® Experience</h3><p>Once during every cruise we hold a special entertainment event called the LEGO® Experience On Board: an entire day dedicated to fun LEGO activities for the whole family to enjoy. Thanks to this specia</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/14/58/47/210a6102-26a8-40c8-aea7-8f5c19fa0df7/MSC Cruises, MSC Armonia, Lego Experience 1, Copyrights - MSC Rights.jpg" alt="Lego® Experience" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Lego® Experience</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/15/51/05/d1426423-0ffb-4342-9e12-125266750975/MSC Cruises MSC Fantasia Baby Club - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Baby Club 0-3" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Baby Club 0-3</h3><p>You can leave your toddlers with our MSC Babycare staff, or stay with them and enjoy the special Chicco toys and games. They'll love our music and rhythm activities, designed to awaken their curiosity</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/15/51/05/d1426423-0ffb-4342-9e12-125266750975/MSC Cruises MSC Fantasia Baby Club - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Baby Club 0-3" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Baby Club 0-3</h3><p>유아를 위한 전용 공간으로, 안전하고 즐거운 활동을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/15/51/05/d1426423-0ffb-4342-9e12-125266750975/MSC Cruises MSC Fantasia Baby Club - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Mini Club 3-6" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Mini Club 3-6</h3><p>The Mini Club welcomes children aged between 3 and 6 years old, bringing them new friends and lots of fun, enriched by the stimulating toys of our partnership with LEGO®. The club offers games, events</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/15/51/05/d1426423-0ffb-4342-9e12-125266750975/MSC Cruises MSC Fantasia Baby Club - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Mini Club 3-6" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Mini Club 3-6</h3><p>어린이를 위한 미니 클럽으로, 또래 친구들과 다양한 활동을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/17/14/28/59/2db3b5da-9c70-4d15-9632-6fb5fb552ecd/MSC Cruises, Junior Club.jpg" alt="Junior Club 7-11" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Junior Club 7-11</h3><p>The Junior Club inspires connection and cooperation among 7 to 11-year-olds, through a wide variety of activities. Highlights range from Masterchef at Sea Juniors and Dorebro Sport competitions to our</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/17/14/28/59/2db3b5da-9c70-4d15-9632-6fb5fb552ecd/MSC Cruises, Junior Club.jpg" alt="Junior Club 7-11" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Junior Club 7-11</h3><p>7-11세 어린이를 위한 전용 프로그램을 제공하는 주니어 클럽입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/16/00/17/8cc80eed-475d-4cf0-81e8-37682d39e252/MSC Cruises MSC Fantasia Young & Teen Club - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Young Club 12-14" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Young Club 12-14</h3><p>With the Young Club, kids from 12 to 14 years old can dive into a world of discovery, involvement and interaction.Each day holds the promise of new experiences, with a dedicated programme of sport tou</p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/16/00/17/8cc80eed-475d-4cf0-81e8-37682d39e252/MSC Cruises MSC Fantasia Young & Teen Club - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Young Club 12-14" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Young Club 12-14</h3><p>신나는 음악과 함께 춤을 즐길 수 있는 디스코장입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/09/23/16/00/17/8cc80eed-475d-4cf0-81e8-37682d39e252/MSC Cruises MSC Fantasia Young & Teen Club - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Teen Club 15-17" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Teen Club 15-17</h3><p>Teenagers aged from 15 to 17 years old can look forward to having the time of their lives on board. Teen Club activities range from sports and competitions, dance contests and social network games to </p></div>
+    <img src="https://assets.widgety.co.uk/2025/09/23/16/00/17/8cc80eed-475d-4cf0-81e8-37682d39e252/MSC Cruises MSC Fantasia Young & Teen Club - Credit - MSC Rights - Ivan Sarfatti 1.jpg" alt="Teen Club 15-17" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Teen Club 15-17</h3><p>농구, 배구 등 다양한 스포츠를 즐길 수 있는 스포츠 코트입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/15/10/54/0e1c6434-03e8-4bd7-9c1a-2ea10c42c91c/MSC Cruises, Web Series.jpg" alt="Web Series" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Web Series</h3><p>Experience the cruise adventure before you even step on board! Dive into the captivating web series Cabin 12006, available on MSC Cruises' official YouTube channel. Join Markus, a teenager embarking o</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/15/10/54/0e1c6434-03e8-4bd7-9c1a-2ea10c42c91c/MSC Cruises, Web Series.jpg" alt="Web Series" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Web Series</h3><p>10대 청소년을 위한 전용 공간으로, 게임과 소셜 활동을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/17/14/41/03/9fd1b8da-2588-4bf5-8ff2-06ed81f45e82/MSC Cruises, Kids Clubs and Family Activities.jpg" alt="Kids Clubs and Family Activities" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Kids Clubs and Family Activities</h3><p>MSC ORIGINALS: On an MSC cruise, you'll discover a diverse array of activities designed for both children and adults. Our dedicated Kids Clubs offer a wide range of engaging experiences, including spo</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/17/14/41/03/9fd1b8da-2588-4bf5-8ff2-06ed81f45e82/MSC Cruises, Kids Clubs and Family Activities.jpg" alt="Kids Clubs and Family Activities" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Kids Clubs and Family Activities</h3><p>전문 스태프가 운영하는 키즈클럽으로, 다양한 활동과 프로그램을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/03/13/53/20/f8c8c95d-3893-4157-be4f-3b8aac8eab28/MSC Grandiosa - Babies and Toddlers Services.jpg" alt="Baby and Toddler Services" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Baby and Toddler Services</h3><p>Baby Clubs - along with activities that the whole family can enjoy together, we offer a Baby Club onboard all our ships with dedicated activities and facilities.  - MSC Baby Care Service - we have tho</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/03/13/53/20/f8c8c95d-3893-4157-be4f-3b8aac8eab28/MSC Grandiosa - Babies and Toddlers Services.jpg" alt="Baby and Toddler Services" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Baby and Toddler Services</h3><p>유아를 위한 전용 공간으로, 안전하고 즐거운 활동을 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/04/12/24/52/59f199ea-e870-49ef-9932-1c89b4cdfdab/MSC Cruises, Family Activities.jpg" alt="Family Activities" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Family Activities</h3><p>Family Game Show - this is a competition for the whole family with dance, music and selfie challenges dedicated to Kelly &amp; Kloe On Board, MSC Cruises’ original web series created for kids and fami</p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/04/12/24/52/59f199ea-e870-49ef-9932-1c89b4cdfdab/MSC Cruises, Family Activities.jpg" alt="Family Activities" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Family Activities</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2024/09/03/13/50/54/8fb72aa5-be95-4424-802b-79ec47a49665/MSC Grandiosa - Family Dining.jpg" alt="Family Dining" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Family Dining</h3><p>Enjoy a culinary voyage of discovery with your children on an MSC Cruise: an array of international dishes and ethnic specialties will delight the whole family with flavours from around the globe.For </p></div>
+    <img src="https://assets.widgety.co.uk/2024/09/03/13/50/54/8fb72aa5-be95-4424-802b-79ec47a49665/MSC Grandiosa - Family Dining.jpg" alt="Family Dining" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Family Dining</h3><p>온 가족이 함께 즐길 수 있는 가족 프로그램과 액티비티를 제공합니다.</p></div>
   </div>
     </div>
 
     <h2 id="cabins">🛏️ 객실 등급</h2>
     <div class="cabin-grid">
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/25/12/19/33/54d8ede3-c51c-4f00-8d38-aca9c5273794/MSC Cruises, MSC Fantasia, MSC Yacht Club Royal Suite 3, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="MSC Yacht Club Executive and Family Suite with Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/25/12/19/33/54d8ede3-c51c-4f00-8d38-aca9c5273794/MSC Cruises, MSC Fantasia, MSC Yacht Club Royal Suite 3, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="MSC Yacht Club Executive and Family Suite with Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">MSC Yacht Club Executive and Family Suite with Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/02/28/08/16/20/4dbb18c9-ce62-4f1e-a0ae-b482484609d9/MSC Cruises FANTASIA MSC Yacht Club Executive & Family Suite0.png" alt="MSC Yacht Club Executive & Family Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/02/28/08/16/20/4dbb18c9-ce62-4f1e-a0ae-b482484609d9/MSC Cruises FANTASIA MSC Yacht Club Executive & Family Suite0.png" alt="MSC Yacht Club Executive & Family Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">MSC Yacht Club Executive & Family Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/12/23/46/ef11e93f-4212-4c0d-ae77-d48e87633c3b/MSC Cruises MSC Fantasia MSC Yacht Club Grand Suite - Credit Ivan Sarfatti - MSC Rights.jpg" alt="MSC Yacht Club Grand Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/09/22/12/23/46/ef11e93f-4212-4c0d-ae77-d48e87633c3b/MSC Cruises MSC Fantasia MSC Yacht Club Grand Suite - Credit Ivan Sarfatti - MSC Rights.jpg" alt="MSC Yacht Club Grand Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">MSC Yacht Club Grand Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/25/12/40/08/03fece78-11eb-4640-8365-28ea95d6039d/MSC Cruises, MSC Fantasia, MSC Yacht Club Grand Suite 2, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="MSC Yacht Club Deluxe Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/25/12/40/08/03fece78-11eb-4640-8365-28ea95d6039d/MSC Cruises, MSC Fantasia, MSC Yacht Club Grand Suite 2, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="MSC Yacht Club Deluxe Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">MSC Yacht Club Deluxe Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/12/40/00/cff3352d-5ec1-41ac-a875-4b0130092041/MSC Cruises MSC Fantasia Grand Suite Aurea - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Grand Suite Aurea" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/09/22/12/40/00/cff3352d-5ec1-41ac-a875-4b0130092041/MSC Cruises MSC Fantasia Grand Suite Aurea - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Grand Suite Aurea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Grand Suite Aurea</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/12/45/22/16564503-99d4-407c-a552-c36764dc8084/MSC Cruises MSC Fantasia Premium Suite Aurea - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Premium Suite Aurea" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/09/22/12/45/22/16564503-99d4-407c-a552-c36764dc8084/MSC Cruises MSC Fantasia Premium Suite Aurea - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Premium Suite Aurea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Suite Aurea</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/12/55/22/e2bee949-c0d4-4b68-95e4-42bdcfe912aa/MSC Cruises MSC Fantasia Premium Suite with Sealed Window - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Premium Suite with Sealed Window" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/09/22/12/55/22/e2bee949-c0d4-4b68-95e4-42bdcfe912aa/MSC Cruises MSC Fantasia Premium Suite with Sealed Window - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Premium Suite with Sealed Window" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Suite with Sealed Window</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/13/18/03/d54aa4a8-1107-45ed-8edf-cb4f5c34c799/MSC Cruises MSC Fantasia Junior Suite Aurea with Sealed Window - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Junior Suite Aurea with Sealed Window" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/09/22/13/18/03/d54aa4a8-1107-45ed-8edf-cb4f5c34c799/MSC Cruises MSC Fantasia Junior Suite Aurea with Sealed Window - Credit - Ivan Sarfatti - MSC Rights 1.jpg" alt="Junior Suite Aurea with Sealed Window" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Junior Suite Aurea with Sealed Window</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/25/13/14/37/3ff8eece-6c52-47ea-ba90-f898ba31d4c2/MSC Cruises, MSC Fantasia, Deluxe Balcony Aurea, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Deluxe Balcony Aurea" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/25/13/14/37/3ff8eece-6c52-47ea-ba90-f898ba31d4c2/MSC Cruises, MSC Fantasia, Deluxe Balcony Aurea, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Deluxe Balcony Aurea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Balcony Aurea</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/25/13/14/37/3ff8eece-6c52-47ea-ba90-f898ba31d4c2/MSC Cruises, MSC Fantasia, Deluxe Balcony Aurea, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Premium Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/25/13/14/37/3ff8eece-6c52-47ea-ba90-f898ba31d4c2/MSC Cruises, MSC Fantasia, Deluxe Balcony Aurea, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Premium Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/25/13/14/37/3ff8eece-6c52-47ea-ba90-f898ba31d4c2/MSC Cruises, MSC Fantasia, Deluxe Balcony Aurea, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Deluxe Balcony with Partial View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/25/13/14/37/3ff8eece-6c52-47ea-ba90-f898ba31d4c2/MSC Cruises, MSC Fantasia, Deluxe Balcony Aurea, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Deluxe Balcony with Partial View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Balcony with Partial View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/02/28/09/37/19/007f11a2-89a3-4f2e-bb86-03f5d7dae543/MSC Cruises FANTASIA Deluxe Balcony Aurea0.png" alt="Guarantee Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/02/28/09/37/19/007f11a2-89a3-4f2e-bb86-03f5d7dae543/MSC Cruises FANTASIA Deluxe Balcony Aurea0.png" alt="Guarantee Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/25/13/30/28/8bf33bfe-ba3b-44ac-b116-a5d25fa13296/MSC Cruises, MSC Fantasia, Premium Ocean View, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Premium Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/25/13/30/28/8bf33bfe-ba3b-44ac-b116-a5d25fa13296/MSC Cruises, MSC Fantasia, Premium Ocean View, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Premium Ocean View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Ocean View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2024/09/25/13/30/28/8bf33bfe-ba3b-44ac-b116-a5d25fa13296/MSC Cruises, MSC Fantasia, Premium Ocean View, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Guarantee Ocean View" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2024/09/25/13/30/28/8bf33bfe-ba3b-44ac-b116-a5d25fa13296/MSC Cruises, MSC Fantasia, Premium Ocean View, Copyrights - MSC Rights, Ivan Sarfatti.jpg" alt="Guarantee Ocean View" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Ocean View</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/13/38/29/f658c4ea-85c1-4bbb-a9fe-e82d6afb7797/MSC Cruises MSC Fantasia Premium Ocean View - Credit - Ivan Sarfatti - MSC Rights.jpg" alt="Deluxe Interior" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/09/22/13/38/29/f658c4ea-85c1-4bbb-a9fe-e82d6afb7797/MSC Cruises MSC Fantasia Premium Ocean View - Credit - Ivan Sarfatti - MSC Rights.jpg" alt="Deluxe Interior" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Interior</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2025/09/22/13/38/29/f658c4ea-85c1-4bbb-a9fe-e82d6afb7797/MSC Cruises MSC Fantasia Premium Ocean View - Credit - Ivan Sarfatti - MSC Rights.jpg" alt="Guarantee Inside" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2025/09/22/13/38/29/f658c4ea-85c1-4bbb-a9fe-e82d6afb7797/MSC Cruises MSC Fantasia Premium Ocean View - Credit - Ivan Sarfatti - MSC Rights.jpg" alt="Guarantee Inside" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Guarantee Inside</div>
   </div>
     </div>
@@ -463,59 +547,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="deckplan">📐 덱 플랜</h2>
     <div class="deckplan-list">
   <div class="deckplan-item">
-    <img src="" alt="Deck 18 - Sun Deck" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2021/11/25/06/26/03/2fc5a885-ad3a-4eba-9823-716b64362fcb/MSC Cruises MSC Fantasia Deck 18.jpeg" alt="Deck 18 - Sun Deck" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 18 - Sun Deck</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 16 - Aurora" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2021/11/25/06/26/03/0c218481-ad21-419c-b01c-6e7a5750b1b8/MSC Cruises MSC Fantasia Deck 16.jpeg" alt="Deck 16 - Aurora" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 16 - Aurora</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 15 - Splendido" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2021/11/25/06/26/03/960a0286-0d6d-4ba8-bef9-bcd8937f2852/MSC Cruises MSC Fantasia Deck 15.jpeg" alt="Deck 15 - Splendido" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 15 - Splendido</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 14 - Miraggio" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2021/11/25/06/26/02/7603f091-9902-464d-adff-20a3ee22b12d/MSC Cruises MSC Fantasia Deck 14.jpeg" alt="Deck 14 - Miraggio" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 14 - Miraggio</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 13 - Arcobaleno" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2021/11/25/06/26/02/54407bf4-2e33-4cca-9ded-4e3a6f396d56/MSC Cruises MSC Fantasia Deck 13.jpeg" alt="Deck 13 - Arcobaleno" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 13 - Arcobaleno</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 12 - Incanto" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2021/11/25/06/26/01/81a13526-e554-4c61-8123-3e332809631a/MSC Cruises MSC Fantasia Deck 12.jpeg" alt="Deck 12 - Incanto" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 12 - Incanto</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 11 - Meraviglia" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2021/11/25/06/26/00/4bd0c81d-bc06-43d3-a7e7-71fbbc268adc/MSC Cruises MSC Fantasia Deck 11.jpeg" alt="Deck 11 - Meraviglia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 11 - Meraviglia</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 10 - Sogno" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2021/11/25/06/26/06/f9d67661-f01c-49d8-ad73-7fd6e29c7f8f/MSC Cruises MSC Fantasia Deck 10.jpeg" alt="Deck 10 - Sogno" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 10 - Sogno</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 9 - Radioso" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2021/11/25/06/26/05/69c3ab16-5271-4411-b0ed-fea9957ebc32/MSC Cruises MSC Fantasia Deck 9.jpeg" alt="Deck 9 - Radioso" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 9 - Radioso</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 8 - Favola" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2021/11/25/06/26/05/c6191720-e80a-4154-ba7d-509a52d44409/MSC Cruises MSC Fantasia Deck 8.jpeg" alt="Deck 8 - Favola" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 8 - Favola</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 7 - Sublime" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2021/11/25/06/26/04/6813db70-fe96-408f-a738-af5575bf6369/MSC Cruises MSC Fantasia Deck 7.jpeg" alt="Deck 7 - Sublime" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 7 - Sublime</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 6 - Magnifico" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2021/11/25/06/26/04/46d3726d-ddb0-458f-820d-3fd9d2f73fd5/MSC Cruises MSC Fantasia Deck 6.jpeg" alt="Deck 6 - Magnifico" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 6 - Magnifico</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 5 - Fantasia" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2021/11/25/06/26/04/2c7f961d-727c-4319-b8f7-c7dc7e94dec8/MSC Cruises MSC Fantasia Deck 5.jpeg" alt="Deck 5 - Fantasia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 5 - Fantasia</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 4 - Maggio" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/09/22/11/59/17/1ae9c7d5-49c4-4cd9-b463-09daaac03504/MSC Cruises MSC Fantasia Deck Plan 4.png" alt="Deck 4 - Maggio" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 4 - Maggio</p>
   </div>
     </div>

@@ -69,22 +69,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .g-sidebar{position:sticky;top:80px}
     .tag{display:inline-block;background:var(--gray-100);color:var(--gray-700);font-size:.78rem;padding:3px 8px;border-radius:10px;margin:2px}
 
+
     .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
     @media(max-width:768px){.facility-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.facility-grid{grid-template-columns:1fr}}
     .facility-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .facility-card img{width:100%;height:160px;object-fit:cover}
+    .facility-card img{width:100%;height:160px;object-fit:cover;display:block}
+    .facility-card .no-img{width:100%;height:160px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem}
     .facility-info{padding:12px}
     .facility-info h3{font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
     .facility-info p{font-size:.82rem;color:var(--gray-700);margin:0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .cabin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
     @media(max-width:768px){.cabin-grid{grid-template-columns:repeat(2,1fr)}}
     .cabin-card{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:#fff}
-    .cabin-card img{width:100%;height:120px;object-fit:cover}
+    .cabin-card img{width:100%;height:120px;object-fit:cover;display:block}
+    .cabin-card .no-img{width:100%;height:120px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
     .cabin-card-name{padding:8px;font-size:.8rem;font-weight:700;color:var(--navy);text-align:center}
     .deckplan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
     @media(max-width:600px){.deckplan-list{grid-template-columns:1fr}}
-    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200)}
+    .deckplan-item img{width:100%;border-radius:8px;border:1px solid var(--gray-200);display:block}
+    .deckplan-item .no-img{width:100%;height:200px;background:var(--gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem}
     .deckplan-item p{font-size:.82rem;color:var(--gray-600);margin:4px 0 0;text-align:center}
   </style>
 </head>
@@ -124,134 +128,164 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
 
+
     <h2 id="dining">🍽️ 다이닝</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/05/16/17/05/45/82bdd77c-d707-4c86-bcd5-3ee08b992750/Princess Cruises, Star Princess The Eatery.jpg" alt="The Eatery" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Eatery</h3><p>Where a world of flavors comes to life with an ever-changing menu showcasing regional specialties and comforting favorites, ensuring there’s something for everyone. Our attentive waitstaff is always r</p></div>
+    <img src="https://assets.widgety.co.uk/2025/05/16/17/05/45/82bdd77c-d707-4c86-bcd5-3ee08b992750/Princess Cruises, Star Princess The Eatery.jpg" alt="The Eatery" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Eatery</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/05/16/17/08/25/d4df9ac2-abb2-4948-8720-3066149deda6/Princess Cruises, Star Princess Americana Diner.jpg" alt="Americana Diner" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Americana Diner</h3><p>Savor the classicsFrom timeless bites to nostalgic sides, Americana Diner serves classic favorites all day long.​ Enjoy comfort food and American classics for when you're craving a hearty meal or a qu</p></div>
+    <img src="https://assets.widgety.co.uk/2025/05/16/17/08/25/d4df9ac2-abb2-4948-8720-3066149deda6/Princess Cruises, Star Princess Americana Diner.jpg" alt="Americana Diner" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Americana Diner</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/05/16/17/10/39/c9378c36-3a10-42f4-a9dd-52bcf9be54dc/Princess Cruises, Star Princess Main Dining Rooms.jpg" alt="Main Dining Rooms" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Main Dining Rooms</h3><p>Complimentary fine dining at seaSavor chef-crafted menus in our Main Dining Rooms, featuring a curated selection of modern and classic dishes made with the finest ingredients. Enjoy the freedom to din</p></div>
+    <img src="https://assets.widgety.co.uk/2025/05/16/17/10/39/c9378c36-3a10-42f4-a9dd-52bcf9be54dc/Princess Cruises, Star Princess Main Dining Rooms.jpg" alt="Main Dining Rooms" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Main Dining Rooms</h3><p>다양한 코스 요리를 즐길 수 있는 메인 다이닝룸으로, 매일 바뀌는 메뉴를 선보입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/05/16/17/15/12/95613712-17a2-4bed-81ac-58a887481d11/Princess Cruises, Star Princess Umai Teppanyaki.jpeg" alt="Umai Teppanyaki" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Umai Teppanyaki</h3><p>Where Teppan cuisine and spectacular showmanship meetGather around a shared table and prepare to be mesmerized as your personal chef takes center stage, showcasing dazzling skills while expertly juggl</p></div>
+    <img src="https://assets.widgety.co.uk/2025/05/16/17/15/12/95613712-17a2-4bed-81ac-58a887481d11/Princess Cruises, Star Princess Umai Teppanyaki.jpeg" alt="Umai Teppanyaki" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Umai Teppanyaki</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2025/05/16/17/19/03/e395471b-ff1c-4c85-b7f3-de8b956e57e1/Princess Cruises, Star Princess The Catch by Rudi.jpg" alt="The Catch by Rudi" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Catch by Rudi</h3><p>Culinary mastery at seaDive into an ocean of flavor with a menu designed by our master chef and head of culinary arts, Rudi Sodamin. Inspired by the land and sea, enjoy locally sourced fresh seafood, </p></div>
+    <img src="https://assets.widgety.co.uk/2025/05/16/17/19/03/e395471b-ff1c-4c85-b7f3-de8b956e57e1/Princess Cruises, Star Princess The Catch by Rudi.jpg" alt="The Catch by Rudi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Catch by Rudi</h3><p>신선한 해산물 요리를 전문으로 하는 레스토랑입니다.</p></div>
   </div>
     </div>
 
     <h2 id="entertainment">🎭 엔터테인먼트</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/07/cc7c6c5a-729b-4e55-a9cb-e514522edcd4/Princess Cruises Star Princess The Piazza.png" alt="The Piazza" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Piazza</h3><p>Infused with light, our next generation Piazza connects you to the world with dynamic views and innovative experiences. Stroll through this — a hub of activity, inspired by the vibrant squares of Euro</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/07/cc7c6c5a-729b-4e55-a9cb-e514522edcd4/Princess Cruises Star Princess The Piazza.png" alt="The Piazza" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Piazza</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/06/7f4ae43c-61e0-45c7-834a-8febe7eeae99/Princess Cruises Star Princess The Dome.png" alt="The Dome" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Dome</h3><p>Inspired by the terraces of Santorini, The Dome is a multi-level covered deck and first-of-its-kind glass-enclosed dome ever constructed on a cruise ship. During the day, the Dome features an indoor/o</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/06/7f4ae43c-61e0-45c7-834a-8febe7eeae99/Princess Cruises Star Princess The Dome.png" alt="The Dome" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Dome</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/04/f8d3b14d-de7a-4d6c-a824-cc4656def144/Princess Cruises Star Princess Princess Arena.png" alt="Princess Arena" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Princess Arena</h3><p>Our Princess Theatre has evolved into the Princess Arena, our most technologically advanced performance space. We can configure it in different ways — even in the round! — and its crowning glory is an</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/04/f8d3b14d-de7a-4d6c-a824-cc4656def144/Princess Cruises Star Princess Princess Arena.png" alt="Princess Arena" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Princess Arena</h3><p>브로드웨이 스타일의 대형 공연장으로, 세계적 수준의 쇼와 공연을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/05/e7f51546-97bc-4435-8d75-9ae3708a0bc0/Princess Cruises Star Princess Princess Live.png" alt="Princess Live!" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Princess Live!</h3><p>Princess Live! provides non-stop entertainment throughout the day and each evening with trivia, game shows, the Daily Wake Show, live concerts and late-night comedy. Our new design is relaxed and righ</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/05/e7f51546-97bc-4435-8d75-9ae3708a0bc0/Princess Cruises Star Princess Princess Live.png" alt="Princess Live!" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Princess Live!</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/02/a4ba427e-6cbc-4b6a-b8e3-112f9d76ebbe/Princess Cruises Star Princess Casino.png" alt="Princess Casino" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Princess Casino</h3><p>We’re upping the ante with a sleek new look and central location for our friendliest casino at sea. Come play with us, whether slots or table games.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/02/a4ba427e-6cbc-4b6a-b8e3-112f9d76ebbe/Princess Cruises Star Princess Casino.png" alt="Princess Casino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Princess Casino</h3><p>라스베이거스 스타일의 카지노로, 슬롯머신과 테이블 게임을 즐길 수 있습니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/05/86d177f9-4154-40d1-833d-63660c897333/Princess Cruises Star Princess Shop.png" alt="The Shops of Princess" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Shops of Princess</h3><p>Now located just off the Piazza, you can take in world-class views then indulge in a little retail therapy in these elegant boutiques.</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/05/86d177f9-4154-40d1-833d-63660c897333/Princess Cruises Star Princess Shop.png" alt="The Shops of Princess" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Shops of Princess</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/05/3b165d1e-2018-494b-9a4a-c75c9e5ebf75/Princess Cruises Star Princess Sea View Terrace.png" alt="Sea View Terrace" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Sea View Terrace</h3><p>Look ahead to adventures on the horizon from the new Sea View Terrace and Bar, located at the front of your ship. This two-deck bar and modern-yet-cozy lounge space is perfect for relaxing in the fres</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/05/3b165d1e-2018-494b-9a4a-c75c9e5ebf75/Princess Cruises Star Princess Sea View Terrace.png" alt="Sea View Terrace" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Sea View Terrace</h3><p>편안한 분위기의 라운지에서 음료를 즐기며 여유로운 시간을 보내세요.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/08/1985c9e0-ce6e-417e-b45b-16f118237360/Princess Cruises Star Princess Wake View Terrace.png" alt="Wake View Terrace" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Wake View Terrace</h3><p>If you enjoy taking in the views from the back of the ship, you’ll love our brand-new Wake View Terrace. It has everything you could want: infinity pool, South Beach-style resort deck, entertainment d</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/08/1985c9e0-ce6e-417e-b45b-16f118237360/Princess Cruises Star Princess Wake View Terrace.png" alt="Wake View Terrace" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Wake View Terrace</h3><p>선내 수영장으로, 일광욕과 수영을 즐길 수 있는 최고의 휴식 공간입니다.</p></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/07/4968e978-0b1d-49b1-8c7c-5843a20c4abc/Princess Cruises Star Princess The Sanctuary.png" alt="The Sanctuary" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>The Sanctuary</h3><p>If you haven’t tried The Sanctuary yet, this is your open invitation to spend a half or full day in a retreat that’s only for adults and soaking up every bit of relaxation you can. Sip on a signature </p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/07/4968e978-0b1d-49b1-8c7c-5843a20c4abc/Princess Cruises Star Princess The Sanctuary.png" alt="The Sanctuary" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>The Sanctuary</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/06/705368f5-cba4-4c50-8485-e42da3b7ecb5/Princess Cruises Star Princess Signature Sun Deck.png" alt="Signature Sun Deck" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Signature Sun Deck</h3><p>As a Signature Collection guest, you not only enjoy premium stateroom amenities, you also have this private area of The Sanctuary to call your own. No kids, no worries, just you, the sun and your Sere</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/06/705368f5-cba4-4c50-8485-e42da3b7ecb5/Princess Cruises Star Princess Signature Sun Deck.png" alt="Signature Sun Deck" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Signature Sun Deck</h3></div>
   </div>
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/02/2952c7a1-b933-4ab2-a2a5-766e4a06a121/Princess Cruises Star Princess Cabana Deck.png" alt="Cabana Deck" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Cabana Deck</h3><p>One of the many perks of staying in a Reserve Collection Cabana Mini-Suite is access to our new Cabana Deck, an exclusive outdoor space with comfy furniture and the freedom to spend the day however yo</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/02/2952c7a1-b933-4ab2-a2a5-766e4a06a121/Princess Cruises Star Princess Cabana Deck.png" alt="Cabana Deck" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Cabana Deck</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
     </div>
 
     <h2 id="health">💆 스파 &amp; 웰니스</h2>
     <div class="facility-grid">
   <div class="facility-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/04/eeecb100-bf7c-416d-bfb3-64b37bd77f5a/Princess Cruises Star Princess Lotus Spa.png" alt="Lotus Spa" loading="lazy" onerror="this.style.display='none'">
-    <div class="facility-info"><h3>Lotus Spa</h3><p>The Lotus Spa® on Sun Princess® is our first spa to stand two stories tall! Just as exciting are the new features you can enjoy, like a salt room and an aeromatic steam room, and reimagined favourites</p></div>
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/40/04/eeecb100-bf7c-416d-bfb3-64b37bd77f5a/Princess Cruises Star Princess Lotus Spa.png" alt="Lotus Spa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🚢</div>
+    <div class="facility-info"><h3>Lotus Spa</h3><p>세계 최고 수준의 선상 스파로, 다양한 마사지와 뷰티 트리트먼트를 받으세요.</p></div>
   </div>
     </div>
 
     <h2 id="cabins">🛏️ 객실 등급</h2>
     <div class="cabin-grid">
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/32/14/d9a285ef-7a91-48fd-a8dc-0ea3c24b9eb5/Princess Cruises Star Princess Signature Sky Suite.png" alt="Signature Sky Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/32/14/d9a285ef-7a91-48fd-a8dc-0ea3c24b9eb5/Princess Cruises Star Princess Signature Sky Suite.png" alt="Signature Sky Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Signature Sky Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/32/14/6f050abf-23fd-4163-94e8-0968d8478a88/Princess Cruises Star Princess Signature Collection Suite.png" alt="Signature Collection Suites" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/32/14/6f050abf-23fd-4163-94e8-0968d8478a88/Princess Cruises Star Princess Signature Collection Suite.png" alt="Signature Collection Suites" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Signature Collection Suites</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/27/13/ab128161-c3c2-48df-99f0-c5176c6ba388/Princess Cruises Star Princess Cabana Mini Suite.png" alt="Cabana Mini-Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/27/13/ab128161-c3c2-48df-99f0-c5176c6ba388/Princess Cruises Star Princess Cabana Mini Suite.png" alt="Cabana Mini-Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Cabana Mini-Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Owner's Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Owner's Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Owner's Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Penthouse Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Penthouse Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Penthouse Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/25/40/d6629d53-edff-4595-a5a9-cb8bf6b824ac/Princess Cruises Star Princess Mini Suite.png" alt="Mini-Suite" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/25/40/d6629d53-edff-4595-a5a9-cb8bf6b824ac/Princess Cruises Star Princess Mini Suite.png" alt="Mini-Suite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Mini-Suite</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Cove Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Cove Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Cove Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Premium Deluxe Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2020/10/20/08/08/28/006b620c-4214-4dd0-8fa8-75ec682e9eef/image coming soon image not available.jpg" alt="Premium Deluxe Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Deluxe Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/23/50/f27c243e-97e9-42cb-ab0e-a77a7eddc3cd/Princess Cruises Star Princess Deluxe Balcony.png" alt="Deluxe Balcony" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/23/50/f27c243e-97e9-42cb-ab0e-a77a7eddc3cd/Princess Cruises Star Princess Deluxe Balcony.png" alt="Deluxe Balcony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Deluxe Balcony</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/21/35/476edbb4-06c9-4839-9e19-b14c13a78fdf/Princess Cruises Star Princess Premium Oceanview.png" alt="Premium Oceanview" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/21/35/476edbb4-06c9-4839-9e19-b14c13a78fdf/Princess Cruises Star Princess Premium Oceanview.png" alt="Premium Oceanview" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Premium Oceanview</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/21/34/24e43c88-5883-4873-bbfb-282f006d1fd0/Princess Cruises Star Princess Interior Cabin.png" alt="Interior" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/21/34/24e43c88-5883-4873-bbfb-282f006d1fd0/Princess Cruises Star Princess Interior Cabin.png" alt="Interior" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Interior</div>
   </div>
   <div class="cabin-card">
-    <img src="https://assets.widgety.co.uk/2023/06/01/06/21/36/6126df7f-555c-4bc4-a9f4-a80f0c07c080/Princess Cruises Star Princess Wheelchair Accessible Cabin.png" alt="Wheelchair-Accessible" loading="lazy" onerror="this.style.display='none'">
+    <img src="https://assets.widgety.co.uk/2023/06/01/06/21/36/6126df7f-555c-4bc4-a9f4-a80f0c07c080/Princess Cruises Star Princess Wheelchair Accessible Cabin.png" alt="Wheelchair-Accessible" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🛏️</div>
     <div class="cabin-card-name">Wheelchair-Accessible</div>
   </div>
     </div>
@@ -259,71 +293,88 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="deckplan">📐 덱 플랜</h2>
     <div class="deckplan-list">
   <div class="deckplan-item">
-    <img src="" alt="Deck 21" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/59/d8726038-c066-449f-9dba-e2a165b2fab0/Princess Cruises, Star Princess Deck 21.png" alt="Deck 21" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 21</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 20" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/59/67c824c6-f5d0-494b-89e3-6c9066dcaa1d/Princess Cruises, Star Princess Deck 20.png" alt="Deck 20" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 20</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 19" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/59/c4be5e31-e745-4a13-8154-8ddb21d5c1da/Princess Cruises, Star Princess Deck 19.png" alt="Deck 19" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 19</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 18" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/59/4a7a7f98-b389-4a01-98d8-fdd6948cf847/Princess Cruises, Star Princess Deck 18.png" alt="Deck 18" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 18</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 17" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/58/601b2e38-47ec-499c-bfef-88900b8d62b5/Princess Cruises, Star Princess Deck 17.png" alt="Deck 17" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 17</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 16" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/58/684f1d12-eb8c-4c26-a272-37088670b9e2/Princess Cruises, Star Princess Deck 16.png" alt="Deck 16" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 16</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 15" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/58/96ed5e53-f5b5-4548-acf6-f6f3b501b95d/Princess Cruises, Star Princess Deck 15.png" alt="Deck 15" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 15</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 14" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/58/dbfab252-f1b7-4983-8268-02d537e0954e/Princess Cruises, Star Princess Deck 14.png" alt="Deck 14" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 14</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 12" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/58/f9222574-db1c-4b16-8da0-3e72f41ea1a3/Princess Cruises, Star Princess Deck 12.png" alt="Deck 12" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 12</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 11" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/58/b2344bd3-1656-4f6d-8948-6f74738937cf/Princess Cruises, Star Princess Deck 11.png" alt="Deck 11" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 11</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 10" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/58/7c7ea03e-ea71-484d-acb2-d802d47981ae/Princess Cruises, Star Princess Deck 10.png" alt="Deck 10" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 10</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 9" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/58/398d69ba-5a4f-4177-9d09-6d1ed07e515f/Princess Cruises, Star Princess Deck 9.png" alt="Deck 9" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 9</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 8" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/58/34639d2c-043e-47fc-ab3b-a8e586377b4a/Princess Cruises, Star Princess Deck 8.png" alt="Deck 8" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 8</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 7" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/58/e8632d9a-5385-498f-bbee-2d8cf3f4de21/Princess Cruises, Star Princess Deck 7.png" alt="Deck 7" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 7</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 6" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/58/ba5c0bf5-2751-428a-90ca-40d5b2e0b8bc/Princess Cruises, Star Princess Deck 6.png" alt="Deck 6" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 6</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 5" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/57/5e238060-d40f-4ac2-9ce4-f7def00ce93a/Princess Cruises, Star Princess Deck 5.png" alt="Deck 5" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 5</p>
   </div>
   <div class="deckplan-item">
-    <img src="" alt="Deck 4" loading="lazy">
+    <img src="https://assets.widgety.co.uk/2025/05/16/15/34/57/5db37a13-9f73-4cb6-8c77-3fc463ada0f8/Princess Cruises, Star Princess Deck 4.png" alt="Deck 4" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="no-img" style="display:none">🗺️</div>
     <p>Deck 4</p>
   </div>
     </div>
