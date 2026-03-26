@@ -1472,6 +1472,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
   </style>
 
+  <style>
+    /* ── 상세 일정 테이블 모바일 최적화 ── */
+    .itin-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 10px;
+      box-shadow: 0 1px 6px rgba(0,0,0,.08);
+    }
+    .itin-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+      min-width: 360px;
+    }
+    .itin-table thead tr {
+      background: var(--navy, #1a2d5a);
+      color: #fff;
+    }
+    .itin-table th {
+      padding: 10px 8px;
+      text-align: center;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .itin-table td {
+      padding: 10px 8px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+      vertical-align: middle;
+      word-break: keep-all;
+    }
+    .itin-td-day { font-weight: 700; white-space: nowrap; }
+    .itin-td-date { white-space: nowrap; color: #555; font-size: .82rem; }
+    .itin-td-port { text-align: left; line-height: 1.5; }
+    .itin-td-time { white-space: nowrap; color: #444; font-size: .82rem; }
+
+    .itin-tr-embark { background: #e8f5e9; }
+    .itin-tr-disembark { background: #fff3e0; }
+    .itin-tr-sea { background: #f0f4ff; color: #666; }
+
+    .itin-badge {
+      display: inline-block;
+      margin-left: 5px;
+      padding: 1px 7px;
+      border-radius: 10px;
+      font-size: .7rem;
+      font-weight: 700;
+    }
+    .itin-badge.e { background: #4caf50; color: #fff; }
+    .itin-badge.d { background: #ff6f00; color: #fff; }
+
+    .itin-sea-label { color: #5c7aae; font-size: .82rem; }
+
+    @media (max-width: 480px) {
+      .itin-table { font-size: .78rem; min-width: 320px; }
+      .itin-table th, .itin-table td { padding: 8px 5px; }
+      .itin-td-date { font-size: .72rem; }
+      .itin-td-time { font-size: .72rem; }
+    }
+  </style>
+
   <script>
     // ── Mobile Inquiry Bar ──
     function toggleMIB() {
