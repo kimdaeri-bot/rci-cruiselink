@@ -602,7 +602,7 @@ async function botReply(userText) {
 
 function saveInquiry(userMsg, botReply) {
   try {
-    fetch('/api/inquiry', {
+    fetch('https://cruiselink-v2.vercel.app/api/inquiry', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
