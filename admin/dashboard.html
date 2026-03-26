@@ -600,6 +600,9 @@
     <div class="menu-item" id="menuChat" onclick="showPanel('chat')">
       <span>💬</span> 김대리 채팅
     </div>
+    <div class="menu-item" id="menuAiChat" onclick="showPanel('aiChat')">
+      <span>🤖</span> AI 채팅 (크링AI)
+    </div>
   </nav>
   <div class="sidebar-footer">
     <button class="btn-logout" onclick="doLogout()">🚪 로그아웃</button>
@@ -608,6 +611,30 @@
 
 <!-- MAIN CONTENT -->
 <main class="main">
+
+  <!-- PANEL AI 채팅 -->
+  <div class="panel" id="panelAiChat">
+    <div class="inquiry-toolbar">
+      <h2 class="panel-title" style="margin-bottom:0">🤖 AI 채팅 (크링AI) 이용 데이터</h2>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <button class="btn-refresh" onclick="loadAiChats()">🔄 새로고침</button>
+      </div>
+    </div>
+    <div class="inquiry-table-wrap">
+      <table class="inquiry-table">
+        <thead>
+          <tr>
+            <th>접수일</th>
+            <th>고객 문의 내용</th>
+            <th>AI 답변 요약</th>
+          </tr>
+        </thead>
+        <tbody id="aiChatTableBody">
+          <tr><td colspan="3" style="text-align:center;padding:32px;color:#aaa">로딩 중...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
   <!-- PANEL 1: 문의 목록 -->
   <div class="panel active" id="panelInquiry">
@@ -744,6 +771,9 @@
     if (name === 'chat' && (!ws || ws.readyState !== WebSocket.OPEN)) {
       connectWS();
     }
+    if (name === 'aiChat') {
+      loadAiChats();
+    }
   }
 
   function capitalize(s) {
@@ -785,6 +815,40 @@
   // =============================================
   // PANEL 1: 문의 목록
   // =============================================
+  async function loadAiChats() {
+    const tbody = document.getElementById('aiChatTableBody');
+    tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;padding:32px;color:#aaa">로딩 중...</td></tr>';
+    try {
+      const res = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/admin/inquiries.json`, {
+        headers: { Authorization: `Bearer ${GH_TOKEN}`, Accept: "application/vnd.github.v3+json" }
+      });
+      const file = await res.json();
+      const b64 = file.content.replace(/\n/g, "");
+      const binary = atob(b64);
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+      const data = JSON.parse(new TextDecoder('utf-8').decode(bytes));
+      const aiData = data.filter(d => d.ref === 'AI_CHAT' || d.source === 'ai-chat').sort((a,b) => new Date(b.timestamp||0) - new Date(a.timestamp||0));
+      if (!aiData.length) {
+        tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;padding:40px;color:#aaa">AI 채팅 이용 데이터가 없습니다</td></tr>';
+        return;
+      }
+      tbody.innerHTML = aiData.map(d => {
+        const date = d.timestamp ? new Date(d.timestamp).toLocaleString('ko-KR') : '-';
+        const msg = esc(d.message || '');
+        const userMsg = msg.match(/\[고객\] (.+?)(?:\n|\[AI\]|$)/s)?.[1]?.trim() || msg.substring(0,80);
+        const aiMsg = msg.match(/\[AI\] (.+)$/s)?.[1]?.trim() || '';
+        return `<tr>
+          <td style="white-space:nowrap;font-size:12px">${date}</td>
+          <td style="font-size:12px;max-width:300px">${esc(userMsg)}</td>
+          <td style="font-size:12px;max-width:300px;color:#555">${esc(aiMsg.substring(0,100))}${aiMsg.length>100?'...':''}</td>
+        </tr>`;
+      }).join('');
+    } catch (e) {
+      tbody.innerHTML = `<tr><td colspan="3" style="text-align:center;padding:32px;color:#e53935">오류: ${e.message}</td></tr>`;
+    }
+  }
+
   async function loadInquiries() {
     const tbody = document.getElementById('inquiryTableBody');
     tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:32px;color:#aaa">로딩 중...</td></tr>';
