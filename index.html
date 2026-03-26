@@ -1734,6 +1734,10 @@ const KRING_RULES = [
   { keywords: ['지중해','유럽','이탈리아','그리스','스페인','바르셀로나'], reply: '지중해 크루즈를 찾고 계시는군요! MSC 크루즈가 특히 인기입니다.\n\n출발 시기가 언제쯤이신가요?', quickSet: 'period', search: { destination: 'mediterranean' } },
   { keywords: ['일본','아시아','도쿄','오사카','후쿠오카','인천'], reply: '일본/아시아 크루즈를 원하시는군요! 인천 출발 상품이 많아 편리합니다.\n\n여행 기간은 어떻게 생각하고 계세요?', quickSet: 'period', search: { destination: 'asia' } },
   { keywords: ['카리브','바하마','멕시코'], reply: '카리브해 크루즈를 찾으시는군요! 에메랄드빛 바다가 매력적인 노선입니다.\n\n출발 인원이 어떻게 되시나요?', quickSet: 'pax', search: { destination: 'caribbean' } },
+  { keywords: ['알래스카','빙하','케치칸'], reply: '알래스카 크루즈를 찾고 계시는군요! 빙하와 대자연이 절경입니다.\n\n여행 기간은 어떻게 생각하고 계세요?', quickSet: 'period', search: { destination: 'alaska' } },
+  { keywords: ['북유럽','노르웨이','피오르','발트'], reply: '북유럽 크루즈를 원하시는군요! 피오르와 오로라가 매력적인 노선입니다.\n\n출발 시기가 언제쯤이신가요?', quickSet: 'period', search: { destination: 'northern-europe' } },
+  { keywords: ['동남아','베트남','싱가포르','태국'], reply: '동남아 크루즈를 찾고 계시는군요! 이국적인 항구들이 기다리고 있습니다.\n\n여행 기간은 어떻게 생각하고 계세요?', quickSet: 'period', search: { destination: 'southeast-asia' } },
+  { keywords: ['하와이'], reply: '하와이 크루즈를 원하시는군요! 환상적인 섬들을 선박으로 순항하는 특별한 경험입니다.', quickSet: 'period', search: { destination: 'hawaii' } },
   { keywords: ['객실','방','내측','외측','발코니','스위트','차이'], reply: '객실 타입 안내드릴게요!\n\n🚪 내측 - 창문 없음, 가장 경제적\n🪟 외측 - 고정 유리창으로 바다 조망\n🌅 발코니 - 전용 발코니, 가장 인기\n👑 스위트 - 넓은 공간과 프리미엄 서비스', quickSet: 'cabin' },
   { keywords: ['식사','음식','다이닝','레스토랑'], reply: '크루즈 식사는 기본 메인 다이닝룸의 조식·중식·석식이 요금에 포함됩니다.\n스페셜티 레스토랑은 별도 유료입니다.', quickSet: 'init' },
   { keywords: ['비용','요금','가격','얼마','견적'], reply: '정확한 요금은 전문 상담원이 확인 후 안내해 드릴게요.\n카카오톡으로 문의해 주시면 빠르게 견적을 받으실 수 있습니다!', quickSet: 'init', showKakao: true },
@@ -1754,11 +1758,15 @@ function kringParseCriteria(text) {
   if (/도쿄|요코하마/.test(text)) c.startPort = ['Tokyo','Yokohama'];
   const nightMatch = text.match(/(\d+)박/);
   if (nightMatch) c.nights = parseInt(nightMatch[1]);
-  if (/지중해|유럽|이탈리아|그리스|스페인/.test(text)) c.destination = 'mediterranean';
-  if (/일본|아시아|도쿄|오사카|후쿠오카/.test(text)) c.destination = 'asia';
-  if (/카리브|바하마/.test(text)) c.destination = 'caribbean';
-  if (/알래스카/.test(text)) c.destination = 'alaska';
-  else if (/북유럽/.test(text)) c.destination = 'northern-europe';
+  // 목적지 파싱 (destination 필드 기준)
+  if (/지중해|이탈리아|그리스|스페인|바르셀로나|산토리니|크로아티아|프랑스/i.test(text)) c.destination = 'mediterranean';
+  else if (/알래스카|빙하|케치칸|주노|스캐그웨이/i.test(text)) c.destination = 'alaska';
+  else if (/북유럽|노르웨이|피오르|코펜하겐|암스테르담|발트해|스톡홀름/i.test(text)) c.destination = 'northern-europe';
+  else if (/카리브|바하마|멕시코|자메이카|쿠바|나소|코코케이/i.test(text)) c.destination = 'caribbean';
+  else if (/한국|일본|인천|도쿄|오사카|후쿠오카|나가사키|가고시마|부산/i.test(text)) c.destination = 'korea';
+  else if (/동남아|베트남|싱가포르|태국|말레이시아|인도네시아|필리핀|다낭/i.test(text)) c.destination = 'southeast-asia';
+  else if (/아시아|중동|두바이|아부다비/i.test(text)) c.destination = 'asia';
+  else if (/하와이/i.test(text)) c.destination = 'hawaii';
   if (/MSC|엠에스씨/i.test(text)) c.operator = 'MSC';
   if (/NCL|노르웨지안/i.test(text)) c.operator = 'Norwegian';
   if (/로열|로얄|royal/i.test(text)) c.operator = 'Royal Caribbean';
@@ -1783,7 +1791,7 @@ function kringSearchCruises(criteria) {
   });
   if (criteria.yearMonth) r = r.filter(c => c.dateFrom?.startsWith(criteria.yearMonth));
   if (criteria.nights) r = r.filter(c => Math.abs((c.nights||0)-criteria.nights)<=1);
-  return r.slice(0,3);
+  return r.slice(0,5);
 }
 
 function kringAddMsg(text, isBot, products=[]) {
