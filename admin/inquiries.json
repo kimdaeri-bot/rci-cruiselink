@@ -1430,5 +1430,23 @@
     "id": "1774526641446",
     "timestamp": "2026-03-26T12:04:01.446Z",
     "status": "신규"
+  },
+  {
+    "product": "크링AI 채팅 문의",
+    "ref": "KRING_AI",
+    "name": "크링AI 고객",
+    "email": "",
+    "phone": "",
+    "pax": "",
+    "cabin": "",
+    "cruiseline": "",
+    "ship": "",
+    "dateFrom": "",
+    "price": "",
+    "message": "[고객] 크루즈 승무원이랑 손님 비율은?\n[AI] 죄송합니다. 잠시 후 다시 시도해 주세요.",
+    "source": "kring-ai",
+    "id": "1774526660737",
+    "timestamp": "2026-03-26T12:04:20.737Z",
+    "status": "신규"
   }
 ]
