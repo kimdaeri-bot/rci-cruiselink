@@ -578,7 +578,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       // 날짜별 요약 테이블 생성
       const startDate = holiday.departure_date ? new Date(holiday.departure_date) : null;
       let tableHtml = `<table class="itinerary-summary-table">
-        <thead><tr><th>일차</th><th>날짜</th><th>항구 / 도시</th><th>국가</th><th>입항</th><th>출항</th></tr></thead>
+        <thead><tr><th>曜日</th><th>日付</th><th>寄港地</th><th>出港時刻</th><th>入港時刻</th></tr></thead>
         <tbody>`;
       for (const day of filledDays) {
         const loc = day.locations?.[0];
