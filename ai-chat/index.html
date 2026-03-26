@@ -26,7 +26,7 @@
 
     /* HEADER */
     .header {
-      position: sticky; top: 0; z-index: 100;
+      position: relative;
       background: var(--white); box-shadow: var(--shadow);
       height: 64px; display: flex; align-items: center; padding: 0 24px;
       justify-content: space-between;
@@ -79,7 +79,7 @@
     .chat-status { width: 8px; height: 8px; border-radius: 50%; background: #4caf50; margin-left: auto; }
 
     .chat-messages {
-      height: 460px; overflow-y: auto; padding: 20px;
+      height: 560px; overflow-y: auto; padding: 20px;
       display: flex; flex-direction: column; gap: 16px;
       scroll-behavior: smooth;
     }
@@ -433,7 +433,7 @@ function addMessage(text, isBot, products = [], isHtml = false) {
     </div>
   `;
   container.appendChild(div);
-  container.scrollTop = container.scrollHeight;
+  setTimeout(() => { container.scrollTop = container.scrollHeight; }, 50);
 }
 
 function showTyping() {
@@ -442,7 +442,7 @@ function showTyping() {
   div.className = 'msg bot'; div.id = 'typing';
   div.innerHTML = `<div class="msg-avatar">AI</div><div class="msg-bubble" style="padding:10px 14px"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
   container.appendChild(div);
-  container.scrollTop = container.scrollHeight;
+  setTimeout(() => { container.scrollTop = container.scrollHeight; }, 50);
 }
 
 function hideTyping() {
