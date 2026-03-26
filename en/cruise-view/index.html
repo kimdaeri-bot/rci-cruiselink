@@ -575,7 +575,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       }
 
-      let html = '<div class="day-cards">';
+      // 날짜별 요약 테이블 생성
+      const startDate = holiday.departure_date ? new Date(holiday.departure_date) : null;
+      let tableHtml = `<table class="itinerary-summary-table">
+        <thead><tr><th>일차</th><th>날짜</th><th>항구 / 도시</th><th>국가</th><th>입항</th><th>출항</th></tr></thead>
+        <tbody>`;
+      for (const day of filledDays) {
+        const loc = day.locations?.[0];
+        const isSeaDay = !loc || (Array.isArray(day.day_type) ? day.day_type.includes('SEA') : day.day_type?.includes('SEA')) || day.day_name?.toLowerCase().includes('at sea') || day.day_name === '해상';
+        const dateStr = startDate ? (() => {
+          const d = new Date(startDate);
+          d.setDate(d.getDate() + day.day - 1);
+          return (d.getMonth()+1) + '/' + d.getDate() + ' (' + ['일','월','화','수','목','금','토'][d.getDay()] + ')';
+        })() : day.day + '일차';
+
+        if (isSeaDay) {
+          tableHtml += `<tr><td>${day.day}일차</td><td>${dateStr}</td><td class="it-sea">🌊 해상 (At Sea)</td><td>-</td><td>-</td><td>-</td></tr>`;
+        } else {
+          const portName = Translations.portName(loc.name);
+          const arr = loc.arrival_time || '-';
+          const dep = loc.departure_time || '-';
+          const isFirst = day.day === 1;
+          const isLast = day.day === filledDays.length;
+          const rowClass = isFirst ? 'it-embark' : isLast ? 'it-disembark' : '';
+          const countryKo = Translations.countryName(loc.country) || loc.country || '';
+          const portLabel = portName + (isFirst ? ' ⚓승선' : isLast ? ' ⚓하선' : '');
+          tableHtml += `<tr><td>${day.day}일차</td><td>${dateStr}</td><td class="${rowClass}">${portLabel}</td><td>${countryKo}</td><td>${arr}</td><td>${dep}</td></tr>`;
+        }
+      }
+      tableHtml += '</tbody></table>';
+
+      let html = tableHtml + '<div class="day-cards">';
       for (const day of filledDays) {
         const loc = day.locations?.[0];
         const isSeaDay = !loc || (Array.isArray(day.day_type) ? day.day_type.includes('SEA') : day.day_type?.includes('SEA')) || day.day_name?.toLowerCase().includes('at sea') || day.day_name === '해상';
