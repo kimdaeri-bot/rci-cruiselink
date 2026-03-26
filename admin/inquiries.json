@@ -1376,5 +1376,23 @@
     "id": "1774522962912",
     "timestamp": "2026-03-26T11:02:42.912Z",
     "status": "신규"
+  },
+  {
+    "product": "크링AI 채팅 문의",
+    "ref": "KRING_AI",
+    "name": "크링AI 고객",
+    "email": "",
+    "phone": "",
+    "pax": "",
+    "cabin": "",
+    "cruiseline": "Norwegian Cruise Line",
+    "ship": "Norwegian Sky",
+    "dateFrom": "2026-04-19",
+    "price": "",
+    "message": "[고객] 북유럽 크루즈 26년 NCL 로 추천해줘\n[AI] 죄송합니다. 잠시 후 다시 시도해 주세요.",
+    "source": "kring-ai",
+    "id": "1774526608767",
+    "timestamp": "2026-03-26T12:03:28.767Z",
+    "status": "신규"
   }
 ]
