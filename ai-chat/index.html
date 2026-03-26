@@ -525,6 +525,18 @@ function parseUserCriteria(text) {
   // 날짜 파싱
   const ymMatch = text.match(/(\d{4})[\s년]?\s*(\d{1,2})월/);
   if (ymMatch) criteria.yearMonth = `${ymMatch[1]}-${ymMatch[2].padStart(2,'0')}`;
+  const yOnly = text.match(/(\d{4})년/);
+  if (yOnly && !ymMatch) criteria.year = yOnly[1];
+  // 연도 없이 월만 있는 경우 → 올해 또는 내년 기준 자동 처리
+  if (!ymMatch) {
+    const mOnly = text.match(/(\d{1,2})월/);
+    if (mOnly) {
+      const mo = parseInt(mOnly[1]);
+      const now = new Date();
+      const yr = (mo < now.getMonth() + 1) ? now.getFullYear() + 1 : now.getFullYear();
+      criteria.yearMonth = `${yr}-${String(mo).padStart(2,'0')}`;
+    }
+  }
   // 출발지 파싱
   if (/로마|치비타베키아|Rome|Civitavecchia/i.test(text)) criteria.startPort = ['Civitavecchia','Rome'];
   if (/인천출발|인천 출발|한국출발|인천에서/i.test(text)) criteria.startPort = ['Incheon','Busan'];
@@ -558,9 +570,23 @@ async function botReply(userText) {
   const rule = matchRule(userText);
   const parsedCriteria = parseUserCriteria(userText);
   const searchCriteria = Object.keys(parsedCriteria).length ? parsedCriteria : (rule?.search || {});
-  // 조건 파싱된 경우에만 상품 카드 표시 (파싱된 조건 없으면 카드 없음)
-  const hasCriteria = (Object.keys(parsedCriteria).length > 0) || rule?.search;
-  const products = (rule?.noProducts || !hasCriteria) ? [] : searchCruises(searchCriteria);
+  const hasSearchIntent = (Object.keys(parsedCriteria).length > 0) || rule?.search;
+  const products = (rule?.noProducts || !hasSearchIntent) ? [] : searchCruises(searchCriteria);
+
+  // 검색 결과 상태를 AI에 시스템 힌트로 전달
+  let systemHint = '';
+  if (hasSearchIntent && products.length === 0) {
+    const missingParts = [];
+    if (!parsedCriteria.yearMonth && !parsedCriteria.year) missingParts.push('출발 연도/월');
+    if (!parsedCriteria.destination) missingParts.push('여행 지역');
+    systemHint = `[검색 결과: 0건. 부족한 정보: ${missingParts.join(', ') || '조건이 너무 좁음'}. 자연스럽게 추가 정보를 물어보세요. 절대 상품을 지어내지 마세요.]`;
+  } else if (products.length > 0) {
+    systemHint = `[검색 결과: ${products.length}건. 상품 카드는 별도 표시되므로 AI는 간단한 한두 줄 코멘트만 해주세요.]`;
+  }
+
+  const messagesWithHint = systemHint
+    ? [...conversationHistory, {role:'user', content: systemHint}]
+    : conversationHistory;
 
   // Claude API 호출
   let reply = '';
@@ -568,10 +594,7 @@ async function botReply(userText) {
     const res = await fetch('https://cruiselink-v2.vercel.app/api/ai-chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        messages: conversationHistory,
-        cruiseContext: products.length ? products : searchCruises(parsedCriteria)
-      })
+      body: JSON.stringify({ messages: messagesWithHint, cruiseContext: products })
     });
     const data = await res.json();
     reply = data.reply || '죄송합니다. 잠시 후 다시 시도해 주세요.';
@@ -584,9 +607,9 @@ async function botReply(userText) {
   conversationHistory.push({ role: 'assistant', content: reply });
 
   if (products.length > 0) {
-    const shortMents = ['조건에 맞는 상품을 찾았습니다 🚢','이런 일정은 어떠세요?','딱 맞는 상품을 추려봤어요.','아래 상품들을 확인해보세요!'];
-    const ment = shortMents[Math.floor(Math.random() * shortMents.length)];
-    const cardsHtml = `<div style="font-size:.83rem;color:#555;margin-bottom:4px">${ment}</div>` + products.slice(0,5).map(p => {
+    // AI 코멘트 + 상품 카드
+    const aiComment = reply.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/https?:\/\/[^\s<]+/g,'').replace(/\n/g,'<br>');
+    const cardsHtml = `<div style="font-size:.85rem;color:#333;margin-bottom:6px;line-height:1.6">${aiComment}</div>` + products.slice(0,5).map(p => {
       const nights = p.nights || '';
       const date = p.dateFrom || '';
       const starts = p.startsAt?.name || '';
@@ -602,6 +625,7 @@ async function botReply(userText) {
     }).join('');
     addMessage(cardsHtml, true, [], true);
   } else {
+    // 일반 질문 or 결과 0건 → AI가 자연스럽게 답변/추가 질문
     const htmlReply = reply
       .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
       .replace(/(https?:\/\/[^\s<]+)/g, '')
