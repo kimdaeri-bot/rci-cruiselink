@@ -254,7 +254,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       'Royal Caribbean': 'Royal Caribbean International', 'Celebrity': 'Celebrity Cruises',
       'Princess': 'Princess Cruises', 'Carnival': 'Carnival Cruise Line',
       'Oceania': 'Oceania Cruises', 'Regent': 'Regent Seven Seas Cruises',
-      'Explora': 'Explora Journeys'
+      'Explora': 'Explora Journeys',
+      'Disney': 'Disney Cruise Line',
+      'Princess': 'Princess Cruises'
     };
     operators.forEach(o => tagsEl.innerHTML += `<span class="search-tag">⚓ ${Translations.operatorName(_opFullName[o] || o)}</span>`);
     if (month) tagsEl.innerHTML += `<span class="search-tag">📅 ${month.replace('-','년 ')}월</span>`;
