@@ -2046,27 +2046,31 @@ async function kringAISendText(text) {
   kringHideTyping();
   kringHistory.push({role:'assistant',content:reply});
 
-  const htmlReply = reply
-    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
-    .replace(/https?:\/\/[^\s<]+/g,'')
-    .replace(/\n/g,'<br>');
-
-  // 상품 카드: 각 일정 정보 + 상세보기 버튼 한 줄로
-  const productCardsHtml = products.slice(0,5).map(p => {
-    const nights = p.nights || p.cruise_nights || '';
-    const date = p.dateFrom || p.date_from || '';
-    const starts = p.startsAt?.name || '';
-    const route = (p.portRoute || '').replace(/→/g,'▸').substring(0, 40);
-    return `<a href="/cruise-view/?ref=${encodeURIComponent(p.ref)}" target="_blank" style="display:flex;align-items:center;justify-content:space-between;gap:8px;background:#f0f4ff;border:1px solid #c5d4f0;border-radius:10px;padding:9px 12px;margin-top:7px;text-decoration:none;color:inherit">
-      <div style="flex:1;min-width:0">
-        <div style="font-size:.82rem;font-weight:700;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.shipTitle}${nights ? ' · '+nights+'박' : ''}</div>
-        <div style="font-size:.74rem;color:#555;margin-top:2px">${date}${starts ? ' · '+starts : ''}${route ? '<br><span style="color:#777">'+route+'</span>' : ''}</div>
-      </div>
-      <span style="flex-shrink:0;background:var(--navy);color:#fff;font-size:.72rem;font-weight:700;border-radius:10px;padding:5px 10px;white-space:nowrap">상세보기 →</span>
-    </a>`;
-  }).join('');
-
-  kringAddMsg(htmlReply + productCardsHtml, true, [], true);
+  if (products.length > 0) {
+    // 상품 있으면 카드만 표시 (텍스트 생략)
+    const productCardsHtml = products.slice(0,5).map(p => {
+      const nights = p.nights || p.cruise_nights || '';
+      const date = p.dateFrom || p.date_from || '';
+      const starts = p.startsAt?.name || '';
+      const route = (p.portRoute || '').replace(/→/g,'▸').substring(0, 45);
+      return `<a href="/cruise-view/?ref=${encodeURIComponent(p.ref)}" target="_blank" style="display:flex;align-items:center;justify-content:space-between;gap:8px;background:#f0f4ff;border:1px solid #c5d4f0;border-radius:10px;padding:10px 12px;margin-top:7px;text-decoration:none;color:inherit">
+        <div style="flex:1;min-width:0">
+          <div style="font-size:.84rem;font-weight:700;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.shipTitle}${nights ? ' · '+nights+'박' : ''}</div>
+          <div style="font-size:.75rem;color:#555;margin-top:3px">${date}${starts ? ' · '+starts : ''}</div>
+          ${route ? `<div style="font-size:.72rem;color:#888;margin-top:1px">${route}</div>` : ''}
+        </div>
+        <span style="flex-shrink:0;background:var(--navy);color:#fff;font-size:.73rem;font-weight:700;border-radius:10px;padding:6px 11px;white-space:nowrap">상세보기 →</span>
+      </a>`;
+    }).join('');
+    kringAddMsg(productCardsHtml, true, [], true);
+  } else {
+    // 상품 없을 때만 텍스트 답변 표시
+    const htmlReply = reply
+      .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+      .replace(/https?:\/\/[^\s<]+/g,'')
+      .replace(/\n/g,'<br>');
+    kringAddMsg(htmlReply, true, [], true);
+  }
   kringSetQuick(rule?.quickSet || null);
 }
 
