@@ -597,7 +597,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       let tableHtml = `<div class="itin-wrap">
         <table class="itin-table">
-          <thead><tr><th>요일</th><th>날짜</th><th>도시 / 항구</th><th>출항시각</th><th>도착시각</th></tr></thead>
+          <thead><tr><th>요일</th><th>날짜</th><th class="itin-th-port">도시 / 항구</th><th>출항시각</th><th>도착시각</th></tr></thead>
           <tbody>`;
 
       for (const day of filledDays) {
@@ -1497,6 +1497,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       font-weight: 700;
       white-space: nowrap;
     }
+    .itin-table th.itin-th-port { text-align: center; }
     .itin-table td {
       padding: 10px 8px;
       text-align: center;
@@ -1506,8 +1507,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     .itin-td-day { font-weight: 700; white-space: nowrap; }
     .itin-td-date { white-space: nowrap; color: #555; font-size: .82rem; }
-    .itin-td-port { text-align: left; line-height: 1.5; }
+    .itin-td-port { text-align: center; line-height: 1.5; }
     .itin-td-time { white-space: nowrap; color: #444; font-size: .82rem; }
+    .itin-badge { vertical-align: middle; margin-left: 4px; }
 
     .itin-tr-embark { background: #e8f5e9; }
     .itin-tr-disembark { background: #fff3e0; }
