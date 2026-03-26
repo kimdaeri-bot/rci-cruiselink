@@ -479,8 +479,22 @@ function searchCruises(criteria) {
 
   if (criteria.startPort) {
     results = results.filter(c => {
-      const s = (c.startsAt?.name || '') + (c.portRoute || '');
+      const s = (c.startsAt?.name || '');
       return criteria.startPort.some(p => s.toLowerCase().includes(p.toLowerCase()));
+    });
+  }
+
+  if (criteria.endPort) {
+    results = results.filter(c => {
+      const s = (c.endsAt?.name || '');
+      return criteria.endPort.some(p => s.toLowerCase().includes(p.toLowerCase()));
+    });
+  }
+
+  if (criteria.anyPort) {
+    results = results.filter(c => {
+      const s = (c.startsAt?.name || '') + (c.endsAt?.name || '') + (c.portRoute || '');
+      return criteria.anyPort.some(p => s.toLowerCase().includes(p.toLowerCase()));
     });
   }
 
@@ -505,7 +519,9 @@ function parseUserCriteria(text) {
   if (ymMatch) criteria.yearMonth = `${ymMatch[1]}-${ymMatch[2].padStart(2,'0')}`;
   // 출발지 파싱
   if (/로마|치비타베키아|Rome|Civitavecchia/i.test(text)) criteria.startPort = ['Civitavecchia','Rome'];
-  if (/인천|서울|한국출발/i.test(text)) criteria.startPort = ['Incheon','Busan'];
+  if (/인천출발|인천 출발|한국출발|인천에서/i.test(text)) criteria.startPort = ['Incheon','Busan'];
+  else if (/인천도착|인천 도착|인천까지/i.test(text)) criteria.endPort = ['Incheon','Busan'];
+  else if (/인천/i.test(text)) criteria.anyPort = ['Incheon','Busan'];  // 출발 또는 도착
   if (/도쿄|요코하마/i.test(text)) criteria.startPort = ['Tokyo','Yokohama'];
   // 지역 파싱
   if (/지중해|유럽|이탈리아|그리스|스페인/i.test(text)) criteria.region = '지중해';
@@ -526,7 +542,7 @@ async function botReply(userText) {
   const parsedCriteria = parseUserCriteria(userText);
   const searchCriteria = Object.keys(parsedCriteria).length ? parsedCriteria : (rule?.search || {});
   // 조건 파싱된 경우에만 상품 카드 표시 (파싱된 조건 없으면 카드 없음)
-  const hasCriteria = Object.keys(parsedCriteria).length > 0 || rule?.search;
+  const hasCriteria = (Object.keys(parsedCriteria).length > 0) || rule?.search;
   const products = (rule?.noProducts || !hasCriteria) ? [] : searchCruises(searchCriteria);
 
   // Claude API 호출
