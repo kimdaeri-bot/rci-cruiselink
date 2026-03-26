@@ -1328,5 +1328,24 @@
         "remarks": "* WIFI & 음료 패키지까지 포함된 총 크루즈 요금입니다.\n\n* 요금 세부 사항\n- 포함사항 : 크루즈요금 + TAX\n- 불포함사항 : 편도 항공권, 현지 호텔비, 기항지관광, 여행자보험, 선상팁, 기타 선내 유료 서비스 등"
       }
     ]
+  },
+  {
+    "product": "AI 채팅 문의",
+    "cruiseline": "",
+    "ship": "",
+    "dateFrom": "",
+    "ports": "",
+    "price": "",
+    "ref": "AI_CHAT",
+    "name": "AI 채팅 고객",
+    "email": "",
+    "phone": "",
+    "pax": "",
+    "cabin": "",
+    "message": "[고객] 인천출발/도착 MSC 크루즈 추천\n[AI] 안녕하십니다. 크루즈링크입니다.\n\n현재 인천 출발 MSC 크루즈 상품을 안내드립니다.\n\n**MSC Bellissima (2027년 6월 20일 출발)**\n인천 → 기륭 (3박)\nhttps://www.cruiselink.co.kr/cruise-view/?ref=MSCBE20270620INCKEE\n\nMSC Bellissima는 2010년 취항한 대형 크루즈선으로, 현대적인 시설과 우수한 서비스로 잘 알려져 있습니다. 인천에서 출발하여 대만 기륭에 기항하는 일정입니다.\n\n더 자세한 상품 정보나 다른 일정이 필요하신 경우 카카오톡으로 문의해 주십시오.",
+    "source": "ai-chat",
+    "id": "1774508084110",
+    "timestamp": "2026-03-26T06:54:44.110Z",
+    "status": "신규"
   }
 ]
