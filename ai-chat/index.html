@@ -404,7 +404,7 @@ function matchRule(text) {
 }
 
 // ===== UI 함수 =====
-function addMessage(text, isBot, products = []) {
+function addMessage(text, isBot, products = [], isHtml = false) {
   const container = document.getElementById('chatMessages');
   const now = new Date().toLocaleTimeString('ko-KR', {hour:'2-digit', minute:'2-digit'});
   const div = document.createElement('div');
@@ -428,7 +428,7 @@ function addMessage(text, isBot, products = []) {
   div.innerHTML = `
     <div class="msg-avatar">${isBot ? 'AI' : '나'}</div>
     <div>
-      <div class="msg-bubble">${text.replace(/\n/g,'<br>')}${productHTML}</div>
+      <div class="msg-bubble">${isHtml ? text : text.replace(/\n/g,'<br>')}${productHTML}</div>
       <div class="msg-time">${now}</div>
     </div>
   `;
@@ -507,7 +507,11 @@ async function botReply(userText) {
   conversationHistory.push({ role: 'assistant', content: reply });
 
   // 상품 추천이 있으면 카드로 표시
-  addMessage(reply, true, products.slice(0, 3));
+  // 마크다운 기본 변환
+  const htmlReply = reply
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br>');
+  addMessage(htmlReply, true, products.slice(0, 3), true);
 
   // 퀵 리플라이 동적 설정
   if (reply.includes('카카오') || reply.includes('견적') || reply.includes('예약')) {
