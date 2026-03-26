@@ -2018,7 +2018,7 @@ async function kringInit() {
   <div id="kringQuickReplies"></div>
   <div id="kringDisclaimer">AI는 실수할 수 있습니다. 부정확하다면 <a href="https://pf.kakao.com/_xgYbJG" target="_blank" style="color:var(--navy);font-weight:700">상담원에게 문의</a>해 주세요.</div>
   <div id="kringInputWrap">
-    <input id="kringInputBox" type="text" placeholder="크루즈에 대해 무엇이든 물어보세요!" onkeydown="if(event.key==='Enter')kringAISend()">
+    <input id="kringInputBox" type="text" placeholder="크루즈에 대해 무엇이든 물어보세요!">
     <button id="kringInputBtn" onclick="kringAISend()">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
     </button>
@@ -2028,7 +2028,9 @@ async function kringInit() {
 <script>
 // kringInput → kringInputBox 로 id 변경 반영
 function kringAISend() { kringAISendText(document.getElementById('kringInputBox').value.trim()); }
-document.getElementById('kringInputBox').addEventListener('keydown', e => { if(e.key==='Enter') kringAISend(); });
+document.getElementById('kringInputBox').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.isComposing) kringAISend();
+});
 
 let kringPopupOpen = false;
 let kringBadgeCount = 0;
