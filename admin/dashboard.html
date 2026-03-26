@@ -900,7 +900,7 @@
         body: JSON.stringify({ message: 'feat: AI 채팅 기록 삭제', content: newContent, sha: file.sha })
       });
       alert('삭제 완료');
-      loadAIChats();
+      loadAiChats();
     } catch(e) {
       alert('삭제 실패: ' + e.message);
     }
