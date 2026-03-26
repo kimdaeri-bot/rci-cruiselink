@@ -140,6 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="hero-badge">🚢 20,000개 이상의 크루즈를 검색해보세요!</span>
       <h1>바다 위의 특별한 여행,<br>크루즈링크에서 시작하세요</h1>
       <p class="hero-sub">지중해의 석양부터 알래스카의 빙하까지 — 전 세계 크루즈를 한곳에서</p>
+      <p class="hero-sub" style="margin-top:10px;font-size:.9rem;opacity:.85">크루즈 찾기가 어려우세요? <button onclick="toggleKringAI()" style="background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.5);color:#fff;padding:5px 14px;border-radius:20px;font-size:.88rem;font-weight:700;cursor:pointer;font-family:inherit;transition:background .2s" onmouseover="this.style.background='rgba(255,255,255,.3)'" onmouseout="this.style.background='rgba(255,255,255,.18)'">🤖 크링AI를 이용해보세요! 클릭!</button></p>
     </div>
   </section>
 
@@ -254,6 +255,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </select>
       </div>
       <button class="btn btn-orange" onclick="doSearch()">🔍 검색</button>
+    </div>
+  </div>
+
+  <!-- 크링AI 패널 -->
+  <div id="kringAIPanel" style="max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.4,0,.2,1)">
+    <div class="container" style="padding-top:16px;padding-bottom:4px">
+      <div id="kringAIBox" style="background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.12);overflow:hidden;max-width:760px;margin:0 auto">
+        <!-- 채팅 헤더 -->
+        <div style="background:var(--navy);padding:14px 20px;display:flex;align-items:center;gap:12px">
+          <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:1.3rem">🤖</div>
+          <div style="flex:1">
+            <div style="color:#fff;font-weight:800;font-size:.95rem">크링AI</div>
+            <div style="color:rgba(255,255,255,.7);font-size:.75rem">크루즈링크 AI 상담 어시스턴트</div>
+          </div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#4caf50"></div>
+        </div>
+        <!-- 메시지 영역 -->
+        <div id="kringMessages" style="height:340px;overflow-y:auto;padding:16px;background:#f9f9fb;display:flex;flex-direction:column;gap:10px">
+        </div>
+        <!-- 빠른 답변 -->
+        <div id="kringQuickReplies" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 16px;border-top:1px solid #eee;background:#fff"></div>
+        <!-- 경고 -->
+        <div style="padding:7px 16px;background:#fffde7;font-size:.73rem;color:#795548;border-top:1px solid #ffe082">
+          AI는 실수할 수 있습니다. 안내가 부정확하다면 <a href="https://pf.kakao.com/_xgYbJG" target="_blank" style="color:var(--navy);font-weight:700">상담원에게 문의</a>해 주세요.
+        </div>
+        <!-- 입력창 -->
+        <div style="border-top:1px solid #eee;padding:12px 16px;display:flex;gap:10px;align-items:center;background:#fff">
+          <input id="kringInput" type="text" placeholder="크루즈에 대해 무엇이든 물어보세요!" style="flex:1;border:1.5px solid #ddd;border-radius:24px;padding:10px 18px;font-size:.9rem;outline:none;font-family:inherit;transition:border-color .2s" onfocus="this.style.borderColor='var(--navy)'" onblur="this.style.borderColor='#ddd'" onkeydown="if(event.key==='Enter'){kringAISend();}">
+          <button onclick="kringAISend()" style="width:42px;height:42px;border-radius:50%;background:var(--navy);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+        </div>
+        <!-- 접기 버튼 -->
+        <div style="text-align:center;padding:10px;border-top:1px solid #eee;background:#fafafa">
+          <button onclick="toggleKringAI()" style="background:none;border:1px solid #ddd;border-radius:20px;padding:6px 20px;font-size:.82rem;color:#666;cursor:pointer;font-family:inherit">▲ 접기</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1700,5 +1738,203 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
+<script>
+// ===== 크링AI 패널 토글 =====
+function toggleKringAI() {
+  const panel = document.getElementById('kringAIPanel');
+  const isOpen = panel.style.maxHeight !== '0px' && panel.style.maxHeight !== '';
+  if (isOpen) {
+    panel.style.maxHeight = '0';
+  } else {
+    panel.style.maxHeight = '700px';
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!kringInitialized) kringInit();
+  }
+}
+
+// ===== 크링AI 채팅 로직 =====
+let kringInitialized = false;
+let kringHistory = [];
+let kringCruiseData = [];
+
+const KRING_QUICK_SETS = {
+  init: ['인천출발/도착 MSC 크루즈 추천', '2026년 9월 지중해 크루즈', '일본 크루즈 보여줘', '객실종류 알려줘'],
+  region: ['지중해/유럽', '일본/아시아', '카리브해', '알래스카/북유럽'],
+  period: ['3~5박 단기', '7박', '10박 이상'],
+  cabin: ['내측 (경제적)', '외측 (바다 뷰)', '발코니', '스위트'],
+  pax: ['2명', '3~4명', '5명 이상'],
+};
+
+const KRING_RULES = [
+  { keywords: ['안녕','처음','시작'], reply: '안녕하세요! 저는 크루즈링크 AI 상담사 크링AI입니다 🚢\n어떤 크루즈 여행을 계획하고 계신가요?', quickSet: 'init' },
+  { keywords: ['지중해','유럽','이탈리아','그리스','스페인','바르셀로나'], reply: '지중해 크루즈를 찾고 계시는군요! MSC 크루즈가 특히 인기입니다.\n\n출발 시기가 언제쯤이신가요?', quickSet: 'period', search: { region: '지중해' } },
+  { keywords: ['일본','아시아','도쿄','오사카','후쿠오카','인천'], reply: '일본/아시아 크루즈를 원하시는군요! 인천 출발 상품이 많아 편리합니다.\n\n여행 기간은 어떻게 생각하고 계세요?', quickSet: 'period', search: { region: '아시아' } },
+  { keywords: ['카리브','바하마','멕시코'], reply: '카리브해 크루즈를 찾으시는군요! 에메랄드빛 바다가 매력적인 노선입니다.\n\n출발 인원이 어떻게 되시나요?', quickSet: 'pax' },
+  { keywords: ['객실','방','내측','외측','발코니','스위트','차이'], reply: '객실 타입 안내드릴게요!\n\n🚪 내측 - 창문 없음, 가장 경제적\n🪟 외측 - 고정 유리창으로 바다 조망\n🌅 발코니 - 전용 발코니, 가장 인기\n👑 스위트 - 넓은 공간과 프리미엄 서비스', quickSet: 'cabin' },
+  { keywords: ['식사','음식','다이닝','레스토랑'], reply: '크루즈 식사는 기본 메인 다이닝룸의 조식·중식·석식이 요금에 포함됩니다.\n스페셜티 레스토랑은 별도 유료입니다.', quickSet: 'init' },
+  { keywords: ['비용','요금','가격','얼마','견적'], reply: '정확한 요금은 전문 상담원이 확인 후 안내해 드릴게요.\n카카오톡으로 문의해 주시면 빠르게 견적을 받으실 수 있습니다!', quickSet: 'init', showKakao: true },
+  { keywords: ['상담원','사람','직접','연결'], reply: '전문 상담원 연결을 원하시면 카카오톡으로 문의해 주세요!', quickSet: null, showKakao: true, noProducts: true },
+  { keywords: ['예약','신청'], reply: '예약은 카카오톡 채널을 통해 진행하시면 됩니다. 전문 상담원이 최적의 상품을 안내해 드려요!', quickSet: 'init', showKakao: true },
+  { keywords: ['가족','아이','어린이','자녀'], reply: '크루즈는 가족 여행에 최적입니다! 아이들을 위한 키즈 클럽과 다양한 액티비티가 있어요.\n\n어떤 지역으로 떠나고 싶으세요?', quickSet: 'region' },
+  { keywords: ['2명','커플','부부','둘이'], reply: '커플·부부 여행에는 발코니 객실이 특히 인기입니다 😊\n어떤 지역으로 떠나고 싶으세요?', quickSet: 'region' },
+];
+
+function kringParseCriteria(text) {
+  const c = {};
+  const ymMatch = text.match(/(\d{4})[\s년]?\s*(\d{1,2})월/);
+  if (ymMatch) c.yearMonth = `${ymMatch[1]}-${ymMatch[2].padStart(2,'0')}`;
+  if (/인천출발|인천 출발|한국출발/.test(text)) c.startPort = ['Incheon','Busan'];
+  else if (/인천도착|인천 도착/.test(text)) c.endPort = ['Incheon'];
+  else if (/인천/.test(text)) c.anyPort = ['Incheon'];
+  if (/로마|치비타베키아/.test(text)) c.startPort = ['Civitavecchia','Rome'];
+  if (/도쿄|요코하마/.test(text)) c.startPort = ['Tokyo','Yokohama'];
+  const nightMatch = text.match(/(\d+)박/);
+  if (nightMatch) c.nights = parseInt(nightMatch[1]);
+  if (/지중해|유럽|이탈리아|그리스|스페인/.test(text)) c.region = '지중해';
+  if (/일본|아시아|도쿄|오사카|후쿠오카/.test(text)) c.region = '아시아';
+  if (/카리브|바하마/.test(text)) c.region = 'Caribbean';
+  if (/알래스카|북유럽/.test(text)) c.region = 'Alaska';
+  if (/MSC|엠에스씨/i.test(text)) c.operator = 'MSC';
+  if (/NCL|노르웨지안/i.test(text)) c.operator = 'Norwegian';
+  if (/로열|로얄|royal/i.test(text)) c.operator = 'Royal Caribbean';
+  return c;
+}
+
+function kringSearchCruises(criteria) {
+  if (!kringCruiseData.length) return [];
+  const today = new Date().toISOString().substring(0,10);
+  let r = kringCruiseData.filter(c => c.dateFrom >= today);
+  if (criteria.operator) r = r.filter(c => c.operator?.includes(criteria.operator));
+  if (criteria.startPort) r = r.filter(c => criteria.startPort.some(p => (c.startsAt?.name||'').toLowerCase().includes(p.toLowerCase())));
+  if (criteria.endPort) r = r.filter(c => criteria.endPort.some(p => (c.endsAt?.name||'').toLowerCase().includes(p.toLowerCase())));
+  if (criteria.anyPort) r = r.filter(c => {
+    const s = (c.startsAt?.name||'')+(c.endsAt?.name||'')+(c.portRoute||'');
+    return criteria.anyPort.some(p => s.toLowerCase().includes(p.toLowerCase()));
+  });
+  if (criteria.region) r = r.filter(c => {
+    const s = (c.destination||'')+(c.portRoute||'')+JSON.stringify(c.regions||'');
+    return s.toLowerCase().includes(criteria.region.toLowerCase()) ||
+      (criteria.region==='지중해' && ['Mediterranean','europe','Europe'].some(k=>s.includes(k))) ||
+      (criteria.region==='아시아' && ['Asia','Japan','Korea'].some(k=>s.toLowerCase().includes(k)));
+  });
+  if (criteria.yearMonth) r = r.filter(c => c.dateFrom?.startsWith(criteria.yearMonth));
+  if (criteria.nights) r = r.filter(c => Math.abs((c.nights||0)-criteria.nights)<=1);
+  return r.slice(0,3);
+}
+
+function kringAddMsg(text, isBot, products=[]) {
+  const box = document.getElementById('kringMessages');
+  const now = new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'});
+  const div = document.createElement('div');
+  div.style.cssText = `display:flex;gap:8px;align-items:flex-start;${isBot?'':'flex-direction:row-reverse'}`;
+
+  const avatar = document.createElement('div');
+  avatar.style.cssText = `width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0;background:${isBot?'var(--navy)':'var(--orange)'}`;
+  avatar.textContent = isBot ? 'AI' : '나';
+
+  let productHTML = products.map(p=>`
+    <a href="/cruise-view/?ref=${p.ref}" target="_blank" style="display:flex;align-items:center;justify-content:space-between;gap:10px;background:#f5f5f5;border:1px solid #e0e0e0;border-radius:8px;padding:9px 12px;margin-top:6px;text-decoration:none;">
+      <div style="min-width:0">
+        <div style="font-size:.82rem;font-weight:700;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.shipTitle} ${p.nights}박</div>
+        <div style="font-size:.73rem;color:#666">${p.dateFrom} 출발 · ${(p.portRoute||'').split('→')[0].trim()}</div>
+      </div>
+      <span style="flex-shrink:0;padding:5px 11px;background:var(--navy);color:#fff;font-size:.76rem;font-weight:700;border-radius:16px;white-space:nowrap">상세 보기 →</span>
+    </a>`).join('');
+
+  const bubble = document.createElement('div');
+  bubble.style.cssText = `max-width:78%;background:${isBot?'#fff':'var(--navy)'};color:${isBot?'#222':'#fff'};border-radius:${isBot?'4px 18px 18px 18px':'18px 4px 18px 18px'};padding:11px 14px;font-size:.88rem;line-height:1.65;box-shadow:0 1px 3px rgba(0,0,0,.08)`;
+  bubble.innerHTML = text.replace(/\n/g,'<br>') + productHTML;
+
+  const time = document.createElement('div');
+  time.style.cssText = `font-size:.7rem;color:#aaa;margin-top:3px;text-align:${isBot?'left':'right'}`;
+  time.textContent = now;
+
+  const inner = document.createElement('div');
+  inner.style.cssText = 'display:flex;flex-direction:column';
+  inner.appendChild(bubble);
+  inner.appendChild(time);
+
+  div.appendChild(avatar);
+  div.appendChild(inner);
+  box.appendChild(div);
+  setTimeout(()=>{box.scrollTop=box.scrollHeight;},50);
+}
+
+function kringShowTyping() {
+  const box = document.getElementById('kringMessages');
+  const div = document.createElement('div');
+  div.id = 'kringTyping';
+  div.style.cssText = 'display:flex;gap:8px;align-items:center';
+  div.innerHTML = `<div style="width:32px;height:32px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0">AI</div><div style="background:#fff;border-radius:4px 18px 18px 18px;padding:10px 14px;box-shadow:0 1px 3px rgba(0,0,0,.08);display:flex;gap:4px;align-items:center"><span style="width:7px;height:7px;border-radius:50%;background:#aaa;animation:kringDot 1.2s infinite ease-in-out;display:block"></span><span style="width:7px;height:7px;border-radius:50%;background:#aaa;animation:kringDot 1.2s .2s infinite ease-in-out;display:block"></span><span style="width:7px;height:7px;border-radius:50%;background:#aaa;animation:kringDot 1.2s .4s infinite ease-in-out;display:block"></span></div>`;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+}
+
+function kringHideTyping() { document.getElementById('kringTyping')?.remove(); }
+
+function kringSetQuick(set) {
+  const box = document.getElementById('kringQuickReplies');
+  box.innerHTML = '';
+  if (!set || !KRING_QUICK_SETS[set]) return;
+  KRING_QUICK_SETS[set].forEach(label => {
+    const btn = document.createElement('button');
+    btn.textContent = label;
+    btn.style.cssText = 'padding:7px 13px;border:1.5px solid var(--navy);border-radius:20px;font-size:.82rem;font-weight:600;color:var(--navy);cursor:pointer;background:#fff;transition:all .15s;white-space:nowrap;font-family:inherit';
+    btn.onmouseover = ()=>{btn.style.background='var(--navy)';btn.style.color='#fff';};
+    btn.onmouseout = ()=>{btn.style.background='#fff';btn.style.color='var(--navy)';};
+    btn.onclick = ()=>kringAISendText(label);
+    box.appendChild(btn);
+  });
+}
+
+async function kringAISendText(text) {
+  if (!text.trim()) return;
+  kringAddMsg(text, false);
+  document.getElementById('kringInput').value = '';
+  document.getElementById('kringQuickReplies').innerHTML = '';
+  kringHistory.push({role:'user',content:text});
+  kringShowTyping();
+
+  const rule = KRING_RULES.find(r=>r.keywords.some(k=>text.toLowerCase().includes(k)));
+  const parsed = kringParseCriteria(text);
+  const searchCriteria = Object.keys(parsed).length ? parsed : (rule?.search||{});
+  const products = (rule?.noProducts || !Object.keys(searchCriteria).length) ? [] : kringSearchCruises(searchCriteria);
+
+  let reply = '';
+  try {
+    const res = await fetch('https://cruiselink-v2.vercel.app/api/ai-chat', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ messages: kringHistory, cruiseContext: products.length ? products : kringSearchCruises(parsed) })
+    });
+    const data = await res.json();
+    reply = data.reply || '죄송합니다. 잠시 후 다시 시도해 주세요.';
+  } catch(e) {
+    reply = rule?.reply || '죄송합니다, 일시적인 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.';
+  }
+
+  kringHideTyping();
+  kringHistory.push({role:'assistant',content:reply});
+  const htmlReply = reply.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');
+  kringAddMsg(htmlReply.replace(/<br>/g,'\n'), true, products.slice(0,3));
+  kringSetQuick(rule?.quickSet || null);
+}
+
+function kringAISend() { kringAISendText(document.getElementById('kringInput').value.trim()); }
+
+async function kringInit() {
+  kringInitialized = true;
+  try {
+    const res = await fetch('/assets/data/cruises.json');
+    kringCruiseData = await res.json();
+  } catch(e) { kringCruiseData = []; }
+  setTimeout(()=>{
+    kringAddMsg('안녕하세요! 크루즈 여행에 특화된 AI 크링AI 입니다. 크루즈상품을 추천해 드리거나 쉽게 찾아드릴 수 있습니다. 그 외 다양한 크루즈에 대한 질문도 가능해요!', true);
+    kringSetQuick('init');
+  }, 300);
+}
+</script>
+<style>
+@keyframes kringDot { 0%,80%,100%{transform:scale(.7);opacity:.5} 40%{transform:scale(1);opacity:1} }
+</style>
 </body>
 </html>
