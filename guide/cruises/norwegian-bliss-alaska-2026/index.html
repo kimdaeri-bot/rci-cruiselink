@@ -71,7 +71,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .cta-btns a:hover{background:rgba(255,255,255,.3)}
     .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:28px}
     .tags span{background:#e8f0fe;color:#1a237e;font-size:.78rem;padding:3px 10px;border-radius:10px}
-    @media(max-width:600px){.cruise-title{font-size:1.3rem}}
+    @media(max-width:768px){
+
+    /* ── 모바일 최적화 ── */
+    *{-webkit-box-sizing:border-box;box-sizing:border-box}
+    html,body{overflow-x:hidden;width:100%}
+    .cruise-hero-img{max-height:260px}
+    .cruise-wrap{padding:24px 16px 60px}
+    .cruise-title{font-size:1.2rem}
+    .cruise-meta{gap:6px}
+    .cruise-section h2{font-size:1rem}
+    .cruise-section p,.cruise-section li{font-size:.93rem;line-height:1.8}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0}
+    .cruise-section table{min-width:420px}
+    .cta-box{padding:20px 16px}
+    .cta-btns{flex-direction:column;gap:8px}
+    .cta-btns a{width:100%;text-align:center;padding:12px}
+    .route-box{padding:12px 14px}
+    .tip-box{padding:12px 14px;font-size:.88rem}
+    }
   </style>
 </head>
 <body>
@@ -188,7 +206,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <tr><th>전체 길이</th><td>333m</td></tr>
       <tr><th>승객 정원</th><td>최대 4,004명</td></tr>
       <tr><th>특징</th><td>알래스카 전용 설계 · 갑판 전망대 · 레이저 태그·고카트 레이스 트랙 · 관측 라운지</td></tr>
-    </table>
+    </table></div>
     <p>
       Norwegian Bliss는 NCL(노르위전 크루즈 라인)이 <strong>알래스카 항로를 위해 특별히 설계</strong>한 선박입니다.<br>
       갑판 최상층에는 360도 파노라마 전망이 가능한 <strong>관측 라운지(Observation Lounge)</strong>가 있어 빙하·피오르드 경관을 선내에서 따뜻하게 감상할 수 있습니다.

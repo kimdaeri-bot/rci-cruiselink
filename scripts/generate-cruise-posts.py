@@ -215,6 +215,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .cta-btns{{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:14px}}
     .cta-btns a{{color:#fff;background:rgba(255,255,255,.18);padding:9px 20px;border-radius:20px;font-size:.85rem;font-weight:700;text-decoration:none}}
     .cta-btns a:hover{{background:rgba(255,255,255,.3)}}
+    @media(max-width:768px){{
+      *{{-webkit-box-sizing:border-box;box-sizing:border-box}}
+      html,body{{overflow-x:hidden;width:100%}}
+      .cruise-hero-img{{max-height:260px}}
+      .cruise-wrap{{padding:24px 16px 60px}}
+      .cruise-title{{font-size:1.2rem}}
+      .cruise-meta{{gap:6px}}
+      .cruise-section h2{{font-size:1rem}}
+      .cruise-section p,.cruise-section li{{font-size:.93rem;line-height:1.8}}
+      .table-wrap{{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0}}
+      .cruise-section table{{min-width:420px}}
+      .cta-box{{padding:20px 16px}}
+      .cta-btns{{flex-direction:column;gap:8px}}
+      .cta-btns a{{width:100%;text-align:center;padding:12px}}
+      .route-box{{padding:12px 14px}}
+      .tip-box{{padding:12px 14px;font-size:.88rem}}
+    }}
   </style>
 </head>
 <body>

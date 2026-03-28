@@ -71,7 +71,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .cta-btns a:hover{background:rgba(255,255,255,.3)}
     .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:28px}
     .tags span{background:#e8f0fe;color:#1a237e;font-size:.78rem;padding:3px 10px;border-radius:10px}
-    @media(max-width:600px){.cruise-title{font-size:1.3rem}}
+    @media(max-width:768px){
+
+    /* ── 모바일 최적화 ── */
+    *{-webkit-box-sizing:border-box;box-sizing:border-box}
+    html,body{overflow-x:hidden;width:100%}
+    .cruise-hero-img{max-height:260px}
+    .cruise-wrap{padding:24px 16px 60px}
+    .cruise-title{font-size:1.2rem}
+    .cruise-meta{gap:6px}
+    .cruise-section h2{font-size:1rem}
+    .cruise-section p,.cruise-section li{font-size:.93rem;line-height:1.8}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0}
+    .cruise-section table{min-width:420px}
+    .cta-box{padding:20px 16px}
+    .cta-btns{flex-direction:column;gap:8px}
+    .cta-btns a{width:100%;text-align:center;padding:12px}
+    .route-box{padding:12px 14px}
+    .tip-box{padding:12px 14px;font-size:.88rem}
+    }
   </style>
 </head>
 <body>
@@ -188,7 +206,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <tr><th>전체 길이</th><td>340m</td></tr>
       <tr><th>승객 정원</th><td>최대 6,500명</td></tr>
       <tr><th>특징</th><td>세계 최초 크루즈선 롤러코스터 'BOLT' 탑재 · LNG 추진 친환경 선박 · 6개 테마 구역</td></tr>
-    </table>
+    </table></div>
     <p>
       <strong>'마르디 그라(Mardi Gras)'</strong>는 뉴올리언스의 축제 이름에서 따온 이름입니다.<br>
       카니발 크루즈 라인 창사 50주년 기념 선박으로, <strong>6개의 독특한 테마 존</strong>으로 구성된 선내는 그 자체가 하나의 테마파크입니다!
@@ -308,7 +326,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <td>약 63만원~</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
     <p>※ 1인 기준 / 세금·항만세 별도 / 항공료 미포함 / 환율 약 1,450원 기준 환산<br>
     ※ 조기 예약 시 추가 할인 — 크루즈링크로 문의해 주세요!</p>
     <div class="tip-box">

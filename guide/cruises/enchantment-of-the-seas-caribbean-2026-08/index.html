@@ -71,7 +71,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .cta-btns a:hover{background:rgba(255,255,255,.3)}
     .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:28px}
     .tags span{background:#e8f0fe;color:#1a237e;font-size:.78rem;padding:3px 10px;border-radius:10px}
-    @media(max-width:600px){.cruise-title{font-size:1.3rem}}
+    @media(max-width:768px){
+
+    /* ── 모바일 최적화 ── */
+    *{-webkit-box-sizing:border-box;box-sizing:border-box}
+    html,body{overflow-x:hidden;width:100%}
+    .cruise-hero-img{max-height:260px}
+    .cruise-wrap{padding:24px 16px 60px}
+    .cruise-title{font-size:1.2rem}
+    .cruise-meta{gap:6px}
+    .cruise-section h2{font-size:1rem}
+    .cruise-section p,.cruise-section li{font-size:.93rem;line-height:1.8}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0}
+    .cruise-section table{min-width:420px}
+    .cta-box{padding:20px 16px}
+    .cta-btns{flex-direction:column;gap:8px}
+    .cta-btns a{width:100%;text-align:center;padding:12px}
+    .route-box{padding:12px 14px}
+    .tip-box{padding:12px 14px;font-size:.88rem}
+    }
   </style>
 </head>
 <body>
@@ -192,7 +210,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <tr><th>전체 길이</th><td>301m</td></tr>
       <tr><th>승객 정원</th><td>최대 2,252명</td></tr>
       <tr><th>특징</th><td>카리브해 전문 노선 · 암벽등반 월 · 유아·어린이 프로그램 충실</td></tr>
-    </table>
+    </table></div>
     <p>
       <strong>Enchantment of the Seas</strong>는 로얄캐리비안의 클래식 비전 클래스 선박으로, 카리브해 노선에 특화되어 있습니다.
     </p>

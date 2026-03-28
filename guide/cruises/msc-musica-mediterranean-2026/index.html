@@ -71,7 +71,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .cta-btns a:hover{background:rgba(255,255,255,.3)}
     .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:28px}
     .tags span{background:#e8f0fe;color:#1a237e;font-size:.78rem;padding:3px 10px;border-radius:10px}
-    @media(max-width:600px){.cruise-title{font-size:1.3rem}}
+    @media(max-width:768px){
+
+    /* ── 모바일 최적화 ── */
+    *{-webkit-box-sizing:border-box;box-sizing:border-box}
+    html,body{overflow-x:hidden;width:100%}
+    .cruise-hero-img{max-height:260px}
+    .cruise-wrap{padding:24px 16px 60px}
+    .cruise-title{font-size:1.2rem}
+    .cruise-meta{gap:6px}
+    .cruise-section h2{font-size:1rem}
+    .cruise-section p,.cruise-section li{font-size:.93rem;line-height:1.8}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0}
+    .cruise-section table{min-width:420px}
+    .cta-box{padding:20px 16px}
+    .cta-btns{flex-direction:column;gap:8px}
+    .cta-btns a{width:100%;text-align:center;padding:12px}
+    .route-box{padding:12px 14px}
+    .tip-box{padding:12px 14px;font-size:.88rem}
+    }
   </style>
 </head>
 <body>
@@ -177,7 +195,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <tr><th>승객 정원</th><td>약 3,013명</td></tr>
       <tr><th>전체 갑판</th><td>13개 덱</td></tr>
       <tr><th>특징</th><td>유럽 클래식 인테리어, 지중해 전문 노선, MSC 뮤지카 클래스 1번 선박</td></tr>
-    </table>
+    </table></div>
 
     <p>
       MSC 무지카는 '음악(Musica)'을 테마로 설계된 선박입니다.<br>
@@ -295,7 +313,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <td>약 240만원~</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
 
     <p>※ 위 요금은 1인 기준 / 항공료 별도 / 환율 약 1,450원 기준 환산<br>
     ※ 조기 예약 시 얼리버드 할인 적용 가능 — 크루즈링크로 문의해 주세요!</p>

@@ -71,7 +71,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .cta-btns a:hover{background:rgba(255,255,255,.3)}
     .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:28px}
     .tags span{background:#e8f0fe;color:#1a237e;font-size:.78rem;padding:3px 10px;border-radius:10px}
-    @media(max-width:600px){.cruise-title{font-size:1.3rem}}
+    @media(max-width:768px){
+
+    /* ── 모바일 최적화 ── */
+    *{-webkit-box-sizing:border-box;box-sizing:border-box}
+    html,body{overflow-x:hidden;width:100%}
+    .cruise-hero-img{max-height:260px}
+    .cruise-wrap{padding:24px 16px 60px}
+    .cruise-title{font-size:1.2rem}
+    .cruise-meta{gap:6px}
+    .cruise-section h2{font-size:1rem}
+    .cruise-section p,.cruise-section li{font-size:.93rem;line-height:1.8}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0}
+    .cruise-section table{min-width:420px}
+    .cta-box{padding:20px 16px}
+    .cta-btns{flex-direction:column;gap:8px}
+    .cta-btns a{width:100%;text-align:center;padding:12px}
+    .route-box{padding:12px 14px}
+    .tip-box{padding:12px 14px;font-size:.88rem}
+    }
   </style>
 </head>
 <body>
@@ -157,7 +175,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <tr><th>전체 길이</th><td>294m</td></tr>
       <tr><th>승객 정원</th><td>최대 3,013명</td></tr>
       <tr><th>특징</th><td>지중해 베테랑 · 소규모 운영으로 기항지 접안 우수 · 한국어 서비스</td></tr>
-    </table>
+    </table></div>
     <p>
       MSC 오케스트라는 이름처럼 <strong>조화롭고 우아한</strong> 크루즈 경험을 선사합니다.<br>
       대형 신조선보다 아늑한 규모로, 기항지 접안이 어려운 소항구에서도 <strong>직접 부두 접안</strong>이 가능해 셔틀보트 없이 바로 내릴 수 있는 게 장점이에요.
