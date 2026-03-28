@@ -76,7 +76,8 @@ CITY_KO = {
     'Vancouver': '밴쿠버', 'San Francisco': '샌프란시스코',
     'Los Angeles': 'LA', 'Honolulu': '호놀룰루', 'Dubai': '두바이',
     'Lisbon': '리스본', 'Marseille': '마르세유',
-    'Port Canaveral': '올란도(포트캐너버럴)',
+    'Port Canaveral': '올란도', 'Seward': '수어드', 'Whittier': '휘티어',
+    'Anchorage': '앵커리지', 'Genova': '제노아',
 }
 COUNTRY_CODES = {
     '스페인': 'ES', '이탈리아': 'IT', '프랑스': 'FR', '그리스': 'GR',
@@ -91,31 +92,110 @@ COUNTRY_CODES = {
     '호주': 'AU', '뉴질랜드': 'NZ', '바베이도스': 'BB', '세인트루시아': 'LC',
     '앤티가': 'AG', '아루바': 'AW', '퀴라소': 'CW',
 }
+OPERATOR_KO = {
+    'MSC': 'MSC 크루즈', 'NCL': '노르웨지안 크루즈',
+    'Royal Caribbean International': '로열캐리비안', 'RCI': '로열캐리비안',
+    'Carnival': '카니발 크루즈', 'Carnival Cruise Line': '카니발 크루즈',
+    'Princess': '프린세스 크루즈', 'Princess Cruises': '프린세스 크루즈',
+    'Celebrity': '셀레브리티 크루즈', 'Celebrity Cruises': '셀레브리티 크루즈',
+    'Disney Cruise Line': '디즈니 크루즈', 'Oceania': '오세아니아 크루즈',
+    'Oceania Cruises': '오세아니아 크루즈', 'Explora Journeys': '익스플로라 저니',
+    'Explora': '익스플로라 저니', 'RSSC': '리전트 세븐시즈',
+    'Norwegian Cruise Line': '노르웨지안 크루즈',
+}
+PORT_KO = {
+    'Juneau': '주노', 'Ketchikan': '케치칸', 'Sitka': '시트카',
+    'Skagway': '스캐그웨이', 'Icy Strait Point': '아이시 스트레이트',
+    'Glacier Bay': '글레이셔 베이', 'Hubbard Glacier': '허버드 빙하',
+    'Tracy Arm': '트레이시 암', 'Endicott Arm': '엔디콧 암', 'Haines': '헤인즈',
+    'Barcelona': '바르셀로나', 'Naples': '나폴리', 'Santorini': '산토리니',
+    'Mykonos': '미코노스', 'Dubrovnik': '두브로브니크', 'Valletta': '발레타',
+    'Palermo': '팔레르모', 'Marseille': '마르세유', 'Ibiza': '이비자',
+    'Cannes': '칸', 'Nice': '니스', 'Messina': '메시나', 'Livorno': '리보르노',
+    'Kotor': '코토르', 'Split': '스플리트', 'Corfu': '코르푸',
+    'Nassau': '나소', 'Cozumel': '코수멜', 'Grand Cayman': '그랜드케이맨',
+    'Ocho Rios': '오초리오스', 'Roatan': '로아탄',
+    'St. Thomas': '세인트토마스', 'St. Maarten': '세인트마르탱',
+    'Osaka': '오사카', 'Nagasaki': '나가사키', 'Fukuoka': '후쿠오카',
+    'Naha': '나하(오키나와)', 'Kagoshima': '가고시마',
+    'Bergen': '베르겐', 'Oslo': '오슬로', 'Stockholm': '스톡홀름',
+    'Flam': '플롬', 'Geiranger': '게이랑에르',
+}
+
+_title_counter = {}
+
+def _get_season(mo):
+    mo = int(mo) if mo else 0
+    if mo in [12,1,2]: return '겨울'
+    if mo in [3,4,5]: return '봄'
+    if mo in [6,7,8]: return '여름'
+    return '가을'
+
+def _get_start(route):
+    if not route: return ''
+    raw = route.split('→')[0].strip().split(',')[0].strip()
+    return CITY_KO.get(raw, raw)
+
+def _get_mid_ports(route, n=2):
+    parts = [p.strip() for p in route.split('→')]
+    mids = parts[1:-1] if len(parts)>2 else parts
+    result = []
+    for p in mids[:n]:
+        city = p.split(',')[0].strip()
+        result.append(PORT_KO.get(city, city))
+    return result
 
 def make_seo_title(cruise):
-    ship = cruise.get('shipTitle', '')
-    nights = cruise.get('nights', '')
-    route = cruise.get('portRoute', '') or ''
-    countries_ko = cruise.get('countriesKo', []) or []
-    destination = cruise.get('destination', '') or ''
+    """10가지 패턴으로 선사명·선박명·기항지·출발일·시즌 조합한 유니크 SEO 제목 생성"""
+    global _title_counter
+    ship     = cruise.get('shipTitle', '')
+    nights   = cruise.get('nights', '')
+    route    = cruise.get('portRoute', '') or ''
+    cko      = cruise.get('countriesKo', []) or []
+    dest     = DEST_KO.get(cruise.get('destination', ''), cruise.get('destination', '')) or '크루즈'
+    op_raw   = cruise.get('operatorShort', '') or cruise.get('operator', '')
+    operator = OPERATOR_KO.get(op_raw, op_raw)
+    codes    = ''.join([COUNTRY_CODES.get(c, '') for c in cko[:5]])
+    start    = _get_start(route)
+    ports    = _get_mid_ports(route, 2)
+    port_str = '·'.join(ports) if ports else '·'.join(cko[:2])
+    countries_str = '·'.join(cko[:3]) if cko else dest
 
-    start_city = ''
-    if route:
-        raw_city = route.split('→')[0].strip().split(',')[0].strip()
-        start_city = CITY_KO.get(raw_city, raw_city)
+    date_from = cruise.get('dateFrom', '') or ''
+    mo = str(int(date_from[5:7])) if len(date_from) >= 7 else ''
+    dy = str(int(date_from[8:10])) if len(date_from) >= 10 else ''
+    yr = date_from[:4] if len(date_from) >= 4 else '2026'
+    season = _get_season(mo)
+    month_str = f"{mo}월 {dy}일" if mo and dy else (f"{mo}월" if mo else '')
 
-    dest = DEST_KO.get(destination, destination) or '크루즈'
-    codes = ''.join([COUNTRY_CODES.get(c, '') for c in countries_ko[:5]])
-    countries_str = '·'.join(countries_ko[:4]) if countries_ko else dest
+    # 고유 카운터로 패턴 순환
+    key = f"{start}_{dest}_{nights}"
+    cnt = _title_counter.get(key, 0)
+    _title_counter[key] = cnt + 1
+    p = cnt % 10
 
-    if start_city:
-        title = f"{start_city}에서 출발하는 {dest} {nights}박! {ship}으로 {countries_str} 완전정복"
+    if p == 0:
+        t = f"[{operator}] {start}에서 출발하는 {dest} {nights}박 — {ship}으로 {port_str} 완전정복 {codes}"
+    elif p == 1:
+        t = f"{ship} 타고 떠나는 {dest} {nights}박 여행 — {operator} {start} {month_str} 출발"
+    elif p == 2:
+        t = f"{operator} {nights}박 {dest} 크루즈 예약 | {start}발 {port_str} | {ship}"
+    elif p == 3:
+        t = f"{season} {dest} 크루즈 {month_str} 특가! {operator} {ship} {nights}박 {start} 출발"
+    elif p == 4:
+        t = f"{ship}으로 떠나는 {nights}박 {dest} 크루즈 — {port_str} 기항지 완벽 가이드 | {operator}"
+    elif p == 5:
+        t = f"{yr}년 {season} {start} 출발 {nights}박 | {operator} {ship} {dest} 크루즈 {codes}"
+    elif p == 6:
+        t = f"{operator} 크루즈 {month_str} 특가 — {ship} {start} 출발 {nights}박 {dest} 일정"
+    elif p == 7:
+        t = f"{countries_str} {nights}박 크루즈 예약 | {operator} {ship} {start} {month_str} 출항"
+    elif p == 8:
+        t = f"{start}→{port_str} {nights}박 {dest} 크루즈 | {operator} {ship} {yr}년 {month_str}"
     else:
-        title = f"{dest} {nights}박! {ship}으로 {countries_str} 완전정복"
+        t = f"{dest} {nights}박 {countries_str} 크루즈 — {operator} {ship} {month_str} 출발 {codes}"
 
-    if codes:
-        title += f" {codes}"
-    return title
+    return t.strip()
 
 def make_port_route(cruise):
     route = cruise.get('portRoute') or cruise.get('port_route') or ''
