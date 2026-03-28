@@ -210,7 +210,12 @@ const API = {
 
   // 크루즈 상세 (일정, 가격, 기항지 이미지 = 라이브)
   async getHoliday(ref) {
-    return await this.fetch(`holidays/dates/${ref}.json`);
+    const data = await this.fetch(`holidays/dates/${ref}.json`);
+    if (!data) return null;
+    // 구 포맷: { holiday: {...} } / 신 포맷: { date_ref, ship_title, ... } (최상위)
+    if (data.holiday) return data.holiday;
+    if (data.date_ref || data.ship_title || data.operator_title) return data;
+    return null;
   },
 
   // 전체 선박 목록 (API, 폴백용)

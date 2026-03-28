@@ -127,8 +127,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         ]);
         const shipLivePromise = urlShip ? API.getShipLive(urlShip) : null;
 
-        // ② Widgety 실패 시 로컬 데이터로 최소 holiday 객체 생성
+        // ② Widgety 신 포맷 정규화 (최상위 date_ref, date_from, starts_at 등)
         let holiday = holidayRaw;
+        if (holiday && !holiday.start_date && holiday.date_from) {
+          holiday.start_date = holiday.date_from?.slice(0,10) || '';
+          holiday.end_date   = holiday.date_to?.slice(0,10) || '';
+          holiday.duration   = holiday.cruise_nights || holiday.duration_days || 7;
+          holiday.start_port = holiday.starts_at || {};
+          holiday.end_port   = holiday.ends_at || {};
+          // itinerary 정규화 (신 포맷: itinerary.days 또는 배열)
+          if (holiday.itinerary && !holiday.itinerary.days) {
+            holiday.itinerary = { days: Array.isArray(holiday.itinerary) ? holiday.itinerary : [] };
+          }
+          // headline_prices 정규화
+          if (!holiday.headline_prices && holiday.pricing) {
+            holiday.headline_prices = { cruise: holiday.pricing };
+          }
+        }
         if (!holiday && localCruise) {
           const lc = localCruise;
           const toPort = n => ({ name: n?.nameKo || n?.name || n || '' });
