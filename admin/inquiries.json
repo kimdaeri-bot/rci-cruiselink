@@ -1634,5 +1634,23 @@
     "id": "1774715240361",
     "timestamp": "2026-03-28T16:27:20.361Z",
     "status": "신규"
+  },
+  {
+    "product": "크링AI 채팅 문의",
+    "ref": "KRING_AI",
+    "name": "크링AI 고객",
+    "email": "",
+    "phone": "",
+    "pax": "",
+    "cabin": "",
+    "cruiseline": "MSC Cruises",
+    "ship": "MSC Lirica",
+    "dateFrom": "2026-03-28",
+    "price": "",
+    "message": "[고객] 이탈리아 경유하는 크루즈는 없어?\n[AI] 2026년 9월 지중해 Celebrity 크루즈 중 이탈리아를 경유하는 상품은 현재 제 목록에는 없습니다.\n\nMSC 크루즈로라면 나폴리, 팔레르모, 메시나 등 이탈리아 항구를 포함한 9월 지중해 상품들이 있습니다. 관심 있으신가요?",
+    "source": "kring-ai",
+    "id": "1774715277486",
+    "timestamp": "2026-03-28T16:27:57.486Z",
+    "status": "신규"
   }
 ]
