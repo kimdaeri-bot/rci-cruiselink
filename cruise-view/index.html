@@ -388,7 +388,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       // TouristTrip / Offer Schema (JSON-LD, injected dynamically)
       const existingSchema = document.getElementById('cruiseSchema');
       if (existingSchema) existingSchema.remove();
-      const fromPrice = c.priceInside || c.priceOutside || c.priceBalcony;
+      const schemaFromPrice = c.priceInside || c.priceOutside || c.priceBalcony;
       const schemaData = {
         "@context": "https://schema.org",
         "@type": "TouristTrip",
@@ -407,9 +407,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           "name": "크루즈링크",
           "url": "https://www.cruiselink.co.kr"
         },
-        "offers": fromPrice ? {
+        "offers": schemaFromPrice ? {
           "@type": "Offer",
-          "price": fromPrice,
+          "price": schemaFromPrice,
           "priceCurrency": c.currency || "USD",
           "availability": "https://schema.org/InStock",
           "url": `https://www.cruiselink.co.kr/cruise-view/?ref=${ref}`
