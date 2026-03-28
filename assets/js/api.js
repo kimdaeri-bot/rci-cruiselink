@@ -1,4 +1,4 @@
-// CruiseLink V2 - Hybrid API (Local JSON + Live API)
+// CruiseLink V2 - Hybrid API (Local JSON + Live API) v2026-03-28
 const API = {
   base: 'https://www.widgety.co.uk/api',
   auth: 'app_id=fdb0159a2ae2c59f9270ac8e42676e6eb0fb7c36&token=03428626b23f5728f96bb58ff9bcf4bcb04f8ea258b07ed9fa69d8dd94b46b40',
