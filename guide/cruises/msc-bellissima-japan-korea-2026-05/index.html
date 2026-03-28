@@ -89,8 +89,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4PPLZNG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<div id="header"></div>
-
 <img class="cruise-hero-img" src="https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg" alt="MSC 벨리시마로 떠나는 일본·한국 크루즈 7박! 도쿄 → 고베 → 부산 → 가고시마 한 번에 🇯🇵🇰🇷" loading="eager">
 
 <div class="cruise-wrap">
@@ -372,21 +370,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a href="tel:02-3788-9119" style="display:block;text-decoration:none">
         
       </a>
-      <a href="https://pf.kakao.com/_xgYbJG" target="_blank" style="display:block;text-decoration:none">
-        
-      </a>
-      <a href="https://www.cruiselink.co.kr" target="_blank" style="display:block;text-decoration:none">
-        
-      </a>
+      
+      
     </div>
-    <div style="text-align:center;margin-top:16px;line-height:2.2;font-size:15px">
-      💬 카카오: <a href="https://pf.kakao.com/_xgYbJG" target="_blank" style="color:#0077cc;font-weight:700">https://pf.kakao.com/_xgYbJG</a><br>
-      🌐 홈페이지: <a href="https://www.cruiselink.co.kr" target="_blank" style="color:#0077cc;font-weight:700">https://www.cruiselink.co.kr</a>
-    </div>
+    
   </div>
 
   <!-- 태그 -->
-  <div class="tags section-wrap">
+  <div class="tags">
     
     <span>#MSC벨리시마</span>
     <span>#일본크루즈</span>
@@ -407,39 +398,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </div>
 
-<div id="toast">✅ 복사 완료!</div>
-
-<script>
-function showToast() {
-  const t = document.getElementById('toast');
-  t.style.display = 'block';
-  setTimeout(() => t.style.display = 'none', 2000);
-}
-function copyAll() {
-  const el = document.getElementById('blog-content');
-  let text = '';
-  el.querySelectorAll('h1, h2, h3, p, li, .route-step, .tags').forEach(s => {
-    if (s.classList.contains('copy-section-btn')) return;
-    const txt = s.innerText.trim();
-    if (txt) text += txt + '\n\n';
-  });
-  navigator.clipboard.writeText(text).then(() => showToast()).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = text; document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); document.body.removeChild(ta); showToast();
-  });
-}
-function copySection(btn) {
-  const section = btn.parentElement;
-  let text = '';
-  section.querySelectorAll('h1,h2,h3,p,li,.route-step').forEach(el => {
-    if (el.classList.contains('copy-section-btn')) return;
-    const txt = el.innerText.trim();
-    if (txt) text += txt + '\n\n';
-  });
-  navigator.clipboard.writeText(text).then(() => showToast());
-}
-</script>
 </body>
 </html>
 </div>
@@ -461,7 +419,6 @@ function copySection(btn) {
   </div>
 </div>
 
-<div id="footer"></div>
 <script src="../../../assets/data/translations.js"></script>
 <script src="../../../assets/js/api.js"></script>
 <script src="../../../assets/js/components.js"></script>

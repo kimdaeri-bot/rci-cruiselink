@@ -89,8 +89,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4PPLZNG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<div id="header"></div>
-
 <img class="cruise-hero-img" src="https://assets.widgety.co.uk/2024/09/26/10/45/07/ad264e77-d95a-40f2-9131-456fd1c2d6e4/MSC%20Cruises%2C%20MSC%20Orchestra%2C%20New%20York%20Exterior%2C%20MSC%20Rights.jpg" alt="MSC 오케스트라로 떠나는 스페인·이탈리아·프랑스 7박! Valencia 출발 → 로마·피렌체·마르세유까지 한 번에 🇪🇸🇮🇹🇫🇷" loading="eager">
 
 <div class="cruise-wrap">
@@ -295,7 +293,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 
   <!-- 해시태그 -->
-  <div class="tags section-wrap">
+  <div class="tags">
     
     <span>#지중해크루즈</span><span>#MSC크루즈</span><span>#MSC오케스트라</span>
     <span>#스페인여행</span><span>#이탈리아여행</span><span>#프랑스여행</span>
@@ -306,7 +304,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </div><!-- /wrapper -->
 
-<div id="toast">복사 완료!</div>
 <script>
 function showToast(msg){ const t=document.getElementById('toast'); t.textContent=msg||'복사 완료!'; t.style.display='block'; setTimeout(()=>t.style.display='none',2000); }
 function copySection(btn){ const w=btn.closest('.section-wrap'); const t=w.innerText.replace(/복사\n?/g,'').trim(); navigator.clipboard.writeText(t).then(()=>showToast('섹션 복사 완료!')); }
@@ -333,7 +330,6 @@ function copyAll(){ const c=document.getElementById('blog-content'); navigator.c
   </div>
 </div>
 
-<div id="footer"></div>
 <script src="../../../assets/data/translations.js"></script>
 <script src="../../../assets/js/api.js"></script>
 <script src="../../../assets/js/components.js"></script>

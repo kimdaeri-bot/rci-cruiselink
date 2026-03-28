@@ -89,8 +89,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4PPLZNG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<div id="header"></div>
-
 <img class="cruise-hero-img" src="https://assets.widgety.co.uk/2025/12/05/15/14/57/63c00f94-4bb5-4613-bb65-40346384484f/Norwegian%20Jade%20-%20Exterior%201%2C%20%C2%A9Danny%20Lehman.jpg" alt="Norwegian Jade로 떠나는 알래스카 빙하 크루즈 7박! 허바드 빙하 · 주노 · 스카그웨이 완전 정복 🇺🇸" loading="eager">
 
 <div class="cruise-wrap">
@@ -371,21 +369,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a href="tel:02-3788-9119" style="display:block;text-decoration:none">
         
       </a>
-      <a href="https://pf.kakao.com/_xgYbJG" target="_blank" style="display:block;text-decoration:none">
-        
-      </a>
-      <a href="https://www.cruiselink.co.kr" target="_blank" style="display:block;text-decoration:none">
-        
-      </a>
+      
+      
     </div>
-    <div style="text-align:center;margin-top:16px;line-height:2.2;font-size:15px">
-      💬 카카오: <a href="https://pf.kakao.com/_xgYbJG" target="_blank" style="color:#0077cc;font-weight:700">https://pf.kakao.com/_xgYbJG</a><br>
-      🌐 홈페이지: <a href="https://www.cruiselink.co.kr" target="_blank" style="color:#0077cc;font-weight:700">https://www.cruiselink.co.kr</a>
-    </div>
+    
   </div>
 
   <!-- 태그 -->
-  <div class="tags section-wrap">
+  <div class="tags">
     
     <span>#알래스카크루즈</span>
     <span>#허바드빙하</span>
@@ -408,39 +399,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </div>
 
-<div id="toast">✅ 복사 완료!</div>
-
-<script>
-function showToast() {
-  const t = document.getElementById('toast');
-  t.style.display = 'block';
-  setTimeout(() => t.style.display = 'none', 2000);
-}
-function copyAll() {
-  const el = document.getElementById('blog-content');
-  let text = '';
-  el.querySelectorAll('h1, h2, h3, p, li, .route-step, .tags').forEach(s => {
-    if (s.classList.contains('copy-section-btn')) return;
-    const txt = s.innerText.trim();
-    if (txt) text += txt + '\n\n';
-  });
-  navigator.clipboard.writeText(text).then(() => showToast()).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = text; document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); document.body.removeChild(ta); showToast();
-  });
-}
-function copySection(btn) {
-  const section = btn.parentElement;
-  let text = '';
-  section.querySelectorAll('h1,h2,h3,p,li,.route-step').forEach(el => {
-    if (el.classList.contains('copy-section-btn')) return;
-    const txt = el.innerText.trim();
-    if (txt) text += txt + '\n\n';
-  });
-  navigator.clipboard.writeText(text).then(() => showToast());
-}
-</script>
 </body>
 </html>
 </div>
@@ -462,7 +420,6 @@ function copySection(btn) {
   </div>
 </div>
 
-<div id="footer"></div>
 <script src="../../../assets/data/translations.js"></script>
 <script src="../../../assets/js/api.js"></script>
 <script src="../../../assets/js/components.js"></script>

@@ -89,8 +89,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4PPLZNG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<div id="header"></div>
-
 <img class="cruise-hero-img" src="https://assets.widgety.co.uk/2021/11/30/08/39/15/ab35a659-53a2-4da4-b933-d54575271524/MSC%20Cruises%20MSC%20Musica%201.jpg" alt="MSC 무지카로 떠나는 지중해 7박 크루즈 완전 정복! 제노바·마르세유·이비자·로마 한번에 🇮🇹🇫🇷🇪🇸" loading="eager">
 
 <div class="cruise-wrap">
@@ -322,7 +320,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 
   <!-- ===== 태그 ===== -->
-  <div class="tags section-wrap">
+  <div class="tags">
     
     <span>#MSC무지카</span>
     <span>#지중해크루즈</span>
@@ -343,48 +341,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </div><!-- .wrapper -->
 
-<div id="toast">✅ 복사 완료!</div>
-
-<script>
-function showToast() {
-  const t = document.getElementById('toast');
-  t.style.display = 'block';
-  setTimeout(() => t.style.display = 'none', 2000);
-}
-
-function copyAll() {
-  const el = document.getElementById('blog-content');
-  // 텍스트만 추출
-  let text = '';
-  const sections = el.querySelectorAll('h1, h2, h3, p, li, .route-step, .tags');
-  sections.forEach(s => {
-    if (s.classList.contains('copy-section-btn')) return;
-    const txt = s.innerText.trim();
-    if (txt) text += txt + '\n\n';
-  });
-  navigator.clipboard.writeText(text).then(() => showToast()).catch(() => {
-    // fallback
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    showToast();
-  });
-}
-
-function copySection(btn) {
-  const section = btn.parentElement;
-  let text = '';
-  section.querySelectorAll('h1,h2,h3,p,li,.route-step').forEach(el => {
-    if (el.classList.contains('copy-section-btn')) return;
-    const txt = el.innerText.trim();
-    if (txt) text += txt + '\n\n';
-  });
-  navigator.clipboard.writeText(text).then(() => showToast());
-}
-</script>
 </body>
 </html>
 </div>
@@ -406,7 +362,6 @@ function copySection(btn) {
   </div>
 </div>
 
-<div id="footer"></div>
 <script src="../../../assets/data/translations.js"></script>
 <script src="../../../assets/js/api.js"></script>
 <script src="../../../assets/js/components.js"></script>
