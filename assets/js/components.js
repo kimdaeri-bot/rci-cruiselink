@@ -48,39 +48,7 @@ const Components = {
     return `
     <footer class="footer">
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-col">
-            <h4>크루즈링크는?</h4>
-            <p><a href="${base}about/">회사소개</a></p>
-            <p><a href="${base}newsletter/">📬 뉴스레터 구독</a></p>
-            <p><a href="${base}privacy/">개인정보 처리방침</a></p>
-            <p><a href="${base}terms/">이용약관</a></p>
-          </div>
-          <div class="footer-col">
-            <h4>연락처 정보</h4>
-            <p>📞 <a href="tel:02-3788-9119">02-3788-9119</a></p>
-            <p>💬 <a href="https://pf.kakao.com/_xgYbJG" target="_blank">카카오톡 상담</a></p>
-            <p>✉️ <a href="mailto:info@cruiselink.co.kr">info@cruiselink.co.kr</a></p>
-          </div>
-          <div class="footer-col">
-            <h4>크루즈 가이드</h4>
-            <p><a href="${base}guide/">가이드 홈</a></p>
-            <p><a href="${base}guide/cruise-lines/">선사 소개</a></p>
-            <p><a href="${base}guide/ships/">선박 소개</a></p>
-            <p><a href="${base}guide/ports/">기항지 가이드</a></p>
-            <p><a href="${base}guide/news/">크루즈 뉴스</a></p>
-            <p><a href="${base}guide/tips/">크루즈 실전 팁</a></p>
-          </div>
-          <div class="footer-col">
-            <h4>목적지</h4>
-            <p><a href="${base}destinations/">목적지 가이드</a></p>
-            <p><a href="${base}destination/?dest=korea">한국/일본</a></p>
-            <p><a href="${base}destination/?dest=mediterranean">지중해</a></p>
-            <p><a href="${base}destination/?dest=alaska">알래스카</a></p>
-            <p><a href="${base}destination/?dest=caribbean">카리브해</a></p>
-          </div>
-        </div>
-        <div class="footer-bottom" style="font-size:0.8rem;line-height:1.6;color:var(--gray-500)">
+        <div class="footer-bottom" style="font-size:0.8rem;line-height:1.6;color:var(--gray-500);padding:24px 0">
           <p>서울특별시 강서구 마곡서로 152, 두산 더 랜드타워 5층</p>
           <p>아남항공 주식회사(크루즈링크) | 대표: 김영성 | 사업자 등록번호: 104-81-84918</p>
           <p style="margin-top:8px">© ${new Date().getFullYear()} 크루즈링크. All rights reserved.</p>
