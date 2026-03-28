@@ -55,8 +55,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     API.getHoliday = async function(ref) {
       const data = await _origFetch('holidays/dates/' + ref + '.json');
       if (!data) return null;
+      // 구 포맷: { holiday: {...} }
       if (data.holiday) return data.holiday;
-      if (data.date_ref || data.ship_title || data.operator_title) return data;
+      // 신 포맷: 최상위 date_ref — 필드명 정규화
+      if (data.date_ref || data.ship_title || data.operator_title) {
+        var h = data;
+        // start_date / end_date 정규화
+        if (!h.start_date && h.date_from) h.start_date = h.date_from.slice(0,10);
+        if (!h.end_date && h.date_to) h.end_date = h.date_to.slice(0,10);
+        // duration 정규화
+        if (!h.duration) h.duration = h.cruise_nights || h.duration_days || 7;
+        // start_port / end_port 정규화
+        if (!h.start_port && h.starts_at) h.start_port = h.starts_at;
+        if (!h.end_port && h.ends_at) h.end_port = h.ends_at;
+        // itinerary 정규화 (신 포맷: { itinerary_code, days: [...] })
+        if (h.itinerary && !h.itinerary.days && typeof h.itinerary === 'object') {
+          if (Array.isArray(h.itinerary)) h.itinerary = { days: h.itinerary };
+          // itinerary.days가 이미 있는 경우는 그대로
+        }
+        // headline_prices: 신 포맷도 동일 구조 (cruise.double.from_inside 등)
+        return h;
+      }
       return null;
     };
   })();
