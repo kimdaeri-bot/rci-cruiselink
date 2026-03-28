@@ -1562,5 +1562,23 @@
     "id": "1774703712555",
     "timestamp": "2026-03-28T13:15:12.555Z",
     "status": "신규"
+  },
+  {
+    "product": "크링AI 채팅 문의",
+    "ref": "KRING_AI",
+    "name": "크링AI 고객",
+    "email": "",
+    "phone": "",
+    "pax": "",
+    "cabin": "",
+    "cruiseline": "MSC Cruises",
+    "ship": "MSC Bellissima",
+    "dateFrom": "2027-06-20",
+    "price": "",
+    "message": "[고객] 인천출발/도착 MSC 크루즈 추천\n[AI] 안녕하십니다.\n\n인천 출발 MSC 크루즈 상품을 찾았습니다.\n\nMSC Bellissima (2027년 6월 20일 출발)\n인천 → 기륭 3박 크루즈\nhttps://www.cruiselink.co.kr/cruise-view/?ref=MSCBE20270620INCKEE\n\n더 자세한 정보는 상품 카드를 통해 확인하실 수 있습니다.",
+    "source": "kring-ai",
+    "id": "1774703755378",
+    "timestamp": "2026-03-28T13:15:55.378Z",
+    "status": "신규"
   }
 ]
