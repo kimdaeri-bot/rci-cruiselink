@@ -1886,5 +1886,23 @@
     "id": "1774788294911",
     "timestamp": "2026-03-29T12:44:54.911Z",
     "status": "신규"
+  },
+  {
+    "product": "크링AI 채팅 문의",
+    "ref": "KRING_AI",
+    "name": "크링AI 고객",
+    "email": "",
+    "phone": "",
+    "pax": "",
+    "cabin": "",
+    "cruiseline": "Celebrity Cruises",
+    "ship": "Celebrity Millennium",
+    "dateFrom": "2026-07-01",
+    "price": "",
+    "message": "[고객] 7월에 우리나라나 일본 출발 혹은 도착 크루즈 알려줘\n[AI] 7월 일본 출발/도착 크루즈 3건을 찾았습니다.\n\n모두 Celebrity Millennium의 12박 일정으로, 도쿄 출발 및 도착하며 일본 주요 항구(오사카, 고치, 나가사키, 가고시마 등)와 부산을 기항합니다.\n\n자세한 상품 정보는 상품 카드를 확인해 주시기 바랍니다.",
+    "source": "kring-ai",
+    "id": "1774788327167",
+    "timestamp": "2026-03-29T12:45:27.167Z",
+    "status": "신규"
   }
 ]
