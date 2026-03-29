@@ -1850,5 +1850,23 @@
     "id": "1774787592110",
     "timestamp": "2026-03-29T12:33:12.110Z",
     "status": "신규"
+  },
+  {
+    "product": "크링AI 채팅 문의",
+    "ref": "KRING_AI",
+    "name": "크링AI 고객",
+    "email": "",
+    "phone": "",
+    "pax": "",
+    "cabin": "",
+    "cruiseline": "MSC Cruises",
+    "ship": "MSC Bellissima",
+    "dateFrom": "2027-06-20",
+    "price": "",
+    "message": "[고객] 인천출발/도착 MSC 크루즈 추천\n[AI] 인천 출발/도착 MSC 크루즈 상품을 확인했습니다.\n\nMSC Bellissima (2027년 6월 20일 출발)\n3박 타이완 크루즈로, 인천에서 출발하여 기륭(Keelung)을 기항합니다.\n\n더 많은 일정이 필요하신 경우 검색 조건(출발월, 박수, 목적지)을 알려주시면 추천해 드리겠습니다.",
+    "source": "kring-ai",
+    "id": "1774787710925",
+    "timestamp": "2026-03-29T12:35:10.925Z",
+    "status": "신규"
   }
 ]
