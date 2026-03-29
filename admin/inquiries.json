@@ -1706,5 +1706,23 @@
     "id": "1774754605209",
     "timestamp": "2026-03-29T03:23:25.209Z",
     "status": "신규"
+  },
+  {
+    "product": "한국·일본 12박 크루즈",
+    "cruiseline": "Celebrity Cruises",
+    "ship": "셀러브리티 밀레니엄",
+    "dateFrom": "2026-10-05",
+    "ports": "",
+    "price": "문의",
+    "ref": "CELEBML12I185-051026",
+    "name": "장인석",
+    "email": "thrma77@naver.com",
+    "phone": "01073235219",
+    "pax": "6~10",
+    "cabin": "발코니",
+    "message": "CHANG IN SUK,.SHIN PANIE, JUNG HAN SUNG,\nNA HYEN SUK,  JANG SANG KYU, KIM HYE      SOOK",
+    "id": "1774773527603",
+    "timestamp": "2026-03-29T08:38:47.603Z",
+    "status": "신규"
   }
 ]
