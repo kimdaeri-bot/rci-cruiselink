@@ -1724,5 +1724,23 @@
     "id": "1774773527603",
     "timestamp": "2026-03-29T08:38:47.603Z",
     "status": "신규"
+  },
+  {
+    "product": "크링AI 채팅 문의",
+    "ref": "KRING_AI",
+    "name": "크링AI 고객",
+    "email": "",
+    "phone": "",
+    "pax": "",
+    "cabin": "",
+    "cruiseline": "MSC Cruises",
+    "ship": "MSC Bellissima",
+    "dateFrom": "2026-04-02",
+    "price": "",
+    "message": "[고객] 네\n[AI] 안녕하세요. 크루즈링크 AI 상담 어시스턴트입니다.\n\n어떤 크루즈 여행을 도와드릴까요? 출발지, 목적지, 날짜, 박수 등 궁금한 점을 말씀해 주시면 맞춤 상품을 추천해 드리겠습니다.",
+    "source": "kring-ai",
+    "id": "1774782244670",
+    "timestamp": "2026-03-29T11:04:04.670Z",
+    "status": "신규"
   }
 ]
