@@ -2331,5 +2331,23 @@
     "id": "1774909371421",
     "timestamp": "2026-03-30T22:22:51.421Z",
     "status": "신규"
+  },
+  {
+    "product": "크링AI 채팅 문의",
+    "ref": "KRING_AI",
+    "name": "크링AI 고객",
+    "email": "",
+    "phone": "",
+    "pax": "",
+    "cabin": "",
+    "cruiseline": "Celebrity Cruises",
+    "ship": "Celebrity Millennium",
+    "dateFrom": "2026-05-02",
+    "price": "",
+    "message": "[고객] 5월8일부산출발일본 상품견적\n[AI] 5월 8일 부산 출발 일본 크루즈 상품을 찾아봤는데, 제 목록에는 해당 일정이 없습니다.\n\n5월 초·중순 일본 상품(도쿄, 오사카 출발)은 있으니 출발지를 도쿄나 오사카로 변경하실 수 있는지, 또는 다른 출발일을 원하시는지 확인해 주시겠어요?",
+    "source": "kring-ai",
+    "id": "1774909378735",
+    "timestamp": "2026-03-30T22:22:58.735Z",
+    "status": "신규"
   }
 ]
