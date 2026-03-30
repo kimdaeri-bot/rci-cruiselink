@@ -2187,5 +2187,23 @@
     "id": "1774876272474",
     "timestamp": "2026-03-30T13:11:12.474Z",
     "status": "신규"
+  },
+  {
+    "product": "크링AI 채팅 문의",
+    "ref": "KRING_AI",
+    "name": "크링AI 고객",
+    "email": "",
+    "phone": "",
+    "pax": "",
+    "cabin": "",
+    "cruiseline": "Celebrity Cruises",
+    "ship": "Celebrity Reflection",
+    "dateFrom": "2026-03-30",
+    "price": "",
+    "message": "[고객] 3~5박 단기\n[AI] 3~5박 일본 크루즈는 도쿄, 오사카, 나가사키 출발로 단기 여행객에게 인기 있는 일정입니다.\n\n정확한 출발 시기(언제쯤)를 말씀해 주시면 더 맞춤형으로 안내해 드리겠습니다.",
+    "source": "kring-ai",
+    "id": "1774876293328",
+    "timestamp": "2026-03-30T13:11:33.328Z",
+    "status": "신규"
   }
 ]
