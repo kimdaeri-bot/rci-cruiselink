@@ -836,7 +836,9 @@
         tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:40px;color:#aaa">AI 채팅 이용 데이터가 없습니다</td></tr>';
         return;
       }
+      window._aiChatItems = {};
       tbody.innerHTML = aiData.map((d,i) => {
+        window._aiChatItems[i] = d;
         const date = d.timestamp ? new Date(d.timestamp).toLocaleString('ko-KR', {year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}) : '-';
         const rawMsg = d.message || '';
         const userMsg = rawMsg.match(/\[고객\] (.+?)(?:\n\[AI\]|$)/s)?.[1]?.trim() || rawMsg.substring(0,80);
@@ -845,7 +847,7 @@
         return `<tr>
           <td style="white-space:nowrap;font-size:12px">${esc(date)}</td>
           <td style="font-size:12px;max-width:280px">${esc(userMsg)}</td>
-          <td style="font-size:12px;max-width:280px;color:#1a237e;cursor:pointer;text-decoration:underline" onclick="showAIChatDetail(${JSON.stringify(JSON.stringify(d))})">${esc(aiShort)}</td>
+          <td style="font-size:12px;max-width:280px;color:#1a237e;cursor:pointer;text-decoration:underline" onclick="showAIChatDetailById(${i})">${esc(aiShort)}</td>
           <td style="text-align:center"><button onclick="deleteAIChat('${esc(d.id||'')}',event)" style="background:#e53935;color:#fff;border:none;border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:inherit">삭제</button></td>
         </tr>`;
       }).join('');
@@ -854,8 +856,13 @@
     }
   }
 
-  function showAIChatDetail(jsonStr) {
-    const d = JSON.parse(jsonStr);
+  function showAIChatDetailById(idx) {
+    const d = window._aiChatItems[idx];
+    if (!d) return;
+    showAIChatDetail(d);
+  }
+
+  function showAIChatDetail(d) {
     const rawMsg = d.message || '';
     const userMsg = rawMsg.match(/\[고객\] (.+?)(?:\n\[AI\]|$)/s)?.[1]?.trim() || '';
     const aiMsg = rawMsg.match(/\[AI\] (.+)$/s)?.[1]?.trim() || '';
