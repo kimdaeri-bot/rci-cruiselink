@@ -1712,7 +1712,7 @@
     "cruiseline": "Celebrity Cruises",
     "ship": "셀러브리티 밀레니엄",
     "dateFrom": "2026-10-05",
-    "ports": "",
+    "ports": "인천 → Jeju Island → Kumamoto → 가고시마 → 히로시마 → 오사카 → 시미즈 → 요코하마",
     "price": "문의",
     "ref": "CELEBML12I185-051026",
     "name": "장인석",
@@ -1723,7 +1723,7 @@
     "message": "CHANG IN SUK,.SHIN PANIE, JUNG HAN SUNG,\nNA HYEN SUK,  JANG SANG KYU, KIM HYE      SOOK",
     "id": "1774773527603",
     "timestamp": "2026-03-29T08:38:47.603Z",
-    "status": "신규"
+    "status": "상담완료"
   },
   {
     "product": "크링AI 채팅 문의",
