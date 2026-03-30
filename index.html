@@ -172,18 +172,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div style="padding:8px 8px 4px">
               <input id="portSearch" type="text" placeholder="도시 검색..." style="width:100%;box-sizing:border-box;padding:6px 8px;border:1px solid #ddd;border-radius:6px;font-size:0.88rem" oninput="filterPortOptions(this.value)" onclick="event.stopPropagation()">
             </div>
-            <div id="portPresets" style="display:flex;flex-wrap:wrap;gap:4px;padding:4px 8px 6px;border-bottom:1px solid #eee">
-              <button class="port-preset" onclick="togglePortPreset(event,this)" data-value="마이애미">마이애미</button>
-              <button class="port-preset" onclick="togglePortPreset(event,this)" data-value="포트 캐내버럴">포트 캐내버럴</button>
-              <button class="port-preset" onclick="togglePortPreset(event,this)" data-value="바르셀로나">바르셀로나</button>
-              <button class="port-preset" onclick="togglePortPreset(event,this)" data-value="포트 로더데일">포트 로더데일</button>
-              <button class="port-preset" onclick="togglePortPreset(event,this)" data-value="치비타베키아">치비타베키아</button>
-              <button class="port-preset" onclick="togglePortPreset(event,this)" data-value="갈베스턴">갈베스턴</button>
-              <button class="port-preset" onclick="togglePortPreset(event,this)" data-value="마르세유">마르세유</button>
-              <button class="port-preset" onclick="togglePortPreset(event,this)" data-value="피레우스">피레우스</button>
-              <button class="port-preset" onclick="togglePortPreset(event,this)" data-value="시애틀">시애틀</button>
-              <button class="port-preset" onclick="togglePortPreset(event,this)" data-value="사우샘프턴">사우샘프턴</button>
-            </div>
+            <div id="portPresets" style="display:none"></div>
             <div id="msPortOptions"></div>
             <div style="padding:8px;text-align:right;border-top:1px solid #eee">
               <button class="dr-btn-ok" onclick="closeMulti('msPort');event.stopPropagation()" type="button">확인</button>
@@ -676,6 +665,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       window._selectedShipSlug = slug;
       document.getElementById('filterShip').value = title;
       document.getElementById('shipDropdown').style.display = 'none';
+      updateDepartureOptions();
     }
 
     // 선사 확인 버튼 클릭
@@ -694,6 +684,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
       // 선사가 선택됐으면 선박 드롭다운 업데이트
       filterShipOptions(document.getElementById('filterShip').value || '');
+      updateDepartureOptions();
     }
 
     function closeMulti(id) {
@@ -744,84 +735,191 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     });
 
+    // 선박별 출발항 데이터 (cruises 데이터 기반)
+    const SHIP_PORTS = {"adventure-of-the-seas":["Fort Lauderdale, Florida","Port Canaveral, Florida"],"allura":["Istanbul","리스본","바르셀로나","발레타","치비타베키아","피레우스"],"allure-of-the-seas":["Fort Lauderdale, Florida","Galveston, Texas","마이애미"],"anthem-of-the-seas-ship":["Honolulu, Hawaii","Seattle, Washington","Seward, Alaska","Sydney, New South Wales","Vancouver, British Columbia"],"brilliance-of-the-seas":["Fort Lauderdale, Florida","Ravenna","San Juan (Puerto Rico)","Tampa, Florida","Trieste","바르셀로나","치비타베키아","피레우스"],"carnival-adventure":["Melbourne, Victoria","Sydney, New South Wales","싱가포르"],"carnival-breeze-ship":["Galveston, Texas"],"carnival-celebration":["마이애미"],"carnival-conquest-ship":["마이애미"],"carnival-dream":["Galveston, Texas","New Orleans, Louisiana","바르셀로나"],"carnival-elation-ship":["Jacksonville, Florida"],"carnival-encounter":["Brisbane, Queensland"],"carnival-festivale":["Port Canaveral, Florida"],"carnival-firenze":["Long Beach, California"],"carnival-freedom-ship":["Port Canaveral, Florida","바르셀로나"],"carnival-glory":["Port Canaveral, Florida"],"carnival-horizon":["마이애미"],"carnival-jubilee":["Galveston, Texas"],"carnival-legend-ship":["Dover","Galveston, Texas","마이애미","Seattle, Washington","Tampa, Florida","치비타베키아"],"carnival-liberty-ship":["New Orleans, Louisiana"],"carnival-magic-ship":["마이애미"],"carnival-mardi-gras":["Port Canaveral, Florida"],"carnival-miracle":["Galveston, Texas","Seattle, Washington","Tampa, Florida"],"carnival-panorama":["Long Beach, California"],"carnival-paradise":["Tampa, Florida"],"carnival-pride-ship":["Baltimore, Maryland"],"carnival-radiance":["Long Beach, California"],"carnival-spirit-ship":["Mobile, Alabama","Seattle, Washington"],"carnival-splendor-ship":["Sydney, New South Wales"],"carnival-sunrise":["마이애미"],"carnival-sunshine":["Norfolk, Virginia"],"carnival-valor-ship":["New Orleans, Louisiana"],"carnival-vista":["Port Canaveral, Florida"],"celebrity-apex":["Port Canaveral, Florida","사우샘프턴"],"celebrity-ascent":["Fort Lauderdale, Florida","치비타베키아"],"celebrity-beyond":["Fort Lauderdale, Florida","마이애미"],"celebrity-constellation":["Ravenna","San Juan (Puerto Rico)","Tampa, Florida","Trieste","바르셀로나","치비타베키아"],"celebrity-eclipse":["Fort Lauderdale, Florida","Ravenna","바르셀로나","암스테르담","피레우스"],"celebrity-edge":["Honolulu, Hawaii","Seattle, Washington","Sydney, New South Wales","Vancouver, British Columbia","오클랜드"],"celebrity-equinox":["바르셀로나","부에노스 아이레스","치비타베키아"],"celebrity-flora":["Baltra Island, Galápagos"],"celebrity-infinity":["바르셀로나","피레우스"],"celebrity-millennium":["Benoa, Bali","도쿄","싱가포르","요코하마","인천","홍콩"],"celebrity-reflection":["Fort Lauderdale, Florida"],"celebrity-silhouette":["Boston, Massachusetts","Cape Liberty, Bayonne, New Jersey","Fort Lauderdale, Florida","Reykjavík"],"celebrity-solstice":["Honolulu, Hawaii","Seward, Alaska","Sydney, New South Wales","Vancouver, British Columbia","싱가포르","오클랜드","요코하마","홍콩"],"celebrity-summit":["Boston, Massachusetts","Fort Lauderdale, Florida","Los Angeles, California","San Juan (Puerto Rico)","Seward, Alaska","Tampa, Florida","Vancouver, British Columbia"],"celebrity-xcel":["Fort Lauderdale, Florida","마이애미","바르셀로나","피레우스"],"costa-luminosa":["Brisbane, Queensland","San Francisco, California","싱가포르"],"costa-venezia":["New York, New York","Port Canaveral, Florida"],"enchantment-of-the-seas":["Tampa, Florida"],"explora-i":["Istanbul","Manaus","마이애미","바르셀로나","발레타","산후안(PR)","치비타베키아","카르타헤나","피레우스"],"explora-ii":["Antalya","Fusina","Istanbul","마이애미","바르셀로나","산후안(PR)","치비타베키아","피레우스"],"explora-iii":["도쿄","리스본","마이애미","바르셀로나","방콕","사우샘프턴","상하이","싱가포르","제노바","코펜하겐","함부르크","홍콩"],"explora-iv":["리스본","마이애미","사우샘프턴","제노바","코펜하겐","함부르크"],"explora-v":["Istanbul","리스본","바르셀로나","치비타베키아","피레우스"],"explorer-of-the-seas":["Fort Lauderdale, Florida","Port Canaveral, Florida","Ravenna","바르셀로나","치비타베키아","피레우스"],"freedom-of-the-seas":["마이애미"],"grandeur-of-the-seas":["Colón","San Juan (Puerto Rico)","Tampa, Florida","카르타헤나"],"harmony-of-the-seas":["Galveston, Texas","Port Canaveral, Florida","바르셀로나"],"icon-of-the-seas":["Galveston, Texas","마이애미"],"independence-of-the-seas":["Cape Liberty, Bayonne, New Jersey","마이애미"],"insignia":["Callao","Miami, Florida","Panama City","Reykjavík","Tampa, Florida","Tilbury","Venice, California","르아브르","리스본","리우데자네이루","바르셀로나","발파라이소","부에노스 아이레스","사우샘프턴","스톡홀름","오슬로","치비타베키아","코펜하겐","피레우스","헬싱키"],"jewel-of-the-seas":["Fort Lauderdale, Florida","San Juan (Puerto Rico)","Tampa, Florida"],"legend-of-the-seas":["Fort Lauderdale, Florida","바르셀로나","치비타베키아"],"liberty-of-the-seas":["Fort Lauderdale, Florida","Galveston, Texas","사우샘프턴"],"marina":["Belfast","Bilbao","Istanbul","마이애미","바르셀로나","부에노스 아이레스","사우샘프턴","스톡홀름","치비타베키아","코펜하겐","피레우스"],"mariner-of-the-seas":["Galveston, Texas","New Orleans, Louisiana","사우샘프턴"],"msc-armonia-ship":["Brindisi","Cape Town","마르세유","메시나","바르셀로나","베네치아","스플리트","치비타베키아"],"msc-bellissima":["Naha, Okinawa","도쿄","상하이","인천","지룽"],"msc-divina":["나폴리","마르세유","마이애미","바르셀로나","부에노스 아이레스","제노바","치비타베키아","쿠사다시"],"msc-euribia":["La Goulette","Palermo","나폴리","두바이","마르세유","바르셀로나","아부다비","제노바","코펜하겐","킬"],"msc-fantasia-ship":["Istanbul","Livorno","Trieste","마르세유","바르셀로나","바리","부에노스 아이레스","제노바","치비타베키아","칸","칼리아리","피레우스"],"msc-grandiosa":["마이애미","바르셀로나","제노바","치비타베키아","칸","팔마 데 마요르카"],"msc-lirica-ship":["Ancona","Istanbul","Izmir","Valencia","마르세유","바르셀로나","바리","베네치아","스플리트","제노바","치비타베키아","피레우스"],"msc-magnifica-ship":["도쿄","마르세유","메시나","바르셀로나","부에노스 아이레스","제노바","치비타베키아","코펜하겐"],"msc-meraviglia":["마이애미","마르세유","바르셀로나","사우샘프턴","치비타베키아"],"msc-musica":["Valencia","마르세유","바르셀로나","제노바","치비타베키아","칼리아리"],"msc-opera":["Alicante","Livorno","Málaga","리스본","마르세유","바르셀로나","제노바","치비타베키아"],"msc-orchestra-ship":["Istanbul","Izmir","Livorno","Tarragona","Valencia","마르세유","바르셀로나","바리","제노바","치비타베키아","피레우스"],"msc-poesia-ship":["Seattle, Washington","마이애미","치비타베키아"],"msc-preziosa-ship":["Rotterdam","르아브르","부에노스 아이레스","사우샘프턴","암스테르담","오슬로","코펜하겐","함부르크"],"msc-seascape":["Galveston, Texas"],"msc-seashore":["마이애미","Port Canaveral, Florida"],"msc-seaside":["마이애미"],"msc-seaview":["Palermo","나폴리","라스페치아","마르세유","바르셀로나","발레타","제노바","치비타베키아"],"msc-sinfonia-ship":["Alicante","Livorno","Málaga","Santos","Valencia","리스본","마르세유","바르셀로나","바리","제노바","치비타베키아","피레우스"],"msc-splendida":["Istanbul","Livorno","Palermo","Trieste","나폴리","마르세유","바르셀로나","바리","발레타","제노바","치비타베키아","칼리아리","피레우스"],"msc-virtuosa":["Livorno","Málaga","Palermo","나폴리","르아브르","마르세유","바르셀로나","사우샘프턴","함부르크"],"msc-world-america":["마이애미"],"msc-world-asia":["나폴리","마르세유","메시나","바르셀로나","발레타","제노바","치비타베키아"],"msc-world-atlantic":["Port Canaveral, Florida"],"msc-world-europa":["Doha","나폴리","두바이","마르세유","메시나","바르셀로나","발레타","아부다비","제노바","치비타베키아","팔마 데 마요르카"],"nautica":["Istanbul","Monaco","도쿄","두바이","램차방","리스본","마이애미","바르셀로나","발리","방콕","싱가포르","치비타베키아","피레우스","홍콩"],"navigator-of-the-seas":["Los Angeles, California","싱가포르","요코하마"],"norwegian-aqua":["마이애미","New York, New York","Port Canaveral, Florida"],"norwegian-aura":["마이애미","Trieste","바르셀로나"],"norwegian-bliss":["Los Angeles, California","New York, New York","Seattle, Washington"],"norwegian-breakaway":["Boston, Massachusetts","New Orleans, Louisiana","New York, New York","Port Canaveral, Florida"],"norwegian-dawn":["Jacksonville, Florida","Tampa, Florida","리스본","바르셀로나","치비타베키아"],"norwegian-encore":["Los Angeles, California","마이애미","Seattle, Washington","Vancouver, British Columbia"],"norwegian-epic":["Port Canaveral, Florida","San Juan (Puerto Rico)","바르셀로나","치비타베키아"],"norwegian-escape":["Galveston, Texas","마이애미","New Orleans, Louisiana","New York, New York","Port Canaveral, Florida","바르셀로나"],"norwegian-gem-ship":["Jacksonville, Florida","New York, New York","Ravenna","Tampa, Florida","치비타베키아","피레우스"],"norwegian-getaway":["마이애미","New Orleans, Louisiana","Port Canaveral, Florida"],"norwegian-jade-ship":["Callao","San Diego, California","Vancouver, British Columbia","Whittier","도쿄","싱가포르","요코하마","인천","홍콩"],"norwegian-jewel":["마이애미","Philadelphia, Pennsylvania","Quebec City, Québec","사우샘프턴","코펜하겐","헬싱키"],"norwegian-joy":["Los Angeles, California","마이애미","Port Canaveral, Florida","Seattle, Washington","Vancouver, British Columbia"],"norwegian-luna-ship":["마이애미","New York, New York","바르셀로나","치비타베키아"],"norwegian-pearl-ship":["마이애미","Philadelphia, Pennsylvania","Quebec City, Québec","Ravenna","바르셀로나","피레우스"],"norwegian-prima":["New York, New York","Port Canaveral, Florida","Ravenna","Reykjavík","San Juan (Puerto Rico)","바르셀로나","사우샘프턴","치비타베키아","코펜하겐","헬싱키"],"norwegian-sky":["La Romana","르아브르","바르셀로나","사우샘프턴","코펜하겐","피레우스"],"norwegian-spirit":["Honolulu, Hawaii","Papeete, Tahiti","Sydney, New South Wales","Vancouver, British Columbia","로토카","싱가포르","오클랜드"],"norwegian-star-ship":["마이애미","Reykjavík","San Antonio","San Diego, California","Tampa, Florida","리스본","바르셀로나","부에노스 아이레스","사우샘프턴","코펜하겐"],"norwegian-sun-ship":["Cape Town","마이애미","New York, New York","Ravenna","램차방","사우샘프턴","싱가포르","치비타베키아","코펜하겐","피레우스","헬싱키"],"norwegian-viva":["Galveston, Texas","Istanbul","마이애미","Ravenna","San Juan (Puerto Rico)","리스본","바르셀로나","치비타베키아"],"oasis-of-the-seas":["Cape Liberty, Bayonne, New Jersey","Fort Lauderdale, Florida"],"oceania-sonata":["Istanbul","Los Angeles, California","마이애미","Trieste","리스본","바르셀로나","사우샘프턴","치비타베키아","피레우스"],"odyssey-of-the-seas":["Cape Liberty, Bayonne, New Jersey","바르셀로나","치비타베키아"],"ovation-of-the-seas-ship":["Los Angeles, California","Seward, Alaska","Vancouver, British Columbia","싱가포르","요코하마"],"pride-of-america":["Honolulu, Hawaii"],"quantum-of-the-seas":["Brisbane, Queensland","Los Angeles, California","Seattle, Washington"],"radiance-of-the-seas":["Fort Lauderdale, Florida","Tampa, Florida"],"regatta":["Istanbul","Monaco","도쿄","두브로브니크","리스본","마이애미","상하이","싱가포르","요코하마","피레우스"],"rhapsody-of-the-seas":["Istanbul","마이애미","San Juan (Puerto Rico)","Tampa, Florida","바르셀로나","피레우스"],"riviera":["Fremantle, Western Australia","Honolulu, Hawaii","Papeete, Tahiti","Seattle, Washington","Sydney, New South Wales","Vancouver, British Columbia","Whittier","도쿄","램차방","로토카","발리","싱가포르","오클랜드","요코하마","인천","홍콩"],"serenade-of-the-seas":["Colón","Los Angeles, California","San Diego, California","Vancouver, British Columbia","카르타헤나"],"seven-seas-explorer":["Benoa, Bali","Seattle, Washington","Sydney, New South Wales","Vancouver, British Columbia","Whittier","도쿄","방콕","싱가포르","오클랜드","인천","지룽","홍콩"],"seven-seas-grandeur":["Belfast","Boston, Massachusetts","Fusina","Istanbul","Los Angeles, California","마이애미","Montréal, Québec","New York, New York","Reykjavík","Trieste","리스본","바르셀로나","발레타","브리지타운","사우샘프턴","스톡홀름","암스테르담","오슬로","치비타베키아","코펜하겐","피레우스"],"seven-seas-mariner":["Benoa, Bali","Cape Town","Istanbul","마이애미","New York, New York","Sydney, New South Wales","Tampa, Florida","르아브르","리스본","리우데자네이루","바르셀로나","부에노스 아이레스","사우샘프턴","스톡홀름","싱가포르","암스테르담","오클랜드","치비타베키아","코펜하겐","피레우스"],"seven-seas-navigator":["Benoa, Bali","Cairns, Queensland","Cape Town","Darwin, Northern Territory","Fusina","Istanbul","Papeete, Tahiti","Sydney, New South Wales","도쿄","로토카","르아브르","리스본","바르셀로나","방콕","스톡홀름","싱가포르","오클랜드","치비타베키아","피레우스","홍콩"],"seven-seas-prestige":["Fusina","Los Angeles, California","마이애미","New York, New York","Ravenna","San Juan (Puerto Rico)","리스본","바르셀로나","사우샘프턴","치비타베키아","피레우스"],"seven-seas-splendor":["Boston, Massachusetts","Galveston, Texas","Istanbul","Melbourne, Victoria","마이애미","Montréal, Québec","New York, New York","Papeete, Tahiti","Reykjavík","San Francisco, California","Sydney, New South Wales","Trieste","도쿄","로토카","리스본","바르셀로나","사우샘프턴","싱가포르","아부다비","인천","치비타베키아","코펜하겐","피레우스","홍콩"],"seven-seas-voyager":["Cape Town","Istanbul","마이애미","Málaga","Trieste","두바이","르아브르","리스본","리우데자네이루","바르셀로나","사우샘프턴","스톡홀름","치비타베키아","코펜하겐","피레우스"],"sirena":["Callao","Cape Town","Istanbul","마이애미","Monaco","Montréal, Québec","New York, New York","Tarragona","Venice, California","리스본","리우데자네이루","바르셀로나","발레타","사우샘프턴","스톡홀름","오슬로","치비타베키아","피레우스"],"spectrum-of-the-seas":["Baoshan Pt","요코하마","홍콩"],"star-of-the-seas":["Port Canaveral, Florida"],"symphony-of-the-seas":["Galveston, Texas","마이애미"],"utopia-of-the-seas":["Port Canaveral, Florida"],"vision-of-the-seas":["Baltimore, Maryland","San Juan (Puerto Rico)"],"vista":["Belfast","Boston, Massachusetts","Istanbul","Los Angeles, California","마이애미","New York, New York","Papeete, Tahiti","San Diego, California","Sydney, New South Wales","두바이","로토카","르아브르","리스본","바르셀로나","발리","사우샘프턴","스톡홀름","싱가포르","오클랜드","요코하마","치비타베키아","코펜하겐","피레우스","홍콩"],"voyager-of-the-seas":["Brisbane, Queensland","Los Angeles, California","Seattle, Washington"],"wonder-of-the-seas":["마이애미"]};
+
+    // 국가별 항구 그룹 (표시용)
+    const PORT_GROUPS = [
+      { label: '🇰🇷 한국 / 🇯🇵 일본', ports: ['인천','도쿄','요코하마','오사카','나하','부산','지룽'] },
+      { label: '🇨🇳 중국', ports: ['상하이','Baoshan Pt','홍콩'] },
+      { label: '🌏 동남아시아', ports: ['싱가포르','방콕','램차방','발리','Benoa, Bali'] },
+      { label: '🌍 지중해 (이탈리아)', ports: ['치비타베키아','제노바','나폴리','베네치아','Fusina','메시나','바리','라스페치아','Livorno','Ancona','Ravenna','Tarragona','칼리아리','Trieste','Olbia'] },
+      { label: '🌍 지중해 (스페인/프랑스)', ports: ['바르셀로나','마르세유','Valencia','Alicante','Bilbao','팔마 데 마요르카','칸','르아브르','Monaco','Monte-Carlo','Málaga'] },
+      { label: '🌍 지중해 (그리스/터키)', ports: ['피레우스','쿠사다시','Istanbul','Izmir','Antalya','두브로브니크','스플리트'] },
+      { label: '🌍 지중해 (기타)', ports: ['사우샘프턴','발레타','리스본','암스테르담','바리','라스페치아','La Goulette','Palermo'] },
+      { label: '🌍 북유럽', ports: ['코펜하겐','함부르크','사우샘프턴','암스테르담','스톡홀름','오슬로','헬싱키','킬','Rotterdam','르아브르','Warnemünde','Reykjavík','Belfast'] },
+      { label: '🌎 미국 (플로리다/걸프)', ports: ['마이애미','포트 카나베랄','Port Canaveral, Florida','포트 로더데일','Fort Lauderdale, Florida','Tampa, Florida','Galveston, Texas','New Orleans, Louisiana','Jacksonville, Florida'] },
+      { label: '🌎 미국 (기타)', ports: ['New York, New York','Cape Liberty, Bayonne, New Jersey','Baltimore, Maryland','Boston, Massachusetts','Seattle, Washington','Los Angeles, California','Long Beach, California','San Francisco, California','San Diego, California'] },
+      { label: '🌎 카리브해 / 남미', ports: ['San Juan (Puerto Rico)','카르타헤나','Colón','브리지타운','리우데자네이루','부에노스 아이레스','Santos'] },
+      { label: '🌏 중동', ports: ['두바이','아부다비','Doha','Jeddah'] },
+      { label: '🌏 오세아니아', ports: ['Sydney, New South Wales','Brisbane, Queensland','Melbourne, Victoria','오클랜드','싱가포르','Honolulu, Hawaii'] },
+      { label: '🌎 알래스카', ports: ['Seattle, Washington','Vancouver, British Columbia','Seward, Alaska','Whittier'] },
+    ];
+
     function _getPortPool(dest) {
-      // dest 있으면 해당 목적지 항구만, 없으면 전체
       if (!dest) return window._allPorts;
       return window._allPorts.filter(p => p.dests.includes(dest));
     }
 
-    function updateDepartureOptions() {
+    // 현재 필터(목적지+선사+선박) 기반으로 유효한 출발항 집합 계산
+    function _getContextualPorts() {
       const dest = document.getElementById('filterDest').value;
+      const selectedOps = getMultiValues(document.getElementById('msOperator'));
+      const shipSlug = window._selectedShipSlug || '';
+
+      let portSet = null; // null = 전체
+
+      // 1. 선박 선택 시 해당 선박 출발항만
+      if (shipSlug && SHIP_PORTS[shipSlug]) {
+        portSet = new Set(SHIP_PORTS[shipSlug]);
+      } else {
+        // 2. 선사 선택 시 해당 선사 모든 선박의 출발항 합집합
+        if (selectedOps.length > 0) {
+          const matchingSlugs = (window._allShips || [])
+            .filter(s => selectedOps.some(op => (s.operator||'').toLowerCase().includes(op.toLowerCase())))
+            .map(s => s.slug);
+          if (matchingSlugs.length > 0) {
+            portSet = new Set();
+            matchingSlugs.forEach(slug => {
+              (SHIP_PORTS[slug] || []).forEach(p => portSet.add(p));
+            });
+          }
+        }
+      }
+
+      // 3. 목적지 필터 추가 (AND 조건)
+      if (dest) {
+        const destPorts = new Set(_getPortPool(dest).map(p => p.ko));
+        if (portSet) {
+          portSet = new Set([...portSet].filter(p => destPorts.has(p)));
+        } else {
+          portSet = destPorts;
+        }
+      }
+
+      return portSet; // null = 제한 없음
+    }
+
+    // 국가별 그룹 렌더링
+    function _renderPortGroups(optionsEl, portSet, selectedVal) {
+      optionsEl.innerHTML = '';
+      let hasAny = false;
+      PORT_GROUPS.forEach(group => {
+        const available = group.ports.filter(p => !portSet || portSet.has(p));
+        if (available.length === 0) return;
+        hasAny = true;
+        const groupEl = document.createElement('div');
+        groupEl.style.cssText = 'padding:4px 8px 2px;font-size:.75rem;color:#888;font-weight:600;background:#f9f9f9;border-top:1px solid #eee;';
+        groupEl.textContent = group.label;
+        optionsEl.appendChild(groupEl);
+        available.forEach(portKo => {
+          const isSelected = portKo === selectedVal;
+          const opt = document.createElement('div');
+          opt.className = 'ms-option' + (isSelected ? ' selected' : '');
+          opt.dataset.value = portKo;
+          opt.onclick = (e) => togglePortOpt(e, opt);
+          opt.textContent = portKo;
+          optionsEl.appendChild(opt);
+        });
+      });
+      if (!hasAny) {
+        optionsEl.innerHTML = '<div style="padding:8px 12px;color:#aaa;font-size:.85rem">검색 조건에 맞는 출발 도시가 없습니다</div>';
+      }
+    }
+
+    function updateDepartureOptions() {
       const msPort = document.getElementById('msPort');
       document.querySelectorAll('.port-preset.selected').forEach(b => b.classList.remove('selected'));
       msPort.querySelector('.multi-select-display').textContent = '전체';
-      // 검색창 초기화
       const ps = document.getElementById('portSearch');
       if (ps) ps.value = '';
-      // 목적지 지정 시 해당 항구 목록 표시
-      const optionsEl = document.getElementById('msPortOptions');
-      optionsEl.innerHTML = '';
-      if (!dest) return;
-      _getPortPool(dest).slice(0, 20).forEach(p => {
-        optionsEl.innerHTML += `<div class="ms-option" data-value="${p.ko}" onclick="togglePortOpt(event,this)">${p.ko}</div>`;
-      });
+      // 드롭다운 열려있으면 새로고침
+      if (msPort.classList.contains('open')) {
+        const optionsEl = document.getElementById('msPortOptions');
+        const portSet = _getContextualPorts();
+        _renderPortGroups(optionsEl, portSet, null);
+      }
     }
 
     function togglePortPreset(e, btn) {
       e.stopPropagation();
-      // 단일 선택: 다른 프리셋·옵션 모두 해제
       document.querySelectorAll('.port-preset').forEach(b => { if (b !== btn) b.classList.remove('selected'); });
       document.querySelectorAll('#msPortOptions .ms-option').forEach(o => o.classList.remove('selected'));
       btn.classList.toggle('selected');
       updatePortDisplay();
-      // 즉시 닫힘
       closeMulti('msPort');
     }
 
     function togglePortOpt(e, el) {
       e.stopPropagation();
-      // 단일 선택: 다른 프리셋·옵션 모두 해제
       document.querySelectorAll('.port-preset').forEach(b => b.classList.remove('selected'));
       document.querySelectorAll('#msPortOptions .ms-option').forEach(o => { if (o !== el) o.classList.remove('selected'); });
       el.classList.toggle('selected');
-      document.querySelectorAll(`.port-preset[data-value="${el.dataset.value}"]`).forEach(b => {
-        b.classList.toggle('selected', el.classList.contains('selected'));
-      });
       updatePortDisplay();
-      // 즉시 닫힘
       closeMulti('msPort');
     }
 
+    // msPort 드롭다운 열릴 때 초기 목록 표시
+    const _origToggleMulti = window.toggleMulti;
+    window.toggleMulti = function(el) {
+      _origToggleMulti(el);
+      if (el.id === 'msPort' && el.classList.contains('open')) {
+        const q = (document.getElementById('portSearch')?.value || '').trim();
+        if (!q) {
+          const optionsEl = document.getElementById('msPortOptions');
+          const portSet = _getContextualPorts();
+          const selectedVal = getMultiValues(document.getElementById('msPort'))[0] || null;
+          _renderPortGroups(optionsEl, portSet, selectedVal);
+        }
+      }
+    };
+
     function filterPortOptions(query) {
       const q = query.trim().toLowerCase();
-      const dest = document.getElementById('filterDest').value;
       const optionsEl = document.getElementById('msPortOptions');
-      // 프리셋 표시/숨김
-      document.querySelectorAll('.port-preset').forEach(b => {
-        b.style.display = (!q || b.textContent.toLowerCase().includes(q)) ? '' : 'none';
-      });
+      const portSet = _getContextualPorts();
+
       if (!q) {
-        // 검색어 없으면 목적지 기본 목록 복원
-        optionsEl.innerHTML = '';
-        if (!dest) return;
-        _getPortPool(dest).slice(0, 20).forEach(p => {
-          optionsEl.innerHTML += `<div class="ms-option" data-value="${p.ko}" onclick="togglePortOpt(event,this)">${p.ko}</div>`;
-        });
+        const selectedVal = getMultiValues(document.getElementById('msPort'))[0] || null;
+        _renderPortGroups(optionsEl, portSet, selectedVal);
         return;
       }
-      // 전체 148개 항구에서 한/영 모두 매칭
-      const matched = window._allPorts.filter(p =>
-        p.ko.toLowerCase().includes(q) || p.en.toLowerCase().includes(q)
-      ).slice(0, 30);
-      // dest 선택 시 해당 목적지 항구 우선 표시
-      const destMatched = dest ? matched.filter(p=>p.dests.includes(dest)) : matched;
-      const otherMatched = dest ? matched.filter(p=>!p.dests.includes(dest)) : [];
-      optionsEl.innerHTML = '';
-      [...destMatched, ...otherMatched].forEach(p => {
-        const selected = document.querySelectorAll(`.port-preset.selected[data-value="${p.ko}"]`).length > 0;
-        optionsEl.innerHTML += `<div class="ms-option${selected?' selected':''}" data-value="${p.ko}" onclick="togglePortOpt(event,this)">${p.ko}<span style="color:#aaa;font-size:.75rem;margin-left:6px">${p.en}</span></div>`;
+
+      // 검색어 있을 때: 전체 또는 contextual 범위에서 검색
+      const pool = window._allPorts.filter(p => {
+        const inContext = !portSet || portSet.has(p.ko);
+        const match = p.ko.toLowerCase().includes(q) || p.en.toLowerCase().includes(q);
+        return inContext && match;
       });
-      if (matched.length === 0) optionsEl.innerHTML = '<div style="padding:8px 12px;color:#aaa;font-size:.85rem">검색 결과 없음</div>';
+
+      optionsEl.innerHTML = '';
+      if (pool.length === 0) {
+        // context 밖에서도 검색
+        const fallback = window._allPorts.filter(p =>
+          p.ko.toLowerCase().includes(q) || p.en.toLowerCase().includes(q)
+        ).slice(0, 20);
+        if (fallback.length === 0) {
+          optionsEl.innerHTML = '<div style="padding:8px 12px;color:#aaa;font-size:.85rem">검색 결과 없음</div>';
+        } else {
+          fallback.forEach(p => {
+            const opt = document.createElement('div');
+            opt.className = 'ms-option';
+            opt.dataset.value = p.ko;
+            opt.onclick = (e) => togglePortOpt(e, opt);
+            opt.innerHTML = `${p.ko}<span style="color:#aaa;font-size:.75rem;margin-left:6px">${p.en}</span>`;
+            optionsEl.appendChild(opt);
+          });
+        }
+      } else {
+        pool.slice(0, 30).forEach(p => {
+          const opt = document.createElement('div');
+          opt.className = 'ms-option';
+          opt.dataset.value = p.ko;
+          opt.onclick = (e) => togglePortOpt(e, opt);
+          opt.innerHTML = `${p.ko}<span style="color:#aaa;font-size:.75rem;margin-left:6px">${p.en}</span>`;
+          optionsEl.appendChild(opt);
+        });
+      }
     }
 
     function updatePortDisplay() {
