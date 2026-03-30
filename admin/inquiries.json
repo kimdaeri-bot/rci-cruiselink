@@ -2313,5 +2313,23 @@
     "id": "1774909293325",
     "timestamp": "2026-03-30T22:21:33.325Z",
     "status": "신규"
+  },
+  {
+    "product": "크링AI 채팅 문의",
+    "ref": "KRING_AI",
+    "name": "크링AI 고객",
+    "email": "",
+    "phone": "",
+    "pax": "",
+    "cabin": "",
+    "cruiseline": "Royal Caribbean International",
+    "ship": "Spectrum of the Seas",
+    "dateFrom": "2026-09-01",
+    "price": "",
+    "message": "[고객] 로얄케리비안에서 9월20일 포트 커너버럴 출항하는\n[AI] 2026년 9월 20일 포트 커너버럴 출항 로얄캐리비안 상품을 확인했습니다.\n\n정확한 선박명, 기항지, 박수 등 추가 조건을 말씀해 주시면 최적의 상품을 추천해 드리겠습니다.",
+    "source": "kring-ai",
+    "id": "1774909371421",
+    "timestamp": "2026-03-30T22:22:51.421Z",
+    "status": "신규"
   }
 ]
