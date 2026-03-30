@@ -2151,23 +2151,5 @@
     "id": "1774829722867",
     "timestamp": "2026-03-30T00:15:22.867Z",
     "status": "신규"
-  },
-  {
-    "product": "일본·한국 4박 크루즈",
-    "cruiseline": "MSC Cruises",
-    "ship": "MSC 벨리시마",
-    "dateFrom": "2027-06-10",
-    "ports": "도쿄 → 가고시마 → 인천",
-    "price": "문의",
-    "ref": "MSCBE20270610TYOINC",
-    "name": "TEST",
-    "email": "yu-jin1101@hotmail.com",
-    "phone": "01041434910",
-    "pax": "2",
-    "cabin": "발코니",
-    "message": "TEST",
-    "id": "1774844784246",
-    "timestamp": "2026-03-30T04:26:24.246Z",
-    "status": "상담완료"
   }
 ]
