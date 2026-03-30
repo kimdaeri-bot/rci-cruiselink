@@ -1036,7 +1036,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="operator-name">${opName} · ${shipName}</div>
           <h1>🚢 ${cruiseTitle}</h1>
           <div class="meta">
-            <span>📅 ${API.formatDateKo(holiday.date_from)} ~ ${API.formatDateKo(holiday.date_to)}</span>
+            <span>📅 ${API.formatDateKo(holiday.date_from)} ~ ${(() => { if (holiday.date_to) return API.formatDateKo(holiday.date_to); const df = holiday.date_from||''; if(!df) return ''; const parts=df.slice(0,10).split('-').map(Number); const d=new Date(parts[0],parts[1]-1,parts[2]); d.setDate(d.getDate()+(holiday.cruise_nights||holiday.duration_days||0)); return API.formatDateKo(`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`); })()}</span>
             <span>🌙 ${nights}박 ${parseInt(nights)+1}일</span>
             <span>🚢 ${shipName}</span>
             <span>🌏 ${countries}</span>
