@@ -1,5 +1,24 @@
 [
   {
+    "id": "1774844240626",
+    "timestamp": "2026-03-30T04:13:00.000Z",
+    "status": "신규",
+    "product": "중국·한국 5박 크루즈",
+    "cruiseline": "Royal Caribbean International",
+    "ship": "스펙트럼 오브 더 시즈",
+    "dateFrom": "2026-09-06",
+    "ports": "",
+    "price": "문의",
+    "ref": "RCISC05J030-060926",
+    "name": "윤승주",
+    "email": "ysj3101030@gmail.com",
+    "phone": "010-9880-2309",
+    "pax": "2",
+    "cabin": "발코니",
+    "message": "없음",
+    "source": "online-inquiry"
+  },
+  {
     "id": "1774100000001",
     "timestamp": "2026-03-25T02:17:40.000Z",
     "status": "요금안내 완료",
