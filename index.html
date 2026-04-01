@@ -183,7 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="filter-group">
         <label>선사</label>
         <div class="multi-select" id="msOperator" style="pointer-events:none;opacity:1;cursor:default">
-          <div class="multi-select-display" style="background:#f0f4ff;border-color:#c5d4f5;color:var(--navy);font-weight:700">Royal Caribbean</div>
+          <div class="multi-select-display" style="background:#f0f4ff;border-color:#c5d4f5;color:var(--navy);font-weight:700">로얄 캐리비안</div>
           <div class="multi-select-dropdown" style="display:none" onclick="event.stopPropagation()">
             <div style="display:flex;flex-direction:column">
               <div class="ms-option selected" data-value="Royal Caribbean International">Royal Caribbean</div>
@@ -368,12 +368,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         @media(max-width:700px){.dr-popup{width:calc(100vw - 32px);left:0}.dr-months{flex-direction:column}}
       </style>
       <nav class="cruise-tabs-nav" id="cruiseTabsNav">
-        <button class="cruise-tab-btn active cruise-tab-featured" onclick="switchTab(this,'caribbean')">카리브해</button>
-        <button class="cruise-tab-btn" onclick="switchTab(this,'mediterranean')">지중해</button>
+        <button class="cruise-tab-btn active cruise-tab-featured" onclick="switchTab(this,'asia')">아시아·중동</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'incheon')">한국·일본</button>
         <button class="cruise-tab-btn" onclick="switchTab(this,'alaska')">알래스카</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'mediterranean')">지중해</button>
         <button class="cruise-tab-btn" onclick="switchTab(this,'northern-europe')">북유럽</button>
-        <button class="cruise-tab-btn" onclick="switchTab(this,'asia')">아시아·중동</button>
-        <button class="cruise-tab-btn" onclick="switchTab(this,'incheon')">한국출발·일본</button>
+        <button class="cruise-tab-btn" onclick="switchTab(this,'caribbean')">카리브해</button>
       </nav>
       <div class="tab-slider-wrap" id="tabSliderWrap">
         <button class="tab-arrow tab-arrow-left disabled" id="tabArrowLeft" onclick="slideTab(-1)" aria-label="이전">&#8249;</button>
@@ -1604,7 +1604,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     window.addEventListener('resize', updateTabArrows);
 
     // 첫 탭 자동 로드
-    switchTab(document.querySelector('.cruise-tab-btn'), 'incheon');
+    switchTab(document.querySelector('.cruise-tab-btn'), 'asia');
 
     loadRecommended();
     loadRecommended2();
