@@ -28,34 +28,6 @@
     "titleJp": "イタリア・スペイン春7泊クルーズ"
   },
   {
-    "ref": "NCLBLS-20260425-07-SEA-SEA",
-    "shipSlug": "norwegian-bliss",
-    "shipTitle": "Norwegian Bliss",
-    "operator": "Norwegian Cruise Line",
-    "operatorShort": "NCL",
-    "dateFrom": "2026-04-25",
-    "dateTo": "2026-05-02",
-    "nights": 7,
-    "destination": "alaska",
-    "title": "알래스카 빙하 7박 크루즈",
-    "portRoute": "시애틀 → 싯카 → 엔디콧암(빙하) → 아이시 스트레이트 포인트",
-    "priceInside": 603,
-    "priceBalcony": 899,
-    "currency": "USD",
-    "image": "https://assets.widgety.co.uk/2025/12/04/09/00/56/b6d5a91f-0e8c-4bd8-a738-f468297baeb2/NCL%20Norwegian%20Bliss%20Aerial%20Ketchikan%20Alaska%20Exterior%201%20%C2%A9Danny%20Lehman.jpg",
-    "hashtags": [
-      "#알래스카크루즈",
-      "#NCL크루즈",
-      "#빙하크루즈",
-      "#시애틀",
-      "#봄크루즈"
-    ],
-    "badge": "출발임박",
-    "badgeColor": "#d32f2f",
-    "titleEn": "Alaska Glacier 7-Night Cruise",
-    "titleJp": "アラスカ氷河7泊クルーズ"
-  },
-  {
     "ref": "MSCBE20260510TYOTYO",
     "shipSlug": "msc-bellissima",
     "shipTitle": "MSC Bellissima",
@@ -112,42 +84,6 @@
     "badgeColor": "#d32f2f",
     "titleEn": "Germany·Denmark·Norway 7-Night Cruise",
     "titleJp": "ドイツ・デンマーク・ノルウェー7泊クルーズ"
-  },
-  {
-    "ref": "NCLPRI20260628HAMHAM",
-    "shipSlug": "norwegian-prima",
-    "shipTitle": "Norwegian Prima",
-    "operator": "Norwegian Cruise Line",
-    "operatorShort": "NCL",
-    "dateFrom": "2026-06-28",
-    "dateTo": "2026-07-05",
-    "nights": 7,
-    "destination": "northern-europe",
-    "title": "노르웨이 피요르드 7박 크루즈",
-    "portRoute": "함부르크 → 올레순 → Flåm → 베르겐 → 스타방에르 → 함부르크",
-    "startsAt": {
-      "name": "Hamburg",
-      "nameKo": "함부르크"
-    },
-    "endsAt": {
-      "name": "Hamburg",
-      "nameKo": "함부르크"
-    },
-    "priceInside": 1089,
-    "priceBalcony": 1549,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&q=80",
-    "hashtags": [
-      "#북유럽크루즈",
-      "#NCL크루즈",
-      "#노르웨이피요르드",
-      "#NorwegianPrima",
-      "#함부르크"
-    ],
-    "badge": "출발임박",
-    "badgeColor": "#d32f2f",
-    "titleEn": "Norway Fjords 7-Night Cruise",
-    "titleJp": "ノルウェーフィヨルド7泊クルーズ"
   },
   {
     "ref": "MSCGR20261106BUABUA",
