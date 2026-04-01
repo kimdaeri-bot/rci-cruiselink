@@ -45,7 +45,7 @@ img { max-width: 100%; height: auto; }
 
 /* ===== HERO ===== */
 .hero {
-  background: url('https://assets.widgety.co.uk/2024/09/04/16/07/48/5bd29234-9b6c-4c86-b249-691473c4d907/MSC%20Cruises%2C%20MSC%20Bellissima%2C%20Exterior%2C%20Copyrights%20-%20MSC%20Rights.jpg') center/cover no-repeat;
+  background: url('https://assets.widgety.co.uk/2024/01/09/16/21/09/b695de21-a36d-4a97-aad4-a16bc8a12e64/Royal%20Caribbean%20International%20-%20Icon%20of%20the%20Seas%20-%20Aerial%20-%20SB.jpg') center/cover no-repeat;
   color: var(--white); padding: 100px 0 120px; text-align: center; position: relative; overflow: hidden;
 }
 .hero-overlay {
