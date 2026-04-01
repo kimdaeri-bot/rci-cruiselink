@@ -6,9 +6,9 @@ const Components = {
     <header class="header">
       <div class="container">
         <a href="https://kimdaeri-bot.github.io/msc-cruiselink/" class="logo" style="display:flex;align-items:center;gap:8px;text-decoration:none">
-          <img src="https://kimdaeri-bot.github.io/msc-cruiselink/assets/images/logo.png" alt="크루즈링크" style="height:26px">
-          <span style="color:#bbb;font-size:1rem;font-weight:300;line-height:1">×</span>
           <img src="https://kimdaeri-bot.github.io/msc-cruiselink/assets/images/logos/msc.png" alt="MSC Cruises" style="height:22px;object-fit:contain" onerror="this.style.display='none'">
+          <span style="color:#bbb;font-size:1rem;font-weight:300;line-height:1">×</span>
+          <img src="https://kimdaeri-bot.github.io/msc-cruiselink/assets/images/logo.png" alt="크루즈링크" style="height:26px">
         </a>
         <nav class="nav" id="mainNav">
           <a href="${base}" class="${active === 'home' ? 'active' : ''}">홈</a>
