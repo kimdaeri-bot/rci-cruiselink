@@ -1529,16 +1529,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         // 출발일 빠른 순 정렬
         let cruises = (cruisesRaw || []).sort((a, b) => (a.dateFrom || '') < (b.dateFrom || '') ? -1 : 1);
-        // 인천 탭: 고정 순서 배치
+        // 인천 탭: 두 고정 상품 무조건 맨 앞에 배치
         if (dest === 'incheon') {
-          // 1순위: 한국·대만 3박 (인천 출발)
-          const pin1Idx = cruises.findIndex(c =>
-            (c.title || '').includes('대만') && Number(c.nights) <= 4
-          );
-          if (pin1Idx > 0) { const [p] = cruises.splice(pin1Idx, 1); cruises.unshift(p); }
-          // 2순위: 일본·한국 4박 (도쿄→인천) 두 번째 고정
-          const pin2Idx = cruises.findIndex(c => c.ref === 'MSCBE20270610TYOINC');
-          if (pin2Idx > 1) { const [p] = cruises.splice(pin2Idx, 1); cruises.splice(1, 0, p); }
+          const PIN1_REF = 'MSCBE20270620INCKEE'; // 한국·대만 3박 (인천출발→대만도착)
+          const PIN2_REF = 'MSCBE20270610TYOINC'; // 일본·한국 4박 (도쿄출발→인천도착)
+          // 목록에서 제거
+          const rest = cruises.filter(c => c.ref !== PIN1_REF && c.ref !== PIN2_REF);
+          // 고정 상품 데이터 (목록에 없을 경우 직접 삽입)
+          const allKoreaFull = await API.filterCruises({ dest: 'korea' });
+          const pin1 = cruises.find(c => c.ref === PIN1_REF) || allKoreaFull.find(c => c.ref === PIN1_REF);
+          const pin2 = cruises.find(c => c.ref === PIN2_REF) || allKoreaFull.find(c => c.ref === PIN2_REF);
+          cruises = [
+            ...(pin1 ? [pin1] : []),
+            ...(pin2 ? [pin2] : []),
+            ...rest,
+          ];
         }
         const imgs = TAB_DEST_IMAGES[dest] || TAB_DEST_IMAGES['mediterranean'];
         if (!cruises || cruises.length === 0) {
